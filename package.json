@@ -1,0 +1,11 @@
+{
+  "name": "mylodge-business",
+  "version": "0.1.0",
+  "private": true,
+  "description": "마이롯지 홍보 사이트 화면 틀",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check app.js && node --check server.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
