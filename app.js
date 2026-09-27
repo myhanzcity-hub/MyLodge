@@ -20,6 +20,10 @@ const faq = [
  ['관리비나 청소 비용도 포함되나요?','세금, 관리비와 청소·침구 같은 서비스 비용의 적용 여부는 정식 안내에서 확인할 수 있습니다. 일부 서비스는 별도 신청 방식으로 준비 중입니다.'],
  ['모집이 완료되지 않거나 취소하고 싶다면요?','모집 미달 시 처리와 취소·환불 기준은 정식 계약 조건에 포함됩니다. 지금의 상담 신청은 계약이나 납입을 뜻하지 않습니다.']
 ];
+const faqCategories = ['소유·참여','비용·납입','비용·납입','소유·참여','이용·서비스','이용·서비스','비용·납입','취소·환불'];
+const faqFilters = ['전체',...new Set(faqCategories)];
+const faqFilterMarkup = '<div class="faq-filters" role="group" aria-label="질문 분류">'+faqFilters.map((category,i)=>'<button type="button" class="toggle" data-faq-filter="'+category+'" aria-pressed="'+(!i)+'" aria-controls="faq-list">'+category+'</button>').join('')+'</div><p class="small faq-count" id="faq-count" role="status">전체 질문 8개</p>';
+const topicField = '<fieldset class="field topic-field"><legend>상담 주제 <span class="optional">선택 사항</span></legend><p class="small" id="topic-help">가장 궁금한 주제를 하나 선택해 주세요.</p><div class="topic-options" aria-describedby="topic-help">'+['비용·분납','공동소유','이용 방법','기타'].map((topic,i)=>'<label class="topic-option"><input type="radio" name="topic" value="'+topic+'"><span>'+topic+'</span></label>').join('')+'</div><button type="button" class="topic-clear" hidden>주제 선택 해제</button></fieldset>';
 const services = [
  ['예약','내 이용 가능 일수와 기준을 보고, 원하는 날짜를 신청하는 기능입니다.','예약 가능 날짜와 이용 일수는 운영 기준이 정해진 뒤 안내됩니다.',['내 이용권','이용 조건 확인','일정 확인']],
  ['교환','일정이나 지역을 바꾸고 싶을 때 다른 회원에게 교환을 제안하고, 상대방이 조건을 확인하는 기능을 준비할 예정입니다. 성수기나 지역 등 조건이 다르면 추가 금액 또는 혜택을 함께 제안하는 방식도 포함합니다.','추가 금액·혜택의 허용 범위, 합의·정산·취소 기준은 추후 안내합니다. 현재 교환 신청이나 결제는 제공하지 않습니다.',['일정·지역 교환 제안','추가 금액 또는 혜택','상대방 조건 확인']],
@@ -56,8 +60,8 @@ document.querySelector('main').innerHTML =
  ['납입과 취소 조건','총금액과 납입 일정, 추가 비용, 취소와 환불 기준을 미리 확인하세요.','<path d="M11 6v6l4 2"/>'],
  ['진행 상태와 운영 주체','현재 어디까지 준비되었는지, 누가 운영을 맡는지 확인해 보세요.','<circle cx="11" cy="11" r="4"/><path d="M11 1v4M11 17v4M1 11h4M17 11h4"/>']
  ].map(c=>'<article class="card check-card"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#244c45" stroke-width="1.5" aria-hidden="true"><rect x="1" y="1" width="20" height="20" rx="5"/>'+c[2]+'</svg><div><h3>'+c[0]+'</h3><p>'+c[1]+'</p></div></article>').join('')+'</div><p class="check-bottom">안내되지 않은 내용은 상담을 통해 편하게 물어보세요.</p>')+
- section('faq','','<div class="faq-inner"><h2>미리 알아두면 좋은 것들.</h2><div>'+faq.map((f,i)=>'<div class="faq-item"><h3><button class="faq-question" aria-expanded="'+(!i)+'" aria-controls="answer-'+i+'">'+f[0]+'<i aria-hidden="true">+</i></button></h3><div class="faq-answer" id="answer-'+i+'" '+(i?'hidden':'')+'><p>'+f[1]+'</p></div></div>').join('')+'</div><div class="faq-cta"><p>더 궁금한 점이 있다면, 편하게 물어보세요.</p>'+cta+'</div></div>')+
- section('consultation','sage','<p class="demo-note">상담 화면 미리보기입니다. 실제 개인정보 대신 예시 정보를 사용해 주세요. 입력 내용은 전송되거나 저장되지 않습니다.</p><div class="stack-grid consult-grid"><div class="consult-intro"><h2>내게 맞는 별장 생활,<br>궁금한 것부터 물어보세요.</h2><p>상담 신청 화면을 미리 살펴보세요.<br>정식 접수는 사이트 신청 후 담당자가 확인하는 방식으로 준비 중입니다. 현재 입력으로 상담이 접수되지는 않습니다.</p></div><div class="card form-card"><form novalidate><div class="field"><label for="name">이름<span class="required">*</span></label><input id="name" name="name" type="text" autocomplete="name" placeholder="성함을 입력해 주세요" required aria-describedby="name-error"><p class="error" id="name-error"></p></div><div class="field"><label for="phone">휴대전화 번호<span class="required">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="연락받을 번호를 입력해 주세요" required aria-describedby="phone-error"><p class="error" id="phone-error"></p></div>'+choices('region','관심 지역',['주문진','양양','아직 정하지 않았어요'])+contactTimeField+'<p class="small">정식 접수 시 희망 연락 시간을 선택하는 화면의 예시입니다.</p><div class="field"><label for="question">궁금한 내용</label><textarea id="question" rows="4" placeholder="참여 조건이나 이용 방법 등 궁금한 점을 남겨 주세요"></textarea></div><div class="consent"><label class="consent-label" for="consent"><input type="checkbox" id="consent" required aria-describedby="consent-error"><span>개인정보 수집·이용에 동의합니다 <span class="required">*</span></span></label><p class="error" id="consent-error"></p><button class="privacy-button" type="button" aria-expanded="false" aria-controls="privacy-copy">내용 보기 ▼</button><div class="privacy-copy" id="privacy-copy" hidden><h4>개인정보 수집·이용 안내</h4><p>수집 목적: 상담 안내와 문의 응대</p><p>정식 접수 시 수집 예정 항목: 이름, 휴대전화 번호, 관심 지역, 희망 연락 날짜·시간, 문의 내용</p><p>이 페이지는 사전 안내용입니다. 개인정보 처리에 관한 자세한 안내는 정식 상담 접수 전에 고지됩니다.</p></div></div><button class="primary" type="submit">상담 화면 미리보기</button><p class="small center">상담 신청은 계약이나 구좌 확보를 뜻하지 않습니다.</p><div class="form-result" role="status" tabindex="-1" hidden><h3>상담 신청 화면을 확인했습니다.</h3><p>사전 안내용 체험이므로 실제 접수되지 않았습니다. 입력하신 내용은 전송되거나 저장되지 않습니다.</p></div></form></div></div>');
+ section('faq','','<div class="faq-inner"><h2>미리 알아두면 좋은 것들.</h2>'+faqFilterMarkup+'<div id="faq-list">'+faq.map((f,i)=>'<div class="faq-item" data-category="'+faqCategories[i]+'"><h3><button class="faq-question" aria-expanded="'+(!i)+'" aria-controls="answer-'+i+'">'+f[0]+'<i aria-hidden="true">+</i></button></h3><div class="faq-answer" id="answer-'+i+'" '+(i?'hidden':'')+'><p>'+f[1]+'</p></div></div>').join('')+'</div><div class="faq-cta"><p>더 궁금한 점이 있다면, 편하게 물어보세요.</p>'+cta+'</div></div>')+
+ section('consultation','sage','<p class="demo-note">상담 화면 미리보기입니다. 실제 개인정보 대신 예시 정보를 사용해 주세요. 입력 내용은 전송되거나 저장되지 않습니다.</p><div class="stack-grid consult-grid"><div class="consult-intro"><h2>내게 맞는 별장 생활,<br>궁금한 것부터 물어보세요.</h2><p>상담 신청 화면을 미리 살펴보세요.<br>정식 접수는 사이트 신청 후 담당자가 확인하는 방식으로 준비 중입니다. 현재 입력으로 상담이 접수되지는 않습니다.</p></div><div class="card form-card"><form novalidate><div class="field"><label for="name">이름<span class="required">*</span></label><input id="name" name="name" type="text" autocomplete="name" placeholder="성함을 입력해 주세요" required aria-describedby="name-error"><p class="error" id="name-error"></p></div><div class="field"><label for="phone">휴대전화 번호<span class="required">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="연락받을 번호를 입력해 주세요" required aria-describedby="phone-error"><p class="error" id="phone-error"></p></div>'+topicField+choices('region','관심 지역',['주문진','양양','아직 정하지 않았어요'])+contactTimeField+'<p class="small">정식 접수 시 희망 연락 시간을 선택하는 화면의 예시입니다.</p><div class="field"><label for="question">궁금한 내용</label><textarea id="question" rows="4" placeholder="참여 조건이나 이용 방법 등 궁금한 점을 남겨 주세요"></textarea></div><div class="consent"><label class="consent-label" for="consent"><input type="checkbox" id="consent" required aria-describedby="consent-error"><span>개인정보 수집·이용에 동의합니다 <span class="required">*</span></span></label><p class="error" id="consent-error"></p><button class="privacy-button" type="button" aria-expanded="false" aria-controls="privacy-copy">내용 보기 ▼</button><div class="privacy-copy" id="privacy-copy" hidden><h4>개인정보 수집·이용 안내</h4><p>수집 목적: 상담 안내와 문의 응대</p><p>정식 접수 시 수집 예정 항목: 이름, 휴대전화 번호, 관심 지역, 상담 주제, 희망 연락 날짜·시간, 문의 내용</p><p>이 페이지는 사전 안내용입니다. 개인정보 처리에 관한 자세한 안내는 정식 상담 접수 전에 고지됩니다.</p></div></div><button class="primary" type="submit">상담 화면 미리보기</button><p class="small center">상담 신청은 계약이나 구좌 확보를 뜻하지 않습니다.</p><div class="form-result" role="status" tabindex="-1" hidden><h3>상담 신청 화면을 확인했습니다.</h3><p>사전 안내용 체험이므로 실제 접수되지 않았습니다. 입력하신 내용은 전송되거나 저장되지 않습니다.</p></div></form></div></div>');
 
 function selectService(index) {
  const s = services[index];
@@ -80,6 +84,27 @@ document.querySelectorAll('.faq-question').forEach(b=>b.addEventListener('click'
  const open=b.getAttribute('aria-expanded')!=='true';
  document.querySelectorAll('.faq-question').forEach(q=>{const active=q===b&&open;q.setAttribute('aria-expanded',String(active));document.getElementById(q.getAttribute('aria-controls')).hidden=!active;});
 }));
+document.querySelectorAll('[data-faq-filter]').forEach(button=>button.addEventListener('click',()=>{
+ const category=button.dataset.faqFilter;
+ document.querySelectorAll('[data-faq-filter]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+ let count=0;
+ document.querySelectorAll('.faq-item').forEach(item=>{
+  item.hidden=category!=='전체'&&item.dataset.category!==category;
+  const question=item.querySelector('.faq-question');
+  const open=!item.hidden&&count===0;
+  question.setAttribute('aria-expanded',String(open));
+  item.querySelector('.faq-answer').hidden=!open;
+  if(!item.hidden)count++;
+ });
+ document.querySelector('#faq-count').textContent=category+' 질문 '+count+'개';
+}));
+const topicClear=document.querySelector('.topic-clear');
+document.querySelectorAll('[name="topic"]').forEach(input=>input.addEventListener('change',()=>{topicClear.hidden=false;}));
+topicClear.addEventListener('click',()=>{
+ document.querySelectorAll('[name="topic"]').forEach(input=>{input.checked=false;});
+ topicClear.hidden=true;
+ document.querySelector('[name="topic"]').focus();
+});
 function choose(group,button){group.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));}
 document.querySelectorAll('[data-choice]').forEach(g=>g.addEventListener('click',e=>{const b=e.target.closest('button');if(b)choose(g,b);}));
 document.querySelectorAll('[data-region]').forEach(b=>b.addEventListener('click',()=>{
@@ -111,7 +136,19 @@ form.addEventListener('submit',e=>{
  const result=document.querySelector('.form-result');result.hidden=Boolean(invalid);
  if(invalid){invalid[0].focus();return;}
  // This prototype intentionally sends no request and persists no form data.
- form.reset();document.querySelectorAll('[data-choice] button').forEach(b=>b.setAttribute('aria-pressed','false'));anyTime.setAttribute('aria-pressed','false');updateContactControls();result.focus();
+ form.reset();topicClear.hidden=true;document.querySelectorAll('[data-choice] button').forEach(b=>b.setAttribute('aria-pressed','false'));anyTime.setAttribute('aria-pressed','false');updateContactControls();result.focus();
 });
-let toastTimer;
-document.querySelectorAll('[data-notice]').forEach(b=>b.addEventListener('click',()=>{const toast=document.querySelector('#toast');toast.textContent='정식 안내 전입니다.';toast.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('visible'),3000);}));
+const infoDialog=document.querySelector('#info-dialog');
+const infoPages={
+ privacy:{title:'개인정보 처리방침',description:'공식 개인정보 처리방침을 준비하고 있습니다.',body:'<p>승인된 문서가 준비되면 이곳에서 확인하실 수 있습니다.</p><p class="info-note">현재 상담 화면은 미리보기이며, 입력한 상담 정보는 전송되거나 저장되지 않습니다.</p>'},
+ terms:{title:'이용약관',description:'공식 이용약관을 준비하고 있습니다.',body:'<p>서비스 이용 조건과 관련된 승인 문서가 준비되면 이곳에 공개합니다.</p><p class="info-note">현재 페이지는 사전 안내용입니다. 실제 계약 및 이용 조건은 정식 문서에서 확인해 주세요.</p>'},
+ contact:{title:'문의 안내',description:'공식 문의처와 상담 운영시간을 준비하고 있습니다.',body:'<dl class="contact-info">'+['전화','이메일','상담 채널','운영시간'].map(label=>'<div><dt>'+label+'</dt><dd>준비 중</dd></div>').join('')+'</dl><p class="info-note">현재 상담 화면 미리보기는 실제 접수로 연결되지 않습니다. 문의처가 확정되면 안내드리겠습니다.</p>'}
+};
+document.querySelectorAll('[data-info]').forEach(button=>button.addEventListener('click',()=>{
+ const info=infoPages[button.dataset.info];
+ document.querySelector('#info-dialog-title').textContent=info.title;
+ document.querySelector('#info-dialog-description').textContent=info.description;
+ document.querySelector('#info-dialog-content').innerHTML=info.body;
+ infoDialog.showModal();
+}));
+document.querySelector('.info-close').addEventListener('click',()=>infoDialog.close());
