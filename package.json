@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.mjs",
     "build": "node scripts/build.mjs",
-    "check": "node --check app.js && node --check server.mjs"
+    "check": "node --check app.js && node --check consultation.js && node --check workflow-model.js && node --check workflow.js && node --check server.mjs",
+    "check:workflow": "node scripts/check-workflow.cjs"
   },
   "engines": { "node": ">=20" }
 }

@@ -1,0 +1,44 @@
+// Isolated in-memory audit; never opens the UI or sends a request.
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const root = path.resolve(__dirname, '..');
+const context = vm.createContext({ window: {}, Intl, Date, structuredClone, setTimeout, crypto: require('node:crypto').webcrypto });
+for (const file of ['consultation.js', 'workflow-model.js']) vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), context);
+const fresh = () => context.window.MyLodgeWorkflow.create();
+const data = { region: '양양', topic: '', services: [], question: '가상 점검', schedule: { mode: '' } };
+const results = [];
+function expect(name, passed, observed) { results.push({ name, passed, observed }); }
+(async () => {
+  let model = fresh();
+  const normal = await model.submit(data, 'normal', 'normal');
+  await model.submit(data, 'normal', 'normal');
+  expect('same token creates one inquiry', normal.state === 'saved' && model.list().length === 4, model.list().length);
+  model = fresh();
+  const fail = await model.submit(data, 'fail', 'save-failure');
+  const beforeRetry = model.list().length;
+  const retried = await model.submit(data, 'fail', 'save-failure');
+  expect('save failure then retry', fail.state === 'failed' && beforeRetry === 3 && retried.state === 'saved' && model.list().length === 4, { beforeRetry, afterRetry: model.list().length });
+  model = fresh();
+  const unknown = await model.submit(data, 'unknown', 'unknown');
+  const lookup = await model.submit(data, 'unknown', 'unknown', true);
+  expect('unknown response looks up existing inquiry', unknown.state === 'unknown' && lookup.id === 'DEMO-004' && model.list().length === 4, lookup);
+  model = fresh();
+  const notification = await model.submit(data, 'notify', 'notification-failure');
+  expect('notification failure keeps successful receipt', notification.state === 'saved' && notification.notification === 'failed' && model.list().length === 4, notification);
+  model.retryNotification(notification.id);
+  expect('notification retry preserves inquiry count', model.list().length === 4 && model.get(notification.id).notification === 'simulated', model.list().length);
+  model = fresh();
+  let record = model.get('DEMO-001');
+  const retry = model.save(record.id, { ...record.ops, owner: 'advisor-a', status: 'retry', nextAction: '다시 연락' });
+  expect('retry requires date or reason', retry.ok === false && Boolean(retry.errors.unscheduledReason), retry);
+  const closed = model.save(record.id, { ...record.ops, owner: 'advisor-a', status: 'closed', contact: 'absent', outcome: 'informed' });
+  expect('absence cannot close as informed', closed.ok === false, closed);
+  const unchanged = model.save(record.id, record.ops);
+  expect('no-op does not add history', unchanged.changed === false && model.get(record.id).history.length === 1, unchanged);
+  const absent = model.save(record.id, { ...record.ops, owner: 'advisor-a', contact: 'absent' });
+  record = model.get(record.id);
+  expect('absence cannot be saved without follow-up', absent.ok === false || (model.inQueue(record, 'retry') && Boolean(record.ops.nextAt || record.ops.unscheduledReason)), { save: absent, ops: record.ops, inRetryQueue: model.inQueue(record, 'retry') });
+  console.log(JSON.stringify({ passed: results.filter(r => r.passed).length, failed: results.filter(r => !r.passed).length, results }, null, 2));
+  process.exitCode = results.every(r => r.passed) ? 0 : 1;
+})();

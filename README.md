@@ -1,7 +1,25 @@
 # MyLodge_Business
 MyLodge_Business 플랫폼 (홍보페이지, 주요 플랫폼 구현 - 담당자 : 연서흠)
 
-## 현재 버전 — 사이트 틀 v0.1
+## 현재 인계 버전 — 2026-09-30
+
+**최신 작업 브랜치: `codex/main-pc-handoff-20260930`**. main은 운영 사이트 연결 기준이며 아직 이번 로컬 개선을 병합하지 않았다.
+
+메인 PC Codex는 [AGENTS.md](AGENTS.md), [작업 인수인계](docs/CODEX-HANDOFF.md), [메인 PC 시작 안내](docs/MAIN-PC-START.md)를 먼저 읽는다. 기존 작업 폴더에 변경이 있으면 보존하고 비교한 뒤 브랜치를 전환한다.
+
+```powershell
+git clone --branch codex/main-pc-handoff-20260930 --single-branch https://github.com/IMT-Group-Account/MyLodge_Business.git MyLodge-main-pc
+cd MyLodge-main-pc
+npm start
+```
+
+Node.js 20 이상. 패키지 설치 없이 `http://127.0.0.1:4173/`에서 실행한다. Windows에서는 `START-LOCAL.cmd`도 사용할 수 있다. `npm run build`는 `dist/`에 공개 파일 22개를 생성한다. AI 콘셉트 이미지는 `assets/images/`에 포함되고 웹 폰트는 인터넷 연결을 사용할 수 있다.
+
+완료: 소개 페이지·AI 이미지·스크롤 효과·사진/서비스 덱·참여 타임라인·FAQ·상담 날짜/시간 선택·입력 확인/체험 완료·가상 운영 시안. 마지막 확인 결과는 [마무리 점검](docs/FINAL-CHECK-20260929.md), 미정 정책은 [PM 결정 목록](docs/PM-DECISIONS-20260929.md)을 참고한다.
+
+실제 상담 저장/발송/예약/결제/인증은 PM 협의 전 보류. 이 인계 브랜치의 자동 배포는 비활성화했으며 main 병합·운영 배포는 별도 지시를 따른다. 내부 문서와 운영 시안은 공개하지 않고 `dist/`만 공개 대상으로 삼는다.
+
+## 초기 사이트 틀 v0.1 기록 (아래는 9월 24일 이력)
 
 2026-09-24 작업 범위는 홍보 사이트의 화면 틀과 GitHub 등록입니다.
 전달받은 Figma Make 화면과 마이롯지 플랫폼 기획서를 기준으로 작성했습니다.

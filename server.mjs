@@ -1,7 +1,20 @@
 import {createServer} from 'node:http';
 import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
+import {publicAssets} from './scripts/public-assets.mjs';
 const allowed=new Map([['/',['index.html','text/html; charset=utf-8']],['/index.html',['index.html','text/html; charset=utf-8']],['/styles.css',['styles.css','text/css; charset=utf-8']],['/app.js',['app.js','text/javascript; charset=utf-8']]]);
+for(const file of publicAssets){
+ const ext=file.split('.').at(-1);
+ allowed.set('/'+file,[file,({html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',webp:'image/webp',jpg:'image/jpeg'})[ext]]);
+}
+for(const name of ['hero','interior','terrace','coastal','forest']){
+ const file=`assets/images/lodge-${name}.png`;
+ allowed.set('/'+file,[file,'image/png']);
+}
+allowed.set('/admin-demo.html',['workflow.html','text/html; charset=utf-8']);
+allowed.set('/workflow.html',['workflow.html','text/html; charset=utf-8']);
+for(const file of ['consultation.js','workflow-model.js','workflow.js']) allowed.set('/'+file,[file,'text/javascript; charset=utf-8']);
+for(const file of ['consultation.css','workflow.css','workflow-layout.css']) allowed.set('/'+file,[file,'text/css; charset=utf-8']);
 createServer(async(req,res)=>{
  const item=allowed.get(new URL(req.url,'http://127.0.0.1').pathname);
  if(!item){res.writeHead(404);res.end('Not found');return;}
