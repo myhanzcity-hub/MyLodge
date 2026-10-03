@@ -9,5 +9,8 @@ for (const page of [8,13]) for (const width of [480,960,1440]) publicAssets.push
 for (const width of [480,960,1536]) publicAssets.push(`assets/images/lodge-dreamscape-${width}.webp`);
 
 publicAssets.push('cinematic.css','cinematic.js');
+publicAssets.push('chairman.css','chairman.js');
+publicAssets.push('business-valley.html','valley.js');
+for (const width of [480,960,1680]) publicAssets.push(`assets/images/vacation-arrival-${width}.webp`);
 for (const name of ['morning','dinner','terrace']) for (const width of [480,960,1536]) publicAssets.push(`assets/images/living-${name}-${width}.webp`);
 for (const width of [480,960,1440]) publicAssets.push(`assets/images/plan-p16-${width}.webp`);

@@ -105,7 +105,7 @@ function setMenu(open,returnFocus=false){mobileMenu.hidden=!open;menu.setAttribu
 menu.addEventListener('click',()=>setMenu(mobileMenu.hidden));
 mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
  setMenu(false);
- const target=document.querySelector(a.hash), heading=target?.querySelector('h2') || target;
+ const target=a.hash?document.querySelector(a.hash):null, heading=target?.querySelector('h2') || target;
  if(heading){heading.setAttribute('tabindex','-1');heading.focus({preventScroll:true});}
 }));
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!mobileMenu.hidden)setMenu(false,true);});

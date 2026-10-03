@@ -6,7 +6,7 @@
  const mobile=matchMedia('(max-width:700px)');
  const lifestyleImage=(name,alt,priority=false)=>`<img src="assets/images/living-${name}-960.webp" srcset="assets/images/living-${name}-480.webp 480w, assets/images/living-${name}-960.webp 960w, assets/images/living-${name}-1536.webp 1536w" sizes="100vw" width="1536" height="1024" alt="${alt} · AI 생활 콘셉트" decoding="async" ${priority?'fetchpriority="high"':'loading="lazy"'}>`;
  const heroPhoto=hero.querySelector('.hero-photo');
- heroPhoto.innerHTML=lifestyleImage('morning','별장 주방에서 아침을 준비하는 가족',true)+'<figcaption>AI 생활 콘셉트 · 실제 고객·현장 사진이 아닙니다</figcaption>';
+ heroPhoto.innerHTML='<img src="assets/images/vacation-arrival-960.webp" srcset="assets/images/vacation-arrival-480.webp 480w, assets/images/vacation-arrival-960.webp 960w, assets/images/vacation-arrival-1680.webp 1680w" sizes="100vw" width="1680" height="946" alt="바닷가 모듈 별장 앞에 SUV가 도착한 휴가 장면 · AI 콘셉트" decoding="async" fetchpriority="high"><figcaption>AI 공간 콘셉트 · 실제 현장·확정 설계가 아닙니다</figcaption>';
  heroPhoto.classList.add('cinematic-background');
  hero.querySelector('.hero-sub').textContent='공간을 넘어, 함께하는 시간으로.';
  const storyLink=hero.querySelector('.hero-actions .outline');storyLink.href='#life-story';storyLink.textContent='별장 속 하루 보기 ↗';
