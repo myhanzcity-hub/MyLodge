@@ -4,6 +4,7 @@
  document.body.classList.add('cinematic-design');
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const mobile=matchMedia('(max-width:700px)');
+ const landscapeStory=matchMedia('(max-width:1023px) and (max-height:500px)');
  const lifestyleImage=(name,alt,priority=false)=>`<img src="assets/images/living-${name}-960.webp" srcset="assets/images/living-${name}-480.webp 480w, assets/images/living-${name}-960.webp 960w, assets/images/living-${name}-1536.webp 1536w" sizes="100vw" width="1536" height="1024" alt="${alt} · AI 생활 콘셉트" decoding="async" ${priority?'fetchpriority="high"':'loading="lazy"'}>`;
  const heroPhoto=hero.querySelector('.hero-photo');
  heroPhoto.innerHTML='<img src="assets/images/vacation-arrival-960.webp" srcset="assets/images/vacation-arrival-480.webp 480w, assets/images/vacation-arrival-960.webp 960w, assets/images/vacation-arrival-1680.webp 1680w" sizes="100vw" width="1680" height="946" alt="바닷가 모듈 별장 앞에 SUV가 도착한 휴가 장면 · AI 콘셉트" decoding="async" fetchpriority="high"><figcaption>AI 공간 콘셉트 · 실제 현장·확정 설계가 아닙니다</figcaption>';
@@ -47,7 +48,7 @@
    vision.style.setProperty('--vision-zoom',(.9+progress*.1).toFixed(3));
    vision.style.setProperty('--vision-corner',(42-progress*38).toFixed(1)+'px');
   }
-  if(visible.has(story)){
+  if(visible.has(story)&&!landscapeStory.matches){
    const rect=story.getBoundingClientRect();
    const progress=clamp(-rect.top/Math.max(1,rect.height-stage.offsetHeight));
    const index=Math.min(2,Math.floor(progress*3));
@@ -67,10 +68,11 @@
  [hero,vision,story,ribbon].forEach(node=>observer.observe(node));
  function updateMotion(){
   lastScene=-1;
-  if(reduced.matches){cancelAnimationFrame(frame);frame=0;lifeScenes.forEach(node=>node.removeAttribute('aria-hidden'));hero.style.removeProperty('--hero-drift');hero.style.removeProperty('--hero-zoom');}
+  if(reduced.matches||landscapeStory.matches){cancelAnimationFrame(frame);frame=0;lifeScenes.forEach(node=>node.removeAttribute('aria-hidden'));hero.style.removeProperty('--hero-drift');hero.style.removeProperty('--hero-zoom');}
   else queue();
  }
  reduced.addEventListener('change',updateMotion);
+ landscapeStory.addEventListener('change',updateMotion);
  mobile.addEventListener('change',queue);
  window.addEventListener('scroll',queue,{passive:true});window.addEventListener('resize',queue,{passive:true});
  document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0;}else queue();});

@@ -24,7 +24,7 @@
   note.innerHTML='<span aria-hidden="true">'+label+'</span><small>AI 공간 콘셉트 · 실제 부지·시설·설계는 미확정</small>';
   section.append(note);sections.push(section);
   const image=layer.querySelector('img');
-  const fit=()=>{const width=Math.ceil(Math.max(section.clientWidth*1.15,(section.offsetHeight+180)*1680/946));image.sizes=width+'px';};
+  const fit=()=>{const height=innerWidth<=700?innerHeight+90:section.offsetHeight+180;const width=Math.ceil(Math.max(section.clientWidth*1.15,height*1680/946));image.sizes=width+'px';};
   new ResizeObserver(fit).observe(section);fit();
  });
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');

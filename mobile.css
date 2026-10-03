@@ -1,0 +1,92 @@
+/* Mobile reading and touch controls. Desktop layouts keep their existing rules. */
+@media(max-width:1023px){
+ header{top:max(10px,env(safe-area-inset-top))!important}
+ header{left:max(12px,env(safe-area-inset-left))!important;right:max(12px,env(safe-area-inset-right))!important}
+ .menu-button{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
+ #mobile-menu{max-height:calc(100dvh - 96px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+ #mobile-menu a{min-height:44px;display:flex;align-items:center}
+ .mobile-menu-open .mobile-cta,.hero-in-view .mobile-cta,.life-in-view .mobile-cta{display:none!important}
+ .mobile-cta .primary{min-height:44px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+ .mobile-cta{padding-bottom:calc(10px + env(safe-area-inset-bottom));box-shadow:0 -8px 24px #163d3212}
+ .mobile-cta{padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}
+ .mobile-price-status{font-size:10px}.mobile-price small{font-size:11px}
+ .valley-page .valley-purpose-tabs button{min-height:44px}
+ .cinematic-design .project-grid .project.middle-entrance{transform:none!important;translate:none;opacity:1;transition:none}
+ .vacation-design :is(.text-link,.location,.project-details summary){min-height:44px;display:inline-flex;align-items:center}
+}
+@media(max-width:700px){
+ html{scroll-padding-top:calc(88px + env(safe-area-inset-top))}
+ .container{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+ .vacation-design .space-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;border:1px solid #b8c9b7;border-radius:10px;gap:0;background:#f5f6eddb}
+ .vacation-design .space-tabs button{min-width:0;min-height:48px;padding:12px 8px;gap:8px;font-size:13px;border:0;border-radius:0;margin:0}
+ .vacation-design .space-tabs button[aria-selected=true]{background:#2c5945;color:#fff;box-shadow:inset 0 -3px #d6c697}
+ .space-tabs button[aria-selected=true] span{color:#d5e4cf}
+ .vacation-design .space-copy{padding:26px 22px}.vacation-design .space-copy>p:not(.eyebrow){font-size:14px}
+ .vacation-design .space-copy ul{font-size:13px}
+ .vacation-design :is(.text-link,.location,.project-details summary,.service-expand summary,.footer-links button){min-height:44px;display:inline-flex;align-items:center;line-height:1.6}
+ .vacation-design .text-link{font-size:13px}
+ .vacation-design .intro h2{font-size:clamp(28px,8vw,34px)}
+ .vacation-design .intro>p{font-size:14px;line-height:1.8}
+ .vacation-design :is(.intro.middle-entrance h2,.intro.middle-entrance>p,.side-entrance,.scroll-pull){opacity:1!important;translate:none!important;transform:none!important;transition:none!important}
+ .vacation-design #progress .fact-list>div.middle-entrance{opacity:1;transform:none;transition:none}
+ .vacation-design .ownership-story[data-layout="stacked"] .ownership-chapters{padding:0 14px}
+ .vacation-design .ownership-inline-visual{padding:14px}
+ .vacation-design .ownership-chapter h3{font-size:21px;line-height:1.5}
+ .vacation-design .ownership-chapter p{font-size:14px}
+ .vacation-design .decision-guide{padding:25px 20px}.decision-links a{min-height:64px}
+ .vacation-design .pricing-row{gap:14px}.vacation-design .pricing-label{font-size:14px}
+ .vacation-design .pricing-row .small{font-size:13px;line-height:1.7}
+ .vacation-design .rights-table .rights-row{padding:18px;gap:10px;font-size:14px}
+ .vacation-design .rights-table .rights-description{line-height:1.8}
+ .vacation-design .rights-heading h3{font-size:21px;line-height:1.5}
+ .vacation-design .rights-heading p{font-size:14px;line-height:1.8}
+ .vacation-design .service-category-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .vacation-design .service-category-nav a{min-width:0;min-height:48px;display:flex;justify-content:center;align-items:center;text-align:center;font-size:12px!important;padding:10px 7px;line-height:1.5}
+ .vacation-design .service-category-nav a[aria-current=true]{background:#dccb9e!important;color:#173d35!important;border-color:#dccb9e!important}
+ .vacation-design .service-deck{margin-top:32px}
+ .vacation-design .service-deck .service-overview-card{top:28px;width:100%;padding:24px 20px;box-sizing:border-box}
+ .vacation-design .service-deck [data-deck-position="active"]{transform:translateX(-50%)}
+ .vacation-design .service-deck [data-deck-position="left"]{transform:translateX(-50%) translateY(-10px) scale(.97)}
+ .vacation-design .service-deck [data-deck-position="right"]{transform:translateX(-50%) translateY(-20px) scale(.94)}
+ .vacation-design .service-deck [data-deck-position="back"]{transform:translateX(-50%) translateY(-26px) scale(.91)}
+ .vacation-design .service-overview-card>p,.vacation-design .service-expand .small{font-size:14px;line-height:1.8}
+ .vacation-design .deck-controls{gap:12px}.vacation-design .deck-controls button{min-width:44px;min-height:44px}
+ .vacation-design .deck-status{font-size:12px;line-height:1.7;min-width:0;overflow-wrap:anywhere}
+ .vacation-design .life-copy{top:clamp(90px,16svh,130px);left:24px;right:24px;transform:none;opacity:1;transition:none}
+ .vacation-design .scene-time{font-size:42px}
+ .vacation-design .life-copy h2{font-size:clamp(27px,7.5vw,32px);margin:16px 0;line-height:1.35}
+ .vacation-design .life-copy>p:last-child{font-size:14px;line-height:1.8;max-width:300px}
+ .vacation-design .life-caption{font-size:11px;line-height:1.6}
+ .vacation-design .life-navigation{font-size:11px}
+ .scenic-backdrop{overflow:clip}
+ .scenic-backdrop .scenic-camera{position:sticky;inset:auto;top:0;width:100%;height:100svh;transform:none;will-change:auto;overflow:clip}
+ .scenic-camera img{position:absolute;top:-45px;left:0;height:calc(100% + 90px);margin:0;transform:translate3d(0,var(--scenic-y,0px),0) scale(var(--scenic-scale,1.08));object-position:68% center}
+ .scenic-visible .scenic-camera img{will-change:transform}
+ .scenic-note{position:relative;inset:auto;margin:30px 20px 0;padding-top:14px;font-size:9px}
+ .scenic-note small{font-size:11px}
+ .vacation-design .space-panel figcaption{font-size:11px;line-height:1.7}
+ .vacation-design .scenic-section{padding-bottom:42px}
+ .vacation-design #ownership.scenic-section{padding-bottom:42px}
+ .vacation-design #our-villa.scenic-deep{padding-bottom:42px}
+ .vacation-design .vacation-finale.scenic-final{padding-bottom:42px;min-height:0}
+ .vacation-design .vacation-finale .container>div>a{min-height:48px;display:flex;align-items:center;justify-content:center;font-size:13px}
+ .vacation-design .vacation-finale .container>div{flex-direction:column;align-items:stretch}
+ .vacation-design .vacation-finale small{font-size:11px;line-height:1.8}
+ .vacation-design .path-card{padding:26px}.vacation-design .path-card p{font-size:14px;line-height:1.8}
+ .vacation-design .path-card b{font-size:13px;line-height:1.8}
+ .vacation-design .footer-links{gap:6px 18px;flex-wrap:wrap}.vacation-design .footer-disclaimer{font-size:13px;line-height:1.8;color:#d0d9ca}
+ .valley-page .valley-space-grid{grid-template-columns:1fr}.valley-page .valley-space-grid article{padding:24px}
+ .valley-page .valley-space-grid span{font-size:10px}.valley-page .valley-space-grid h3{font-size:19px}
+ .valley-page .valley-space-grid p{font-size:14px;line-height:1.8}
+ .valley-page .valley-hero p:not(.eyebrow),.valley-page .purpose-panel p,.valley-page .valley-cost p{font-size:14px;line-height:1.8}
+ .valley-page .valley-note{font-size:12px;line-height:1.8}
+}
+@media(max-width:1023px) and (max-height:500px){
+ .mobile-cta{display:none!important}.vacation-design .header-inner{height:52px}
+ #mobile-menu{max-height:calc(100dvh - 78px - env(safe-area-inset-top) - env(safe-area-inset-bottom));padding:8px 22px}
+ .vacation-design .life-story{height:auto}.vacation-design .life-stage{position:static;height:auto;min-height:0;overflow:clip}
+ .vacation-design .life-scene{position:relative;inset:auto;min-height:560px;opacity:1;visibility:visible}
+ .vacation-design .life-copy{top:90px;opacity:1;transform:none;transition:none}
+ .vacation-design .life-navigation{display:none}.vacation-design .life-scene>img{transform:none}
+}
+@media(prefers-reduced-motion:reduce){.scenic-camera img{transform:none!important;will-change:auto!important}}
