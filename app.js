@@ -87,13 +87,54 @@ section('ownership','sage',ownershipMarkup+decisionGuide)+
 
 document.body.classList.add('benchmark-design','future-design');
 const storyVisual=document.querySelector('.ownership-visual');
-const chapterVisibility=new Map();
-const chapterObserver=new IntersectionObserver(entries=>{
- entries.forEach(entry=>chapterVisibility.set(entry.target,entry.isIntersecting?entry.intersectionRatio:0));
- const current=[...chapterVisibility].sort((a,b)=>b[1]-a[1])[0];
- if(current&&current[1]>0){storyVisual.dataset.scene=current[0].dataset.scene;document.querySelectorAll('.ownership-chapter').forEach(chapter=>chapter.classList.toggle('is-current',chapter===current[0]));}
-},{rootMargin:'-20% 0px -25% 0px',threshold:[0,.25,.5,.75,1]});
-document.querySelectorAll('.ownership-chapter').forEach(chapter=>chapterObserver.observe(chapter));
+// Keep the illustration inside the viewport and pair each scene with its explanation.
+const ownershipStory=document.querySelector('.ownership-story');
+const ownershipChapters=[...document.querySelectorAll('.ownership-chapter')];
+const ownershipScenes=[...storyVisual.querySelectorAll('.story-house,.story-shares,.story-rights')];
+const ownershipStage=document.createElement('div');ownershipStage.className='ownership-stage';ownershipStage.setAttribute('aria-hidden','true');
+storyVisual.querySelector('.story-kicker').after(ownershipStage);ownershipScenes.forEach(scene=>ownershipStage.append(scene));
+storyVisual.removeAttribute('aria-hidden');
+storyVisual.querySelector('.story-kicker').textContent='공유 방식 · 세 가지 이야기';
+const ownershipGuide=document.createElement('nav');ownershipGuide.className='ownership-guide';ownershipGuide.setAttribute('aria-label','공유 방식 설명 이동');
+ownershipGuide.innerHTML=['한 채','120구좌','소유·이용'].map((label,i)=>'<a href="#ownership-step-'+i+'"><span>0'+(i+1)+'</span>'+label+'</a>').join('');
+storyVisual.querySelector('.story-kicker').after(ownershipGuide);storyVisual.querySelector('.story-dots').remove();
+const ownershipLinks=[...ownershipGuide.querySelectorAll('a')];
+const ownershipInline=ownershipChapters.map((chapter,i)=>{chapter.tabIndex=-1;const box=document.createElement('div');box.className='ownership-inline-visual';box.setAttribute('aria-hidden','true');chapter.querySelector('p').before(box);box.insertAdjacentHTML('beforeend','<p class="ownership-inline-note">'+['계획서 공간 콘셉트 · 실제 현장·확정 설계가 아닙니다','참여 단위 설명 · 실제 모집 현황이 아닙니다','권리·이용 기준은 정식 계약 전 확인합니다'][i]+'</p>');return box;});
+let ownershipFrame=0,ownershipLayout='',ownershipCurrent=-1;
+function paintOwnership(){
+ ownershipFrame=0;
+ if(ownershipLayout!=='paired')return;
+ const storyRect=ownershipStory.getBoundingClientRect();if(storyRect.bottom<0||storyRect.top>innerHeight)return;
+ const gridWidth=Math.max(0,Math.min(320,ownershipStage.clientWidth,(ownershipStage.clientHeight-42)*1.2));
+ if(ownershipStage.style.getPropertyValue('--ownership-grid-width')!==gridWidth+'px')ownershipStage.style.setProperty('--ownership-grid-width',gridWidth+'px');
+ // A single reading line gives the same result going down, up or jumping to an anchor.
+ const visualRect=storyVisual.getBoundingClientRect();
+ const line=Math.max(visualRect.top,Number(ownershipStory.dataset.stickyTop))+visualRect.height*.42;
+ let index=0;ownershipChapters.forEach((chapter,i)=>{if(chapter.getBoundingClientRect().top<=line)index=i;});
+ if(index===ownershipCurrent)return;ownershipCurrent=index;storyVisual.dataset.scene=String(index);
+ ownershipChapters.forEach((chapter,i)=>chapter.classList.toggle('is-current',i===index));
+ ownershipLinks.forEach((link,i)=>{if(i===index)link.setAttribute('aria-current','step');else link.removeAttribute('aria-current');});
+}
+function queueOwnership(){if(!ownershipFrame)ownershipFrame=requestAnimationFrame(paintOwnership);}
+function layoutOwnership(){
+ const headerBottom=document.querySelector('.header-inner').getBoundingClientRect().bottom;
+ const top=Math.max(88,Math.ceil(headerBottom)+18);
+ const bottomBar=document.querySelector('.mobile-cta');
+ // Reserve the mobile action bar consistently, including before its first paint.
+ const bottom=innerWidth<1024?Math.max(88,bottomBar?.offsetHeight||0):0;
+ const available=innerHeight-top-bottom-20;
+ const layout=innerWidth>=800&&available>=360?'paired':'stacked';
+ ownershipStory.dataset.stickyTop=String(top);ownershipStory.style.setProperty('--ownership-top',top+'px');ownershipStory.style.setProperty('--ownership-height',Math.min(510,available)+'px');
+ if(layout!==ownershipLayout){
+  ownershipLayout=layout;ownershipStory.dataset.layout=layout;ownershipCurrent=-1;
+  ownershipScenes.forEach((scene,i)=>{if(layout==='paired')ownershipStage.append(scene);else ownershipInline[i].prepend(scene);});
+  if(layout==='stacked'){ownershipChapters.forEach(chapter=>chapter.classList.remove('is-current'));ownershipLinks.forEach(link=>link.removeAttribute('aria-current'));}
+ }
+ queueOwnership();
+}
+window.addEventListener('scroll',queueOwnership,{passive:true});window.addEventListener('resize',layoutOwnership,{passive:true});
+const ownershipResize=new ResizeObserver(layoutOwnership);ownershipResize.observe(ownershipStory.querySelector('.ownership-chapters'));ownershipResize.observe(ownershipStage);ownershipResize.observe(document.querySelector('.header-inner'));ownershipResize.observe(document.querySelector('.mobile-cta'));
+document.fonts.ready.then(layoutOwnership);layoutOwnership();
 
 document.querySelector('.mobile-cta b').textContent=priceText.amount;
 document.querySelector('.mobile-cta small').textContent='그중 최초 '+priceText.rate+' · '+priceText.deposit;

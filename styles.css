@@ -414,3 +414,38 @@ body:not(.site-ready) [data-enhanced]{display:none!important}
  .vision-photo img,.nature-visual>img{translate:none}
  .benchmark-design .primary:hover{translate:none}
 }
+
+/* Ownership reading experience: final responsive overrides. */
+.benchmark-design .ownership-story{gap:clamp(32px,5vw,72px);grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.benchmark-design .ownership-visual{top:var(--ownership-top,108px);height:var(--ownership-height,510px);min-height:0;max-height:none;align-self:start;grid-template-rows:auto auto minmax(0,1fr) auto;gap:16px;padding:26px;border-radius:20px}
+.ownership-guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.ownership-guide a{display:flex;align-items:center;justify-content:center;gap:7px;min-height:42px;padding:8px 4px;border:1px solid #bccbb5;border-radius:6px;font-size:12px;color:#4f6c52;background:#f7f8f047}
+.ownership-guide a span{font-size:10px;font-variant-numeric:tabular-nums;color:#638366}
+.ownership-guide a[aria-current=step]{background:#2c5945;color:#fff;border-color:#2c5945}.ownership-guide a[aria-current=step] span{color:#d1dfc9}
+.ownership-guide a:hover{border-color:#476d54}.ownership-stage{position:relative;min-height:0}
+.benchmark-design .ownership-stage .story-house,.benchmark-design .ownership-stage .story-shares,.benchmark-design .ownership-stage .story-rights{position:absolute;inset:0;min-height:0;width:100%;gap:14px;transition:opacity .18s;transform:none;visibility:hidden}
+.benchmark-design .ownership-visual[data-scene="0"] .story-house,.benchmark-design .ownership-visual[data-scene="1"] .story-shares,.benchmark-design .ownership-visual[data-scene="2"] .story-rights{visibility:visible;opacity:1}
+.benchmark-design .ownership-stage .story-house img{height:auto;max-height:calc(100% - 40px);width:100%;aspect-ratio:auto;object-fit:contain;border-radius:12px;box-shadow:none}
+.benchmark-design .ownership-stage .story-house>span,.benchmark-design .ownership-stage .story-shares>span{font-size:13px;flex:none}
+.benchmark-design .ownership-stage .story-shares .share-grid{width:var(--ownership-grid-width,280px);max-width:100%;gap:4px}
+.benchmark-design .ownership-stage .story-rights>span{width:100%;padding:16px 18px;font-size:19px;border-radius:10px}.benchmark-design .ownership-stage .story-rights small{font-size:12px}
+.benchmark-design .ownership-visual .story-caption{grid-row:4;font-size:10px;line-height:1.6;margin:0;text-align:left}
+.benchmark-design .ownership-chapter,.benchmark-design .ownership-chapter.is-current{padding:30px 0 50px 20px;min-height:310px;scroll-margin-top:18px;transition:none}
+.benchmark-design .ownership-story[data-layout="paired"] .ownership-chapter:last-child{min-height:max(310px,var(--ownership-height,510px))}
+.benchmark-design .ownership-chapter::before{width:3px;height:26px;top:34px;background:#35644c;transform:scaleY(0);transition:transform .15s}
+.benchmark-design .ownership-chapter.is-current::before{transform:scaleY(1)}
+.ownership-inline-visual{display:none}
+.benchmark-design .ownership-story[data-layout="stacked"]{display:block}
+.ownership-story[data-layout="stacked"]>.ownership-visual{display:none}
+.benchmark-design .ownership-story[data-layout="stacked"] .ownership-chapter{padding:28px 0 34px;min-height:0}
+.ownership-story[data-layout="stacked"] .ownership-chapter::before{display:none}
+.ownership-story[data-layout="stacked"] .ownership-inline-visual{display:block;background:#e5ebdf;border:1px solid #c8d6c0;padding:22px;margin:20px 0;border-radius:14px}
+.benchmark-design .ownership-inline-visual .story-house,.benchmark-design .ownership-inline-visual .story-shares,.benchmark-design .ownership-inline-visual .story-rights{position:static;min-height:0;opacity:1;visibility:visible;transform:none;gap:15px;transition:none}
+.benchmark-design .ownership-inline-visual .story-house img{width:100%;height:auto;max-height:320px;aspect-ratio:auto;object-fit:contain;border-radius:10px;box-shadow:none}
+.benchmark-design .ownership-inline-visual .story-shares .share-grid{width:100%;max-width:320px;margin:0;gap:4px}
+.benchmark-design .ownership-inline-visual .story-house>span,.benchmark-design .ownership-inline-visual .story-shares>span{font-size:12px}
+.benchmark-design .ownership-inline-visual .story-rights>span{width:100%;font-size:18px;padding:15px;border-radius:10px}
+.ownership-inline-note{font-size:10px!important;line-height:1.7!important;color:#61765b!important;margin-top:16px;text-align:center}
+@media(max-width:1023px){.benchmark-design .ownership-visual{padding:20px;gap:12px}.ownership-guide a{font-size:11px;gap:4px;min-height:38px}.benchmark-design .ownership-chapter h3{font-size:23px}}
+@media(max-width:700px){.benchmark-design .ownership-inline-visual{padding:18px}.benchmark-design .ownership-chapter h3{font-size:22px}.benchmark-design .ownership-chapter p{max-width:none}}
+@media(prefers-reduced-motion:reduce){.benchmark-design .ownership-stage .story-house,.benchmark-design .ownership-stage .story-shares,.benchmark-design .ownership-stage .story-rights,.benchmark-design .ownership-chapter::before{transition:none}}
