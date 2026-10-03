@@ -10,6 +10,8 @@ for (const width of [480,960,1536]) publicAssets.push(`assets/images/lodge-dream
 
 publicAssets.push('cinematic.css','cinematic.js');
 publicAssets.push('chairman.css','chairman.js');
+publicAssets.push('scenery.css','scenery.js');
+for (const name of ['coast','cafe','arrival']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/scenery-${name}-${width}.webp`);
 publicAssets.push('business-valley.html','valley.js');
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/vacation-arrival-${width}.webp`);
 for (const name of ['morning','dinner','terrace']) for (const width of [480,960,1536]) publicAssets.push(`assets/images/living-${name}-${width}.webp`);
