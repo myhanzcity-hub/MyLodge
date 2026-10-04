@@ -12,6 +12,8 @@ publicAssets.push('cinematic.css','cinematic.js');
 publicAssets.push('chairman.css','chairman.js');
 publicAssets.push('scenery.css','scenery.js');
 publicAssets.push('mobile.css','mobile.js');
+publicAssets.push('intro.css','intro.js');
+for (const name of ['interior','friends']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/intro-${name}-${width}.webp`);
 for (const name of ['coast','cafe','arrival']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/scenery-${name}-${width}.webp`);
 publicAssets.push('business-valley.html','valley.js');
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/vacation-arrival-${width}.webp`);
