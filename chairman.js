@@ -21,7 +21,7 @@
  hero.querySelector('.scroll-cue span').textContent='별장 속으로';
  hero.insertAdjacentHTML('beforeend','<div class="arrival-coordinate" aria-hidden="true"><span>BEACH · PINE · MY LODGE</span><b>도착하는 순간,<br>휴가가 시작됩니다.</b><i>01 / THE ARRIVAL</i></div>');
  const ribbon=document.querySelector('.living-ribbon');
- ribbon.innerHTML='<div>'+('<span>나 별장있다.</span><i>✳</i><span>MY OWN VACATION</span><i>✳</i>').repeat(3)+'</div>';
+ ribbon.innerHTML='<div>'+('<span>마이롯지</span><i>✳</i><span>MY OWN VACATION</span><i>✳</i>').repeat(3)+'</div>';
 
  const spaces=[
  {label:'별장 외관',tag:'01 / MY VILLA',title:'첨단의 형태.<br>고즈넉한 풍경.',copy:'부드러운 모듈 형태와 넓은 창. 자연을 가까이 두는 별장 공간을 그립니다.',name:'plan-p13',largest:1440,alt:'원기획서의 곡선형 모듈 별장 외관',note:'사업계획서 공간 콘셉트 · 확정 설계가 아닙니다',points:['곡선형 모듈 별장','넓은 유리창과 테라스','은은한 조명']},
