@@ -4,15 +4,15 @@
  const hero=document.querySelector('.hero');if(!hero)return;
  const stage=document.createElement('section');stage.className='film-stage';stage.setAttribute('aria-label','마이롯지 30초 인트로 영상');
  const narrow=matchMedia('(max-width:700px)').matches;
- const movie=narrow?'mylodge-intro-impact-30s-mobile.mp4':'mylodge-intro-impact-30s.mp4';
- const poster=narrow?'mylodge-intro-impact-poster-mobile.webp':'mylodge-intro-impact-poster.webp';
+ const movie=narrow?'mylodge-intro-scenes-20261006-30s-mobile.mp4':'mylodge-intro-scenes-20261006-30s.mp4';
+ const poster=narrow?'mylodge-intro-scenes-20261006-poster-mobile.webp':'mylodge-intro-scenes-20261006-poster.webp';
  const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
- stage.innerHTML=`<video class="film-video" playsinline preload="auto" muted poster="assets/video/${poster}" aria-label="외관, 인테리어, 친구들의 휴가로 이어지는 마이롯지 영상" aria-describedby="film-description"><source src="assets/video/${movie}" type="video/mp4"></video>
- <p id="film-description" class="film-sr-only">30초 공간·생활 콘셉트 영상. 빛과 모듈이 모여 바다 곁 별장을 드러내고, 창을 통해 실내로 이어집니다. 가구와 소재가 등장한 뒤 테라스에서 커피를 즐기는 친구들을 보여줍니다. 이미지 요소와 문구에 모션을 합성한 영상이며, 소리를 켜면 파도 소리가 들립니다.</p>
- <div class="film-top"><div class="film-context"><span>MY LODGE SHARE</span><p>공유별장 구상 · 사전 안내</p><a href="#pricing"><span class="film-price-label">1구좌 검토 금액</span> <span class="film-price-value"><b>${document.querySelector('.mobile-price b').textContent}</b> ↗</span></a><small>추가 비용·권리·이용 조건 미확정</small></div><a href="#our-villa" class="film-skip">참여 기준 살펴보기 ↓</a></div>
+ stage.innerHTML=`<video class="film-video" playsinline preload="auto" muted poster="assets/video/${poster}" aria-label="별장, 휴식, 풀장, 커뮤니티, 만남, 클럽과 야간 축제로 이어지는 마이롯지 영상" aria-describedby="film-description"><source src="assets/video/${movie}" type="video/mp4"></video>
+ <p id="film-description" class="film-sr-only">30초 공간·생활 콘셉트 영상. 문구마다 새로 생성한 별장 외관, 실내 휴식, 풀장, 카페테리아, 사업가들의 편안한 교류, 파트너와의 만남, 클럽, 야외 축제, 관객의 열기 이미지 9개를 사용합니다. 문구: 나 별장있다. 내 안에 완벽한 여유. 일상을 휴가처럼. 나와 비슷한 그들이 늘 모여있는 곳. 365일 언제나 내가 원하는 사람들이 기다리는 곳. 내가 찾는 파트너들과의 조우. 신나는 밤. 춤과 음악. 축제분위기 조성. 신나고 화려한 밤. 열기의 향연. 이미지 요소와 문구에 모션을 합성한 영상이며, 소리를 켜면 파도 소리가 들립니다.</p>
+ <div class="film-top"><a href="#our-villa" class="film-skip">마이롯지 만나보기 ↓</a></div>
  <div class="film-introduction film-sr-only"><h1>나 별장있다.</h1></div>
- <div class="film-end" hidden><button type="button" class="film-replay">다시보기 ↻</button><a href="#villa-spaces">별장 둘러보기 ↗</a><a href="#pricing">비용·권리 보기 ↗</a></div>
- <div class="film-bottom"><div class="film-transport"><button type="button" class="film-pause">일시정지</button><button type="button" class="film-sound" aria-pressed="false">음량 켜기</button></div><p class="film-note">AI 공간·생활 콘셉트 · 설계·시설·이용 조건은 미확정입니다.</p></div><p class="film-status film-sr-only" role="status"></p>`;
+ <div class="film-end" hidden><button type="button" class="film-replay">다시보기 ↻</button><a href="#villa-spaces">시설 둘러보기 ↗</a><a href="#projects">프로젝트 보기 ↗</a></div>
+ <div class="film-bottom"><div class="film-transport"><button type="button" class="film-pause">일시정지</button><button type="button" class="film-sound" aria-pressed="false">음량 켜기</button></div><p class="film-note">마이롯지가 그리는 생활 · AI 콘셉트 영상</p></div><p class="film-status film-sr-only" role="status"></p>`;
  hero.append(stage);hero.classList.add('has-motion-intro');
  const video=stage.querySelector('video'),pause=stage.querySelector('.film-pause'),sound=stage.querySelector('.film-sound');
  const transport=stage.querySelector('.film-transport'),ending=stage.querySelector('.film-end'),status=stage.querySelector('.film-status'),menu=document.querySelector('#mobile-menu');

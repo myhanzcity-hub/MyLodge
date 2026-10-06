@@ -168,7 +168,7 @@ const navLinks=[...document.querySelectorAll('header nav a')];let navigationFram
 const navigationSections=[...document.querySelectorAll('main>section')].filter(section=>navLinks.some(link=>link.hash==='#'+section.id));
 function updateNavigation(){navigationFrame=0;const current=navigationSections.filter(section=>section.getBoundingClientRect().top<=180).at(-1)?.id||'home';navLinks.forEach(link=>{if(link.hash==='#'+current)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});}
 window.addEventListener('scroll',()=>{if(!navigationFrame)navigationFrame=requestAnimationFrame(updateNavigation);},{passive:true});updateNavigation();
-new IntersectionObserver(entries=>{document.querySelector('.mobile-cta').hidden=entries[0].isIntersecting;},{threshold:0}).observe(document.querySelector('footer'));
+new IntersectionObserver(entries=>{const bar=document.querySelector('.mobile-cta');if(bar)bar.hidden=entries[0].isIntersecting;},{threshold:0}).observe(document.querySelector('footer'));
 const infoDialog=document.querySelector('#info-dialog');
 const infoPages={
  privacy:{title:'개인정보 처리방침',description:'공식 개인정보 처리방침을 준비하고 있습니다.',body:'<p>승인된 문서가 준비되면 이곳에서 확인하실 수 있습니다.</p><p class="info-note">현재 페이지에서는 개인정보를 입력받거나 접수하지 않습니다.</p>'},

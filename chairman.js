@@ -60,16 +60,20 @@
  ['plan-p16',1440,'18:00','MEET & SHARE','친구야,<br>우리 별장에서 만나.','함께 먹고, 이야기하고. 별장 생활에 더해지는 만남의 공간.','사업계획서 생활 콘셉트 · 실제 시설·운영 조건은 미확정']
  ];
  story.querySelectorAll('.life-scene').forEach((scene,i)=>{const s=storyData[i];scene.querySelector('img').outerHTML=photo(s[0],s[1],s[4].replace(/<br>/g,' '));scene.querySelector('.scene-time').textContent=s[2];scene.querySelector('.eyebrow').textContent='0'+(i+1)+' / '+s[3];scene.querySelector('h2').innerHTML=s[4];scene.querySelector('.life-copy>p:last-child').textContent=s[5];scene.querySelector('.life-caption').textContent=s[6];});
- const nature=document.querySelector('#nature');nature.querySelector('img').outerHTML=photo('lodge-coastal',1440,'해안 풍경 속의 세련된 모듈 별장 · AI 공간 콘셉트');nature.querySelector('h2').innerHTML='고즈넉하게.<br>세련되게.<br>나의 휴가.';nature.querySelector('figcaption').textContent='AI 공간 콘셉트 · 실제 프로젝트의 부지·환경이 아닙니다';
+ const nature=document.querySelector('#nature');
+ nature.classList.add('resort-story');
+ nature.querySelector('img').outerHTML='<img src="assets/images/resort-overview-20261006-960.webp" srcset="assets/images/resort-overview-20261006-480.webp 480w, assets/images/resort-overview-20261006-960.webp 960w, assets/images/resort-overview-20261006-1680.webp 1680w" sizes="100vw" width="1680" height="945" alt="풀장과 클럽 라운지, 해안의 모듈형 별장 단지를 하늘에서 내려다본 전체 조감도 · AI 공간 콘셉트" loading="lazy" decoding="async">';
+ nature.querySelector('.nature-copy').innerHTML='<span class="eyebrow">MY LODGE / A NEW EVERYDAY</span><p class="resort-lead">꽉막히고 답답한 콘크리트 블럭이 아니라.</p><h2>아름다운 휴양지에서.</h2><p class="resort-description">가지는 여유로운 일상과 계획과 목표를 실현할 수 있는 곳.</p>';
+ nature.querySelector('figcaption').textContent='AI 공간 콘셉트 · 실제 부지·시설·확정 설계가 아닙니다';
  const lifeIntro=document.querySelector('#lifestyle .intro');lifeIntro.querySelector('h2').innerHTML='별장 안에서,<br>별장 밖으로.';lifeIntro.querySelector('p').innerHTML='큰 창 너머의 풍경, 테라스의 여유.<br>나만의 속도로 머무는 공간을 그립니다.';
  const pricing=document.querySelector('#pricing');pricing.querySelector('.intro h2').innerHTML='별장의 꿈을,<br>현실의 숫자로.';
  const projects=document.querySelector('#projects');projects.querySelector('.intro h2').innerHTML='바다 곁에서 그리는<br>우리의 다음 별장.';
  // Navigation points to real sections; original membership/services controls remain intact.
- const navItems=[['#villa-spaces','별장 공간'],['#ownership','공유 방식'],['#pricing','비용·권리'],['#projects','프로젝트'],['#stay-services','서비스 구상']];
- for(const nav of document.querySelectorAll('header nav')){const links=[...nav.querySelectorAll('a')];navItems.forEach(([hash,label],i)=>{if(links[i]){links[i].href=hash;links[i].textContent=label;}});}
+ const navItems=[['#villa-spaces','시설 둘러보기'],['#ownership','별장 주인들에게'],['#projects','프로젝트'],['#stay-services','컨시어지']];
+ for(const nav of document.querySelectorAll('header nav')){nav.innerHTML=navItems.map(([hash,label])=>`<a href="${hash}">${label}</a>`).join('');}
  const headerCta=document.querySelector('.header-cta');headerCta.href='#villa-spaces';headerCta.textContent='별장 살펴보기 ↗';
- document.querySelector('.header-inner nav').insertAdjacentHTML('beforeend','<a href="business-valley.html">Business Valley ↗</a>');
- const mobileLast=document.querySelector('#mobile-menu a:last-child');mobileLast.href='business-valley.html';mobileLast.textContent='Business Valley ↗';
+ for(const nav of document.querySelectorAll('header nav'))nav.insertAdjacentHTML('beforeend','<a href="business-valley.html">Business Valley ↗</a>');
+ document.querySelector('#stay-services .intro h2').innerHTML='마이롯지 컨시어지,<br>카테고리별로 살펴보세요.';
  document.querySelector('.mobile-price-status').textContent='국내 SHARE · 검토 중 · 1구좌';
  const gateway=document.createElement('section');gateway.id='brand-paths';gateway.className='brand-paths';
  gateway.innerHTML='<div class="container"><p class="eyebrow">MY LODGE / TWO WAYS TO STAY</p><h2>별장 생활에서 시작해,<br>머물고 일하는 경험까지.</h2><div class="path-grid"><a class="path-card" href="#ownership"><span>01 / MY LODGE SHARE</span><h3>우리의 별장,<br>함께 준비하다.</h3><p>국내 공유별장 프로젝트의 참여 방식과<br>비용·소유·이용 조건을 살펴보세요.</p><b>공유별장 알아보기 ↗</b></a><a class="path-card valley-path" href="business-valley.html"><span>02 / BUSINESS VALLEY</span><h3>머물고, 일하고,<br>새로운 일을 만나다.</h3><p>치앙마이 체류·업무·커뮤니티를 연결하는<br>마이롯지 확장 사업 구상입니다.</p><b>Business Valley 살펴보기 ↗</b><small>치앙마이 체류 조건·가격은 별도 검토 중</small></a></div></div>';

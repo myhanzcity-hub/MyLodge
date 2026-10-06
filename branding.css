@@ -1,0 +1,76 @@
+/* Original artwork is preserved. CSS frames place the supplied stacked logo horizontally. */
+.promotion-home .film-top{justify-content:flex-end}
+.promotion-home .promotion-intro-photo{margin:0;border-radius:18px;overflow:hidden}
+.promotion-intro-photo img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.promotion-home #our-villa .invitation-grid{align-items:center}
+.promotion-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.promotion-cards article{padding:32px;border:1px solid #b8c6b966;border-radius:16px;background:#133e34ed;color:#f7f5ef}
+.vacation-design .promotion-cards h3{font-size:24px;line-height:1.5;color:#fff9ea;margin:16px 0;word-break:keep-all}
+.vacation-design .promotion-cards p{font-size:15px;line-height:1.9;color:#d8e2d6;word-break:keep-all}
+.promotion-cards .eyebrow{color:#dacd9b}
+.promotion-section-link{display:inline-block;margin-top:30px}
+.promotion-service-note{font-size:12px;line-height:1.8;color:#d4ddce;margin-top:24px}
+.promotion-home .footer-top{grid-template-columns:1fr;padding-bottom:25px}
+.promotion-home .footer-disclaimer{max-width:760px}
+@media(max-width:700px){.promotion-cards{grid-template-columns:1fr;gap:14px}.promotion-cards article{padding:24px}.vacation-design .promotion-cards h3{font-size:22px;margin:10px 0}.promotion-home #our-villa .invitation-grid{grid-template-columns:1fr}.promotion-home .film-top{justify-content:flex-end}}
+.language-slot{position:relative;flex:0 0 auto;margin-left:auto;color:#214d42}
+.language-slot summary{list-style:none;display:flex;align-items:center;gap:7px;min-height:44px;padding:0 10px;cursor:pointer;border:1px solid #d5ddd1;border-radius:8px;font-size:12px;font-weight:600}
+.language-slot summary::-webkit-details-marker{display:none}
+.language-slot summary svg{width:18px;height:18px}
+.language-short{display:none}.language-chevron{font-size:16px;transition:transform .15s}
+.language-slot[open] .language-chevron{transform:rotate(180deg)}
+.language-slot summary:hover,.language-slot[open] summary{background:#e6ece0}
+.language-slot summary:focus-visible{outline:3px solid #a68642;outline-offset:3px}
+.language-panel{position:absolute;right:0;top:calc(100% + 12px);width:230px;padding:16px;background:#f7f5ef;border:1px solid #d5ddd1;border-radius:12px;box-shadow:0 12px 30px #173e3726;z-index:60}
+.language-panel .language-heading{margin:0 0 10px;color:#64776e;font-size:10px;letter-spacing:.16em}
+.language-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.language-panel button,.language-current{width:100%;display:flex;align-items:center;justify-content:space-between;min-height:40px;padding:8px 10px;border:0;border-radius:6px;font:inherit;font-size:14px;text-align:left}
+.language-current{background:#e6ece0;color:#214d42;font-weight:600}
+.language-panel button:disabled{background:transparent;color:#68776f;opacity:1;cursor:default}
+.language-panel small{font-size:10px;color:#78857d}
+.language-panel .language-note{margin:12px 0 0;padding-top:12px;border-top:1px solid #d5ddd1;font-size:11px;line-height:1.6;color:#68776f}
+@media(max-width:1100px){.vacation-design .header-inner{gap:10px}.language-full{display:none}.language-short{display:inline}.language-slot summary{gap:5px;padding:0 7px}.language-chevron{display:none}}
+@media(max-width:420px){.vacation-design .header-inner{padding-inline:12px;gap:6px}.language-slot summary svg{display:none}.language-slot summary{min-width:40px;justify-content:center}.vacation-design .header-inner .menu-button{padding:6px}.language-panel{right:-40px;width:220px}}
+.vacation-design header{background:#f7f5ef}
+.vacation-design .artwork-brand{display:flex;flex-direction:row;align-items:center;gap:12px;flex-shrink:0;min-height:44px;background:#f7f5ef;isolation:isolate}
+.artwork-brand .logo-symbol,.artwork-brand .logo-wordmark{display:block;position:relative;overflow:hidden;letter-spacing:normal}
+.artwork-brand .logo-symbol{width:72px;height:40px}
+.artwork-brand .logo-wordmark{width:128px;height:40px}
+.artwork-brand .logo-symbol img,.artwork-brand .logo-wordmark img{position:absolute;max-width:none;height:auto;mix-blend-mode:multiply}
+.artwork-brand .logo-symbol img{width:138px;left:-32px;top:-13px}
+.artwork-brand .logo-wordmark img{width:192px;left:-32px;top:-74px}
+.footer-brand-art{display:block;width:190px;height:auto;mix-blend-mode:multiply;margin:0 0 18px}
+.lodge-guide{display:flex;align-items:center;gap:28px;padding:20px 30px;background:#f8f7f0;border:1px solid #d5ddd1;border-radius:24px;color:#173e37;isolation:isolate;margin:0 0 52px}
+.lodge-guide .guide-character{display:block;width:190px;height:190px;object-fit:contain;flex:0 0 auto;mix-blend-mode:multiply}
+.lodge-guide .guide-copy{min-width:0;flex:1}
+.lodge-guide .guide-kicker{font-size:11px;letter-spacing:.08em;color:#477465;font-weight:700}
+.vacation-design .lodge-guide h3{color:#173e37;font-size:clamp(20px,2.1vw,27px);line-height:1.5;margin:9px 0 10px;letter-spacing:-.04em;overflow-wrap:anywhere}
+.vacation-design .lodge-guide p{color:#53665c;font-size:14px;line-height:1.8;margin:0}
+.guide-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.guide-links a,.guide-next{display:inline-flex;align-items:center;justify-content:space-between;gap:14px;min-height:44px;padding:10px 15px;border-radius:9px;background:#e6ece0;color:#214d42;font-size:13px;font-weight:600}
+.guide-links a:first-child{background:#214d42;color:#fff9ec}
+.guide-links a:hover,.guide-next:hover{box-shadow:0 4px 12px #173e371f}
+.guide-links a:focus-visible,.guide-next:focus-visible,.artwork-brand:focus-visible{outline:3px solid #a68642;outline-offset:4px}
+.guide-compact{margin:40px 0 0;gap:20px;padding:18px 25px}
+.guide-compact .guide-character{width:110px;height:110px}
+.vacation-design .guide-compact h3{font-size:22px}
+.guide-next{margin-top:14px}
+@media(max-width:700px){
+ .vacation-design .artwork-brand{gap:10px;transform:none;margin-right:0}
+ .artwork-brand .logo-symbol{width:58px;height:34px}
+ .artwork-brand .logo-wordmark{width:110px;height:34px}
+ .artwork-brand .logo-symbol img{width:110px;left:-26px;top:-10px}
+ .artwork-brand .logo-wordmark img{width:166px;left:-28px;top:-64px}
+ .lodge-guide{gap:12px;padding:20px 16px;margin-bottom:32px;border-radius:18px;align-items:flex-start;position:relative}
+ .lodge-guide .guide-character{width:84px;height:100px;margin-top:9px}
+ .vacation-design .lodge-guide h3{font-size:20px;line-height:1.45}
+ .vacation-design .lodge-guide p{font-size:12px;line-height:1.8}
+ .guide-kicker{font-size:10px}
+ .guide-links{flex-direction:column;gap:8px;margin-top:14px}
+ .guide-links a,.guide-next{font-size:12px;padding:10px 12px;min-height:44px}
+ .guide-compact{margin-top:28px;padding:18px 14px}
+ .guide-compact .guide-character{width:64px;height:84px}
+ .vacation-design .guide-compact h3{font-size:18px}
+ .footer-brand-art{width:170px}
+}
+@media(max-width:360px){.lodge-guide{gap:8px;padding:18px 12px}.lodge-guide .guide-character{width:62px;height:84px}.vacation-design .lodge-guide h3{font-size:18px}.guide-compact .guide-character{width:54px;height:74px}}

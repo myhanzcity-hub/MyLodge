@@ -1,5 +1,7 @@
 // The only files included in the public export.
 export const publicAssets = ['index.html', 'styles.css', 'app.js'];
+publicAssets.push('branding.css','branding.js','assets/brand/mylodge-logo.webp','assets/brand/mylodge-character.webp');
+for (const width of [480,960,1680]) publicAssets.push(`assets/images/resort-overview-20261006-${width}.webp`);
 for (const [name, largest] of [['hero',1122],['interior',1440],['terrace',1145],['coastal',1440],['forest',1440]]) {
   for (const width of [480,960,largest]) publicAssets.push(`assets/images/lodge-${name}-${width}.webp`);
 }
@@ -14,7 +16,7 @@ publicAssets.push('scenery.css','scenery.js');
 publicAssets.push('mobile.css','mobile.js');
 publicAssets.push('intro.css','intro.js');
 publicAssets.push('planning.css');
-publicAssets.push('assets/video/mylodge-intro-impact-30s.mp4','assets/video/mylodge-intro-impact-30s-mobile.mp4','assets/video/mylodge-intro-impact-poster.webp','assets/video/mylodge-intro-impact-poster-mobile.webp');
+publicAssets.push('assets/video/mylodge-intro-scenes-20261006-30s.mp4','assets/video/mylodge-intro-scenes-20261006-30s-mobile.mp4','assets/video/mylodge-intro-scenes-20261006-poster.webp','assets/video/mylodge-intro-scenes-20261006-poster-mobile.webp');
 for (const name of ['coast','cafe','arrival']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/scenery-${name}-${width}.webp`);
 publicAssets.push('business-valley.html','valley.js');
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/vacation-arrival-${width}.webp`);
