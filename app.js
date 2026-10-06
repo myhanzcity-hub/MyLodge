@@ -2,7 +2,7 @@
 (() => {
 // Review figures, not approved contract terms. All displayed prices derive here.
 const offer=Object.freeze({amount:3960000,depositRate:.05,shares:120});
-const pageRevision=Object.freeze({date:'2026-10-01',label:'2026.10.01'});
+const pageRevision=Object.freeze({date:'2026-10-05',label:'2026.10.05'});
 const money=value=>{value=Math.max(0,value);if(!value)return '0원';const man=Math.floor(value/10000),rest=value%10000;return (man?man.toLocaleString('ko-KR')+'만':'')+(rest?(man?' ':'')+rest.toLocaleString('ko-KR'):'')+(rest?'원':' 원');};
 const priceText={amount:money(offer.amount),deposit:money(Math.round(offer.amount*offer.depositRate)),balance:money(offer.amount-Math.round(offer.amount*offer.depositRate)),rate:(offer.depositRate*100)+'%'};
 const images=[['hero',1122,1402],['interior',1448,1086],['terrace',1145,1374],['hero',1122,1402],['coastal',1448,1086],['forest',1448,1086]];
@@ -12,10 +12,10 @@ const planImage=(page,alt)=>'<img src="assets/images/plan-p'+page+'-960.webp" sr
 const intro = (title, body='') => '<div class="intro"><h2>'+title+'</h2>'+(body?'<p>'+body+'</p>':'')+'</div>';
 const section = (id, cls, body) => '<section id="'+id+'" class="'+cls+'"><div class="container">'+body+'</div></section>';
 const upcomingServices = [
- {id:'service-swap',title:'지역 교환·일정 조회',description:'이용 가능한 일정을 살펴보고, 다른 지역의 머무름을 서로 제안합니다.',items:['교환 가능 지역·일정의 공개 범위','교환 승인·추가 금액·혜택 기준'],note:'강릉·제주·해외 교환은 서비스 구상 예시입니다. 제공 지역과 조건은 아직 정해지지 않았습니다.'},
+ {id:'service-swap',title:'지역 교환·일정 조회',description:'나의 이용 일정과 다른 지역의 머무름을 서로 제안하는 서비스 구상입니다.',items:['이용권과 실제 시설·일정 공급의 확인','양측의 조건 확인·추가 금액·혜택·취소 기준'],note:'제공 지역·대상 이용권·교환 방식은 미정입니다. 상대의 제안이나 동의만으로 일정이 확정되는 서비스는 아직 제공하지 않습니다.'},
  {id:'service-notifications',title:'알림',description:'예약·교환 등 필요한 진행 소식을 받아보는 알림을 준비합니다.',items:['상담·예약·교환 중 어떤 소식을 받을지','푸시·카카오·문자 제공 방식과 수신 설정'],note:'푸시·카카오 알림톡·문자 등 제공 방식과 알림 항목은 추후 안내합니다. 현재 알림은 발송되지 않습니다.'},
  {id:'service-rental',title:'렌트·공동 모집',description:'별장을 함께 준비하는 공동 모집과, 이용 가능한 숙박을 빌려주는 렌트는 별도 절차입니다.',items:['공동 모집의 참여 대상과 진행 방식','숙박 렌트의 이용 대상·수수료·정산·취소 기준'],note:'렌트와 공동 모집의 대상·방식·정산·취소 조건은 미정입니다. 현재 예약·결제·모집금 접수는 제공하지 않습니다.'},
- {id:'service-preparation',title:'청소·룸서비스',description:'방문 전 청소와 룸서비스, 필요한 침구·타월을 선택합니다.',items:['방문지별 청소·룸서비스 제공 범위','이불·베개커버·타월의 수량과 추가 비용'],note:'제공 항목과 수량, 비용, 신청 마감 시점은 추후 안내합니다. 현재 서비스 예약은 접수되지 않습니다.'}
+ {id:'service-preparation',title:'청소·룸서비스',description:'머무는 날의 준비를 돕는 청소·룸서비스와 침구·타월 제공을 구상합니다.',items:['지역별 제공 업체·작업 범위·가능 일정','품목·기본 수량·추가 비용·신청 마감·취소 기준'],note:'제공 여부와 항목, 비용은 아직 정해지지 않았습니다. 현재 청소·침구·룸서비스 신청은 받지 않습니다.'}
 ];
 const serviceScenes=[
  '<div class="swap-example"><div><span>내 이용 일정</span><strong>지역 A</strong><small>바꾸고 싶은 일정</small></div><span class="swap-arrow" aria-hidden="true">⇄</span><div><span>교환 희망 일정</span><strong>지역 B</strong><small>상대와 조건 확인</small></div></div><p class="service-example-note">지역·날짜는 설명용 구분입니다. 교환 범위와 추가 조건은 미정입니다.</p>',
@@ -31,25 +31,37 @@ const contractPreview={
 };
 const contractMarkup='<details id="member" class="contract-preview"><summary>참여 후 내 계약·진행 화면 구상</summary><p>'+contractPreview.description+'</p><ul>'+contractPreview.items.map(item=>'<li>'+item+'</li>').join('')+'</ul><p class="small">'+contractPreview.note+'</p></details>';
 const projectFacts=[
- ['공간','정확한 위치·부지, 면적·객실·수용 인원'],
- ['시설','제공 시설·평면도·실제 현장 사진'],
- ['일정','모집 일정·현황, 착공·준공·이용 시작일']
+ ['위치·부지','정확한 위치와 부지 확보를 확인할 자료'],
+ ['공간·시설','면적·객실·정원·전용/공용 시설·확정 도면·실제 사진'],
+ ['모집·계약','적용 상품·구좌 단위·가격·납입표·모집 일정'],
+ ['이용 시작','공사·시설 준비와 운영 조건을 확인한 이용 개시 안내']
 ];
 const projectDetails = () => '<details class="project-details" id="project-public-scope"><summary>두 프로젝트의 공개 범위와 확인할 조건</summary><p class="small">위치·시설·일정은 확인된 자료부터 순차적으로 안내합니다.</p><dl class="project-scope-list">'+projectFacts.map(([label,description])=>'<div><dt>'+label+'</dt><dd>'+description+'<span>정식 안내 전 확인 필요</span></dd></div>').join('')+'</dl><p class="small">준비 중 표시는 모집 개시나 부지 확보, 인허가 완료를 의미하지 않습니다.</p></details>';
 const rightsMarkup = '<div class="rights-heading"><h3 id="rights-title">권리와 추가 비용, 한눈에 확인하세요.</h3><p>현재 안내 가능한 기준과 확인이 필요한 조건을 구분했습니다.</p></div><table class="card rights-table" aria-labelledby="rights-title"><thead><tr class="rights-row rights-head"><th scope="col">확인 항목</th><th scope="col">현재 안내</th><th scope="col">상태</th></tr></thead><tbody>'+[
- ['shares','참여 단위','별장 한 채당 '+offer.shares+'구좌 구상','현재 구상'],
- ['ownership','소유 권리','등기 방식·권리 범위·양도 절차','미정'],
- ['use','이용 권리','연간 숙박 일수·이용 기간·일정 변경·취소','미정'],
+ ['shares','참여 단위','한 채 기준 '+offer.shares+'구좌 구상 · 프로젝트별 적용 단위는 확인 필요','현재 구상'],
+ ['ownership','소유 권리','취득할 권리의 종류·등기 방식·범위·발생 시점·양도 조건','미정'],
+ ['use','이용 권리','이용 지역·기간·연간 숙박량·동반 인원·변경·취소 조건','미정'],
  ['schedule','일정 배정','성수기·주말·예약 우선순위','미정'],
- ['costs','추가 비용','세금·등기·관리·청소·침구 비용','미정'],
- ['cancellation','취소·환불','모집 미달·중도 취소·환불 기준','미정']
+ ['costs','추가 비용','세금·등기·정기 관리·수선·청소·침구·선택 서비스 비용','미정'],
+ ['cancellation','변경·취소·환불','모집 미달·사업 지연·조건 변경·중도 취소·환불 기준','미정']
  ].map(r=>'<tr class="rights-row" id="rights-'+r[0]+'" tabindex="-1"><th scope="row">'+r[1]+'</th><td class="rights-description">'+r[2]+'</td><td class="rights-state"><span class="status-label">'+r[3]+'</span></td></tr>').join('')+'</tbody></table>';
-const progressMarkup = intro('어디까지 준비됐는지,<br>확인할 수 있도록.','모집·부지·일정과 운영 주체는 공개 준비 중입니다.')+'<div class="progress-grid"><article class="card progress-card"><span class="preparing">공개 준비 중</span><h3>사업 진행 안내</h3><p>모집·부지·인허가·시공·이용 시작일은 확인 후 안내합니다.</p><dl class="fact-list">'+['사업 주체','설계·시공 담당','시설 운영·고객 응대','공식 연락처·운영시간'].map(t=>'<div><dt>'+t+'</dt><dd>공개 준비 중</dd></div>').join('')+'</dl><p class="small">담당 주체와 공식 문의처는 정식 접수 전에 안내할 예정입니다.</p></article></div>';
+const costScopeMarkup='<section class="cost-scope" aria-labelledby="cost-scope-title"><div class="cost-scope-heading"><span class="eyebrow">THE WHOLE PICTURE</span><h3 id="cost-scope-title">참여 기준 금액과,<br>추가로 확인할 비용.</h3><p>참여 기준 금액의 포함 항목과 추가 부담까지 확인해야 최종 비용을 알 수 있습니다. 각 항목의 적용 여부와 금액은 최종 비용표에서 안내합니다.</p></div><dl class="cost-scope-grid">'+[
+ ['기본 참여금',priceText.amount+'이 어떤 권리와 항목의 대가인지, 적용 프로젝트와 포함 범위를 확인합니다.','포함 범위 미정'],
+ ['세금·등기','발생하는 항목과 산정 기준, 부담 주체와 납부 절차를 확인합니다.','적용·금액 미정'],
+ ['관리·수선','정기 관리비와 시설 수선·교체 비용, 부과 주기와 부담 방식을 확인합니다.','금액·부담 방식 미정'],
+ ['머무는 날의 서비스','청소·침구·타월·룸서비스의 기본 제공 여부와 유료 추가 범위를 확인합니다.','제공·요금 미정']
+ ].map(([title,copy,status])=>'<div><dt>'+title+'</dt><dd><p>'+copy+'</p><span>'+status+'</span></dd></div>').join('')+'</dl><p class="cost-scope-note">교환·렌트 등 후속 서비스의 수수료와 취소·양도 시 발생 비용도 별도 검토 대상입니다. 해당 비용의 금액과 적용 여부도 정식 안내에서 확인해야 합니다.</p></section>';
+const rightsDefinitionMarkup='<div class="rights-definition" id="ownership-and-stay"><article><span>소유 권리</span><h3>별장에 대해 내가 갖는 권리</h3><p>한 구좌에 참여하면 어떤 권리를 갖는지, 내 이름으로 등기되는지, 다른 사람에게 넘길 수 있는지 살펴봅니다. 소유 방식과 권리 범위는 아직 정해지지 않았습니다.</p></article><article><span>이용 조건</span><h3>언제, 얼마나 머물 수 있는지</h3><p>1년에 몇 박을 머물 수 있는지, 원하는 날짜에 예약할 수 있는지 살펴봅니다. 이용 일수와 성수기·주말의 예약 기준은 아직 정해지지 않았습니다.</p></article></div>';
+const progressMarkup = intro('공간의 구상과,<br>사업의 준비를 구분합니다.','현재는 콘셉트와 참여 방식을 소개하는 사전 안내 단계입니다.')+'<div class="readiness-overview" aria-label="현재 공개 정보의 범위">'+[
+ ['지금 살펴볼 수 있는 것','공간·생활 콘셉트, 공유 방식, 참여 금액의 검토 기준','사전 안내'],
+ ['확인 자료를 기다리는 것','실제 부지·설계·인허가·시공, 상품·운영 주체','자료 공개 준비 중'],
+ ['정식 안내 전 확인할 것','모집·계약·납입 조건, 이용 개시와 예약 기준','조건 미확정']
+ ].map(([title,copy,status],i)=>'<article><span class="readiness-number">0'+(i+1)+'</span><h3>'+title+'</h3><p>'+copy+'</p><b>'+status+'</b></article>').join('')+'</div><div class="progress-grid"><article class="card progress-card"><span class="preparing">공개 준비 중</span><h3>책임 주체와 확인 자료</h3><p>확인된 자료와 담당 역할을 함께 안내할 예정입니다. 콘셉트 이미지와 지역명이 부지 확보나 공사 진행을 증명하지는 않습니다.</p><dl class="fact-list">'+['계약·사업 주체','설계·시공 담당','시설 운영·고객 응대','공식 연락처·운영시간'].map(t=>'<div><dt>'+t+'</dt><dd>공개 준비 중</dd></div>').join('')+'</dl><p class="small">사업 자료의 확인일은 해당 자료와 함께 안내합니다. 페이지 하단의 화면 업데이트 날짜는 사업 진행이나 준공을 확인한 날짜가 아닙니다.</p></article></div>';
 const steps = [
- ['공유 방식을 살핍니다','한 채를 함께 준비하는 구조와 참여 단위를 확인합니다.'],
- ['조건을 충분히 살핍니다','모집 대상과 계약, 납입, 취소 조건을 확인한 뒤 결정합니다.'],
- ['참여 절차를 진행합니다','참여 후에는 계약과 납입 일정, 사업 진행 상황을 안내받습니다.'],
- ['준비가 끝나면 머뭅니다','이용 준비가 완료된 뒤, 정해진 기준에 따라 별장을 이용합니다.']
+ ['공유 방식을 살핍니다','지금은 공간 콘셉트와 참여 단위, 비용·권리의 검토 기준을 살펴보는 단계입니다.'],
+ ['정식 조건을 확인합니다','모집 상품과 전체 비용, 권리·납입·변경·취소 조건이 안내된 뒤 충분히 검토합니다.'],
+ ['계약과 납입을 확인합니다','승인된 상품과 절차에 따라 계약·납입을 진행하는 구상입니다. 현재 계약·수납은 제공하지 않습니다.'],
+ ['이용 준비를 확인합니다','시설과 운영, 이용권·일정 배정 기준이 준비되어야 합니다. 계약이나 첫 납입만으로 숙박이 시작되지 않습니다.']
 ];
 const decisionGuide='<aside class="decision-guide" aria-labelledby="decision-guide-title"><div><span class="eyebrow">BEFORE YOU DECIDE</span><h3 id="decision-guide-title">내게 맞는 방식인지,<br>세 가지부터 확인해 보세요.</h3><p>소유·이용·비용의 현재 안내 상태를 확인하세요.</p></div><div class="decision-links">'+[
  ['소유의 범위','소유 범위·이전 방식','ownership'],
@@ -59,8 +71,8 @@ const decisionGuide='<aside class="decision-guide" aria-labelledby="decision-gui
 const ownershipMarkup=intro('한 채에서 시작해,<br>함께 머무는 생활로.','한 채 · 120구좌 · 소유와 이용.<br>세부 조건은 정식 안내 전 확인이 필요합니다.')+
  '<div class="ownership-story"><div class="ownership-visual" aria-hidden="true" data-scene="0"><span class="story-kicker">A PLACE TO SHARE</span><div class="story-house">'+planImage(13,'함께 준비하는 별장 공간')+'<span>함께 준비하는 한 채</span></div><div class="story-shares"><div class="share-grid">'+'<span></span>'.repeat(offer.shares)+'</div><span>'+offer.shares+'구좌 중 한 구좌 예시</span></div><div class="story-rights"><span>소유 권리<small>권리 범위·이전 방식</small></span><i>+</i><span>이용 조건<small>숙박 일수·일정 배정</small></span></div><p class="story-caption">계획서 콘셉트·구조 예시 · 실제 현장·모집 현황이 아닙니다</p><div class="story-dots"><i></i><i></i><i></i></div></div><div class="ownership-chapters">'+[
  ['한 채를 함께 준비합니다.','여러 참여자가 별장 한 채를 함께 준비합니다. 소유 방식과 권리 범위는 계약 전 확인합니다.'],
- [offer.shares+'구좌 중 한 구좌로 참여합니다.','구좌는 참여 단위입니다. '+offer.shares+'구좌는 현재 구상이며, 단위와 계약 조건은 정식 안내에서 확인합니다.'],
- ['소유와 이용은 따로 확인합니다.','등기·양도 방식, 이용 일수·성수기 배정은 각각 확인해야 합니다. 현재 기준은 미정입니다.']
+ [offer.shares+'구좌 중 한 구좌를 살펴봅니다.','구좌는 참여를 구분하는 단위입니다. '+offer.shares+'구좌는 한 채 기준의 구상이며, 실제 프로젝트별 적용은 확인이 필요합니다. 한 구좌가 숙박 하루나 한 사람을 뜻하지는 않습니다.'],
+ ['소유와 이용은 따로 확인합니다.','자산에 대한 권리와 머무는 조건은 서로 다릅니다. 등기·양도·권리 발생 시점, 이용량·성수기 배정·예약 방식은 아직 정해지지 않았습니다.']
  ].map((item,i)=>'<article class="ownership-chapter" id="ownership-step-'+i+'" data-scene="'+i+'"><span class="chapter-number">0'+(i+1)+'</span><h3>'+item[0]+'</h3><p>'+item[1]+'</p>'+(i===2?'<a class="text-link" href="#pricing">비용과 권리 함께 확인하기 ↗</a>':'')+'</article>').join('')+'</div></div>';
 
 const checklistMarkup='<details id="checklist" class="participation-checklist"><summary>참여 전 꼭 확인할 세 가지</summary>'+'<div class="check-grid">'+[
@@ -74,14 +86,14 @@ document.querySelector('main').innerHTML =
 section('ownership','sage',ownershipMarkup+decisionGuide)+
  section('vision','vision-section','<div class="vision-heading"><span class="eyebrow">MY LODGE · SPACE VISION</span><h2>함께 꿈꾸는 공간,<br>한눈에 펼쳐보다.</h2><p>사업계획서에 담긴 공간 조성 콘셉트입니다.</p></div><figure class="photo vision-photo">'+planImage(8,'마이롯지 공간 조성 구상')+'<figcaption>사업계획서 조감도 콘셉트 · 실제 현장·확정 설계가 아닙니다</figcaption></figure>')+
  section('pricing','mist',intro('얼마부터 시작하는지,<br>먼저 살펴보세요.','검토 중인 1구좌 금액과 납입 계획입니다.')+'<div class="card pricing-table">'+[
- ['1구좌 기준 금액 <span>검토 중 기준</span>','현재 검토 중인 참여 기준 금액입니다.',''+priceText.amount+''],['첫 납입 금액','기준 금액의 '+priceText.rate+'에 해당합니다.',''+priceText.deposit+''],['첫 납입 후 잔여 기준 금액',''+priceText.amount+'에서 첫 납입금을 뺀 금액이며 별도 비용은 포함하지 않습니다.',''+priceText.balance+''],['납입 계획','단계별 금액과 일정, 최초 납입 포함 여부는 정식 모집 전 안내합니다.','6단계 분담 조건 미정']
- ].map((r,i)=>'<div class="pricing-row"'+(i===3?' id="payment-plan" tabindex="-1"':'')+'><div><div class="pricing-label">'+r[0]+'</div><p class="small">'+r[1]+'</p></div><strong>'+r[2]+'</strong></div>').join('')+'</div><div class="pricing-note"><p>최초 납입의 회차 포함 여부·금액·일정은 미정입니다. 계약 전 최종 납입표를 확인해 주세요.</p><p class="small">세금·등기·관리·서비스 비용은 별도 발생할 수 있습니다. 적용 기준은 정식 안내에서 확인합니다.</p></div>'+rightsMarkup+'<div class="center pricing-cta">'+cta+'</div>')+
+ ['1구좌 참여 기준 <span>검토 금액</span>','적용 프로젝트와 포함 항목, 최종 가격은 확정 전입니다.',''+priceText.amount+''],['그중 최초 5%의 계산값','기준 금액의 '+priceText.rate+'입니다. 전체 금액이 아니며, 현재 수납은 진행하지 않습니다.',''+priceText.deposit+''],['계산상 잔여 기준 금액',''+priceText.amount+'에서 최초 5%를 뺀 금액입니다. 별도 비용을 합산한 최종 잔액은 아닙니다.',''+priceText.balance+''],['납입 계획','최초 5%의 포함 여부, 회차별 금액·기한·발생 조건은 미정입니다.','6단계 구상 · 상세 미정']
+ ].map((r,i)=>'<div class="pricing-row"'+(i===3?' id="payment-plan" tabindex="-1"':'')+'><div><div class="pricing-label">'+r[0]+'</div><p class="small">'+r[1]+'</p></div><strong>'+r[2]+'</strong></div>').join('')+'</div><div class="pricing-note"><p>최초 5%가 전체 6단계에 포함되는지는 아직 정해지지 않았습니다.</p><p class="small">각 단계의 금액·기한·납입 조건은 정식 안내 전 확정이 필요합니다. 계약 전 최종 납입표와 추가 비용표를 함께 확인해야 합니다.</p></div>'+costScopeMarkup+rightsDefinitionMarkup+rightsMarkup+'<div class="center pricing-cta">'+cta+'</div>')+
  section('projects','',intro('다음 마이롯지가<br>머물 곳.','주문진과 양양의 지역 소개와 공간 콘셉트를 살펴보세요.')+
  '<div class="project-intro-note"><span>현재 공개 범위</span><p>이미지는 AI 공간 콘셉트입니다. 실제 위치·시설·설계·일정은 확인 후 안내합니다.</p></div>'+
- '<div class="stack-grid project-grid">'+['주문진','양양'].map((region,index)=>'<article class="card project card-lift"><div class="photo project-photo">'+image(index+4,region+' 프로젝트 콘셉트')+'<span class="badge">준비 중</span><span class="concept">AI 생성 콘셉트</span></div><div class="project-body"><div class="project-title-row"><h3>'+region+' 프로젝트</h3><span aria-hidden="true">0'+(index+1)+'</span></div><a class="location" href="#project-public-scope">공개 범위와 조건 보기 <span aria-hidden="true">↗</span></a></div></article>').join('')+'</div><div class="project-common">'+projectDetails()+'</div>')+
+ '<div class="stack-grid project-grid">'+['주문진','양양'].map((region,index)=>'<article class="card project card-lift" id="project-'+(index?'yangyang':'jumunjin')+'"><div class="photo project-photo">'+image(index+4,region+' 지역 소개용 공간 콘셉트 · 실제 위치를 나타내지 않음')+'<span class="badge">자료 공개 준비 중</span><span class="concept">AI 공간 콘셉트</span></div><div class="project-body"><div class="project-title-row"><h3>'+region+' 프로젝트</h3><span aria-hidden="true">0'+(index+1)+'</span></div><p class="project-region-copy">'+region+'의 지역 소개와 별장 공간 구상을 살펴보는 카드입니다. 실제 부지와 시설이 확정된 모집 상품 안내는 아닙니다.</p><dl class="project-fact-mini"><div><dt>현재 공개</dt><dd>지역명·공간 콘셉트</dd></div><div><dt>위치·시설</dt><dd>확인 자료 공개 전</dd></div><div><dt>모집 조건</dt><dd>정식 안내 전</dd></div><div><dt>이용 시작</dt><dd>일정·운영 조건 미정</dd></div></dl><a class="location" href="#project-public-scope">공개 전 확인할 자료 보기 <span aria-hidden="true">↗</span></a></div></article>').join('')+'</div><div class="project-common">'+projectDetails()+'</div>')+
  section('nature','nature-section','<figure class="nature-visual"><img src="assets/images/lodge-dreamscape-960.webp" srcset="assets/images/lodge-dreamscape-480.webp 480w, assets/images/lodge-dreamscape-960.webp 960w, assets/images/lodge-dreamscape-1536.webp 1536w" sizes="100vw" width="1536" height="1024" alt="청록빛 물과 금빛 숲이 어우러진 몽환적인 자연 · AI 브랜드 콘셉트" loading="lazy" decoding="async"><div class="nature-copy"><span class="eyebrow">A MOMENT BEYOND EVERYDAY</span><h2>일상의 바깥,<br>깊어지는 쉼.</h2><p>자연을 가까이 두는 새로운 생활을 그립니다.</p></div><figcaption>AI 브랜드 콘셉트 · 프로젝트의 실제 자연환경이 아닙니다</figcaption></figure>')+
  section('lifestyle','',intro('혼자 떠나는 날에도,<br>함께 떠나는 날에도.','창가의 아침, 숲을 바라보는 오후.<br>머물고 싶은 하루를 만나보세요.')+'<div class="stack-grid lifestyle-grid"><figure class="photo lifestyle-main">'+image(1,'창가에서 보내는 휴식')+'<figcaption class="photo-label">창가에서 보내는 휴식</figcaption></figure><div class="lifestyle-secondary">'+['숲을 바라보는 테라스','독채형 공간 콘셉트'].map((t,i)=>'<figure class="photo">'+image(i+2,t)+'<figcaption class="photo-label">'+t+'</figcaption></figure>').join('')+'</div></div><p class="image-note">이미지는 AI로 만든 공간 콘셉트입니다. 실제 현장·확정 설계·제공 시설을 나타내지 않습니다.</p>')+
- section('participation','',intro('서두르지 말고,<br>하나씩 알아가세요.')+'<div class="step-grid">'+steps.map((s,i)=>'<article class="card step"><span class="number">0'+(i+1)+'</span><h3>'+s[0]+'</h3><p>'+s[1]+'</p></article>').join('')+'</div><p class="step-note">현재 구상 단계의 순서입니다. 모집 완료는 이용 시작을 뜻하지 않으며, 공간·운영 준비 후 이용 시점을 안내합니다.</p>'+checklistMarkup+contractMarkup)+
+ section('participation','',intro('서두르지 말고,<br>하나씩 알아가세요.')+'<p class="journey-current"><span>지금의 단계</span> 공간과 참여 조건을 살펴보는 사전 안내 · 실제 상담·계약·수납·예약은 제공하지 않습니다.</p><div class="step-grid">'+steps.map((s,i)=>'<article class="card step"><span class="number">0'+(i+1)+'</span><h3>'+s[0]+'</h3><p>'+s[1]+'</p></article>').join('')+'</div><p class="step-note">정식 안내와 준비가 이루어진 이후의 절차를 포함한 구상입니다. 모집 완료·계약 체결·납입·이용 개시는 서로 다른 단계입니다.</p>'+checklistMarkup+contractMarkup)+
  section('stay-services','',intro('마이롯지의 다음 서비스,<br>카테고리별로 살펴보세요.','교환·알림·렌트·방문 준비.<br>제공 시점과 조건은 확정 후 안내합니다.')+upcomingServiceMarkup)+
  section('progress','mist',progressMarkup);
 

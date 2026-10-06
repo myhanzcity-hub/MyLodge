@@ -38,23 +38,34 @@
 
  const invitation=document.createElement('section');invitation.className='vacation-invitation';invitation.id='our-villa';
  invitation.innerHTML='<div class="container"><p class="eyebrow">A VILLA, TOGETHER</p><div class="invitation-grid"><div><h2>누군가의 별장에서,<br><em>우리의 별장으로.</em></h2><p>한 채를 함께 준비하는 공유별장.<br>별장 생활을 더 가까운 선택으로 만드는 구상입니다.</p><a class="text-link" href="#ownership">120구좌의 공유 방식 알아보기 ↗</a></div><div class="access-facts"><p class="access-label">참여 비용 · 검토 중인 1구좌 기준</p></div></div><p class="invitation-footnote">공동 소유의 법적 구조와 이용 권리는 정식 계약 전 안내합니다.</p></div>';
- explorer.after(invitation);invitation.querySelector('.access-facts').append(pair,priceNote);
- const ownership=document.querySelector('#ownership');invitation.after(ownership);
+ ribbon.after(invitation);invitation.after(explorer);invitation.querySelector('.access-facts').append(pair,priceNote);
+ invitation.querySelector('.eyebrow').textContent='MY LODGE SHARE / 사전 안내';
+ invitation.querySelector('.invitation-grid>div>p').innerHTML='여러 참여자가 별장 한 채를 함께 준비하는 구상입니다.<br>한 구좌는 참여 단위이며, 소유할 권리와 머무는 조건은 별도로 확인합니다.';
+ invitation.querySelector('.access-label').textContent='전체 참여 기준부터 살펴보세요 · 1구좌 검토 금액';
+ pair.querySelector('.price-tile p').textContent='1구좌 참여 기준 · 검토 중';
+ pair.querySelectorAll('.price-tile p')[1].textContent='그중 최초 5%의 계산값';
+ pair.querySelector('small').textContent='전체 금액이 아닌 최초 5%';
+ priceNote.textContent='참여 기준 금액의 포함 항목과 추가 비용, 회차별 납입 조건은 아직 확정되지 않았습니다.';
+ invitation.querySelector('.text-link').textContent='한 채·120구좌의 공유 방식 ↗';
+ invitation.querySelector('.text-link').insertAdjacentHTML('afterend','<a class="text-link invitation-cost-link" href="#pricing">전체 비용과 권리 확인하기 ↗</a>');
+ invitation.querySelector('.invitation-footnote').textContent='현재는 공간·참여 구상을 살펴보는 단계입니다. 실제 상담 접수·모집·계약·수납·예약은 진행하지 않습니다.';
+ const ownership=document.querySelector('#ownership');
  ownership.querySelector('.intro h2').innerHTML='혼자 준비하던 별장,<br>함께 준비하는 방법.';
  // Make leisure scenes available before conditions, with direct section navigation.
  const story=document.querySelector('#life-story');explorer.after(story);
+ story.after(ownership);ownership.after(document.querySelector('#pricing'));
  const storyData=[
  ['vacation-arrival',1680,'15:00','ARRIVE & UNWIND','별장 앞에 차를 세우면,<br>주말이 달라집니다.','바다와 소나무, 모듈 별장. 돌아오고 싶은 휴가의 첫 장면.','AI 공간 콘셉트 · 위치·주차 조건은 미확정'],
  ['living-terrace',1536,'16:30','SLOW DOWN','아무 일정 없이,<br>좋은 환경 속으로.','테라스의 커피 한 잔. 서두를 일 없는 오후.','AI 생활 콘셉트 · 실제 시설·고객 사진이 아닙니다'],
  ['plan-p16',1440,'18:00','MEET & SHARE','친구야,<br>우리 별장에서 만나.','함께 먹고, 이야기하고. 별장 생활에 더해지는 만남의 공간.','사업계획서 생활 콘셉트 · 실제 시설·운영 조건은 미확정']
  ];
  story.querySelectorAll('.life-scene').forEach((scene,i)=>{const s=storyData[i];scene.querySelector('img').outerHTML=photo(s[0],s[1],s[4].replace(/<br>/g,' '));scene.querySelector('.scene-time').textContent=s[2];scene.querySelector('.eyebrow').textContent='0'+(i+1)+' / '+s[3];scene.querySelector('h2').innerHTML=s[4];scene.querySelector('.life-copy>p:last-child').textContent=s[5];scene.querySelector('.life-caption').textContent=s[6];});
- const nature=document.querySelector('#nature');nature.querySelector('img').outerHTML=photo('lodge-coastal',1440,'해안 풍경 속의 세련된 모듈 별장 · AI 공간 콘셉트');nature.querySelector('h2').innerHTML='고즈넉하게.<br>세련되게.<br>나의 베케이션.';nature.querySelector('figcaption').textContent='AI 공간 콘셉트 · 실제 프로젝트의 부지·환경이 아닙니다';
+ const nature=document.querySelector('#nature');nature.querySelector('img').outerHTML=photo('lodge-coastal',1440,'해안 풍경 속의 세련된 모듈 별장 · AI 공간 콘셉트');nature.querySelector('h2').innerHTML='고즈넉하게.<br>세련되게.<br>나의 휴가.';nature.querySelector('figcaption').textContent='AI 공간 콘셉트 · 실제 프로젝트의 부지·환경이 아닙니다';
  const lifeIntro=document.querySelector('#lifestyle .intro');lifeIntro.querySelector('h2').innerHTML='별장 안에서,<br>별장 밖으로.';lifeIntro.querySelector('p').innerHTML='큰 창 너머의 풍경, 테라스의 여유.<br>나만의 속도로 머무는 공간을 그립니다.';
  const pricing=document.querySelector('#pricing');pricing.querySelector('.intro h2').innerHTML='별장의 꿈을,<br>현실의 숫자로.';
  const projects=document.querySelector('#projects');projects.querySelector('.intro h2').innerHTML='바다 곁에서 그리는<br>우리의 다음 별장.';
  // Navigation points to real sections; original membership/services controls remain intact.
- const navItems=[['#villa-spaces','별장 공간'],['#ownership','공유 방식'],['#projects','프로젝트'],['#pricing','비용·권리'],['#stay-services','서비스 구상']];
+ const navItems=[['#villa-spaces','별장 공간'],['#ownership','공유 방식'],['#pricing','비용·권리'],['#projects','프로젝트'],['#stay-services','서비스 구상']];
  for(const nav of document.querySelectorAll('header nav')){const links=[...nav.querySelectorAll('a')];navItems.forEach(([hash,label],i)=>{if(links[i]){links[i].href=hash;links[i].textContent=label;}});}
  const headerCta=document.querySelector('.header-cta');headerCta.href='#villa-spaces';headerCta.textContent='별장 살펴보기 ↗';
  document.querySelector('.header-inner nav').insertAdjacentHTML('beforeend','<a href="business-valley.html">Business Valley ↗</a>');
@@ -67,8 +78,7 @@
  function currentNav(){navFrame=0;const current=navItems.map(([hash])=>document.querySelector(hash)).filter(s=>s&&s.getBoundingClientRect().top<=150).sort((a,b)=>b.getBoundingClientRect().top-a.getBoundingClientRect().top)[0];navLinks.forEach(a=>{if(current&&a.hash==='#'+current.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}
  addEventListener('scroll',()=>{if(!navFrame)navFrame=requestAnimationFrame(currentNav);},{passive:true});currentNav();
  const final=document.createElement('section');final.className='vacation-finale';
- final.innerHTML='<div class="container"><p class="eyebrow">YOUR NEXT VACATION</p><h2>다음 주말엔,<br><em>나 별장있다.</em></h2><p>먼저 공간을 만나고, 함께 준비하는 조건을 살펴보세요.</p><div><a class="primary" href="#projects">프로젝트 살펴보기 ↗</a><a class="outline" href="#pricing">비용·권리 확인하기</a></div><small>마이롯지는 현재 사전 안내 단계입니다.</small></div>';
+ final.innerHTML='<div class="container"><p class="eyebrow">YOUR NEXT VACATION</p><h2>다음 휴가를 그리며,<br><em>나 별장있다.</em></h2><p>마음에 드는 공간에서 시작해,<br>비용·소유·이용 조건까지 충분히 살펴보세요.</p><div><a class="primary" href="#projects">프로젝트 살펴보기 ↗</a><a class="outline" href="#pricing">비용·권리 확인하기</a></div><small>현재는 사전 안내 단계입니다. 이용 시작 시점은 아직 확정되지 않았습니다.</small></div>';
  document.querySelector('#progress').after(final);
- document.querySelector('.copyright').textContent='© 2026 MY LODGE. 사전 안내 페이지 · 2026.10.03 화면 업데이트';
  heroCopy.classList.add('vacation-hero-copy');
 })();

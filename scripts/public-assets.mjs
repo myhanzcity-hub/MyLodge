@@ -13,6 +13,7 @@ publicAssets.push('chairman.css','chairman.js');
 publicAssets.push('scenery.css','scenery.js');
 publicAssets.push('mobile.css','mobile.js');
 publicAssets.push('intro.css','intro.js');
+publicAssets.push('planning.css');
 publicAssets.push('assets/video/mylodge-intro-impact-30s.mp4','assets/video/mylodge-intro-impact-30s-mobile.mp4','assets/video/mylodge-intro-impact-poster.webp','assets/video/mylodge-intro-impact-poster-mobile.webp');
 for (const name of ['coast','cafe','arrival']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/scenery-${name}-${width}.webp`);
 publicAssets.push('business-valley.html','valley.js');

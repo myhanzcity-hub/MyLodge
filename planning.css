@@ -1,0 +1,158 @@
+/* 2026-10-05: clearer information in the existing public introduction.
+   These are reading layouts; no consultation, account or transaction features. */
+.film-top{align-items:flex-start}
+.film-context{max-width:340px;padding:14px 18px;background:#0a272be6;border:1px solid #e5d7b55e;border-radius:6px;backdrop-filter:blur(10px);pointer-events:auto}
+.film-context>span{font-size:9px;letter-spacing:.15em;color:#c9d8cc}
+.film-context p{font-size:13px;margin:7px 0 11px;line-height:1.6;color:#f3eedf}
+.film-context>a{display:block;min-height:44px;font-size:13px;line-height:1.6;color:#e7d8b8;padding:8px 0;border-top:1px solid #f5e5c13d}
+.film-context b{font-size:18px;font-weight:600;color:#fff5d9;white-space:nowrap;margin:0 5px}
+.film-price-value{white-space:nowrap}
+.vacation-design #vision .vision-heading{opacity:1;transform:none;translate:none;transition:none}
+.vacation-design #vision .vision-heading h2{color:#244b3d}
+.vacation-design #vision .vision-heading p{color:#526454}
+.vacation-design #vision .vision-heading .eyebrow{color:#746a3d}
+.film-context small{display:block;font-size:11px;line-height:1.7;color:#dae3d9}
+.film-end{flex-wrap:wrap;justify-content:flex-end}
+.film-note{font-size:12px;line-height:1.7;max-width:420px}
+.vacation-design #our-villa.scenic-deep{min-height:0;padding-top:78px;padding-bottom:90px}
+#our-villa .invitation-grid{align-items:start}
+#our-villa.scenic-deep .access-facts{background:#0b2d2ae8;border-color:#d7d3b360}
+#our-villa.scenic-deep .eyebrow{color:#e4d4ac;font-size:11px;letter-spacing:.11em;margin-bottom:28px}
+#our-villa .invitation-grid h2{font-size:clamp(32px,3.5vw,46px);line-height:1.35}
+#our-villa .invitation-grid>div>p:not(.access-label){font-size:15px;line-height:1.9;max-width:520px}
+#our-villa .invitation-grid .text-link{display:inline-flex;min-height:44px;align-items:center;font-size:13px;line-height:1.6;margin:5px 16px 0 0}
+#our-villa .invitation-cost-link{border-bottom:1px solid #e4d3b575}
+#our-villa .access-label{font-size:12px;line-height:1.7;margin:0}
+#our-villa .access-facts .price-pair{grid-template-columns:1fr;gap:24px;margin:22px 0}
+.vacation-design #our-villa .price-tile:first-child strong{font-size:clamp(38px,4vw,52px)!important;line-height:1.2}
+#our-villa .price-tile+.price-tile{border-top:1px solid #e4d4b34d;padding-top:21px}
+#our-villa .price-tile p{font-size:13px;line-height:1.7;margin-bottom:10px}
+.vacation-design #our-villa .price-tile+.price-tile strong{font-size:30px!important;line-height:1.3}
+#our-villa .price-tile small{font-size:12px;line-height:1.7;margin-top:8px;display:block}
+#our-villa .access-facts>.small{font-size:13px;line-height:1.8;max-width:none;margin-bottom:0}
+#our-villa .invitation-footnote{font-size:13px;line-height:1.8;margin-top:35px}
+.vacation-design #pricing .pricing-note{font-size:15px;line-height:1.8}
+.vacation-design :is(#pricing,#projects,#progress) .intro.middle-entrance :is(h2,p){opacity:1;translate:none;transform:none;filter:none;transition:none}
+#pricing .pricing-note .small{font-size:14px;line-height:1.8}
+#pricing .pricing-row .small{font-size:14px;line-height:1.8;max-width:600px}
+.vacation-design #pricing .pricing-row:last-child strong{font-size:19px;line-height:1.6;white-space:normal}
+.cost-scope{margin-top:50px;border:1px solid #dfd4b34d;border-radius:16px;background:#10322ce8;padding:32px}
+.cost-scope-heading{display:grid;grid-template-columns:1fr 1fr;gap:10px 36px;align-items:end;margin-bottom:28px}
+.cost-scope-heading>.eyebrow{grid-column:1/-1;color:#ddcfa8;font-size:10px;letter-spacing:.16em}
+.cost-scope-heading h3{font-size:28px;line-height:1.4;color:#f5eedb;letter-spacing:-.035em;margin:0}
+.cost-scope-heading>p{font-size:14px;line-height:1.8;color:#d2ded0;margin:0}
+.cost-scope-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0}
+.cost-scope-grid>div{padding:23px 25px;border:1px solid #dee4d353;border-radius:10px;background:#f4f2e9;color:#244b3d}
+.cost-scope-grid dt{font-size:17px;font-weight:600;line-height:1.6}
+.cost-scope-grid dd{margin:0}
+.cost-scope-grid p{font-size:14px;line-height:1.8;margin:12px 0 18px;color:#526454}
+.cost-scope-grid dd>span{display:inline-block;padding:5px 10px;font-size:12px;line-height:1.6;border-radius:4px;background:#e3e7d9;color:#3f604c}
+.cost-scope-note{font-size:13px;line-height:1.8;color:#d4ddcd;margin:23px 0 0}
+.rights-definition{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:40px}
+.rights-definition article{padding:27px 30px;border-radius:12px;border:1px solid #b1c4ab66;background:#11392ee8}
+.rights-definition article>span{font-size:12px;font-weight:500;color:#d9cba9;letter-spacing:.04em}
+.rights-definition h3{font-size:22px;color:#f6f1df;margin:16px 0 15px;line-height:1.5}
+.rights-definition p{font-size:14px;line-height:1.85;color:#d6dfce;margin:0}
+.vacation-design #pricing .rights-table{border:1px solid #cbd5c5;border-radius:14px}
+.vacation-design #pricing .rights-table .rights-row{grid-template-columns:180px minmax(0,1fr) 104px;gap:24px;min-height:72px;padding:18px 28px;line-height:1.8;border-bottom:1px solid #d7dfd2}
+.vacation-design #pricing .rights-table .rights-head{min-height:56px;padding-top:14px;padding-bottom:14px;background:#e7ebdf;color:#526454;font-size:13px}
+.vacation-design #pricing .rights-table tbody .rights-row:last-child{border-bottom:0}
+.vacation-design #pricing .rights-table .rights-state{justify-self:start}
+.vacation-design #pricing .rights-table .status-label{display:inline-flex;align-items:center;justify-content:center;min-height:28px;min-width:48px;padding:3px 10px;line-height:1.6;background:#e6ecdf;color:#365b46}
+.project-region-copy{font-size:14px;line-height:1.85;color:#4b6255;margin:18px 0 23px}
+.project-fact-mini{margin:0 0 17px;font-size:13px}
+.project-fact-mini>div{display:grid;grid-template-columns:92px 1fr;gap:15px;padding:12px 0;border-top:1px solid #ced8c7;line-height:1.7}
+.project-fact-mini dt{font-weight:500;color:#365d49}
+.project-fact-mini dd{margin:0;color:#607061}
+.vacation-design .project .badge{background:#163e34;color:#f2efdf;font-size:12px;padding:7px 11px}
+.vacation-design .project .concept{font-size:11px}
+.vacation-design .project-details{background:#f5f4eaf5;padding:24px 28px;border:1px solid #cbd5c3;border-radius:12px}
+.vacation-design .project-details .small{font-size:14px;line-height:1.8}
+.project-scope-list dd{line-height:1.8}
+.journey-current{position:relative;z-index:2;font-size:14px;line-height:1.9;padding:20px 24px;margin:0 0 30px;background:#113d35;border:1px solid #a1baa473;border-radius:8px;color:#ebecda}
+.journey-current span{display:inline-block;color:#e5cfa0;font-weight:600;margin-right:15px}
+.vacation-design .participation-spectacle .step p{font-size:14px;line-height:1.85}
+.participation-spectacle .step-note{font-size:14px;line-height:1.8}
+.readiness-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:0 0 28px}
+.readiness-overview article{border:1px solid #c5d4bd;background:#f6f5eefa;padding:28px 25px;border-radius:12px}
+.readiness-number{display:block;font-size:12px;letter-spacing:.1em;color:#7a754f;margin-bottom:19px}
+.readiness-overview h3{font-size:18px;line-height:1.55;letter-spacing:-.025em;color:#244b3d;margin:0 0 14px}
+.readiness-overview p{font-size:14px;line-height:1.85;color:#556b5a;margin:0 0 22px}
+.readiness-overview b{font-size:12px;font-weight:500;color:#2e5844;padding:6px 10px;border:1px solid #c4d1b8;border-radius:4px;display:inline-block}
+#progress .progress-grid{display:block}
+.vacation-design #progress .progress-card{max-width:none}
+.vacation-design #progress .progress-card h3{font-size:22px}
+.vacation-design #progress .progress-card>p{font-size:14px;line-height:1.85}
+.vacation-design .vacation-finale small{font-size:13px;line-height:1.8}
+.vacation-design footer .footer-info{font-size:13px;line-height:1.7}
+.footer-pending,.copyright{line-height:1.8}
+@media(max-width:1023px){
+ .vacation-design #pricing .rights-table .rights-row{grid-template-columns:150px minmax(0,1fr) 90px;gap:18px;padding-left:22px;padding-right:22px}
+ .film-top{left:28px;right:28px}
+ .film-context{max-width:300px}
+ .readiness-overview{gap:12px}
+ .readiness-overview article{padding:24px 20px}
+ .cost-scope-heading{gap:15px 25px}
+ .vacation-design #our-villa.scenic-deep{padding-top:68px;padding-bottom:42px}
+}
+@media(max-width:700px){
+ .vacation-design #pricing .rights-table .rights-row{grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;min-height:0;padding:20px;font-size:14px}
+ .vacation-design #pricing .rights-table .rights-row>th{grid-column:1;grid-row:1}
+ .vacation-design #pricing .rights-table .rights-state{grid-column:2;grid-row:1;justify-self:end}
+ .vacation-design #pricing .rights-table .rights-description{grid-column:1/-1;grid-row:2;line-height:1.85;color:#526454}
+ .vacation-design #pricing .rights-table .rights-head{position:absolute;display:grid;width:1px;height:1px;min-height:0;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .film-top{top:86px;left:20px;right:20px;display:block}
+ .film-context{padding:10px 13px;max-width:none;min-width:0}
+ .film-context>span{display:none}
+ .film-context p{font-size:12px;margin:0 0 5px}
+ .film-context>a{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;line-height:1.8;padding:6px 0}
+ .film-price-label{display:inline}
+ .film-context b{font-size:16px;display:inline;margin:0}
+ .film-context small{font-size:11px;line-height:1.7}
+ .film-skip{position:absolute;right:0;top:calc(100% + 8px);font-size:11px;padding:9px 13px;line-height:1.65;text-align:center}
+ .film-note{font-size:11px;max-width:none}
+ .film-bottom{gap:10px;bottom:max(20px,env(safe-area-inset-bottom))}
+ .film-end{bottom:125px;gap:8px;justify-content:flex-start}
+ .film-end button,.film-end a{font-size:11px;min-height:44px;padding:8px 12px}
+ #our-villa .invitation-grid h2{font-size:31px}
+ #our-villa .invitation-grid>div>p:not(.access-label){font-size:14px}
+ #our-villa.scenic-deep .access-facts{padding:25px 22px;border:1px solid #d7d3b360;border-radius:12px}
+ #our-villa .invitation-grid .text-link{font-size:13px;margin-right:10px}
+ #our-villa .invitation-grid{gap:30px}
+ #our-villa.scenic-deep .eyebrow{font-size:10px;letter-spacing:.06em;line-height:1.8;margin-bottom:22px}
+ .vacation-design #our-villa .price-tile:first-child strong{font-size:44px!important}
+ .vacation-design #our-villa .price-tile+.price-tile strong{font-size:29px!important}
+ #pricing .pricing-row .small{font-size:13px}
+ .vacation-design #pricing.scenic-deep .pricing-table{padding:6px 20px}
+ .vacation-design #pricing .pricing-note{padding:20px;font-size:14px}
+ #pricing .pricing-note .small{font-size:13px}
+ .cost-scope{margin-top:30px;padding:24px 20px}
+ .cost-scope-heading{display:block;margin-bottom:24px}
+ .cost-scope-heading h3{font-size:24px;margin:15px 0}
+ .cost-scope-heading>p{font-size:14px}
+ .cost-scope-grid,.rights-definition,.readiness-overview{grid-template-columns:1fr}
+ .cost-scope-grid{gap:12px}
+ .cost-scope-grid>div{padding:20px}
+ .cost-scope-grid p{margin-bottom:14px}
+ .rights-definition{gap:12px;margin-top:25px}
+ .rights-definition article{padding:24px}
+ .rights-definition h3{font-size:21px}
+ .project-fact-mini>div{grid-template-columns:82px 1fr;gap:12px}
+ .vacation-design .project-details{padding:20px}
+ .vacation-design .project-details summary{font-size:14px;line-height:1.7}
+ .journey-current{font-size:13px;padding:19px 20px}
+ .journey-current span{display:block;margin-bottom:8px}
+ .readiness-overview{gap:12px}
+ .readiness-overview article{padding:24px}
+ .readiness-number{margin-bottom:13px}
+ .readiness-overview p{margin-bottom:17px}
+ .vacation-design #progress .progress-card{padding:25px}
+}
+@media(max-height:520px) and (min-width:701px){
+ .film-context{max-width:300px;padding:9px 14px}
+ .film-context>span,.film-context small{display:none}
+ .film-context p{margin:0 0 5px;font-size:12px}
+ .film-context>a{min-height:36px;padding:4px 0}
+ .film-top{top:86px}
+ .film-end{bottom:75px}
+}
