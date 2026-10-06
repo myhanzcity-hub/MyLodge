@@ -1,3 +1,7 @@
+## 2026-10-06 최종 업로드 및 업무일지 완료
+
+GitHub 공개 사이트 변경 커밋3396209를 codex/main-pc-handoff-20260930에 push 완료. Vercel CLI61.1.0 prebuilt 공개76파일 Preview dpl_73aat6hrJaPu9sBLMD1UBGB2ER8P READY 후 promote 성공. 운영 dpl_AbiQmcojQK1kARkdiSeNv2q45aDn production READY, my-lodge-business.vercel.app 연결 확인. 직접 --prod는 Not authorized였으며 기존 Preview→promote 방식으로 완료. 운영 프로젝트 화면 저장. 노션 IMT·GROUP 연서흠 10월6일 기존 행(출근7:43) 페이지3f0737bfd51780fbbce9e1f9e52176df에 작업별 하위9페이지와 각3개 세부 항목 작성, 새로고침 후 저장 확인. 노션 커넥터 개인워크스페이스 접근만 가능하여 로그인된 브라우저로 작성. 출퇴근 시간 변경 없음. 내부 문서·원본PNG·백업·상담모듈은 공개 배포에서 제외.
+
 ## 2026-10-06 하루 작업 GitHub·운영 배포
 
 사용자 종료 지시로 현재 홍보 사이트 버전을 GitHub 인계 브랜치와 Vercel 운영에 업로드한다. 공개76파일만 배포. 인트로9문구/9이미지, 사업가 만남 이미지, 로고·캐릭터, 휴양지 조감도, 카테고리, 다국어 슬롯, 홍보 중심 정리 포함. 노션 연서흠 업무일지에 동일 날짜 작업 항목을 기존 양식으로 기록 예정. 상담 파일과 별도 개편 초안·백업은 커밋 대상에서 제외.
@@ -525,6 +529,7 @@ Windows Edge에서 9가지 화면 크기로 양방향 스크롤·직접 이동·
 - 전화번호 blur 시 형식 정리, 문의 1,000자 제한 및 글자 수, 관심 서비스 복수 선택, 입력 내용 확인 dialog 후 체험 완료 추가. 실제 접수번호 생성·저장·전송 없음.
 - admin-demo.html: 가상 문의 3건, 상태 필터, 상세, 담당자·처리 상태·메모, 화면 내 이력 시안. 메모리에서만 유지하며 실제 문의와 연결하지 않음. 로컬 서버에서 /admin-demo.html로 접근. 고객 사이트 메뉴에 노출하지 않으며 공개 dist 빌드에는 포함하지 않음.
 - backups/before-consultation-improvements-20260928에 변경 전 파일 보관. 실제 운영자 시스템의 인증·권한·저장·개인정보 처리는 서버 협의 후 별도 구현 필요.
+
 
 
 
