@@ -7,7 +7,7 @@ const money=value=>{value=Math.max(0,value);if(!value)return '0원';const man=Ma
 const priceText={amount:money(offer.amount),deposit:money(Math.round(offer.amount*offer.depositRate)),balance:money(offer.amount-Math.round(offer.amount*offer.depositRate)),rate:(offer.depositRate*100)+'%'};
 const images=[['hero',1122,1402],['interior',1448,1086],['terrace',1145,1374],['hero',1122,1402],['coastal',1448,1086],['forest',1448,1086]];
 const image=(i,alt)=>{const [name,width,height]=images[i];return '<img src="assets/images/lodge-'+name+'-960.webp" srcset="'+[480,960,Math.min(1440,width)].map(w=>'assets/images/lodge-'+name+'-'+w+'.webp '+w+'w').join(', ')+'" sizes="(max-width:700px) calc(100vw - 40px), (max-width:1023px) 80vw, 600px" width="'+width+'" height="'+height+'" alt="'+alt+' · AI 생성 콘셉트" decoding="async" '+(i?'loading="lazy"':'fetchpriority="high"')+'>';};
-const cta = '<a class="primary" href="#projects">프로젝트 살펴보기 ↗</a>';
+const cta = '<a class="primary" href="#projects">별장 둘러보기 ↗</a>';
 const planImage=(page,alt)=>'<img src="assets/images/plan-p'+page+'-960.webp" srcset="assets/images/plan-p'+page+'-480.webp 480w, assets/images/plan-p'+page+'-960.webp 960w, assets/images/plan-p'+page+'-1440.webp 1440w" sizes="(max-width:700px) 90vw, 600px" width="1440" height="804" alt="'+alt+' · 사업계획서 콘셉트" loading="lazy" decoding="async">';
 const intro = (title, body='') => '<div class="intro"><h2>'+title+'</h2>'+(body?'<p>'+body+'</p>':'')+'</div>';
 const section = (id, cls, body) => '<section id="'+id+'" class="'+cls+'"><div class="container">'+body+'</div></section>';
@@ -156,11 +156,12 @@ document.querySelector('.hero .eyebrow').insertAdjacentHTML('afterend','<p class
 const menu=document.querySelector('.menu-button'),mobileMenu=document.querySelector('#mobile-menu');
 function setMenu(open,returnFocus=false){mobileMenu.hidden=!open;menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');if(returnFocus)menu.focus();}
 menu.addEventListener('click',()=>setMenu(mobileMenu.hidden));
-mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+mobileMenu.addEventListener('click',event=>{
+ const a=event.target.closest('a');if(!a||!mobileMenu.contains(a))return;
  setMenu(false);
  const target=a.hash?document.querySelector(a.hash):null, heading=target?.querySelector('h2') || target;
- if(heading){heading.setAttribute('tabindex','-1');heading.focus({preventScroll:true});}
-}));
+ if(heading){heading.setAttribute('tabindex','-1');requestAnimationFrame(()=>heading.focus({preventScroll:true}));}
+});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!mobileMenu.hidden)setMenu(false,true);});
 matchMedia('(min-width:1024px)').addEventListener('change',event=>{if(event.matches)setMenu(false);});
 document.addEventListener('click',event=>{if(!mobileMenu.hidden&&!event.target.closest('header'))setMenu(false);});

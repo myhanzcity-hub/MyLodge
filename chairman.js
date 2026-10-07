@@ -69,9 +69,9 @@
  const pricing=document.querySelector('#pricing');pricing.querySelector('.intro h2').innerHTML='별장의 꿈을,<br>현실의 숫자로.';
  const projects=document.querySelector('#projects');projects.querySelector('.intro h2').innerHTML='바다 곁에서 그리는<br>우리의 다음 별장.';
  // Navigation points to real sections; original membership/services controls remain intact.
- const navItems=[['#villa-spaces','시설 둘러보기'],['#ownership','별장 주인들에게'],['#projects','프로젝트'],['#stay-services','컨시어지']];
+ const navItems=[['#villa-spaces','시설 둘러보기'],['#ownership','별장 주인들에게'],['#projects','지역별 별장'],['#stay-services','컨시어지']];
  for(const nav of document.querySelectorAll('header nav')){nav.innerHTML=navItems.map(([hash,label])=>`<a href="${hash}">${label}</a>`).join('');}
- const headerCta=document.querySelector('.header-cta');headerCta.href='#villa-spaces';headerCta.textContent='별장 살펴보기 ↗';
+ const headerCta=document.querySelector('.header-cta');headerCta.href='#villa-spaces';headerCta.textContent='시설 둘러보기 ↗';
  for(const nav of document.querySelectorAll('header nav'))nav.insertAdjacentHTML('beforeend','<a href="business-valley.html">Business Valley ↗</a>');
  document.querySelector('#stay-services .intro h2').innerHTML='마이롯지 컨시어지,<br>카테고리별로 살펴보세요.';
  document.querySelector('.mobile-price-status').textContent='국내 SHARE · 검토 중 · 1구좌';
@@ -82,7 +82,7 @@
  function currentNav(){navFrame=0;const current=navItems.map(([hash])=>document.querySelector(hash)).filter(s=>s&&s.getBoundingClientRect().top<=150).sort((a,b)=>b.getBoundingClientRect().top-a.getBoundingClientRect().top)[0];navLinks.forEach(a=>{if(current&&a.hash==='#'+current.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}
  addEventListener('scroll',()=>{if(!navFrame)navFrame=requestAnimationFrame(currentNav);},{passive:true});currentNav();
  const final=document.createElement('section');final.className='vacation-finale';
- final.innerHTML='<div class="container"><p class="eyebrow">YOUR NEXT VACATION</p><h2>다음 휴가를 그리며,<br><em>나 별장있다.</em></h2><p>마음에 드는 공간에서 시작해,<br>비용·소유·이용 조건까지 충분히 살펴보세요.</p><div><a class="primary" href="#projects">프로젝트 살펴보기 ↗</a><a class="outline" href="#pricing">비용·권리 확인하기</a></div><small>현재는 사전 안내 단계입니다. 이용 시작 시점은 아직 확정되지 않았습니다.</small></div>';
+ final.innerHTML='<div class="container"><p class="eyebrow">YOUR NEXT VACATION</p><h2>인생의 휴식처.<br><em>마이롯지.</em></h2><p>마음에 드는 공간에서 시작해,<br>비용·소유·이용 조건까지 충분히 살펴보세요.</p><div><a class="primary" href="#projects">별장 둘러보기 ↗</a><a class="outline" href="#pricing">비용·권리 확인하기</a></div><small>현재는 사전 안내 단계입니다. 이용 시작 시점은 아직 확정되지 않았습니다.</small></div>';
  document.querySelector('#progress').after(final);
  heroCopy.classList.add('vacation-hero-copy');
 })();

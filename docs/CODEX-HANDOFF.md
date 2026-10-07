@@ -1,3 +1,71 @@
+## 2026-10-07 하단 마무리 제목 변경
+
+사용자 요청으로 하단 제목을 인생의 휴식처. / 마이롯지. 두 줄로 변경. 영어는 Your haven in life. / MyLodge.로 대응. 배경 사진과 버튼 유지. 로컬 반영.
+
+## 2026-10-07 네온 아이콘 사이트 적용
+
+사용자 선택한5번 네온 스타일 적용. built-in image_gen으로 간결한 투명 배경4종 atlas 생성, assets/brand/mylodge-neon-icons-20261007.png 보존. editorial.js 시설4개 탭에 별장·풀장·커피·음악 아이콘 및 별장 주인3개/브랜드 경로2개 사진 배지 배치. editorial.css 짙은 그린 배경·선택 테두리·작은 화면 아이콘 크기 반영. 장식은 aria-hidden·pointer-events:none, 기존 탭/외부 링크 유지. 공개 목록에1파일 추가(106파일), server.mjs PNG MIME 추가 및 확인된 로컬 서버 재시작. docs/review/neon-icons-20261007 참고. 로컬 반영, 운영 배포 없음.
+
+## 2026-10-07 키치한 아이콘 디자인5안
+
+사용자 대표 피드백으로 아이콘 시안5종 생성. 팝 스티커, 젤리3D, 레트로 마스코트, 크롬 팝, 네온 클럽. 각 안은 별장·풀장·커피·음악4종을 비교하는 콘셉트 보드이며 docs/review/kitsch-icons-20261007에 PNG와 생성 프롬프트 보존. built-in image_gen 사용. 사이트 삽입·배포는 진행하지 않음. 검토 후 채택할 스타일과 세부 아이콘을 결정할 수 있음.
+
+## 2026-10-07 마지막 영문 자막 마침표 추가
+
+사용자 요청으로 마지막 영상 자막 Feel the MyLodge.로 마침표 추가. PC·모바일 영문 영상 재생성. 접근성 설명은 이미 마침표 포함. 로컬 반영, 배포 없음.
+
+## 2026-10-07 마지막 영문 영상 자막 확정
+
+사용자가 앞서 취소했던 문구를 다시 요청하여 마지막 자막을 Feel the MyLodge로 변경. render-english.py와 localization.js 접근성용 영상 설명 반영, PC·모바일 영상 재생성. 앞선 가독성 개선 및 다른8개 자막 유지. 이번 요청이 최신 결정이며 Feel the energy로 유지한다는 이전 기록보다 우선함. 로컬 반영, 배포 없음.
+## 2026-10-07 영문 번역 화면 가독성 개선
+
+사용자 영문 가독성 점검 요청. localization.css 영어 제목 자간 -0.015em·균형 줄바꿈·좁은 칼럼 제목 크기 조정, 주요 본문16px/1.75·Valley 보조 안내14px·PC 메뉴13px. localization.js 긴 번역8개 간결화. 시설 제목390px 약125→75px, 소개 제목1440px 약248→140px. 메인·Valley320/390/768/1024/1440px 및 동적 탭 점검. docs/ENGLISH-READABILITY-20261007.md와 화면 증거 참고. 직전 Feel the MyLodge 요청은 취소되어 영상·접근성 안내 모두 Feel the energy 유지. 로컬 반영, 배포 없음.
+## 2026-10-07 PPT 소개 영상 영어 광고 문체 조정
+
+사용자 현지 느낌 요청으로 영문 영상9장 중8장 자막을 짧은 광고 문구로 조정. A villa to call my own / Breathe out. Settle in / Every day feels like a holiday / Find your people / Good company. All year round / Good conversations. Great partnerships / Let the music move you / Make it a night to remember. 마지막 Feel the energy 유지. PC·모바일 영상·포스터 재생성, localization.js 접근성용 영상 제목·자막 전문 동기화. docs/INTRO-ENGLISH-COPY-20261007.md 참고. 로컬 반영, 배포 없음.
+## 2026-10-07 영어 문법·홍보 문구 검수
+
+사용자 영어 현지 독자 관점 검수 요청. 메인·Business Valley의 문장 연결과 직역투를 다듬고, 휴식·테라스·교류·장기 체류·구상 단계 안내 표현을 정리. 영상 자막 Space to truly unwind / Meet your next business partner 반영, 기존 이미지·모션·30초·파도 음원 유지. 영문 PC·모바일 영상 재생성. docs/ENGLISH-COPY-REVIEW-20261007.md 및 docs/review/english-copy-20261007 참고. 로컬 반영, 운영 배포 없음.
+## 2026-10-07 한국어·영어 상세 검수 완료
+
+사용자 상세 오류 검수 요청. intro.js 화면 폭에 따른 영상/포스터 교체·위치/수동 정지/완료 유지 및 상태 안내 수정. localization.js 언어 전환을 실제 보던 섹션으로 이동하도록 변경. chairman.js 상단 버튼을 목적지에 맞춰 시설 둘러보기로 정리. KO/EN 메인·Valley32개 실제 뷰포트 조건 재검사, 언어 왕복·메뉴·탭·사진·영상 종료/다시보기/음량·치앙마이 외부 이동 확인.105자산·영상Range·비공개 경로404, 영상4개 전체 디코딩·JS10개 문법·빌드·공백 검사 통과. docs/ENGLISH-QA-20261007.md와 docs/review/english-audit-20261007 참고. 실제 기기·다른 브라우저 종류·동작 줄이기 OS 설정·음원 청취는 미검사. 로컬만 반영.
+
+## 2026-10-07 영어 번역 로컬 반영
+
+사용자 영어 번역 요청으로 localization.js/css 추가, 상단 한국어/English 전환을 ?lang=en으로 구현. 메인 홍보 본문·시설/사진/캐릭터/컨시어지와 별도 Business Valley 전체 텍스트·alt·제어 안내 번역, 동적으로 바뀌는 영상/메뉴/사진 문구 번역 유지. 내부 페이지 영문 유지, 사용자 지정 치앙마이 외부 링크 유지. 기존9장/30초/파도 음원으로 영문 자막 PC·모바일 영상과 포스터 추가. index.html/business-valley.html/intro.js/public-assets 연결. 영어 타이포 보정, 언어 메타 반영. docs/ENGLISH-LOCALIZATION-20261007.md 참고.105공개파일 빌드, 로컬 서버 재시작 및 화면 반영 확인. 자동 테스트·GitHub/Vercel/Notion 업로드 없음.
+
+## 2026-10-07 치앙마이 카드 외부 연결
+
+사용자 지정 링크에 따라 editorial.js의 치앙마이 카드 전체 링크를 https://hanzcity.com/chiangmai/intro 로 변경하고 버튼을 ‘치앙마이 살펴보기 ↗’로 변경. 같은 탭으로 이동하는 기존 동작 유지. 상단 Business Valley 메뉴는 이번 카드 요청 범위 밖이므로 유지. 로컬 반영만 진행.
+
+## 2026-10-07 홍보 용어 정리 — 프로젝트 → 지역별 별장
+
+회장 피드백을 전달한 사용자 요청으로 홍보 페이지 용어 변경. PC/모바일 메뉴 ‘지역별 별장’, 주문진·양양 카드 ‘주문진의 별장’/‘양양의 별장’, 영상 종료·페이지 하단 버튼 ‘별장 둘러보기’, 푸터 ‘별장과 서비스’로 정리. 초기 HTML 안내도 공유별장·지역별 구상으로 변경. Business Valley 협업 영역은 ‘협업 준비 상태’/‘커뮤니티·협업’, 국내 연계 문구 ‘국내 별장 구상’으로 조정. 내부 앵커 #projects와 파일명 유지. app.js/chairman.js/intro.js/branding.js/editorial.js/index.html/business-valley.html 수정. 로컬 페이지 제목·하단 문구 반영 확인 및99파일 빌드. GitHub/Vercel 업로드 없음.
+
+## 2026-10-07 세 번째 반복 점검
+
+사용자 ‘반복’으로7개 폭의 생활 문구·하단 설명 겹침/잘림/가로 넘침 재확인, 메뉴 시설 이동·시설 키보드 순환·콘솔·공개99자산·빌드 확인.320px 생활 보조 문구 어색한 줄바꿈 발견해 editorial.css 모바일 scene-time22~32px로 조정, 세 문구 한 줄 표시 확인. docs/SITE-RECHECK-20261007.md 및 mobile-320-labels-after.png 기록. 로컬만 반영, 기본 뷰포트 복원.
+
+## 2026-10-07 두 번째 점검 — 모바일 생활 장면 및 이미지 선명도
+
+사용자 재점검 요청. 세로 모바일에서 생활 장면 JS 전환은 멈췄으나 CSS는 첫 장면만 표시하던 누락 발견. editorial.css에 700px 이하 자연스러운 세로3장면 표시, cinematic.js에 PC 복귀 시 aria-hidden 즉시 동기화. editorial.js에 세로 크롭을 고려한 sizes로 모바일 작은480px 사진 확대 흐림 수정. 메인9개 폭·가로형과 Valley6개 폭, 메뉴/언어/Escape·사진 순환·영상 정지/음량·Valley 탭/앵커·콘솔 재확인. 공개99파일 재검사 및 최종빌드 성공. docs/SITE-RECHECK-20261007.md와 docs/review/site-recheck-20261007/mobile-scenes-after.png 참고. 기본 뷰포트 복원. GitHub/Vercel/Notion 업로드 없음.
+
+## 2026-10-07 전체 사이트 표기·UI 점검 완료
+
+사용자 전체 점검 요청으로 메인·Business Valley의 고아 번호/챕터 반복/예전 사진 설명과 시각/치앙마이 해안 사진/옛금액과 날짜를 정리. 모바일 재생성 메뉴의 클릭 이벤트 단절, 언어 패널 겹침, 이중 앵커 여백 및 현재 메뉴 표시,320px 헤더 넘침 수정. app.js/branding.js/valley.js/editorial.js/css 변경.320·390·1024·1440 및 기본 화면, 탭 키보드/메뉴/영상 제어 확인. 공개99자산 정상·99파일 빌드·JS문법 확인. docs/SITE-AUDIT-20261007.md에 수정표/검사 범위 및 증거. 운영 업로드·노션 변경 없음.
+
+## 2026-10-07 브랜드 연결 카드 번호 정리
+
+사용자가 좌측01과 우측챕터1의 중복을 지적. editorial.js에서 좌측 표시를 MY LODGE SHARE로 변경, 우측 치앙마이 챕터1은 유지. 로컬99파일 빌드. 운영 업로드 없음.
+
+## 2026-10-07 준비 문서 5개 항목 로컬 반영
+
+사용자 ‘준비문서 기반으로 작업 시작해’에 따라 NEXT-WORK-20261007 실행. built-in image_gen으로 시설4장(곡선형 별장/해변 풀장/사업가 테라스/클럽), 프로젝트 조감도2장(주문진 저녁 해안·양양 낮 숲속 계단형), 치앙마이 교류1장 생성. assets/images/*-20261007 원본 및 WebP 480/960/1680 보존. editorial.js/css 마지막 표현 계층으로 연결. 시설 PC 폭70:30, 소개/Business Valley 사진 중심 구성, 주인·컨시어지 텍스트 카드에 사진 추가. 메인 Valley 연결 및 별도 hero에 챕터 문구, 별도 교류 구간에 모든 자원 문구 배치(치앙마이/IT/띄어쓰기 정리). 배경 간섭·제목 대비·탭2×2·설명 글자 크기·카드 기울임 개선. cinematic.js 모바일 정적 생활3장면의 aria-hidden 불일치 수정. 준비 상태·가격 정보를 새로 확정하지 않음. PC1280, 모바일360/390, 태블릿768 DOM/스크린샷 및 탭 클릭/키보드/메뉴 이동 검사. 23개 새 공개 자산HTTP200, JS 문법 검사 및99파일 빌드. 자세한 범위 docs/PHOTO-LED-UPDATE-20261007.md, 생성 프롬프트 docs/IMAGE-PROMPTS-20261007.md, 증거 docs/review/photo-led-20261007. 로컬4173 서버 PID16144. Git commit/push, Vercel 배포, 노션 기록은 진행하지 않음. 기존 사용자 상담 변경 등 보존.
+
+## 2026-10-06 다음 작업 준비만 — 시작 대기
+
+사용자는 오늘 작업 종료 후 내일 요청을 메모하며 실제 작업을 하지 말라고 명시했다. docs/NEXT-WORK-20261007.md에 5개 요청(인트로 분위기와 사진 연결/이미지 재생성, 가독성, 치앙마이 두 문구 배치, 이미지7:글3, 주문진·양양 조감도 차별화)을 원문과 함께 저장. 참고 스크린샷2개 docs/next-work-20261007에 보존. 이 준비 문서와 안내 기록만 로컬 저장. 코드·이미지 생성·빌드·점검·Git commit/push·Vercel 배포·노션 수정 없음. 다음 사용자의 작업 시작 지시가 있어야 실행.
+
 ## 2026-10-06 최종 업로드 및 업무일지 완료
 
 GitHub 공개 사이트 변경 커밋3396209를 codex/main-pc-handoff-20260930에 push 완료. Vercel CLI61.1.0 prebuilt 공개76파일 Preview dpl_73aat6hrJaPu9sBLMD1UBGB2ER8P READY 후 promote 성공. 운영 dpl_AbiQmcojQK1kARkdiSeNv2q45aDn production READY, my-lodge-business.vercel.app 연결 확인. 직접 --prod는 Not authorized였으며 기존 Preview→promote 방식으로 완료. 운영 프로젝트 화면 저장. 노션 IMT·GROUP 연서흠 10월6일 기존 행(출근7:43) 페이지3f0737bfd51780fbbce9e1f9e52176df에 작업별 하위9페이지와 각3개 세부 항목 작성, 새로고침 후 저장 확인. 노션 커넥터 개인워크스페이스 접근만 가능하여 로그인된 브라우저로 작성. 출퇴근 시간 변경 없음. 내부 문서·원본PNG·백업·상담모듈은 공개 배포에서 제외.
@@ -529,7 +597,3 @@ Windows Edge에서 9가지 화면 크기로 양방향 스크롤·직접 이동·
 - 전화번호 blur 시 형식 정리, 문의 1,000자 제한 및 글자 수, 관심 서비스 복수 선택, 입력 내용 확인 dialog 후 체험 완료 추가. 실제 접수번호 생성·저장·전송 없음.
 - admin-demo.html: 가상 문의 3건, 상태 필터, 상세, 담당자·처리 상태·메모, 화면 내 이력 시안. 메모리에서만 유지하며 실제 문의와 연결하지 않음. 로컬 서버에서 /admin-demo.html로 접근. 고객 사이트 메뉴에 노출하지 않으며 공개 dist 빌드에는 포함하지 않음.
 - backups/before-consultation-improvements-20260928에 변경 전 파일 보관. 실제 운영자 시스템의 인증·권한·저장·개인정보 처리는 서버 협의 후 별도 구현 필요.
-
-
-
-

@@ -1,0 +1,40 @@
+.language-panel a{width:100%;display:flex;align-items:center;min-height:44px;padding:8px 10px;border-radius:6px;font-size:14px;color:#214d42;text-decoration:none}
+.language-panel a:hover{background:#e6ece0}.language-panel a:focus-visible{outline:3px solid #a68642;outline-offset:2px}
+.english-page :is(h1,h2,h3,p,a,button){word-break:normal;overflow-wrap:break-word}
+.english-page .path-copy h3{font-size:clamp(24px,2.4vw,32px);line-height:1.35}
+.english-page .life-copy h2{font-size:clamp(30px,4vw,54px);line-height:1.25}
+.english-page .scene-time{font-size:clamp(24px,3vw,42px);line-height:1.35}
+.english-page .header-inner nav{gap:18px}.english-page header nav a{font-size:12px}
+.english-page .space-tabs button{font-size:14px}.english-page .space-copy h3{font-size:clamp(25px,2.2vw,32px)}
+.english-page .nature-copy h2{font-size:clamp(38px,5vw,70px);line-height:1.2}
+.english-page .film-stage::before{background-image:linear-gradient(#0d262275,#0d2622b0),url('assets/video/mylodge-intro-en-poster.webp')}
+@media(max-width:1100px){.english-page .header-inner nav{gap:10px}.english-page header nav a{font-size:11px}}
+@media(max-width:800px){.english-page .space-copy h3{font-size:28px}.english-page .path-copy h3{font-size:26px}.english-page .vacation-intro h2{font-size:32px;line-height:1.3}}
+@media(max-width:700px){.english-page .life-copy h2{font-size:30px}.english-page .scene-time{font-size:22px}.english-page .nature-copy h2{font-size:38px}.english-page .space-tabs button{font-size:13px}.english-page .vacation-finale h2{font-size:36px;line-height:1.25}.english-page .film-stage::before{background-image:linear-gradient(#0d262280,#0d2622c2),url('assets/video/mylodge-intro-en-poster-mobile.webp')}}
+
+/* English needs looser tracking and shorter lines than the Korean headings. */
+.english-page :is(h1,h2,h3){letter-spacing:-.015em!important;text-wrap:balance;hyphens:none}
+.english-page :is(p,dd,small){text-wrap:pretty}
+.english-page.photo-led header nav a{font-size:13px}
+.english-page.photo-led #our-villa .invitation-grid h2{font-size:clamp(30px,2.5vw,36px);line-height:1.3}
+.english-page.photo-led #villa-spaces .vacation-intro h2{font-size:clamp(30px,3.2vw,46px);line-height:1.25}
+.english-page.photo-led .space-copy h3{font-size:clamp(24px,1.9vw,28px);line-height:1.3}
+.english-page.photo-led :is(.space-copy>p:not(.eyebrow),.promotion-cards p,.project-region-copy,.path-copy p){font-size:16px;line-height:1.75}
+.english-page.photo-led .resource-copy h2{font-size:clamp(27px,2.2vw,32px);line-height:1.3}
+.english-page.photo-led.valley-page .valley-hero h1{font-size:clamp(28px,2.6vw,36px);line-height:1.3}
+.english-page.photo-led.valley-page :is(.purpose-panel p,.valley-space-grid p,.valley-stay-grid p,.valley-readiness dd){font-size:16px;line-height:1.75}
+.english-page.photo-led.valley-page :is(.valley-note,.valley-stay-grid small,.resource-copy small){font-size:14px;line-height:1.75}
+.english-page.photo-led :is(.path-copy b,.space-copy .text-link){font-size:14px;line-height:1.5}
+@media(max-width:800px){
+ .english-page.photo-led #our-villa .invitation-grid h2{font-size:32px}
+ .english-page.photo-led #villa-spaces .vacation-intro h2{font-size:30px}
+ .english-page.photo-led .space-copy h3{font-size:26px}
+ .english-page.photo-led .resource-copy h2{font-size:28px}
+ .english-page.photo-led.valley-page .valley-hero h1{font-size:30px}
+ .english-page.photo-led .path-copy h3{font-size:25px;line-height:1.3}
+}
+@media(max-width:360px){
+ .english-page.photo-led #villa-spaces .vacation-intro h2{font-size:27px}
+ .english-page.photo-led #our-villa .invitation-grid h2{font-size:29px}
+ .english-page.photo-led .space-copy h3{font-size:24px}
+}

@@ -48,7 +48,7 @@
    vision.style.setProperty('--vision-zoom',(.9+progress*.1).toFixed(3));
    vision.style.setProperty('--vision-corner',(42-progress*38).toFixed(1)+'px');
   }
-  if(visible.has(story)&&!landscapeStory.matches){
+  if(visible.has(story)&&!landscapeStory.matches&&!mobile.matches){
    const rect=story.getBoundingClientRect();
    const progress=clamp(-rect.top/Math.max(1,rect.height-stage.offsetHeight));
    const index=Math.min(2,Math.floor(progress*3));
@@ -68,12 +68,12 @@
  [hero,vision,story,ribbon].forEach(node=>observer.observe(node));
  function updateMotion(){
   lastScene=-1;
-  if(reduced.matches||landscapeStory.matches){cancelAnimationFrame(frame);frame=0;lifeScenes.forEach(node=>node.removeAttribute('aria-hidden'));hero.style.removeProperty('--hero-drift');hero.style.removeProperty('--hero-zoom');}
-  else queue();
+  if(reduced.matches||landscapeStory.matches||mobile.matches){cancelAnimationFrame(frame);frame=0;lifeScenes.forEach(node=>node.removeAttribute('aria-hidden'));hero.style.removeProperty('--hero-drift');hero.style.removeProperty('--hero-zoom');}
+  else {lifeScenes.forEach(node=>node.setAttribute('aria-hidden',String(!node.classList.contains('is-active'))));queue();}
  }
  reduced.addEventListener('change',updateMotion);
  landscapeStory.addEventListener('change',updateMotion);
- mobile.addEventListener('change',queue);
+ mobile.addEventListener('change',updateMotion);
  window.addEventListener('scroll',queue,{passive:true});window.addEventListener('resize',queue,{passive:true});
  document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0;}else queue();});
  updateMotion();

@@ -1,0 +1,135 @@
+/* Images lead; opaque text surfaces make copy readable in every scene. */
+.photo-led :is(h1,h2,h3,p,a,button){word-break:keep-all;overflow-wrap:break-word}
+.photo-led section{scroll-margin-top:16px}
+.photo-led header nav a{font-size:13px}
+.photo-led .header-inner .menu-button{min-width:44px;min-height:44px}
+.photo-led.promotion-home :is(#villa-spaces,#projects,#lifestyle,#ownership,#vision){padding-top:72px;padding-bottom:72px}
+.photo-led.promotion-home :is(#villa-spaces,#projects,#lifestyle,#ownership,#vision){background:#edf0e7}
+.photo-led.promotion-home :is(#villa-spaces,#projects,#lifestyle,#ownership)>.scenic-backdrop{display:none}
+.photo-led.promotion-home :is(#villa-spaces,#projects,#lifestyle,#ownership,#vision) :is(.intro h2,.vacation-intro h2){color:#173e37}
+.photo-led.promotion-home :is(#villa-spaces,#projects,#lifestyle,#ownership,#vision) :is(.intro>p,.vacation-intro>p:last-child){color:#415a50}
+.photo-led.promotion-home :is(#villa-spaces,#projects,#lifestyle,#ownership,#vision) .eyebrow{color:#49695c}
+.photo-led .space-panel{grid-template-columns:minmax(0,7fr) minmax(0,3fr);min-height:540px;border-radius:18px;overflow:hidden;box-shadow:0 15px 45px #173e3714}
+.photo-led .space-panel[hidden]{display:none}
+.photo-led .space-panel figure{margin:0;min-height:540px}
+.photo-led .space-copy{padding:32px 26px;background:#f7f6ef;color:#173e37}
+.photo-led .space-copy h3{font-size:clamp(24px,2.4vw,34px);line-height:1.4}
+.photo-led .space-copy>p:not(.eyebrow){color:#415a50;font-size:15px;line-height:1.8}
+.photo-led .space-copy ul{font-size:13px;color:#415a50;margin:22px 0}
+.photo-led .space-copy .eyebrow{font-size:11px;color:#49695c}
+.photo-led .space-copy .text-link{font-size:13px;line-height:1.8;min-height:44px;display:flex;align-items:center}
+.photo-led .space-tabs{gap:8px;border:0;margin-bottom:24px}
+.photo-led .space-tabs button{background:#f7f6ef;color:#415a50;border:1px solid #c7d3ca;border-radius:8px;font-size:15px;min-height:64px;padding:14px 10px;line-height:1.5}
+.photo-led .space-tabs button span{color:inherit;opacity:.8}
+.photo-led .space-tabs button[aria-selected=true]{background:#173e37;color:#fff9e9;border-color:#173e37}
+.photo-led .space-tabs button:focus-visible{outline:3px solid #aa8741;outline-offset:3px}
+.photo-led.promotion-home #our-villa .invitation-grid{grid-template-columns:minmax(0,3fr) minmax(0,7fr);gap:32px}
+.photo-led .promotion-intro-photo img{aspect-ratio:16/9}
+.photo-led .promotion-cards article{padding:0;overflow:hidden;border-radius:16px}
+.photo-led .promotion-cards figure{margin:0;height:330px}
+.photo-led .promotion-cards figure img{width:100%;height:100%;object-fit:cover}
+.photo-led .editorial-card-copy{padding:24px;min-height:185px}
+.photo-led .promotion-cards h3{margin:10px 0;font-size:23px}
+.photo-led .promotion-cards p{margin:0;font-size:15px;line-height:1.8;color:#e2e9df}
+.photo-led #projects .project-photo{aspect-ratio:16/10;min-height:0}
+.photo-led.cinematic-design .project-grid .project.middle-entrance{transform:none;translate:none;opacity:1}
+.photo-led.benchmark-design .project.middle-entrance .project-photo{clip-path:none}
+.photo-led #projects .project-photo img{object-fit:cover;width:100%;height:100%;inset:0;transform:none}
+.photo-led #projects .project-body{padding:24px 4px 0}
+.photo-led #projects .project-region-copy{font-size:15px;line-height:1.8;color:#415a50}
+.photo-led .path-card{padding:0!important;border-radius:18px;overflow:hidden}
+.photo-led .path-card figure{height:360px;margin:0;overflow:hidden}
+.photo-led .path-card figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.photo-led .path-card:hover figure img{transform:scale(1.03)}
+.photo-led .path-copy{padding:28px}
+.photo-led .path-copy h3{font-size:28px;line-height:1.5;margin:14px 0}
+.photo-led .path-copy p{font-size:15px;line-height:1.8}
+.photo-led .path-copy b{margin-top:18px;min-height:44px;display:flex;align-items:center;font-size:14px}
+.photo-led #vision .vision-photo{border-radius:18px;overflow:hidden}
+.photo-led #vision .vision-photo img{aspect-ratio:16/9;object-fit:cover;transform:none}
+.photo-led #vision .intro h2{color:#173e37!important}
+.photo-led #vision .intro>p{color:#415a50!important}
+.photo-led .life-copy{background:linear-gradient(90deg,#092723d9,#09272399);padding:32px;border-radius:12px;max-width:580px}
+.photo-led .life-copy p:last-child{color:#f5f3e9;font-size:16px;line-height:1.8}
+.photo-led .life-caption,.photo-led .space-panel figcaption,.photo-led .concept{font-size:12px;line-height:1.6;color:#fff;background:#173e37e8}
+.photo-led .space-panel figcaption{padding:8px 14px}
+.photo-led.valley-page .valley-hero>.container{grid-template-columns:minmax(0,3fr) minmax(0,7fr);gap:32px}
+.photo-led.valley-page .valley-hero figure{aspect-ratio:16/11;border-radius:18px;margin:0}
+.photo-led.valley-page .valley-hero h1{font-size:clamp(30px,3vw,43px);letter-spacing:-.045em}
+.photo-led.valley-page .valley-hero p:not(.eyebrow){font-size:17px;line-height:1.9;color:#eef1e7}
+.photo-led.valley-page .resource-story{background:#edf0e7}
+.resource-story>.container{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,3fr);gap:32px;align-items:center}
+.resource-story figure{margin:0;position:relative;border-radius:18px;overflow:hidden}
+.resource-story img{display:block;aspect-ratio:16/10;width:100%;object-fit:cover}
+.resource-story figcaption{position:absolute;bottom:0;left:0;background:#173e37e8;color:#fff;padding:8px 12px;font-size:12px}
+.resource-copy h2{font-size:clamp(25px,2.6vw,36px);line-height:1.55;color:#173e37}
+.resource-copy p:not(.eyebrow){color:#415a50;font-size:16px;line-height:1.9;margin:22px 0}
+.resource-copy small{display:block;color:#53695f;font-size:12px;line-height:1.8;margin-top:20px}
+.photo-led.valley-page :is(.purpose-panel p,.valley-space-grid p,.valley-stay-grid p,.valley-readiness dd){font-size:15px;color:#415a50}
+.photo-led.valley-page :is(.valley-note,.valley-stay-grid small){font-size:13px;color:#53695f}
+@media(max-width:1000px){.photo-led .space-panel{grid-template-columns:65fr 35fr}.photo-led .space-copy{padding:28px 22px}.photo-led .promotion-cards figure{height:260px}.photo-led .editorial-card-copy{padding:22px}.photo-led .promotion-cards h3{font-size:21px}}
+@media(max-width:800px){
+ .photo-led section{scroll-margin-top:16px}
+ .photo-led.promotion-home :is(#villa-spaces,#projects,#lifestyle,#ownership,#vision){padding-top:44px;padding-bottom:44px}
+ .photo-led .space-panel{display:flex;flex-direction:column;min-height:0}
+ .photo-led .space-panel figure{min-height:0;aspect-ratio:16/10}
+ .photo-led .space-copy{padding:24px;display:block}
+ .photo-led .space-copy h3{font-size:28px;margin:12px 0}
+ .photo-led .space-copy ul{display:none}
+ .photo-led .space-copy .text-link{margin-top:14px}
+ .photo-led .space-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;overflow:visible}
+ .photo-led .space-tabs button{min-width:0;min-height:56px;padding:12px 8px;font-size:14px;white-space:normal}
+ .photo-led.promotion-home #our-villa .invitation-grid{display:flex;flex-direction:column-reverse;align-items:stretch;gap:26px}
+ .photo-led .promotion-cards{grid-template-columns:1fr}
+ .photo-led .promotion-cards figure{height:auto;aspect-ratio:16/10}
+ .photo-led .editorial-card-copy{min-height:0;padding:22px 24px}
+ .photo-led .promotion-cards h3{font-size:23px}
+ .photo-led .path-grid{grid-template-columns:1fr}
+ .photo-led .path-card figure{height:auto;aspect-ratio:16/10}
+ .photo-led .path-copy{padding:24px}
+ .photo-led .path-copy h3{font-size:26px}
+ .photo-led .life-copy{padding:24px;max-width:calc(100% - 40px)}
+ .photo-led.valley-page .valley-hero>.container{display:flex;flex-direction:column-reverse;gap:28px;align-items:stretch}
+ .photo-led.valley-page .valley-hero figure{aspect-ratio:16/10}
+ .photo-led.valley-page .valley-hero h1{font-size:32px}
+ .resource-story>.container{grid-template-columns:1fr;gap:24px}
+ .resource-copy h2{font-size:28px}
+ .photo-led .vacation-intro{grid-template-columns:1fr;gap:16px}
+ .photo-led .vacation-intro>p:last-child{font-size:15px}
+ .photo-led .lodge-guide p{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.photo-led .path-card figure img{transition:none}.photo-led .path-card:hover figure img{transform:none}}
+@media(max-width:360px){.photo-led .header-inner{padding-inline:8px;gap:4px}}
+/* Phone scenes follow native scrolling; every scene remains readable. */
+.neon-icon{display:block;flex:none;width:76px;height:76px;background-image:url('assets/brand/mylodge-neon-icons-20261007.png');background-size:200% 200%;background-repeat:no-repeat;pointer-events:none}
+.neon-villa{background-position:0 0}.neon-pool{background-position:100% 0}.neon-coffee{background-position:0 100%}.neon-music{background-position:100% 100%}
+.photo-led.neon-presentation .space-tabs{gap:12px}
+.photo-led.neon-presentation .space-tabs button{display:flex;justify-content:flex-start;align-items:center;gap:12px;min-height:114px;padding:14px 18px;text-align:left;color:#fff8e8;background:#103e35;border:1px solid #397364;box-shadow:inset 0 1px 0 #ffffff0c;transition:border-color .2s,background .2s,box-shadow .2s}
+.photo-led.neon-presentation .space-tabs button:hover{background:#164a40;border-color:#5fc8b2}
+.photo-led.neon-presentation .space-tabs button[aria-selected=true]{background:#0c332d;border-color:#74e3cf;box-shadow:0 0 0 1px #74e3cf,inset 0 0 24px #22dec614}
+.photo-led.neon-presentation .space-tabs .neon-icon{width:72px;height:72px;opacity:1}
+.photo-led.neon-presentation .space-tabs .neon-tab-label{font-size:14px;line-height:1.5;opacity:1;color:inherit}
+.photo-led.neon-presentation .neon-tab-label>span{display:block;margin-bottom:4px;font-size:10px;letter-spacing:.12em;color:#b7dace;opacity:1}
+.neon-photo-badge{position:absolute;top:14px;right:14px;padding:3px;border:1px solid #6ddcc55c;border-radius:18px;background:#0c332ded;box-shadow:0 8px 24px #03191545;pointer-events:none}
+.neon-photo-badge .neon-icon{width:68px;height:68px}
+.neon-presentation :is(.promotion-cards figure,.path-card figure){position:relative}
+@media(max-width:1100px){.photo-led.neon-presentation .space-tabs button{padding:12px;gap:8px}.photo-led.neon-presentation .space-tabs .neon-icon{width:58px;height:58px}}
+@media(max-width:800px){
+ .photo-led.neon-presentation .space-tabs{gap:8px}
+ .photo-led.neon-presentation .space-tabs button{min-height:96px;padding:10px;gap:8px}
+ .photo-led.neon-presentation .space-tabs .neon-icon{width:56px;height:56px}
+ .photo-led.neon-presentation .space-tabs .neon-tab-label{font-size:13px}
+ .neon-photo-badge{top:12px;right:12px;border-radius:14px}
+ .neon-photo-badge .neon-icon{width:56px;height:56px}
+}
+@media(max-width:360px){.photo-led.neon-presentation .space-tabs .neon-icon{width:44px;height:44px}.photo-led.neon-presentation .space-tabs button{padding:8px;gap:6px}.photo-led.neon-presentation .space-tabs .neon-tab-label{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.photo-led.neon-presentation .space-tabs button{transition:none}}
+@media(max-width:700px){
+ .photo-led.vacation-design .life-story{height:auto}
+ .photo-led.vacation-design .life-stage{position:static;height:auto;min-height:0;overflow:clip}
+ .photo-led.vacation-design .life-scene{position:relative;inset:auto;min-height:600px;opacity:1;visibility:visible;transition:none}
+ .photo-led.vacation-design .life-scene>img{transform:none}
+ .photo-led.vacation-design .life-copy{opacity:1;transform:none;transition:none}
+ .photo-led.vacation-design .scene-time{font-size:clamp(22px,6vw,32px);line-height:1.5;letter-spacing:-.02em}
+ .photo-led.vacation-design .life-navigation{display:none}
+}

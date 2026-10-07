@@ -1,6 +1,7 @@
 // The only files included in the public export.
 export const publicAssets = ['index.html', 'styles.css', 'app.js'];
 publicAssets.push('branding.css','branding.js','assets/brand/mylodge-logo.webp','assets/brand/mylodge-character.webp');
+publicAssets.push('assets/brand/mylodge-neon-icons-20261007.png');
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/resort-overview-20261006-${width}.webp`);
 for (const [name, largest] of [['hero',1122],['interior',1440],['terrace',1145],['coastal',1440],['forest',1440]]) {
   for (const width of [480,960,largest]) publicAssets.push(`assets/images/lodge-${name}-${width}.webp`);
@@ -22,3 +23,8 @@ publicAssets.push('business-valley.html','valley.js');
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/vacation-arrival-${width}.webp`);
 for (const name of ['morning','dinner','terrace']) for (const width of [480,960,1536]) publicAssets.push(`assets/images/living-${name}-${width}.webp`);
 for (const width of [480,960,1440]) publicAssets.push(`assets/images/plan-p16-${width}.webp`);
+
+publicAssets.push('editorial.css','editorial.js');
+publicAssets.push('localization.css','localization.js');
+publicAssets.push('assets/video/mylodge-intro-en-30s.mp4','assets/video/mylodge-intro-en-30s-mobile.mp4','assets/video/mylodge-intro-en-poster.webp','assets/video/mylodge-intro-en-poster-mobile.webp');
+for (const name of ['facility-villa','facility-beach','facility-terrace','facility-club','project-jumunjin','project-yangyang','valley-community']) for (const width of [480,960,1680]) publicAssets.push('assets/images/'+name+'-20261007-'+width+'.webp');

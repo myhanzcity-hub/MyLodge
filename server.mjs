@@ -6,7 +6,7 @@ import {publicAssets} from './scripts/public-assets.mjs';
 const allowed=new Map([['/',['index.html','text/html; charset=utf-8']],['/index.html',['index.html','text/html; charset=utf-8']],['/styles.css',['styles.css','text/css; charset=utf-8']],['/app.js',['app.js','text/javascript; charset=utf-8']]]);
 for(const file of publicAssets){
  const ext=file.split('.').at(-1);
- allowed.set('/'+file,[file,({html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',webp:'image/webp',jpg:'image/jpeg',mp4:'video/mp4'})[ext]]);
+ allowed.set('/'+file,[file,({html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',webp:'image/webp',jpg:'image/jpeg',png:'image/png',mp4:'video/mp4'})[ext]]);
 }
 for(const name of ['hero','interior','terrace','coastal','forest']){
  const file=`assets/images/lodge-${name}.png`;

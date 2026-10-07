@@ -9,6 +9,7 @@
   language.className='language-slot';
   language.innerHTML=`<summary aria-label="언어 선택 · 현재 한국어"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><span class="language-full">한국어</span><span class="language-short" aria-hidden="true">KO</span><span class="language-chevron" aria-hidden="true">⌄</span></summary><div class="language-panel"><p class="language-heading">LANGUAGE</p><ul><li><span lang="ko" class="language-current" aria-current="true">한국어 <span>✓</span></span></li><li><button type="button" lang="en" disabled>English <small lang="ko">준비 중</small></button></li><li><button type="button" lang="zh" disabled>中文 <small lang="ko">준비 중</small></button></li><li><button type="button" lang="ja" disabled>日本語 <small lang="ko">준비 중</small></button></li></ul><p class="language-note">다국어 페이지를 준비하고 있습니다.</p></div>`;
   header.insertBefore(language,header.querySelector('.menu-button'));
+  language.addEventListener('toggle',()=>{const button=header.querySelector('.menu-button');if(language.open&&button?.getAttribute('aria-expanded')==='true'){document.querySelector('#mobile-menu').hidden=true;button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','메뉴 열기');}});
   document.addEventListener('click',event=>{if(!language.contains(event.target))language.open=false;});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&language.open){language.open=false;language.querySelector('summary').focus();}});
  }
@@ -87,7 +88,7 @@
  for(const child of [...footer.children].slice(1))child.remove();
  footer.querySelector('p').innerHTML='일상을 휴가처럼.<br>여유와 만남이 있는 별장 생활, 마이롯지.';
  $('.footer-links')?.remove();
- $('.footer-disclaimer').textContent='마이롯지 브랜드·공간 소개 사이트입니다. 이미지는 AI 및 기획 콘셉트로 실제 시설을 나타내지 않습니다. 프로젝트와 서비스의 세부 안내는 확정 후 공개합니다.';
+ $('.footer-disclaimer').textContent='마이롯지 브랜드·공간 소개 사이트입니다. 이미지는 AI 및 기획 콘셉트로 실제 시설을 나타내지 않습니다. 별장과 서비스의 세부 안내는 확정 후 공개합니다.';
  $('.copyright').textContent='© 2026 MY LODGE.';
  $('.hero-reassurance').textContent='일상을 휴가처럼 · MY LODGE';
  for(const link of document.querySelectorAll('a[href="#pricing"]')){link.href='#ownership';link.textContent='별장 주인들에게 ↗';}
