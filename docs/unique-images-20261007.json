@@ -1,0 +1,65 @@
+{
+  "mode": "built-in image_gen",
+  "scenes": [
+    {
+      "name": "story-destination",
+      "prompt": "Generate ONE photorealistic luxury holiday brand website concept image, landscape 16:9 composition. Premium travel campaign art direction for MyLodge: architecturally credible advanced modular villas, attractive pools, vibrant hospitality and sophisticated adult business community, realistic human anatomy. The scene must be distinct from other page images. No text, no lettering, no watermark, no brand logos, no collage. Elevated wide perspective from a seaside promenade across an expansive premium modular-villa holiday destination, sculptural cream villas, cobalt swimming pools, lively beachside cafe, tasteful bright summer atmosphere, people small in frame. Distinct wide establishing brand story image.",
+      "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a0e5d7-8022-79e1-8c3b-be296593054d\\exec-0048b76c-40ab-4a18-bfde-deb2cc97664b.png"
+    },
+    {
+      "name": "owner-unwind",
+      "prompt": "Generate ONE photorealistic luxury holiday brand website concept image, landscape 16:9 composition. Premium travel campaign art direction for MyLodge: architecturally credible advanced modular villas, attractive pools, vibrant hospitality and sophisticated adult business community, realistic human anatomy. The scene must be distinct from other page images. No text, no lettering, no watermark, no brand logos, no collage. Quiet intimate luxury villa terrace overlooking the sea at soft sunrise, mature Korean entrepreneur in linen shirt relaxing with espresso and a book, comfortable chaise, lush greenery, pool visible beyond, personal serenity. Medium-wide lifestyle photo, no laptop.",
+      "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a0e5d7-8022-79e1-8c3b-be296593054d\\exec-af89ba76-a700-4215-96e8-13a77e432754.png"
+    },
+    {
+      "name": "owner-connect",
+      "prompt": "Generate ONE photorealistic luxury holiday brand website concept image, landscape 16:9 composition. Premium travel campaign art direction for MyLodge: architecturally credible advanced modular villas, attractive pools, vibrant hospitality and sophisticated adult business community, realistic human anatomy. The scene must be distinct from other page images. No text, no lettering, no watermark, no brand logos, no collage. Small group of mature Korean business owners ages 35-55 chatting comfortably around a circular lounge table beside a rooftop pool at blue hour, stylish smart casual clothing, joyful natural conversation, vivid magenta and amber ambient lights, villa rooftops beyond. No students.",
+      "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a0e5d7-8022-79e1-8c3b-be296593054d\\exec-939dbcc9-f21c-4c5b-812a-63a81ced9e0e.png"
+    },
+    {
+      "name": "owner-ideas",
+      "prompt": "Generate ONE photorealistic luxury holiday brand website concept image, landscape 16:9 composition. Premium travel campaign art direction for MyLodge: architecturally credible advanced modular villas, attractive pools, vibrant hospitality and sophisticated adult business community, realistic human anatomy. The scene must be distinct from other page images. No text, no lettering, no watermark, no brand logos, no collage. Two mature entrepreneurs, one woman and one man, sketching ideas in an open notebook in a bright glass-walled modular villa lounge, distant ocean and pool, relaxed creative planning, tasteful wood furniture, authentic candid interaction. No office cubicles.",
+      "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a0e5d7-8022-79e1-8c3b-be296593054d\\exec-59e39998-a881-457e-80ca-b957c5bdda7a.png"
+    },
+    {
+      "name": "concierge-arrival",
+      "prompt": "Generate ONE photorealistic luxury holiday brand website concept image, landscape 16:9 composition. Premium travel campaign art direction for MyLodge: architecturally credible advanced modular villas, attractive pools, vibrant hospitality and sophisticated adult business community, realistic human anatomy. The scene must be distinct from other page images. No text, no lettering, no watermark, no brand logos, no collage. Thoughtful arrival preparation for a premium modular villa holiday: elegant entry console with room key, small welcome tray, folded linen and travel bag; open door reveals a sunny pool courtyard, one warmly welcoming host in background. No readable text or logos.",
+      "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a0e5d7-8022-79e1-8c3b-be296593054d\\exec-c1fae491-1243-4302-93d8-09f91b0c1085.png"
+    },
+    {
+      "name": "concierge-care",
+      "prompt": "Generate ONE photorealistic luxury holiday brand website concept image, landscape 16:9 composition. Premium travel campaign art direction for MyLodge: architecturally credible advanced modular villas, attractive pools, vibrant hospitality and sophisticated adult business community, realistic human anatomy. The scene must be distinct from other page images. No text, no lettering, no watermark, no brand logos, no collage. Discreet professional housekeeping preparing a pristine luxury modular-villa bedroom: adult staff member smoothing white linen on bed, fresh towels and flowers, glass doors open to tropical landscaped pool, warm soft daylight. Polished hotel service concept, no uniforms logos.",
+      "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a0e5d7-8022-79e1-8c3b-be296593054d\\exec-e0b8902a-bd54-4c26-ac13-f2e2a2614b16.png"
+    },
+    {
+      "name": "concierge-escape",
+      "prompt": "Generate ONE photorealistic luxury holiday brand website concept image, landscape 16:9 composition. Premium travel campaign art direction for MyLodge: architecturally credible advanced modular villas, attractive pools, vibrant hospitality and sophisticated adult business community, realistic human anatomy. The scene must be distinct from other page images. No text, no lettering, no watermark, no brand logos, no collage. High sweeping aerial view of a new luxury island holiday destination, several elevated curved modular villas above turquoise coves, interconnected gardens and winding boardwalk, a different infinity pool on a rocky promontory, vivid daytime atmosphere, travel discovery. No single cabin.",
+      "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a0e5d7-8022-79e1-8c3b-be296593054d\\exec-241a6ff9-8f57-40b9-9b3b-ff3d2986eb9b.png"
+    },
+    {
+      "name": "gallery-pool",
+      "prompt": "Generate ONE photorealistic luxury holiday brand website concept image, landscape 16:9 composition. Premium travel campaign art direction for MyLodge: architecturally credible advanced modular villas, attractive pools, vibrant hospitality and sophisticated adult business community, realistic human anatomy. The scene must be distinct from other page images. No text, no lettering, no watermark, no brand logos, no collage. Dynamic low water-level angle across a vibrant luxurious seaside infinity pool, adults swimming and laughing, sunlit water reflections, sculptural modular villa wings frame the scene, striped parasols and refined pool bar, bright aqua and warm coral. Distinct pool experience photo.",
+      "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a0e5d7-8022-79e1-8c3b-be296593054d\\exec-65657052-7cd2-46fd-a5cb-6899a5a065e0.png"
+    },
+    {
+      "name": "gallery-terrace",
+      "prompt": "Generate ONE photorealistic luxury holiday brand website concept image, landscape 16:9 composition. Premium travel campaign art direction for MyLodge: architecturally credible advanced modular villas, attractive pools, vibrant hospitality and sophisticated adult business community, realistic human anatomy. The scene must be distinct from other page images. No text, no lettering, no watermark, no brand logos, no collage. Wide candid scene of mature entrepreneurs talking over coffee at an outdoor oceanfront terrace with sculptural wood pergola and curved modern villa behind, breezy afternoon, women and men ages 35-55, sophisticated smart casual, natural gestures, no students.",
+      "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a0e5d7-8022-79e1-8c3b-be296593054d\\exec-cd90defc-839c-443a-af25-45d1c7392fe1.png"
+    },
+    {
+      "name": "gallery-night",
+      "prompt": "Generate ONE photorealistic luxury holiday brand website concept image, landscape 16:9 composition. Premium travel campaign art direction for MyLodge: architecturally credible advanced modular villas, attractive pools, vibrant hospitality and sophisticated adult business community, realistic human anatomy. The scene must be distinct from other page images. No text, no lettering, no watermark, no brand logos, no collage. Energetic elegant nightclub inside a luxury resort glass pavilion, adult crowd dancing, DJ booth small at back, turquoise and violet beams, mirrored disco lights, outside silhouettes of villas and pool, glamorous memorable night, realistic movement, no visible text.",
+      "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a0e5d7-8022-79e1-8c3b-be296593054d\\exec-68bb2042-9f0e-4b6f-923c-bbad0197e9d7.png"
+    },
+    {
+      "name": "vision-masterplan",
+      "prompt": "Generate ONE photorealistic luxury holiday brand website concept image, landscape 16:9 composition. Premium travel campaign art direction for MyLodge: architecturally credible advanced modular villas, attractive pools, vibrant hospitality and sophisticated adult business community, realistic human anatomy. The scene must be distinct from other page images. No text, no lettering, no watermark, no brand logos, no collage. Very high drone aerial showing an entire luxury modular-villa resort masterplan at dusk, curving clusters of villas around multiple illuminated pools, central outdoor music club plaza, gardens and coastline, balanced legible destination-wide composition, gold teal and violet light. Not an individual villa shot.",
+      "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a0e5d7-8022-79e1-8c3b-be296593054d\\exec-b4a91b3b-4f28-4355-aaa3-1ae1f02a4b44.png"
+    },
+    {
+      "name": "valley-resources",
+      "prompt": "Generate ONE photorealistic luxury holiday brand website concept image, landscape 16:9 composition. Premium travel campaign art direction for MyLodge: architecturally credible advanced modular villas, attractive pools, vibrant hospitality and sophisticated adult business community, realistic human anatomy. The scene must be distinct from other page images. No text, no lettering, no watermark, no brand logos, no collage. Tropical Chiang Mai innovation retreat in a lush garden courtyard, several mature international tech founders ages 30-55 exchange ideas and discuss a prototype on a laptop at separate outdoor tables, contemporary tropical modular pavilions, mountain backdrop, morning light, candid collaboration. Distinct from resort lounge pool image.",
+      "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a0e5d7-8022-79e1-8c3b-be296593054d\\exec-e76bc032-701b-494d-8a8c-e9c028a8ebd0.png"
+    }
+  ]
+}

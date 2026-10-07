@@ -1,4 +1,5 @@
 /* Images lead; opaque text surfaces make copy readable in every scene. */
+#ownership .promotion-cards article:first-child figure img{object-position:25% 50%}
 .photo-led :is(h1,h2,h3,p,a,button){word-break:keep-all;overflow-wrap:break-word}
 .photo-led section{scroll-margin-top:16px}
 .photo-led header nav a{font-size:13px}
@@ -122,6 +123,8 @@
  .neon-photo-badge{top:12px;right:12px;border-radius:14px}
  .neon-photo-badge .neon-icon{width:56px;height:56px}
 }
+/* The live gallery status already supplies the photograph caption. */
+.photo-led #lifestyle .photo-deck figcaption{display:none}
 @media(max-width:360px){.photo-led.neon-presentation .space-tabs .neon-icon{width:44px;height:44px}.photo-led.neon-presentation .space-tabs button{padding:8px;gap:6px}.photo-led.neon-presentation .space-tabs .neon-tab-label{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.photo-led.neon-presentation .space-tabs button{transition:none}}
 @media(max-width:700px){

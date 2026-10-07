@@ -48,12 +48,13 @@
  $('#our-villa .eyebrow').textContent='MY LODGE / OUR STORY';
  $('#our-villa .invitation-footnote')?.remove();
  const guide=$('#our-villa .lodge-guide');
- guide.querySelector('.guide-copy>p').textContent='공간을 만나고, 마이롯지가 그리는 생활을 살펴보세요.';
+ guide.querySelector('h3').textContent='어디부터 둘러볼까요?';
+ guide.querySelector('.guide-copy>p').remove();
  guide.querySelector('.guide-links').innerHTML='<a href="#villa-spaces">시설 둘러보기 ↗</a><a href="#ownership">별장 주인들에게 ↗</a><a href="#stay-services">컨시어지 ↗</a>';
- $('#ownership>.container').innerHTML='<div class="intro"><p class="eyebrow">FOR OUR VILLA OWNERS</p><h2>별장 주인들에게.<br>머무는 시간을 더 풍요롭게.</h2><p>마이롯지가 제안하는 별장 생활의 세 가지 즐거움.</p></div>'+cards([
-  ['내 안에 완벽한 여유.','자연을 바라보는 자리, 느긋한 커피 한 잔. 일상의 속도를 잠시 내려놓는 시간.'],
-  ['나와 비슷한 사람들과.','관심사와 이야기를 나누며 가까워지는 만남. 혼자여도 함께여도 편안한 공간.'],
-  ['새로운 계획이 시작되는 곳.','휴식 속에서 떠오르는 생각, 편안한 대화로 이어지는 가능성. 머무름 너머의 경험.']
+ $('#ownership>.container').innerHTML='<div class="intro"><p class="eyebrow">FOR OUR VILLA OWNERS</p><h2>별장 주인들에게.<br>나만의 시간, 함께하는 경험.</h2></div>'+cards([
+  ['내 안에 완벽한 여유.','커피와 책 한 권, 나의 속도로 쉬는 시간.'],
+  ['나와 비슷한 사람들과.','같은 관심사를 가진 사람들과 이야기를 나누는 자리.'],
+  ['새로운 계획이 시작되는 곳.','쉬면서 떠오른 아이디어를 대화로 이어가는 시간.']
  ])+'<a class="text-link promotion-section-link" href="#nature">마이롯지가 그리는 풍경 ↗</a>';
  for(const id of ['pricing','participation','progress'])$('#'+id)?.remove();
  $('.mobile-cta')?.remove();
@@ -67,15 +68,16 @@
   project.querySelector('.badge')?.remove();
   project.querySelector('.project-region-copy').textContent=i?'숲과 바다 사이, 휴식과 활기찬 만남이 어우러지는 별장 생활을 그립니다.':'해안의 풍경을 가까이 두고, 느긋한 하루를 보내는 별장 공간을 그립니다.';
  });
- $('#stay-services>.container').innerHTML='<div class="intro"><p class="eyebrow">MY LODGE / CONCIERGE</p><h2>휴식에 집중할 수 있도록.</h2><p>방문 준비부터 공간 관리까지, 편안한 머무름을 돕는 서비스를 구상합니다.</p></div>'+cards([
-  ['머무름의 준비','방문 전 필요한 준비와 안내를 한곳에서 살펴보는 경험.'],
-  ['공간을 돌보는 손길','청소와 침구 등 편안한 별장 생활을 위한 관리 서비스.'],
-  ['다음 여행으로','다른 지역에서의 머무름과 새로운 휴가를 이어가는 경험.']
+ $('#stay-services>.container').innerHTML='<div class="intro"><p class="eyebrow">MY LODGE / CONCIERGE</p><h2>휴식에 집중할 수 있도록.</h2><p>도착 전 준비부터 머무는 동안의 관리까지.</p></div>'+cards([
+  ['방문 안내','방문 전에 필요한 정보와 준비 사항 안내.'],
+  ['공간 관리','청소와 침구 등 별장 공간을 돌보는 서비스.'],
+  ['다음 여행 안내','다른 지역의 별장으로 이어지는 여행 소개.']
  ])+'<p class="promotion-service-note">컨시어지는 서비스 구상이며, 현재 예약·신청은 제공하지 않습니다.</p>';
- $('#brand-paths .path-card p').innerHTML='자연과 여유, 사람들과의 만남.<br>마이롯지가 그리는 별장 생활을 만나보세요.';
+ $('#brand-paths .path-card h3').textContent='마이롯지의 별장 생활.';
+ $('#brand-paths .path-card p').textContent='별장 주인들의 이야기를 만나보세요.';
  $('#brand-paths .path-card b').textContent='별장 주인들에게 ↗';
  $('#brand-paths .valley-path small')?.remove();
- $('.vacation-finale>.container>p:not(.eyebrow)').innerHTML='당신이 꿈꾸던 별장 생활.<br>마이롯지의 공간과 이야기를 만나보세요.';
+ $('.vacation-finale>.container>p:not(.eyebrow)').remove();
  $('.vacation-finale .outline').href='#villa-spaces';
  $('.vacation-finale .outline').textContent='시설 둘러보기';
  $('.vacation-finale small')?.remove();

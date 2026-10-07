@@ -3,6 +3,18 @@
  'use strict';
  const english=new URLSearchParams(location.search).get('lang')==='en';
  const translations=new Map(Object.entries({
+ '어디부터 둘러볼까요?':'Where would you like to start?',
+ '나만의 시간, 함께하는 경험.':'Time for yourself. Moments to share.',
+ '커피와 책 한 권, 나의 속도로 쉬는 시간.':'A coffee, a book and time to unwind at your own pace.',
+ '같은 관심사를 가진 사람들과 이야기를 나누는 자리.':'A place to share stories with people who share your interests.',
+ '쉬면서 떠오른 아이디어를 대화로 이어가는 시간.':'Let fresh ideas grow through conversation.',
+ '도착 전 준비부터 머무는 동안의 관리까지.':'From getting ready to caring for your space.',
+ '방문 안내':'Before You Arrive','방문 전에 필요한 정보와 준비 사항 안내.':'Useful information to help you prepare for your visit.',
+ '공간 관리':'Villa Care','청소와 침구 등 별장 공간을 돌보는 서비스.':'Housekeeping and linen care for your villa.',
+ '다음 여행 안내':'Your Next Destination','다른 지역의 별장으로 이어지는 여행 소개.':'Discover villas in other destinations for your next trip.',
+ '마이롯지의 별장 생활.':'Villa life at MyLodge.','별장 주인들의 이야기를 만나보세요.':'Discover the stories of villa owners.',
+ '공간을 선택해 자세히 둘러보세요.':'Choose a space to take a closer look.',
+ '사진으로 만나는 하루.':'A day in pictures.','별장 단지의 전체 풍경.':'The destination at a glance.',
  '본문으로 바로 가기':'Skip to content','주요 메뉴':'Main navigation','마이롯지 홈':'MyLodge home',
  '메뉴 열기':'Open menu','메뉴 닫기':'Close menu','시설 둘러보기':'Explore the Facilities','별장 주인들에게':'For Villa Owners','지역별 별장':'Our Destinations','컨시어지':'Concierge',
  '별장 살펴보기':'Explore Our Villas','별장 둘러보기':'Explore Our Villas','마이롯지':'MyLodge','나 별장있다.':'I have a villa.',
