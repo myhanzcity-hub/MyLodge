@@ -1,7 +1,7 @@
 // Supplied brand artwork and an in-page guide. Links lead to existing sections.
 (() => {
  'use strict';
- const logo='assets/brand/mylodge-logo.webp';
+ const logo='assets/brand/mylodge-logo-transparent-20261007.webp';
  const character='assets/brand/mylodge-character.webp';
  const header=document.querySelector('.header-inner');
  if(header){

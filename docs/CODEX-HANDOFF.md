@@ -1,3 +1,7 @@
+## 2026-10-07 로고 다크 모드 표시 수정
+
+사용자 요청으로 상단·하단 로고에만 적용. built-in image_gen background extraction 결과를 lossless alpha WebP로 저장(assets/brand/mylodge-logo-transparent-20261007.webp). 원본 보존. branding.js 로고 자산 교체, branding.css 로고 multiply 제거, 두 로고 영역에 밝은 gradient 배경·only light 적용. 전체 페이지 다크 모드 및 임시 PC viewport 유지. 공개143파일. Vercel dpl_DnuWnQPNgnAHz3N9ovHtXKXQqTrx READY 후 promote. 운영 상단·하단 로고 표시 확인, 실제 Samsung 강제 다크 모드는 미검사. 추출 prompt: remove white background only, preserve original logo/text/layout, transparent alpha, no redesign. 생성 원본 exec-4e0cbab7-7e8c-4bfe-8122-6fed581d851b.png.
+
 ## 2026-10-07 모바일 PC 레이아웃 임시 조치
 
 사용자 요청으로 모바일 수정 작업을 보류하고 700px 이하 최초 접근 시 viewport width=1280으로 PC 레이아웃을 축소 표시. 메인·Business Valley에 스타일 로드 전 동기 처리. 한국어·영어 공통, 확대 제한 없음. 기존 모바일 CSS는 보존. 브라우저 자체 데스크톱 사이트 설정을 바꾸는 방식은 아니며 화면 배치만 PC 기준으로 표시. 실제 모바일 브라우저 강제 다크 모드 문제는 이 조치에서 해결하지 않음. 후속 모바일 전용 개선 시 두 HTML의 임시 스크립트를 제거할 것.

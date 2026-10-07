@@ -74,3 +74,8 @@
  .footer-brand-art{width:170px}
 }
 @media(max-width:360px){.lodge-guide{gap:8px;padding:18px 12px}.lodge-guide .guide-character{width:62px;height:84px}.vacation-design .lodge-guide h3{font-size:18px}.guide-compact .guide-character{width:54px;height:74px}}
+
+/* Keep only brand artwork on a stable light surface in forced-dark browsers. */
+.vacation-design .artwork-brand{color-scheme:only light;background-color:#f7f5ef;background-image:linear-gradient(#f7f5ef,#f7f5ef);border-radius:6px;padding:5px 7px;isolation:isolate}
+.artwork-brand .logo-symbol img,.artwork-brand .logo-wordmark img{mix-blend-mode:normal}
+.footer-brand-art{color-scheme:only light;mix-blend-mode:normal;background-color:#f7f5ef;background-image:linear-gradient(#f7f5ef,#f7f5ef);border-radius:8px;padding:10px;box-sizing:content-box}

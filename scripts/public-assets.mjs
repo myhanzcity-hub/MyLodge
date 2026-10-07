@@ -29,3 +29,5 @@ for (const name of ['story-destination','owner-unwind','owner-connect','owner-id
 publicAssets.push('localization.css','localization.js');
 publicAssets.push('assets/video/mylodge-intro-en-30s.mp4','assets/video/mylodge-intro-en-30s-mobile.mp4','assets/video/mylodge-intro-en-poster.webp','assets/video/mylodge-intro-en-poster-mobile.webp');
 for (const name of ['facility-villa','facility-beach','facility-terrace','facility-club','project-jumunjin','project-yangyang','valley-community']) for (const width of [480,960,1680]) publicAssets.push('assets/images/'+name+'-20261007-'+width+'.webp');
+
+publicAssets.push('assets/brand/mylodge-logo-transparent-20261007.webp');
