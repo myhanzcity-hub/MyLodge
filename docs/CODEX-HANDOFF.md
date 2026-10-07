@@ -1,3 +1,7 @@
+## 2026-10-07 모바일 PC 레이아웃 임시 조치
+
+사용자 요청으로 모바일 수정 작업을 보류하고 700px 이하 최초 접근 시 viewport width=1280으로 PC 레이아웃을 축소 표시. 메인·Business Valley에 스타일 로드 전 동기 처리. 한국어·영어 공통, 확대 제한 없음. 기존 모바일 CSS는 보존. 브라우저 자체 데스크톱 사이트 설정을 바꾸는 방식은 아니며 화면 배치만 PC 기준으로 표시. 실제 모바일 브라우저 강제 다크 모드 문제는 이 조치에서 해결하지 않음. 후속 모바일 전용 개선 시 두 HTML의 임시 스크립트를 제거할 것.
+
 ## 2026-10-07 이미지 및 반복 문구 정리 운영 배포 완료
 
 사용자 요청으로 eb2cdc3 커밋 GitHub codex/main-pc-handoff-20260930 push. 새 이미지12종·WebP36개·반복 문구 정리·사진 네온 배지 제거·영어 대응 포함. 공개142파일 prebuilt 운영 배포 dpl_AYRWGXqHYQ1dNRBkaWoVT4hUPYf6 READY 후 promote, https://my-lodge-business.vercel.app/#ownership 화면에서 새 이미지·제목·본문 확인. 브라우저 콘솔 오류 없음. 증거 docs/review/unique-images-20261007/production.png. 비공개 자료·원본·별도 상담 작업은 배포 제외.
