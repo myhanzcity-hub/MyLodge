@@ -1,3 +1,7 @@
+## 2026-10-07 GitHub·Vercel 운영 업데이트 완료
+
+사용자 요청으로 현재 홍보 사이트 공개106파일 반영. 소스 커밋89119f7을 기존 codex/main-pc-handoff-20260930 브랜치에 push. 새 지역/시설 이미지, 치앙마이 연결, 영어 번역·영상, 네온 아이콘9곳, 하단 인생의 휴식처. / 마이롯지. 포함. Vercel CLI61.1.0 기존 IMTGroup 인증으로 prebuilt Preview dpl_D8Ls8EsjPBNiGXrzcNFVz3hNHxBL READY 후 promote. 최종 dpl_6bQcVdpVPr55i51y5LADocFLsGyY production READY, https://my-lodge-business.vercel.app 연결 확인. 운영 브라우저 네온9개·변경 제목 확인, docs/review/release-20261007/production.png 저장. 공개 빌드만 배포, 원본·백업·내부 문서 미배포. main 병합 없음.
+
 ## 2026-10-07 하단 마무리 제목 변경
 
 사용자 요청으로 하단 제목을 인생의 휴식처. / 마이롯지. 두 줄로 변경. 영어는 Your haven in life. / MyLodge.로 대응. 배경 사진과 버튼 유지. 로컬 반영.
