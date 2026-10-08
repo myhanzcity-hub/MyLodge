@@ -1,3 +1,7 @@
+## 2026-10-08 소개 영상 반복 재생 및 첫 자막 강조
+
+사용자 요청으로 intro video에 native loop 적용(한국어·영어 공통), 재생 종료 상태·포커스 이동 이벤트 제거. 기존 일시정지·음량·화면 이탈 자동 정지·동작 줄이기 유지. 한국어 첫 장면 나128px / 별장있다.96px로 변경, 두 줄 간격152px로 확보. PC·모바일 한국어 영상과 포스터 재렌더링. 영어 문구 변경 없음. 생성 스크립트 docs/film-build/copy-20261006/render-copy.py 및 scenes-20261006/render-scenes.py.
+
 ## 2026-10-07 로고 다크 모드 표시 수정
 
 사용자 요청으로 상단·하단 로고에만 적용. built-in image_gen background extraction 결과를 lossless alpha WebP로 저장(assets/brand/mylodge-logo-transparent-20261007.webp). 원본 보존. branding.js 로고 자산 교체, branding.css 로고 multiply 제거, 두 로고 영역에 밝은 gradient 배경·only light 적용. 전체 페이지 다크 모드 및 임시 PC viewport 유지. 공개143파일. Vercel dpl_DnuWnQPNgnAHz3N9ovHtXKXQqTrx READY 후 promote. 운영 상단·하단 로고 표시 확인, 실제 Samsung 강제 다크 모드는 미검사. 추출 prompt: remove white background only, preserve original logo/text/layout, transparent alpha, no redesign. 생성 원본 exec-4e0cbab7-7e8c-4bfe-8122-6fed581d851b.png.

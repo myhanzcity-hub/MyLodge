@@ -9,7 +9,7 @@
  const movie=english?(narrow?'mylodge-intro-en-30s-mobile.mp4':'mylodge-intro-en-30s.mp4'):(narrow?'mylodge-intro-scenes-20261006-30s-mobile.mp4':'mylodge-intro-scenes-20261006-30s.mp4');
  const poster=english?(narrow?'mylodge-intro-en-poster-mobile.webp':'mylodge-intro-en-poster.webp'):(narrow?'mylodge-intro-scenes-20261006-poster-mobile.webp':'mylodge-intro-scenes-20261006-poster.webp');
  const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
- stage.innerHTML=`<video class="film-video" playsinline preload="auto" muted poster="assets/video/${poster}" aria-label="별장, 휴식, 풀장, 커뮤니티, 만남, 클럽과 야간 축제로 이어지는 마이롯지 영상" aria-describedby="film-description"><source src="assets/video/${movie}" type="video/mp4"></video>
+ stage.innerHTML=`<video class="film-video" loop playsinline preload="auto" muted poster="assets/video/${poster}" aria-label="별장, 휴식, 풀장, 커뮤니티, 만남, 클럽과 야간 축제로 이어지는 마이롯지 영상" aria-describedby="film-description"><source src="assets/video/${movie}" type="video/mp4"></video>
  <p id="film-description" class="film-sr-only">30초 공간·생활 콘셉트 영상. 문구마다 새로 생성한 별장 외관, 실내 휴식, 풀장, 카페테리아, 사업가들의 편안한 교류, 파트너와의 만남, 클럽, 야외 축제, 관객의 열기 이미지 9개를 사용합니다. 문구: 나 별장있다. 내 안에 완벽한 여유. 일상을 휴가처럼. 나와 비슷한 그들이 늘 모여있는 곳. 365일 언제나 내가 원하는 사람들이 기다리는 곳. 내가 찾는 파트너들과의 조우. 신나는 밤. 춤과 음악. 축제분위기 조성. 신나고 화려한 밤. 열기의 향연. 이미지 요소와 문구에 모션을 합성한 영상이며, 소리를 켜면 파도 소리가 들립니다.</p>
  <div class="film-top"><a href="#our-villa" class="film-skip">마이롯지 만나보기 ↓</a></div>
  <div class="film-introduction film-sr-only"><h1>나 별장있다.</h1></div>
@@ -54,10 +54,6 @@
  stage.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{resumeOnReturn=false;video.pause();}));
  video.addEventListener('play',()=>{started=true;sync();visibility();});
  for(const event of ['pause','volumechange'])video.addEventListener(event,sync);
- video.addEventListener('ended',()=>{
-  finished=true;resumeOnReturn=false;sync();status.textContent='영상이 끝났습니다. 다시 보거나 별장 공간을 둘러보세요.';
-  if(transport.contains(document.activeElement))stage.querySelector('.film-replay').focus({preventScroll:true});
- });
  function visibility(){
   const available=inView&&!document.hidden&&(!menu||menu.hidden);
   if(!available){if(!video.paused){resumeOnReturn=true;video.pause();}}
