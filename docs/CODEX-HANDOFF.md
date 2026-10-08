@@ -1,6 +1,6 @@
 ## 2026-10-08 소개 영상 반복 재생 및 첫 자막 강조
 
-사용자 요청으로 intro video에 native loop 적용(한국어·영어 공통), 재생 종료 상태·포커스 이동 이벤트 제거. 기존 일시정지·음량·화면 이탈 자동 정지·동작 줄이기 유지. 한국어 첫 장면 나128px / 별장있다.96px로 변경, 두 줄 간격152px로 확보. PC·모바일 한국어 영상과 포스터 재렌더링. 영어 문구 변경 없음. 생성 스크립트 docs/film-build/copy-20261006/render-copy.py 및 scenes-20261006/render-scenes.py.
+사용자 요청으로 intro video에 native loop 적용(한국어·영어 공통), 재생 종료 상태·포커스 이동 이벤트 제거. 기존 일시정지·음량·화면 이탈 자동 정지·동작 줄이기 유지. 한국어 첫 장면 나128px / 별장있다.96px로 변경, 두 줄 간격152px로 확보. PC·모바일 한국어 영상과 포스터 재렌더링. 영어 문구 변경 없음. GitHub d7838a4 push, Vercel CLI62.0.0로 dpl_2qXRJN3pJUnnxypigwiTnw6BH9pw READY 후 promote 완료. 운영 video.loop=true 및 재생 확인. 생성 스크립트 docs/film-build/copy-20261006/render-copy.py 및 scenes-20261006/render-scenes.py.
 
 ## 2026-10-07 로고 다크 모드 표시 수정
 
