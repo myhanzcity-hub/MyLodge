@@ -1,3 +1,10 @@
+## 2026-10-09 최신 개발본 운영 배포 완료
+
+- 사용자 요청으로 GitHub/Vercel 업데이트 수행. 사이트 변경 c865466, 공개 빌드 목록·모바일 조사 근거 99db1d9를 기존 codex/main-pc-handoff-20260930 브랜치에 저장.
+- 공개169파일 prebuilt 업로드. CLI62.0.0 Not authorized 응답 후 이전 성공 버전61.1.0으로 업로드·promote 완료. 계정/팀/보호 설정 변경 없음.
+- Preview dpl_HMcqgfSSWhNXGtHuuy7hrkwiFY4D → Production dpl_92noGSrH3UaSU9cAvXKfVudHaxQV, READY, 2026-10-09 20:21:18 KST. 운영 https://my-lodge-business.vercel.app/ 연결 확인.
+- 운영 HTML HTTP200 및 width=device-width, mobile-layout.css/js 참조 확인. 모바일 CSS HTTP200 확인. 이번 요청에서 브라우저/실기기 재검수·자동 테스트 미실행.
+- docs/review/release-20261009/deploy-manifest.json에 공개 산출물 SHA256 기록. 원본·백업·내부 자료·상담 운영 시안은 운영 배포 제외. main 변경 없음. 기존 기타 미추적 작업 자료 보존.
 ## 2026-10-09 최신 개발본 GitHub·Vercel 배포 준비
 
 - 사용자 요청으로 기존 GitHub/Vercel 배포 보류 해제. 기존 codex/main-pc-handoff-20260930 브랜치에 최신 개발본 업로드, 기존 IMTGroup/my-lodge-business 운영 프로젝트 업데이트 진행.
