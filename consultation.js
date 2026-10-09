@@ -61,6 +61,8 @@
     let token = crypto.randomUUID(), pending = false, completed = false, snapshot = null, unresolved = false;
     let submittingButton = null, editTarget = null;
     let dateWindowStart = '', savedSpecific = null;
+    const questionOptions = options.questionOptions || [];
+    let chosenQuestions = [], firstQuestion = '', removedQuestion = null;
     const radioChips = (name, values) => values.map(value => `<label class="cf-choice"><input type="radio" name="${id(name)}" value="${value}"><span>${value}</span></label>`).join('');
     container.innerHTML = `
       <div class="cf-shell">
@@ -102,6 +104,80 @@
         <div class="cf-complete" id="${id('complete')}" tabindex="-1" hidden><span class="cf-success-symbol" aria-hidden="true">✓</span><p class="eyebrow">PREVIEW COMPLETE</p><h3>${demo ? '가상 문의가 준비되었습니다' : '상담 화면 체험을 마쳤습니다'}</h3><p id="${id('complete-copy')}"></p><dl id="${id('receipt')}"></dl><div class="cf-complete-actions"><button type="button" class="primary" id="${id('next')}" ${demo ? '' : 'hidden'}>운영자 화면에서 이어보기</button><button type="button" class="outline" id="${id('restart')}">새로 체험하기</button></div></div>
       </div>`;
     const form = container.querySelector('form');
+    let questionPanel;
+    if (questionOptions.length) {
+      questionPanel = document.createElement('section');
+      questionPanel.className = 'cf-question-panel'; questionPanel.id = id('questions-field'); questionPanel.tabIndex = -1;
+      questionPanel.setAttribute('aria-labelledby', id('questions-title'));
+      questionPanel.innerHTML = `<div class="cf-question-heading"><span class="cf-question-eyebrow">MAKE IT YOURS · 상담 준비</span><h3 id="${id('questions-title')}">궁금한 것부터 골라보세요 <span class="optional">선택</span></h3><p>여러 개 골라도 괜찮아요. 먼저 물어볼 질문은 하나만 지정할 수 있어요.</p></div><div class="cf-question-options"></div><details class="cf-question-more"><summary>다른 질문도 살펴보기</summary><div class="cf-question-options"></div></details><div class="cf-question-selection"><div class="cf-question-selection-head"><strong>내가 고른 질문</strong><span class="cf-question-total"></span></div><p class="cf-question-empty">아직 고른 질문이 없어요. 선택 없이도 다음 단계로 갈 수 있어요.</p><ul class="cf-question-list"></ul></div><div class="cf-question-feedback"><p role="status" aria-live="polite" aria-atomic="true"></p><button type="button" data-question-undo hidden>삭제 취소</button></div><p class="cf-question-footnote">직접 쓰고 싶은 내용은 아래 ‘궁금한 내용’에 따로 남겨주세요. 현재 화면에서만 유지되며 새로고침하면 초기화됩니다.</p>`;
+      find('region-field').after(questionPanel);
+      const featured = new Set(['stay-dates', 'extra-costs', 'ownership-rights']);
+      questionOptions.forEach(entry => {
+        const button = document.createElement('button'); button.type = 'button'; button.dataset.questionAdd = entry.id;
+        button.setAttribute('aria-pressed', 'false');
+        const text = document.createElement('span'), mark = document.createElement('b');
+        text.textContent = entry.question; mark.textContent = '+'; mark.setAttribute('aria-hidden', 'true');
+        button.append(text, mark);
+        questionPanel.querySelectorAll('.cf-question-options')[featured.has(entry.id) ? 0 : 1].append(button);
+      });
+      listen(questionPanel, 'click', event => {
+        const button = event.target.closest('button'); if (!button) return;
+        if (button.dataset.questionAdd) { addQuestion(button.dataset.questionAdd); return; }
+        if (button.dataset.questionFirst) {
+          firstQuestion = firstQuestion === button.dataset.questionFirst ? '' : button.dataset.questionFirst;
+          renderQuestions(); questionMessage(firstQuestion ? '먼저 물어볼 질문을 지정했어요.' : '중요 질문 지정을 해제했어요.');
+          questionPanel.querySelector(`[data-question-first="${button.dataset.questionFirst}"]`)?.focus({preventScroll:true});
+        }
+        if (button.dataset.questionRemove) {
+          const key = button.dataset.questionRemove, index = chosenQuestions.indexOf(key);
+          removedQuestion = { key, index, first: firstQuestion === key };
+          chosenQuestions.splice(index, 1); if (firstQuestion === key) firstQuestion = '';
+          renderQuestions(); questionMessage('질문을 삭제했어요. 삭제 취소로 되돌릴 수 있어요.');
+          questionPanel.querySelector('[data-question-undo]').hidden = false;
+          questionPanel.querySelector('[data-question-undo]').focus({preventScroll:true});
+        }
+        if (button.hasAttribute('data-question-undo') && removedQuestion) {
+          const removed = removedQuestion;
+          if (!chosenQuestions.includes(removed.key)) chosenQuestions.splice(Math.min(removed.index, chosenQuestions.length), 0, removed.key);
+          if (removed.first && !firstQuestion) firstQuestion = removed.key;
+          removedQuestion = null; renderQuestions(); questionMessage('삭제한 질문을 다시 담았어요.');
+          questionPanel.querySelector(`[data-question-first="${removed.key}"]`)?.focus({preventScroll:true});
+        }
+        extraCount();
+      });
+      renderQuestions();
+    }
+    function questionMessage(text) { if (questionPanel) questionPanel.querySelector('[role="status"]').textContent = text; }
+    function renderQuestions() {
+      if (!questionPanel) return;
+      questionPanel.querySelector('.cf-question-total').textContent = `${chosenQuestions.length}개`;
+      questionPanel.querySelector('.cf-question-empty').hidden = chosenQuestions.length > 0;
+      questionPanel.querySelector('[data-question-undo]').hidden = !removedQuestion;
+      questionPanel.querySelectorAll('[data-question-add]').forEach(button => {
+        const chosen = chosenQuestions.includes(button.dataset.questionAdd);
+        button.setAttribute('aria-pressed', String(chosen)); button.lastElementChild.textContent = chosen ? '✓' : '+';
+        button.setAttribute('aria-label', button.firstElementChild.textContent + (chosen ? ' · 이미 담은 질문' : ' · 질문 담기'));
+      });
+      const list = questionPanel.querySelector('ul'); list.replaceChildren();
+      chosenQuestions.forEach(key => {
+        const entry = questionOptions.find(item => item.id === key);
+        const row = document.createElement('li'), text = document.createElement('p'), actions = document.createElement('div');
+        row.classList.toggle('is-first', firstQuestion === key); text.textContent = entry.question;
+        const first = document.createElement('button'), remove = document.createElement('button');
+        first.type = remove.type = 'button'; first.dataset.questionFirst = key; remove.dataset.questionRemove = key;
+        first.textContent = firstQuestion === key ? '★ 먼저 물어볼 질문' : '☆ 먼저 물어보기';
+        first.setAttribute('aria-pressed', String(firstQuestion === key)); first.setAttribute('aria-label', entry.question + ' · 먼저 물어보기');
+        remove.textContent = '삭제'; remove.setAttribute('aria-label', entry.question + ' · 삭제');
+        actions.append(first, remove); row.append(text, actions); list.append(row);
+      });
+    }
+    function addQuestion(key) {
+      if (!questionOptions.some(entry => entry.id === key)) return;
+      if (completed) restart();
+      if (chosenQuestions.includes(key)) questionMessage('이미 담은 질문이에요. 한 번만 표시됩니다.');
+      else { chosenQuestions.push(key); renderQuestions(); questionMessage('질문을 담았어요. 아래에서 선택 내용을 확인하세요.'); }
+      extraCount();
+    }
     const context=document.createElement('section');
     context.className='cf-selection-context';context.hidden=true;
     context.setAttribute('aria-label','선택한 상담 내용');
@@ -145,7 +221,8 @@
         name: find('name').value.trim(), phone: formatPhone(find('phone').value.trim()),
         region: selected('region'), topic: selected('topic'),
         services: [...container.querySelectorAll(`input[name="${id('services')}"]:checked`)].map(input => input.value),
-        question: find('question').value.trim(), schedule: { ...schedule }, consent: find('consent').checked
+        question: find('question').value.trim(), schedule: { ...schedule }, consent: find('consent').checked,
+        ...(questionPanel ? { questions: chosenQuestions.map(key => ({ id: key, text: questionOptions.find(entry => entry.id === key).question, first: firstQuestion === key })) } : {})
       };
     }
     function extraCount() {
@@ -157,11 +234,18 @@
       find('extra-summary').textContent = summary.length ? summary.join(' / ') : '주제·서비스·희망 시간·문의 내용 · 모두 선택 사항';
       find('question-count').textContent = `${find('question').value.length.toLocaleString('ko-KR')} / 1,000자`;
       const region=selected('region');
-      context.hidden=completed||(!region&&!count);
+      // Show what was carried over from the FAQ without exposing the full form.
+      // This is a display-only excerpt; the original question remains untouched.
+      const questionCharacters = Array.from(find('question').value.trim().replace(/\s+/g, ' '));
+      const questionExcerpt = questionCharacters.slice(0, 80).join('') + (questionCharacters.length > 80 ? '…' : '');
+      context.hidden=completed||(!region&&!count&&!chosenQuestions.length);
       context.querySelector('.cf-context-region').textContent=region&&region!=='아직 정하지 않았어요'?`${region} 프로젝트에 관심이 있으시군요.`:'궁금한 내용을 상담 체험에 담았어요.';
-      const contextValues={'region-field':region||'미선택','schedule':schedule.mode?find('schedule-summary').textContent:'미지정 · 선택 사항','question':[selected('topic'),serviceSummary,find('question').value.trim()?'작성한 질문이 있어요':''].filter(Boolean).join(' · ')||'아직 선택하지 않았어요'};
+      const contextValues={'region-field':region||'미선택','schedule':schedule.mode?find('schedule-summary').textContent:'미지정 · 선택 사항','question':[chosenQuestions.length ? `질문 ${chosenQuestions.length}개 선택` : '',selected('topic'),serviceSummary,questionExcerpt].filter(Boolean).join(' · ')||'아직 선택하지 않았어요'};
       Object.entries(contextValues).forEach(([key,value])=>context.querySelector('[data-context="'+key+'"] dd').textContent=value);
-      context.querySelector('[data-context="question"] button').dataset.contextEdit=find('question').value.trim()?'question':selectedServices.length?'services-field':'topic-field';
+      const questionEdit=context.querySelector('[data-context="question"] button');
+      questionEdit.dataset.contextEdit=chosenQuestions.length?'questions-field':questionExcerpt?'question':selectedServices.length?'services-field':'topic-field';
+      questionEdit.textContent=chosenQuestions.length||questionExcerpt?'확인 ↗':'변경 ↗';
+      questionEdit.setAttribute('aria-label',chosenQuestions.length?'선택한 질문 확인·수정':questionExcerpt?'작성한 질문 확인·수정':'관심 내용 변경');
     }
     function availableHours(period) {
       const now = koreaNow();
@@ -289,6 +373,9 @@
         ['문의 내용', data.question || '작성 안 함', 'question']
       ];
       const list = dialog.querySelector('dl'); list.replaceChildren();
+      if (data.questions) entries.splice(entries.length - 1, 0,
+        ['먼저 물어볼 질문', data.questions.find(item => item.first)?.text || '지정 안 함 · 선택 사항', 'questions-field', Boolean(firstQuestion)],
+        ['함께 물어볼 질문', data.questions.filter(item => !item.first).map(item => '• ' + item.text).join('\n') || '선택 안 함', 'questions-field']);
       entries.forEach(([label, value, field, important]) => {
         const row = document.createElement('div'), dt = document.createElement('dt'), dd = document.createElement('dd'), button = document.createElement('button');
         if (important) row.className = 'is-important';
@@ -405,6 +492,7 @@
     function restart() {
       if (pending) return;
       completed = false; unresolved = false; token = crypto.randomUUID(); snapshot = null; form.reset(); form.hidden = false;
+      chosenQuestions = []; firstQuestion = ''; removedQuestion = null; renderQuestions(); questionMessage('');
       find('complete').hidden = true; find('extras').open = false; find('region-note').textContent = ''; find('fill-note').textContent = '';
       container.querySelectorAll('[data-clear]').forEach(button => button.hidden = true);
       ['name', 'phone', 'schedule', 'consent'].forEach(key => setError(key, ''));
@@ -413,6 +501,7 @@
     listen(find('restart'), 'click', restart);
     dates(); renderSchedule();
     return {
+      addQuestion,
       setRegion(value) {
         const radio = [...container.querySelectorAll(`input[name="${id('region')}"]`)].find(input => input.value === value);
         if (!radio) return;
@@ -452,7 +541,7 @@
       focus: (key = 'name') => focusField(key),
       reset: restart,
       destroy() { controller.abort(); dialog.remove(); container.replaceChildren(); },
-      hasDraft() { return !completed && (Boolean(find('name').value && !demo) || Boolean(find('phone').value && !demo) || Boolean(selected('region') || selected('topic') || find('question').value || schedule.mode) || Boolean(container.querySelector(`input[name="${id('services')}"]:checked`)) || find('consent').checked); }
+      hasDraft() { return !completed && (Boolean(chosenQuestions.length) || Boolean(find('name').value && !demo) || Boolean(find('phone').value && !demo) || Boolean(selected('region') || selected('topic') || find('question').value || schedule.mode) || Boolean(container.querySelector(`input[name="${id('services')}"]:checked`)) || find('consent').checked); }
     };
   }
   window.MyLodgeConsultation = Object.freeze({ mount, koreaNow, addDays, prettyDate, scheduleText, periods, watchMinute });

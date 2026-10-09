@@ -10,9 +10,9 @@
  const poster=english?(narrow?'mylodge-intro-en-poster-mobile.webp':'mylodge-intro-en-poster.webp'):(narrow?'mylodge-intro-scenes-20261006-poster-mobile.webp':'mylodge-intro-scenes-20261006-poster.webp');
  const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
  stage.innerHTML=`<video class="film-video" loop playsinline preload="auto" muted poster="assets/video/${poster}" aria-label="별장, 휴식, 풀장, 커뮤니티, 만남, 클럽과 야간 축제로 이어지는 마이롯지 영상" aria-describedby="film-description"><source src="assets/video/${movie}" type="video/mp4"></video>
- <p id="film-description" class="film-sr-only">30초 공간·생활 콘셉트 영상. 문구마다 새로 생성한 별장 외관, 실내 휴식, 풀장, 카페테리아, 사업가들의 편안한 교류, 파트너와의 만남, 클럽, 야외 축제, 관객의 열기 이미지 9개를 사용합니다. 문구: 나 별장있다. 내 안에 완벽한 여유. 일상을 휴가처럼. 나와 비슷한 그들이 늘 모여있는 곳. 365일 언제나 내가 원하는 사람들이 기다리는 곳. 내가 찾는 파트너들과의 조우. 신나는 밤. 춤과 음악. 축제분위기 조성. 신나고 화려한 밤. 열기의 향연. 이미지 요소와 문구에 모션을 합성한 영상이며, 소리를 켜면 파도 소리가 들립니다.</p>
+ <p id="film-description" class="film-sr-only">30초 공간·생활 콘셉트 영상. 문구마다 새로 생성한 별장 외관, 실내 휴식, 풀장, 카페테리아, 사업가들이 함께하는 만남의 광장, 파트너와의 만남, 클럽, 야외 축제, 관객의 열기 이미지 9개를 사용합니다. 문구: 나! 별장있다. 내 안에 완벽한 여유. 속에 나를 담다. 일상을 휴가처럼. 내가 원하는 사람들과의 만남. 그들과 함께 할 수 있는 만남의 광장. 내가 찾는 파트너들과의 조우. 신나는 밤. 춤과 음악. 매일마다 축제. 꺼지지 않는 화려함. 기쁨의 향연. 이미지 요소와 문구에 모션을 합성한 영상이며, 소리를 켜면 파도 소리가 들립니다.</p>
  <div class="film-top"><a href="#our-villa" class="film-skip">마이롯지 만나보기 ↓</a></div>
- <div class="film-introduction film-sr-only"><h1>나 별장있다.</h1></div>
+ <div class="film-introduction film-sr-only"><h1>나! 별장있다.</h1></div>
  <div class="film-end" hidden><button type="button" class="film-replay">다시보기 ↻</button><a href="#villa-spaces">시설 둘러보기 ↗</a><a href="#projects">별장 둘러보기 ↗</a></div>
  <div class="film-bottom"><div class="film-transport"><button type="button" class="film-pause">일시정지</button><button type="button" class="film-sound" aria-pressed="false">음량 켜기</button></div><p class="film-note">마이롯지가 그리는 생활 · AI 콘셉트 영상</p></div><p class="film-status film-sr-only" role="status"></p>`;
  hero.append(stage);hero.classList.add('has-motion-intro');

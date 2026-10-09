@@ -404,7 +404,7 @@ window.addEventListener('hashchange',selectServiceHash);
 const deckResize=new ResizeObserver(sizeServiceDeck);deckCards.forEach(card=>deckResize.observe(card));
 showServiceCard(0);selectServiceHash();
 
-// Lifestyle photo deck mirrors the manual service deck, with no autoplay.
+// Lifestyle photos loop automatically while their section is in view.
 const photoDeck=document.querySelector('.lifestyle-grid');
 const photoSlides=[...photoDeck.querySelectorAll('figure')];
 photoSlides.forEach(figure=>{photoDeck.append(figure);figure.querySelector('img').draggable=false;});
@@ -415,7 +415,7 @@ photoDeck.setAttribute('aria-label','별장 생활 사진');
 photoDeck.setAttribute('aria-roledescription','캐러셀');
 const photoControls=document.createElement('div');
 photoControls.className='deck-controls photo-deck-controls';
-photoControls.innerHTML='<button type="button" aria-label="이전 사진">←</button><p class="deck-status" aria-live="polite" aria-atomic="true"></p><button type="button" aria-label="다음 사진">→</button>';
+photoControls.innerHTML='<p class="deck-status" aria-live="off"></p><button type="button" data-photo-pause aria-pressed="false">자동 재생 멈추기</button>';
 photoDeck.after(photoControls);
 let photoIndex=0;
 function showPhoto(index){
@@ -428,23 +428,33 @@ function showPhoto(index){
  });
  photoControls.querySelector('.deck-status').textContent=`0${photoIndex+1} / 0${photoSlides.length} · ${photoSlides[photoIndex].querySelector('figcaption').textContent}`;
 }
-photoControls.querySelector('[aria-label="이전 사진"]').addEventListener('click',()=>showPhoto(photoIndex-1));
-photoControls.querySelector('[aria-label="다음 사진"]').addEventListener('click',()=>showPhoto(photoIndex+1));
-photoControls.addEventListener('keydown',event=>{
- if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();showPhoto(photoIndex+(event.key==='ArrowLeft'?-1:1));}
+let photoTimer=null,photoVisible=false,photoPaused=false,photoDragging=false;
+const photoMobileReading=matchMedia('(max-width:1023px)');
+const photoPause=photoControls.querySelector('[data-photo-pause]');
+function photoReadingDelay(){
+ const caption=photoControls.querySelector('.deck-status');
+ const lineHeight=parseFloat(getComputedStyle(caption).lineHeight)||20;
+ const lines=Math.max(1,Math.round(caption.getBoundingClientRect().height/lineHeight));
+ // Short captions leave more time to explore the photograph; wrapped captions get extra time.
+ return Math.min(16000,(photoMobileReading.matches?10000:8000)+Math.max(0,lines-1)*2000);
+}
+function schedulePhotos(){
+ clearTimeout(photoTimer);
+ if(photoVisible&&!photoPaused&&!photoDragging&&!document.hidden&&!motionPreference.matches)
+  photoTimer=setTimeout(()=>{showPhoto(photoIndex+1);schedulePhotos();},photoReadingDelay());
+}
+photoDeck.addEventListener('mylodge:gesture-start',()=>{photoDragging=true;clearTimeout(photoTimer);});
+photoDeck.addEventListener('mylodge:slide-swipe',event=>{showPhoto(photoIndex+event.detail.direction);});
+photoDeck.addEventListener('mylodge:gesture-end',()=>{photoDragging=false;schedulePhotos();});
+photoPause.addEventListener('click',()=>{
+ photoPaused=!photoPaused;photoPause.setAttribute('aria-pressed',String(photoPaused));
+ photoPause.textContent=new URLSearchParams(location.search).get('lang')==='en'?(photoPaused?'Resume slideshow':'Pause slideshow'):(photoPaused?'자동 재생 시작하기':'자동 재생 멈추기');
+ schedulePhotos();
 });
-let photoTouch=null;
-photoDeck.addEventListener('pointerdown',event=>{
- if(event.pointerType==='mouse')return;
- photoTouch={id:event.pointerId,x:event.clientX,y:event.clientY};
- photoDeck.setPointerCapture(event.pointerId);
-});
-photoDeck.addEventListener('pointerup',event=>{
- if(!photoTouch||photoTouch.id!==event.pointerId)return;
- const dx=event.clientX-photoTouch.x,dy=event.clientY-photoTouch.y;photoTouch=null;
- if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.5)showPhoto(photoIndex+(dx<0?1:-1));
-});
-photoDeck.addEventListener('pointercancel',()=>{photoTouch=null;});
+document.addEventListener('visibilitychange',schedulePhotos);
+motionPreference.addEventListener('change',schedulePhotos);
+photoMobileReading.addEventListener('change',schedulePhotos);
+new IntersectionObserver(entries=>{photoVisible=entries[0].isIntersecting;schedulePhotos();},{threshold:.25}).observe(photoDeck);
 showPhoto(0);
 
 // One-time mid-page motion: images unfold, headings rise and steps draw in sequence.

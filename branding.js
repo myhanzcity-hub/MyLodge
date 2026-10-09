@@ -44,14 +44,14 @@
  document.body.classList.add('promotion-home');
  const $=selector=>document.querySelector(selector);
  const cards=items=>'<div class="promotion-cards">'+items.map(([title,copy],i)=>`<article><span class="eyebrow">0${i+1}</span><h3>${title}</h3><p>${copy}</p></article>`).join('')+'</div>';
- $('#our-villa .invitation-grid').innerHTML='<div><h2>누군가의 별장에서,<br><em>우리의 별장으로.</em></h2><p>일상을 휴가처럼.<br>자연 속 여유와 새로운 만남이 있는 별장 생활을 그립니다.</p><a class="text-link" href="#villa-spaces">시설 둘러보기 ↗</a></div><figure class="promotion-intro-photo"><img src="assets/images/vacation-arrival-960.webp" width="960" height="540" loading="lazy" alt="바다 곁 모듈형 별장과 여유로운 테라스 · AI 콘셉트"></figure>';
+ $('#our-villa .invitation-grid').innerHTML='<div><h2>그들만의 별장에서<br><em>그 특별함이 내게로.</em></h2><p>상류층들의 전유물이었던 별장,<br>이젠 나도 별장 주인이다.</p><a class="text-link" href="#villa-spaces">시설 둘러보기 ↗</a></div><figure class="promotion-intro-photo"><img src="assets/images/vacation-arrival-960.webp" width="960" height="540" loading="lazy" alt="바다 곁 모듈형 별장과 여유로운 테라스 · AI 콘셉트"></figure>';
  $('#our-villa .eyebrow').textContent='MY LODGE / OUR STORY';
  $('#our-villa .invitation-footnote')?.remove();
  const guide=$('#our-villa .lodge-guide');
  guide.querySelector('h3').textContent='어디부터 둘러볼까요?';
  guide.querySelector('.guide-copy>p').remove();
- guide.querySelector('.guide-links').innerHTML='<a href="#villa-spaces">시설 둘러보기 ↗</a><a href="#ownership">별장 주인들에게 ↗</a><a href="#stay-services">컨시어지 ↗</a>';
- $('#ownership>.container').innerHTML='<div class="intro"><p class="eyebrow">FOR OUR VILLA OWNERS</p><h2>별장 주인들에게.<br>나만의 시간, 함께하는 경험.</h2></div>'+cards([
+ guide.querySelector('.guide-links').innerHTML='<a href="#villa-spaces">시설 둘러보기 ↗</a><a href="#ownership">오너 혜택 ↗</a><a href="#stay-services">컨시어지 ↗</a>';
+ $('#ownership>.container').innerHTML='<div class="intro"><p class="eyebrow">FOR OUR VILLA OWNERS</p><h2>별장 오너가 된 당신에게.</h2></div>'+cards([
   ['내 안에 완벽한 여유.','커피와 책 한 권, 나의 속도로 쉬는 시간.'],
   ['나와 비슷한 사람들과.','같은 관심사를 가진 사람들과 이야기를 나누는 자리.'],
   ['새로운 계획이 시작되는 곳.','쉬면서 떠오른 아이디어를 대화로 이어가는 시간.']
@@ -69,13 +69,13 @@
   project.querySelector('.project-region-copy').textContent=i?'숲과 바다 사이, 휴식과 활기찬 만남이 어우러지는 별장 생활을 그립니다.':'해안의 풍경을 가까이 두고, 느긋한 하루를 보내는 별장 공간을 그립니다.';
  });
  $('#stay-services>.container').innerHTML='<div class="intro"><p class="eyebrow">MY LODGE / CONCIERGE</p><h2>휴식에 집중할 수 있도록.</h2><p>도착 전 준비부터 머무는 동안의 관리까지.</p></div>'+cards([
-  ['방문 안내','방문 전에 필요한 정보와 준비 사항 안내.'],
-  ['공간 관리','청소와 침구 등 별장 공간을 돌보는 서비스.'],
-  ['다음 여행 안내','다른 지역의 별장으로 이어지는 여행 소개.']
+  ['컨시어지 스탠다드','도착 전에 필요한 모든 것을 완벽하게 세팅 주문.'],
+  ['시설 관리 서비스','청결한 관리와 늘 새 것 처럼 쾌적한 서비스 지원.'],
+  ['1 + 1 + 1','새로운 분위기, 다른 지역 별장 오너들과 사용권 공유.']
  ])+'<p class="promotion-service-note">컨시어지는 서비스 구상이며, 현재 예약·신청은 제공하지 않습니다.</p>';
  $('#brand-paths .path-card h3').textContent='마이롯지의 별장 생활.';
  $('#brand-paths .path-card p').textContent='별장 주인들의 이야기를 만나보세요.';
- $('#brand-paths .path-card b').textContent='별장 주인들에게 ↗';
+ $('#brand-paths .path-card b').textContent='오너 혜택 ↗';
  $('#brand-paths .valley-path small')?.remove();
  $('.vacation-finale>.container>p:not(.eyebrow)').remove();
  $('.vacation-finale .outline').href='#villa-spaces';
@@ -93,7 +93,7 @@
  $('.footer-disclaimer').textContent='마이롯지 브랜드·공간 소개 사이트입니다. 이미지는 AI 및 기획 콘셉트로 실제 시설을 나타내지 않습니다. 별장과 서비스의 세부 안내는 확정 후 공개합니다.';
  $('.copyright').textContent='© 2026 MY LODGE.';
  $('.hero-reassurance').textContent='일상을 휴가처럼 · MY LODGE';
- for(const link of document.querySelectorAll('a[href="#pricing"]')){link.href='#ownership';link.textContent='별장 주인들에게 ↗';}
+ for(const link of document.querySelectorAll('a[href="#pricing"]')){link.href='#ownership';link.textContent='오너 혜택 ↗';}
  const description='일상을 휴가처럼. 자연 속 여유, 새로운 만남, 모듈형 별장 공간을 소개하는 마이롯지 브랜드 사이트.';
  for(const node of document.querySelectorAll('meta[name="description"],meta[property="og:description"]'))node.content=description;
 })();

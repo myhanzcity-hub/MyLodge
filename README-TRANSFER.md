@@ -1,10 +1,17 @@
 # 마이롯지 작업 전달 안내
 
+최신 기준: **2026-10-01 생활 사진·참여 안내 효과 적용본**. 기존 IMTGroup Vercel 운영 배포 READY. `docs/CODEX-HANDOFF.md` 최신 GitHub 인계와 `docs/PARTICIPATION-EFFECTS-20261001.md`를 먼저 읽는다.
+
+최신 작업: **2026-10-01 사진 피드백 반영**. 공개 사이트에서 상담·FAQ를 삭제하고, 계획서 콘셉트·몽환적 자연 장면·본문 요약과 모션을 적용했다. IMTGroup 운영 사이트 업데이트 완료. `docs/IMPROVEMENTS-20261001.md`와 `docs/CODEX-HANDOFF.md` 최신 항목을 먼저 읽는다. 공개 빌드는 42파일이며 상담 모듈은 제외한다. 최신 소스는 인계 브랜치 codex/main-pc-handoff-20260930에서 받는다. 아래 상담 체험 안내는 과거 전달물 기록이다.
+
+최근 로컬 개선: **2026-09-30**. 적용 내용과 원본 복원 방법은 `docs/IMPROVEMENTS-20260930.md`에 있다. 이 기록은 이전 저장 상태이며, GitHub 태그 `mylodge-20260929-final`은 9월 29일 최종판을 가리킨다. 아래의 9월 29일 ZIP 설명은 당시 전달물의 기록이다.
+
 저장 기준: 2026-09-29. 현재 버전은 **프런트엔드 화면 체험**이며 실제 상담 접수·저장·발송·예약·결제는 연결되지 않았다.
 
 ## 먼저 읽을 문서
 
 1. `docs/CODEX-HANDOFF.md` — 최신 구현과 작업 이력
+   - `docs/IMPROVEMENTS-20260930.md` — 9월 29일 기준 후속 개선과 현재 저장 상태
 2. `docs/FINAL-CHECK-20260929.md` — 이번 마무리 수정·확인 범위
 3. `docs/PM-DECISIONS-20260929.md` — PM 결정이 필요한 항목
 4. `docs/DEVELOPMENT.md`, `docs/DEPLOYMENT.md` — 실행·공개 범위

@@ -41,11 +41,48 @@
 .photo-led .path-card{padding:0!important;border-radius:18px;overflow:hidden}
 .photo-led .path-card figure{height:360px;margin:0;overflow:hidden}
 .photo-led .path-card figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.photo-led .path-card:hover figure img{transform:scale(1.03)}
+.photo-led a.path-card:hover figure img{transform:scale(1.03)}
+.photo-led article.path-card{cursor:default}
+.photo-led article.path-card:hover{box-shadow:none}
 .photo-led .path-copy{padding:28px}
 .photo-led .path-copy h3{font-size:28px;line-height:1.5;margin:14px 0}
 .photo-led .path-copy p{font-size:15px;line-height:1.8}
 .photo-led .path-copy b{margin-top:18px;min-height:44px;display:flex;align-items:center;font-size:14px}
+/* Both future-vision stories share one restrained hospitality palette. */
+.photo-led #brand-paths.scenic-deep{background:radial-gradient(ellipse at 50% 0,#28544a 0,#122f29 65%);color:#fff7e7}
+.photo-led #brand-paths>.scenic-backdrop{display:none}
+.photo-led #brand-paths .path-grid{gap:24px;align-items:stretch}
+.photo-led #brand-paths.scenic-deep .path-card{
+ display:flex;flex-direction:column;background:#173e35;color:#fff7e7;
+ border:1px solid #739f8a80;border-radius:20px;box-shadow:0 16px 36px #061c1833;
+}
+.photo-led #brand-paths .path-card figure{position:relative;flex:none;height:auto;aspect-ratio:3/2}
+.photo-led #brand-paths .path-card figure::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#153c3210 40%,#173e354d)}
+.photo-led #brand-paths .path-card figure img{filter:saturate(.85) brightness(.92);object-position:center;transition:none}
+.photo-led #brand-paths .path-copy{flex:1;display:grid;grid-template-rows:auto minmax(84px,auto) 1fr;gap:14px;padding:28px 30px 30px}
+.photo-led #brand-paths.scenic-deep .path-copy>span{color:#e7d49d;font-size:12px;line-height:1.5;letter-spacing:.06em}
+.photo-led #brand-paths .path-copy h3{color:#fff7e7;font-size:clamp(24px,2.3vw,30px);line-height:1.45;margin:0;letter-spacing:-.035em}
+.photo-led #brand-paths.scenic-deep .path-copy p{color:#d8e5db;font-size:15px;line-height:1.85;margin:0}
+.photo-led #brand-paths.scenic-deep article.path-card:hover{box-shadow:0 16px 36px #061c1833}
+.photo-led #brand-paths .it-highlight{
+ display:inline-block;font-size:1.15em;font-weight:900;letter-spacing:-.03em;
+ color:#fff8ef;text-shadow:1px 1px 0 #713027;white-space:nowrap;
+ padding:0 .14em;border:0;line-height:1.9;
+ background:linear-gradient(180deg,transparent 52%,#c64f3c 52%,#c64f3c 88%,transparent 88%);
+}
+.photo-led #brand-paths .chiangmai-image-link{position:relative;display:block;flex:none;cursor:pointer;line-height:0}
+.photo-led #brand-paths .chiangmai-image-link:focus-visible{outline:4px solid #82ffde;outline-offset:-5px;border-radius:18px 18px 0 0}
+.photo-led #brand-paths .chiangmai-image-link:hover img{filter:saturate(1) brightness(1)}
+.photo-led #brand-paths .image-link-arrow{
+ position:absolute;right:16px;bottom:16px;display:grid;place-items:center;
+ width:44px;height:44px;border:1px solid #b5f8df;border-radius:50%;
+ background:#123e35e8;color:#fff8de;font-size:26px;line-height:1;
+}
+@media(max-width:800px){
+ .photo-led #brand-paths .path-copy{grid-template-rows:auto auto auto;gap:12px;padding:24px}
+ .photo-led #brand-paths .path-card figure{aspect-ratio:3/2}
+ .photo-led #brand-paths .path-copy h3{font-size:25px}
+}
 .photo-led #vision .vision-photo{border-radius:18px;overflow:hidden}
 .photo-led #vision .vision-photo img{aspect-ratio:16/9;object-fit:cover;transform:none}
 .photo-led #vision .intro h2{color:#173e37!important}
@@ -104,7 +141,14 @@
 /* Phone scenes follow native scrolling; every scene remains readable. */
 .neon-icon{display:block;flex:none;width:76px;height:76px;background-image:url('assets/brand/mylodge-neon-icons-20261007.png');background-size:200% 200%;background-repeat:no-repeat;pointer-events:none}
 .neon-villa{background-position:0 0}.neon-pool{background-position:100% 0}.neon-coffee{background-position:0 100%}.neon-music{background-position:100% 100%}
-.photo-led.neon-presentation .space-tabs{gap:12px}
+.photo-led.neon-presentation .space-tabs{gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.neon-vector{background-image:none;display:grid;place-items:center}
+.neon-vector svg{width:94%;height:94%;overflow:visible;fill:none;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+.neon-vector svg>*{stroke:var(--neon-color);filter:drop-shadow(0 0 1px var(--neon-color)) drop-shadow(0 0 3px var(--neon-color))}
+.neon-cyan{--neon-color:#52fff0}
+.neon-gold{--neon-color:#ffdb65}
+.neon-pink{--neon-color:#ff6da8}
+.neon-purple{--neon-color:#cd8cff}
 .photo-led.neon-presentation .space-tabs button{display:flex;justify-content:flex-start;align-items:center;gap:12px;min-height:114px;padding:14px 18px;text-align:left;color:#fff8e8;background:#103e35;border:1px solid #397364;box-shadow:inset 0 1px 0 #ffffff0c;transition:border-color .2s,background .2s,box-shadow .2s}
 .photo-led.neon-presentation .space-tabs button:hover{background:#164a40;border-color:#5fc8b2}
 .photo-led.neon-presentation .space-tabs button[aria-selected=true]{background:#0c332d;border-color:#74e3cf;box-shadow:0 0 0 1px #74e3cf,inset 0 0 24px #22dec614}
@@ -116,7 +160,7 @@
 .neon-presentation :is(.promotion-cards figure,.path-card figure){position:relative}
 @media(max-width:1100px){.photo-led.neon-presentation .space-tabs button{padding:12px;gap:8px}.photo-led.neon-presentation .space-tabs .neon-icon{width:58px;height:58px}}
 @media(max-width:800px){
- .photo-led.neon-presentation .space-tabs{gap:8px}
+ .photo-led.neon-presentation .space-tabs{gap:8px;grid-template-columns:repeat(2,minmax(0,1fr))}
  .photo-led.neon-presentation .space-tabs button{min-height:96px;padding:10px;gap:8px}
  .photo-led.neon-presentation .space-tabs .neon-icon{width:56px;height:56px}
  .photo-led.neon-presentation .space-tabs .neon-tab-label{font-size:13px}
@@ -135,4 +179,48 @@
  .photo-led.vacation-design .life-copy{opacity:1;transform:none;transition:none}
  .photo-led.vacation-design .scene-time{font-size:clamp(22px,6vw,32px);line-height:1.5;letter-spacing:-.02em}
  .photo-led.vacation-design .life-navigation{display:none}
+}
+.photo-led.vacation-design .life-story.life-autoplay{height:auto}
+.photo-led.vacation-design .life-autoplay .life-stage{position:relative;height:90svh;min-height:660px}
+.photo-led.vacation-design .life-autoplay .life-scene{position:absolute;inset:0;min-height:0;opacity:0;visibility:hidden;transition:opacity .8s,visibility .8s}
+.photo-led.vacation-design .life-autoplay .life-scene.is-active{opacity:1;visibility:visible}
+.photo-led.vacation-design .life-autoplay .life-copy{opacity:0;transform:translateY(20px)}
+.photo-led.vacation-design .life-autoplay .is-active .life-copy{opacity:1;transform:none}
+.photo-led.vacation-design .life-autoplay .life-scene>img{transform:none;inset:0;height:100%}
+.photo-led.vacation-design .life-autoplay .life-navigation{display:flex;left:auto;right:32px;bottom:78px;gap:14px}
+.life-autoplay .life-navigation button{border:1px solid #ffffff70;border-radius:6px;background:#12342be6;color:#fff;padding:12px 16px;cursor:pointer;min-height:44px}
+.life-autoplay .life-navigation button:focus-visible{outline:3px solid #ead8a0;outline-offset:3px}
+.photo-led .photo-deck-controls{justify-content:center;flex-wrap:wrap;gap:12px}
+.photo-led .photo-deck-controls [data-photo-pause]{width:auto;height:auto;min-height:44px;padding:10px 16px;border-radius:6px;font-size:13px}
+@media(max-width:700px){.photo-led.vacation-design .life-autoplay .life-stage{height:80svh;min-height:650px}.photo-led.vacation-design .life-autoplay .life-navigation{left:24px;right:auto;bottom:76px;gap:8px}}
+@media(prefers-reduced-motion:reduce){.photo-led.vacation-design .life-autoplay .life-scene,.photo-led.vacation-design .life-autoplay .life-copy{transition:none}}
+/* A faint travelling light stays on the facility outlines, never on the copy. */
+@property --facility-neon-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes facility-border-travel{to{--facility-neon-angle:360deg}}
+.photo-led :is(#villa-spaces .space-tabs button,#villa-spaces .space-panel,#vision .vision-photo){position:relative;isolation:isolate}
+@supports (mask-composite:exclude) or (-webkit-mask-composite:xor){
+ .photo-led :is(#villa-spaces .space-tabs button,#villa-spaces .space-panel,#vision .vision-photo)::after{
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  border-radius:inherit;padding:4px;opacity:1;
+  background:conic-gradient(from var(--facility-neon-angle),#3d998c55 0deg 170deg,#4ffff0 205deg,#eaffff 240deg,#ffe878 280deg,#f08bff 315deg,#3d998c55 350deg 360deg);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;
+  animation:facility-border-travel 6s linear infinite;animation-play-state:paused;
+ }
+ .photo-led #villa-spaces .space-panel::after{padding:5px;opacity:1;animation-duration:8s}
+ .photo-led #vision .vision-photo::after{padding:5px;opacity:1;animation-duration:8s}
+ .photo-led #vision .vision-photo{box-shadow:0 0 12px #40c8b54d,0 15px 45px #173e3714}
+ .photo-led #villa-spaces .space-tabs button{box-shadow:0 0 7px #45eed05c,inset 0 0 8px #45eed024}
+ .photo-led #villa-spaces .space-panel{box-shadow:0 0 12px #40c8b54d,0 15px 45px #173e3714}
+ .photo-led #villa-spaces .space-tabs button:nth-child(2)::after{animation-delay:-1.5s}
+ .photo-led #villa-spaces .space-tabs button:nth-child(3)::after{animation-delay:-3s}
+ .photo-led #villa-spaces .space-tabs button:nth-child(4)::after{animation-delay:-4.5s}
+ .photo-led #villa-spaces .space-tabs button:nth-child(5)::after{animation-delay:-6s}
+ .photo-led #villa-spaces .space-tabs button:nth-child(6)::after{animation-delay:-7.5s}
+ .photo-led #villa-spaces.neon-border-running :is(.space-tabs button,.space-panel)::after{animation-play-state:running}
+ .photo-led #vision.neon-border-running .vision-photo::after{animation-play-state:running}
+ .photo-led.neon-border-suspended :is(#villa-spaces .space-tabs button,#villa-spaces .space-panel,#vision .vision-photo)::after{animation-play-state:paused}
+}
+@media(prefers-reduced-motion:reduce){
+ .photo-led :is(#villa-spaces .space-tabs button,#villa-spaces .space-panel,#vision .vision-photo)::after{animation:none!important;opacity:1}
 }

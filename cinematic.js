@@ -48,7 +48,7 @@
    vision.style.setProperty('--vision-zoom',(.9+progress*.1).toFixed(3));
    vision.style.setProperty('--vision-corner',(42-progress*38).toFixed(1)+'px');
   }
-  if(visible.has(story)&&!landscapeStory.matches&&!mobile.matches){
+  if(visible.has(story)&&!story.classList.contains('life-autoplay')&&!landscapeStory.matches&&!mobile.matches){
    const rect=story.getBoundingClientRect();
    const progress=clamp(-rect.top/Math.max(1,rect.height-stage.offsetHeight));
    const index=Math.min(2,Math.floor(progress*3));
@@ -67,6 +67,7 @@
  const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)visible.add(entry.target);else visible.delete(entry.target);});ribbon.classList.toggle('is-running',visible.has(ribbon));document.body.classList.toggle('life-in-view',visible.has(story));queue();});
  [hero,vision,story,ribbon].forEach(node=>observer.observe(node));
  function updateMotion(){
+  if(story.classList.contains('life-autoplay'))return;
   lastScene=-1;
   if(reduced.matches||landscapeStory.matches||mobile.matches){cancelAnimationFrame(frame);frame=0;lifeScenes.forEach(node=>node.removeAttribute('aria-hidden'));hero.style.removeProperty('--hero-drift');hero.style.removeProperty('--hero-zoom');}
   else {lifeScenes.forEach(node=>node.setAttribute('aria-hidden',String(!node.classList.contains('is-active'))));queue();}
