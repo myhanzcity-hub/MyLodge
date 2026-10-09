@@ -1,0 +1,272 @@
+[
+  {
+    "controlsHeight": 46.1875,
+    "deckHeight": 191.25,
+    "pause": "false",
+    "scrollWidth": 380,
+    "slides": [
+      {
+        "ariaHidden": "false",
+        "height": 191.25,
+        "inert": false,
+        "position": "active"
+      },
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "right"
+      },
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "left"
+      }
+    ],
+    "status": "01 / 03 · A pool beside the sea",
+    "width": 380,
+    "at": "2026-10-09T03:38:07.082Z",
+    "label": "390-en-200-gallery"
+  },
+  {
+    "controlsHeight": 46.1875,
+    "deckHeight": 191.25,
+    "pause": "false",
+    "scrollWidth": 380,
+    "slides": [
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "right"
+      },
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "left"
+      },
+      {
+        "ariaHidden": "false",
+        "height": 191.25,
+        "inert": false,
+        "position": "active"
+      }
+    ],
+    "status": "03 / 03 · A club for music and conversation",
+    "width": 380,
+    "at": "2026-10-09T03:38:20.122Z",
+    "label": "390-en-200-gallery"
+  },
+  {
+    "controlsHeight": 46.1875,
+    "deckHeight": 191.25,
+    "pause": "false",
+    "scrollWidth": 380,
+    "slides": [
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "left"
+      },
+      {
+        "ariaHidden": "false",
+        "height": 191.25,
+        "inert": false,
+        "position": "active"
+      },
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "right"
+      }
+    ],
+    "status": "02 / 03 · A terrace for meeting fellow entrepreneurs",
+    "width": 380,
+    "at": "2026-10-09T03:38:35.157Z",
+    "label": "390-en-200-gallery"
+  },
+  {
+    "controlsHeight": 69.28125,
+    "deckHeight": 156.375,
+    "pause": "false",
+    "scrollWidth": 310,
+    "slides": [
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "right"
+      },
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "left"
+      },
+      {
+        "ariaHidden": "false",
+        "height": 156.375,
+        "inert": false,
+        "position": "active"
+      }
+    ],
+    "status": "03 / 03 · A club for music and conversation",
+    "width": 310,
+    "at": "2026-10-09T03:39:00.018Z",
+    "label": "320-en-200-gallery"
+  },
+  {
+    "controlsHeight": 69.28125,
+    "deckHeight": 156.375,
+    "pause": "false",
+    "scrollWidth": 310,
+    "slides": [
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "right"
+      },
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "left"
+      },
+      {
+        "ariaHidden": "false",
+        "height": 156.375,
+        "inert": false,
+        "position": "active"
+      }
+    ],
+    "status": "03 / 03 · A club for music and conversation",
+    "width": 310,
+    "at": "2026-10-09T03:39:13.052Z",
+    "label": "320-en-200-gallery"
+  },
+  {
+    "controlsHeight": 69.28125,
+    "deckHeight": 156.375,
+    "pause": "false",
+    "scrollWidth": 310,
+    "slides": [
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "right"
+      },
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "left"
+      },
+      {
+        "ariaHidden": "false",
+        "height": 156.375,
+        "inert": false,
+        "position": "active"
+      }
+    ],
+    "status": "03 / 03 · A club for music and conversation",
+    "width": 310,
+    "at": "2026-10-09T03:39:28.089Z",
+    "label": "320-en-200-gallery"
+  },
+  {
+    "controlsHeight": 46.1875,
+    "deckHeight": 156.375,
+    "pause": "false",
+    "scrollWidth": 310,
+    "slides": [
+      {
+        "ariaHidden": "false",
+        "height": 156.375,
+        "inert": false,
+        "position": "active"
+      },
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "right"
+      },
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "left"
+      }
+    ],
+    "status": "01 / 03 · A pool beside the sea",
+    "width": 310,
+    "at": "2026-10-09T03:40:12.958Z",
+    "label": "320-en-200-gallery-in-view"
+  },
+  {
+    "controlsHeight": 69.28125,
+    "deckHeight": 156.375,
+    "pause": "false",
+    "scrollWidth": 310,
+    "slides": [
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "right"
+      },
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "left"
+      },
+      {
+        "ariaHidden": "false",
+        "height": 156.375,
+        "inert": false,
+        "position": "active"
+      }
+    ],
+    "status": "03 / 03 · A club for music and conversation",
+    "width": 310,
+    "at": "2026-10-09T03:40:26.000Z",
+    "label": "320-en-200-gallery-in-view"
+  },
+  {
+    "controlsHeight": 46.1875,
+    "deckHeight": 156.375,
+    "pause": "false",
+    "scrollWidth": 310,
+    "slides": [
+      {
+        "ariaHidden": "false",
+        "height": 156.375,
+        "inert": false,
+        "position": "active"
+      },
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "right"
+      },
+      {
+        "ariaHidden": "true",
+        "height": 0,
+        "inert": true,
+        "position": "left"
+      }
+    ],
+    "status": "01 / 03 · A pool beside the sea",
+    "width": 310,
+    "at": "2026-10-09T03:40:41.034Z",
+    "label": "320-en-200-gallery-in-view"
+  }
+]

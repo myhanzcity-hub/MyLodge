@@ -1,5 +1,7 @@
 // The only files included in the public export.
 export const publicAssets = ['index.html', 'styles.css', 'app.js'];
+publicAssets.push('mobile-layout.css','mobile-layout.js');
+for (const name of ['service-ready','service-property-care','service-owner-exchange']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/${name}-20261008-${width}.webp`);
 publicAssets.push('branding.css','branding.js','assets/brand/mylodge-logo.webp','assets/brand/mylodge-character.webp');
 publicAssets.push('assets/brand/mylodge-neon-icons-20261007.png');
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/resort-overview-20261006-${width}.webp`);
@@ -31,3 +33,7 @@ publicAssets.push('assets/video/mylodge-intro-en-30s.mp4','assets/video/mylodge-
 for (const name of ['facility-villa','facility-beach','facility-terrace','facility-club','project-jumunjin','project-yangyang','valley-community']) for (const width of [480,960,1680]) publicAssets.push('assets/images/'+name+'-20261007-'+width+'.webp');
 
 publicAssets.push('assets/brand/mylodge-logo-transparent-20261007.webp');
+for (const width of [480,960,1680]) publicAssets.push(`assets/images/brand-villa-atmosphere-20261008-${width}.webp`);
+
+for (const width of [480,960,1680]) publicAssets.push(`assets/images/facility-hotel-pool-20261008-${width}.webp`);
+for (const name of ['facility-pool-cabana','facility-market-v2','facility-concierge']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/${name}-20261008-${width}.webp`);

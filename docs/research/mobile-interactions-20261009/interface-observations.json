@@ -1,0 +1,778 @@
+[
+  {
+    "active": "<body class=\"benchmark-design future-design site-ready cinematic-design vacation-design promotion-home photo-led neon-presentation\" data-review-theme=\"light\"><a class=\"skip-link\" href=\"#main\">본문으로 바로 가기</a><header><div class=\"container header-inner\"><a class=\"brand artwork-brand\" href=\"#home\" aria-l",
+    "controls": [
+      {
+        "aria": "언어 선택 · 현재 한국어",
+        "height": 44,
+        "pressed": null,
+        "text": "한국어KO⌄",
+        "width": 44,
+        "x": 263,
+        "y": 20
+      },
+      {
+        "aria": "메뉴 열기",
+        "height": 50.390625,
+        "pressed": null,
+        "text": "☰",
+        "width": 44,
+        "x": 315,
+        "y": 16.796875
+      },
+      {
+        "aria": "인트로 영상 이어보기",
+        "height": 48.390625,
+        "pressed": null,
+        "text": "이어보기",
+        "width": 165,
+        "x": 20,
+        "y": -6333
+      },
+      {
+        "aria": null,
+        "height": 48.390625,
+        "pressed": "false",
+        "text": "음량 켜기",
+        "width": 165,
+        "x": 195,
+        "y": -6333
+      },
+      {
+        "aria": null,
+        "height": 46.796875,
+        "pressed": "false",
+        "text": "자동 재생 멈추기",
+        "width": 125,
+        "x": 158.578125,
+        "y": -3449.609375
+      },
+      {
+        "aria": null,
+        "height": 44,
+        "pressed": "false",
+        "text": "자동 재생 멈추기",
+        "width": 125,
+        "x": 235,
+        "y": 444.25
+      }
+    ],
+    "gallery": {
+      "counter": "01 / 03 · 바다와 함께 즐기는 풀장",
+      "touchAction": "pan-y"
+    },
+    "lang": "ko",
+    "life": {
+      "counter": "01 / 03",
+      "touchAction": "pan-y pinch-zoom"
+    },
+    "menu": {
+      "hidden": true,
+      "links": [
+        {
+          "current": null,
+          "text": "시설 둘러보기"
+        },
+        {
+          "current": null,
+          "text": "오너 혜택"
+        },
+        {
+          "current": "location",
+          "text": "지역별 별장"
+        },
+        {
+          "current": null,
+          "text": "컨시어지"
+        },
+        {
+          "current": null,
+          "text": "Business Valley ↗"
+        }
+      ]
+    },
+    "scrollWidth": 380,
+    "width": 380,
+    "at": "2026-10-09T10:10:04.820Z",
+    "label": "390-ko-gallery-entry"
+  },
+  {
+    "active": "<body class=\"benchmark-design future-design site-ready cinematic-design vacation-design promotion-home photo-led neon-presentation\" data-review-theme=\"light\"><a class=\"skip-link\" href=\"#main\">본문으로 바로 가기</a><header><div class=\"container header-inner\"><a class=\"brand artwork-brand\" href=\"#home\" aria-l",
+    "controls": [
+      {
+        "aria": "언어 선택 · 현재 한국어",
+        "height": 44,
+        "pressed": null,
+        "text": "한국어KO⌄",
+        "width": 44,
+        "x": 263,
+        "y": 20
+      },
+      {
+        "aria": "메뉴 열기",
+        "height": 50.390625,
+        "pressed": null,
+        "text": "☰",
+        "width": 44,
+        "x": 315,
+        "y": 16.796875
+      },
+      {
+        "aria": "인트로 영상 이어보기",
+        "height": 48.390625,
+        "pressed": null,
+        "text": "이어보기",
+        "width": 165,
+        "x": 20,
+        "y": -6333
+      },
+      {
+        "aria": null,
+        "height": 48.390625,
+        "pressed": "false",
+        "text": "음량 켜기",
+        "width": 165,
+        "x": 195,
+        "y": -6333
+      },
+      {
+        "aria": null,
+        "height": 46.796875,
+        "pressed": "false",
+        "text": "자동 재생 멈추기",
+        "width": 125,
+        "x": 158.578125,
+        "y": -3449.609375
+      },
+      {
+        "aria": null,
+        "height": 44,
+        "pressed": "false",
+        "text": "자동 재생 멈추기",
+        "width": 125,
+        "x": 235,
+        "y": 445.34375
+      }
+    ],
+    "gallery": {
+      "counter": "02 / 03 · 사업가들이 만나는 테라스",
+      "touchAction": "pan-y"
+    },
+    "lang": "ko",
+    "life": {
+      "counter": "01 / 03",
+      "touchAction": "pan-y pinch-zoom"
+    },
+    "menu": {
+      "hidden": true,
+      "links": [
+        {
+          "current": null,
+          "text": "시설 둘러보기"
+        },
+        {
+          "current": null,
+          "text": "오너 혜택"
+        },
+        {
+          "current": "location",
+          "text": "지역별 별장"
+        },
+        {
+          "current": null,
+          "text": "컨시어지"
+        },
+        {
+          "current": null,
+          "text": "Business Valley ↗"
+        }
+      ]
+    },
+    "scrollWidth": 380,
+    "width": 380,
+    "at": "2026-10-09T10:11:20.830Z",
+    "label": "390-ko-gallery-repeat-1"
+  },
+  {
+    "active": "<body class=\"benchmark-design future-design site-ready cinematic-design vacation-design promotion-home photo-led neon-presentation\" data-review-theme=\"light\"><a class=\"skip-link\" href=\"#main\">본문으로 바로 가기</a><header><div class=\"container header-inner\"><a class=\"brand artwork-brand\" href=\"#home\" aria-l",
+    "controls": [
+      {
+        "aria": "언어 선택 · 현재 한국어",
+        "height": 44,
+        "pressed": null,
+        "text": "한국어KO⌄",
+        "width": 44,
+        "x": 263,
+        "y": 20
+      },
+      {
+        "aria": "메뉴 열기",
+        "height": 50.390625,
+        "pressed": null,
+        "text": "☰",
+        "width": 44,
+        "x": 315,
+        "y": 16.796875
+      },
+      {
+        "aria": "인트로 영상 이어보기",
+        "height": 48.390625,
+        "pressed": null,
+        "text": "이어보기",
+        "width": 165,
+        "x": 20,
+        "y": -6333
+      },
+      {
+        "aria": null,
+        "height": 48.390625,
+        "pressed": "false",
+        "text": "음량 켜기",
+        "width": 165,
+        "x": 195,
+        "y": -6333
+      },
+      {
+        "aria": null,
+        "height": 46.796875,
+        "pressed": "false",
+        "text": "자동 재생 멈추기",
+        "width": 125,
+        "x": 158.578125,
+        "y": -3449.609375
+      },
+      {
+        "aria": null,
+        "height": 44,
+        "pressed": "false",
+        "text": "자동 재생 멈추기",
+        "width": 125,
+        "x": 235,
+        "y": 444.25
+      }
+    ],
+    "gallery": {
+      "counter": "03 / 03 · 음악과 대화가 있는 클럽",
+      "touchAction": "pan-y"
+    },
+    "lang": "ko",
+    "life": {
+      "counter": "01 / 03",
+      "touchAction": "pan-y pinch-zoom"
+    },
+    "menu": {
+      "hidden": true,
+      "links": [
+        {
+          "current": null,
+          "text": "시설 둘러보기"
+        },
+        {
+          "current": null,
+          "text": "오너 혜택"
+        },
+        {
+          "current": "location",
+          "text": "지역별 별장"
+        },
+        {
+          "current": null,
+          "text": "컨시어지"
+        },
+        {
+          "current": null,
+          "text": "Business Valley ↗"
+        }
+      ]
+    },
+    "scrollWidth": 380,
+    "width": 380,
+    "at": "2026-10-09T10:11:38.864Z",
+    "label": "390-ko-gallery-repeat-2"
+  },
+  {
+    "active": "<body class=\"benchmark-design future-design site-ready cinematic-design vacation-design promotion-home photo-led neon-presentation\" data-review-theme=\"light\"><a class=\"skip-link\" href=\"#main\">본문으로 바로 가기</a><header><div class=\"container header-inner\"><a class=\"brand artwork-brand\" href=\"#home\" aria-l",
+    "controls": [
+      {
+        "aria": "언어 선택 · 현재 한국어",
+        "height": 44,
+        "pressed": null,
+        "text": "한국어KO⌄",
+        "width": 44,
+        "x": 263,
+        "y": 20
+      },
+      {
+        "aria": "메뉴 열기",
+        "height": 50.390625,
+        "pressed": null,
+        "text": "☰",
+        "width": 44,
+        "x": 315,
+        "y": 16.796875
+      },
+      {
+        "aria": "인트로 영상 이어보기",
+        "height": 48.390625,
+        "pressed": null,
+        "text": "이어보기",
+        "width": 165,
+        "x": 20,
+        "y": -6333
+      },
+      {
+        "aria": null,
+        "height": 48.390625,
+        "pressed": "false",
+        "text": "음량 켜기",
+        "width": 165,
+        "x": 195,
+        "y": -6333
+      },
+      {
+        "aria": null,
+        "height": 46.796875,
+        "pressed": "false",
+        "text": "자동 재생 멈추기",
+        "width": 125,
+        "x": 158.578125,
+        "y": -3449.609375
+      },
+      {
+        "aria": null,
+        "height": 44,
+        "pressed": "false",
+        "text": "자동 재생 멈추기",
+        "width": 125,
+        "x": 235,
+        "y": 445.34375
+      }
+    ],
+    "gallery": {
+      "counter": "02 / 03 · 사업가들이 만나는 테라스",
+      "touchAction": "pan-y"
+    },
+    "lang": "ko",
+    "life": {
+      "counter": "01 / 03",
+      "touchAction": "pan-y pinch-zoom"
+    },
+    "menu": {
+      "hidden": true,
+      "links": [
+        {
+          "current": null,
+          "text": "시설 둘러보기"
+        },
+        {
+          "current": null,
+          "text": "오너 혜택"
+        },
+        {
+          "current": "location",
+          "text": "지역별 별장"
+        },
+        {
+          "current": null,
+          "text": "컨시어지"
+        },
+        {
+          "current": null,
+          "text": "Business Valley ↗"
+        }
+      ]
+    },
+    "scrollWidth": 380,
+    "width": 380,
+    "at": "2026-10-09T10:11:56.896Z",
+    "label": "390-ko-gallery-repeat-3"
+  },
+  {
+    "active": "<body class=\"benchmark-design future-design site-ready cinematic-design vacation-design promotion-home photo-led neon-presentation english-page\" data-review-theme=\"light\"><a class=\"skip-link\" href=\"#main\">Skip to content</a><header><div class=\"container header-inner\"><a class=\"brand artwork-brand\" h",
+    "controls": [
+      {
+        "aria": "Select language · English",
+        "height": 44,
+        "pressed": null,
+        "text": "EnglishEN⌄",
+        "width": 44,
+        "x": 263,
+        "y": 20
+      },
+      {
+        "aria": "Open menu",
+        "height": 50.390625,
+        "pressed": null,
+        "text": "☰",
+        "width": 44,
+        "x": 315,
+        "y": 16.796875
+      },
+      {
+        "aria": "Resume intro film",
+        "height": 48.390625,
+        "pressed": null,
+        "text": "Resume",
+        "width": 165,
+        "x": 20,
+        "y": -1124
+      },
+      {
+        "aria": null,
+        "height": 48.390625,
+        "pressed": "false",
+        "text": "Sound On",
+        "width": 165,
+        "x": 195,
+        "y": -1124
+      },
+      {
+        "aria": null,
+        "height": 46.796875,
+        "pressed": "false",
+        "text": "Pause slideshow",
+        "width": 133.78125,
+        "x": 153.453125,
+        "y": 1938.15625
+      },
+      {
+        "aria": null,
+        "height": 44,
+        "pressed": "false",
+        "text": "Pause slideshow",
+        "width": 133.78125,
+        "x": 226.21875,
+        "y": 6092.828125
+      }
+    ],
+    "gallery": {
+      "counter": "01 / 03 · A pool beside the sea",
+      "touchAction": "pan-y"
+    },
+    "lang": "en",
+    "life": {
+      "counter": "01 / 03",
+      "touchAction": "pan-y pinch-zoom"
+    },
+    "menu": {
+      "hidden": true,
+      "links": [
+        {
+          "current": "location",
+          "text": "Explore the Facilities"
+        },
+        {
+          "current": null,
+          "text": "Owner Benefits"
+        },
+        {
+          "current": null,
+          "text": "Our Destinations"
+        },
+        {
+          "current": null,
+          "text": "Concierge"
+        },
+        {
+          "current": null,
+          "text": "Business Valley ↗"
+        }
+      ]
+    },
+    "scrollWidth": 380,
+    "width": 380,
+    "at": "2026-10-09T10:28:16.461Z",
+    "label": "390-en-facility-language-reload"
+  },
+  {
+    "active": "<body class=\"benchmark-design future-design site-ready cinematic-design vacation-design promotion-home photo-led neon-presentation\" data-review-theme=\"light\"><a class=\"skip-link\" href=\"#main\">본문으로 바로 가기</a><header><div class=\"container header-inner\"><a class=\"brand artwork-brand\" href=\"#home\" aria-l",
+    "controls": [
+      {
+        "aria": "언어 선택 · 현재 한국어",
+        "height": 44,
+        "pressed": null,
+        "text": "한국어KO⌄",
+        "width": 44,
+        "x": 263,
+        "y": 20
+      },
+      {
+        "aria": "메뉴 열기",
+        "height": 50.390625,
+        "pressed": null,
+        "text": "☰",
+        "width": 44,
+        "x": 315,
+        "y": 16.796875
+      },
+      {
+        "aria": "인트로 영상 이어보기",
+        "height": 48.390625,
+        "pressed": null,
+        "text": "이어보기",
+        "width": 165,
+        "x": 20,
+        "y": -1009
+      },
+      {
+        "aria": null,
+        "height": 48.390625,
+        "pressed": "false",
+        "text": "음량 켜기",
+        "width": 165,
+        "x": 195,
+        "y": -1009
+      },
+      {
+        "aria": null,
+        "height": 46.796875,
+        "pressed": "false",
+        "text": "자동 재생 멈추기",
+        "width": 125,
+        "x": 158.578125,
+        "y": 1874.390625
+      },
+      {
+        "aria": null,
+        "height": 44,
+        "pressed": "false",
+        "text": "자동 재생 멈추기",
+        "width": 125,
+        "x": 235,
+        "y": 5768.25
+      }
+    ],
+    "gallery": {
+      "counter": "01 / 03 · 바다와 함께 즐기는 풀장",
+      "touchAction": "pan-y"
+    },
+    "lang": "ko",
+    "life": {
+      "counter": "01 / 03",
+      "touchAction": "pan-y pinch-zoom"
+    },
+    "menu": {
+      "hidden": true,
+      "links": [
+        {
+          "current": "location",
+          "text": "시설 둘러보기"
+        },
+        {
+          "current": null,
+          "text": "오너 혜택"
+        },
+        {
+          "current": null,
+          "text": "지역별 별장"
+        },
+        {
+          "current": null,
+          "text": "컨시어지"
+        },
+        {
+          "current": null,
+          "text": "Business Valley ↗"
+        }
+      ]
+    },
+    "scrollWidth": 380,
+    "width": 380,
+    "at": "2026-10-09T10:30:39.250Z",
+    "label": "actual-language-link-reset-ko"
+  },
+  {
+    "active": "<body class=\"benchmark-design future-design site-ready cinematic-design vacation-design promotion-home photo-led neon-presentation\" data-review-theme=\"light\"><a class=\"skip-link\" href=\"#main\">본문으로 바로 가기</a><header><div class=\"container header-inner\"><a class=\"brand artwork-brand\" href=\"#home\" aria-l",
+    "controls": [
+      {
+        "aria": "언어 선택 · 현재 한국어",
+        "height": 44,
+        "pressed": null,
+        "text": "한국어KO⌄",
+        "width": 44,
+        "x": 197,
+        "y": 20
+      },
+      {
+        "aria": "메뉴 열기",
+        "height": 50.390625,
+        "pressed": null,
+        "text": "☰",
+        "width": 44,
+        "x": 245,
+        "y": 16.796875
+      },
+      {
+        "aria": "인트로 영상 이어보기",
+        "height": 48.390625,
+        "pressed": null,
+        "text": "이어보기",
+        "width": 130,
+        "x": 20,
+        "y": -6218
+      },
+      {
+        "aria": null,
+        "height": 48.390625,
+        "pressed": "false",
+        "text": "음량 켜기",
+        "width": 130,
+        "x": 160,
+        "y": -6218
+      },
+      {
+        "aria": null,
+        "height": 46.796875,
+        "pressed": "false",
+        "text": "자동 재생 멈추기",
+        "width": 125,
+        "x": 123.578125,
+        "y": -3370.671875
+      },
+      {
+        "aria": null,
+        "height": 44,
+        "pressed": "false",
+        "text": "자동 재생 멈추기",
+        "width": 125,
+        "x": 169,
+        "y": 410.25
+      }
+    ],
+    "gallery": {
+      "counter": "01 / 03 · 바다와 함께 즐기는 풀장",
+      "touchAction": "pan-y"
+    },
+    "lang": "ko",
+    "life": {
+      "counter": "01 / 03",
+      "touchAction": "pan-y pinch-zoom"
+    },
+    "menu": {
+      "hidden": true,
+      "links": [
+        {
+          "current": null,
+          "text": "시설 둘러보기"
+        },
+        {
+          "current": null,
+          "text": "오너 혜택"
+        },
+        {
+          "current": "location",
+          "text": "지역별 별장"
+        },
+        {
+          "current": null,
+          "text": "컨시어지"
+        },
+        {
+          "current": null,
+          "text": "Business Valley ↗"
+        }
+      ]
+    },
+    "scrollWidth": 310,
+    "width": 310,
+    "at": "2026-10-09T10:30:57.920Z",
+    "label": "320-ko-gallery-entry"
+  },
+  {
+    "active": "<body class=\"benchmark-design future-design site-ready cinematic-design vacation-design promotion-home photo-led neon-presentation english-page life-in-view\" data-review-theme=\"light\"><a class=\"skip-link\" href=\"#main\">Skip to content</a><header><div class=\"container header-inner\"><a class=\"brand art",
+    "controls": [
+      {
+        "aria": "Select language · English",
+        "height": 44,
+        "pressed": null,
+        "text": "EnglishEN⌄",
+        "width": 44,
+        "x": 197,
+        "y": 20
+      },
+      {
+        "aria": "Open menu",
+        "height": 50.390625,
+        "pressed": null,
+        "text": "☰",
+        "width": 44,
+        "x": 245,
+        "y": 16.796875
+      },
+      {
+        "aria": "Resume intro film",
+        "height": 48.390625,
+        "pressed": null,
+        "text": "Resume",
+        "width": 130,
+        "x": 20,
+        "y": -3531
+      },
+      {
+        "aria": null,
+        "height": 48.390625,
+        "pressed": "false",
+        "text": "Sound On",
+        "width": 130,
+        "x": 160,
+        "y": -3531
+      },
+      {
+        "aria": null,
+        "height": 46.796875,
+        "pressed": "false",
+        "text": "Pause slideshow",
+        "width": 133.78125,
+        "x": 118.453125,
+        "y": 1094.125
+      },
+      {
+        "aria": null,
+        "height": 44,
+        "pressed": "false",
+        "text": "Pause slideshow",
+        "width": 133.78125,
+        "x": 160.21875,
+        "y": 6536.59375
+      }
+    ],
+    "gallery": {
+      "counter": "03 / 03 · A club for music and conversation",
+      "touchAction": "pan-y"
+    },
+    "lang": "en",
+    "life": {
+      "counter": "01 / 03",
+      "touchAction": "pan-y pinch-zoom"
+    },
+    "menu": {
+      "hidden": true,
+      "links": [
+        {
+          "current": "location",
+          "text": "Explore the Facilities"
+        },
+        {
+          "current": null,
+          "text": "Owner Benefits"
+        },
+        {
+          "current": null,
+          "text": "Our Destinations"
+        },
+        {
+          "current": null,
+          "text": "Concierge"
+        },
+        {
+          "current": null,
+          "text": "Business Valley ↗"
+        }
+      ]
+    },
+    "scrollWidth": 310,
+    "width": 310,
+    "at": "2026-10-09T10:33:32.135Z",
+    "label": "320-en-200-life-entry"
+  }
+]
