@@ -15,6 +15,9 @@ body[data-review-theme=dark] :is(.space-copy h3,.vacation-intro h2,.vision-headi
 body[data-review-theme=dark] .space-panel{border:1px solid #627866}
 @media(max-width:1023px){
  .life-stage,.photo-deck{touch-action:pan-y pinch-zoom}
+ .life-stage,.photo-deck{cursor:grab}
+ .life-stage.is-swipe-dragging,.photo-deck.is-swipe-dragging{cursor:grabbing;user-select:none;-webkit-user-select:none}
+ .life-stage.is-swipe-dragging .life-scene.is-active>img,.photo-deck.is-swipe-dragging>[data-photo-position=active] img{translate:var(--swipe-offset,0px) 0}
  .photo-led header{left:max(10px,env(safe-area-inset-left))!important;right:max(10px,env(safe-area-inset-right))!important}
  .vacation-design .header-inner{gap:8px;min-height:60px;padding-inline:10px}
  .vacation-design .artwork-brand{min-width:0;flex-shrink:1;gap:6px;padding:5px;max-width:calc(100% - 100px)}

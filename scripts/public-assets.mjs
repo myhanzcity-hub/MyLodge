@@ -1,6 +1,7 @@
 // The only files included in the public export.
 export const publicAssets = ['index.html', 'styles.css', 'app.js'];
 publicAssets.push('mobile-layout.css','mobile-layout.js');
+publicAssets.push('view-mode.css','view-mode.js','view.html');
 for (const name of ['service-ready','service-property-care','service-owner-exchange']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/${name}-20261008-${width}.webp`);
 publicAssets.push('branding.css','branding.js','assets/brand/mylodge-logo.webp','assets/brand/mylodge-character.webp');
 publicAssets.push('assets/brand/mylodge-neon-icons-20261007.png');

@@ -3,36 +3,61 @@
  'use strict';
  const root=document.documentElement, header=document.querySelector('.header-inner');
  const narrow=matchMedia('(max-width:1023px)');
- // Horizontal touch gestures change slides; native vertical scrolling and pinch zoom remain available.
+ // Both touch and mouse dragging work inside the mobile-width screen view.
+ // Native vertical scrolling and pinch zoom remain available.
  document.querySelectorAll('.life-stage,.photo-deck').forEach(surface=>{
-  let gesture=null;
+  let gesture=null,suppressClickUntil=0;
   const emit=(name,detail)=>surface.dispatchEvent(new CustomEvent(name,{bubbles:true,detail}));
   const finish=()=>{
    if(!gesture)return;
-   const pointerId=gesture.id;gesture=null;
+   const pointerId=gesture.id;
+   if(gesture.axis==='horizontal')suppressClickUntil=performance.now()+400;
+   gesture=null;
+   surface.classList.remove('is-swipe-dragging');
+   surface.style.removeProperty('--swipe-offset');
    if(surface.hasPointerCapture(pointerId))surface.releasePointerCapture(pointerId);
    emit('mylodge:gesture-end');
   };
   surface.addEventListener('pointerdown',event=>{
    if(gesture){finish();return;}
-   if(!narrow.matches||!event.isPrimary||event.pointerType!=='touch'||event.target.closest('a,button,input,select,textarea,label'))return;
-   gesture={id:event.pointerId,x:event.clientX,y:event.clientY,vertical:false};
+   if(!narrow.matches||!event.isPrimary||event.button!==0||event.target.closest('a,button,input,select,textarea,label,summary'))return;
+   gesture={id:event.pointerId,x:event.clientX,y:event.clientY,axis:null};
    surface.setPointerCapture(event.pointerId);emit('mylodge:gesture-start');
   });
   surface.addEventListener('pointermove',event=>{
    if(!gesture||event.pointerId!==gesture.id)return;
-   const dx=Math.abs(event.clientX-gesture.x),dy=Math.abs(event.clientY-gesture.y);
-   if(dy>12&&dy>dx)gesture.vertical=true;
+   const dx=event.clientX-gesture.x,dy=event.clientY-gesture.y;
+   if(!gesture.axis){
+    if(Math.abs(dy)>12&&Math.abs(dy)>Math.abs(dx)){finish();return;}
+    if(Math.abs(dx)>12&&Math.abs(dx)>Math.abs(dy)*1.4)gesture.axis='horizontal';
+   }
+   if(gesture.axis==='horizontal'){
+    surface.classList.add('is-swipe-dragging');
+    surface.style.setProperty('--swipe-offset',Math.max(-28,Math.min(28,dx*.25))+'px');
+    if(event.cancelable)event.preventDefault();
+   }
   });
   surface.addEventListener('pointerup',event=>{
    if(!gesture||event.pointerId!==gesture.id)return;
    const dx=event.clientX-gesture.x,dy=event.clientY-gesture.y;
-   if(narrow.matches&&!gesture.vertical&&Math.abs(dx)>=48&&Math.abs(dx)>Math.abs(dy)*1.4)
+   const threshold=Math.max(40,Math.min(64,surface.clientWidth*.12));
+   if(narrow.matches&&Math.abs(dx)>=threshold&&Math.abs(dx)>Math.abs(dy)*1.4){
+    gesture.axis='horizontal';
     emit('mylodge:slide-swipe',{direction:dx<0?1:-1});
+   }
    finish();
   });
+  // Prevent the browser's image-drag ghost from stealing the pointer sequence.
+  surface.addEventListener('dragstart',event=>{if(narrow.matches)event.preventDefault();});
+  surface.addEventListener('click',event=>{
+   if(performance.now()<suppressClickUntil&&!event.target.closest('a,button,input,select,textarea,label,summary')){
+    event.preventDefault();event.stopPropagation();
+   }
+  },true);
   surface.addEventListener('pointercancel',finish);
   surface.addEventListener('lostpointercapture',finish);
+  addEventListener('blur',finish);
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)finish();});
   narrow.addEventListener('change',finish);
  });
  const measure=()=>{
