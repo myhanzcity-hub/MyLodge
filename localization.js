@@ -3,6 +3,10 @@
  'use strict';
  const english=new URLSearchParams(location.search).get('lang')==='en';
  const translations=new Map(Object.entries({
+ '주문진과 양양, 국내 별장 공간을 만나보세요.':'Explore MyLodge’s villas in Jumunjin and Yangyang, Korea.',
+ '국내 별장 상세 소개 →':'Explore villas in Korea →',
+ '치앙마이 상세 소개 →':'Explore MyLodge Chiang Mai →',
+ '한즈시티 ↗':'HanzCity ↗',
  '별장과 풀장, 카바나, 테라스가 함께 보이는 마이롯지 별장 분위기':'The MyLodge villa atmosphere, with a pool, cabanas and a terrace',
  '전 세계':'A destination for the global','IT맨':'tech community','들이 집결하는 성지.':'.',
  '한즈시티 치앙마이 사이트 살펴보기':'Explore HanzCity Chiang Mai',
@@ -165,5 +169,5 @@
  const filmHeading=document.querySelector('.film-introduction h1');if(filmHeading)filmHeading.textContent='A villa to call my own.';
  // Media and menu handlers update labels later; translate only their changed nodes.
  new MutationObserver(records=>records.forEach(record=>{if(record.type==='childList')record.addedNodes.forEach(translateNode);else translateNode(record.target);})).observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['aria-label','alt','title']});
- document.querySelectorAll('a[href]').forEach(a=>{if(a.closest('.language-slot'))return;const url=new URL(a.href);if(url.origin===location.origin&&!a.getAttribute('href').startsWith('#')&&/\/(index|business-valley)\.html$/.test(url.pathname)){url.searchParams.set('lang','en');a.href=url.pathname+url.search+url.hash;}});
+ document.querySelectorAll('a[href]').forEach(a=>{if(a.closest('.language-slot'))return;const url=new URL(a.href);if(url.origin===location.origin&&!a.getAttribute('href').startsWith('#')&&/\/(index|business-valley|domestic-villas)\.html$/.test(url.pathname)){url.searchParams.set('lang','en');a.href=url.pathname+url.search+url.hash;}});
 })();

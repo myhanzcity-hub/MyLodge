@@ -22,9 +22,12 @@
  <script>
   const chosenView=viewMode==='desktop'?'desktop':'mobile';
   document.body.dataset.view=chosenView;
-  const siteUrl=new URL('./',location.href);
+  const allowedPages=['domestic-villas.html','business-valley.html'];
+  const requestedPage=viewParams.get('page');
+  const siteUrl=new URL(allowedPages.includes(requestedPage)?requestedPage:'./',location.href);
   siteUrl.search=location.search;
   siteUrl.searchParams.delete('view');
+  siteUrl.searchParams.delete('page');
   siteUrl.searchParams.set('screen-frame',chosenView);
   siteUrl.hash=location.hash;
   const siteFrame=document.getElementById('site-screen');
@@ -37,8 +40,12 @@
    const child=siteFrame.contentWindow;
    function sync(){
     try{
-     if(child.location.pathname!==siteUrl.pathname)return;
      const next=new URL(location.href),current=new URL(child.location.href);
+     if(current.origin!==location.origin)return;
+     const currentPage=current.pathname.split('/').pop();
+     if(allowedPages.includes(currentPage))next.searchParams.set('page',currentPage);
+     else if(currentPage===''||currentPage==='index.html')next.searchParams.delete('page');
+     else return;
      next.hash=current.hash;
      if(current.searchParams.has('lang'))next.searchParams.set('lang',current.searchParams.get('lang'));
      else next.searchParams.delete('lang');

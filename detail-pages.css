@@ -1,0 +1,196 @@
+/* Side pages use the homepage's scenic opening, cream sections and forest cards. */
+:root{color-scheme:only light}
+.destination-page{background:#edf0e7;color:#173e37;overflow-wrap:break-word}
+.destination-page .container{width:min(1120px,calc(100% - 48px));margin-inline:auto;padding:0}
+.destination-page header{position:fixed;inset:16px 24px auto;width:auto;background:#f7f5efed;padding:0;border:1px solid #ffffff50;border-radius:4px;backdrop-filter:blur(16px);z-index:50}
+.destination-page .header-inner{width:100%;max-width:1440px;margin-inline:auto;background:transparent;border:0;border-radius:0;min-height:70px;padding:10px 20px;display:flex;gap:14px;align-items:center;justify-content:flex-start}
+.destination-page .brand{flex:none}
+.destination-page header nav{display:flex;align-items:center;gap:24px;margin-left:auto;min-width:0}
+.destination-page header nav a{font-size:15px;min-height:44px;display:flex;align-items:center;line-height:1.5}
+.destination-page header a:focus-visible,.destination-page button:focus-visible,.destination-page summary:focus-visible{outline:3px solid #a74130;outline-offset:4px}
+.destination-page .menu-button{display:none;flex:none;width:44px;height:44px;border:1px solid #bbcbbc;border-radius:8px;background:#f7f5f0;color:#173e37;font-size:24px}
+.destination-page #mobile-menu{margin:0;padding:16px 20px;border:0;border-top:1px solid #d5ddd1;border-radius:0 0 4px 4px;background:#f7f5ef;max-height:calc(100dvh - 110px);overflow-y:auto;overscroll-behavior:contain}
+.destination-page #mobile-menu[hidden]{display:none!important}
+.destination-page #mobile-menu a{min-height:48px;font-size:16px}
+.destination-page .language-slot{margin-left:0;flex:none}
+.destination-page main{padding-bottom:0}
+.destination-page section{padding:72px 0;scroll-margin-top:112px}
+.destination-page .eyebrow{font-size:13px;letter-spacing:.09em;color:#566950;margin:0 0 20px}
+.destination-page h1{font-size:clamp(36px,4.5vw,60px);line-height:1.3;letter-spacing:-.04em;word-break:keep-all;margin:0 0 24px}
+.destination-page h2{font-size:clamp(28px,3vw,38px);line-height:1.4;letter-spacing:-.035em;word-break:keep-all}
+.destination-page h3{font-size:26px;line-height:1.45;letter-spacing:-.03em;word-break:keep-all}
+.destination-page p{font-size:17px;line-height:1.85;margin:16px 0;color:#415a50;word-break:keep-all;overflow-wrap:break-word}
+.destination-page .detail-lead{max-width:780px}
+.destination-page .detail-back{display:inline-flex;align-items:center;min-height:44px;font-size:15px;color:#43594f;margin-bottom:24px;text-decoration:underline;text-underline-offset:5px}
+.destination-page .park-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.destination-page .park-card{min-width:0;overflow:hidden;border:1px solid #739f8a80;border-radius:20px;background:#173e35;color:#fff7e7;box-shadow:0 16px 36px #061c1833;scroll-margin-top:112px}
+.destination-page figure{margin:0;position:relative}
+.destination-page figure img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.destination-page figcaption{position:absolute;bottom:14px;right:14px;color:#fff8e9;background:#173e37ed;padding:8px 12px;border-radius:24px;font-size:13px;line-height:1.5}
+.destination-page .park-copy{padding:28px 30px 30px}
+.destination-page .park-copy h2{color:#fff7e7;font-size:clamp(24px,2.3vw,30px);line-height:1.45}
+.destination-page .park-number{font-size:13px;color:#e7d49d;letter-spacing:.09em;display:block;margin-bottom:16px}
+.destination-page .park-copy p{margin-bottom:0;color:#d8e5db;font-size:17px;line-height:1.85}
+.destination-page .detail-note{border-top:1px solid #c6d0c1;padding-top:24px;font-size:15px;margin-top:32px;max-width:880px}
+.destination-page .it-highlight{display:inline;font-size:1.08em;font-weight:900;letter-spacing:-.03em;color:#fff8ef;text-shadow:1px 1px 0 #713027;line-height:1.8;background:linear-gradient(180deg,transparent 52%,#c64f3c 52%,#c64f3c 88%,transparent 88%);padding:0 .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.destination-page .detail-status{display:inline-flex;background:#173e35e8;color:#e7d49d;border:1px solid #739f8a80;border-radius:24px;padding:7px 14px;font-size:14px;margin:0 0 18px}
+.destination-page .external-link{display:inline-flex;min-height:48px;align-items:center;gap:12px;padding:10px 18px;border:1px solid #6c8170;border-radius:8px;font-size:16px;text-decoration:none;color:#173e37}
+.destination-page .external-link:hover{background:#e3e8dc}
+.destination-page .outline-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:32px}
+.destination-page .outline-card{background:#173e35;color:#fff7e7;border:1px solid #739f8a80;border-radius:16px;padding:28px;min-width:0;box-shadow:0 16px 36px #061c181a}
+.destination-page .outline-card h3{font-size:25px;margin:16px 0;color:#fff7e7}
+.destination-page .outline-card p{font-size:17px;color:#d8e5db;margin-bottom:0}
+.destination-page .placeholder-label{display:inline-block;color:#e7d49d;font-size:14px;border-bottom:1px solid #739f8a80;padding-bottom:6px}
+.destination-page .outline-panel{padding:32px;background:#173e35;color:#fff7e7;border:1px solid #739f8a80;border-radius:18px;margin-top:28px;box-shadow:0 16px 36px #061c181a}
+.destination-page .outline-panel p{color:#d8e5db;max-width:780px}
+.destination-page footer{background:#071e18;color:#fff8e9;padding:56px 0}
+.destination-page footer>.container{display:grid;grid-template-columns:220px minmax(0,1fr);gap:12px 48px;align-items:start}
+.destination-page footer .footer-brand-art{width:190px;max-width:100%;grid-row:1 / span 3;box-sizing:border-box}
+.destination-page footer p{margin:0}
+.destination-page footer p{color:#d8e5db;font-size:15px}
+.destination-page footer .detail-back{color:#fff8e9;margin:0}
+.destination-page footer .footer-logo{background:#f7f5f0;border-radius:8px;padding:8px;max-width:180px}
+/* Match the photo-and-copy treatment of the homepage's life scenes. */
+.destination-page .side-hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:min(880px,100svh);padding:144px 0 80px;background:#102e29;color:#fff7e7;overflow:hidden}
+.destination-page .side-hero-visual{position:absolute;inset:0;z-index:-1}
+.destination-page .side-hero-visual img{width:100%;height:100%;aspect-ratio:auto;object-position:68% 50%;filter:saturate(.85) brightness(.92)}
+.destination-page .side-hero-visual::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#092723b8,#09272350 65%,#0927231a),linear-gradient(0deg,#102e29a6,transparent 45%);pointer-events:none}
+.destination-page .side-hero-visual figcaption{z-index:2;right:max(24px,calc((100% - 1120px)/2));bottom:24px;font-size:13px}
+.destination-page .side-hero-copy{width:min(100%,660px);padding:36px;border:1px solid #b7ceba40;border-radius:12px;background:linear-gradient(90deg,#092723df,#092723a6);box-shadow:0 16px 36px #061c1833}
+.destination-page .side-hero-copy h1{font-size:clamp(38px,4.5vw,62px);color:#fff7e7;line-height:1.3}
+.destination-page.side-chiangmai .side-hero-copy h1{font-size:clamp(32px,3.4vw,46px);line-height:1.4}
+.destination-page .side-hero-copy .eyebrow{color:#e7d49d;font-size:13px}
+.destination-page .side-hero-copy p{color:#d8e5db;margin-bottom:0;font-size:18px}
+.destination-page .side-hero-copy .detail-back{color:#d8e5db;margin-bottom:20px;text-decoration:none;font-size:15px}
+.destination-page .side-hero-copy .detail-back:hover{text-decoration:underline}
+.destination-page #chiangmai-experiences h2::after,.destination-page #chiangmai-spaces h2::after,.destination-page #chiangmai-info h2::after{content:"";display:block;width:60px;height:2px;background:#739078;margin-top:24px}
+.destination-page #chiangmai-spaces{background:#f7f6ef}
+.destination-page #chiangmai-day{background:radial-gradient(ellipse at 50% 0,#28544a 0,#122f29 65%);color:#fff7e7}
+.destination-page #chiangmai-day h2{color:#fff7e7}
+.destination-page #chiangmai-day .eyebrow{color:#e7d49d}
+.destination-page #chiangmai-day .outline-panel{background:#173e3580;box-shadow:none}
+.destination-page #chiangmai-info .external-link{background:#173e35;color:#fff7e7;border-color:#739f8a80;gap:12px;font-weight:600}
+.destination-page #chiangmai-info .external-link:hover{background:#214e45}
+/* Same travelling border, width, colors and duration as the main vision photo. */
+@property --side-neon-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes side-border-travel{to{--side-neon-angle:360deg}}
+.destination-page .park-card figure{isolation:isolate;border-radius:20px 20px 0 0;box-shadow:0 0 12px #40c8b54d}
+@supports (mask-composite:exclude) or (-webkit-mask-composite:xor){
+ .destination-page .park-card figure::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;border-radius:inherit;padding:5px;background:conic-gradient(from var(--side-neon-angle),#3d998c55 0deg 170deg,#4ffff0 205deg,#eaffff 240deg,#ffe878 280deg,#f08bff 315deg,#3d998c55 350deg 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:side-border-travel 8s linear infinite;animation-play-state:paused}
+ .destination-page .park-card:nth-child(2) figure::after{animation-delay:-4s}
+ .destination-page .park-card.is-visible figure::after{animation-play-state:running}
+ .destination-page.side-motion-suspended .park-card figure::after{animation-play-state:paused}
+}
+/* Make each destination's action distinct; no nested links or invisible hit targets. */
+.photo-led #brand-paths .path-copy-link{color:inherit;text-decoration:none;cursor:pointer}
+.photo-led #brand-paths .path-copy-link:focus-visible,.photo-led #brand-paths .domestic-path:focus-visible{outline:4px solid #e7bb74;outline-offset:5px}
+.photo-led #brand-paths .path-copy-link:hover h3,.photo-led #brand-paths .domestic-path:hover h3{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.photo-led #brand-paths.scenic-deep .path-copy>.path-action{display:flex;align-items:center;min-height:48px;border-top:1px solid #739f8a80;padding-top:14px;color:#e7d49d;font-size:16px;font-weight:600;margin-top:auto;letter-spacing:0}
+.photo-led #brand-paths .path-copy{grid-template-rows:auto auto 1fr auto}
+.photo-led #brand-paths .external-image-label{position:absolute;left:16px;bottom:16px;background:#123e35ed;color:#fff8de;border:1px solid #b5c8a6;border-radius:8px;font-size:14px;line-height:1.5;padding:8px 12px;pointer-events:none}
+.photo-led #brand-paths .chiangmai-image-link:focus-visible{outline-color:#e7bb74}
+@media(max-width:1023px){
+ .destination-page .header-inner{gap:16px}
+ .destination-page .header-inner>nav{display:none}
+ .destination-page .header-inner>.language-slot{margin-left:auto}
+ .destination-page .menu-button{display:block}
+ .destination-page .header-inner>.screen-view-picker{display:none}
+ .destination-page #mobile-menu:not([hidden]){display:flex;flex-direction:column;align-items:stretch}
+}
+@media(min-width:1024px){.destination-page #mobile-menu{display:none!important}}
+@media(max-width:800px){
+ .destination-page .container{width:calc(100% - 40px)}
+ .destination-page .park-grid{grid-template-columns:1fr;gap:28px}
+ .destination-page .outline-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .destination-page section{padding:36px 0}
+ .destination-page .side-hero{min-height:680px;padding:120px 0 72px}
+ .destination-page .side-hero-copy{padding:28px;max-width:580px}
+ .destination-page .side-hero-copy h1{font-size:38px}
+ .destination-page.side-chiangmai .side-hero-copy h1{font-size:34px}
+ .destination-page footer>.container{grid-template-columns:1fr;gap:16px}
+ .destination-page footer .footer-brand-art{grid-row:auto;margin-bottom:8px}
+}
+@media(max-width:520px){
+ .destination-page header{left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));top:12px}
+ .destination-page .header-inner{gap:8px;padding:10px 12px;min-height:68px}
+ .destination-page .artwork-brand{gap:5px}
+ .destination-page .artwork-brand .logo-symbol{width:56px;height:30px;flex:0 0 56px}
+ .destination-page .artwork-brand .logo-wordmark{width:106px;height:30px;flex:0 0 106px}
+ .destination-page .artwork-brand .logo-symbol img{width:100px;left:-23px;top:-10px}
+ .destination-page .artwork-brand .logo-wordmark img{width:151px;left:-25px;top:-58px}
+ .destination-page .artwork-brand{padding:5px}
+ .destination-page .language-slot summary{padding:10px 8px;min-width:44px;gap:4px}
+ .destination-page .language-full,.destination-page .language-chevron,.destination-page .language-slot summary>svg{display:none}
+ .destination-page .language-short{display:inline}
+ .destination-page .outline-grid{grid-template-columns:1fr}
+ .destination-page .outline-card,.destination-page .outline-panel,.destination-page .park-copy{padding:24px 20px}
+ .destination-page h1{font-size:34px}
+ .destination-page .side-hero{min-height:660px;padding:108px 0 72px;align-items:flex-start}
+ .destination-page .side-hero-copy{padding:24px 20px}
+ .destination-page .side-hero-copy h1{font-size:34px}
+ .destination-page.side-chiangmai .side-hero-copy h1{font-size:30px}
+ .destination-page .side-hero-copy p{font-size:17px}
+ .destination-page .side-hero-copy .eyebrow{font-size:12px;overflow-wrap:anywhere}
+ .destination-page .side-hero-visual img{object-position:65% center}
+ .destination-page .side-hero-visual figcaption{right:20px;bottom:20px;font-size:13px}
+ .destination-page h3{font-size:24px}
+ .destination-page p{font-size:17px}
+}
+@media(max-width:360px){.destination-page .artwork-brand .logo-symbol{display:none}}
+@media(prefers-reduced-motion:reduce){.destination-page *{scroll-behavior:auto!important}.destination-page .park-card figure::after{animation:none!important}}
+
+/* Homepage facility layout: distinct selectors above a large photograph and copy. */
+.destination-page .experience-heading{display:flex;align-items:center;justify-content:space-between;gap:32px;margin-bottom:32px}
+.destination-page .experience-heading h2{margin:0}
+.destination-page .experience-heading .eyebrow{margin-top:0}
+.destination-page .experience-guide{font-size:16px;margin:0;max-width:280px}
+.destination-page .experience-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:24px}
+.destination-page .experience-tabs[hidden]{display:none}
+.destination-page .experience-tabs button{display:flex;align-items:center;gap:18px;min-width:0;min-height:102px;padding:16px 22px;text-align:left;border:1px solid #397364;border-radius:8px;background:#103e35;color:#fff8e8;cursor:pointer;font:inherit;transition:background .2s,border-color .2s,box-shadow .2s}
+.destination-page .experience-tabs button:hover{background:#164a40;border-color:#b8a263}
+.destination-page .experience-tabs button[aria-selected=true]{background:#0c332d;border:2px solid #e7ca83;padding:15px 21px;box-shadow:0 0 0 1px #e7ca8340,inset 0 0 24px #e7ca8312}
+.destination-page .experience-tab-copy{display:grid;gap:4px;font-size:18px;line-height:1.5;font-weight:700;min-width:0;word-break:keep-all;overflow-wrap:anywhere}
+.destination-page .experience-number{color:#e7d49d;letter-spacing:.08em;font-size:12px;font-weight:500}
+.destination-page .experience-icon{width:56px;height:60px;flex:0 0 56px;overflow:visible;filter:drop-shadow(0 0 3px #ffffff55)}
+.destination-page .icon-gold{stroke:#ffd66c;filter:drop-shadow(0 0 3px #ffc84399)}
+.destination-page .icon-rose{stroke:#ff83bc;filter:drop-shadow(0 0 3px #ff5da899)}
+.destination-page .icon-blue{stroke:#8cbcff;filter:drop-shadow(0 0 3px #80aaff99)}
+.destination-page .experience-panels{display:grid;gap:28px}
+.destination-page .experience-panel{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,3fr);overflow:hidden;background:#f7f6ef;border-radius:18px;box-shadow:0 15px 45px #173e3714;min-width:0}
+.destination-page .experience-panel[hidden]{display:none}
+.destination-page .experience-panel figure{min-height:480px;isolation:isolate;box-shadow:0 0 12px #40c8b54d}
+.destination-page .experience-panel figure img{height:100%;aspect-ratio:auto;object-position:center}
+.destination-page .experience-panel figcaption{inset:auto 0 0;border-radius:0;padding:10px 14px;font-size:13px;z-index:2;background:#173e37ed}
+.destination-page .experience-copy{padding:36px 28px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0}
+.destination-page .experience-copy h3{color:#173e37;font-size:30px;margin:0 0 22px;line-height:1.45}
+.destination-page .experience-copy p{font-size:18px;line-height:1.85;margin:0 0 28px}
+.destination-page .experience-copy .experience-kicker{font-size:12px;letter-spacing:.08em;margin:0 0 24px;color:#506f62}
+.destination-page .experience-copy .placeholder-label{color:#635b35;border-color:#cdcbb8;font-size:14px;margin-top:12px}
+@supports (mask-composite:exclude) or (-webkit-mask-composite:xor){
+ .destination-page .experience-panel figure::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;padding:5px;background:conic-gradient(from var(--side-neon-angle),#3d998c55 0deg 170deg,#4ffff0 205deg,#eaffff 240deg,#ffe878 280deg,#f08bff 315deg,#3d998c55 350deg 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:side-border-travel 8s linear infinite;animation-play-state:paused}
+ .destination-page .experience-panel.is-visible:not([hidden]) figure::after{animation-play-state:running}
+ .destination-page.side-motion-suspended .experience-panel figure::after{animation-play-state:paused}
+}
+@media(max-width:800px){
+ .destination-page .experience-heading{display:block;margin-bottom:24px}
+ .destination-page .experience-guide{max-width:none;margin-top:18px}
+ .destination-page .experience-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:20px}
+ .destination-page .experience-tabs button{min-height:92px;padding:12px;gap:12px}
+ .destination-page .experience-tabs button[aria-selected=true]{padding:11px}
+ .destination-page .experience-tab-copy{font-size:16px}
+ .destination-page .experience-panel{grid-template-columns:1fr}
+ .destination-page .experience-panel figure{min-height:0;aspect-ratio:16/10}
+ .destination-page .experience-copy{padding:28px}
+ .destination-page .experience-copy h3{font-size:28px;margin-bottom:16px}
+ .destination-page .experience-copy .experience-kicker{margin-bottom:16px}
+ .destination-page .experience-copy p{margin-bottom:16px}
+}
+@media(max-width:520px){
+ .destination-page .experience-icon{width:44px;height:48px;flex-basis:44px}
+ .destination-page .experience-tabs button{gap:10px}
+ .destination-page .experience-tabs button:last-child{grid-column:1/-1}
+ .destination-page .experience-copy{padding:26px 22px}
+ .destination-page .experience-copy p{font-size:17px}
+}
+@media(max-width:360px){.destination-page .experience-tabs button{gap:8px;padding:10px}.destination-page .experience-tabs button[aria-selected=true]{padding:9px}.destination-page .experience-icon{width:36px;height:40px;flex-basis:36px}.destination-page .experience-tab-copy{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.destination-page .experience-panel figure::after{animation:none!important}.destination-page .experience-tabs button{transition:none}}

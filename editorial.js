@@ -166,6 +166,35 @@
  const imageArrow=document.createElement('span');imageArrow.className='image-link-arrow';
  imageArrow.setAttribute('aria-hidden','true');imageArrow.textContent='↗';chiangMaiImageLink.append(imageArrow);
 
+ // Requested destination navigation is an explicit exception to promotional-link removal.
+ const detailHref=(name,hash='')=>{
+  const url=new URL(name,location.href),params=new URLSearchParams(location.search);
+  for(const key of ['lang','screen-frame'])if(params.has(key))url.searchParams.set(key,params.get(key));
+  url.hash=hash;return url.pathname+url.search+url.hash;
+ };
+ const domesticCard=document.querySelector('#brand-paths .path-card:not(.valley-path)');
+ const domesticLink=document.createElement('a');domesticLink.className=domesticCard.className+' domestic-path';
+ domesticLink.href=detailHref('domestic-villas.html');
+ while(domesticCard.firstChild)domesticLink.append(domesticCard.firstChild);
+ domesticCard.replaceWith(domesticLink);
+ const domesticCopy=domesticLink.querySelector('.path-copy');
+ domesticCopy.querySelector('p').textContent='주문진과 양양, 국내 별장 공간을 만나보세요.';
+ domesticCopy.insertAdjacentHTML('beforeend','<span class="path-action">국내 별장 상세 소개 →</span>');
+ const chiangMaiCopy=chiangMaiCard.querySelector('.path-copy');
+ const chiangMaiDetail=document.createElement('a');chiangMaiDetail.className='path-copy path-copy-link';
+ chiangMaiDetail.href=detailHref('business-valley.html');
+ while(chiangMaiCopy.firstChild)chiangMaiDetail.append(chiangMaiCopy.firstChild);
+ chiangMaiCopy.replaceWith(chiangMaiDetail);
+ chiangMaiDetail.insertAdjacentHTML('beforeend','<span class="path-action">치앙마이 상세 소개 →</span>');
+ chiangMaiImageLink.insertAdjacentHTML('beforeend','<span class="external-image-label">한즈시티 ↗</span>');
+ document.querySelectorAll('header nav a[href="#projects"]').forEach(link=>link.href=detailHref('domestic-villas.html'));
+ document.querySelectorAll('a[href="business-valley.html"]').forEach(link=>link.href=detailHref('business-valley.html'));
+ document.querySelector('#projects').remove();
+ // Keep existing project bookmarks usable after the section moves off the homepage.
+ if(['#projects','#project-jumunjin','#project-yangyang'].includes(location.hash)){
+  location.replace(detailHref('domestic-villas.html',location.hash==='#projects'?'':location.hash));
+ }
+
  const borderObserver=new IntersectionObserver(entries=>{
   entries.forEach(entry=>entry.target.classList.toggle('neon-border-running',entry.isIntersecting));
  },{threshold:0});

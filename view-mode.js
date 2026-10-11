@@ -5,13 +5,17 @@
  const mode=embedded||'auto';
  function destination(value){
   const url=new URL(location.href);
+  const page=url.pathname.split('/').pop();
   url.searchParams.delete('screen-frame');
   if(value==='auto'){
-   url.pathname=url.pathname.replace(/[^/]*$/,'');
+   url.pathname=url.pathname.replace(/[^/]*$/,['domestic-villas.html','business-valley.html'].includes(page)?page:'');
    url.searchParams.delete('view');
+   url.searchParams.delete('page');
   }else{
    url.pathname=url.pathname.replace(/[^/]*$/,'view.html');
    url.searchParams.set('view',value);
+   if(['domestic-villas.html','business-valley.html'].includes(page))url.searchParams.set('page',page);
+   else url.searchParams.delete('page');
   }
   return url.href;
  }

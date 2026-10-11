@@ -23,6 +23,8 @@ publicAssets.push('planning.css');
 publicAssets.push('assets/video/mylodge-intro-scenes-20261006-30s.mp4','assets/video/mylodge-intro-scenes-20261006-30s-mobile.mp4','assets/video/mylodge-intro-scenes-20261006-poster.webp','assets/video/mylodge-intro-scenes-20261006-poster-mobile.webp');
 for (const name of ['coast','cafe','arrival']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/scenery-${name}-${width}.webp`);
 publicAssets.push('business-valley.html','valley.js');
+publicAssets.push('domestic-villas.html','detail-pages.css','detail-pages.js');
+for (const name of ['food-tea','local-market','play-music','rest-wellness','work-connections']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/chiangmai-${name}-20261011-${width}.webp`);
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/vacation-arrival-${width}.webp`);
 for (const name of ['morning','dinner','terrace']) for (const width of [480,960,1536]) publicAssets.push(`assets/images/living-${name}-${width}.webp`);
 for (const width of [480,960,1440]) publicAssets.push(`assets/images/plan-p16-${width}.webp`);
