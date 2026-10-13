@@ -42,3 +42,7 @@ for (const width of [480,960,1680]) publicAssets.push(`assets/images/brand-villa
 
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/facility-hotel-pool-20261008-${width}.webp`);
 for (const name of ['facility-pool-cabana','facility-market-v2','facility-concierge']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/${name}-20261008-${width}.webp`);
+
+for (const width of [480,960,1680]) publicAssets.push(`assets/images/chiangmai-overview-20261013-${width}.webp`);
+
+for (const name of ['project-yangyang','yangyang-modular-villa','yangyang-pool-party','yangyang-arrival-market']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/${name}-20261013-${width}.webp`);

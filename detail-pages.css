@@ -28,7 +28,7 @@
 .destination-page figure img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
 .destination-page figcaption{position:absolute;bottom:14px;right:14px;color:#fff8e9;background:#173e37ed;padding:8px 12px;border-radius:24px;font-size:13px;line-height:1.5}
 .destination-page .park-copy{padding:28px 30px 30px}
-.destination-page .park-copy h2{color:#fff7e7;font-size:clamp(24px,2.3vw,30px);line-height:1.45}
+.destination-page .park-copy :is(h2,h3){color:#fff7e7;font-size:clamp(24px,2.3vw,30px);line-height:1.45}
 .destination-page .park-number{font-size:13px;color:#e7d49d;letter-spacing:.09em;display:block;margin-bottom:16px}
 .destination-page .park-copy p{margin-bottom:0;color:#d8e5db;font-size:17px;line-height:1.85}
 .destination-page .detail-note{border-top:1px solid #c6d0c1;padding-top:24px;font-size:15px;margin-top:32px;max-width:880px}
@@ -357,68 +357,131 @@ html.destination-document{scroll-padding-top:0}
 }
 @media(prefers-reduced-motion:reduce){.destination-page .scene-frame::after{animation:none!important}}
 
-/* Domestic park chapters: panorama → conceptual layout → photographic features. */
-.side-domestic .section-directory{grid-template-columns:repeat(3,minmax(0,1fr))}
-.side-domestic .park-chapter .story-heading{max-width:900px;margin-bottom:36px}
-.side-domestic .park-stage+.park-stage{margin-top:64px}
-.side-domestic .park-stage-heading{margin-bottom:24px}
-.side-domestic .park-stage-heading h3{margin:8px 0 0;font-size:clamp(26px,2.7vw,34px)}
-.side-domestic .park-stage-heading p{margin:12px 0 0;font-size:18px}
-.side-domestic .park-stage-number{font-size:14px;line-height:1.7;letter-spacing:.08em;color:#66572e;font-weight:600}
-.side-domestic .park-panorama img{aspect-ratio:auto;height:auto;object-fit:contain}
-.side-domestic .park-blueprint{overflow:hidden;border:1px solid #658777;border-radius:16px;background:#193b33;box-shadow:0 16px 40px #173e3718}
-.side-domestic .plan-topline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:22px 26px;border-bottom:1px solid #739f8a70;color:#f4e8c5;font-size:15px;line-height:1.65;letter-spacing:.04em}
-.side-domestic .park-plan-drawing{display:block;width:100%;height:auto;max-height:700px}
-.side-domestic .plan-water{fill:#183746}
-.side-domestic .plan-land{fill:#234d3e;stroke:#96ab92;stroke-width:2}
-.side-domestic .plan-paths{fill:none;stroke:#b7be9a;stroke-opacity:.65;stroke-width:12;stroke-linecap:round;stroke-linejoin:round}
-.side-domestic .plan-tree{fill:#356348;stroke:#91a98b;stroke-width:1.5}
-.side-domestic .plan-villa{fill:#e7e6d7;stroke:#93a596;stroke-width:2}
-.side-domestic .plan-villa path{fill:none;stroke:#597566}
-.side-domestic .plan-private-pool{fill:#699baa;stroke:#bad8de}
-.side-domestic .plan-pool{fill:#6090a6;stroke:#d4e7e9;stroke-width:3}
-.side-domestic .plan-pool path{fill:none;stroke:#b0d3db;stroke-width:2}
-.side-domestic .plan-cabana{fill:#aa9359;stroke:#f2dcb0;stroke-width:2}
-.side-domestic .plan-cabana path{stroke:#f2dcb0}
-.side-domestic .plan-club{fill:#7d534b;stroke:#e9bd9f;stroke-width:2}
-.side-domestic .plan-club path{stroke:#e9bd9f}
-.side-domestic .plan-market{fill:#aa9359;stroke:#f2dcb0;stroke-width:2}
-.side-domestic .plan-concierge{fill:#557777;stroke:#d4e7e9;stroke-width:2}
-.side-domestic .plan-shore{fill:none;stroke:#b4d4da;stroke-width:3;stroke-dasharray:9 12;opacity:.6}
-.side-domestic .plan-pin path{fill:none;stroke:#fff3c8;stroke-width:3}
-.side-domestic .plan-pin circle{fill:#fff4d0;stroke:#193b33;stroke-width:4}
-.side-domestic .plan-pin text{fill:#173e37;font-size:36px;font-weight:900;font-family:'Noto Sans KR',sans-serif}
-.side-domestic .plan-legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 24px;list-style:none;margin:0;padding:26px;border-top:1px solid #739f8a70}
-.side-domestic .plan-key{display:flex;align-items:center;gap:12px;min-width:0;color:#fff8e7}
-.side-domestic .plan-key>span{display:grid;place-items:center;flex:0 0 36px;height:36px;border:1px solid #c6c8ae;border-radius:50%;font-size:15px;color:#fff4d0;font-weight:700}
-.side-domestic .plan-key strong{font-size:18px;font-weight:600;line-height:1.6;word-break:keep-all;overflow-wrap:anywhere}
-.side-domestic .park-blueprint figcaption{position:static;border-radius:0;padding:14px 26px;border-top:1px solid #739f8a70;background:#12332c;font-size:15px;line-height:1.7;color:#f4e8c5}
-.side-domestic .park-signature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
-.side-domestic .park-signature{min-width:0;border:1px solid #c7d1c1;border-radius:16px;overflow:hidden;background:#f7f6ef}
-.side-domestic .park-signature-wide{grid-column:1/-1}
-.side-domestic .park-signature .scene-frame{border-radius:0}
-.side-domestic .park-signature-wide .scene-frame img{aspect-ratio:16/9;object-fit:cover}
-.side-domestic .park-signature-copy{padding:26px 28px}
-.side-domestic .park-signature-copy h4{margin:0;font-size:28px;line-height:1.5;font-weight:700;letter-spacing:-.03em;word-break:keep-all;overflow-wrap:anywhere;color:#173e37}
-.side-domestic .park-signature-copy p{font-size:18px;line-height:1.8;margin:12px 0 0}
+/* Park chapters shared by Korea and Chiang Mai: panorama → conceptual layout → photos. */
+:is(.side-domestic,.side-chiangmai) .section-directory{grid-template-columns:repeat(3,minmax(0,1fr))}
+:is(.side-domestic,.side-chiangmai) .park-chapter .story-heading{max-width:900px;margin-bottom:36px}
+:is(.side-domestic,.side-chiangmai) .park-stage+.park-stage{margin-top:64px}
+:is(.side-domestic,.side-chiangmai) .park-stage-heading{margin-bottom:24px}
+:is(.side-domestic,.side-chiangmai) .park-stage-heading h3{margin:8px 0 0;font-size:clamp(26px,2.7vw,34px)}
+:is(.side-domestic,.side-chiangmai) .park-stage-heading p{margin:12px 0 0;font-size:18px}
+:is(.side-domestic,.side-chiangmai) .park-stage-number{font-size:14px;line-height:1.7;letter-spacing:.08em;color:#66572e;font-weight:600}
+:is(.side-domestic,.side-chiangmai) .park-panorama img{aspect-ratio:auto;height:auto;object-fit:contain}
+:is(.side-domestic,.side-chiangmai) .park-blueprint{overflow:hidden;border:1px solid #658777;border-radius:16px;background:#193b33;box-shadow:0 16px 40px #173e3718}
+:is(.side-domestic,.side-chiangmai) .plan-topline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:22px 26px;border-bottom:1px solid #739f8a70;color:#f4e8c5;font-size:15px;line-height:1.65;letter-spacing:.04em}
+:is(.side-domestic,.side-chiangmai) .park-plan-drawing{display:block;width:100%;height:auto;max-height:700px}
+:is(.side-domestic,.side-chiangmai) .plan-water{fill:#183746}
+:is(.side-domestic,.side-chiangmai) .plan-land{fill:#234d3e;stroke:#96ab92;stroke-width:2}
+:is(.side-domestic,.side-chiangmai) .plan-paths{fill:none;stroke:#b7be9a;stroke-opacity:.65;stroke-width:12;stroke-linecap:round;stroke-linejoin:round}
+:is(.side-domestic,.side-chiangmai) .plan-tree{fill:#356348;stroke:#91a98b;stroke-width:1.5}
+:is(.side-domestic,.side-chiangmai) .plan-villa{fill:#e7e6d7;stroke:#93a596;stroke-width:2}
+:is(.side-domestic,.side-chiangmai) .plan-villa path{fill:none;stroke:#597566}
+:is(.side-domestic,.side-chiangmai) .plan-private-pool{fill:#699baa;stroke:#bad8de}
+:is(.side-domestic,.side-chiangmai) .plan-pool{fill:#6090a6;stroke:#d4e7e9;stroke-width:3}
+:is(.side-domestic,.side-chiangmai) .plan-pool path{fill:none;stroke:#b0d3db;stroke-width:2}
+:is(.side-domestic,.side-chiangmai) .plan-cabana{fill:#aa9359;stroke:#f2dcb0;stroke-width:2}
+:is(.side-domestic,.side-chiangmai) .plan-cabana path{stroke:#f2dcb0}
+:is(.side-domestic,.side-chiangmai) .plan-club{fill:#7d534b;stroke:#e9bd9f;stroke-width:2}
+:is(.side-domestic,.side-chiangmai) .plan-club path{stroke:#e9bd9f}
+:is(.side-domestic,.side-chiangmai) .plan-market{fill:#aa9359;stroke:#f2dcb0;stroke-width:2}
+:is(.side-domestic,.side-chiangmai) .plan-concierge{fill:#557777;stroke:#d4e7e9;stroke-width:2}
+:is(.side-domestic,.side-chiangmai) .plan-shore{fill:none;stroke:#b4d4da;stroke-width:3;stroke-dasharray:9 12;opacity:.6}
+:is(.side-domestic,.side-chiangmai) .plan-pin path{fill:none;stroke:#fff3c8;stroke-width:3}
+:is(.side-domestic,.side-chiangmai) .plan-pin circle{fill:#fff4d0;stroke:#193b33;stroke-width:4}
+:is(.side-domestic,.side-chiangmai) .plan-pin text{fill:#173e37;font-size:36px;font-weight:900;font-family:'Noto Sans KR',sans-serif}
+:is(.side-domestic,.side-chiangmai) .plan-legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 24px;list-style:none;margin:0;padding:26px;border-top:1px solid #739f8a70}
+:is(.side-domestic,.side-chiangmai) .plan-key{display:flex;align-items:center;gap:12px;min-width:0;color:#fff8e7}
+:is(.side-domestic,.side-chiangmai) .plan-key>span{display:grid;place-items:center;flex:0 0 36px;height:36px;border:1px solid #c6c8ae;border-radius:50%;font-size:15px;color:#fff4d0;font-weight:700}
+:is(.side-domestic,.side-chiangmai) .plan-key strong{font-size:18px;font-weight:600;line-height:1.6;word-break:keep-all;overflow-wrap:anywhere}
+:is(.side-domestic,.side-chiangmai) .park-blueprint figcaption{position:static;border-radius:0;padding:14px 26px;border-top:1px solid #739f8a70;background:#12332c;font-size:15px;line-height:1.7;color:#f4e8c5}
+:is(.side-domestic,.side-chiangmai) .park-signature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+:is(.side-domestic,.side-chiangmai) .park-signature{min-width:0;border:1px solid #c7d1c1;border-radius:16px;overflow:hidden;background:#f7f6ef}
+:is(.side-domestic,.side-chiangmai) .park-signature-wide{grid-column:1/-1}
+:is(.side-domestic,.side-chiangmai) .park-signature .scene-frame{border-radius:0}
+:is(.side-domestic,.side-chiangmai) .park-signature-wide .scene-frame img{aspect-ratio:16/9;object-fit:cover}
+:is(.side-domestic,.side-chiangmai) .park-signature-copy{padding:26px 28px}
+:is(.side-domestic,.side-chiangmai) .park-signature-copy h4{margin:0;font-size:28px;line-height:1.5;font-weight:700;letter-spacing:-.03em;word-break:keep-all;overflow-wrap:anywhere;color:#173e37}
+:is(.side-domestic,.side-chiangmai) .park-signature-copy p{font-size:18px;line-height:1.8;margin:12px 0 0}
 @media(max-width:800px){
- .side-domestic .park-stage+.park-stage{margin-top:44px}
- .side-domestic .park-signature-grid{grid-template-columns:1fr;gap:24px}
- .side-domestic .park-signature-wide{grid-column:auto}
- .side-domestic .park-signature-wide .scene-frame img{aspect-ratio:auto}
- .side-domestic .plan-legend{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px}
+ :is(.side-domestic,.side-chiangmai) .park-stage+.park-stage{margin-top:44px}
+ :is(.side-domestic,.side-chiangmai) .park-signature-grid{grid-template-columns:1fr;gap:24px}
+ :is(.side-domestic,.side-chiangmai) .park-signature-wide{grid-column:auto}
+ :is(.side-domestic,.side-chiangmai) .park-signature-wide .scene-frame img{aspect-ratio:auto}
+ :is(.side-domestic,.side-chiangmai) .plan-legend{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px}
 }
 @media(max-width:600px){
- .side-domestic .section-directory{grid-template-columns:1fr}
- .side-domestic .park-chapter .story-heading{margin-bottom:28px}
- .side-domestic .park-stage-heading{margin-bottom:20px}
- .side-domestic .plan-topline{padding:18px 20px;font-size:14px}
- .side-domestic .plan-legend{padding:20px 16px;gap:16px 12px}
- .side-domestic .plan-key{gap:8px;align-items:flex-start}
- .side-domestic .plan-key>span{flex-basis:30px;height:30px;font-size:14px}
- .side-domestic .plan-key strong{font-size:17px}
- .side-domestic .park-blueprint figcaption{padding:14px 20px}
- .side-domestic .park-signature-copy{padding:22px}
- .side-domestic .park-signature-copy h4{font-size:25px}
+ :is(.side-domestic,.side-chiangmai) .section-directory{grid-template-columns:1fr}
+ :is(.side-domestic,.side-chiangmai) .park-chapter .story-heading{margin-bottom:28px}
+ :is(.side-domestic,.side-chiangmai) .park-stage-heading{margin-bottom:20px}
+ :is(.side-domestic,.side-chiangmai) .plan-topline{padding:18px 20px;font-size:14px}
+ :is(.side-domestic,.side-chiangmai) .plan-legend{padding:20px 16px;gap:16px 12px}
+ :is(.side-domestic,.side-chiangmai) .plan-key{gap:8px;align-items:flex-start}
+ :is(.side-domestic,.side-chiangmai) .plan-key>span{flex-basis:30px;height:30px;font-size:14px}
+ :is(.side-domestic,.side-chiangmai) .plan-key strong{font-size:17px}
+ :is(.side-domestic,.side-chiangmai) .park-blueprint figcaption{padding:14px 20px}
+ :is(.side-domestic,.side-chiangmai) .park-signature-copy{padding:22px}
+ :is(.side-domestic,.side-chiangmai) .park-signature-copy h4{font-size:25px}
 }
-@media(max-width:360px){.side-domestic .plan-legend{grid-template-columns:1fr}}
+@media(max-width:360px){:is(.side-domestic,.side-chiangmai) .plan-legend{grid-template-columns:1fr}}
+
+/* Chiang Mai introduction follows the domestic park photo-and-copy treatment. */
+.side-chiangmai .park-overview{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,4fr);align-items:stretch}
+.side-chiangmai .park-overview figure img{height:100%;aspect-ratio:16/10}
+.side-chiangmai .park-overview .park-copy{display:flex;flex-direction:column;justify-content:center}
+.side-chiangmai .park-overview h3{color:#fff7e7;margin:0}
+.side-chiangmai .park-signature{scroll-margin-top:112px}
+.side-chiangmai .destination-anchor{display:block;scroll-margin-top:112px}
+@media(max-width:800px){.side-chiangmai .park-overview{grid-template-columns:1fr}.side-chiangmai .park-overview figure img{height:auto}.side-chiangmai .park-overview .park-copy{padding:26px 24px}}
+
+/* Side-page audit: keep Korean keyword suffixes together at narrow widths. */
+.side-chiangmai .hero-word-group{display:inline-block;white-space:nowrap;max-width:100%}
+@media(max-width:340px){.side-chiangmai .side-hero-copy h1 .hero-word-group{font-size:26px}}
+@media(max-width:800px){:is(.side-domestic,.side-chiangmai) .plan-pin text{font-size:44px}}
+/* Side pages do not load localization.css; language links need their own targets. */
+.destination-page .language-panel a{display:flex;align-items:center;width:100%;min-height:48px;padding:10px;border-radius:6px;font-size:16px;line-height:1.5;color:#214d42;text-decoration:none}
+.destination-page .language-panel a:hover{background:#e6ece0}
+.destination-page .language-current{min-height:48px;font-size:16px;line-height:1.5}
+.destination-page .language-panel .language-heading{font-size:12px}
+.destination-page .language-panel .language-note{font-size:14px;line-height:1.7;color:#415a50}
+
+/* Shared side-page hierarchy: home, domestic parks and overseas parks. */
+.destination-page .park-nav-group{position:relative}
+.destination-page .park-nav-group>summary{display:flex;align-items:center;gap:10px;min-height:48px;padding:10px 8px;font-size:15px;line-height:1.5;list-style:none;cursor:pointer;white-space:nowrap;border-radius:6px}
+.destination-page .park-nav-group>summary::-webkit-details-marker{display:none}
+.destination-page .park-nav-group>summary::marker{content:""}
+.destination-page .park-nav-group>summary[aria-current=page]{color:#164c3d;font-weight:700}
+.destination-page .park-nav-group>summary:hover,.destination-page .park-nav-group[open]>summary{background:#edece0}
+.destination-page .park-nav-chevron{font-size:18px;line-height:1}
+.destination-page .park-nav-group[open] .park-nav-chevron{transform:rotate(180deg)}
+.destination-page .park-nav-submenu{position:absolute;top:calc(100% + 8px);left:0;min-width:190px;margin:0;padding:8px;list-style:none;border:1px solid #b9c6b7;border-top:2px solid #a97b44;border-radius:10px;background:#f7f5ef;box-shadow:0 14px 32px #173e3726}
+.destination-page header .park-nav-submenu a{min-height:48px;padding:12px 14px;border-radius:6px;font-size:16px;white-space:nowrap}
+.destination-page header .park-nav-submenu a:hover{background:#e5eade;color:#173e37}
+.destination-page #mobile-menu{gap:16px}
+.destination-page #mobile-menu>a{font-weight:600}
+.destination-page .park-mobile-group{padding-top:16px;border-top:1px solid #d5ddd1}
+.destination-page .park-mobile-group .park-mobile-label{margin:0 0 6px;color:#173e37;font-size:17px;font-weight:700;line-height:1.5}
+.destination-page .park-mobile-group ul{list-style:none;margin:0;padding:0 0 0 14px;border-left:2px solid #a97b4470}
+.destination-page header .park-mobile-group a{padding:12px 14px;font-size:16px;min-height:48px;border-radius:6px}
+.destination-page header .park-mobile-group a:hover{background:#e5eade}
+
+/* Selected Yangyang v4: two-storey modules around the shared pool. */
+.side-domestic #project-yangyang .plan-legend{grid-template-columns:repeat(4,minmax(0,1fr))}
+.side-domestic #project-yangyang .plan-wave{fill:none;stroke:#bdd7e1;stroke-width:2;opacity:.5}
+.side-domestic #project-yangyang .pool-wave{opacity:.9}
+.side-domestic #project-yangyang .plan-beach{fill:#cbb791;stroke:#e8d8b9;stroke-width:2}
+.side-domestic #project-yangyang .plan-modular rect{stroke:#f5ead7;stroke-width:2}
+.side-domestic #project-yangyang .plan-modular path{fill:none;stroke:#465d65;stroke-width:3}
+.side-domestic #project-yangyang .plan-modular .plan-deck{fill:#a48b65;stroke:#dac49c}
+.side-domestic #project-yangyang .plan-cafe{fill:#e2d4bf;stroke:#fff0d7;stroke-width:2}
+.side-domestic #project-yangyang .plan-cafe path{fill:none;stroke:#62685b}
+.side-domestic #project-yangyang .plan-party{fill:#765a77;stroke:#e7c5e7;stroke-width:2}
+.side-domestic #project-yangyang .plan-party path{fill:none;stroke:#f2d0ee;stroke-width:2}
+.side-domestic #project-yangyang .plan-market path,.side-domestic #project-yangyang .plan-concierge path{fill:none;stroke:#fff0d7;stroke-width:2}
+.side-domestic #project-yangyang .plan-perimeter{fill:none;stroke:#c7b893;stroke-width:2;stroke-dasharray:8 8}
+.side-domestic #project-yangyang .plan-parking{fill:#2e4146;stroke:#b9c8c3;stroke-width:2}
+.side-domestic #project-yangyang .plan-parking path{fill:none;stroke:#b9c8c3;stroke-width:2}
+.side-domestic #project-yangyang .plan-cart-route{fill:none;stroke:#e8c36d;stroke-width:5;stroke-dasharray:10 9;stroke-linecap:round}
+.side-domestic #project-yangyang .plan-cart{fill:#e7d4a7;stroke:#eadcb6;stroke-width:2}
+.side-domestic #project-yangyang .plan-cart path{fill:none}
+.side-domestic #project-yangyang .plan-cart circle{fill:#273c38}
+@media(max-width:800px){.side-domestic #project-yangyang .plan-legend{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:360px){.side-domestic #project-yangyang .plan-legend{grid-template-columns:1fr}}

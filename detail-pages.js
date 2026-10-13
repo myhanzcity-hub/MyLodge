@@ -31,11 +31,29 @@
   language.querySelector('.language-note').textContent=english?'Korean and English are available.':'한국어와 영어로 둘러볼 수 있습니다.';
   language.addEventListener('toggle',()=>{if(language.open)language.querySelectorAll('a[lang]').forEach(a=>a.href=languageURL(a.lang));});
  }
+ const parkGroups=[...document.querySelectorAll('.park-nav-group')];
+ const closeParkGroups=()=>parkGroups.forEach(group=>group.open=false);
+ parkGroups.forEach(group=>{
+  group.addEventListener('toggle',()=>{
+   if(!group.open)return;
+   parkGroups.forEach(other=>{if(other!==group)other.open=false;});
+   if(language)language.open=false;
+   document.querySelectorAll('header .screen-view-picker').forEach(picker=>picker.open=false);
+  });
+  group.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeParkGroups));
+ });
+ document.addEventListener('click',event=>{
+  if(!event.target.closest('.park-nav-group'))closeParkGroups();
+ });
+ document.addEventListener('keydown',event=>{
+  const openGroup=parkGroups.find(group=>group.open);
+  if(event.key==='Escape'&&openGroup){closeParkGroups();openGroup.querySelector('summary').focus();}
+ });
  const button=document.querySelector('.menu-button'),menu=document.getElementById('mobile-menu');
  function toggle(open){
   menu.hidden=!open;button.setAttribute('aria-expanded',String(open));
   button.setAttribute('aria-label',english?(open?'Close menu':'Open menu'):(open?'메뉴 닫기':'메뉴 열기'));
-  if(open&&language)language.open=false;
+  if(open){closeParkGroups();if(language)language.open=false;}
  }
  button.addEventListener('click',()=>toggle(menu.hidden));
  menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>toggle(false)));
@@ -46,7 +64,7 @@
  const canonical=document.querySelector('link[rel="canonical"]');
  if(english)canonical.href+='?lang=en';
  const updateDirectory=()=>{
-  const current=location.hash.startsWith('#experience-')?'#chiangmai-experiences':location.hash;
+  const current=location.hash.startsWith('#experience-')||['#chiangmai-day','#chiangmai-city','#chiangmai-alternatives'].includes(location.hash)?'#chiangmai-experiences':location.hash;
   document.querySelectorAll('.section-directory a').forEach(link=>{
    if(link.getAttribute('href')===current)link.setAttribute('aria-current','location');
    else link.removeAttribute('aria-current');

@@ -27,6 +27,8 @@
 .photo-led.promotion-home #our-villa .invitation-grid{grid-template-columns:minmax(0,3fr) minmax(0,7fr);gap:32px}
 .photo-led .promotion-intro-photo img{aspect-ratio:16/9}
 .photo-led .promotion-cards article{padding:0;overflow:hidden;border-radius:16px}
+/* Static gold outline from the design comparison, shared by both story sections. */
+.photo-led :is(#ownership,#stay-services) .promotion-cards article{border:2px solid #a97b44;box-shadow:0 0 0 1px #a97b4426}
 .photo-led .promotion-cards figure{margin:0;height:330px}
 .photo-led .promotion-cards figure img{width:100%;height:100%;object-fit:cover}
 .photo-led .editorial-card-copy{padding:24px;min-height:185px}

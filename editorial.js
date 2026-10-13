@@ -124,6 +124,9 @@
  document.querySelector('#vision h2').textContent='마이롯지 단지 전체 풍경.';
  document.querySelector('#vision .vision-heading>p')?.remove();
  document.querySelectorAll('.promotion-cards img').forEach(img=>img.sizes='(max-width:800px) 100vw, 33vw');
+ document.querySelectorAll('#ownership .promotion-cards img').forEach((img,index)=>{
+  img.sizes=index===2?'(max-width:800px) 100vw, (max-width:1199px) 60vw, 33vw':'(max-width:800px) 100vw, (max-width:1199px) 50vw, 33vw';
+ });
  document.querySelectorAll('.project-photo img,.path-card img').forEach(img=>img.sizes='(max-width:800px) 100vw, 50vw');
  for(const [id,name] of [['our-villa','story-destination'],['brand-paths','valley-community']]){
   const backdrop=document.querySelector('#'+id+' .scenic-camera img');if(backdrop)backdrop.outerHTML=photo(name,'');
