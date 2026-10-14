@@ -1,5 +1,6 @@
 // The only files included in the public export.
 export const publicAssets = ['index.html', 'styles.css', 'app.js'];
+publicAssets.push('intro.html','arrival-intro.css','arrival-intro.js');
 publicAssets.push('mobile-layout.css','mobile-layout.js');
 publicAssets.push('view-mode.css','view-mode.js','view.html');
 for (const name of ['service-ready','service-property-care','service-owner-exchange']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/${name}-20261008-${width}.webp`);

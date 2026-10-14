@@ -365,7 +365,7 @@ html.destination-document{scroll-padding-top:0}
 :is(.side-domestic,.side-chiangmai) .park-stage-heading h3{margin:8px 0 0;font-size:clamp(26px,2.7vw,34px)}
 :is(.side-domestic,.side-chiangmai) .park-stage-heading p{margin:12px 0 0;font-size:18px}
 :is(.side-domestic,.side-chiangmai) .park-stage-number{font-size:14px;line-height:1.7;letter-spacing:.08em;color:#66572e;font-weight:600}
-:is(.side-domestic,.side-chiangmai) .park-panorama img{aspect-ratio:auto;height:auto;object-fit:contain}
+:is(.side-domestic,.side-chiangmai) .park-panorama img{aspect-ratio:auto 1672/941;height:auto;object-fit:contain}
 :is(.side-domestic,.side-chiangmai) .park-blueprint{overflow:hidden;border:1px solid #658777;border-radius:16px;background:#193b33;box-shadow:0 16px 40px #173e3718}
 :is(.side-domestic,.side-chiangmai) .plan-topline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:22px 26px;border-bottom:1px solid #739f8a70;color:#f4e8c5;font-size:15px;line-height:1.65;letter-spacing:.04em}
 :is(.side-domestic,.side-chiangmai) .park-plan-drawing{display:block;width:100%;height:auto;max-height:700px}
@@ -405,7 +405,7 @@ html.destination-document{scroll-padding-top:0}
  :is(.side-domestic,.side-chiangmai) .park-stage+.park-stage{margin-top:44px}
  :is(.side-domestic,.side-chiangmai) .park-signature-grid{grid-template-columns:1fr;gap:24px}
  :is(.side-domestic,.side-chiangmai) .park-signature-wide{grid-column:auto}
- :is(.side-domestic,.side-chiangmai) .park-signature-wide .scene-frame img{aspect-ratio:auto}
+ :is(.side-domestic,.side-chiangmai) .park-signature-wide .scene-frame img{aspect-ratio:auto 16/9}
  :is(.side-domestic,.side-chiangmai) .plan-legend{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px}
 }
 @media(max-width:600px){
@@ -485,3 +485,39 @@ html.destination-document{scroll-padding-top:0}
 .side-domestic #project-yangyang .plan-cart circle{fill:#273c38}
 @media(max-width:800px){.side-domestic #project-yangyang .plan-legend{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:360px){.side-domestic #project-yangyang .plan-legend{grid-template-columns:1fr}}
+
+/* Chiang Mai signature scenes: approved mobile editorial layout A.
+   Six scenes remain expanded; all copy stays outside the photographs. */
+.side-chiangmai #chiangmai-experiences .park-signature-grid{gap:48px 28px;align-items:start}
+.side-chiangmai #chiangmai-experiences .park-signature{background:transparent;border:0;border-radius:0;overflow:visible}
+.side-chiangmai #chiangmai-experiences .scene-frame{background:transparent;border-radius:0;overflow:visible}
+.side-chiangmai #chiangmai-experiences .scene-frame::after{content:none;animation:none}
+.side-chiangmai #chiangmai-experiences .scene-frame img{display:block;width:100%;height:auto;border:1px solid #a97b44;border-radius:14px}
+.side-chiangmai #chiangmai-experiences .scene-frame figcaption{background:transparent;color:#52645b;padding:8px 0 0;font-size:16px;line-height:1.6}
+.side-chiangmai #chiangmai-experiences .park-signature-copy{padding:20px 0 0}
+.side-chiangmai #chiangmai-experiences .park-signature-copy h3{margin:0;color:#173e37;font-size:28px;font-weight:700;line-height:1.5;letter-spacing:-.03em;word-break:keep-all;overflow-wrap:anywhere}
+.side-chiangmai #chiangmai-experiences .park-signature-copy p{margin:12px 0 0;font-size:20px;line-height:1.8;color:#24483f;word-break:keep-all;overflow-wrap:anywhere}
+.side-chiangmai #chiangmai-experiences :is(.chiangmai-scene-rest-wellness,.chiangmai-scene-local-market) .park-signature-copy{padding:0 0 22px}
+.side-chiangmai #chiangmai-experiences .chiangmai-scene-food-tea{padding-top:32px;border-top:1px solid #a97b44}
+.side-chiangmai #chiangmai-experiences .scene-title{padding:0 0 24px}
+.side-chiangmai #chiangmai-experiences .scene-description p{margin:0}
+.side-chiangmai #chiangmai-experiences .chiangmai-scene-play-music{background:#173e35;padding:24px;border-radius:16px}
+.side-chiangmai #chiangmai-experiences .chiangmai-scene-play-music :is(h3,p){color:#fff7e7}
+.side-chiangmai #chiangmai-experiences .chiangmai-scene-play-music figcaption{color:#e5dec9}
+@media(min-width:601px) and (max-width:800px){
+ .side-chiangmai #chiangmai-experiences .park-signature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .side-chiangmai #chiangmai-experiences .park-signature-wide{grid-column:1/-1}
+}
+@media(max-width:600px){
+ .side-chiangmai #chiangmai-experiences .park-signature-grid{grid-template-columns:1fr;gap:44px}
+ .side-chiangmai #chiangmai-experiences .park-signature-copy h3{font-size:26px}
+ .side-chiangmai #chiangmai-experiences .park-signature-wide .scene-frame img{aspect-ratio:16/9}
+ .side-chiangmai #chiangmai-experiences .chiangmai-scene-rest-wellness .scene-frame{width:86%;margin-right:auto}
+ .side-chiangmai #chiangmai-experiences .chiangmai-scene-rest-wellness img{aspect-ratio:4/3;object-position:left center}
+ .side-chiangmai #chiangmai-experiences .chiangmai-scene-nature-walk .scene-frame{width:90%;margin-left:auto}
+ .side-chiangmai #chiangmai-experiences .chiangmai-scene-nature-walk img{aspect-ratio:3/2;object-position:center}
+ .side-chiangmai #chiangmai-experiences .chiangmai-scene-local-market .scene-frame{width:88%;margin-right:auto}
+ .side-chiangmai #chiangmai-experiences .chiangmai-scene-local-market img{aspect-ratio:4/3;object-position:center}
+ .side-chiangmai #chiangmai-experiences .chiangmai-scene-play-music{padding:20px}
+ .side-chiangmai #chiangmai-experiences .chiangmai-scene-play-music img{aspect-ratio:16/9}
+}

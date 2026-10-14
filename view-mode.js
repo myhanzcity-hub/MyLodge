@@ -8,7 +8,7 @@
   const page=url.pathname.split('/').pop();
   url.searchParams.delete('screen-frame');
   if(value==='auto'){
-   url.pathname=url.pathname.replace(/[^/]*$/,['domestic-villas.html','business-valley.html'].includes(page)?page:'');
+   url.pathname=url.pathname.replace(/[^/]*$/,['domestic-villas.html','business-valley.html'].includes(page)?page:'index.html');
    url.searchParams.delete('view');
    url.searchParams.delete('page');
   }else{

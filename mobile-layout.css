@@ -2,7 +2,9 @@
 :root{--mobile-header-offset:96px;--review-text-scale:1}
 html{scroll-padding-top:var(--mobile-header-offset)}
 .photo-led section{scroll-margin-top:0}
-.artwork-brand,.footer-brand-art{color-scheme:only light!important;filter:none!important;mix-blend-mode:normal!important;background:#f7f5ef!important;background-image:linear-gradient(#f7f5ef,#f7f5ef)!important}
+.artwork-brand,.footer-brand-art{color-scheme:only light!important;filter:none!important;mix-blend-mode:normal!important}
+.artwork-brand{background:transparent!important;background-image:none!important}
+.footer-brand-art{background:#f7f5ef!important;background-image:linear-gradient(#f7f5ef,#f7f5ef)!important}
 .artwork-brand img{filter:none!important;mix-blend-mode:normal!important}
 .footer-brand-art{box-sizing:border-box;max-width:100%;width:190px}
 .lodge-guide .guide-character{mix-blend-mode:normal}
