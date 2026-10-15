@@ -25,6 +25,7 @@ publicAssets.push('assets/video/mylodge-intro-scenes-20261006-30s.mp4','assets/v
 for (const name of ['coast','cafe','arrival']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/scenery-${name}-${width}.webp`);
 publicAssets.push('business-valley.html','valley.js');
 publicAssets.push('domestic-villas.html','detail-pages.css','detail-pages.js');
+for (const name of ['khao-soi','sai-ua','bo-sang','celadon','lanna']) for (const width of [480,960,1536]) publicAssets.push(`assets/images/chiangmai-local-${name}-20261015-${width}.webp`);
 for (const name of ['food-tea','local-market','play-music','rest-wellness','work-connections']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/chiangmai-${name}-20261011-${width}.webp`);
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/chiangmai-nature-walk-20261012-${width}.webp`);
 for (const name of ['side-focus','side-tea-craft','side-rain-rest']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/${name}-20261012-${width}.webp`);

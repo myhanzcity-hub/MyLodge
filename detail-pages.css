@@ -521,3 +521,93 @@ html.destination-document{scroll-padding-top:0}
  .side-chiangmai #chiangmai-experiences .chiangmai-scene-play-music{padding:20px}
  .side-chiangmai #chiangmai-experiences .chiangmai-scene-play-music img{aspect-ratio:16/9}
 }
+
+/* Regional stories follow the main page's cream, forest and restrained gold. */
+/* HanzCity access occupies the hero's former bottom-right AI label position. */
+.side-chiangmai .hanz-hero-access{position:absolute;right:max(24px,calc((100% - 1120px)/2));bottom:24px;z-index:3;display:flex;max-width:calc(100% - 48px);margin:0}
+.side-chiangmai .side-hero{padding-bottom:112px}
+.side-chiangmai .side-hero-visual figcaption{top:112px;right:max(24px,calc((100% - 1120px)/2));bottom:auto;max-width:calc(100% - 48px);padding:0;border:0;border-radius:0;background:transparent;color:#fff7e7;font-size:16px;line-height:1.6;text-align:right;text-shadow:0 1px 5px #071e18}
+.side-chiangmai .hanz-link{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-width:0;max-width:100%;min-height:56px;padding:14px 22px;border:2px solid #e4c478;border-radius:10px;background:#f6ebce;color:#173e37;font-size:18px;font-weight:700;line-height:1.6;text-decoration:none;word-break:keep-all;overflow-wrap:anywhere;scroll-margin-top:112px}
+.side-chiangmai .hanz-link svg{flex:0 0 22px}
+.side-chiangmai .hanz-link span{min-width:0}
+.side-chiangmai .hanz-link:hover{background:#fff7e7;border-color:#a97b44}
+.side-chiangmai .hanz-link:focus-visible{outline:3px solid #c64f3c;outline-offset:4px;box-shadow:0 0 0 7px #fff7e7}
+.side-chiangmai .hanz-outro{padding:56px 0;background:#173e35;border-top:1px solid #a97b44}
+.side-chiangmai .hanz-outro>.container{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.side-chiangmai .hanz-outro-copy{min-width:0}
+.side-chiangmai .hanz-outro .eyebrow{color:#e7d49d;margin:0 0 12px;font-size:14px}
+.side-chiangmai .hanz-outro h2{margin:0;color:#fff7e7;font-size:clamp(28px,3vw,36px);line-height:1.5}
+.side-chiangmai .hanz-outro .hanz-link{flex-shrink:0}
+@media(max-width:800px){
+ .side-chiangmai .side-hero{padding-top:148px}
+ .side-chiangmai .side-hero-visual figcaption{top:100px;right:20px;max-width:calc(100% - 40px)}
+ .side-chiangmai .hanz-hero-access{right:20px;bottom:20px;max-width:calc(100% - 40px)}
+ .side-chiangmai .hanz-outro{padding:40px 0}
+ .side-chiangmai .hanz-outro>.container{flex-direction:column;align-items:flex-start;gap:24px}
+ .side-chiangmai .hanz-outro .hanz-link{flex-shrink:1}
+}
+@media(max-width:520px){
+ .side-chiangmai .hanz-hero-access .hanz-link{padding:14px 16px}
+ .side-chiangmai .hanz-outro .hanz-link{width:100%;padding:14px 16px}
+}
+
+.side-chiangmai .section-directory{grid-template-columns:repeat(4,minmax(0,1fr))}
+.side-chiangmai .chiangmai-local .story-heading{max-width:900px}
+.side-chiangmai .local-food-grid{display:grid;grid-template-columns:1.14fr .86fr;align-items:start;gap:32px}
+.side-chiangmai .local-story{min-width:0}
+.side-chiangmai .local-food-side{padding-top:64px}
+.side-chiangmai .local-photo{margin:0;min-width:0}
+.side-chiangmai .local-photo img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border:1px solid #a97b44;border-radius:14px}
+.side-chiangmai .local-food-lead .local-photo img{aspect-ratio:4/3}
+.side-chiangmai .local-photo figcaption{position:static;display:block;margin:0;padding:8px 0 0;border-radius:0;background:transparent;color:#52645b;font-size:16px;line-height:1.6}
+.side-chiangmai .local-copy{padding:18px 0 0}
+.side-chiangmai .chiangmai-local .local-kicker{margin:0 0 12px;color:#79552b;font-size:15px;font-weight:600;letter-spacing:.06em;line-height:1.6}
+.side-chiangmai .chiangmai-local :is(h3,h4){margin:0;color:#173e37;font-size:28px;font-weight:700;line-height:1.5;letter-spacing:-.03em;word-break:keep-all;overflow-wrap:anywhere}
+.side-chiangmai .local-copy>p:not(.local-kicker),.side-chiangmai .local-culture-copy>p:not(.local-kicker){margin:14px 0 0;color:#24483f;font-size:20px;line-height:1.8;word-break:keep-all;overflow-wrap:anywhere}
+.side-chiangmai .local-craft-block{margin-top:64px;padding-top:36px;border-top:1px solid #a97b4480}
+.side-chiangmai .local-group-heading{margin-bottom:28px}
+.side-chiangmai .local-group-heading .eyebrow{margin:0 0 12px;font-size:14px}
+.side-chiangmai .local-craft-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start}
+.side-chiangmai .local-celadon .local-copy{padding:0 0 26px}
+.side-chiangmai .local-umbrella .local-photo img{aspect-ratio:4/3;object-position:42% center}
+.side-chiangmai .local-culture{display:grid;grid-template-columns:3fr 2fr;align-items:center;gap:0;margin-top:64px;border:1px solid #a97b44;border-radius:18px;background:#173e35;overflow:hidden}
+.side-chiangmai .local-culture .local-photo{align-self:start;padding:18px 0 18px 18px}
+.side-chiangmai .local-culture .local-photo img{aspect-ratio:4/3;border:0;border-radius:10px}
+.side-chiangmai .local-culture .local-photo figcaption{color:#e5dec9}
+.side-chiangmai .local-culture-copy{min-width:0;padding:30px}
+.side-chiangmai .local-culture-copy h3{color:#fff7e7}
+.side-chiangmai .local-culture-copy .local-kicker{color:#e7d49d}
+.side-chiangmai .local-culture-copy>p:not(.local-kicker){color:#e5ecdf}
+.side-chiangmai .local-sources{margin-top:36px;border-top:1px solid #c6d0c1;border-bottom:1px solid #c6d0c1}
+.side-chiangmai .local-sources summary{padding:14px 4px;min-height:52px;color:#173e37;font-size:17px;font-weight:600;line-height:1.6;cursor:pointer}
+.side-chiangmai .local-sources ul{margin:0 0 16px;padding-left:26px}
+.side-chiangmai .local-sources a{display:inline-block;min-height:48px;padding:10px 4px;color:#24483f;font-size:17px;line-height:1.7;text-underline-offset:4px;overflow-wrap:anywhere}
+.side-chiangmai .local-sources a:hover{color:#8f3c2b}
+.side-chiangmai .local-sources a:focus-visible{outline:3px solid #a74130;outline-offset:3px;border-radius:3px}
+.side-chiangmai .chiangmai-local .local-image-note{margin:18px 0 0;color:#52645b;font-size:16px;line-height:1.7}
+@media(max-width:900px){
+ .side-chiangmai .local-culture{grid-template-columns:1fr}
+ .side-chiangmai .local-culture .local-photo{padding:20px 20px 0}
+ .side-chiangmai .local-culture .local-photo img{aspect-ratio:16/9}
+ .side-chiangmai .local-culture-copy{padding:24px 28px 30px}
+}
+@media(max-width:800px){
+ .side-chiangmai .section-directory{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .side-chiangmai .local-food-grid,.side-chiangmai .local-craft-grid{gap:28px}
+ .side-chiangmai .local-food-side{padding-top:40px}
+ .side-chiangmai .chiangmai-local :is(h3,h4){font-size:26px}
+}
+@media(max-width:700px){
+ .side-chiangmai .local-food-grid,.side-chiangmai .local-craft-grid{grid-template-columns:1fr;gap:40px}
+ .side-chiangmai .local-food-side{width:92%;margin-left:auto;padding-top:0}
+ .side-chiangmai .local-craft-block{margin-top:44px;padding-top:28px}
+ .side-chiangmai .local-group-heading{margin-bottom:24px}
+ .side-chiangmai .local-umbrella{width:88%;margin-right:auto}
+ .side-chiangmai .local-umbrella .local-photo img{aspect-ratio:1/1;object-position:38% center}
+ .side-chiangmai .local-celadon .local-copy{padding:0 0 22px}
+ .side-chiangmai .local-culture{margin-top:44px}
+ .side-chiangmai .local-culture .local-photo{padding:16px 16px 0}
+ .side-chiangmai .local-culture .local-photo img{aspect-ratio:3/2}
+ .side-chiangmai .local-culture-copy{padding:20px 20px 26px}
+ .side-chiangmai .local-culture-copy h3 br{display:none}
+}
