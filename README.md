@@ -94,3 +94,102 @@ npm start
 작업 시작 시 [AGENTS.md](https://github.com/IMT-Group-Account/MyLodge_Business/blob/codex/main-pc-handoff-20260930/AGENTS.md)를 확인합니다. [인수인계 기록](https://github.com/IMT-Group-Account/MyLodge_Business/blob/codex/main-pc-handoff-20260930/docs/CODEX-HANDOFF.md), [메인 PC 시작 안내](https://github.com/IMT-Group-Account/MyLodge_Business/blob/codex/main-pc-handoff-20260930/docs/MAIN-PC-START.md), [PM 결정 목록](https://github.com/IMT-Group-Account/MyLodge_Business/blob/codex/main-pc-handoff-20260930/docs/PM-DECISIONS-20260929.md)은 시점별 내부 참고 문서입니다. 문서 날짜와 현행 구현을 함께 확인하고 최신 사용자 결정을 우선합니다.
 
 최초 사이트 틀은 **2026-09-24 v0.1**, 커밋 [`6796bff`](https://github.com/IMT-Group-Account/MyLodge_Business/tree/6796bff8688456629b4dbed6a0c72e14be240198)에 보존되어 있습니다. 현재 사이트는 이후 인트로·반응형·시설·국내·치앙마이 상세 구성으로 확장한 버전입니다.
+
+---
+
+# English Version
+
+**MyLodge** is a brand website introducing vacation homes and park concepts centered on relaxation, social connections, and new ways of living. A separate opening introduction leads into the main website, with detail pages for domestic parks in Korea and Chiang Mai.
+
+**Documentation updated: October 15, 2026** · Maintainer: 연서흠
+
+- [Live website](https://my-lodge-business.vercel.app/)
+- [Go directly to the main page](https://my-lodge-business.vercel.app/index.html#home)
+- [Latest source branch: `codex/main-pc-handoff-20260930`](https://github.com/IMT-Group-Account/MyLodge_Business/tree/codex/main-pc-handoff-20260930)
+
+The latest implementation and deployment source are on the working branch linked above. The default `main` branch has not received the subsequent implementation changes and contains older site code. The latest site release was deployed on October 15, 2026, from product commit [`5a3eef8`](https://github.com/IMT-Group-Account/MyLodge_Business/commit/5a3eef80988eeb58f169e131219bbd9da6632df0). README updates and site deployments are tracked separately.
+
+## Pages
+
+| Path | Content |
+|---|---|
+| `/` · `intro.html` | A separate opening introduction with 14 photo scenes, play/pause, previous/next controls, and a link to enter the main website |
+| `index.html#home` | The main page: vacation homes and facilities, owner benefits, concierge concepts, an overview of the development, and domestic and overseas parks |
+| `domestic-villas.html` | Domestic parks: aerial concept images, spatial layout concepts, and featured lifestyle scenes for Jumunjin and Yangyang |
+| `business-valley.html` | Chiang Mai park introduction, spatial layout, six lifestyle scenes, and local food, crafts, and culture; direct HanzCity links at the opening screen and after the informational content |
+| `view.html?view=mobile` | The main page inside a mobile preview frame |
+| `view.html?view=desktop` | The main page in a desktop layout |
+
+Use **Screen view** in the header to choose mobile, desktop, or automatic mode. The detail pages provide the same controls. Automatic mode adapts the layout to the viewport width. The site also provides Korean/English switching, automatic photo slideshows, and horizontal swipe controls on mobile.
+
+Images include AI-generated spatial and lifestyle concepts. These are identified separately from actual sites, completed facilities, or operational records. The Chiang Mai local discoveries section covers khao soi, sai ua, Bo Sang umbrellas, celadon, and Lanna culture, with research sources.
+
+## Run locally
+
+**Node.js 20 or later** is required. The project uses HTML, CSS, and JavaScript and runs without installing external npm packages.
+
+```powershell
+git clone --branch codex/main-pc-handoff-20260930 --single-branch https://github.com/IMT-Group-Account/MyLodge_Business.git MyLodge_Business
+cd MyLodge_Business
+npm start
+```
+
+Open **http://127.0.0.1:4173/** in your browser. To open the main page directly, use **http://127.0.0.1:4173/index.html#home**. On Windows, you can also run `START-LOCAL.cmd`. An internet connection is required for web fonts and external websites.
+
+When using an existing working directory, first run `git status` to check the current branch and any uncommitted changes. If you encounter `EADDRINUSE`, check whether another preview server is already using port 4173.
+
+| Command | Purpose |
+|---|---|
+| `npm start` | Start the local preview server |
+| `npm run build` | Copy only the files approved for public release into `dist/` |
+| `npm run check` | Check the syntax of the specified JavaScript files |
+| `npm run check:workflow` | Run checks for the simulated operations model |
+
+These commands describe available development procedures. They do not establish that all pages have passed functional, responsive, or accessibility testing.
+
+## Key files
+
+| File | Role |
+|---|---|
+| `intro.html`, `arrival-intro.js`, `arrival-intro.css` | Separate opening introduction |
+| `index.html`, `app.js`, `styles.css` | Main document, base content, and interactions |
+| `editorial.js`, `editorial.css` | Main-page content, facility imagery, detail-page links, and presentation |
+| `business-valley.html`, `domestic-villas.html` | Chiang Mai and domestic detail pages |
+| `detail-pages.js`, `detail-pages.css` | Shared detail-page interactions and layouts |
+| `branding.js`, `branding.css` | Shared logo and brand presentation |
+| `mobile-layout.js`, `mobile-layout.css` | Mobile layout and touch interaction adjustments |
+| `view.html`, `view-mode.js`, `view-mode.css` | Mobile, desktop, and automatic view selection |
+| `localization.js`, `localization.css` | Korean/English switching |
+| `assets/images/`, `assets/brand/`, `assets/video/` | Images, logos, and video assets |
+| `server.mjs` | Local preview server and allowed routes |
+| `scripts/public-assets.mjs`, `scripts/build.mjs` | Public asset manifest and build process |
+| `vercel.json` | Vercel build, routing, and branch deployment configuration |
+
+Existing presentation files such as `cinematic.*`, `chairman.*`, `scenery.*`, `intro.*`, `mobile.*`, and `planning.css` are also used. `arrival-intro.*` controls the separate opening introduction; `intro.*` controls the existing video presentation within the main website. Do not edit generated files in `dist/` directly.
+
+## Deployment
+
+The live website is **https://my-lodge-business.vercel.app/**. The deployment inventory is defined in `scripts/public-assets.mjs`. The October 15, 2026 site release contains **235 public files**.
+
+1. Run `npm run build` from the latest source to prepare the public files.
+2. Use only `dist/` as the static deployment payload.
+3. Route `/` to `intro.html` and keep `/index.html` serving the main page. Preserve this routing in Vercel's `vercel.json` or the prebuilt deployment configuration.
+4. After deployment, verify that the live routes and images match the prepared public files.
+
+Automatic Git deployments are disabled for the working branch `codex/main-pc-handoff-20260930`. Recent production updates have used Vercel prebuilt deployments containing the public files. Treat GitHub pushes, merges into `main`, and production deployments as separate operations.
+
+Exclude `docs/`, `backups/`, business and planning source materials, original image-generation files, logs, and simulated operations screens from the public website payload. `workflow.html` and `/admin-demo.html` are local demonstrations, not a production administration system.
+
+## Implementation scope and remaining work
+
+- The current website is a static presentation of the brand, spaces, and lifestyle concepts.
+- Live inquiry submission, storage and delivery, member authentication, contracts, bookings, and payments are not connected. Existing inquiry and operations code is for interface demonstrations.
+- Ownership rights, payment schedules, refunds, usage days, fees, and actual service terms must be finalized using approved information.
+- The requested mobile section paging and bottom previous/next navigation for the main page are still at the research stage and are not included in the October 15, 2026 release.
+- Historical verification records apply to the versions reviewed at the time. Record the scope of regression, physical-device, and accessibility checks separately after changes.
+
+## Handoff and initial version
+
+Start by reading [AGENTS.md](https://github.com/IMT-Group-Account/MyLodge_Business/blob/codex/main-pc-handoff-20260930/AGENTS.md). The [handoff log](https://github.com/IMT-Group-Account/MyLodge_Business/blob/codex/main-pc-handoff-20260930/docs/CODEX-HANDOFF.md), [main-PC setup guide](https://github.com/IMT-Group-Account/MyLodge_Business/blob/codex/main-pc-handoff-20260930/docs/MAIN-PC-START.md), and [pending PM decisions](https://github.com/IMT-Group-Account/MyLodge_Business/blob/codex/main-pc-handoff-20260930/docs/PM-DECISIONS-20260929.md) are internal reference documents written at different stages. Check their dates against the current implementation and prioritize the latest user decisions.
+
+The original site scaffold, **v0.1 from September 24, 2026**, is preserved at commit [`6796bff`](https://github.com/IMT-Group-Account/MyLodge_Business/tree/6796bff8688456629b4dbed6a0c72e14be240198). The current site has since expanded to include the opening introduction, responsive layouts, facility content, and domestic and Chiang Mai detail pages.
