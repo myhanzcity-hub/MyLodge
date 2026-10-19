@@ -1,6 +1,12 @@
 /* Only imported by domestic-villas.html and business-valley.html. */
-.side-domestic .section-directory{grid-template-columns:repeat(4,minmax(0,1fr))}
-@media(max-width:800px){.side-domestic .section-directory{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.side-domestic .section-directory{grid-template-columns:repeat(3,minmax(0,1fr))}
+.destination-page .park-other-destinations{display:flex;align-items:center;gap:20px;margin-top:20px;padding-top:20px;border-top:1px solid #cad6c8}
+.destination-page .park-other-destinations>p{margin:0;flex-shrink:0;font-size:15px;font-weight:700;color:#53685f}
+.destination-page .park-destination-links{display:flex;flex-wrap:wrap;gap:10px}
+.destination-page .park-destination-links a{display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px 22px;border:1px solid #bacabc;border-radius:8px;background:#edf1e7;color:#173e37;font-size:16px;line-height:1.6;text-decoration:none;text-align:center;word-break:keep-all}
+.destination-page .park-destination-links a:hover{background:#e4e9db;border-color:#8a9b83}
+.destination-page .park-destination-links a:focus-visible{outline:3px solid #9c843e;outline-offset:3px}
+@media(max-width:600px){.side-domestic .section-directory{grid-template-columns:1fr}.destination-page .park-other-destinations{align-items:stretch;flex-direction:column;gap:12px}.destination-page .park-destination-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.destination-page .park-destination-links a{padding:10px 12px}.destination-page .park-destination-links a:only-child{grid-column:1/-1}}
 .destination-page .park-facility-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
 .destination-page .park-facility-grid article{padding:26px;background:#edf1e7;border:1px solid #cbd6c8;border-radius:16px}
 .destination-page .park-facility-grid h3{font-size:23px;line-height:1.45;margin:12px 0}
