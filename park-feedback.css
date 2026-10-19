@@ -1,4 +1,6 @@
 /* Only imported by domestic-villas.html and business-valley.html. */
+.side-domestic .section-directory{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:800px){.side-domestic .section-directory{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .destination-page .park-facility-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
 .destination-page .park-facility-grid article{padding:26px;background:#edf1e7;border:1px solid #cbd6c8;border-radius:16px}
 .destination-page .park-facility-grid h3{font-size:23px;line-height:1.45;margin:12px 0}
