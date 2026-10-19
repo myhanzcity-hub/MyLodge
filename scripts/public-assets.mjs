@@ -52,3 +52,6 @@ for (const name of ['project-yangyang','yangyang-modular-villa','yangyang-pool-p
 // Park subpage feedback branch: page-scoped styling and AI concept assets.
 publicAssets.push('park-feedback.css');
 for (const name of ['pool-social','interior-asian','interior-european','interior-global']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/chiangmai-${name}-20261019-${width}.webp`);
+
+// Chairman feedback: social panorama, pool party and crowded club opening scenes.
+for (const name of ['panorama','poolparty','club']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/chiangmai-vibrant-${name}-20261019-${width}.webp`);
