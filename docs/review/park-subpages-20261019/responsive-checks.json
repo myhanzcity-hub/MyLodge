@@ -1,0 +1,218 @@
+[
+  {
+    "brokenAnchors": [],
+    "domesticStages": [],
+    "heroLoaded": true,
+    "interiors": 3,
+    "lang": "ko",
+    "overflow": false,
+    "page": "/business-valley.html",
+    "width": 320
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [],
+    "heroLoaded": true,
+    "interiors": 3,
+    "lang": "en",
+    "overflow": false,
+    "page": "/business-valley.html",
+    "width": 320
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN",
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN"
+    ],
+    "heroLoaded": true,
+    "interiors": 0,
+    "lang": "ko",
+    "overflow": false,
+    "page": "/domestic-villas.html",
+    "width": 320
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN",
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN"
+    ],
+    "heroLoaded": true,
+    "interiors": 0,
+    "lang": "en",
+    "overflow": false,
+    "page": "/domestic-villas.html",
+    "width": 320
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [],
+    "heroLoaded": true,
+    "interiors": 3,
+    "lang": "ko",
+    "overflow": false,
+    "page": "/business-valley.html",
+    "width": 390
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [],
+    "heroLoaded": true,
+    "interiors": 3,
+    "lang": "en",
+    "overflow": false,
+    "page": "/business-valley.html",
+    "width": 390
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN",
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN"
+    ],
+    "heroLoaded": true,
+    "interiors": 0,
+    "lang": "ko",
+    "overflow": false,
+    "page": "/domestic-villas.html",
+    "width": 390
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN",
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN"
+    ],
+    "heroLoaded": true,
+    "interiors": 0,
+    "lang": "en",
+    "overflow": false,
+    "page": "/domestic-villas.html",
+    "width": 390
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [],
+    "heroLoaded": true,
+    "interiors": 3,
+    "lang": "ko",
+    "overflow": false,
+    "page": "/business-valley.html",
+    "width": 768
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [],
+    "heroLoaded": true,
+    "interiors": 3,
+    "lang": "en",
+    "overflow": false,
+    "page": "/business-valley.html",
+    "width": 768
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN",
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN"
+    ],
+    "heroLoaded": true,
+    "interiors": 0,
+    "lang": "ko",
+    "overflow": false,
+    "page": "/domestic-villas.html",
+    "width": 768
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN",
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN"
+    ],
+    "heroLoaded": true,
+    "interiors": 0,
+    "lang": "en",
+    "overflow": false,
+    "page": "/domestic-villas.html",
+    "width": 768
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [],
+    "heroLoaded": true,
+    "interiors": 3,
+    "lang": "ko",
+    "overflow": false,
+    "page": "/business-valley.html",
+    "width": 1280
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [],
+    "heroLoaded": true,
+    "interiors": 3,
+    "lang": "en",
+    "overflow": false,
+    "page": "/business-valley.html",
+    "width": 1280
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN",
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN"
+    ],
+    "heroLoaded": true,
+    "interiors": 0,
+    "lang": "ko",
+    "overflow": false,
+    "page": "/domestic-villas.html",
+    "width": 1280
+  },
+  {
+    "brokenAnchors": [],
+    "domesticStages": [
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN",
+      "01 / PANORAMA",
+      "02 / SIGNATURE SCENES",
+      "03 / SPATIAL PLAN"
+    ],
+    "heroLoaded": true,
+    "interiors": 0,
+    "lang": "en",
+    "overflow": false,
+    "page": "/domestic-villas.html",
+    "width": 1280
+  }
+]

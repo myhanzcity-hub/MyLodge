@@ -3,10 +3,16 @@
   "framework": null,
   "buildCommand": "node scripts/build.mjs",
   "outputDirectory": "dist",
-  "rewrites": [{ "source": "/", "destination": "/intro.html" }],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/intro.html"
+    }
+  ],
   "git": {
     "deploymentEnabled": {
-      "codex/main-pc-handoff-20260930": false
+      "codex/main-pc-handoff-20260930": false,
+      "codex/park-subpages-feedback-20261019": false
     }
   }
 }

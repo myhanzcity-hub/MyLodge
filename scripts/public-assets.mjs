@@ -48,3 +48,7 @@ for (const name of ['facility-pool-cabana','facility-market-v2','facility-concie
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/chiangmai-overview-20261013-${width}.webp`);
 
 for (const name of ['project-yangyang','yangyang-modular-villa','yangyang-pool-party','yangyang-arrival-market']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/${name}-20261013-${width}.webp`);
+
+// Park subpage feedback branch: page-scoped styling and AI concept assets.
+publicAssets.push('park-feedback.css');
+for (const name of ['pool-social','interior-asian','interior-european','interior-global']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/chiangmai-${name}-20261019-${width}.webp`);
