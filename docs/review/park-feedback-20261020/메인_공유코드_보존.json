@@ -1,0 +1,80 @@
+[
+  {
+    "file": "index.html",
+    "normalizedSHA256": "4c0f7e8bd667458145dd7fcfea3cc0a725bfb6adcc9ea748c21c39985e8ec2c1",
+    "baseNormalizedSHA256": "4c0f7e8bd667458145dd7fcfea3cc0a725bfb6adcc9ea748c21c39985e8ec2c1",
+    "unchanged": true
+  },
+  {
+    "file": "intro.html",
+    "normalizedSHA256": "e314d7f217eb1e6cf440d0c8bbde275748f773d3379397b680a2d3aa50d90227",
+    "baseNormalizedSHA256": "e314d7f217eb1e6cf440d0c8bbde275748f773d3379397b680a2d3aa50d90227",
+    "unchanged": true
+  },
+  {
+    "file": "app.js",
+    "normalizedSHA256": "8812af524e7bf78464982f8a0b4409935cab739d88d3188425a312c667d679ac",
+    "baseNormalizedSHA256": "8812af524e7bf78464982f8a0b4409935cab739d88d3188425a312c667d679ac",
+    "unchanged": true
+  },
+  {
+    "file": "arrival-intro.js",
+    "normalizedSHA256": "de56be93f94847fc094a2d38c5d8e8156a72681519beb097826cec0ccd5ef5c9",
+    "baseNormalizedSHA256": "de56be93f94847fc094a2d38c5d8e8156a72681519beb097826cec0ccd5ef5c9",
+    "unchanged": true
+  },
+  {
+    "file": "arrival-intro.css",
+    "normalizedSHA256": "6fea269053d225b19b9046d85daea2fb3a211fc5f880c086540c089c0d53c9cf",
+    "baseNormalizedSHA256": "6fea269053d225b19b9046d85daea2fb3a211fc5f880c086540c089c0d53c9cf",
+    "unchanged": true
+  },
+  {
+    "file": "styles.css",
+    "normalizedSHA256": "774f6d1f88fddc232b8af6df00cbb7f18808aee20fb6185fd1665bc9b2960092",
+    "baseNormalizedSHA256": "774f6d1f88fddc232b8af6df00cbb7f18808aee20fb6185fd1665bc9b2960092",
+    "unchanged": true
+  },
+  {
+    "file": "detail-pages.js",
+    "normalizedSHA256": "05f5e3a5ff9c2caf1f675a721a3f5a53bbf20ce6066704030e8929e942704699",
+    "baseNormalizedSHA256": "05f5e3a5ff9c2caf1f675a721a3f5a53bbf20ce6066704030e8929e942704699",
+    "unchanged": true
+  },
+  {
+    "file": "detail-pages.css",
+    "normalizedSHA256": "1b1ce8ae02452b9b52d2d6aebb92c66c542c8e102f9a219124ecf658b2406f69",
+    "baseNormalizedSHA256": "1b1ce8ae02452b9b52d2d6aebb92c66c542c8e102f9a219124ecf658b2406f69",
+    "unchanged": true
+  },
+  {
+    "file": "branding.js",
+    "normalizedSHA256": "b6179169eb9b9b7911eaeb2cacb41490e34071faaffb17642c33dfed65cba3b9",
+    "baseNormalizedSHA256": "b6179169eb9b9b7911eaeb2cacb41490e34071faaffb17642c33dfed65cba3b9",
+    "unchanged": true
+  },
+  {
+    "file": "branding.css",
+    "normalizedSHA256": "e4f016247c7336d7a07eb04692e543882b22e1dc1c1924661525615ac7341ac9",
+    "baseNormalizedSHA256": "e4f016247c7336d7a07eb04692e543882b22e1dc1c1924661525615ac7341ac9",
+    "unchanged": true
+  },
+  {
+    "file": "view-mode.js",
+    "normalizedSHA256": "c1cbdd49bde2bd4246e20c8ae4d1501bd930d01a6b3ee669873d33ff4c57d0da",
+    "baseNormalizedSHA256": "c1cbdd49bde2bd4246e20c8ae4d1501bd930d01a6b3ee669873d33ff4c57d0da",
+    "unchanged": true
+  },
+  {
+    "file": "view-mode.css",
+    "normalizedSHA256": "9af0efbda3f0d3653d2a42010fdf076f12d428af499a1e2a3bcacf75f68a7ce4",
+    "baseNormalizedSHA256": "9af0efbda3f0d3653d2a42010fdf076f12d428af499a1e2a3bcacf75f68a7ce4",
+    "unchanged": true
+  },
+  {
+    "file": "vercel.json",
+    "normalizedSHA256": "283659eb8db300a321524bf58fc769a8e1a357b632919792e2dd930facce410c",
+    "baseNormalizedSHA256": "283659eb8db300a321524bf58fc769a8e1a357b632919792e2dd930facce410c",
+    "unchanged": true
+  }
+]

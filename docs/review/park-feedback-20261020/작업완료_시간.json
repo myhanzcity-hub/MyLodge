@@ -1,0 +1,27 @@
+{
+  "startUTC": "2026-10-20T03:30:46Z",
+  "endUTC": "2026-10-20T04:40:57Z",
+  "startKST": "2026-10-20 12:30:46",
+  "endKST": "2026-10-20 13:40:57",
+  "elapsedSeconds": 4211,
+  "elapsed": "70분 11초",
+  "scope": "이번 요청의 경과 작업 세션. 구현·화면 검토·이미지 생성 및 확인 시간 포함. 순수 집중 작업시간이나 하루 전체 근무시간과 구분.",
+  "planMinutes": [
+    30,
+    25,
+    15
+  ],
+  "completed": [
+    "세 지역 전체 조감도 뷰어",
+    "한국어·영어 핵심 문구 보완",
+    "국내 카드 AI 이미지 2장 적용"
+  ],
+  "verification": {
+    "panoramaCases": 24,
+    "copyCases": 16,
+    "cardCases": 8,
+    "publicBuildFiles": 264,
+    "protectedFilesUnchanged": 13
+  },
+  "status": "로컬 브랜치 반영. 커밋·푸시·운영 배포 없음."
+}

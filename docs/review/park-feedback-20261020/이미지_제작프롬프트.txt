@@ -1,0 +1,19 @@
+국내 소개 카드 이미지 대체 — 2026-10-20
+방식: built-in image_gen. 기존 AI 조감도를 건축·지역 분위기 참고로 사용한 별도 시점의 이미지 생성.
+용도: 국내 파크 소개 카드 2개. 본문의 기존 전체 조감도와 시설 사진은 보존.
+
+1. 주문진 — jumunjin-community-20261020
+Reference image: C:/ChatGPT_ProJect/IMT/park-subpages-20261019/assets/images/project-jumunjin-20261007-960.webp
+Use case: ads-marketing / architectural lifestyle concept.
+Asset type: one landscape photograph-style concept for the Jumunjin Park introduction card on a Korean premium holiday villa website.
+Image 1 is an architectural and atmosphere reference. Create a separate view of the SAME fictional coastal resort concept, keeping its low-rise white villas with flowing curved roofs, large glass fronts, a central pool and an elegant glass community club by the rocky Korean East Sea coast. Change the camera from a high aerial panorama to a human-scale terrace-level view, so this image is clearly different from the reference masterplan.
+Show adult friends meeting and chatting on a seaside terrace in the foreground, with a lively shared pool, multiple villas and a glass club visible together in the middle distance. The sea and rocky coastal edge must remain visible. Premium yet welcoming, warm dusk light, natural candid gestures, an international adult community, realistic architectural materials. The image should communicate a vacation with people and shared spaces, not an isolated single villa. Keep the important people and architecture legible within a central 4:3 crop for a small card. Wide horizontal 16:9 composition, high-detail 2048x1152 if supported.
+Avoid text, captions, logos, watermarks, close-up faces, duplicated people, distorted limbs, high-rise towers, an inland forest setting, or a new vehicle/parking policy depiction. This is an AI concept, not evidence of an existing real resort.
+
+2. 양양 — yangyang-poolside-20261020
+Reference image: C:/ChatGPT_ProJect/IMT/park-subpages-20261019/assets/images/project-yangyang-20261013-960.webp
+Use case: ads-marketing / architectural lifestyle concept.
+Asset type: one landscape photograph-style concept for the Yangyang Park introduction card on the same website.
+Image 1 is an architectural and atmosphere reference. Create a separate human-scale poolside view of the SAME fictional seaside resort concept. Preserve its pastel cream and soft blush TWO-STOREY modular villas, visible outdoor staircases and glass-fronted balconies, shared pool and cabanas beside a long sandy Korean East Sea beach. Keep it visually different from Jumunjin's curved single-storey terrace villas and different from this aerial reference.
+Show an inviting shared pool in the foreground, cabanas and groups of adult friends enjoying a relaxed pool gathering, with several two-storey pastel villas behind. Include a small, tasteful music gathering in the midground and the sandy coast/ocean beyond. Lively premium vacation atmosphere, warm architectural lighting against a blue-hour sky, candid international adult guests, realistic water and architecture. The community and multiple villas should be immediately readable in a small introduction card. Keep key subjects within a central 4:3 crop. Wide horizontal 16:9 composition, high-detail 2048x1152 if supported.
+Avoid text, captions, logos, watermarks, close-up faces, duplicated people, distorted limbs, high-rise towers, steep rocky cliffs, an isolated forest cabin, a tropical Thai pavilion, cars or a new parking arrangement. This is an AI concept, not evidence of an existing real resort.

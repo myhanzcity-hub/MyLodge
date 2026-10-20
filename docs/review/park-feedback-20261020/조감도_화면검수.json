@@ -1,0 +1,962 @@
+[
+  {
+    "page": "business-valley.html",
+    "index": 0,
+    "name": "chiangmai",
+    "lang": "ko",
+    "width": 320,
+    "initial": {
+      "dialog": [
+        571,
+        571
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00012742199303605872,
+      "focus": true,
+      "lang": "ko",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "치앙마이 파크 전체 조감도",
+      "viewport": [
+        250,
+        140
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 0,
+    "name": "jumunjin",
+    "lang": "ko",
+    "width": 320,
+    "initial": {
+      "dialog": [
+        571,
+        571
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00012742199303605872,
+      "focus": true,
+      "lang": "ko",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "주문진 파크 전체 조감도",
+      "viewport": [
+        250,
+        140
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 1,
+    "name": "yangyang",
+    "lang": "ko",
+    "width": 320,
+    "initial": {
+      "dialog": [
+        571,
+        571
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.0000873402609014029,
+      "focus": true,
+      "lang": "ko",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "양양 파크 전체 조감도",
+      "viewport": [
+        250,
+        140
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "business-valley.html",
+    "index": 0,
+    "name": "chiangmai",
+    "lang": "ko",
+    "width": 390,
+    "initial": {
+      "dialog": [
+        555,
+        555
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00007635560242635897,
+      "focus": true,
+      "lang": "ko",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "치앙마이 파크 전체 조감도",
+      "viewport": [
+        320,
+        179
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 0,
+    "name": "jumunjin",
+    "lang": "ko",
+    "width": 390,
+    "initial": {
+      "dialog": [
+        555,
+        555
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00007635560242635897,
+      "focus": true,
+      "lang": "ko",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "주문진 파크 전체 조감도",
+      "viewport": [
+        320,
+        179
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 1,
+    "name": "yangyang",
+    "lang": "ko",
+    "width": 390,
+    "initial": {
+      "dialog": [
+        542,
+        542
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00010132864755552085,
+      "focus": true,
+      "lang": "ko",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "양양 파크 전체 조감도",
+      "viewport": [
+        320,
+        179
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "business-valley.html",
+    "index": 0,
+    "name": "chiangmai",
+    "lang": "ko",
+    "width": 768,
+    "initial": {
+      "dialog": [
+        850,
+        850
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.000004992756491128958,
+      "focus": true,
+      "lang": "ko",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "치앙마이 파크 전체 조감도",
+      "viewport": [
+        658,
+        571
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 0,
+    "name": "jumunjin",
+    "lang": "ko",
+    "width": 768,
+    "initial": {
+      "dialog": [
+        850,
+        850
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.000004992756491128958,
+      "focus": true,
+      "lang": "ko",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "주문진 파크 전체 조감도",
+      "viewport": [
+        658,
+        571
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 1,
+    "name": "yangyang",
+    "lang": "ko",
+    "width": 768,
+    "initial": {
+      "dialog": [
+        850,
+        850
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00004448091401099141,
+      "focus": true,
+      "lang": "ko",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "양양 파크 전체 조감도",
+      "viewport": [
+        658,
+        571
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "business-valley.html",
+    "index": 0,
+    "name": "chiangmai",
+    "lang": "ko",
+    "width": 1280,
+    "initial": {
+      "dialog": [
+        850,
+        850
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.000031912795741995126,
+      "focus": true,
+      "lang": "ko",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "치앙마이 파크 전체 조감도",
+      "viewport": [
+        1170,
+        571
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 0,
+    "name": "jumunjin",
+    "lang": "ko",
+    "width": 1280,
+    "initial": {
+      "dialog": [
+        850,
+        850
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.000031912795741995126,
+      "focus": true,
+      "lang": "ko",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "주문진 파크 전체 조감도",
+      "viewport": [
+        1170,
+        571
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 1,
+    "name": "yangyang",
+    "lang": "ko",
+    "width": 1280,
+    "initial": {
+      "dialog": [
+        850,
+        850
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00002702590467817956,
+      "focus": true,
+      "lang": "ko",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "양양 파크 전체 조감도",
+      "viewport": [
+        1170,
+        571
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "business-valley.html",
+    "index": 0,
+    "name": "chiangmai",
+    "lang": "en",
+    "width": 320,
+    "initial": {
+      "dialog": [
+        659,
+        659
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00012742199303605872,
+      "focus": true,
+      "lang": "en",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "Chiang Mai Park panorama",
+      "viewport": [
+        250,
+        140
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 0,
+    "name": "jumunjin",
+    "lang": "en",
+    "width": 320,
+    "initial": {
+      "dialog": [
+        659,
+        659
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00012742199303605872,
+      "focus": true,
+      "lang": "en",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "Jumunjin Park panorama",
+      "viewport": [
+        250,
+        140
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 1,
+    "name": "yangyang",
+    "lang": "en",
+    "width": 320,
+    "initial": {
+      "dialog": [
+        659,
+        659
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.0000873402609014029,
+      "focus": true,
+      "lang": "en",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "Yangyang Park panorama",
+      "viewport": [
+        250,
+        140
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "business-valley.html",
+    "index": 0,
+    "name": "chiangmai",
+    "lang": "en",
+    "width": 390,
+    "initial": {
+      "dialog": [
+        619,
+        619
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00007635560242635897,
+      "focus": true,
+      "lang": "en",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "Chiang Mai Park panorama",
+      "viewport": [
+        320,
+        179
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 0,
+    "name": "jumunjin",
+    "lang": "en",
+    "width": 390,
+    "initial": {
+      "dialog": [
+        619,
+        619
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00007635560242635897,
+      "focus": true,
+      "lang": "en",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "Jumunjin Park panorama",
+      "viewport": [
+        320,
+        179
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 1,
+    "name": "yangyang",
+    "lang": "en",
+    "width": 390,
+    "initial": {
+      "dialog": [
+        619,
+        619
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00010132864755552085,
+      "focus": true,
+      "lang": "en",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "Yangyang Park panorama",
+      "viewport": [
+        320,
+        179
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "business-valley.html",
+    "index": 0,
+    "name": "chiangmai",
+    "lang": "en",
+    "width": 768,
+    "initial": {
+      "dialog": [
+        850,
+        850
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.000004992756491128958,
+      "focus": true,
+      "lang": "en",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "Chiang Mai Park panorama",
+      "viewport": [
+        658,
+        538
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 0,
+    "name": "jumunjin",
+    "lang": "en",
+    "width": 768,
+    "initial": {
+      "dialog": [
+        850,
+        850
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.000004992756491128958,
+      "focus": true,
+      "lang": "en",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "Jumunjin Park panorama",
+      "viewport": [
+        658,
+        538
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 1,
+    "name": "yangyang",
+    "lang": "en",
+    "width": 768,
+    "initial": {
+      "dialog": [
+        850,
+        850
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00004448091401099141,
+      "focus": true,
+      "lang": "en",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "Yangyang Park panorama",
+      "viewport": [
+        658,
+        538
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "business-valley.html",
+    "index": 0,
+    "name": "chiangmai",
+    "lang": "en",
+    "width": 1280,
+    "initial": {
+      "dialog": [
+        850,
+        850
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.000031912795741995126,
+      "focus": true,
+      "lang": "en",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "Chiang Mai Park panorama",
+      "viewport": [
+        1170,
+        571
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 0,
+    "name": "jumunjin",
+    "lang": "en",
+    "width": 1280,
+    "initial": {
+      "dialog": [
+        850,
+        850
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.000031912795741995126,
+      "focus": true,
+      "lang": "en",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "Jumunjin Park panorama",
+      "viewport": [
+        1170,
+        571
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  },
+  {
+    "page": "domestic-villas.html",
+    "index": 1,
+    "name": "yangyang",
+    "lang": "en",
+    "width": 1280,
+    "initial": {
+      "dialog": [
+        850,
+        850
+      ],
+      "dialogOverflowX": false,
+      "fitRatioError": 0.00002702590467817956,
+      "focus": true,
+      "lang": "en",
+      "loaded": true,
+      "opened": true,
+      "pageOverflow": false,
+      "title": "Yangyang Park panorama",
+      "viewport": [
+        1170,
+        571
+      ]
+    },
+    "stable": {
+      "focusInside": true,
+      "loaded": true,
+      "open": true
+    },
+    "enlarged": {
+      "pageOverflow": false,
+      "pressed": "true",
+      "scrollable": true
+    },
+    "closed": {
+      "closed": true,
+      "returned": true,
+      "unlocked": true
+    }
+  }
+]

@@ -1,0 +1,354 @@
+[
+  {
+    "lang": "ko",
+    "width": 320,
+    "actual": [
+      320,
+      844
+    ],
+    "cards": [
+      {
+        "alt": "곡선형 별장과 풀장, 유리 클럽을 바라보며 해안 테라스에서 교류하는 주문진 공간 콘셉트",
+        "caption": "AI 공간 콘셉트",
+        "current": "http://127.0.0.1:4191/assets/images/jumunjin-community-20261020-480.webp",
+        "loaded": true,
+        "name": "jumunjin",
+        "natural": [
+          280,
+          157
+        ],
+        "rendered": [
+          268,
+          167.5
+        ],
+        "source": "assets/images/jumunjin-community-20261020-960.webp"
+      },
+      {
+        "alt": "파스텔 복층 별장과 풀장, 카바나 사이에서 함께 휴가를 즐기는 양양 공간 콘셉트",
+        "caption": "AI 공간 콘셉트",
+        "current": "http://127.0.0.1:4191/assets/images/yangyang-poolside-20261020-480.webp",
+        "loaded": true,
+        "name": "yangyang",
+        "natural": [
+          280,
+          157
+        ],
+        "rendered": [
+          268,
+          167.5
+        ],
+        "source": "assets/images/yangyang-poolside-20261020-960.webp"
+      }
+    ],
+    "overflow": false,
+    "repeatedMainImageSources": []
+  },
+  {
+    "lang": "ko",
+    "width": 390,
+    "actual": [
+      390,
+      844
+    ],
+    "cards": [
+      {
+        "alt": "곡선형 별장과 풀장, 유리 클럽을 바라보며 해안 테라스에서 교류하는 주문진 공간 콘셉트",
+        "caption": "AI 공간 콘셉트",
+        "current": "http://127.0.0.1:4191/assets/images/jumunjin-community-20261020-480.webp",
+        "loaded": true,
+        "name": "jumunjin",
+        "natural": [
+          349,
+          196
+        ],
+        "rendered": [
+          338,
+          211.25
+        ],
+        "source": "assets/images/jumunjin-community-20261020-960.webp"
+      },
+      {
+        "alt": "파스텔 복층 별장과 풀장, 카바나 사이에서 함께 휴가를 즐기는 양양 공간 콘셉트",
+        "caption": "AI 공간 콘셉트",
+        "current": "http://127.0.0.1:4191/assets/images/yangyang-poolside-20261020-480.webp",
+        "loaded": true,
+        "name": "yangyang",
+        "natural": [
+          349,
+          196
+        ],
+        "rendered": [
+          338,
+          211.25
+        ],
+        "source": "assets/images/yangyang-poolside-20261020-960.webp"
+      }
+    ],
+    "overflow": false,
+    "repeatedMainImageSources": []
+  },
+  {
+    "lang": "ko",
+    "width": 768,
+    "actual": [
+      768,
+      900
+    ],
+    "cards": [
+      {
+        "alt": "곡선형 별장과 풀장, 유리 클럽을 바라보며 해안 테라스에서 교류하는 주문진 공간 콘셉트",
+        "caption": "AI 공간 콘셉트",
+        "current": "http://127.0.0.1:4191/assets/images/jumunjin-community-20261020-960.webp",
+        "loaded": true,
+        "name": "jumunjin",
+        "natural": [
+          728,
+          409
+        ],
+        "rendered": [
+          716,
+          447.5
+        ],
+        "source": "assets/images/jumunjin-community-20261020-960.webp"
+      },
+      {
+        "alt": "파스텔 복층 별장과 풀장, 카바나 사이에서 함께 휴가를 즐기는 양양 공간 콘셉트",
+        "caption": "AI 공간 콘셉트",
+        "current": "http://127.0.0.1:4191/assets/images/yangyang-poolside-20261020-960.webp",
+        "loaded": true,
+        "name": "yangyang",
+        "natural": [
+          728,
+          409
+        ],
+        "rendered": [
+          716,
+          447.5
+        ],
+        "source": "assets/images/yangyang-poolside-20261020-960.webp"
+      }
+    ],
+    "overflow": false,
+    "repeatedMainImageSources": []
+  },
+  {
+    "lang": "ko",
+    "width": 1280,
+    "actual": [
+      1280,
+      900
+    ],
+    "cards": [
+      {
+        "alt": "곡선형 별장과 풀장, 유리 클럽을 바라보며 해안 테라스에서 교류하는 주문진 공간 콘셉트",
+        "caption": "AI 공간 콘셉트",
+        "current": "http://127.0.0.1:4191/assets/images/jumunjin-community-20261020-960.webp",
+        "loaded": true,
+        "name": "jumunjin",
+        "natural": [
+          546,
+          307
+        ],
+        "rendered": [
+          546,
+          341.25
+        ],
+        "source": "assets/images/jumunjin-community-20261020-960.webp"
+      },
+      {
+        "alt": "파스텔 복층 별장과 풀장, 카바나 사이에서 함께 휴가를 즐기는 양양 공간 콘셉트",
+        "caption": "AI 공간 콘셉트",
+        "current": "http://127.0.0.1:4191/assets/images/yangyang-poolside-20261020-960.webp",
+        "loaded": true,
+        "name": "yangyang",
+        "natural": [
+          546,
+          307
+        ],
+        "rendered": [
+          546,
+          341.25
+        ],
+        "source": "assets/images/yangyang-poolside-20261020-960.webp"
+      }
+    ],
+    "overflow": false,
+    "repeatedMainImageSources": []
+  },
+  {
+    "lang": "en",
+    "width": 320,
+    "actual": [
+      320,
+      844
+    ],
+    "cards": [
+      {
+        "alt": "Jumunjin concept: friends on a coastal terrace beside curved villas, a shared pool and a glass club",
+        "caption": "AI space concept",
+        "current": "http://127.0.0.1:4191/assets/images/jumunjin-community-20261020-480.webp",
+        "loaded": true,
+        "name": "jumunjin",
+        "natural": [
+          280,
+          157
+        ],
+        "rendered": [
+          268,
+          167.5
+        ],
+        "source": "assets/images/jumunjin-community-20261020-960.webp"
+      },
+      {
+        "alt": "Yangyang concept: adults enjoying a shared pool and cabanas with pastel two-storey villas by the sandy coast",
+        "caption": "AI space concept",
+        "current": "http://127.0.0.1:4191/assets/images/yangyang-poolside-20261020-480.webp",
+        "loaded": true,
+        "name": "yangyang",
+        "natural": [
+          280,
+          157
+        ],
+        "rendered": [
+          268,
+          167.5
+        ],
+        "source": "assets/images/yangyang-poolside-20261020-960.webp"
+      }
+    ],
+    "overflow": false,
+    "repeatedMainImageSources": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "actual": [
+      390,
+      844
+    ],
+    "cards": [
+      {
+        "alt": "Jumunjin concept: friends on a coastal terrace beside curved villas, a shared pool and a glass club",
+        "caption": "AI space concept",
+        "current": "http://127.0.0.1:4191/assets/images/jumunjin-community-20261020-480.webp",
+        "loaded": true,
+        "name": "jumunjin",
+        "natural": [
+          349,
+          196
+        ],
+        "rendered": [
+          338,
+          211.25
+        ],
+        "source": "assets/images/jumunjin-community-20261020-960.webp"
+      },
+      {
+        "alt": "Yangyang concept: adults enjoying a shared pool and cabanas with pastel two-storey villas by the sandy coast",
+        "caption": "AI space concept",
+        "current": "http://127.0.0.1:4191/assets/images/yangyang-poolside-20261020-480.webp",
+        "loaded": true,
+        "name": "yangyang",
+        "natural": [
+          349,
+          196
+        ],
+        "rendered": [
+          338,
+          211.25
+        ],
+        "source": "assets/images/yangyang-poolside-20261020-960.webp"
+      }
+    ],
+    "overflow": false,
+    "repeatedMainImageSources": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "actual": [
+      768,
+      900
+    ],
+    "cards": [
+      {
+        "alt": "Jumunjin concept: friends on a coastal terrace beside curved villas, a shared pool and a glass club",
+        "caption": "AI space concept",
+        "current": "http://127.0.0.1:4191/assets/images/jumunjin-community-20261020-960.webp",
+        "loaded": true,
+        "name": "jumunjin",
+        "natural": [
+          728,
+          409
+        ],
+        "rendered": [
+          716,
+          447.5
+        ],
+        "source": "assets/images/jumunjin-community-20261020-960.webp"
+      },
+      {
+        "alt": "Yangyang concept: adults enjoying a shared pool and cabanas with pastel two-storey villas by the sandy coast",
+        "caption": "AI space concept",
+        "current": "http://127.0.0.1:4191/assets/images/yangyang-poolside-20261020-960.webp",
+        "loaded": true,
+        "name": "yangyang",
+        "natural": [
+          728,
+          409
+        ],
+        "rendered": [
+          716,
+          447.5
+        ],
+        "source": "assets/images/yangyang-poolside-20261020-960.webp"
+      }
+    ],
+    "overflow": false,
+    "repeatedMainImageSources": []
+  },
+  {
+    "lang": "en",
+    "width": 1280,
+    "actual": [
+      1280,
+      900
+    ],
+    "cards": [
+      {
+        "alt": "Jumunjin concept: friends on a coastal terrace beside curved villas, a shared pool and a glass club",
+        "caption": "AI space concept",
+        "current": "http://127.0.0.1:4191/assets/images/jumunjin-community-20261020-960.webp",
+        "loaded": true,
+        "name": "jumunjin",
+        "natural": [
+          546,
+          307
+        ],
+        "rendered": [
+          546,
+          341.25
+        ],
+        "source": "assets/images/jumunjin-community-20261020-960.webp"
+      },
+      {
+        "alt": "Yangyang concept: adults enjoying a shared pool and cabanas with pastel two-storey villas by the sandy coast",
+        "caption": "AI space concept",
+        "current": "http://127.0.0.1:4191/assets/images/yangyang-poolside-20261020-960.webp",
+        "loaded": true,
+        "name": "yangyang",
+        "natural": [
+          546,
+          307
+        ],
+        "rendered": [
+          546,
+          341.25
+        ],
+        "source": "assets/images/yangyang-poolside-20261020-960.webp"
+      }
+    ],
+    "overflow": false,
+    "repeatedMainImageSources": []
+  }
+]

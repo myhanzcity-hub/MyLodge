@@ -1,0 +1,49 @@
+[
+  {
+    "file": "business-valley.html",
+    "before": "data-en=\"Holiday life in Chiang Mai\">치앙마이의 휴가와 일상",
+    "after": "data-en=\"Global community vision\">글로벌 커뮤니티 비전"
+  },
+  {
+    "file": "business-valley.html",
+    "before": "data-en-html=\"Chapter 1. Chiang Mai.<br>Meet. Connect. Celebrate.\">챕터 1. 치앙마이.<br>만나고. 함께하고. 즐기다.",
+    "after": "data-en-html=\"Chapter 1. Chiang Mai.<br>A global tech hub.\">챕터 1. 치앙마이.<br>전 세계 IT맨이 집결하는 성지."
+  },
+  {
+    "file": "business-valley.html",
+    "before": "data-en-html=\"Connect with the global tech community.<br>Share ideas. Collaborate. Start up!\">전 세계 IT맨·디지털노마드와 자유롭게 만나고.<br>소통하고 협력하고. 도모하고. 스타트 업!",
+    "after": "data-en-html=\"Meet digital nomads.<br>Connect. Collaborate. Build together. Start up!\">전 세계 디지털노마드와 자유롭게 만나고.<br>소통하고 협력하고. 도모하고. 스타트 업!"
+  },
+  {
+    "file": "business-valley.html",
+    "before": "data-en=\"From local food to crafted finds. A nearby market invites you to discover your own taste.\">먹거리부터 손길이 담긴 소품까지. 가까운 마켓에서 내 취향을 만나는 시간을 그립니다.",
+    "after": "data-en=\"From local tastes to handcrafted finds. Browse, taste and choose what you love.\">먹거리부터 손길이 담긴 소품까지. 보고, 맛보고, 고르는 즐거움."
+  },
+  {
+    "file": "business-valley.html",
+    "before": "data-en=\"A path through the shade of trees. A vision of an easy day beside the greenery.\">나무 그늘을 따라 걷는 길. 초록 풍경 곁에서 느긋한 하루를 그립니다.",
+    "after": "data-en=\"Walk beneath the trees. Take your time beside the greenery.\">나무 그늘을 따라 걷고. 초록 풍경 곁에서 천천히 쉬고."
+  },
+  {
+    "file": "domestic-villas.html",
+    "before": "data-en=\"A terrace overlooking the sea. A vision of new connections through easy conversation.\">바다를 바라보는 테라스. 편안한 대화 속에서 새로운 만남을 그립니다.",
+    "after": "data-en=\"A terrace overlooking the sea. Sit together, share a conversation and meet new friends.\">바다를 바라보는 테라스. 함께 앉아 대화하고, 새로운 친구를 만나다."
+  },
+  {
+    "file": "domestic-villas.html",
+    "before": "data-en=\"From a warm interior to a private terrace. A vision of villa life enjoyed at your own pace.\">따뜻한 실내에서 프라이빗 테라스까지. 나의 속도로 즐기는 별장 생활을 그립니다.",
+    "after": "data-en=\"From indoors to a private terrace. Rest, talk and spend the day at your own pace.\">실내에서 프라이빗 테라스까지. 쉬고, 이야기하고, 내 속도로 보내는 하루."
+  },
+  {
+    "file": "business-valley.html",
+    "before": "함께 일하고. 비전을 도모하고.",
+    "after": "당신이 추구하는 일.<br>필요한 자원을 만나다.",
+    "english": "Your ideas.<br>People and resources to build with."
+  },
+  {
+    "file": "business-valley.html",
+    "before": "소통에서 협력으로. 새로운 사업을 함께 도모하는 만남.",
+    "after": "아이디어를 나눌 동료. 함께 도모할 파트너. 일과 휴식을 넘나드는 글로벌 커뮤니티.",
+    "english": "Share ideas. Meet collaborators. Work and unwind in a global community."
+  }
+]

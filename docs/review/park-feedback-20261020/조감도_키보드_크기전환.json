@@ -1,0 +1,20 @@
+{
+  "keyboardCheck": {
+    "focusRegion": true,
+    "scrollLeft": 1
+  },
+  "insideResize": {
+    "height": 568,
+    "open": true,
+    "pageOverflow": false,
+    "width": 390
+  },
+  "actualResize": {
+    "bottom": 449.0625,
+    "focus": "View full panorama",
+    "height": 568,
+    "top": 395.875,
+    "visible": true,
+    "width": 390
+  }
+}

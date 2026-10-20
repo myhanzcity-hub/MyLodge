@@ -1,0 +1,34 @@
+[
+  {
+    "lang": "ko",
+    "retry": {
+      "errorHidden": true,
+      "loaded": true,
+      "zoomEnabled": true
+    }
+  },
+  {
+    "lang": "en",
+    "retry": {
+      "errorHidden": true,
+      "loaded": true,
+      "zoomEnabled": true
+    }
+  },
+  {
+    "lang": "ko",
+    "noScriptsLink": "http://127.0.0.1:4191/assets/images/chiangmai-vibrant-panorama-20261019-1680.webp",
+    "directPhoto": {
+      "loaded": true,
+      "width": 1680
+    }
+  },
+  {
+    "lang": "en",
+    "noScriptsLink": "http://127.0.0.1:4191/assets/images/chiangmai-vibrant-panorama-20261019-1680.webp",
+    "directPhoto": {
+      "loaded": true,
+      "width": 1680
+    }
+  }
+]

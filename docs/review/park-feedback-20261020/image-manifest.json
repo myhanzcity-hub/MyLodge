@@ -1,0 +1,60 @@
+[
+  {
+    "name": "jumunjin-community-20261020",
+    "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a109a4-401c-7012-b29e-91dd0f5d2397\\exec-61165bb2-3a89-4cae-8745-45c7161df92d.png",
+    "original": "docs/review/park-feedback-20261020/jumunjin-community-20261020-original.png",
+    "natural": [
+      1672,
+      941
+    ],
+    "files": [
+      {
+        "file": "assets/images/jumunjin-community-20261020-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 48942
+      },
+      {
+        "file": "assets/images/jumunjin-community-20261020-960.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 160844
+      },
+      {
+        "file": "assets/images/jumunjin-community-20261020-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 363398
+      }
+    ]
+  },
+  {
+    "name": "yangyang-poolside-20261020",
+    "source": "C:\\Users\\a0109\\.codex\\generated_images\\01a109a4-401c-7012-b29e-91dd0f5d2397\\exec-8eabff9c-bd8e-4db7-ab1f-aaa452c67e92.png",
+    "original": "docs/review/park-feedback-20261020/yangyang-poolside-20261020-original.png",
+    "natural": [
+      1672,
+      941
+    ],
+    "files": [
+      {
+        "file": "assets/images/yangyang-poolside-20261020-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 52154
+      },
+      {
+        "file": "assets/images/yangyang-poolside-20261020-960.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 167282
+      },
+      {
+        "file": "assets/images/yangyang-poolside-20261020-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 375012
+      }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "step": "domestic-to-chiangmai",
+    "url": "http://127.0.0.1:4191/business-valley.html?lang=en",
+    "heading": "Chapter 1. Chiang Mai.\nA global tech hub."
+  },
+  {
+    "fitReset": true,
+    "lang": "en",
+    "naturalWidth": 1672,
+    "src": "http://127.0.0.1:4191/assets/images/project-yangyang-20261013-1680.webp",
+    "step": "reused-dialog",
+    "title": "Yangyang Park panorama"
+  },
+  {
+    "fitReset": true,
+    "lang": "en",
+    "naturalWidth": 1680,
+    "src": "http://127.0.0.1:4191/assets/images/project-jumunjin-20261007-1680.webp",
+    "step": "reused-dialog",
+    "title": "Jumunjin Park panorama"
+  },
+  {
+    "fitReset": true,
+    "lang": "en",
+    "naturalWidth": 1680,
+    "src": "http://127.0.0.1:4191/assets/images/project-jumunjin-20261007-1680.webp",
+    "step": "reused-dialog",
+    "title": "Jumunjin Park panorama"
+  }
+]
