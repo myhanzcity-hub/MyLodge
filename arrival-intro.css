@@ -1,46 +1,47 @@
+@import url("tokens.css");
 /* Separate entry introduction. The homepage continues using its original intro.css. */
 *{box-sizing:border-box}
-.entry-page{margin:0;background:#0d2622;font-family:'Noto Sans KR',sans-serif;color:#fff;line-height:1.6;word-break:keep-all}
-.entry-fallback{min-height:100svh;padding:80px 6vw;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(#0d262250,#0d2622e8),url('assets/images/brand-villa-atmosphere-20261008-960.webp') 38% center/cover}
+.entry-page{margin:0;background:var(--ui-charcoal);font-family:var(--font-body);color:var(--ui-white);line-height:1.6;word-break:keep-all}
+.entry-fallback{min-height:100svh;padding:80px 6vw;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(rgb(var(--ui-charcoal-rgb) / 0.314),rgb(var(--ui-charcoal-rgb) / 0.91)),url('assets/images/brand-villa-atmosphere-20261008-960.webp') 38% center/cover}
 .entry-fallback h1{font-size:clamp(32px,6vw,72px);line-height:1.5}
-.entry-fallback a{align-self:flex-start;display:inline-flex;align-items:center;min-height:48px;padding:12px 20px;color:#153c32;background:#f0dfb7;text-decoration:none;border-radius:6px}
+.entry-fallback a{align-self:flex-start;display:inline-flex;align-items:center;min-height:48px;padding:12px 20px;color:var(--ui-charcoal);background:var(--ui-ivory);text-decoration:none;border-radius:6px}
 .entry-note{font-size:14px}
 .entry-page .story-top{top:max(28px,env(safe-area-inset-top))}
 .entry-page .story-intro{min-height:0;height:100svh}
-.vacation-design .hero.has-story-intro{min-height:0;padding:0;background:#0d2622}
+.vacation-design .hero.has-story-intro{min-height:0;padding:0;background:var(--ui-charcoal)}
 .hero.has-story-intro>.hero-grid,.hero.has-story-intro>.arrival-coordinate,.hero.has-story-intro>.scroll-cue{display:none}
-.hero .story-intro{position:relative;isolation:isolate;height:100svh;min-height:620px;color:#fff;background:#0d2622;overflow:hidden;touch-action:pan-y pinch-zoom}
+.hero .story-intro{position:relative;isolation:isolate;height:100svh;min-height:620px;color:var(--ui-white);background:var(--ui-charcoal);overflow:hidden;touch-action:pan-y pinch-zoom}
 .story-images,.story-shade,.story-images figure{position:absolute;inset:0;margin:0;pointer-events:none}
-.story-images figure{opacity:0;transition:opacity .85s ease;background:#153d35;overflow:hidden}
+.story-images figure{opacity:0;transition:opacity .85s ease;background:var(--ui-charcoal);overflow:hidden}
 .story-images figure.is-active{opacity:1}
 .story-images img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--story-focal,50% 50%);transform:scale(1.025)}
 .story-images .is-active img{animation:story-drift 6s linear both}
 .story-images .image-failed img{visibility:hidden}
-.story-shade{background:linear-gradient(180deg,#0c241b78 0%,#0c241b08 32%,#0c241b18 45%,#0c241be6 82%,#0c241bf5 100%),linear-gradient(90deg,#0c241b80,transparent 75%)}
+.story-shade{background:linear-gradient(180deg,rgb(var(--ui-charcoal-rgb) / 0.471) 0%,rgb(var(--ui-charcoal-rgb) / 0.031) 32%,rgb(var(--ui-charcoal-rgb) / 0.094) 45%,rgb(var(--ui-charcoal-rgb) / 0.902) 82%,rgb(var(--ui-charcoal-rgb) / 0.961) 100%),linear-gradient(90deg,rgb(var(--ui-charcoal-rgb) / 0.502),transparent 75%)}
 .story-top{position:absolute;top:calc(var(--mobile-header-offset,96px) + 16px);left:clamp(24px,5vw,80px);right:clamp(24px,5vw,80px);display:flex;align-items:center;justify-content:space-between;gap:16px}
-.story-top>span{font-size:14px;letter-spacing:.18em;color:#f2ddad;font-weight:600;text-shadow:0 2px 12px #0c241b}
-.hero .story-intro button{min-height:48px;border:1px solid #e3d1a578;border-radius:6px;background:#153c32e6;color:#fff5dd;font:500 16px/1.4 'Noto Sans KR',sans-serif;padding:11px 17px;cursor:pointer;backdrop-filter:blur(8px)}
-.hero .story-intro button:hover{background:#254a3fe6;border-color:#f2ddad}
+.story-top>span{font-size:14px;letter-spacing:.18em;color:var(--ui-ivory);font-weight:600;text-shadow:0 2px 12px var(--ui-charcoal)}
+.hero .story-intro button{min-height:48px;border:1px solid rgb(var(--ui-ivory-rgb) / 0.471);border-radius:6px;background:rgb(var(--ui-charcoal-rgb) / 0.902);color:var(--ui-ivory);font:500 16px/1.4 var(--font-heading);padding:11px 17px;cursor:pointer;backdrop-filter:blur(8px)}
+.hero .story-intro button:hover{background:rgb(var(--ui-charcoal-rgb) / 0.902);border-color:var(--ui-ivory)}
 .hero .story-intro button:disabled{opacity:.35;cursor:default}
-.hero .story-intro button:focus-visible,.story-intro:focus-visible{outline:3px solid #eed5a1;outline-offset:5px}
+.hero .story-intro button:focus-visible,.story-intro:focus-visible{outline:3px solid var(--ui-ivory);outline-offset:5px}
 .story-caption{position:absolute;left:clamp(24px,5vw,80px);right:clamp(24px,5vw,80px);bottom:clamp(176px,20vh,220px);max-width:1150px}
-.story-meta{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid #dfbf7f96;padding-top:18px;margin-bottom:22px;max-width:760px}
-.hero .story-topic{color:#f2ddad;font-size:15px;letter-spacing:.1em;line-height:1.6;margin:0;font-weight:500}
-.story-counter{font-size:16px;letter-spacing:.08em;font-variant-numeric:tabular-nums;color:#f2ddad;flex-shrink:0}
-.vacation-design .hero .story-title{font-size:clamp(38px,4.6vw,68px);line-height:1.42;letter-spacing:-.055em;margin:0;color:#fffaf0;font-weight:600;white-space:normal;text-shadow:0 3px 22px #071a13a6}
+.story-meta{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid rgb(var(--ui-ivory-rgb) / 0.588);padding-top:18px;margin-bottom:22px;max-width:760px}
+.hero .story-topic{color:var(--ui-ivory);font-size:15px;letter-spacing:.1em;line-height:1.6;margin:0;font-weight:500}
+.story-counter{font-size:16px;letter-spacing:.08em;font-variant-numeric:tabular-nums;color:var(--ui-ivory);flex-shrink:0}
+.vacation-design .hero .story-title{font-size:clamp(38px,4.6vw,68px);line-height:1.42;letter-spacing:-.055em;margin:0;color:var(--ui-white);font-weight:600;white-space:normal;text-shadow:0 3px 22px rgb(var(--ui-charcoal-rgb) / 0.651)}
 .story-title>span{display:block;word-break:keep-all;overflow-wrap:anywhere}
-.story-title>span:last-child{color:#f2ddad;font-weight:500}
-.story-title>span:only-child{color:#fffaf0;font-weight:600}
+.story-title>span:last-child{color:var(--ui-ivory);font-weight:500}
+.story-title>span:only-child{color:var(--ui-white);font-weight:600}
 .vacation-design .hero .story-intro[data-lines="3"] .story-title{font-size:clamp(32px,3.8vw,56px)}
 .story-bottom{position:absolute;left:clamp(24px,5vw,80px);right:clamp(24px,5vw,80px);bottom:max(28px,env(safe-area-inset-bottom));}
-.story-progress{height:3px;background:#e3d1a536;overflow:hidden;margin-bottom:22px;border-radius:2px}
-.story-progress>span{display:block;width:100%;height:100%;background:#e2bf7b;transform:scaleX(var(--story-progress,0));transform-origin:left}
+.story-progress{height:3px;background:rgb(var(--ui-ivory-rgb) / 0.212);overflow:hidden;margin-bottom:22px;border-radius:2px}
+.story-progress>span{display:block;width:100%;height:100%;background:var(--ui-taupe);transform:scaleX(var(--story-progress,0));transform-origin:left}
 .story-controls{display:flex;justify-content:space-between;align-items:center;gap:22px}
 .story-transport{display:flex;gap:10px;flex-shrink:0}
 .hero .story-intro .story-prev,.hero .story-intro .story-next{min-width:48px;padding:9px;font-size:22px}
-.hero .story-intro .story-play{min-width:138px;background:#f0dfb7;color:#153c32;border-color:#f0dfb7}
-.hero .story-intro .story-play:hover{background:#fff0ce}
-.hero .story-note{font-size:14px;line-height:1.8;color:#e9ede0;margin:0;text-shadow:0 2px 6px #0c241b}
+.hero .story-intro .story-play{min-width:138px;background:var(--ui-ivory);color:var(--ui-charcoal);border-color:var(--ui-ivory)}
+.hero .story-intro .story-play:hover{background:var(--ui-ivory)}
+.hero .story-note{font-size:14px;line-height:1.8;color:var(--ui-ivory);margin:0;text-shadow:0 2px 6px var(--ui-charcoal)}
 .story-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 .story-intro.is-paused .story-images img{animation-play-state:paused}
 @keyframes story-drift{from{transform:scale(1.025)}to{transform:scale(1.075)}}
@@ -60,7 +61,7 @@
  .hero .story-intro .story-play{min-width:130px;font-size:16px}
  .story-progress{margin-bottom:20px}
  .hero .story-note{font-size:13px;line-height:1.7}
- .story-shade{background:linear-gradient(180deg,#0c241b80 0%,#0c241b00 25%,#0c241b18 42%,#0c241be8 72%,#0c241bfa 100%)}
+ .story-shade{background:linear-gradient(180deg,rgb(var(--ui-charcoal-rgb) / 0.502) 0%,rgb(var(--ui-charcoal-rgb) / 0) 25%,rgb(var(--ui-charcoal-rgb) / 0.094) 42%,rgb(var(--ui-charcoal-rgb) / 0.91) 72%,rgb(var(--ui-charcoal-rgb) / 0.98) 100%)}
  .story-intro[data-language=en] .story-title{font-size:clamp(25px,6.7vw,32px);letter-spacing:-.03em}
  .vacation-design .hero .story-intro[data-lines="3"] .story-title{font-size:clamp(26px,7.2vw,36px)}
  .vacation-design .hero .story-intro[data-language=en][data-lines="3"] .story-title{font-size:clamp(25px,6.7vw,32px);line-height:1.45}

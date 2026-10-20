@@ -1,3 +1,4 @@
+@import url("tokens.css");
 /* Side pages use the homepage's scenic opening, cream sections and forest cards. */
 :root{color-scheme:only light}
 .destination-page{background:#edf0e7;color:#173e37;overflow-wrap:break-word}
@@ -89,12 +90,12 @@
 }
 /* Make each destination's action distinct; no nested links or invisible hit targets. */
 .photo-led #brand-paths .path-copy-link{color:inherit;text-decoration:none;cursor:pointer}
-.photo-led #brand-paths .path-copy-link:focus-visible,.photo-led #brand-paths .domestic-path:focus-visible{outline:4px solid #e7bb74;outline-offset:5px}
+.photo-led #brand-paths .path-copy-link:focus-visible,.photo-led #brand-paths .domestic-path:focus-visible{outline:4px solid var(--ui-taupe);outline-offset:5px}
 .photo-led #brand-paths .path-copy-link:hover h3,.photo-led #brand-paths .domestic-path:hover h3{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
-.photo-led #brand-paths.scenic-deep .path-copy>.path-action{display:flex;align-items:center;min-height:48px;border-top:1px solid #739f8a80;padding-top:14px;color:#e7d49d;font-size:16px;font-weight:600;margin-top:auto;letter-spacing:0}
+.photo-led #brand-paths.scenic-deep .path-copy>.path-action{display:flex;align-items:center;min-height:48px;border-top:1px solid rgb(var(--ui-charcoal-rgb) / 0.502);padding-top:14px;color:var(--ui-ivory);font-size:16px;font-weight:600;margin-top:auto;letter-spacing:0}
 .photo-led #brand-paths .path-copy{grid-template-rows:auto auto 1fr auto}
-.photo-led #brand-paths .external-image-label{position:absolute;left:16px;bottom:16px;background:#123e35ed;color:#fff8de;border:1px solid #b5c8a6;border-radius:8px;font-size:14px;line-height:1.5;padding:8px 12px;pointer-events:none}
-.photo-led #brand-paths .chiangmai-image-link:focus-visible{outline-color:#e7bb74}
+.photo-led #brand-paths .external-image-label{position:absolute;left:16px;bottom:16px;background:rgb(var(--ui-charcoal-rgb) / 0.929);color:var(--ui-ivory);border:1px solid var(--ui-taupe);border-radius:8px;font-size:14px;line-height:1.5;padding:8px 12px;pointer-events:none}
+.photo-led #brand-paths .chiangmai-image-link:focus-visible{outline-color:var(--ui-taupe)}
 @media(max-width:1023px){
  .destination-page .header-inner{gap:16px}
  .destination-page .header-inner>nav{display:none}

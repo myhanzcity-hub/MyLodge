@@ -1,5 +1,6 @@
 // Public project introduction. No consultation, collection or sending interface.
 (() => {
+document.querySelector('meta[name="theme-color"]')?.setAttribute('content','#f7f5f0');
 // Review figures, not approved contract terms. All displayed prices derive here.
 const offer=Object.freeze({amount:3960000,depositRate:.05,shares:120});
 const pageRevision=Object.freeze({date:'2026-10-05',label:'2026.10.05'});
@@ -79,11 +80,11 @@ const checklistMarkup='<details id="checklist" class="participation-checklist"><
  ['소유와 이용의 범위','내가 갖게 되는 권리의 범위와 이전 절차, 이용 일수와 예약 기준을 살펴보세요.','<path d="M6 8h10M6 12h7"/>'],
  ['납입과 취소 조건','총금액과 납입 일정, 추가 비용, 취소와 환불 기준을 미리 확인하세요.','<path d="M11 6v6l4 2"/>'],
  ['진행 상태와 운영 주체','현재 어디까지 준비되었는지, 누가 운영을 맡는지 확인해 보세요.','<circle cx="11" cy="11" r="4"/><path d="M11 1v4M11 17v4M1 11h4M17 11h4"/>']
- ].map(c=>'<article class="card check-card"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#244c45" stroke-width="1.5" aria-hidden="true"><rect x="1" y="1" width="20" height="20" rx="5"/>'+c[2]+'</svg><div><h3>'+c[0]+'</h3><p>'+c[1]+'</p></div></article>').join('')+'</div></details>';
+ ].map(c=>'<article class="card check-card"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="var(--ui-charcoal)" stroke-width="1.5" aria-hidden="true"><rect x="1" y="1" width="20" height="20" rx="5"/>'+c[2]+'</svg><div><h3>'+c[0]+'</h3><p>'+c[1]+'</p></div></article>').join('')+'</div></details>';
 
 document.querySelector('main').innerHTML =
  '<section id="home" class="hero"><div class="container hero-grid"><div><div class="eyebrow">MY LODGE · 공유별장 프로젝트</div><h1>별장 하나,<br>내 생활에 들이는 법.</h1><p class="hero-sub">함께 준비하는 별장, 나다운 쉼의 시작.</p><p class="hero-description">한 채를 함께 준비하고, 정해질 이용 기준에 따라 머무는 공유별장 프로젝트입니다.</p><div class="price-pair"><div class="price-tile"><p>1구좌 기준 예상 금액</p><strong>'+priceText.amount+'</strong></div><div class="price-tile"><p>이 금액 중 최초 납입 '+priceText.rate+'</p><strong>'+priceText.deposit+'</strong><small>이후 잔여 금액과 별도 비용 확인</small></div></div><p class="small">현재 검토 중인 금액입니다. 납입 일정과 이용 조건은 정식 모집 전 안내합니다.</p><div class="hero-actions">'+cta+'<a class="outline" href="#ownership">공유 방식 알아보기 ↗</a></div><p class="small hero-reassurance">현재는 사전 안내 단계입니다. 실제 모집·계약·예약은 진행되지 않습니다.</p></div><figure class="photo hero-photo">'+image(0,'별장 공간 콘셉트')+'<figcaption>AI 생성 콘셉트 · 실제 현장·확정 설계가 아닙니다</figcaption></figure></div></section>'+
-section('ownership','sage',ownershipMarkup+decisionGuide)+
+section('ownership','ivory-surface',ownershipMarkup+decisionGuide)+
  section('vision','vision-section','<div class="vision-heading"><span class="eyebrow">MY LODGE · SPACE VISION</span><h2>함께 꿈꾸는 공간,<br>한눈에 펼쳐보다.</h2><p>사업계획서에 담긴 공간 조성 콘셉트입니다.</p></div><figure class="photo vision-photo">'+planImage(8,'마이롯지 공간 조성 구상')+'<figcaption>사업계획서 조감도 콘셉트 · 실제 현장·확정 설계가 아닙니다</figcaption></figure>')+
  section('pricing','mist',intro('얼마부터 시작하는지,<br>먼저 살펴보세요.','검토 중인 1구좌 금액과 납입 계획입니다.')+'<div class="card pricing-table">'+[
  ['1구좌 참여 기준 <span>검토 금액</span>','적용 프로젝트와 포함 항목, 최종 가격은 확정 전입니다.',''+priceText.amount+''],['그중 최초 5%의 계산값','기준 금액의 '+priceText.rate+'입니다. 전체 금액이 아니며, 현재 수납은 진행하지 않습니다.',''+priceText.deposit+''],['계산상 잔여 기준 금액',''+priceText.amount+'에서 최초 5%를 뺀 금액입니다. 별도 비용을 합산한 최종 잔액은 아닙니다.',''+priceText.balance+''],['납입 계획','최초 5%의 포함 여부, 회차별 금액·기한·발생 조건은 미정입니다.','6단계 구상 · 상세 미정']
@@ -404,62 +405,25 @@ window.addEventListener('hashchange',selectServiceHash);
 const deckResize=new ResizeObserver(sizeServiceDeck);deckCards.forEach(card=>deckResize.observe(card));
 showServiceCard(0);selectServiceHash();
 
-// Lifestyle photos loop automatically while their section is in view.
+// Keep the three lifestyle photos visible together in the editorial masonry grid.
 const photoDeck=document.querySelector('.lifestyle-grid');
 const photoSlides=[...photoDeck.querySelectorAll('figure')];
-photoSlides.forEach(figure=>{photoDeck.append(figure);figure.querySelector('img').draggable=false;});
+photoSlides.forEach(figure=>{
+ photoDeck.append(figure);
+ figure.inert=false;
+ figure.removeAttribute('aria-hidden');
+ figure.removeAttribute('aria-roledescription');
+ figure.removeAttribute('data-photo-position');
+ figure.querySelector('img').draggable=false;
+});
 photoDeck.querySelector('.lifestyle-secondary')?.remove();
 photoDeck.classList.add('photo-deck');
-photoDeck.setAttribute('role','region');
+photoDeck.setAttribute('role','group');
 photoDeck.setAttribute('aria-label','별장 생활 사진');
-photoDeck.setAttribute('aria-roledescription','캐러셀');
-const photoControls=document.createElement('div');
-photoControls.className='deck-controls photo-deck-controls';
-photoControls.innerHTML='<p class="deck-status" aria-live="off"></p><button type="button" data-photo-pause aria-pressed="false">자동 재생 멈추기</button>';
-photoDeck.after(photoControls);
-let photoIndex=0;
-function showPhoto(index){
- photoIndex=(index+photoSlides.length)%photoSlides.length;
- photoSlides.forEach((figure,i)=>{
-  figure.dataset.photoPosition=['active','right','left'][(i-photoIndex+photoSlides.length)%photoSlides.length];
-  figure.inert=i!==photoIndex;
-  figure.setAttribute('aria-hidden',String(i!==photoIndex));
-  figure.setAttribute('aria-roledescription','슬라이드');
- });
- photoControls.querySelector('.deck-status').textContent=`0${photoIndex+1} / 0${photoSlides.length} · ${photoSlides[photoIndex].querySelector('figcaption').textContent}`;
-}
-let photoTimer=null,photoVisible=false,photoPaused=false,photoDragging=false;
-const photoMobileReading=matchMedia('(max-width:1023px)');
-const photoPause=photoControls.querySelector('[data-photo-pause]');
-function photoReadingDelay(){
- const caption=photoControls.querySelector('.deck-status');
- const lineHeight=parseFloat(getComputedStyle(caption).lineHeight)||20;
- const lines=Math.max(1,Math.round(caption.getBoundingClientRect().height/lineHeight));
- // Short captions leave more time to explore the photograph; wrapped captions get extra time.
- return Math.min(16000,(photoMobileReading.matches?10000:8000)+Math.max(0,lines-1)*2000);
-}
-function schedulePhotos(){
- clearTimeout(photoTimer);
- if(photoVisible&&!photoPaused&&!photoDragging&&!document.hidden&&!motionPreference.matches)
-  photoTimer=setTimeout(()=>{showPhoto(photoIndex+1);schedulePhotos();},photoReadingDelay());
-}
-photoDeck.addEventListener('mylodge:gesture-start',()=>{photoDragging=true;clearTimeout(photoTimer);});
-photoDeck.addEventListener('mylodge:slide-swipe',event=>{showPhoto(photoIndex+event.detail.direction);});
-photoDeck.addEventListener('mylodge:gesture-end',()=>{photoDragging=false;schedulePhotos();});
-photoPause.addEventListener('click',()=>{
- photoPaused=!photoPaused;photoPause.setAttribute('aria-pressed',String(photoPaused));
- photoPause.textContent=new URLSearchParams(location.search).get('lang')==='en'?(photoPaused?'Resume slideshow':'Pause slideshow'):(photoPaused?'자동 재생 시작하기':'자동 재생 멈추기');
- schedulePhotos();
-});
-document.addEventListener('visibilitychange',schedulePhotos);
-motionPreference.addEventListener('change',schedulePhotos);
-photoMobileReading.addEventListener('change',schedulePhotos);
-new IntersectionObserver(entries=>{photoVisible=entries[0].isIntersecting;schedulePhotos();},{threshold:.25}).observe(photoDeck);
-showPhoto(0);
 
 // One-time mid-page motion: images unfold, headings rise and steps draw in sequence.
 const middleEntrances=[
- ...document.querySelectorAll('#vision .vision-heading,#vision .vision-photo,#nature .nature-copy,#pricing .intro,#ownership .intro,#projects .intro,#lifestyle .intro,#participation .intro,#stay-services .intro,#progress .intro'),
+ ...document.querySelectorAll('#vision .vision-heading,#nature .nature-copy,#pricing .intro,#ownership .intro,#projects .intro,#lifestyle .intro,#participation .intro,#stay-services .intro,#progress .intro'),
  ...document.querySelectorAll('#progress .fact-list>div'),
  ...document.querySelectorAll('.project-grid > .project,.step-grid > .step'),
  photoDeck,document.querySelector('#stay-services')
@@ -523,3 +487,10 @@ window.addEventListener('load',()=>requestAnimationFrame(()=>{
  if(target)target.scrollIntoView({block:'start',behavior:'instant'});
 }),{once:true});
 })();
+
+// The visual system is intentionally loaded after the established page styles.
+// Keeping it separate makes a later component-based migration straightforward.
+if(!document.querySelector('link[href="luxury-system.css"]')){
+ const luxuryStyles=document.createElement('link');
+ luxuryStyles.rel='stylesheet';luxuryStyles.href='luxury-system.css';document.head.append(luxuryStyles);
+}

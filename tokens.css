@@ -1,0 +1,15 @@
+/* The only UI palette permitted in My Lodge public surfaces. */
+:root{
+  /* Licensed/local brand faces take priority; Korean falls back to Noto Sans KR. */
+  --font-body:"Avenir Next","Avenir Next LT Pro","Avenir", "Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --font-heading:"Neue Haas Grotesk Text Pro","Neue Haas Grotesk Display Pro","Neue Haas Grotesk","Avenir Next","Avenir", "Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --font-display:"Canela","Canela Text","Iowan Old Style","Baskerville",serif;
+  --ui-ivory:#F7F5F0;
+  --ui-charcoal:#171717;
+  --ui-gray:#8A8A8A;
+  --ui-taupe:#B7ADA0;
+  --ui-white:#FFFFFF;
+  --ui-ivory-rgb:247 245 240;
+  --ui-charcoal-rgb:23 23 23;
+  --ui-taupe-rgb:183 173 160;
+}

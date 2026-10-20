@@ -1,3 +1,4 @@
+@import url("tokens.css");
 /* Mobile reading and touch controls. Desktop layouts keep their existing rules. */
 @media(max-width:1023px){
  header{top:max(10px,env(safe-area-inset-top))!important}
@@ -7,7 +8,7 @@
  #mobile-menu a{min-height:44px;display:flex;align-items:center}
  .mobile-menu-open .mobile-cta,.hero-in-view .mobile-cta,.life-in-view .mobile-cta{display:none!important}
  .mobile-cta .primary{min-height:44px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
- .mobile-cta{padding-bottom:calc(10px + env(safe-area-inset-bottom));box-shadow:0 -8px 24px #163d3212}
+ .mobile-cta{padding-bottom:calc(10px + env(safe-area-inset-bottom));box-shadow:0 -8px 24px rgb(var(--ui-charcoal-rgb) / 0.071)}
  .mobile-cta{padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}
  .mobile-price-status{font-size:10px}.mobile-price small{font-size:11px}
  .valley-page .valley-purpose-tabs button{min-height:44px}
@@ -17,10 +18,10 @@
 @media(max-width:700px){
  html{scroll-padding-top:calc(88px + env(safe-area-inset-top))}
  .container{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
- .vacation-design .space-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;border:1px solid #b8c9b7;border-radius:10px;gap:0;background:#f5f6eddb}
+ .vacation-design .space-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;border:1px solid var(--ui-taupe);border-radius:10px;gap:0;background:rgb(var(--ui-ivory-rgb) / 0.859)}
  .vacation-design .space-tabs button{min-width:0;min-height:48px;padding:12px 8px;gap:8px;font-size:13px;border:0;border-radius:0;margin:0}
- .vacation-design .space-tabs button[aria-selected=true]{background:#2c5945;color:#fff;box-shadow:inset 0 -3px #d6c697}
- .space-tabs button[aria-selected=true] span{color:#d5e4cf}
+ .vacation-design .space-tabs button[aria-selected=true]{background:var(--ui-gray);color:var(--ui-white);box-shadow:inset 0 -3px var(--ui-taupe)}
+ .space-tabs button[aria-selected=true] span{color:var(--ui-ivory)}
  .vacation-design .space-copy{padding:26px 22px}.vacation-design .space-copy>p:not(.eyebrow){font-size:14px}
  .vacation-design .space-copy ul{font-size:13px}
  .vacation-design :is(.text-link,.location,.project-details summary,.service-expand summary,.footer-links button){min-height:44px;display:inline-flex;align-items:center;line-height:1.6}
@@ -42,7 +43,7 @@
  .vacation-design .rights-heading p{font-size:14px;line-height:1.8}
  .vacation-design .service-category-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
  .vacation-design .service-category-nav a{min-width:0;min-height:48px;display:flex;justify-content:center;align-items:center;text-align:center;font-size:12px!important;padding:10px 7px;line-height:1.5}
- .vacation-design .service-category-nav a[aria-current=true]{background:#dccb9e!important;color:#173d35!important;border-color:#dccb9e!important}
+ .vacation-design .service-category-nav a[aria-current=true]{background:var(--ui-taupe)!important;color:var(--ui-charcoal)!important;border-color:var(--ui-taupe)!important}
  .vacation-design .service-deck{margin-top:32px}
  .vacation-design .service-deck .service-overview-card{top:28px;width:100%;padding:24px 20px;box-sizing:border-box}
  .vacation-design .service-deck [data-deck-position="active"]{transform:translateX(-50%)}
@@ -74,7 +75,7 @@
  .vacation-design .vacation-finale small{font-size:11px;line-height:1.8}
  .vacation-design .path-card{padding:26px}.vacation-design .path-card p{font-size:14px;line-height:1.8}
  .vacation-design .path-card b{font-size:13px;line-height:1.8}
- .vacation-design .footer-links{gap:6px 18px;flex-wrap:wrap}.vacation-design .footer-disclaimer{font-size:13px;line-height:1.8;color:#d0d9ca}
+ .vacation-design .footer-links{gap:6px 18px;flex-wrap:wrap}.vacation-design .footer-disclaimer{font-size:13px;line-height:1.8;color:var(--ui-ivory)}
  .valley-page .valley-space-grid{grid-template-columns:1fr}.valley-page .valley-space-grid article{padding:24px}
  .valley-page .valley-space-grid span{font-size:10px}.valley-page .valley-space-grid h3{font-size:19px}
  .valley-page .valley-space-grid p{font-size:14px;line-height:1.8}

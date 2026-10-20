@@ -4,7 +4,7 @@
  // Navigation lives in the category menus and the character guide.
  const removePromotionalLinks=()=>{
   document.querySelectorAll('a').forEach(link=>{
-   if(link.closest('header nav, #mobile-menu, .lodge-guide, .service-category-nav')||link.matches('.brand,.skip-link'))return;
+   if(link.closest('header nav, #mobile-menu, .lodge-guide, .service-category-nav, footer')||link.matches('.brand,.skip-link'))return;
    if(link.classList.contains('path-card')){
     const card=document.createElement('article');card.className=link.className;
     while(link.firstChild)card.append(link.firstChild);
@@ -17,6 +17,7 @@
   });
  };
  const photo=(name,alt,eager=false,date=20261007)=>`<img src="assets/images/${name}-${date}-960.webp" srcset="assets/images/${name}-${date}-480.webp 480w, assets/images/${name}-${date}-960.webp 960w, assets/images/${name}-${date}-1680.webp 1680w" sizes="(max-width:800px) 100vw, 70vw" width="1680" height="945" alt="${alt}" decoding="async" ${eager?'fetchpriority="high"':'loading="lazy"'}>`;
+ const suppliedPhoto=(name,alt,width,height,eager=false)=>`<img src="assets/images/${name}.png" sizes="(max-width:800px) 100vw, 70vw" width="${width}" height="${height}" alt="${alt}" decoding="async" ${eager?'fetchpriority="high"':'loading="lazy"'}>`;
  document.body.classList.add('photo-led');
  if(document.body.classList.contains('valley-page')){
   const hero=document.querySelector('.valley-hero');
@@ -33,10 +34,12 @@
   return;
  }
  if(!document.body.classList.contains('promotion-home'))return;
+ // Preserve the current facility selector; only hydrate the legacy tabs.
+ if(!document.querySelector('#villa-spaces .facility-selector')) {
  const spaces=[
-  ['facility-hotel-pool','별장 외관','최첨단 별장.<br>지금 내가 있는 곳이 이비자!','최신식 별장과 365일 완벽한 풀파티. 풍경과 만남을 즐기는 테라스. 그곳에 닿는 순간, 나의 일상은 화려함으로 바뀐다.',['최신식 모듈러 하우스 별장.','풍경과 만남을 즐기는 테라스.','이비자에 버금가는 풀파티 무대.'],20261008,'01 / MY VILLA'],
+  ['facility-hotel-pool','별장 외관','자연을 향해 열린<br>별장과 풀장.','넓은 창의 별장과 물가의 휴식, 풍경과 만남을 잇는 테라스. 마이롯지가 그리는 공간 구상입니다.',['모듈형 별장 공간 콘셉트','풍경과 만남을 즐기는 테라스','풀장과 카바나 공간 구상'],20261008,'01 / MY VILLA'],
   ['facility-beach','비치사이드','바다를 곁에.<br>여유를 가까이.','파도와 햇살, 바다를 바라보는 풍경. 해변 곁에서 여유로운 휴가를 그립니다.',['바다를 바라보는 풍경','함께 즐기는 해변의 여유'],20261007,'02 / BEACHSIDE'],
-  ['facility-pool-cabana','풀파티 · 카바나','빛나는 풀파티.<br>오너들만의 카바나.','음악과 만남의 풀파티. 카바나에서의 느긋한 휴식.',['음악과 함께하는 풀파티','오너들만의 카바나'],20261008,'03 / POOL PARTY & CABANA'],
+  ['facility-pool-cabana','풀장 · 카바나','물가에서 만나는 저녁.<br>느긋한 카바나.','음악과 만남이 있는 풀장, 카바나에서의 느긋한 휴식을 그립니다.',['음악과 함께하는 풀장 공간','카바나에서 보내는 휴식'],20261008,'03 / POOL & CABANA'],
   ['facility-club','카페테리아 · 클럽','낮의 커피.<br>밤의 음악.','이야기가 이어지는 라운지에서 음악과 춤이 있는 밤까지. 머무름에 활기를 더합니다.',['카페와 클럽 라운지','음악과 함께하는 만남'],20261007,'04 / CAFE & CLUB'],
   ['facility-market-v2','마켓','휴가에 필요한 것들.<br>가까운 마켓에서.','가벼운 먹거리부터 휴가에 필요한 물품까지. 머무는 공간 가까이에서 편하게 둘러보는 마켓을 그립니다.',['먹거리와 휴가용품','편하게 둘러보는 리조트 마켓'],20261008,'05 / MARKET'],
   ['facility-concierge','컨시어지','반가운 도착.<br>편안한 머무름.','도착 전 준비부터 머무는 동안의 안내까지. 휴가를 편안하게 즐길 수 있도록 돕는 컨시어지를 그립니다.',['도착과 시설 이용 안내','머무는 동안의 세심한 지원'],20261008,'06 / CONCIERGE']
@@ -51,7 +54,8 @@
  });
  document.querySelector('#villa-spaces .vacation-intro>p:last-child').textContent='공간을 선택해 자세히 둘러보세요.';
  document.querySelector('#villa-spaces .vacation-intro>.eyebrow').textContent='MY LODGE / EXPLORE YOUR VILLA';
- document.querySelector('.promotion-intro-photo').innerHTML=photo('story-destination','해변과 풀장, 모듈 별장이 함께 보이는 휴양지');
+ }
+ document.querySelector('.promotion-intro-photo').innerHTML=suppliedPhoto('villa','해변과 풀장, 모듈 별장이 함께 보이는 휴양지',1566,1004);
  const projectNames=['project-jumunjin','project-yangyang'];
  document.querySelectorAll('#projects .project').forEach((card,i)=>{
   card.querySelector('h3').textContent=i?'마이롯지 양양 파크':'마이롯지 주문진 파크';
@@ -64,7 +68,7 @@
  });
  makeCards('#ownership',['owner-unwind','owner-connect','owner-ideas']);
  makeCards('#stay-services',['service-ready','service-property-care','service-owner-exchange'],20261008);
- const stories=[['facility-villa','완벽한 휴가의 시작.','별장과 풀장, 나의 일상이 달라지는 순간.'],['facility-terrace','사람을 만나는 오후.','편안한 대화 속에서 새로운 생각이 시작됩니다.'],['facility-club','음악이 있는 밤.','함께 즐기는 라운지. 별장의 밤에 활기를 더합니다.']];
+ const stories=[['facility-villa','별장에 도착하는 순간.','별장과 풀장, 일상에서 잠시 벗어나는 장면.'],['facility-terrace','사람을 만나는 오후.','편안한 대화 속에서 새로운 생각이 시작됩니다.'],['facility-club','음악이 있는 밤.','함께 즐기는 라운지. 별장의 밤에 활기를 더합니다.']];
  document.querySelectorAll('.life-scene').forEach((scene,i)=>{const [name,title,copy]=stories[i];scene.querySelector('img').outerHTML=photo(name,title+' 공간 콘셉트');scene.querySelector('h2').textContent=title;scene.querySelector('.life-copy>p:last-child').textContent=copy;});
  // A portrait crop needs enough pixels for the image height, not just the screen width.
  document.querySelectorAll('.life-scene>img').forEach(image=>{image.sizes='(max-width:700px) 1152px, (max-height:500px) 1080px, max(100vw, 195svh)';});
@@ -109,8 +113,14 @@
  showLife(0);
  document.querySelector('#lifestyle .intro h2').textContent='사진으로 만나는 하루.';
  document.querySelector('#lifestyle .intro>p').remove();
- document.querySelectorAll('#lifestyle .photo').forEach((slide,i)=>{const name=['gallery-pool','gallery-terrace','gallery-night'][i];if(!name)return;const label=['바다와 함께 즐기는 풀장','사업가들이 만나는 테라스','음악과 대화가 있는 클럽'][i];slide.querySelector('img').outerHTML=photo(name,label);slide.querySelector('figcaption').textContent=label;});
- const deckStatus=document.querySelector('.photo-deck-controls .deck-status');if(deckStatus)deckStatus.textContent='01 / 03 · 바다와 함께 즐기는 풀장';
+ document.querySelectorAll('#lifestyle .photo').forEach((slide,i)=>{
+  const name=['luxury2','meeting','gallery-night'][i];if(!name)return;
+  const label=['바다와 함께 즐기는 풀장','사업가들이 만나는 테라스','음악과 대화가 있는 클럽'][i];
+  slide.querySelector('img').outerHTML=i===0
+   ?suppliedPhoto(name,label,943,1668,true)
+   :i===1?suppliedPhoto(name,label,1024,1536,true):photo(name,label,true);
+  slide.querySelector('figcaption').textContent=label;
+ });
  const paths=document.querySelector('#brand-paths');
  paths.querySelector('h2').innerHTML='휴가와 함께 시작하는<br>미래의 비전.';
  paths.querySelectorAll('.path-card').forEach((card,i)=>{
@@ -132,7 +142,10 @@
   const backdrop=document.querySelector('#'+id+' .scenic-camera img');if(backdrop)backdrop.outerHTML=photo(name,'');
  }
  // These sections have opaque reading surfaces; discard their unused image layers.
- document.querySelectorAll('#villa-spaces>.scenic-backdrop,#ownership>.scenic-backdrop,#projects>.scenic-backdrop,#lifestyle>.scenic-backdrop').forEach(layer=>layer.remove());
+ document.querySelectorAll('#villa-spaces>.scenic-backdrop,#ownership>.scenic-backdrop,#projects>.scenic-backdrop,#lifestyle>.scenic-backdrop').forEach(layer=>{
+  if(layer.closest('#villa-spaces')&&document.querySelector('#villa-spaces .facility-selector'))return;
+  layer.remove();
+ });
  const serviceBackdrop=document.querySelector('#stay-services .scenic-camera img');
  if(serviceBackdrop){serviceBackdrop.src='assets/images/living-dinner-960.webp';serviceBackdrop.srcset='assets/images/living-dinner-480.webp 480w, assets/images/living-dinner-960.webp 960w, assets/images/living-dinner-1536.webp 1536w';serviceBackdrop.width=1536;serviceBackdrop.height=864;serviceBackdrop.sizes='100vw';}
  // Decorative neon motifs retain the existing text labels and tab controls.
@@ -204,4 +217,14 @@
  document.querySelectorAll('#villa-spaces,#vision').forEach(section=>borderObserver.observe(section));
  const suspendBorders=()=>document.body.classList.toggle('neon-border-suspended',document.hidden);
  document.addEventListener('visibilitychange',suspendBorders);suspendBorders();
+})();
+
+// Owner stories: three image-led editorial cards using the existing local imagery.
+(() => {
+ const section=document.querySelector('#ownership');const rail=section?.querySelector('.promotion-cards');if(!rail)return;
+ const cards=[...rail.querySelectorAll(':scope > article')];if(cards.length!==3)return;
+ section.classList.add('owner-benefits','owner-editorial');
+ const intro=section.querySelector('.intro');
+ if(intro){const heading=intro.querySelector('h2');const eyebrow=intro.querySelector('.eyebrow');if(heading&&eyebrow){eyebrow.className='owner-benefits-label';intro.classList.add('owner-benefits-intro');const headingRow=document.createElement('div');headingRow.className='owner-benefits-heading';heading.before(headingRow);headingRow.append(heading);const note=document.createElement('p');note.className='owner-benefits-quote';note.textContent='휴식, 만남, 새로운 생각.';headingRow.append(note);}}
+ rail.classList.add('owner-editorial-grid');
 })();

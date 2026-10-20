@@ -6,7 +6,13 @@
  const narrowQuery=matchMedia('(max-width:700px)');
  const narrow=narrowQuery.matches;
  const english=new URLSearchParams(location.search).get('lang')==='en';
- const movie=english?(narrow?'mylodge-intro-en-30s-mobile.mp4':'mylodge-intro-en-30s.mp4'):(narrow?'mylodge-intro-scenes-20261006-30s-mobile.mp4':'mylodge-intro-scenes-20261006-30s.mp4');
+ if(!english){
+  stage.classList.add('film-static-image');
+  stage.innerHTML=`<img class="film-video" src="assets/video/MyLodge1.png" alt="마이롯지 별장 생활 콘셉트"><div class="film-top"><a href="#our-villa" class="film-skip">마이롯지 만나보기 ↓</a></div><div class="film-bottom"><p class="film-note">마이롯지가 그리는 생활 · AI 콘셉트 이미지</p></div>`;
+  hero.append(stage);hero.classList.add('has-motion-intro');
+  return;
+ }
+ const movie=narrow?'mylodge-intro-en-30s-mobile.mp4':'mylodge-intro-en-30s.mp4';
  const poster=english?(narrow?'mylodge-intro-en-poster-mobile.webp':'mylodge-intro-en-poster.webp'):(narrow?'mylodge-intro-scenes-20261006-poster-mobile.webp':'mylodge-intro-scenes-20261006-poster.webp');
  const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
  stage.innerHTML=`<video class="film-video" loop playsinline preload="auto" muted poster="assets/video/${poster}" aria-label="별장, 휴식, 풀장, 커뮤니티, 만남, 클럽과 야간 축제로 이어지는 마이롯지 영상" aria-describedby="film-description"><source src="assets/video/${movie}" type="video/mp4"></video>
@@ -24,9 +30,10 @@
   if(failed)return;
   const revision=++mediaChange,time=video.currentTime,shouldResume=!video.paused||resumeOnReturn;
   video.pause();
-  const prefix=english?'mylodge-intro-en':'mylodge-intro-scenes-20261006';
-  video.poster=`assets/video/${prefix}-poster${event.matches?'-mobile':''}.webp`;
-  video.querySelector('source').src=`assets/video/${prefix}-30s${event.matches?'-mobile':''}.mp4`;
+  const posterPrefix='mylodge-intro-en';
+  video.poster=`assets/video/${posterPrefix}-poster${event.matches?'-mobile':''}.webp`;
+  const nextMovie=event.matches?'mylodge-intro-en-30s-mobile.mp4':'mylodge-intro-en-30s.mp4';
+  video.querySelector('source').src=`assets/video/${nextMovie}`;
   video.addEventListener('loadedmetadata',()=>{
    if(revision!==mediaChange)return;
    video.currentTime=Math.min(time,Math.max(0,video.duration-.01));

@@ -1,5 +1,6 @@
-.language-panel a{width:100%;display:flex;align-items:center;min-height:44px;padding:8px 10px;border-radius:6px;font-size:14px;color:#214d42;text-decoration:none}
-.language-panel a:hover{background:#e6ece0}.language-panel a:focus-visible{outline:3px solid #a68642;outline-offset:2px}
+@import url("tokens.css");
+.language-panel a{width:100%;display:flex;align-items:center;min-height:44px;padding:8px 10px;border-radius:6px;font-size:14px;color:var(--ui-charcoal);text-decoration:none}
+.language-panel a:hover{background:var(--ui-ivory)}.language-panel a:focus-visible{outline:3px solid var(--ui-taupe);outline-offset:2px}
 .english-page :is(h1,h2,h3,p,a,button){word-break:normal;overflow-wrap:break-word}
 .english-page .path-copy h3{font-size:clamp(24px,2.4vw,32px);line-height:1.35}
 .english-page .life-copy h2{font-size:clamp(30px,4vw,54px);line-height:1.25}
@@ -7,10 +8,10 @@
 .english-page .header-inner nav{gap:18px}.english-page header nav a{font-size:12px}
 .english-page .space-tabs button{font-size:14px}.english-page .space-copy h3{font-size:clamp(25px,2.2vw,32px)}
 .english-page .nature-copy h2{font-size:clamp(38px,5vw,70px);line-height:1.2}
-.english-page .film-stage::before{background-image:linear-gradient(#0d262275,#0d2622b0),url('assets/video/mylodge-intro-en-poster.webp')}
+.english-page .film-stage::before{background-image:linear-gradient(rgb(var(--ui-charcoal-rgb) / 0.459),rgb(var(--ui-charcoal-rgb) / 0.69)),url('assets/video/mylodge-intro-en-poster.webp')}
 @media(max-width:1100px){.english-page .header-inner nav{gap:10px}.english-page header nav a{font-size:11px}}
 @media(max-width:800px){.english-page .space-copy h3{font-size:28px}.english-page .path-copy h3{font-size:26px}.english-page .vacation-intro h2{font-size:32px;line-height:1.3}}
-@media(max-width:700px){.english-page .life-copy h2{font-size:30px}.english-page .scene-time{font-size:22px}.english-page .nature-copy h2{font-size:38px}.english-page .space-tabs button{font-size:13px}.english-page .vacation-finale h2{font-size:36px;line-height:1.25}.english-page .film-stage::before{background-image:linear-gradient(#0d262280,#0d2622c2),url('assets/video/mylodge-intro-en-poster-mobile.webp')}}
+@media(max-width:700px){.english-page .life-copy h2{font-size:30px}.english-page .scene-time{font-size:22px}.english-page .nature-copy h2{font-size:38px}.english-page .space-tabs button{font-size:13px}.english-page .vacation-finale h2{font-size:36px;line-height:1.25}.english-page .film-stage::before{background-image:linear-gradient(rgb(var(--ui-charcoal-rgb) / 0.502),rgb(var(--ui-charcoal-rgb) / 0.761)),url('assets/video/mylodge-intro-en-poster-mobile.webp')}}
 
 /* English needs looser tracking and shorter lines than the Korean headings. */
 .english-page :is(h1,h2,h3){letter-spacing:-.015em!important;text-wrap:balance;hyphens:none}

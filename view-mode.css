@@ -1,31 +1,32 @@
+@import url("tokens.css");
 /* Main categories and display settings share a consistent header rhythm. */
 .vacation-design .header-inner{gap:14px}
 .vacation-design .header-inner>nav{align-items:center;justify-content:center;flex:1;min-width:0;gap:clamp(10px,1.5vw,24px)}
 .vacation-design .header-inner>nav>a{display:inline-flex;align-items:center;min-height:44px;white-space:nowrap;font-size:14px;line-height:1.4;padding:4px 2px}
 .vacation-design .header-inner>.language-slot{margin-left:0}
-.screen-view-picker{position:relative;flex:0 0 auto;color:#214d42;font:inherit;white-space:nowrap}
-.screen-view-picker summary{list-style:none;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;padding:0 12px;min-height:44px;box-sizing:border-box;border:1px solid #d5ddd1;border-radius:8px;font-size:14px;font-weight:500;line-height:1.4}
+.screen-view-picker{position:relative;flex:0 0 auto;color:var(--ui-charcoal);font:inherit;white-space:nowrap}
+.screen-view-picker summary{list-style:none;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;padding:0 12px;min-height:44px;box-sizing:border-box;border:1px solid var(--ui-ivory);border-radius:8px;font-size:14px;font-weight:500;line-height:1.4}
 .screen-view-picker summary::-webkit-details-marker{display:none}
 .screen-view-picker summary::marker{content:''}
 .screen-view-icon{width:18px;height:18px;flex:none}
 .screen-view-chevron{width:14px;height:14px;flex:none;transition:transform .15s}
 .screen-view-picker[open] .screen-view-chevron{transform:rotate(180deg)}
-.screen-view-picker summary:hover,.screen-view-picker[open] summary{background:#e6ece0}
-.screen-view-picker summary:focus-visible,.screen-view-options a:focus-visible{outline:3px solid #aa7b32;outline-offset:3px}
-.screen-view-options{position:absolute;right:0;top:calc(100% + 12px);z-index:1100;display:grid;gap:4px;min-width:208px;padding:8px;background:#f7f5ef;color:#143b30;border:1px solid #d5ddd1;border-radius:12px;box-shadow:0 12px 30px #173e3726}
+.screen-view-picker summary:hover,.screen-view-picker[open] summary{background:var(--ui-ivory)}
+.screen-view-picker summary:focus-visible,.screen-view-options a:focus-visible{outline:3px solid var(--ui-gray);outline-offset:3px}
+.screen-view-options{position:absolute;right:0;top:calc(100% + 12px);z-index:1100;display:grid;gap:4px;min-width:208px;padding:8px;background:var(--ui-ivory);color:var(--ui-charcoal);border:1px solid var(--ui-ivory);border-radius:12px;box-shadow:0 12px 30px rgb(var(--ui-charcoal-rgb) / 0.149)}
 header .screen-view-options a{display:flex!important;align-items:center;justify-content:space-between;gap:16px;padding:12px!important;min-height:46px;box-sizing:border-box;text-decoration:none!important;border-radius:6px;font-size:15px!important;line-height:1.5;font-weight:500;color:inherit}
-.screen-view-options a:hover,.screen-view-options a[aria-current=true]{background:#e6ece0}
+.screen-view-options a:hover,.screen-view-options a[aria-current=true]{background:var(--ui-ivory)}
 .screen-view-options a[aria-current=true]{font-weight:700}
-.screen-view-options a[aria-current=true]::after{content:'✓';color:#214d42}
+.screen-view-options a[aria-current=true]::after{content:'✓';color:var(--ui-charcoal)}
 .vacation-design .language-slot summary{font-size:14px;font-weight:500}
-#mobile-menu .screen-view-picker{width:100%;margin-top:8px;padding-top:14px;border-top:1px solid #d5ddd1}
+#mobile-menu .screen-view-picker{width:100%;margin-top:8px;padding-top:14px;border-top:1px solid var(--ui-ivory)}
 #mobile-menu .screen-view-picker summary{justify-content:flex-start;font-size:17px;padding:12px;border-radius:8px}
 #mobile-menu .screen-view-chevron{margin-left:auto}
 #mobile-menu .screen-view-options{position:static;box-shadow:none;min-width:0;margin-top:8px}
-body[data-review-theme=dark] .screen-view-picker{color:#f7f5ef}
-body[data-review-theme=dark] :is(.screen-view-picker summary,.screen-view-options){background:#163b2e;color:#f7f5ef;border-color:#526c5e}
-body[data-review-theme=dark] .screen-view-options a:is(:hover,[aria-current=true]){background:#264c3d}
-body[data-review-theme=dark] .screen-view-options a[aria-current=true]::after{color:#f7f5ef}
+body[data-review-theme=dark] .screen-view-picker{color:var(--ui-ivory)}
+body[data-review-theme=dark] :is(.screen-view-picker summary,.screen-view-options){background:var(--ui-charcoal);color:var(--ui-ivory);border-color:var(--ui-gray)}
+body[data-review-theme=dark] .screen-view-options a:is(:hover,[aria-current=true]){background:var(--ui-charcoal)}
+body[data-review-theme=dark] .screen-view-options a[aria-current=true]::after{color:var(--ui-ivory)}
 @media(min-width:1200px){
  .vacation-design .header-inner{padding-inline:24px;gap:20px}
  .vacation-design .header-inner>.screen-view-picker{margin-left:4px}
@@ -53,7 +54,7 @@ body[data-review-theme=dark] .screen-view-options a[aria-current=true]::after{co
  .vacation-design.english-page .header-inner>.screen-view-picker{display:none}
  .vacation-design.english-page .header-inner>.language-slot{margin-left:auto}
  .vacation-design.english-page .header-inner .menu-button{display:flex;align-items:center;justify-content:center;flex:0 0 44px;min-height:44px}
- .vacation-design.english-page #mobile-menu:not([hidden]){display:flex!important;background:#f7f5ef;color:#143b30;border-radius:0 0 12px 12px}
+ .vacation-design.english-page #mobile-menu:not([hidden]){display:flex!important;background:var(--ui-ivory);color:var(--ui-charcoal);border-radius:0 0 12px 12px}
  .vacation-design.english-page #mobile-menu>a{min-height:44px;display:flex;align-items:center}
 }
 @media(prefers-reduced-motion:reduce){.screen-view-chevron{transition:none}}

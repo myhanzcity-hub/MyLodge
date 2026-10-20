@@ -15,7 +15,19 @@
  hero.append(scrollCue);
 
  const ribbon=document.createElement('div');ribbon.className='living-ribbon';ribbon.setAttribute('aria-hidden','true');
- ribbon.innerHTML='<div>'+('<span>STAY CLOSE TO NATURE</span><i>✳</i><span>LIVE A LITTLE MORE</span><i>✳</i>').repeat(3)+'</div>';
+ const symbol='<span class="ribbon-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/><circle cx="12" cy="12" r="2.5"/></svg></span>';
+ const ribbonUnit=`<span class="ribbon-en">MY OWN VACATION</span>${symbol}<span class="ribbon-kr">마이롯지</span>${symbol}`;
+ const ribbonGroup=ribbonUnit.repeat(3);
+ ribbon.innerHTML=`<div class="ribbon-track"><div class="ribbon-set">${ribbonGroup}</div><div class="ribbon-set">${ribbonGroup}</div></div>`;
+ ribbon.style.cssText='background:#FAF9F6;color:#141414;border-top:1px solid #E2DED6;border-bottom:1px solid #E2DED6;';
+ const ribbonTrack=ribbon.querySelector('.ribbon-track');
+ const ribbonMotion=matchMedia('(prefers-reduced-motion: reduce)');
+ if(!ribbonMotion.matches){
+  const ribbonAnimation=ribbonTrack.animate([{transform:'translate3d(0,0,0)'},{transform:'translate3d(-50%,0,0)'}],{duration:38000,iterations:Infinity,easing:'linear'});
+  ribbon.addEventListener('mouseenter',()=>ribbonAnimation.pause());
+  ribbon.addEventListener('mouseleave',()=>ribbonAnimation.play());
+  ribbonMotion.addEventListener('change',event=>{if(event.matches)ribbonAnimation.cancel();});
+ }
  document.querySelector('#ownership').before(ribbon);
 
  const scenes=[

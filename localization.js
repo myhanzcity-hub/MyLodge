@@ -11,6 +11,15 @@
  '전 세계':'A destination for the global','IT맨':'tech community','들이 집결하는 성지.':'.',
  '한즈시티 치앙마이 사이트 살펴보기':'Explore HanzCity Chiang Mai',
  '오너 혜택':'Owner Benefits',
+ '마이롯지 해안 별장과 치앙마이의 수영장 별장을 그린 수채화 건축 일러스트 · AI 콘셉트':'A watercolor architectural illustration of MyLodge coastal and Chiang Mai villas · AI concept',
+ '마이롯지 소개':'About MyLodge','두 가지 머무름':'Two Ways to Stay','둘러보기':'Explore','오너의 하루':'A Day at MyLodge','목적지':'Destinations','국내 별장':'Villas in Korea',
+ '자연을 향해 열린':'Open to nature,','별장과 풀장.':'a villa and pool.','넓은 창의 별장과 물가의 휴식, 풍경과 만남을 잇는 테라스. 마이롯지가 그리는 공간 구상입니다.':'A villa with wide windows, time by the water and a terrace that brings the view and people together. A space imagined by MyLodge.',
+ '모듈형 별장 공간 콘셉트':'Modular villa concept','풀장과 카바나 공간 구상':'Pool and cabana concept',
+ '풀장 · 카바나':'Pool & Cabanas','물가에서 만나는 저녁.':'An evening by the water.','느긋한 카바나.':'Time to unwind in a cabana.','음악과 만남이 있는 풀장, 카바나에서의 느긋한 휴식을 그립니다.':'Picture a pool with music and good company, followed by unhurried time in a cabana.','음악과 함께하는 풀장 공간':'A pool setting with music','카바나에서 보내는 휴식':'Time to unwind in a cabana',
+ '마이롯지 / 우리의 이야기':'MY LODGE / OUR STORY','멀게만 느껴졌던 별장,':'A villa once out of reach,','이제는 우리 일상 가까이.':'closer to everyday life.','별장 한 채를 함께 마련하는 공유별장 구상입니다.':'A shared-villa concept built around preparing one home together.','공간과 참여 방식을 차분히 살펴보세요.':'Explore the spaces and how participation could work, at your own pace.',
+ '마이롯지가 그리는 오너의 하루.':'A day at MyLodge, imagined for future owners.','나만의 속도로 쉬는 시간.':'Time to unwind at your own pace.','커피와 책 한 권, 서두르지 않는 하루.':'A coffee, a book and a day with nowhere to rush.','휴식, 만남, 새로운 생각.':'Rest, connection and fresh ideas.',
+ '별장에 도착하는 순간.':'The moment you arrive.','별장과 풀장, 일상에서 잠시 벗어나는 장면.':'A villa and pool, a moment away from the everyday.',
+ '공간을 돌보는 손길':'Care for your space','청소와 침구 등 편안한 별장 생활을 위한 관리 서비스 구상.':'A service concept for housekeeping, linens and a comfortable villa stay.','다음 여행으로':'Your next escape','다른 지역에서의 머무름과 교환 가능성을 살펴보는 경험.':'An experience for exploring stays in other regions and possible exchanges.',
  '휴가와 함께 시작하는':'A vision for the future,','미래의 비전.':'beginning with a getaway.',
  '꽉막히고 답답한 콘크리트 블럭이 아닌':'Beyond the confines of concrete walls,',
  '가지는 여유로운 일상과 꿈을 실현할 수 있는 곳.':'A place to enjoy a relaxed way of life and make your dreams a reality.',
@@ -54,7 +63,7 @@
  '본문으로 바로 가기':'Skip to content','주요 메뉴':'Main navigation','마이롯지 홈':'MyLodge home',
  '메뉴 열기':'Open menu','메뉴 닫기':'Close menu','시설 둘러보기':'Explore the Facilities','별장 주인들에게':'For Villa Owners','지역별 별장':'Our Destinations','컨시어지':'Concierge',
  '별장 살펴보기':'Explore Our Villas','별장 둘러보기':'Explore Our Villas','마이롯지':'MyLodge','나 별장있다.':'I have a villa.','나! 별장있다.':'I have a villa!',
- '친구야, 나 별장있어.':'Hey, I have a villa.','함께 준비하는 공유별장':'A villa to share','상류층의 꿈이던 별장,':'Once a dream for the privileged.','이제 우리도.':'Now, a dream we can share.',
+ '친구야, 나 별장있어.':'Hey, I have a villa.','함께 준비하는 공유별장':'A villa to share','함께 준비하는 별장,':'A villa prepared together,','우리의 생활 가까이.':'closer to everyday life.',
  '내 별장 상상해보기':'Imagine Your Villa','함께 갖는 방식':'A Villa to Share','일상을 휴가처럼 · MY LODGE':'Every day, a holiday · MY LODGE',
  'AI 공간 콘셉트 · 실제 부지·설계·주차 조건은 미확정':'AI concept · Site, design and parking arrangements are not confirmed',
  '별장 속으로':'Step into your villa','도착하는 순간,':'From the moment you arrive,','휴가가 시작됩니다.':'your holiday begins.',
@@ -164,6 +173,8 @@
   [...root.childNodes].forEach(translateNode);
  }
  translateNode(document.body);
+ const visionTitle=document.querySelector('#vision h2');
+ if(visionTitle)visionTitle.innerHTML='The MyLodge destination<br>at a glance.';
  const chiangMaiTitle=document.querySelector('#brand-paths .valley-path h3');
  if(chiangMaiTitle)chiangMaiTitle.innerHTML='Chapter 1. Chiang Mai.<br>Where the global <strong class="it-highlight">tech community</strong> and<br><strong class="it-highlight">digital nomads</strong><br>come together.';
  const filmHeading=document.querySelector('.film-introduction h1');if(filmHeading)filmHeading.textContent='A villa to call my own.';
