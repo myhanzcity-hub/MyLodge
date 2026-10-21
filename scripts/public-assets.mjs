@@ -1,5 +1,6 @@
 // The only files included in the public export.
 export const publicAssets = ['index.html', 'styles.css', 'app.js'];
+for(const name of ['domestic-jumunjin-ambition-20261021','domestic-yangyang-ambition-20261021']) for(const width of [480,960,1672]) publicAssets.push(`assets/images/${name}-${width}.webp`);
 publicAssets.push('intro.html','arrival-intro.css','arrival-intro.js');
 publicAssets.push('mobile-layout.css','mobile-layout.js');
 publicAssets.push('view-mode.css','view-mode.js','view.html');
@@ -66,3 +67,6 @@ for(const width of [480,960,1672])publicAssets.push(`assets/images/chiangmai-wor
 
 // Closing scene: global business community in a holiday setting.
 for(const width of [480,960,1672])publicAssets.push(`assets/images/chiangmai-tech-founders-ending-20261020-${width}.webp`);
+
+// Domestic coastal facility concepts reviewed on 2026-10-21.
+for(const name of ['terrace','concierge'])for(const width of [480,960,1672])publicAssets.push(`assets/images/domestic-coastal-${name}-20261021-${width}.webp`);

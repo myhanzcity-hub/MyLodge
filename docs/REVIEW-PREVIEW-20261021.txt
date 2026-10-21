@@ -1,0 +1,22 @@
+MyLodge park subpages review - 21 October 2026
+
+Owner: Yeon Seo-heum (연서흠)
+Branch: codex/park-subpages-feedback-20261019
+Collaborator: Hojiakbar owns homepage and intro; his latest work has not been merged.
+
+This snapshot contains local park feedback changes made after c2daf35:
+- Domestic shared facility catalogue; distinct Jumunjin/Yangyang chapters and new business/pool-party signature images.
+- Domestic IT collaboration, entrepreneur networking, and asset/economy conversation content.
+- Chiang Mai six photographic benefit links, mobile interior copy recovery and aligned market/wellness/nature scenes.
+- Central image/planning notice; bilingual content, panorama keyboard handling and image-failure recovery refinements.
+
+Status: domestic parks remain work in progress; Chiang Mai is a first-round improvement proposal.
+All imagery is conceptual; no newly confirmed service or investment product.
+
+Publication scope: user approved a separate Vercel preview and GitHub branch push. No production merge or production deployment.
+Build public allowlist: 285 files. Raw originals, internal reports and operator workflow remain outside the public export.
+The preview package is assembled outside the repository from dist, with a review entry page and deployment-only configuration. The repository's production configuration remains unchanged.
+
+Validation: JS syntax, 9 simulated workflow checks, public build and diff whitespace checks passed. Earlier park review covered 20 bilingual responsive combinations and six benefit links. Actual device/Safari/screen-reader and full combined-main acceptance remain pending.
+
+Notion and Excel worklogs: deferred until user requests after work completion.

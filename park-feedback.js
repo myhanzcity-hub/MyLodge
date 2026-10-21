@@ -11,11 +11,11 @@
   note:'AI space concept. This is not a confirmed site plan or an operating facility.',
   loading:'Loading the panorama…',failed:'The panorama could not be loaded.',retry:'Try again',direct:'Open image directly'
  }:{
-  close:'조감도 닫기',zoom:'원본 크기로 보기',fit:'화면에 맞추기',
+  close:'전경 닫기',zoom:'원본 크기로 보기',fit:'화면에 맞추기',
   help:'전체 이미지를 보거나, 원본 크기로 구석구석 살펴보세요. Esc 키로 닫을 수 있습니다.',
-  viewport:'전체 조감도 이미지. 원본 크기에서는 스크롤하여 살펴볼 수 있습니다.',
+  viewport:'파크 전경 이미지. 원본 크기에서는 스크롤하여 살펴볼 수 있습니다.',
   note:'AI 공간 콘셉트입니다. 확정된 설계도나 실제 운영 시설이 아닙니다.',
-  loading:'조감도를 불러오는 중입니다…',failed:'조감도를 불러오지 못했습니다.',retry:'다시 불러오기',direct:'이미지 바로 열기'
+  loading:'전경을 불러오는 중입니다…',failed:'전경을 불러오지 못했습니다.',retry:'다시 불러오기',direct:'이미지 바로 열기'
  };
  const dialog=document.createElement('dialog');
  dialog.className='park-panorama-dialog';
@@ -60,6 +60,15 @@
  retry.addEventListener('click',()=>{photo.removeAttribute('src');load();});
  zoom.addEventListener('click',()=>setZoom(!zoomed));
  close.addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('keydown',event=>{
+  if(event.key!=='Tab')return;
+  const controls=[...dialog.querySelectorAll('button:not([disabled]),a[href],[tabindex]:not([tabindex="-1"])')].filter(control=>control.getClientRects().length>0);
+  if(!controls.length)return;
+  const first=controls[0],last=controls[controls.length-1],active=document.activeElement;
+  if(!controls.includes(active)||(event.shiftKey?active===first:active===last)){
+   event.preventDefault();(event.shiftKey?last:first).focus();
+  }
+ });
  dialog.addEventListener('close',()=>{
   document.body.classList.remove('park-panorama-open');setZoom(false);
   if(opener?.isConnected)opener.focus({preventScroll:true});

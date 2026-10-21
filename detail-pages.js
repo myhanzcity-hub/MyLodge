@@ -64,7 +64,10 @@
  const canonical=document.querySelector('link[rel="canonical"]');
  if(english)canonical.href+='?lang=en';
  const updateDirectory=()=>{
-  const current=location.hash.startsWith('#experience-')||['#chiangmai-day','#chiangmai-city','#chiangmai-alternatives'].includes(location.hash)?'#chiangmai-experiences':location.hash;
+  let current=location.hash;
+  if(current.startsWith('#opening-'))current='#chiangmai-introduction';
+  else if(current.startsWith('#experience-')||['#chiangmai-day','#chiangmai-city','#chiangmai-alternatives'].includes(current))current='#chiangmai-experiences';
+  else if(/^#(?:facility|jumunjin|yangyang)-(?:beach|party|club|terrace|market|concierge)$/.test(current))current='#domestic-facilities';
   document.querySelectorAll('.section-directory a').forEach(link=>{
    if(link.getAttribute('href')===current)link.setAttribute('aria-current','location');
    else link.removeAttribute('aria-current');
@@ -127,10 +130,16 @@
    frame.classList.add('image-unavailable');
    if(frame.querySelector('.photo-status'))return;
    const message=document.createElement('p');message.className='photo-status';
+   message.setAttribute('role','status');
    message.textContent=english?'The photo could not be loaded. You can still read the description.':'사진을 불러오지 못했습니다. 설명은 계속 읽을 수 있습니다.';
    frame.append(message);
   };
-  img.addEventListener('error',showUnavailable,{once:true});
+  img.addEventListener('load',()=>{
+   const frame=img.closest('figure');
+   frame.classList.remove('image-unavailable');
+   frame.querySelector('.photo-status')?.remove();
+  });
+  img.addEventListener('error',showUnavailable);
   if(img.complete&&img.naturalWidth===0)showUnavailable();
  });
 })();

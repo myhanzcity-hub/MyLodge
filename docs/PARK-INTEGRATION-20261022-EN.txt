@@ -1,0 +1,66 @@
+MyLodge — integration review, Thursday 22 October 2026
+Prepared on 21 October. Draft for discussion; not sent and not an agreed merge/release plan.
+
+Current responsibilities
+- Hojiakbar: homepage and intro.
+- Seoheum Yeon: park subpages, including Jumunjin, Yangyang and Chiang Mai.
+- The final editor and reviewer for shared files still need to be agreed.
+
+Version status
+Repository: https://github.com/IMT-Group-Account/MyLodge_Business
+My park branch: codex/park-subpages-feedback-20261019
+Last pushed commit: c2daf357e11df04c1f8e9b67819cca4287f06431 (20 October).
+Additional QA improvements made on 21 October are local and uncommitted. They are not yet available in that GitHub commit.
+The remote branch list checked on 21 October did not include the exact name feature/hojiakbar-homepage. Please confirm the actual repository, branch and latest commit; this does not imply that no local work has been done.
+Domestic parks are still in progress. Chiang Mai is a first-round proposal. No production deployment has been made as part of today's work.
+
+Please bring
+Your repository URL, branch, commit SHA, any uncommitted changes, local preview instructions, and a list of shared files and new assets you changed.
+
+What I will show
+- Separate domestic and overseas navigation, with reciprocal park links.
+- Jumunjin and Yangyang retain their own panoramas and lifestyle scenes.
+- One shared catalogue of six domestic facilities, replacing repeated facility cards.
+- Updated coastal terrace and concierge concepts; previous facility anchor links remain usable.
+- Chiang Mai opens with a social panorama, pool party and club scenes.
+- The coworking/pool-party fade, final food-only five-culture montage, and high-tech business community ending remain in place.
+- Narrow English hero typography, current-section navigation, panorama keyboard focus, image failure recovery and mobile navigation fixes.
+
+Link contract to confirm
+domestic-villas.html#project-jumunjin
+domestic-villas.html#project-yangyang
+domestic-villas.html#domestic-facilities
+business-valley.html
+Subpage back links currently point to index.html#brand-paths. Confirm that this anchor exists on the new homepage, or agree on a replacement and update both sides together.
+Preserve ?lang=en and the current section hash when navigating or changing language.
+Keep Chiang Mai under overseas parks, separate from domestic parks.
+
+Shared files to review together
+- branding.js: a one-line English menu-label fix is already included in the 20 October park commit.
+- detail-pages.js: today's image failure/recovery and current-section mapping changes.
+- park-feedback.js/css: shared by the two park subpages; panorama and responsive enhancements.
+- detail-pages.css, styles.css, branding.css, localization and view-mode files: check any changes made on your side and their effects on the subpages.
+- scripts/public-assets.mjs: combine both asset lists. The current park build has 279 public files; the integrated count can differ when your assets are added. Check missing files, duplicates and private-file exclusion.
+- vercel.json: keep review-branch deployment separate from a production release.
+
+Suggested meeting flow — 60 minutes, start time to agree
+5 min: identify both versions and uncommitted work.
+15 min: homepage/intro demonstration.
+15 min: park subpage demonstration.
+15 min: shared files, links, assets and integration approach.
+10 min: record decisions, owners and follow-up checks.
+
+Before combining branches
+Agree on the exact commits, integration branch/start point, merge editor and reviewer. Preserve each person's work. Review shared changes rather than replacing whole files. Validate the integrated preview before any production release.
+
+Validation already done on my local version
+20 page/language/viewport combinations, 19 header-boundary checks, navigation and language flows, panorama keyboard and short-screen checks, JavaScript syntax, a 279-file public build and 9 simulated workflow checks.
+These do not certify physical phones, Safari, screen readers, backend services or the unreviewed integrated version.
+An earlier domestic screen-view transition console entry still needs source confirmation. It did not reproduce in today's Chiang Mai transition check.
+
+Open decisions
+Actual zoning/routes, medical/beauty/massage services, parking/cart policy, approved facilities and public business copy require the relevant business owner's input. Virtual roadview and HanzCity notice/FAQ work remain outside this park integration scope.
+Please also review English copy compression, stronger visual emphasis on the tech community, an ending-section shortcut and consistency of shared-facility menu links.
+
+Record before ending
+Both SHAs; integration branch; shared-file editor/reviewer; included and deferred items; follow-up owners/dates; tested environments; release approval status.
