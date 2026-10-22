@@ -1,3 +1,4 @@
+@import url('ownership-story.css');
 /* Full-bleed coastal arrival. Scoped to the homepage hero. */
 body #home.lodge-hero {
   --lodge-pine: oklch(25% .025 165);
@@ -25,6 +26,12 @@ body #home.lodge-hero { position: sticky; top: 0; z-index: 0; }
 .lodge-image-depth { position: absolute; inset: -10% 0; width: 100%; height: 120%; transform-origin: center; }
 #home.lodge-hero .lodge-window::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgb(12 25 21 / .15) 20%, rgb(12 25 21 / .3) 45%, rgb(12 25 21 / .87) 100%); }
 #home.lodge-hero .lodge-window img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 48% 50%; filter: brightness(.9); }
+#home.lodge-hero .lodge-hero-video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:48% 50%;filter:brightness(.9);opacity:0;pointer-events:none}
+#home.lodge-hero .lodge-hero-video.is-ready{opacity:1}
+#home.lodge-hero .lodge-video-toggle{position:absolute;z-index:3;right:5.5%;top:164px;min-height:44px;padding:10px 14px;border:1px solid rgb(245 241 232 / .5);background:rgb(8 21 36 / .75);color:#F5F1E8;font:12px/1.5 var(--font-body);cursor:pointer}
+#home.lodge-hero .lodge-video-toggle:focus-visible{outline:2px solid #F5F1E8;outline-offset:4px}
+#home.lodge-hero .lodge-video-toggle[hidden]{display:none}
+@media(max-width:700px){#home.lodge-hero .lodge-hero-video{object-position:44% center}#home.lodge-hero .lodge-video-toggle{top:148px;right:24px}}
 #home.lodge-hero .lodge-window figcaption { position: absolute; left: auto; z-index: 1; right: 5.5%; top: 120px; bottom: auto; padding: 7px 10px; background: oklch(20% .02 165 / .85); color: var(--lodge-paper); font: 10px/1.6 'Avenir Next', 'Noto Sans KR', sans-serif; letter-spacing: .02em; }
 .lodge-heading { position: absolute; top: auto; bottom: 265px; left: 5.5%; right: 3%; z-index: 1; pointer-events: none; }
 #home.lodge-hero .lodge-kicker { margin: 0 0 24px; font-size: 11px; letter-spacing: .2em; color: var(--lodge-paper); }
@@ -77,4 +84,23 @@ body #home.lodge-hero h1 em { font-weight: 400; font-style: italic; color: inher
 
 @media (prefers-reduced-motion: reduce) {
   body #home.lodge-hero { position: relative; }
+}
+
+/* Korean video: render without the still photograph's overscan or camera zoom. */
+body.ownership-first #home.lodge-video-hero .lodge-image-depth{inset:0;height:100%;transform:none!important}
+body.ownership-first #home.lodge-video-hero .lodge-hero-video{filter:none;object-position:center}
+body.ownership-first #home.lodge-video-hero .lodge-window::after{background:linear-gradient(180deg,rgb(8 21 36 / .08) 40%,rgb(8 21 36 / .3) 65%,rgb(8 21 36 / .72) 100%)!important}
+body.ownership-first #home.lodge-video-hero .lodge-heading{bottom:210px}
+body.ownership-first #home.lodge-video-hero h1{font-size:clamp(48px,5.8vw,84px);line-height:1.18}
+body.ownership-first #home.lodge-video-hero .lodge-invitation{bottom:62px}
+body.ownership-first #home.lodge-video-hero .lodge-video-toggle{top:auto;bottom:32px;font-size:11px;min-width:44px}
+body.ownership-first #home.lodge-video-hero .lodge-window figcaption{top:auto;bottom:32px;left:5.5%;right:auto;font-size:9px;background:transparent;padding:0}
+.ownership-first #our-villa .invitation-grid>div>p.hero-context-note{font-size:11px!important;line-height:1.8!important;color:#716E68!important;border:0!important;padding:0!important;margin:22px 0 0!important}
+@media(max-width:700px){
+ body.ownership-first #home.lodge-video-hero .lodge-heading{bottom:230px;left:24px;right:24px}
+ body.ownership-first #home.lodge-video-hero h1{font-size:clamp(42px,11vw,58px)}
+ body.ownership-first #home.lodge-video-hero .lodge-invitation{bottom:88px}
+ body.ownership-first #home.lodge-video-hero .lodge-korean{font-size:15px}
+ body.ownership-first #home.lodge-video-hero .lodge-window figcaption{left:24px;bottom:28px}
+ body.ownership-first #home.lodge-video-hero .lodge-video-toggle{right:24px;bottom:16px}
 }

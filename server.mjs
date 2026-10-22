@@ -4,6 +4,7 @@ import {createReadStream} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {publicAssets} from './scripts/public-assets.mjs';
 const allowed=new Map([['/',['intro.html','text/html; charset=utf-8']],['/index.html',['index.html','text/html; charset=utf-8']],['/styles.css',['styles.css','text/css; charset=utf-8']],['/app.js',['app.js','text/javascript; charset=utf-8']]]);
+const mime={html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',webp:'image/webp',jpg:'image/jpeg',png:'image/png',mp4:'video/mp4'};
 for(const file of publicAssets){
  const ext=file.split('.').at(-1);
  allowed.set('/'+file,[file,({html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',webp:'image/webp',jpg:'image/jpeg',png:'image/png',mp4:'video/mp4'})[ext]]);
@@ -17,7 +18,16 @@ allowed.set('/workflow.html',['workflow.html','text/html; charset=utf-8']);
 for(const file of ['consultation.js','workflow-model.js','workflow.js']) allowed.set('/'+file,[file,'text/javascript; charset=utf-8']);
 for(const file of ['consultation.css','workflow.css','workflow-layout.css']) allowed.set('/'+file,[file,'text/css; charset=utf-8']);
 createServer(async(req,res)=>{
- const item=allowed.get(new URL(req.url,'http://127.0.0.1').pathname);
+ const pathname=new URL(req.url,'http://127.0.0.1').pathname;
+ let item=allowed.get(pathname);
+ // Local preview only: resolve safe public file types at request time so a refresh
+ // immediately reflects newly added styles and media without restarting the server.
+ if(!item){
+  const file=pathname.slice(1),ext=file.split('.').at(-1);
+  const rootFile=/^[A-Za-z0-9][A-Za-z0-9._-]*\.(?:html|css|js)$/.test(file);
+  const mediaFile=/^assets\/(?:images|video|brand)\/[A-Za-z0-9][A-Za-z0-9._/-]*\.(?:webp|jpg|png|mp4)$/.test(file);
+  if((rootFile||mediaFile)&&mime[ext])item=[file,mime[ext]];
+ }
  if(!item){res.writeHead(404);res.end('Not found');return;}
  try{
   const file=fileURLToPath(new URL(item[0],import.meta.url));

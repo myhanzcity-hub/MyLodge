@@ -1,17 +1,18 @@
+@import url("tokens.css");
 /* Isolate workspace layout from the public landing page's element rules. */
-.wf-sort-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;background:#f7faf4;border-bottom:1px solid #dce5d9}
-.wf-sort-bar label{font-size:12px;color:#536d59}.wf-sort-bar select{border:1px solid #cad8c7;background:#fff;color:#264d34;border-radius:8px;padding:9px;font-size:12px;min-height:40px}
-.wf-case .wf-case-action{border-left:2px solid #8eac7e;padding-left:8px;margin-top:10px;color:#2e563a}
+.wf-sort-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;background:var(--ui-ivory);border-bottom:1px solid var(--ui-ivory)}
+.wf-sort-bar label{font-size:12px;color:var(--ui-gray)}.wf-sort-bar select{border:1px solid var(--ui-ivory);background:var(--ui-white);color:var(--ui-charcoal);border-radius:8px;padding:9px;font-size:12px;min-height:40px}
+.wf-case .wf-case-action{border-left:2px solid var(--ui-taupe);padding-left:8px;margin-top:10px;color:var(--ui-gray)}
 .wf-case .wf-case-action,.wf-case .wf-case-next{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
-.wf-help,.wf-count-note{color:#52684e;font-size:12px}.wf-case-top{color:#5e745e}.wf-case .wf-case-next{color:#526a50}.wf-case .wf-case-next.wf-overdue{color:#99502e}
+.wf-help,.wf-count-note{color:var(--ui-gray);font-size:12px}.wf-case-top{color:var(--ui-gray)}.wf-case .wf-case-next{color:var(--ui-gray)}.wf-case .wf-case-next.wf-overdue{color:var(--ui-gray)}
 .workflow-page section{padding:0;scroll-margin-top:20px}
 .workflow-page .wf-form{display:block}
 .workflow-page .wf-form-actions>.primary{width:auto;margin-top:0}
 .workflow-page .wf-header{inset:auto;transform:none;border-radius:0;max-width:none;width:100%;margin:0}
-.workflow-page .wf-selection-note{margin:16px 20px 0;padding:12px 14px;border-radius:10px;background:#fff0d7;color:#785529;font-size:12px;line-height:1.8}
-.workflow-page .wf-case-list{scrollbar-width:thin;scrollbar-color:#afc3ac #f3f6ef}
+.workflow-page .wf-selection-note{margin:16px 20px 0;padding:12px 14px;border-radius:10px;background:var(--ui-ivory);color:var(--ui-gray);font-size:12px;line-height:1.8}
+.workflow-page .wf-case-list{scrollbar-width:thin;scrollbar-color:var(--ui-taupe) var(--ui-ivory)}
 .workflow-page .wf-case-list::-webkit-scrollbar{display:block;width:6px;height:6px}
-.workflow-page .wf-case-list::-webkit-scrollbar-thumb{background:#afc3ac;border-radius:6px}
+.workflow-page .wf-case-list::-webkit-scrollbar-thumb{background:var(--ui-taupe);border-radius:6px}
 .workflow-page .wf-form-actions{scroll-margin-bottom:20px}
-.cf-shell button:focus-visible,.cf-review-dialog button:focus-visible{outline:3px solid #658c81;outline-offset:3px}
+.cf-shell button:focus-visible,.cf-review-dialog button:focus-visible{outline:3px solid var(--ui-gray);outline-offset:3px}
 @media(max-width:480px){.workflow-page .wf-form-actions>.primary{width:100%;flex-basis:100%}}

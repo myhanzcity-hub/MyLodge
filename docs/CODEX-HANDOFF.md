@@ -1,3 +1,205 @@
+## 2026-10-22 Hero 스크롤 영상 효과 취소
+
+- 사용자 요청으로 작업 중이던 ScrollTrigger 영상 스크러빙·pin 변경을 취소하고 `backups/before-hero-video-scrub-20261022/`의 `hero-editorial.js/css`로 복원했다. 기존 영상 재생·일시정지와 Hero 동작을 유지한다.
+- 앞서 적용한 마지막 대형 이미지 섹션 제거, WHY MY LODGE 사진 두 장 복원, OWNER LIFE의 SocialLife.png 지정은 보존했다. 공개 빌드 262개 완료. 커밋·업로드·배포 없음.
+
+## 2026-10-22 OWNER LIFE 사진 SocialLife.png 적용
+
+- WHY MY LODGE / 01의 두 번째 `02 / OWNER LIFE` 카드 이미지를 `assets/brand/SocialLife.png`로 교체했다. PNG 실제 크기 1671×941을 마크업에 반영하고 공개 빌드 목록에 추가했다.
+- 문구·카드 레이아웃 유지. 커밋·업로드·배포 없음.
+
+## 2026-10-22 WHY MY LODGE 사진 두 장 복원
+
+- `hero-editorial.js`가 `#our-villa`의 `.lodge-guide`를 제거하던 동작을 삭제했다. `branding.js`가 생성하는 공간·오너 생활 사진 카드 두 장이 WHY MY LODGE / 01 아래 다시 표시된다.
+- 커밋·업로드·배포 없음.
+
+## 2026-10-22 홈 마지막 대형 이미지 섹션 숨김
+
+- `당신이 꿈꾸던 별장 생활 / 마이롯지에서 그려보세요` 문구가 있는 `.vacation-finale` 대형 이미지 섹션을 홈에서 제거했다. 앞선 섹션의 보조 링크도 함께 없어지므로 별도 수정은 필요 없다.
+- `hero-editorial.js`에서 해당 섹션만 제거. 커밋·업로드·배포 없음.
+
+## 2026-10-21 10월 16일 회장 피드백 기반 소유 가치 우선 소개
+
+- 실제 활성 `arrival-intro.js`는 작업 시작 시 이미 5장면·22.5초였다. 이를 사용자 지정 소유의 꿈 → 자유로운 휴식 → 새로운 일상 → 커뮤니티 → 브랜드 리빌 문구와 이미지 순서로 정리했다. 마지막 장면은 자동 이동 대신 `마이롯지 알아보기 / Explore MyLodge` CTA와 다시보기를 유지한다. 건너뛰기·이전/다음·일시정지·스와이프·키보드·동작 줄이기는 기존 엔진을 사용한다.
+- 기존 로컬 이미지 `resort-overview-20261006`, `brand-villa-atmosphere-20261008`, `owner-connect-20261007`, `vision-masterplan-20261007`를 재사용했다. 새 이미지·영상·라이브러리는 추가하지 않았다. 짙은 네이비/아이보리/샴페인 색상과 기존 사진 크로스페이드·카메라 이동·텍스트 리빌을 사용한다.
+- 홈은 Hero → Why MyLodge → 생활 가치 3개 → 기존 공유 방식 설명 → 생활·커뮤니티 → 공간·시설 → 국내/해외 목적지 링크 → 기존 비용·권리·준비 상태 → 참여 전 확인·다음 단계 순서로 배치했다. 기존 `branding.js`가 삭제하던 비용·권리·진행·참여 섹션을 보존하고, 기존 소유 방식 DOM과 스크롤 관찰자를 `#shared-ownership`에 이동했다. 상세 읽기 영역은 불투명 아이보리 표면으로 정리했다.
+- 모바일 생활 가치는 약 한 화면씩 자연스럽게 세로 스크롤하며, 사진의 세로 크롭에 충분한 해상도를 요청한다. 한영 문구·앵커·언어 유지 CTA·모바일 메뉴와 기존 갤러리 화살표의 스크롤 방지 동작을 확인했다.
+- `intro.html`, `arrival-intro.js/css`, `branding.js`, `editorial.js`의 홈 링크 예외 한 줄, `hero-editorial.js/css`, 신규 홈 전용 `ownership-story.css`, 공개 빌드 목록을 변경했다. 국내/해외 파크 하위 페이지는 수정하지 않았다.
+- 검증: Chrome 1440×1000, 390×844 양 언어 스크린샷 확인; 844×390 가로 화면; 인트로 전체 재생(22.5초)·정지/재생/다시보기·CTA·건너뛰기·키보드·이전/다음·모바일 메뉴·동작 줄이기 확인. 가로 넘침·누락 앵커·JS 오류·실패한 로컬 이미지 요청 없음. JS 구문 검사, `npm run check`, `npm run check:workflow` 9/9, 공개 빌드 260개 통과.
+- 10월 15일 회의의 확정 혜택 우선순위는 미제공이다. 생활 가치 문구는 지향점이며 확정 계약상 혜택으로 제시하지 않는다. 권리 구조·등기·숙박량·예약·세부 서비스·최종 금액·납입·환불·공식 문의처는 사업 확인이 필요하다. Git 변경 명령·커밋·업로드·배포는 실행하지 않았다.
+
+## 2026-10-21 시설 갤러리 화살표 스크롤 이동 제거
+
+- 홈 `EXPLORE YOUR VILLA`의 이전·다음 화살표를 누를 때 선택 탭으로 포커스가 이동하며 섹션이 불필요하게 스크롤되던 동작을 제거했다. 사진·문구 전환과 탭 키보드 탐색은 유지한다.
+- 커밋·업로드·운영 배포 없음.
+
+## 2026-10-21 BEACHSIDE 이미지 지정
+
+- 홈 `EXPLORE YOUR VILLA`의 `02 / BEACHSIDE` 장면에 사용자 지정 `assets/images/beachParty.png`를 적용했다. 기존 문구, 갤러리 전환, cover crop은 유지하고 공개 빌드 목록에 이미지를 추가했다.
+- 커밋·업로드·운영 배포 없음.
+
+## 2026-10-20 MY LODGE / OUR STORY 한영 카피 정리
+
+- Our Story 한국어 문구를 영어 문안에 맞춰 `멀게만 느껴졌던 별장, 이제는 우리 일상 가까이.`와 `별장 한 채를 함께 마련하는 공유별장 구상입니다.`로 정리했다. 한국어 오버라인도 `마이롯지 / 우리의 이야기`로 바꾸고 localization.js의 영어 대응을 연결했다.
+- Chiang Mai Business Valley 카드 제목에서 gray highlight bar와 hard text shadow를 제거해 강조 단어를 본문과 같은 선명한 잉크색으로 표시하고 제목 밑줄을 막았다.
+
+## 2026-10-20 Vision 영어 제목 줄바꿈
+
+- 영어 페이지의 `The MyLodge destination at a glance.` 제목을 `The MyLodge destination` / `at a glance.` 두 줄로 표시하도록 localization.js에서 명시적 줄바꿈을 적용했다.
+
+## 2026-10-20 EXPLORE YOUR VILLA 텍스트 렌더 오류 수정
+
+- 시설 선택기 첫 설명에 `${spaces[0].tag/title/copy/note}`가 문자 그대로 표시되던 문제를 수정했다. 해당 문자열 조각은 템플릿 리터럴이 아니어서 보간되지 않았다. `chairman.js`에서 문자열 연결로 첫 시설의 실제 데이터를 넣도록 바꿨다. 커밋·업로드·운영 배포 없음.
+
+## 2026-10-20 OUR STORY 및 라이프스타일 사진 지정
+
+- 사용자 지정 이미지로 홈 사진 세 장을 교체했다. `MY LODGE / OUR STORY`에는 `assets/images/villa.png`, `A pool beside the sea`에는 `assets/images/luxury2.png`, `A terrace for meeting fellow entrepreneurs`에는 `assets/images/meeting.png`를 적용했다.
+- 기존 섹션 구성, 문구, 이미지 프레임과 cover crop은 유지했다. 세 PNG를 공개 빌드 목록에 추가했다. 커밋·업로드·운영 배포 없음.
+
+## 2026-10-20 라이프스타일 사진 masonry grid
+
+- 사용자 요청으로 `#lifestyle`의 자동 슬라이드쇼를 정적인 3장 masonry grid로 교체했다. 세 사진과 설명이 동시에 보이고, 데스크톱은 3열 staggered 배치, 태블릿·모바일은 비율을 유지한 단일 열로 표시한다.
+- 슬라이드 자동 재생, 일시정지 버튼, 캐러셀 상태 표기를 제거했다. 사진 높이를 명시해 이전 0 높이 카드 문제를 방지하고 모바일에도 세 장 모두 표시한다. 사진 asset은 기존 eager 로딩을 유지한다.
+- 푸터 전 수채화는 PNG라 DrawSVGPlugin으로 선을 직접 그릴 수 없다. 대신 기존 GSAP/ScrollTrigger 리빌을 약 5초의 워터컬러 번짐으로 교체했다. 여러 개의 겹친 radial-gradient SVG 마스크가 건축물·수영장·야자수·주변 풍경 위치에서 차례로 번지고, 마지막 부드러운 워시가 그림 전체를 드러낸다. 가장자리 페이드와 아이보리 배경을 유지하며, 동작 줄이기 설정에서는 정적인 전체 그림을 표시한다.
+- `npm run build`, `git diff --check` 통과. 커밋·업로드·운영 배포 없음.
+
+## 2026-10-20 프리미엄 네비게이션 스타일
+
+- 기존 메뉴 구조와 상호작용을 유지하면서 헤더 표면, 간격, 링크 호버 라인, CTA 대비를 정돈했다. 스타일은 신규 `navbar-premium.css`에 분리했고, `luxury-system.css`의 import 한 줄을 제거하면 즉시 되돌릴 수 있다.
+- 공개 빌드 목록에 스타일시트를 등록했다. `npm run build`, `git diff --check` 통과. 커밋·업로드·운영 배포 없음.
+
+## 2026-10-20 푸터 직전 수채화 아트워크 배치
+
+- `assets/brand/imageBeach.png`를 메인 푸터 바로 앞에 배치하고, `YOUR NEXT VACATION`과 `Your haven in life. MyLodge.` 문구를 이미지 위에 오버레이했다. 별도 카피 패널은 추가하지 않았다. 상단 히어로에서는 유사한 영어 슬로건을 제거하고 기존 사진은 유지했다.
+- SPACE VISION의 `마이롯지 단지 전체 풍경` 제목과 마스터플랜 조감도는 기존 렌더링으로 복원했다. 워터컬러는 아이보리 바탕에서 네 가장자리 마스크와 multiply 블렌드로 표현하고, GSAP 1.2초 리빌은 푸터 전 아트워크를 대상으로 한다.
+- `npm run build`, 변경한 JavaScript 구문 검사, `git diff --check` 통과. 브라우저 시각 확인은 완료하지 못했다. 커밋·업로드·운영 배포 없음.
+
+## 2026-10-19 간결한 브랜드 푸터
+
+- 레퍼런스에 맞춰 홈 푸터를 왼쪽 로고와 오른쪽 3개 링크 묶음, 하단 고지·저작권선으로 정리했다. 기존 소개/시설/오너/컨시어지/목적지 링크만 사용하며 제휴 브랜드 표시는 만들지 않았다.
+- `branding.js`가 링크 메뉴와 하단 행을 구성하고 `editorial.js`는 푸터 링크를 보존한다. `localization.js`에 영문 메뉴 번역을 추가하고 `owner-cards-refinement.css`에 데스크톱·모바일 스타일을 추가했다. 사전 안내·AI 콘셉트 고지는 계속 표시한다.
+- 확인: 빌드와 JavaScript 구문 검사, `git diff --check`. 브라우저 미리보기는 실행하지 않음. 커밋·업로드·운영 배포 없음.
+
+## 2026-10-19 MY LODGE / TWO WAYS TO STAY 레이아웃
+
+- 사용자가 지정한 기존 홈 `#brand-paths` 두 선택지에 Aman Residences 참고 구성을 적용했다. 국내 별장은 넓은 사진 왼쪽·설명 오른쪽, 치앙마이는 설명 왼쪽·넓은 사진 오른쪽이며 모바일에서는 사진 다음 설명 순서로 쌓인다.
+- 기존 제목, 문구, 사진, 목적지 링크를 유지했다. `editorial.css`의 `#brand-paths` 한정 규칙을 추가했다. 먼저 잘못 추가한 새 구간과 인트로 장면의 오버라이드는 제거했다.
+- 사용자가 추가로 제공한 컨시어지 레퍼런스에 맞춰 세 카드 이미지 비율을 정사각형으로 조정하고, 추적 자간의 오버라인·세리프 제목·설명 순서를 적용했다. 기존 서비스 문구와 “예약·신청은 제공하지 않습니다” 안내는 유지하며 모바일도 정사각 이미지를 사용한다. 스타일은 `owner-cards-refinement.css`에 추가.
+- 커밋·업로드·운영 배포 없음.
+
+## 2026-10-19 A NEW EVERYDAY 이미지 지정
+
+- `#nature` 조감도에 사용자가 지정한 `assets/brand/gaji.png`를 연결했다. 영어 대체 텍스트를 “Aerial view of the swimming pool, club lounge, and coastal modular villa complex · AI space concept”로 맞췄으며, 기존 `MY LODGE / A NEW EVERYDAY` 라벨은 유지했다.
+- 공개 빌드 목록에 gaji.png를 추가했다. 다른 이미지/섹션은 변경하지 않음. 커밋·업로드·운영 배포 없음.
+
+## 2026-10-19 마이롯지 길잡이 에디토리얼 구성
+
+- 홈 `#our-villa`의 `.lodge-guide`만 참고 이미지의 비대칭 사진 2장, 사진 아래 제목·설명 구성으로 바꿨다. 기존 로컬 단지/생활 콘셉트 이미지를 사용하고, `시설 둘러보기`, `오너 혜택`, `컨시어지` 진입 링크는 유지했다. AI 콘셉트 고지를 각 이미지에 붙였다.
+- `our-story-refinement.css`의 #our-villa 범위 스타일과 `branding.js` 길잡이 마크업만 변경. 아이보리 바탕, 데스크톱 와이드+포트레이트, 모바일 단일 열. `node --check branding.js`, `npm run check`, `npm run build`(252개), `git diff --check` 통과. 브라우저 시각 확인은 하지 않았다. 커밋·업로드·운영 배포 없음.
+
+## 2026-10-19 Vision 조감도 스크롤 정사각형 리빌
+
+- 피드백 후 `#vision .vision-photo img`의 시작 클립을 중앙 32px 정사각형으로 축소하고, `top 90%`부터 `bottom 20%`까지 `scrub: .5`로 확장하도록 조정했다. GSAP ScrollTrigger이며 pin이나 레이아웃 크기 변경은 없다.
+- 동작 줄이기에서는 `gsap.matchMedia()`가 효과를 만들지 않아 전체 사진이 그대로 보인다. 되돌리려면 `index.html`의 `vision-square-reveal.js` script 태그와 `scripts/public-assets.mjs` 등록을 제거하고 파일을 삭제하면 된다.
+- `npm run check`, `npm run build` 실행 후 결과를 기록한다. 로컬 전용이며 커밋·업로드·운영 배포 없음.
+
+## 2026-10-19 LIFE AT MY LODGE 오너 하루 레이아웃
+
+- `#ownership`만 겹친 카드 carousel에서 세 장의 사진·제목·설명을 함께 보여주는 에디토리얼 3열 구성으로 변경했다. 따뜻한 밝은 배경과 세로 사진 비율을 적용하고, 모바일은 한 열로 쌓는다. 기존 이미지와 카드 콘텐츠는 유지한다.
+- `editorial.js`에서 오너 카드 순환·스와이프·카드 버튼 처리를 제거했다. 다른 섹션의 스크립트와 레이아웃은 변경하지 않았다. `owner-cards-refinement.css`의 스코프 override로 구현했다.
+- `npm run check`, `npm run build` 통과(공개 파일 251개). 브라우저 스크린샷은 현재 로컬 서버가 구형 페이지 상태를 반환해 시각 검증을 완료하지 못했다. 커밋·업로드·운영 배포 없음.
+
+## 2026-10-19 Hero → Our Villa 스크롤 오버레이
+
+- `hero-editorial.js`가 홈 hero부터 `#our-villa`까지(사이에 있는 living ribbon 포함) 전환 wrapper로 묶는다. 기존 섹션 순서는 유지한다.
+- hero는 `100vh/100svh`, sticky top 0. `#our-villa`는 따뜻한 아이보리 solid surface와 높은 stacking order를 사용해 아래에서 올라와 hero를 덮는다. 기존 scenery backdrop을 숨기고 길잡이 영역 텍스트/패널을 어두운 잉크·밝은 표면으로 맞췄다. wrapper가 다음 섹션에서 끝나므로 Hero sticky도 그 경계에서 해제되고 이후는 일반 스크롤이다. 추가 pin이나 전환용 스크롤 거리는 없다.
+- 동작 줄이기 설정에서는 hero를 static flow로 바꾼다. 기존 GSAP intro/ScrollTrigger는 이미지와 카피를 움직이며 hero 자체를 transform하지 않는다.
+- 브라우저 검증: 데스크톱 1440×900 및 모바일 390×844. hero 높이 각각 viewport와 동일, hero top 0에서 유지, Our Villa가 화면 아래에서 진입, 배경 불투명·z-index 2, 다음 섹션 끝 뒤 hero가 위로 해제됨, reduced-motion에서 position relative, JS 오류 0. 공개 빌드 251개 통과.
+- 커밋·업로드·운영 배포 없음.
+
+## 2026-10-19 홈 섹션 복원 및 Hero / Explore 유지
+
+- 원인: `intro.js`가 만드는 `.film-stage`를 `index.html`에서 제거했지만 `branding.js`의 홈 초기화가 해당 요소 존재에 종속되어 전체 프로모션 홈 변환을 건너뛰었다. 그 결과 홈 섹션 순서·콘텐츠가 달라졌다.
+- `branding.js` 초기화 조건을 `.film-stage`에서 실제 `#home.hero`로 바꾸어 전체 홈 구성을 복원했다. `editorial.js`는 현재 `.facility-selector`가 있는 Explore 섹션을 덮어쓰지 않고, 해당 섹션의 배경 이미지와 AI 콘셉트 고지도 유지한다. “02 / EXPLORE YOUR VILLA” 유지.
+- 이 복구는 현재 로컬의 미커밋 파일을 기준으로 했다. Git 마지막 커밋을 기준으로 되돌리지 않았다. 사전 복구본은 `backups/before-homepage-scope-fix-20261019/`에 보관.
+- 검증: 브라우저에서 이전 Hero 작업 직전 DOM의 섹션 순서/제목과 현 상태 비교, Hero 및 Explore 존재와 JS 오류 확인. `node --check branding.js`, `node --check editorial.js`, `npm run check`, `npm run build` 통과. 커밋·업로드·배포 없음.
+
+## 2026-10-19 풀 이미지 히어로 후속 수정
+
+- 사용자 요청으로 숲색 비대칭 프레임을 제거하고 사진을 히어로 전체에 edge-to-edge 배치. 제목·설명·탐색 링크를 사진 위에 배치하고 하단 명암으로 가독성 확보. AI 콘셉트·사전 안내 고지 유지.
+- 셔터·스크롤 원근 축소를 제거. GSAP 2.6초 카메라 pull-back과 줄 단위 마스크 타이포 등장, ScrollTrigger 이미지 드리프트 적용. 이미지 wrapper에 상하 10% 여유를 두어 스크롤 중 가장자리 노출 방지. 모바일 이동량 감소, 동작 줄이기 및 context 정리 유지.
+- hero-editorial.js 문법 검사와 공개 빌드(251개) 통과. 이번 수정의 브라우저 시각 검수는 미완료. 커밋·업로드·배포 없음.
+
+## 2026-10-19 홈페이지 히어로 및 GSAP 효과 교체
+
+- `hero-editorial.js/css`: 기존 건축 WebP를 활용한 숲색 비대칭 히어로, 영문 대형 제목과 한국어/영어 안내·탐색 링크. index.html의 기존 intro.js 연결만 제거하고 새 히어로를 마지막에 초기화한다.
+- 후속 사용자 요청으로 세로 리빌·패럴랙스를 중앙에서 양쪽으로 열리는 셔터, 이미지 줌아웃, 가로 방향 텍스트 등장으로 교체. 스크롤 시 사진 프레임만 축소·원근 회전하며 모바일은 회전 없이 축소한다. 스크롤 고정 없음.
+- GSAP/ScrollTrigger 3.12.5 로컬 파일과 공개 빌드 목록 포함. matchMedia와 pagehide에서 정리하고 pageshow에서 복원. 동작 줄이기·라이브러리 실패 시 정적 화면 유지.
+- 최초 구현에서 check, check:workflow(9/9), build(251개) 통과. 후속 효과 교체 후 hero-editorial.js 문법 검사와 공개 빌드(251개) 재통과. 브라우저 도구 초기화 실패 및 Chrome 실행 승인 중 사용자 중단으로 시각 검수는 미완료.
+- 기존 사용자 변경 보존. 커밋·업로드·운영 배포 없음.
+
+## 2026-10-18 Vision ScrollTrigger 이미지 리빌
+
+- 종료 프레임이 화면 중심보다 아래로 밀리던 원인은 section의 세로 padding이었다. pin 구간의 padding을 없애고, 컨테이너를 정확히 `100svh`로 맞춰 마지막 `100vw × 100vh` 프레임이 뷰포트 중심에 정렬되게 했다. 제목은 단일 열로 고정해 마지막 프레임에서 그리드 압축이 생기지 않는다.
+- 사용자 피드백에 따라 scroll 거리 `+=150%`를 `+=95%`, scrub을 `1`에서 `.7`로 줄였다.
+- section-sized 종료 시안은 사용자 피드백으로 되돌렸다. 현재 끝 프레임은 중앙 정렬 `100vw × 100vh`, `+=95%` / `.7` 설정이다.
+- 끝 프레임에서 pin이 풀리며 이미지가 갑자기 이동해 보이는 문제를 피하기 위해, ScrollTrigger `onLeave`에서 다음 section으로 부드럽게 handoff한다. 위로 돌아오면 handoff 상태를 해제해 리빌을 다시 역방향으로 확인할 수 있다.
+- 위 handoff는 `cinematic.js`가 저장한 다음 형제가 이후 `chairman.js`의 DOM 재배치로 Vision 앞에 놓이면서 역방향 jump를 일으킨 것으로 확인했다. handoff를 제거하고, Vision 내부 `.container`를 명시적 pin 대상(`pinSpacing: true`, `pinReparent: false`)으로 고정했다. 이미지·전체 layout 로드 뒤 ScrollTrigger를 refresh한다.
+- ScrollTrigger가 pin 대상 주위에 spacer를 삽입하면 `.container`가 더 이상 section의 직접 자식이 아니다. 따라서 Vision stage CSS를 `> .container`에서 descendant `.container`로 바꿔 pin 전후 모두 크기·position이 유지되게 했다.
+- inner container pin은 spacer reparenting으로 이미지의 containing block을 바꿔 section 밖 배치를 만들 수 있어 제거했다. 현재 Vision section 자체를 pin하며, 자동 handoff는 계속 제거된 상태다.
+- 기존 cinematic scroll loop가 동시에 `--vision-zoom`·`--vision-corner`를 갱신하던 Vision 처리와 observer 연결을 제거했다. GSAP trigger에는 `vision-reveal` ID와 중복 실행 guard를 추가했으며, legacy entrance opacity·clip-path·transform transition도 Vision 리빌 범위에서 무력화했다.
+- 사용자 요청으로 GSAP ScrollTrigger Vision 시안은 전체 제거하고, 기존 cinematic Vision observer·zoom·corner 동작으로 복원했다. `vision-scroll-reveal.css` import와 파일, GSAP initializer를 삭제했다.
+
+- `#vision`의 기존 이미지와 제목을 유지한 채, GSAP 3.12.5와 ScrollTrigger로 중앙 120px 정사각형에서 전체 뷰포트(`100vw × 100vh`)까지 확장하는 스크롤 리빌을 추가했다. 현재 `scrub: .7`, `pin: true`, `end: "+=95%"`이며 위로 스크롤하면 자연스럽게 되감긴다.
+- 컨테이너만 width·height·border-radius(12px→0)를 애니메이션하고 이미지는 `object-fit: cover`로 유지한다. 가로 넘침을 막고, 모바일은 제목 위치만 조정한다. 동작 줄이기에서는 일반 16:9 이미지로 남는다.
+- 되돌릴 때 `luxury-system.css`의 `vision-scroll-reveal.css` import와 `cinematic.js`의 Vision image reveal IIFE를 함께 제거하면 된다. 운영 배포는 하지 않았다.
+
+## 2026-10-17 Edition 02 리본 렌더 우선순위 보강
+
+- 이전 CSS 우선순위에 의해 리본이 검은색으로 보이는 현상을 막기 위해 `cinematic.js`가 생성 시 Edition 02 표면색·테두리를 직접 지정하고, 38초 연속 이동은 Web Animations API로 실행하도록 했다. hover 정지와 동작 줄이기 해제도 유지한다.
+- 정지의 실제 원인은 이후 로드되는 `chairman.js`가 새 `.ribbon-track` 전체를 정적 마크업으로 교체하던 것이었다. 해당 교체 한 줄만 제거해 Edition 02 트랙과 애니메이션을 보존한다.
+- 수정 범위는 `living-ribbon` 생성부뿐이다.
+
+## 2026-10-17 로컬 미리보기 새 파일 즉시 반영
+
+- `server.mjs`가 시작 시점의 공개 파일 목록만 사용해 새 CSS·미디어가 404가 되는 문제를 수정했다. 로컬 미리보기에서 루트 CSS/JS/HTML과 `assets/images|video|brand`의 안전한 파일명은 요청 시 해석되므로 이후에는 새 파일도 새로고침만으로 확인할 수 있다.
+- 이는 로컬 개발 서버의 제공 범위만 바꾸며 공개 빌드 허용 목록과 운영 배포에는 영향을 주지 않는다.
+
+## 2026-10-17 Edition 02 Travertine 리본 확정 시안
+
+- 사용자 요청으로 Edition 02 리본의 표면·글자·테두리를 `#FAF9F6 / #141414 / #716E68 / #E2DED6 / #8E857B` 팔레트에 맞췄다. 38초 선형 애니메이션은 명시적으로 실행되며 hover에서만 멈춘다. 동작 줄이기 설정은 기존대로 정지한다.
+- 범위는 `living-ribbon`뿐이며 본문·히어로·플로팅 내비게이션·다른 섹션의 구조나 내용은 변경하지 않았다.
+
+## 2026-10-17 Quiet Architectural Luxury 리본 시안
+
+- 사용자 제공 Edition 02 기준으로 기존 `living-ribbon`을 `MY OWN VACATION`과 `마이롯지`의 연속 루프로 교체했다. 38초 선형 이동, hover 정지, 동작 줄이기 정지를 적용했다.
+- 기존 블루프린트 리본 시안은 `cinematic.js`와 `cinematic.css`의 living-ribbon 블록에만 있었으며, 히어로·내비게이션·다른 섹션은 변경하지 않았다.
+
+## 2026-10-17 OUR STORY 아키텍처 에디토리얼 시안
+
+- 사용자 요청으로 `#our-villa`의 `MY LODGE / OUR STORY` 그리드만 따뜻한 아이보리 바탕·에디토리얼 타이포그래피·프레임 이미지 구성으로 재정의했다. 길잡이, 히어로, 내비게이션과 다른 섹션은 유지했다.
+- `our-story-refinement.css`를 `luxury-system.css`에서 import하는 방식이라 해당 import만 제거하면 시안을 되돌릴 수 있다. 운영 배포는 하지 않았다.
+
+## 2026-10-17 아키텍처 블루프린트 리본 시안
+
+- 기존 `living-ribbon`만 석재색 바탕·드래프팅 라인·기술 표기·연속 42초 이동으로 재구성했다. hover 시 58초로 부드럽게 감속하며 동작 줄이기 설정에서는 정지한다.
+- 히어로·내비게이션·다른 섹션에는 변경이 없다. 운영 배포는 하지 않았다.
+
+## 2026-10-17 플로팅 내비게이션 시안
+
+- 사용자 제공 레퍼런스를 반영해 데스크톱 전용 56px pill 형태의 반투명 플로팅 내비게이션을 `navbar-refinement.css`에 적용했다. 기존 로고·메뉴·화면 보기 드롭다운·언어 전환·CTA 기능은 유지했다.
+- 되돌릴 때 `luxury-system.css`의 `navbar-refinement.css` import를 제거하거나 해당 파일을 이전 시안으로 복원한다. 운영 배포는 하지 않았다.
+
+## 2026-10-17 한국어 히어로 이미지 미리보기 교체
+
+- 사용자 요청으로 `assets/video/MyLodge1.png`를 한국어 홈페이지 히어로에 임시 적용했다. 영어 히어로는 기존 영어 영상을 유지하며, 기존 한국어 영상과 포스터 파일은 보존했다.
+- 되돌릴 때 `intro.js`의 한국어 static-image 분기를 제거하고 기존 한국어 영상 선택식을 복원하며, `scripts/public-assets.mjs`의 `MyLodge1.png` 공개 목록 한 항목을 제거한다. 운영 배포는 하지 않았다.
+
+## 2026-10-15 타이포그래피 역할 지정
+
+- 사용자 지정: Display Canela, heading Neue Haas Grotesk/Avenir Next, body Avenir Next. `tokens.css`에 역할 토큰을 추가하고, 사이트·진입 화면에 적용했다.
+- 웹폰트를 새로 내려받거나 공개하지 않았다. 로컬에 라이선스된 서체가 있을 때 사용하며, 한국어 글리프는 Noto Sans KR로 안전하게 대체한다. 변경은 로컬 개발본만 해당하며 빌드·배포는 하지 않았다.
+
 ## 2026-10-09 최신 개발본 운영 배포 완료
 
 - 사용자 요청으로 GitHub/Vercel 업데이트 수행. 사이트 변경 c865466, 공개 빌드 목록·모바일 조사 근거 99db1d9를 기존 codex/main-pc-handoff-20260930 브랜치에 저장.
@@ -915,5 +1117,28 @@ Windows Edge에서 9가지 화면 크기로 양방향 스크롤·직접 이동·
 - 전화번호 blur 시 형식 정리, 문의 1,000자 제한 및 글자 수, 관심 서비스 복수 선택, 입력 내용 확인 dialog 후 체험 완료 추가. 실제 접수번호 생성·저장·전송 없음.
 - admin-demo.html: 가상 문의 3건, 상태 필터, 상세, 담당자·처리 상태·메모, 화면 내 이력 시안. 메모리에서만 유지하며 실제 문의와 연결하지 않음. 로컬 서버에서 /admin-demo.html로 접근. 고객 사이트 메뉴에 노출하지 않으며 공개 dist 빌드에는 포함하지 않음.
 - backups/before-consultation-improvements-20260928에 변경 전 파일 보관. 실제 운영자 시스템의 인증·권한·저장·개인정보 처리는 서버 협의 후 별도 구현 필요.
+## 2026-10-17 Cinematic Villa Explorer
 
+- `#villa-spaces`만 기존 탭/패널에서 6개의 투명 3D 일러스트 선택 레일과 사진 크로스페이드 갤러리로 교체했다. 원본은 `assets/brand/{villa,beachside,pool-cabanas,cafe-club,market,concierge}.webp`이며 각각 기존 시설 사진과 직접 연결된다.
+- 데스크톱에서는 일러스트 위로 마우스를 옮기기만 해도 선택·사진·카운터가 즉시 전환된다. 키보드 화살표·Home·End, 이전/다음 제어, 선택 상태와 01/06 카운터도 제공한다. 모바일에서는 선택 레일만 가로 스크롤하고 본문은 넘치지 않는다. `scripts/public-assets.mjs`에 여섯 아트워크를 추가했다.
+- 새 구조에서 과거 `.space-panel`을 전제하던 브랜드 후처리가 중단되지 않도록 `branding.js`의 해당 선택자를 null-safe로 좁혔다. 히어로·내비게이션·푸터 등 다른 섹션은 변경하지 않았다.
+## 2026-10-17 오너 카드 비주얼 정리
+
+- `#ownership`만 `owner-cards-refinement.css`로 덮어써서 기존 세 장의 동적 사진·문구·구조는 그대로 두고, 아이보리 바탕, 모서리 없는 full-bleed 사진 카드, 하단 프로스티드 패널, 요청된 어두운 하단 그라데이션을 적용했다.
+- 데스크톱 hover는 카드 `-6px`, 사진 `1.05` 확대이며 동작 줄이기 환경에서는 전환과 이동을 비활성화한다. 파일은 `luxury-system.css`에서 import하며 공개 빌드 목록에 추가했다.
+## 2026-10-17 오너 혜택 depth carousel
+
+- `#ownership`의 기존 세 사진·카드 문구를 유지한 채 `editorial.js`에서 카드 위치 클래스만 전환하는 가벼운 carousel을 추가했다. 중앙 카드는 700px, 양쪽 카드는 580px으로 겹쳐 보이며, 클릭·키보드 화살표/Home/End·스와이프·이전/다음 버튼으로 이동한다.
+- 더 세로형 비율 요청에 맞춰 데스크톱 중앙 카드는 320px x 520px, 양쪽은 245px x 430px로 조정했다. 카드 사이에는 약 20px 간격을 두고 양쪽이 거의 전부 보인다. 회전·원근·프로스티드 패널은 제거했으며, 문구는 사진 하단의 기존 어두운 그라데이션 위에 흰색으로 표시된다. 카드 위치·크기·opacity 전환은 600ms다. 모바일에는 한 카드와 양쪽 미리보기만 보이며, 동작 줄이기에서는 전환·hover 확대를 없앤다.
+## 2026-10-18 Owner Benefits Stitch 레퍼런스 반영
+
+- `assets/brand/stitch.html`을 기준으로 오너 혜택 섹션을 따뜻한 아이보리·골드 분위기, 가이드 라인, 중앙 강조 카드, 원형 이전/다음 버튼과 카운터 구성으로 재작업했다. 기존 로컬 오너 이미지와 한영 페이지 흐름을 유지했다.
+- 이전/다음 버튼·키보드 화살표·스와이프가 카드 순서를 순환시키고, 좌우 카드를 누르거나 Enter/Space를 누르면 중앙으로 부드럽게 이동한다. 동작 줄이기 설정에서는 전환·부유 애니메이션을 끈다.
+- 오너 혜택의 안내 문구는 실제 서비스 조건이 아닌 AI 생활 콘셉트임을 명시한다. 운영 배포는 하지 않았다.
+## 2026-10-19 시설 아이콘 내비게이션과 콘텐츠 간격 정리
+
+- `chairman.css`의 `#villa-spaces` 시설 선택기와 갤러리 사이 간격을 데스크톱 24–32px, 모바일 24px로 줄였다.
+- 갤러리 이미지를 `object-fit: cover`로 바꿔 상하 레터박스와 콘텐츠 상단의 빈 공간을 제거했다. 이미지 크기·자산·탭 구조는 유지했다.
+- 설명 패널의 상단 padding과 제목 위 간격을 줄여 이미지와 설명이 같은 콘텐츠 경계에서 시작하도록 정리했다. 색상·서체·아이콘·전환 동작은 변경하지 않았다.
+- 커밋·업로드·운영 배포 없음.
 

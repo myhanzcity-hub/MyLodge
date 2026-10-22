@@ -12,44 +12,35 @@
   if(location.hash&&!['#home','#intro'].includes(location.hash)){
    location.replace(homepage.href);return;
   }
-  if(english){document.documentElement.lang='en';document.title='MyLodge · I have a villa.';}
+  if(english){document.documentElement.lang='en';document.title='MyLodge · A Holiday Home of My Own.';}
   document.querySelector('.entry-fallback a').href=homepage.href;
   const motion=matchMedia('(prefers-reduced-motion: reduce)');
   const local=(ko,en)=>english?en:ko;
   const scenes=[
-   {id:'my-villa',topic:["MY OWN VACATION", "MY OWN VACATION"],lines:[["나! 별장있다."], ["I have a villa!"]],asset:'brand-villa-atmosphere-20261008',position:'38% 50%',alt:['바다와 풀장을 바라보는 곡선형 별장 · AI 공간 구상','A curved seaside villa beside a pool · AI concept']},
-   {id:'arrival',topic:["ARRIVE & UNWIND", "ARRIVE & UNWIND"],lines:[["완벽한 휴가의 시작."], ["The start of a perfect getaway."]],asset:'vacation-arrival',position:'64% 50%',alt:['바닷가 모듈 별장에 도착하는 휴가 장면 · AI 공간 구상','Arriving at a seaside modular villa · AI concept']},
-   {id:'living',topic:["FOR OUR VILLA OWNERS", "FOR OUR VILLA OWNERS"],lines:[["내 안에 완벽한 여유."], ["Space to truly unwind."]],asset:'living-morning',largest:1536,position:'53% 45%',alt:['햇살이 들어오는 별장의 아침 생활 · AI 공간 구상','A sunlit morning in a villa · AI concept']},
-   {id:'beach',topic:["02 / BEACHSIDE", "02 / BEACHSIDE"],lines:[["바다를 곁에.", "여유를 가까이."], ["The sea beside you.", "Relaxation within reach."]],asset:'gallery-pool-20261007',position:'51% 46%',alt:['바다를 바라보며 풀장에서 여유를 즐기는 장면 · AI 공간 구상','Relaxing in a pool overlooking the sea · AI concept']},
-   {id:'cabana',topic:["03 / POOL PARTY & CABANA", "03 / POOL PARTY & CABANA"],lines:[["빛나는 풀파티.", "오너들만의 카바나."], ["Poolside celebrations.", "Cabanas exclusively for owners."]],asset:'facility-pool-cabana-20261008',position:'55% 48%',alt:['풀파티와 풀장 곁 카바나의 밤 · AI 공간 구상','A pool party and poolside cabanas at night · AI concept']},
-   {id:'music',topic:["04 / CAFE & CLUB", "04 / CAFE & CLUB"],lines:[["낮의 커피.", "밤의 음악."], ["Coffee by day.", "Music by night."]],asset:'facility-club-20261007',position:'50% 50%',alt:['음악과 사람들의 만남이 있는 클럽 · AI 공간 구상','Music and connections in a club · AI concept']},
-   {id:'people',topic:["FOR OUR VILLA OWNERS", "FOR OUR VILLA OWNERS"],lines:[["나와 비슷한 사람들과."], ["Among like-minded people."]],asset:'owner-connect-20261007',position:'50% 45%',alt:['별장의 테라스에서 대화하는 사람들 · AI 공간 구상','People connecting on a villa terrace · AI concept']},
-   {id:'market',topic:["05 / MARKET", "05 / MARKET"],lines:[["휴가에 필요한 것들.", "가까운 마켓에서."], ["Your holiday essentials.", "At the nearby market."]],asset:'facility-market-v2-20261008',position:'52% 48%',alt:['별장 가까이에서 먹거리와 휴가용품을 고르는 마켓 · AI 공간 구상','A nearby market for food and holiday essentials · AI concept']},
-   {id:'concierge',topic:["MY LODGE / CONCIERGE", "MY LODGE / CONCIERGE"],lines:[["휴식에 집중할 수 있도록."], ["More time to unwind."]],asset:'service-ready-20261008',position:'45% 47%',alt:['별장의 도착 준비와 생활 편의를 세팅하는 장면 · AI 공간 구상','Preparing a villa for arrival · AI service concept']},
-   {id:'jumunjin',topic:["MY LODGE SHARE", "MY LODGE SHARE"],lines:[["마이롯지의 별장 생활."], ["Villa life at MyLodge."]],asset:'project-jumunjin-20261007',position:'51% 47%',alt:['해안의 별장과 중앙 풀장을 조망한 주문진 파크 · AI 공간 구상','Coastal villas and a central pool at Jumunjin Park · AI concept']},
-   {id:'yangyang',topic:["MY LODGE / A NEW EVERYDAY", "MY LODGE / A NEW EVERYDAY"],lines:[["아름다운 휴양지에서."], ["In a beautiful holiday destination."]],asset:'project-yangyang-20261013',position:'50% 47%',alt:['양양 파크의 모듈형 별장과 풀장을 조망한 장면 · AI 공간 구상','Modular villas and pools at Yangyang Park · AI concept']},
-   {id:'chiangmai',topic:["BUSINESS VALLEY / CHIANG MAI", "BUSINESS VALLEY / CHIANG MAI"],lines:[["챕터 1. 치앙마이."], ["Chapter 1. Chiang Mai."]],asset:'chiangmai-overview-20261013',position:'48% 45%',alt:['치앙마이의 주거와 업무, 문화 공간을 함께 조망한 장면 · AI 공간 구상','Homes, workspaces and culture in Chiang Mai · AI concept']},
-   {id:'possibilities',topic:["BUSINESS VALLEY / CHIANG MAI", "BUSINESS VALLEY / CHIANG MAI"],lines:[["전 세계 IT맨과", "디지털노마드들이", "집결하는 성지."], ["Where the global tech community and", "digital nomads", "come together."]],asset:'chiangmai-work-connections-20261011',position:'52% 45%',alt:['치앙마이의 라운지에서 일하고 교류하는 사람들 · AI 공간 구상','Working and connecting in a Chiang Mai lounge · AI concept']},
-   {id:'future',topic:["MY LODGE / TWO WAYS TO STAY", "MY LODGE / TWO WAYS TO STAY"],lines:[["휴가와 함께 시작하는", "미래의 비전."], ["A vision for the future,", "beginning with a getaway."]],asset:'resort-overview-20261006',position:'53% 46%',alt:['별장과 풀장, 밤의 만남이 이어지는 마이롯지 전체 풍경 · AI 공간 구상','A MyLodge vision of villas, pools and evening gatherings · AI concept']}
+   {id:'ownership',topic:['A HOLIDAY HOME OF MY OWN','OWNERSHIP'],lines:[['나도, 별장이 있다.'],['A Holiday Home','of My Own.']],copy:['특별한 일상을 꿈꾸는 새로운 방식.','A new way to imagine an extraordinary everyday.'],asset:'resort-overview-20261006',position:'60% 48%'},
+   {id:'freedom',topic:['BEYOND THE ORDINARY','FREEDOM'],lines:[['일상을 넘어,','나만의 휴식으로.'],['Beyond the Ordinary.']],copy:['바쁜 일상을 벗어나 특별한 시간을 만나다.','Step away from the busy everyday. Make time for something special.'],asset:'brand-villa-atmosphere-20261008',position:'38% 50%'},
+   {id:'lifestyle',topic:['A NEW EVERYDAY BEGINS HERE','A NEW LIFESTYLE'],lines:[['새로운 일상이','시작되는 곳.'],['A New Everyday','Begins Here.']],copy:['휴식과 즐거움이 자연스럽게 이어지는 공간.','A place where relaxation flows naturally into enjoyment.'],asset:'resort-overview-20261006',position:'72% 58%'},
+   {id:'community',topic:['BETTER MOMENTS, TOGETHER','COMMUNITY'],lines:[['좋은 사람들과,','더 특별한 순간.'],['Better Moments,','Together.']],copy:['새로운 만남과 특별한 경험이 이어지는 곳.','A place for new connections and extraordinary shared experiences.'],asset:'owner-connect-20261007',position:'51% 45%'},
+   {id:'my-lodge',topic:['A NEW EVERYDAY','A NEW EVERYDAY'],lines:[['MY LODGE'],['MY LODGE']],copy:['당신이 꿈꾸던 새로운 라이프스타일.','The new lifestyle you have imagined.'],asset:'vision-masterplan-20261007',position:'53% 46%'}
   ];
   const lang=english?1:0;
-  const secondsPerScene=4,totalSeconds=scenes.length*secondsPerScene;
+  const secondsPerScene=4.5,totalSeconds=scenes.length*secondsPerScene;
   const stage=document.createElement('section');
   stage.className='story-intro';stage.dataset.language=english?'en':'ko';stage.tabIndex=0;
-  stage.setAttribute('aria-label',local('마이롯지 56초 인트로 · 14개 장면','MyLodge 56-second introduction · 14 scenes'));
+  stage.setAttribute('aria-label',local('마이롯지 약 23초 인트로 · 5개 장면','MyLodge 23-second introduction · 5 scenes'));
   stage.setAttribute('aria-describedby','story-intro-description');
   stage.innerHTML=`<div class="story-images" aria-hidden="true"><figure><img alt="" decoding="async"></figure><figure><img alt="" decoding="async"></figure></div>
    <div class="story-shade" aria-hidden="true"></div>
-   <div class="story-top"><span>MY LODGE / INTRO</span><button type="button" class="story-enter">${local('홈페이지 보기 ↓','Explore MyLodge ↓')}</button></div>
-   <div class="story-caption"><div class="story-meta"><p class="story-topic"></p><span class="story-counter"></span></div><h1 class="story-title"></h1></div>
+   <div class="story-top"><span>MY LODGE / INTRO</span><button type="button" class="story-enter">${local('인트로 건너뛰기 ↗','Skip Intro ↗')}</button></div>
+   <div class="story-caption"><div class="story-meta"><p class="story-topic"></p><span class="story-counter"></span></div><h1 class="story-title"></h1><p class="story-copy"></p><a class="story-discover" href="${homepage.href}" hidden>${local('마이롯지 알아보기','Explore MyLodge')} <span aria-hidden="true">↗</span></a></div>
    <div class="story-bottom"><div class="story-progress" role="progressbar" aria-label="${local('인트로 진행','Introduction progress')}" aria-valuemin="0" aria-valuemax="${totalSeconds}" aria-valuenow="0"><span></span></div>
    <div class="story-controls"><div class="story-transport"><button type="button" class="story-prev" aria-label="${local('이전 장면','Previous scene')}">←</button><button type="button" class="story-play"></button><button type="button" class="story-next" aria-label="${local('다음 장면','Next scene')}">→</button></div><p class="story-note">${local('마이롯지가 그리는 생활 · AI 콘셉트 이미지','Life imagined by MyLodge · AI concept images')}</p></div></div>
-   <p id="story-intro-description" class="story-sr">${local('별장, 도착, 거실, 바다, 풀파티와 카바나, 음악, 만남, 마켓, 컨시어지, 주문진, 양양, 치앙마이, 새로운 가능성, 미래의 14개 장면이 이어집니다. 일시정지하거나 이전·다음 버튼으로 읽을 수 있습니다. 홈페이지 보기로 바로 이동할 수 있습니다. 실제 시설·제공 서비스와 별도의 공간 구상입니다.','Fourteen scenes introduce villas, arrival, a living room, the sea, pool parties and cabanas, music, people, a market, concierge, Jumunjin, Yangyang, Chiang Mai, possibilities and the future. Pause to read, choose a scene or explore the website. These are concepts, separate from confirmed facilities or services.')}</p>
+   <p id="story-intro-description" class="story-sr">${local('나만의 별장에 대한 꿈에서 자유로운 휴식, 새로운 일상, 함께하는 순간, 마이롯지로 이어지는 다섯 장면입니다. 일시정지하거나 이전·다음 버튼으로 살펴보고, 건너뛰기 또는 마지막 장면의 마이롯지 알아보기로 홈페이지에 이동할 수 있습니다. 이미지는 구상 단계의 콘셉트입니다.','Five scenes move from the dream of a holiday home to freedom, a new lifestyle, community and MyLodge. Pause or use previous and next to explore. Skip Intro or the final Explore MyLodge link opens the homepage. Images show concepts, not confirmed facilities or services.')}</p>
    <p class="story-status story-sr" role="status"></p>`;
   hero.append(stage);hero.classList.add('has-story-intro');
   const frames=[...stage.querySelectorAll('.story-images figure')];
   const topic=stage.querySelector('.story-topic'),counter=stage.querySelector('.story-counter');
-  const title=stage.querySelector('.story-title');
+  const title=stage.querySelector('.story-title'),copy=stage.querySelector('.story-copy');
   function renderLines(scene){
    title.replaceChildren(...scene.lines[lang].map(line=>{
     const span=document.createElement('span');span.textContent=line;return span;
@@ -98,7 +89,7 @@
    lastTick=now;updateProgress();
    if(elapsed>=secondsPerScene*1000){
     if(index<scenes.length-1)select(index+1);
-    else {finished=true;elapsed=secondsPerScene*1000;updateProgress();sync();enterSite(false);}
+    else {finished=true;elapsed=secondsPerScene*1000;updateProgress();sync();}
    }else raf=requestAnimationFrame(tick);
   }
   async function select(value){
@@ -114,7 +105,9 @@
    index=requested;elapsed=0;
    topic.textContent=scene.topic[lang];counter.textContent=`${String(index+1).padStart(2,'0')} / ${scenes.length}`;
    renderLines(scene);
+   copy.textContent=scene.copy[lang];
    stage.dataset.scene=scene.id;
+   stage.querySelector('.story-discover').hidden=index!==scenes.length-1;
    stage.querySelector('.story-caption').getAnimations().forEach(animation=>animation.cancel());
    if(!motion.matches)stage.querySelector('.story-caption').animate([{opacity:.25,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:650,easing:'ease-out'});
    loading=false;stage.removeAttribute('aria-busy');updateProgress();sync();

@@ -1,4 +1,5 @@
 (() => {
+ const tokens=document.createElement('link');tokens.rel='stylesheet';tokens.href='tokens.css';document.head.prepend(tokens);
   'use strict';
   const $ = id => document.getElementById(id);
   const model = window.MyLodgeWorkflow.create(), time = window.MyLodgeConsultation;

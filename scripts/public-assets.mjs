@@ -6,6 +6,7 @@ publicAssets.push('view-mode.css','view-mode.js','view.html');
 for (const name of ['service-ready','service-property-care','service-owner-exchange']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/${name}-20261008-${width}.webp`);
 publicAssets.push('branding.css','branding.js','assets/brand/mylodge-logo.webp','assets/brand/mylodge-character.webp');
 publicAssets.push('assets/brand/gaji.png');
+publicAssets.push('assets/brand/SocialLife.png');
 publicAssets.push('assets/brand/imageBeach.png');
 publicAssets.push('assets/brand/mylodge-neon-icons-20261007.png');
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/resort-overview-20261006-${width}.webp`);
@@ -37,7 +38,7 @@ for (const name of ['morning','dinner','terrace']) for (const width of [480,960,
 for (const width of [480,960,1440]) publicAssets.push(`assets/images/plan-p16-${width}.webp`);
 
 publicAssets.push('editorial.css','editorial.js');
-publicAssets.push('assets/images/villa.png','assets/images/luxury2.png','assets/images/meeting.png');
+publicAssets.push('assets/images/villa.png','assets/images/luxury2.png','assets/images/meeting.png','assets/images/beachParty.png');
 for (const name of ['story-destination','owner-unwind','owner-connect','owner-ideas','concierge-arrival','concierge-care','concierge-escape','gallery-pool','gallery-terrace','gallery-night','vision-masterplan','valley-resources']) for (const width of [480,960,1680]) publicAssets.push('assets/images/'+name+'-20261007-'+width+'.webp');
 publicAssets.push('localization.css','localization.js');
 publicAssets.push('assets/video/mylodge-intro-en-30s.mp4','assets/video/mylodge-intro-en-30s-mobile.mp4','assets/video/mylodge-intro-en-poster.webp','assets/video/mylodge-intro-en-poster-mobile.webp');
@@ -56,3 +57,5 @@ for (const name of ['project-yangyang','yangyang-modular-villa','yangyang-pool-p
 
 publicAssets.push('hero-editorial.css', 'hero-editorial.js', 'gsap.min.js', 'ScrollTrigger.min.js');
 publicAssets.push('vision-square-reveal.js');
+publicAssets.push('ownership-story.css');
+publicAssets.push('assets/video/Beach2.mp4');

@@ -32,6 +32,7 @@
 .story-title>span{display:block;word-break:keep-all;overflow-wrap:anywhere}
 .story-title>span:last-child{color:var(--ui-ivory);font-weight:500}
 .story-title>span:only-child{color:var(--ui-white);font-weight:600}
+.hero .story-copy{max-width:640px;margin:18px 0 0;color:rgb(var(--ui-ivory-rgb) / .9);font-size:clamp(14px,1.25vw,18px);line-height:1.8;letter-spacing:.015em;text-shadow:0 2px 12px var(--ui-charcoal)}
 .vacation-design .hero .story-intro[data-lines="3"] .story-title{font-size:clamp(32px,3.8vw,56px)}
 .story-bottom{position:absolute;left:clamp(24px,5vw,80px);right:clamp(24px,5vw,80px);bottom:max(28px,env(safe-area-inset-bottom));}
 .story-progress{height:3px;background:rgb(var(--ui-ivory-rgb) / 0.212);overflow:hidden;margin-bottom:22px;border-radius:2px}
@@ -55,6 +56,7 @@
  .hero .story-topic{font-size:13px;letter-spacing:.02em;max-width:calc(100% - 70px)}
  .story-counter{font-size:14px;letter-spacing:0}
  .vacation-design .hero .story-title{font-size:clamp(26px,7.2vw,36px);line-height:1.6;letter-spacing:-.05em}
+ .hero .story-copy{max-width:34em;margin-top:10px;font-size:13px;line-height:1.65;letter-spacing:0}
  .story-bottom{left:24px;right:24px;bottom:max(22px,env(safe-area-inset-bottom))}
  .story-controls{flex-direction:column;align-items:flex-start;gap:13px}
  .story-transport{gap:10px}
@@ -86,6 +88,7 @@
  .story-caption{bottom:158px}
  .story-meta{padding-top:10px;margin-bottom:10px}
  .vacation-design .hero .story-title{font-size:26px;line-height:1.5}
+ .hero .story-copy{margin-top:7px;font-size:12px;line-height:1.5}
  .story-bottom{bottom:14px}
  .story-controls{gap:8px}
  .story-progress{margin-bottom:12px}
@@ -94,3 +97,52 @@
  .story-images figure{transition:none}
  .story-images img,.story-images .is-active img{animation:none;transform:none}
 }
+
+/* Ownership-first film: the photography carries the turquoise and violet. */
+.entry-page{--film-navy:#081524;--film-ivory:#F5F1E8;--film-gold:#C7A878;background:var(--film-navy)}
+.entry-page .story-intro{background:var(--film-navy);color:var(--film-ivory)}
+.entry-page .story-shade{background:linear-gradient(180deg,rgb(8 21 36 / .3),transparent 35%,rgb(8 21 36 / .8)),linear-gradient(90deg,rgb(8 21 36 / .52),transparent 85%)}
+.entry-page .story-images figure{transition:opacity 1.15s cubic-bezier(.22,1,.36,1)}
+.entry-page .story-images .is-active img{animation-duration:5.7s}
+.entry-page .story-top{top:max(26px,env(safe-area-inset-top))}
+.entry-page .hero .story-intro button{border-radius:0;background:transparent;backdrop-filter:none;border-color:rgb(245 241 232 / .38);font-size:13px}
+.entry-page .hero .story-intro .story-play{background:var(--film-ivory);color:var(--film-navy)}
+.entry-page .story-caption{bottom:clamp(170px,20vh,220px);max-width:1000px}
+.entry-page .story-meta{border:0;padding:0;margin-bottom:24px;max-width:640px}
+.entry-page .hero .story-topic{font-size:11px;letter-spacing:.2em;color:var(--film-gold)}
+.entry-page .story-counter{font-size:12px}
+.entry-page .hero .story-title{font-size:clamp(38px,5.4vw,78px);font-weight:400;line-height:1.32;letter-spacing:-.045em;color:var(--film-ivory);text-shadow:0 2px 24px rgb(8 21 36 / .25)}
+.entry-page .story-title>span:only-child,.entry-page .story-title>span:last-child{font-weight:400;color:inherit}
+.entry-page .story-intro[data-language=en] .story-title{font-family:var(--font-display);letter-spacing:-.025em;line-height:1.12}
+.entry-page .hero .story-copy{font-size:clamp(14px,1.2vw,17px);max-width:40ch}
+.entry-page .story-progress{height:2px;border-radius:0}
+.entry-page .story-progress>span{background:var(--film-gold)}
+.entry-page .hero .story-note{font-size:11px;opacity:.8}
+.story-discover{display:inline-flex;align-items:center;gap:50px;min-height:48px;margin-top:22px;border-bottom:1px solid var(--film-gold);color:var(--film-ivory);font-size:14px;text-decoration:none}
+.story-discover[hidden]{display:none}
+.story-discover:focus-visible{outline:2px solid var(--film-gold);outline-offset:6px}
+.entry-page .story-intro[data-scene=my-lodge] .story-title{font-family:var(--font-display);font-size:clamp(60px,9vw,128px);letter-spacing:.035em;line-height:1.1}
+.entry-page .story-intro[data-scene=my-lodge] .story-meta{margin-bottom:15px}
+@media(max-width:700px){
+ .entry-page .story-caption{bottom:190px;left:24px;right:24px}
+ .entry-page .hero .story-title{font-size:clamp(29px,8vw,42px);line-height:1.4}
+ .entry-page .story-intro[data-language=en] .story-title{font-size:clamp(34px,9.5vw,48px)}
+ .entry-page .hero .story-copy{font-size:13px;max-width:32ch}
+ .entry-page .hero .story-topic{font-size:9px;letter-spacing:.12em}
+ .entry-page .story-meta{margin-bottom:18px}
+ .entry-page .story-intro[data-scene=my-lodge] .story-title{font-size:clamp(42px,12vw,76px)}
+ .entry-page .story-shade{background:linear-gradient(180deg,rgb(8 21 36 / .4),transparent 30%,rgb(8 21 36 / .7) 65%,rgb(8 21 36 / .93))}
+}
+@media(max-height:600px){
+ .entry-page .story-top{top:14px}
+ .entry-page .story-caption{bottom:122px}
+ .entry-page .hero .story-title{font-size:clamp(27px,6vh,40px);line-height:1.2}
+ .entry-page .story-meta{margin-bottom:10px}
+ .entry-page .story-intro[data-scene=my-lodge] .story-title{font-size:48px}
+ .entry-page .story-controls{flex-direction:row;align-items:center}
+ .entry-page .hero .story-note{max-width:180px;font-size:9px}
+ .entry-page .story-progress{margin-bottom:12px}
+ .entry-page .story-bottom{bottom:12px}
+ .story-discover{margin-top:10px;min-height:44px}
+}
+@media(prefers-reduced-motion:reduce){.entry-page .story-images figure{transition:none}}
