@@ -1,0 +1,229 @@
+@import url("tokens.css");
+/* Shared mobile layout: device viewport, flowing content and reachable controls. */
+:root{--mobile-header-offset:96px;--review-text-scale:1}
+html{scroll-padding-top:var(--mobile-header-offset)}
+.photo-led section{scroll-margin-top:0}
+.artwork-brand,.footer-brand-art{color-scheme:only light!important;filter:none!important;mix-blend-mode:normal!important}
+.artwork-brand{background:transparent!important;background-image:none!important}
+.footer-brand-art{background:var(--ui-ivory)!important;background-image:linear-gradient(var(--ui-ivory),var(--ui-ivory))!important}
+.artwork-brand img{filter:none!important;mix-blend-mode:normal!important}
+.footer-brand-art{box-sizing:border-box;max-width:100%;width:190px}
+.lodge-guide .guide-character{mix-blend-mode:normal}
+body[data-review-theme=dark]{background:var(--ui-charcoal);color:var(--ui-ivory)}
+body[data-review-theme=dark] header{background:var(--ui-charcoal)!important;border-color:var(--ui-gray);color:var(--ui-ivory)}
+body[data-review-theme=dark] .menu-button{color:var(--ui-white)}
+body[data-review-theme=dark] :is(.language-slot summary,#mobile-menu){background:var(--ui-charcoal);color:var(--ui-white);border-color:var(--ui-gray)}
+body[data-review-theme=dark] :is(.space-copy,.vacation-intro,.vision-heading){background:var(--ui-charcoal);color:var(--ui-ivory)}
+body[data-review-theme=dark] :is(.space-copy h3,.vacation-intro h2,.vision-heading h2,.space-copy p,.space-copy li,.space-copy a){color:var(--ui-ivory)}
+body[data-review-theme=dark] .space-panel{border:1px solid var(--ui-gray)}
+@media(max-width:1023px){
+ .life-stage,.photo-deck{touch-action:pan-y pinch-zoom}
+ .life-stage,.photo-deck{cursor:grab}
+ .life-stage.is-swipe-dragging,.photo-deck.is-swipe-dragging{cursor:grabbing;user-select:none;-webkit-user-select:none}
+ .life-stage.is-swipe-dragging .life-scene.is-active>img,.photo-deck.is-swipe-dragging>[data-photo-position=active] img{translate:var(--swipe-offset,0px) 0}
+ .photo-led header{left:max(10px,env(safe-area-inset-left))!important;right:max(10px,env(safe-area-inset-right))!important}
+ .vacation-design .header-inner{gap:8px;min-height:60px;padding-inline:10px}
+ .vacation-design .artwork-brand{min-width:0;flex-shrink:1;gap:6px;padding:5px;max-width:calc(100% - 100px)}
+ .artwork-brand .logo-symbol{flex:0 0 56px;width:56px;height:30px}
+ .artwork-brand .logo-wordmark{flex:0 0 106px;width:106px;height:30px}
+ .artwork-brand .logo-symbol img{width:100px;left:-23px;top:-10px}
+ .artwork-brand .logo-wordmark img{width:151px;left:-25px;top:-58px}
+ .header-inner .language-slot{flex-shrink:0;margin-left:auto}
+ .language-slot summary{min-width:44px;min-height:44px;justify-content:center;padding:0 7px}
+ .language-full,.language-chevron,.language-slot summary svg{display:none}
+ .language-short{display:inline}
+ .photo-led .header-inner .menu-button{flex:0 0 44px;padding:6px}
+ #mobile-menu{max-height:calc(100dvh - var(--mobile-header-offset) - env(safe-area-inset-bottom));overscroll-behavior:contain;padding:14px 20px;gap:8px}
+ #mobile-menu a{min-height:44px}
+ .language-panel{right:0;max-width:min(250px,calc(100vw - 40px))}
+ .film-stage{height:100svh;min-height:0}
+ .film-top{left:16px;right:16px;top:calc(var(--mobile-header-offset) + 2px)}
+ .film-bottom{left:16px;right:16px;bottom:max(16px,env(safe-area-inset-bottom));gap:10px;flex-direction:column;align-items:flex-start}
+ .film-note{font-size:11px;line-height:1.5;margin:0;max-width:100%}
+ .film-transport{flex-wrap:wrap;gap:8px}
+ .film-transport button{min-height:44px;font-size:13px}
+ .photo-led .space-copy ul{display:block;margin:20px 0;font-size:calc(14px * var(--review-text-scale));line-height:1.7}
+ .photo-led .space-copy h3{font-size:calc(27px * var(--review-text-scale));line-height:1.4}
+ .photo-led :is(.space-copy>p:not(.eyebrow),.promotion-cards p,.project-region-copy,.path-copy p){font-size:calc(16px * var(--review-text-scale));line-height:1.75}
+ .photo-led :is(.vacation-intro h2,.intro h2,.invitation-grid h2){font-size:calc(30px * var(--review-text-scale));line-height:1.4}
+ .photo-led :is(.path-copy h3,.promotion-cards h3){font-size:calc(25px * var(--review-text-scale));line-height:1.45}
+ .space-copy,.path-copy,.editorial-card-copy{min-width:0;overflow-wrap:anywhere}
+ .photo-led .space-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .photo-led .space-tabs button{min-width:0;white-space:normal}
+ .photo-led .space-tabs .neon-tab-label{min-width:0;overflow-wrap:anywhere}
+ .photo-led .project-region-copy{overflow-wrap:anywhere}
+ .photo-led .promotion-cards figure,.photo-led .path-card figure{aspect-ratio:16/10;height:auto}
+ .photo-led .path-card:hover figure img,.photo:hover img{transform:none}
+ .photo-led .path-card:hover,.card-lift:hover{transform:none;translate:none}
+ .photo-led .path-card{touch-action:manipulation}
+ .photo-led .nature-visual{height:auto;min-height:0;display:flex;flex-direction:column}
+ .photo-led .nature-visual>img{position:relative;inset:auto;height:auto;aspect-ratio:16/10;object-fit:cover;transform:none}
+ .photo-led .nature-copy{position:relative;inset:auto;padding:28px 24px;max-width:none;background:var(--ui-charcoal)}
+ .photo-led .nature-copy h2{font-size:calc(32px * var(--review-text-scale));line-height:1.4}
+ .photo-led .nature-copy p{font-size:calc(16px * var(--review-text-scale));line-height:1.75}
+ .photo-led .nature-visual figcaption{position:relative;inset:auto;padding:12px 24px;background:var(--ui-charcoal)}
+ .photo-led footer .footer-disclaimer{font-size:calc(14px * var(--review-text-scale));line-height:1.8;color:var(--ui-ivory)}
+ .photo-led .footer-top p{color:var(--ui-ivory)}
+ .photo-led .valley-hero h1{font-size:calc(30px * var(--review-text-scale));line-height:1.4}
+ .photo-led .resource-copy h2{font-size:calc(28px * var(--review-text-scale));line-height:1.4}
+}
+@media(max-width:800px),(max-width:1023px) and (max-height:500px){
+ .photo-led.vacation-design .life-autoplay .life-stage{position:relative;top:0;display:grid;grid-template-columns:minmax(0,1fr);height:auto;min-height:0;overflow:visible;background:var(--ui-charcoal)}
+ /* The longest scene reserves the row, preventing content below from jumping. */
+ .photo-led.vacation-design .life-autoplay .life-scene{position:relative;inset:auto;display:flex;flex-direction:column;grid-area:1/1;min-width:0;min-height:0;visibility:hidden;opacity:0;transition:none}
+ .photo-led.vacation-design .life-autoplay .life-scene.is-active{display:flex;flex-direction:column;visibility:visible;opacity:1}
+ .photo-led.vacation-design .life-autoplay .life-scene::after{display:none}
+ .photo-led.vacation-design .life-autoplay .life-scene>img{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center;transform:none}
+ .photo-led.vacation-design .life-autoplay .life-copy{position:relative;top:auto;left:auto;right:auto;margin:0;max-width:none;padding:24px;opacity:1;transform:none;transition:none;border-radius:0;background:var(--ui-charcoal)}
+ .photo-led.vacation-design .life-autoplay .life-copy h2{font-size:calc(28px * var(--review-text-scale));line-height:1.4;margin:12px 0}
+ .photo-led.vacation-design .life-autoplay .life-copy p:last-child{font-size:calc(16px * var(--review-text-scale));line-height:1.75;max-width:none}
+ .photo-led.vacation-design .life-autoplay .scene-time{font-size:calc(20px * var(--review-text-scale));line-height:1.5;letter-spacing:0;margin-bottom:8px;color:var(--ui-ivory)}
+ .photo-led.vacation-design .life-autoplay .life-caption{position:relative;inset:auto;margin:0;padding:10px 24px;font-size:11px;background:var(--ui-charcoal);color:var(--ui-ivory)}
+ .photo-led.vacation-design .life-autoplay .life-navigation{position:relative;inset:auto;grid-area:2/1;display:flex;justify-content:center;flex-wrap:wrap;padding:14px 16px;gap:10px;background:var(--ui-charcoal)}
+ .life-autoplay .life-navigation button{min-height:44px;font-size:13px}
+}
+@media(max-width:1023px) and (max-height:500px){
+ .film-stage{height:100svh!important;min-height:0!important}
+ .film-video{top:var(--mobile-header-offset);bottom:68px;height:calc(100% - var(--mobile-header-offset) - 68px)}
+ .film-top{top:calc(var(--mobile-header-offset) + 2px);justify-content:flex-end}
+ .film-bottom{bottom:max(12px,env(safe-area-inset-bottom));flex-direction:row;align-items:flex-end}
+ .film-note{max-width:250px}
+}
+@media(max-width:360px){
+ .vacation-design .header-inner{gap:4px;padding-inline:8px}
+ .artwork-brand .logo-symbol{display:none}
+ .vacation-design .artwork-brand{max-width:calc(100% - 96px);padding-inline:6px}
+ .photo-led .space-tabs .neon-icon{width:36px;height:36px;flex-basis:36px}
+}
+@media(hover:none),(pointer:coarse){.photo-led .path-card:hover figure img,.photo:hover img{transform:none}.card-lift:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.life-scene,.life-copy{transition:none!important}}
+
+/* Mobile content flows vertically; no desktop-sized canvas or hidden copy. */
+@media(max-width:1023px){
+ .photo-led header .header-inner nav{display:none}
+ .photo-led header .menu-button{display:flex}
+ .photo-led header .header-cta{display:none}
+ .vacation-design .header-inner{height:auto;min-height:62px}
+ .photo-led .container{box-sizing:border-box;max-width:100%;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+ .photo-led .container :is(img,video){max-width:100%}
+ .photo-led .header-inner.container{padding-inline:10px}
+ .photo-led main :is(.container,.intro,.vacation-intro,.project-body,.guide-copy){min-width:0}
+ .photo-led .space-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px}
+ .photo-led.neon-presentation .space-tabs button{padding:12px 10px;gap:8px;min-height:90px;font-size:15px}
+ .photo-led .space-tabs .neon-icon{width:48px;height:48px;flex-basis:48px}
+ .photo-led .space-tabs .neon-tab-label{line-height:1.5;word-break:keep-all}
+ .photo-led .space-tabs button span{font-size:inherit}
+ .photo-led .space-tabs .neon-tab-label>span{font-size:11px}
+ .photo-led .space-tabs .neon-tab-label br{display:none}
+ .photo-led .space-panel{display:flex;flex-direction:column;min-height:0}
+ .photo-led .space-panel figure{min-height:0;aspect-ratio:3/2}
+ .photo-led .space-panel figure img{width:100%;height:100%;object-fit:cover}
+ .photo-led .space-copy{padding:24px;display:block}
+ .photo-led .space-copy ul{display:block}
+ .photo-led.promotion-home #our-villa .invitation-grid{display:flex;flex-direction:column-reverse;gap:24px}
+ .photo-led .vacation-intro{grid-template-columns:1fr;gap:14px;margin-bottom:28px}
+ .photo-led .lodge-guide{align-items:start;padding:22px 18px;gap:14px}
+ .photo-led .guide-character{width:72px;height:80px;object-fit:contain}
+ .photo-led .guide-copy{flex:1}
+ .photo-led .guide-links{display:grid;grid-template-columns:1fr;gap:8px}
+ .photo-led .guide-links a{box-sizing:border-box;min-height:48px;white-space:normal;font-size:14px}
+ .photo-led :is(.promotion-cards,.path-grid,.project-grid){gap:24px}
+ .photo-led .promotion-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .photo-led .promotion-cards article{min-width:0}
+ .photo-led .promotion-cards figure{height:auto;aspect-ratio:3/2}
+ .photo-led .editorial-card-copy{padding:24px;min-height:0}
+ .photo-led .path-copy{display:block}
+ .photo-led .path-copy>span{display:block;margin-bottom:16px}
+ .photo-led .path-copy h3{margin:0 0 20px}
+ .photo-led .path-copy h3 strong{max-width:100%;overflow-wrap:anywhere;white-space:normal}
+ .photo-led #brand-paths .it-highlight{font-size:1.08em}
+ .photo-led .vacation-finale h2{font-size:clamp(34px,7vw,46px);line-height:1.35}
+ .photo-led .scenic-camera img{transform:none!important;will-change:auto!important}
+ .photo-led :is(.middle-entrance,.side-entrance,.scroll-pull){opacity:1!important;transform:none!important;translate:none!important;clip-path:none!important}
+ .photo-led :is(.intro.middle-entrance h2,.intro.middle-entrance>p){opacity:1!important;transform:none!important;translate:none!important}
+ .photo-led.valley-page .valley-hero>.container,.photo-led .resource-story>.container{display:flex;flex-direction:column;gap:24px}
+ .photo-led.valley-page .valley-hero{padding-top:calc(var(--mobile-header-offset) + 24px)}
+ .photo-led footer{padding-bottom:max(32px,env(safe-area-inset-bottom))}
+ .photo-led .footer-top{grid-template-columns:1fr;gap:28px}
+ .photo-led .copyright{font-size:13px;line-height:1.7}
+ .photo-led header .artwork-brand img{max-width:none}
+}
+@media(max-width:800px),(max-width:1023px) and (max-height:500px){
+ .photo-led :is(.promotion-cards,.path-grid,.project-grid){grid-template-columns:minmax(0,1fr)}
+ .photo-led :is(.promotion-cards,.path-grid){margin-top:28px}
+ .photo-led .lodge-guide{display:grid;grid-template-columns:64px minmax(0,1fr)}
+ .photo-led .lodge-guide .guide-character{width:64px;height:74px}
+ .photo-led .lodge-guide h3{font-size:22px;line-height:1.45}
+ .photo-led .lodge-guide p{font-size:15px;line-height:1.75}
+ .photo-led #brand-paths .path-copy h3{font-size:clamp(22px,6vw,27px)}
+ .photo-led #brand-paths .path-copy{padding:24px 20px}
+ .photo-led .nature-copy{padding:26px 20px}
+ .photo-led.benchmark-design .lifestyle-grid.photo-deck{height:auto;min-height:0;margin-top:28px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:auto;gap:0}
+ .photo-led.benchmark-design .photo-deck>.photo{display:block;position:relative;inset:auto;width:100%;height:auto;min-height:0;aspect-ratio:16/10;margin:0;border:0;border-radius:0;box-shadow:none;transform:none!important;translate:none!important;opacity:1!important;filter:none!important;transition:none!important}
+ .photo-led.benchmark-design .photo-deck>.photo:nth-of-type(2){aspect-ratio:16/10}
+ .photo-led.benchmark-design .photo-deck>.photo img.parallax-layer{inset:0;width:100%;height:100%;margin:0;transform:none!important;object-fit:cover}
+ /* Wide masterplan and gallery photos must not inherit desktop zoom/crop. */
+ .photo-led #vision .vision-photo{height:auto;min-height:0;aspect-ratio:16/9}
+ .photo-led #vision .vision-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transform:none!important;margin:0}
+ .photo-led.benchmark-design .photo-deck>.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:none!important;margin:0}
+ /* Keep all baked-in PPT text visible, with controls in normal document flow. */
+ .photo-led .film-stage{height:auto!important;min-height:0!important;padding-top:calc(var(--mobile-header-offset) + 8px);overflow:visible}
+ .photo-led .film-video{position:relative;inset:auto;width:100%;height:clamp(240px,calc(100svh - var(--mobile-header-offset) - 116px),760px);object-fit:contain}
+ .photo-led .film-bottom{position:relative;inset:auto;display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:16px 20px max(20px,env(safe-area-inset-bottom));background:var(--ui-charcoal)}
+ .photo-led .film-transport{display:flex;flex-wrap:wrap;width:100%;gap:10px}
+ .photo-led .film-transport button{min-height:46px;font-size:14px;flex:1;min-width:0;padding:12px}
+ .photo-led .film-note{font-size:12px;line-height:1.7;margin:0}
+}
+@media(max-width:1023px) and (max-height:500px){
+ .photo-led .film-stage{height:auto!important;min-height:0!important;padding-top:calc(var(--mobile-header-offset) + 8px);overflow:visible}
+ .photo-led .film-video{position:relative;inset:auto;width:100%;height:max(160px,calc(100svh - var(--mobile-header-offset) - 96px));object-fit:contain}
+ .photo-led .film-bottom{position:relative;inset:auto;flex-direction:row;flex-wrap:wrap;padding:14px 20px;gap:12px;background:var(--ui-charcoal)}
+ .photo-led .film-transport{width:auto}
+ .photo-led .film-note{max-width:100%}
+}
+@media(max-width:360px){
+ .photo-led .container{padding-inline:16px}
+ .photo-led.neon-presentation .space-tabs button{font-size:14px;padding:12px 8px;gap:6px}
+ .photo-led .space-tabs .neon-icon{width:38px;height:38px;flex-basis:38px}
+ .photo-led .space-copy{padding:22px 20px}
+ .photo-led .space-copy h3{font-size:25px}
+}
+/* All copy must respond to the same text scale, including narrow overrides. */
+@media(max-width:1023px){
+ .photo-led .space-copy h3{font-size:calc(1.6875rem * var(--review-text-scale));overflow-wrap:anywhere}
+ .photo-led #brand-paths .path-copy h3{font-size:calc(1.5rem * var(--review-text-scale));overflow-wrap:anywhere}
+ .photo-led #brand-paths .path-copy{grid-template-columns:minmax(0,1fr)}
+ .photo-led #brand-paths .it-highlight{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+ .photo-led .vacation-finale h2{font-size:calc(2.125rem * var(--review-text-scale))}
+ .photo-led .lodge-guide h3{font-size:calc(1.375rem * var(--review-text-scale))}
+ .photo-led .lodge-guide p,.photo-led .guide-links a{font-size:calc(.9375rem * var(--review-text-scale));overflow-wrap:anywhere}
+ .photo-led .path-copy>span,.photo-led .eyebrow{overflow-wrap:anywhere}
+ .photo-led .space-tabs .neon-tab-label{overflow-wrap:anywhere}
+}
+/* Mobile comparison audit: readable supporting information at every text scale. */
+@media(max-width:1023px){
+ .photo-led #stay-services .intro>p:not(.eyebrow),.photo-led .footer-top>div>p{font-size:calc(1rem * var(--review-text-scale));line-height:1.8}
+ .photo-led .promotion-service-note{font-size:calc(.875rem * var(--review-text-scale));line-height:1.8}
+ .photo-led .space-tabs .neon-tab-label>span,.photo-led .life-caption,.photo-led .film-note{font-size:calc(.75rem * var(--review-text-scale))}
+ .photo-led .image-note{font-size:calc(.75rem * var(--review-text-scale));line-height:1.6}
+}
+/* The brand footer has one column; it must not inherit the old contact-note tint. */
+.photo-led.promotion-home footer .footer-top>div:last-child>p{color:var(--ui-ivory);font-style:normal;line-height:1.8}
+
+/* Keep concierge cards in one row above the phone layout breakpoint. */
+@media(min-width:801px){
+ .photo-led #stay-services .promotion-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+/* Three owner stories: a full-width closing card at intermediate widths. */
+@media(min-width:1200px){
+ .photo-led #ownership .promotion-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(min-width:801px) and (max-width:1199px) and (min-height:501px), (min-width:1024px) and (max-width:1199px){
+ .photo-led #ownership .promotion-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+ .photo-led #ownership .promotion-cards>article:last-child{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);align-items:stretch;min-height:300px}
+ .photo-led #ownership .promotion-cards>article:last-child figure{position:relative;height:auto;min-height:300px;aspect-ratio:auto}
+ .photo-led #ownership .promotion-cards>article:last-child figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+ .photo-led #ownership .promotion-cards>article:last-child .editorial-card-copy{display:flex;flex-direction:column;justify-content:center;min-width:0;min-height:0;padding:32px}
+ .photo-led #ownership .promotion-cards>article:last-child h3{font-size:calc(1.75rem * var(--review-text-scale));line-height:1.5;overflow-wrap:anywhere}
+ .photo-led #ownership .promotion-cards>article:last-child p{font-size:calc(1rem * var(--review-text-scale));line-height:1.8;overflow-wrap:anywhere}
+}

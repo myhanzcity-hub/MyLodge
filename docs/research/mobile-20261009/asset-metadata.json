@@ -1,0 +1,107 @@
+[
+  {
+    "file": "service-ready-20261008-480.webp",
+    "width": 480,
+    "height": 320,
+    "bytes": 36744,
+    "mode": "RGB"
+  },
+  {
+    "file": "service-ready-20261008-960.webp",
+    "width": 960,
+    "height": 640,
+    "bytes": 101874,
+    "mode": "RGB"
+  },
+  {
+    "file": "service-ready-20261008-1680.webp",
+    "width": 1680,
+    "height": 1120,
+    "bytes": 214414,
+    "mode": "RGB"
+  },
+  {
+    "file": "service-property-care-20261008-480.webp",
+    "width": 480,
+    "height": 320,
+    "bytes": 34370,
+    "mode": "RGB"
+  },
+  {
+    "file": "service-property-care-20261008-960.webp",
+    "width": 960,
+    "height": 640,
+    "bytes": 90566,
+    "mode": "RGB"
+  },
+  {
+    "file": "service-property-care-20261008-1680.webp",
+    "width": 1680,
+    "height": 1120,
+    "bytes": 181684,
+    "mode": "RGB"
+  },
+  {
+    "file": "service-owner-exchange-20261008-480.webp",
+    "width": 480,
+    "height": 320,
+    "bytes": 38080,
+    "mode": "RGB"
+  },
+  {
+    "file": "service-owner-exchange-20261008-960.webp",
+    "width": 960,
+    "height": 640,
+    "bytes": 106788,
+    "mode": "RGB"
+  },
+  {
+    "file": "service-owner-exchange-20261008-1680.webp",
+    "width": 1680,
+    "height": 1120,
+    "bytes": 217236,
+    "mode": "RGB"
+  },
+  {
+    "file": "brand-villa-atmosphere-20261008-480.webp",
+    "width": 480,
+    "height": 320,
+    "bytes": 42988,
+    "mode": "RGB"
+  },
+  {
+    "file": "brand-villa-atmosphere-20261008-960.webp",
+    "width": 960,
+    "height": 640,
+    "bytes": 147686,
+    "mode": "RGB"
+  },
+  {
+    "file": "brand-villa-atmosphere-20261008-1680.webp",
+    "width": 1680,
+    "height": 1120,
+    "bytes": 341238,
+    "mode": "RGB"
+  },
+  {
+    "file": "gallery-pool-20261007-480.webp",
+    "width": 480,
+    "height": 270,
+    "bytes": 40250,
+    "mode": "RGB"
+  },
+  {
+    "file": "gallery-pool-20261007-960.webp",
+    "width": 960,
+    "height": 540,
+    "bytes": 120200,
+    "mode": "RGB"
+  },
+  {
+    "file": "gallery-pool-20261007-1680.webp",
+    "width": 1680,
+    "height": 946,
+    "bytes": 263852,
+    "mode": "RGB"
+  }
+]

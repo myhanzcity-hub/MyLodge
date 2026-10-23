@@ -1,0 +1,382 @@
+[
+  {
+    "file": "index.html",
+    "bytes": 6306,
+    "sha256": "6e870475ff1583d40841314f241c2f621db91697fab44f1ef3e391be7a933bbd"
+  },
+  {
+    "file": "styles.css",
+    "bytes": 87204,
+    "sha256": "be6f0e3d29017a41c508e4ee85985c160f02f068a106620031096d47c57e4011"
+  },
+  {
+    "file": "app.js",
+    "bytes": 51855,
+    "sha256": "8876d45f2346ed48cbb006f01b791a161749af7f9fbbeb21ce73a6ee288f1ab7"
+  },
+  {
+    "file": "branding.css",
+    "bytes": 7081,
+    "sha256": "5c475ef2deef8208af75002ef9c632c760678a8ff6ad2fe104cf36f71ad4916b"
+  },
+  {
+    "file": "branding.js",
+    "bytes": 10493,
+    "sha256": "93a469b92932256752ab0bd3e16c38a69ef3db439cd9687e2ec9d353ac427723"
+  },
+  {
+    "file": "assets/brand/mylodge-logo.webp",
+    "bytes": 42012,
+    "sha256": "b50b395b1b8ecbf015fbb9641f76016f3c4f94c1825358aa69af39f9e4fe30be"
+  },
+  {
+    "file": "assets/brand/mylodge-character.webp",
+    "bytes": 58896,
+    "sha256": "5baf43a5d411e80be9e90856f420983e3cf63c693994a80ca539e158d9c4473d"
+  },
+  {
+    "file": "assets/images/resort-overview-20261006-480.webp",
+    "bytes": 46630,
+    "sha256": "043bd953c33dad6133f0fbea8d52b963d332f1758353f9de0e32ffa478a15952"
+  },
+  {
+    "file": "assets/images/resort-overview-20261006-960.webp",
+    "bytes": 168088,
+    "sha256": "2d355718da53c34ab32354a1bf0736908af338c91683b6b61d370bce1383f991"
+  },
+  {
+    "file": "assets/images/resort-overview-20261006-1680.webp",
+    "bytes": 411880,
+    "sha256": "2173593c9fd7ea4654bc0caa7c581dbfa749dc50bc355325d480098a5e9eb53e"
+  },
+  {
+    "file": "assets/images/lodge-hero-480.webp",
+    "bytes": 76718,
+    "sha256": "6c35803ea7b779bbf62d0f35f67febd9e52e545b7d23ccebb2baa231e7537585"
+  },
+  {
+    "file": "assets/images/lodge-hero-960.webp",
+    "bytes": 264314,
+    "sha256": "382b7d6d27d9da3c07c5f8ea75b171f79f399e9c440ecf183738fa98ae23552d"
+  },
+  {
+    "file": "assets/images/lodge-hero-1122.webp",
+    "bytes": 337508,
+    "sha256": "49cc0fbe465efdba66760523c32a7a081736ad72f7ac02c087ad1e863bb9d81b"
+  },
+  {
+    "file": "assets/images/lodge-interior-480.webp",
+    "bytes": 43052,
+    "sha256": "a85df89e750cb4b6735e0203a98bc63b1d78e1724a724aab377886b47fd84f21"
+  },
+  {
+    "file": "assets/images/lodge-interior-960.webp",
+    "bytes": 146780,
+    "sha256": "564470f2ae054c8049c4a9d325b8a7ea8471a5a6440a90a3134baca54a83f251"
+  },
+  {
+    "file": "assets/images/lodge-interior-1440.webp",
+    "bytes": 261234,
+    "sha256": "d8debbe4441b3778786bb4dd408b61b981a4976d6d13e1c163f1de24a73ffc91"
+  },
+  {
+    "file": "assets/images/lodge-terrace-480.webp",
+    "bytes": 72674,
+    "sha256": "ba93f3833d09f5aa506c3e4db9f2ee9e214be7e59e93cd15e3adbb40d29790c8"
+  },
+  {
+    "file": "assets/images/lodge-terrace-960.webp",
+    "bytes": 195400,
+    "sha256": "c2da8da7cb459fb7a8ff599f8840f355cef043f10cd35411e506b287966a79ec"
+  },
+  {
+    "file": "assets/images/lodge-terrace-1145.webp",
+    "bytes": 241504,
+    "sha256": "2910fa8696237ceaa19fe481b3b8595cde03200cba5b0048ee5b8939dcaaeadd"
+  },
+  {
+    "file": "assets/images/lodge-coastal-480.webp",
+    "bytes": 55890,
+    "sha256": "7f50ccf5fe6b2243548da4d623745430e496468e93f5dd28635c0d89a4051ba1"
+  },
+  {
+    "file": "assets/images/lodge-coastal-960.webp",
+    "bytes": 201276,
+    "sha256": "137f3c763b4c7c0c67cbb837a38f6ba3bfe8cee12bc02696c854f3b76956332f"
+  },
+  {
+    "file": "assets/images/lodge-coastal-1440.webp",
+    "bytes": 386554,
+    "sha256": "a3b81180efccca013db9bc92d1781453e6baa27c2c05b11ee974321aa74ef7c6"
+  },
+  {
+    "file": "assets/images/lodge-forest-480.webp",
+    "bytes": 63534,
+    "sha256": "448d17934cb5707cdda85692361c81db72a1c861a2a32ea039bcb341e0d80960"
+  },
+  {
+    "file": "assets/images/lodge-forest-960.webp",
+    "bytes": 218276,
+    "sha256": "c2ef510adfd54b7dc7fd4e8766e41adb5a7df01b0aebf857de71cc18e7f9627d"
+  },
+  {
+    "file": "assets/images/lodge-forest-1440.webp",
+    "bytes": 402632,
+    "sha256": "58f0bcb08174d4edf9270c1708b6e5d45d794c818d4887372bec1fa4439932d2"
+  },
+  {
+    "file": "assets/images/lodge-share.jpg",
+    "bytes": 155952,
+    "sha256": "6996f85257d53284ba8daa2323438bde4e82fbe5ef65eb0fecc75e141d7c4150"
+  },
+  {
+    "file": "assets/images/plan-p8-480.webp",
+    "bytes": 47856,
+    "sha256": "b685737dd9aa0531bab72594f42e44a2851f40c34fd03e6f3683f3b1d3799ea8"
+  },
+  {
+    "file": "assets/images/plan-p8-960.webp",
+    "bytes": 169102,
+    "sha256": "7162c9dadc1a72446dfa959fdf8dba2200eb6d76c8dda1eac506dd6b36fde789"
+  },
+  {
+    "file": "assets/images/plan-p8-1440.webp",
+    "bytes": 327326,
+    "sha256": "e2560d85b0f6b454c5da0966beed78b2b69c5ea3aa029a917609b5f2f047575f"
+  },
+  {
+    "file": "assets/images/plan-p13-480.webp",
+    "bytes": 26994,
+    "sha256": "3e3ae1b586d886f7769baaf28c0fd0737fa7503f0d857d59393a035c973794b4"
+  },
+  {
+    "file": "assets/images/plan-p13-960.webp",
+    "bytes": 83738,
+    "sha256": "19a2b95b1a314f308552b69b6276e9aee7bd7193b9dff6e0b8c05bac367dfd45"
+  },
+  {
+    "file": "assets/images/plan-p13-1440.webp",
+    "bytes": 159238,
+    "sha256": "938e6bdecb74efcde3b6182ad39d00aea0eb821fb967e4090731edf6b6968480"
+  },
+  {
+    "file": "assets/images/lodge-dreamscape-480.webp",
+    "bytes": 66112,
+    "sha256": "c05e680f482a30fc7f1ab48340e30706d2f0606738fc1fde0da8ff20de20f5db"
+  },
+  {
+    "file": "assets/images/lodge-dreamscape-960.webp",
+    "bytes": 238204,
+    "sha256": "861f0bbfdbd08088d9757808a82205b83b4464f0f619cdaf556c02e8984975aa"
+  },
+  {
+    "file": "assets/images/lodge-dreamscape-1536.webp",
+    "bytes": 561504,
+    "sha256": "5d31ac6932bf5217c4ffb7bd14e2f5812942a60b062eec15931884697565b587"
+  },
+  {
+    "file": "cinematic.css",
+    "bytes": 23226,
+    "sha256": "fc178868489ee6cd8372993584ed92164c00487012e3b6ce2205e525b7abfdeb"
+  },
+  {
+    "file": "cinematic.js",
+    "bytes": 12058,
+    "sha256": "8c2e623cfe90e74dc3ae442a87aeae479e96027e63ec4b0dd93f2bf2e8810f39"
+  },
+  {
+    "file": "chairman.css",
+    "bytes": 18341,
+    "sha256": "2a49f069c542a44549a90a423032e1c99bd4ab4fda79befdd11a640961bbdbbc"
+  },
+  {
+    "file": "chairman.js",
+    "bytes": 15158,
+    "sha256": "fdcbd1becacfb5e459f0e80d145c4738d9fa48ec61171e8a4e189e2b38fcc898"
+  },
+  {
+    "file": "scenery.css",
+    "bytes": 7343,
+    "sha256": "e2caba6560ed235166acd4be8e9ce0a3378ec051fb9219d66b23e6656fbebf48"
+  },
+  {
+    "file": "scenery.js",
+    "bytes": 3460,
+    "sha256": "7fbca9dc9c819f95767f9895cefd76a96e9ab2bb4fd46f05d20b7ef9f236453b"
+  },
+  {
+    "file": "mobile.css",
+    "bytes": 8377,
+    "sha256": "3fa30acb67a3a3a04a5a67143c6814b516e672f113319ef122993e1a1d60b7e4"
+  },
+  {
+    "file": "mobile.js",
+    "bytes": 1355,
+    "sha256": "d9798638c884c5bba5d5d9c92171c686111ce750621dcebd745f8b9c7ffde37f"
+  },
+  {
+    "file": "intro.css",
+    "bytes": 4072,
+    "sha256": "df411d71bd63c88ac44a8f956b569f3a439987007fb201e0b5fdb5bb16d40908"
+  },
+  {
+    "file": "intro.js",
+    "bytes": 5661,
+    "sha256": "a13e9b2dbce4143231a2061606e54a4ce3efd85dfc0e36442bddba5ce518d54b"
+  },
+  {
+    "file": "planning.css",
+    "bytes": 14205,
+    "sha256": "1e90c0eaec1d324e2ac9ee90f1da12169b0fbbf17f1ecaca3165e136cd5d319e"
+  },
+  {
+    "file": "assets/video/mylodge-intro-scenes-20261006-30s.mp4",
+    "bytes": 3996431,
+    "sha256": "5993e33f1a3e554e0cd264a2186c6695f1dc8b4dfed2341d4d4a283086d35808"
+  },
+  {
+    "file": "assets/video/mylodge-intro-scenes-20261006-30s-mobile.mp4",
+    "bytes": 2304911,
+    "sha256": "8f8470d2fb7adce570662db51b2812d1720c6afc8a6b3b58ad8082726c6cdf79"
+  },
+  {
+    "file": "assets/video/mylodge-intro-scenes-20261006-poster.webp",
+    "bytes": 186074,
+    "sha256": "e5e41f6650ec5d5d50f2b6941c7dd8b4e91091ea8b74e881a99694343787eda8"
+  },
+  {
+    "file": "assets/video/mylodge-intro-scenes-20261006-poster-mobile.webp",
+    "bytes": 99746,
+    "sha256": "844a716918a93ed2a160b7833f3a8ed78a5991d5d9ad56244575dc50f066e183"
+  },
+  {
+    "file": "assets/images/scenery-coast-480.webp",
+    "bytes": 43768,
+    "sha256": "2006294d2df1e0a600ff34426f039ec284c446e3b64b61498ca9c4669dcc78e7"
+  },
+  {
+    "file": "assets/images/scenery-coast-960.webp",
+    "bytes": 141024,
+    "sha256": "84a9d1601966cd68ec96841e279fcdc91f25e65fa8f12debc72ba21cec062615"
+  },
+  {
+    "file": "assets/images/scenery-coast-1680.webp",
+    "bytes": 338614,
+    "sha256": "c81973d9a6a98c5ef11acbea33d5e011f5b73bd4f251b857806f580027699f9c"
+  },
+  {
+    "file": "assets/images/scenery-cafe-480.webp",
+    "bytes": 36634,
+    "sha256": "addf1aaa2194489d44c980813082e23ee508cc9e51b444f2440fcb135fa5cb40"
+  },
+  {
+    "file": "assets/images/scenery-cafe-960.webp",
+    "bytes": 112830,
+    "sha256": "f21187b217451cc4169b19369beb7add3fac6051c1e46a370a3a60dd2b189e6a"
+  },
+  {
+    "file": "assets/images/scenery-cafe-1680.webp",
+    "bytes": 251554,
+    "sha256": "ad5507e30f2650ab4936c83a2e0f1767a964b2fcc738a0084b5fad9ddb8c2c55"
+  },
+  {
+    "file": "assets/images/scenery-arrival-480.webp",
+    "bytes": 25886,
+    "sha256": "bdc0a4d7cc9d6cd503e32310e4e6a2f32bb6c3d1332a35eb9310aab7615238bc"
+  },
+  {
+    "file": "assets/images/scenery-arrival-960.webp",
+    "bytes": 88052,
+    "sha256": "542cffaa5dd8a1906995f21bb2a72d24ba96c37ae770466e156e59ef426efa0f"
+  },
+  {
+    "file": "assets/images/scenery-arrival-1680.webp",
+    "bytes": 207782,
+    "sha256": "f9d1561fa0d26a181963d103468dc5d41de1375509409d66c03eb318b05566b3"
+  },
+  {
+    "file": "business-valley.html",
+    "bytes": 10576,
+    "sha256": "01e422bd20e6b23e855ec163b9da39ab673f41e75a720576bc9f8e0664b931ba"
+  },
+  {
+    "file": "valley.js",
+    "bytes": 1311,
+    "sha256": "9cd445da4a7840eae63b5d067ce224ff4c94fd6decacbefd242a9846c11cce46"
+  },
+  {
+    "file": "assets/images/vacation-arrival-480.webp",
+    "bytes": 42272,
+    "sha256": "e93f2d1716e1b6b3b19e31e26d4d38cb742423356942134e31b824a893e1dca4"
+  },
+  {
+    "file": "assets/images/vacation-arrival-960.webp",
+    "bytes": 146592,
+    "sha256": "5233c035f839adab72979a04b15a006374553633cc71a6b817133071e92c06cb"
+  },
+  {
+    "file": "assets/images/vacation-arrival-1680.webp",
+    "bytes": 355284,
+    "sha256": "b652ced3ad6713a7579406aa88d21de09987ba3e0f2d02f046b72b585e9edd86"
+  },
+  {
+    "file": "assets/images/living-morning-480.webp",
+    "bytes": 39900,
+    "sha256": "d4e52c8682660c17675a595410156b69533855513aef5a0c1339b7738558f848"
+  },
+  {
+    "file": "assets/images/living-morning-960.webp",
+    "bytes": 109482,
+    "sha256": "e65919cbb10e11868260269c9a0a6389598a1e24da5d680801166f42fc2f5372"
+  },
+  {
+    "file": "assets/images/living-morning-1536.webp",
+    "bytes": 214790,
+    "sha256": "cb5b0f9e84763508725615cbde8d3182db0b1b586ccbeb826de762ff5d571de5"
+  },
+  {
+    "file": "assets/images/living-dinner-480.webp",
+    "bytes": 43610,
+    "sha256": "e5c1c5792fc0dea1fa2de3f182fe04a96a288f98690569fa662d80c737c9ec3b"
+  },
+  {
+    "file": "assets/images/living-dinner-960.webp",
+    "bytes": 118024,
+    "sha256": "a7116691c1a51e17a4bb85fec60ffb821754c9e4d391dfa7a81723ebaafd149b"
+  },
+  {
+    "file": "assets/images/living-dinner-1536.webp",
+    "bytes": 220602,
+    "sha256": "f021a95822cf4d247ec41b50cc1b5a606d8dd8c4ae8ad3ac1f8615d2f6cb391e"
+  },
+  {
+    "file": "assets/images/living-terrace-480.webp",
+    "bytes": 48846,
+    "sha256": "830b9ea101f256d6760d150a8aac44595f1b125457bf4f5fef731495d467c025"
+  },
+  {
+    "file": "assets/images/living-terrace-960.webp",
+    "bytes": 144042,
+    "sha256": "7b8074a2092dab6ace0206cbaa94d416d7f571d40243f333d9d020e117c673f1"
+  },
+  {
+    "file": "assets/images/living-terrace-1536.webp",
+    "bytes": 283256,
+    "sha256": "518992ba20f331fcbb39edade4887bceefbcce57be006fe625685a09539376c7"
+  },
+  {
+    "file": "assets/images/plan-p16-480.webp",
+    "bytes": 34854,
+    "sha256": "add4e57fbfb20c2b2291541ed1cbe84374abda4cde456d636f3b780add0005d8"
+  },
+  {
+    "file": "assets/images/plan-p16-960.webp",
+    "bytes": 102530,
+    "sha256": "267930751b24a58c08777861e46b4aad5244d9ce871688e01a3d5736b5eaa3a4"
+  },
+  {
+    "file": "assets/images/plan-p16-1440.webp",
+    "bytes": 186324,
+    "sha256": "e6f34efaf1c234963d609e008876dce6a01ebbc5de2965f27bff9f4cd2a3630f"
+  }
+]

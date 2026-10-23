@@ -1,0 +1,112 @@
+@import url('tokens.css');
+@import url('navbar-refinement.css');
+@import url('our-story-refinement.css');
+@import url('owner-cards-refinement.css');
+@import url('navbar-premium.css');
+
+/* Palette authority only. This sheet intentionally changes no geometry,
+ * typography, content, animation, or page behavior. */
+:root {
+  --bg: var(--ui-ivory);
+  --fg: var(--ui-charcoal);
+  --sub: var(--ui-gray);
+  --primary: var(--ui-charcoal);
+  --border: var(--ui-taupe);
+  --surface: var(--ui-white);
+  --ui-ivory-surface: var(--ui-ivory);
+  --peach: var(--ui-ivory);
+  --mist: var(--ui-ivory);
+  --hairline: color-mix(in srgb, var(--ui-taupe) 62%, transparent);
+}
+
+body.benchmark-design,
+body.future-design,
+body.vacation-design,
+body.destination-page,
+body.entry-page {
+  --bg: var(--ui-ivory) !important;
+  --fg: var(--ui-charcoal) !important;
+  --sub: var(--ui-gray) !important;
+  --primary: var(--ui-charcoal) !important;
+  --border: var(--ui-taupe) !important;
+  --surface: var(--ui-white) !important;
+  --ui-ivory-surface: var(--ui-ivory) !important;
+  --peach: var(--ui-ivory) !important;
+  --mist: var(--ui-ivory) !important;
+}
+
+body,
+body.benchmark-design,
+body.future-design,
+body.vacation-design,
+body.destination-page,
+body.entry-page {
+  background-color: var(--ui-ivory) !important;
+  color: var(--ui-charcoal) !important;
+}
+
+/* Floating navigation stays a calm white surface over every destination. */
+body header,
+body[data-review-theme=dark] header,
+body .wf-header {
+  background-color: var(--ui-white) !important;
+  border-color: var(--ui-taupe) !important;
+  color: var(--ui-charcoal) !important;
+}
+
+body header .brand,
+body header .brand strong,
+body header nav a,
+body header summary,
+body header .menu-button,
+body .wf-header a,
+body .wf-header button {
+  color: var(--ui-charcoal) !important;
+}
+
+body #mobile-menu {
+  background-color: var(--ui-white) !important;
+  border-color: var(--ui-taupe) !important;
+}
+
+/* Former colored accent states. */
+body .primary,
+body .consult-submit,
+body .consult-next,
+body .workflow-action,
+body .workflow-primary-action {
+  background-color: var(--ui-charcoal) !important;
+  border-color: var(--ui-charcoal) !important;
+  color: var(--ui-white) !important;
+  box-shadow: none !important;
+}
+
+body .primary:hover,
+body .primary:focus-visible,
+body .consult-submit:hover,
+body .consult-next:hover,
+body .workflow-action:hover,
+body .workflow-primary-action:hover {
+  background-color: var(--ui-taupe) !important;
+  border-color: var(--ui-taupe) !important;
+  color: var(--ui-charcoal) !important;
+}
+
+body .neon-cyan,
+body .neon-gold,
+body .neon-pink,
+body .neon-purple {
+  --neon-color: var(--ui-taupe) !important;
+}
+
+body .facility-neon-border::before,
+body .side-neon-border::before {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+body .ivory-surface,
+body .mist,
+body .peach {
+  background-color: var(--ui-ivory) !important;
+}

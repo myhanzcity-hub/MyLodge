@@ -1,0 +1,574 @@
+[
+  {
+    "height": 844,
+    "scrollWidth": 380,
+    "sections": [
+      {
+        "cards": [],
+        "height": 1580.953125,
+        "id": "ownership",
+        "images": [
+          {
+            "alt": "Space to truly unwind. · AI lifestyle concept",
+            "currentSrc": "",
+            "height": 225.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 338
+          },
+          {
+            "alt": "Among like-minded people. · AI lifestyle concept",
+            "currentSrc": "",
+            "height": 225.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 338
+          },
+          {
+            "alt": "Where new plans begin. · AI lifestyle concept",
+            "currentSrc": "",
+            "height": 225.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 338
+          }
+        ]
+      },
+      {
+        "cards": [
+          {
+            "class": "card project card-lift middle-entrance",
+            "height": 364.09375,
+            "width": 340
+          },
+          {
+            "class": "card project card-lift middle-entrance",
+            "height": 364.09375,
+            "width": 340
+          }
+        ],
+        "height": 1082.5625,
+        "id": "projects",
+        "images": [
+          {
+            "alt": "Jumunjin concept: curved coastal villas, a central pool and a club",
+            "currentSrc": "",
+            "height": 212.5,
+            "sizes": "(max-width:800px) 100vw, 50vw",
+            "width": 340
+          },
+          {
+            "alt": "Yangyang concept: terraced forest villas, pools and a community plaza",
+            "currentSrc": "",
+            "height": 212.5,
+            "sizes": "(max-width:800px) 100vw, 50vw",
+            "width": 340
+          }
+        ]
+      },
+      {
+        "cards": [
+          {
+            "class": "path-card",
+            "height": 395.875,
+            "width": 340
+          },
+          {
+            "class": "path-card valley-path",
+            "height": 619.46875,
+            "width": 340
+          }
+        ],
+        "height": 1344.0625,
+        "id": "brand-paths",
+        "images": [
+          {
+            "alt": "",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/valley-community-20261007-480.webp",
+            "height": 0,
+            "sizes": "(max-width:800px) 100vw, 70vw",
+            "width": 0
+          },
+          {
+            "alt": "The MyLodge villa atmosphere, with a pool, cabanas and a terrace",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/brand-villa-atmosphere-20261008-480.webp",
+            "height": 225.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 338
+          },
+          {
+            "alt": "A Chiang Mai community space for tech professionals and founders · Concept image",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/valley-community-20261007-480.webp",
+            "height": 225.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 338
+          }
+        ]
+      },
+      {
+        "cards": [],
+        "height": 1665.171875,
+        "id": "stay-services",
+        "images": [
+          {
+            "alt": "",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/living-dinner-1536.webp",
+            "height": 934,
+            "sizes": "1659px",
+            "width": 380
+          },
+          {
+            "alt": "Concierge Standard · AI lifestyle concept",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/service-ready-20261008-480.webp",
+            "height": 225.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 338
+          },
+          {
+            "alt": "Property Care · AI lifestyle concept",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/service-property-care-20261008-480.webp",
+            "height": 225.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 338
+          },
+          {
+            "alt": "1 + 1 + 1 · AI lifestyle concept",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/service-owner-exchange-20261008-480.webp",
+            "height": 225.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 338
+          }
+        ]
+      }
+    ],
+    "width": 380,
+    "at": "2026-10-09T03:47:53.511Z",
+    "label": "390-en-layout"
+  },
+  {
+    "height": 1024,
+    "scrollWidth": 758,
+    "sections": [
+      {
+        "cards": [],
+        "height": 2179.265625,
+        "id": "ownership",
+        "images": [
+          {
+            "alt": "Space to truly unwind. · AI lifestyle concept",
+            "currentSrc": "",
+            "height": 477.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 716
+          },
+          {
+            "alt": "Among like-minded people. · AI lifestyle concept",
+            "currentSrc": "",
+            "height": 477.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 716
+          },
+          {
+            "alt": "Where new plans begin. · AI lifestyle concept",
+            "currentSrc": "",
+            "height": 477.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 716
+          }
+        ]
+      },
+      {
+        "cards": [
+          {
+            "class": "card project card-lift middle-entrance",
+            "height": 573.34375,
+            "width": 718
+          },
+          {
+            "class": "card project card-lift middle-entrance",
+            "height": 573.34375,
+            "width": 718
+          }
+        ],
+        "height": 1438.4375,
+        "id": "projects",
+        "images": [
+          {
+            "alt": "Jumunjin concept: curved coastal villas, a central pool and a club",
+            "currentSrc": "",
+            "height": 448.75,
+            "sizes": "(max-width:800px) 100vw, 50vw",
+            "width": 718
+          },
+          {
+            "alt": "Yangyang concept: terraced forest villas, pools and a community plaza",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/project-yangyang-20261007-960.webp",
+            "height": 448.75,
+            "sizes": "(max-width:800px) 100vw, 50vw",
+            "width": 718
+          }
+        ]
+      },
+      {
+        "cards": [
+          {
+            "class": "path-card",
+            "height": 647.875,
+            "width": 718
+          },
+          {
+            "class": "path-card valley-path",
+            "height": 836.671875,
+            "width": 718
+          }
+        ],
+        "height": 1862.109375,
+        "id": "brand-paths",
+        "images": [
+          {
+            "alt": "",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/valley-community-20261007-960.webp",
+            "height": 0,
+            "sizes": "(max-width:800px) 100vw, 70vw",
+            "width": 0
+          },
+          {
+            "alt": "The MyLodge villa atmosphere, with a pool, cabanas and a terrace",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/brand-villa-atmosphere-20261008-960.webp",
+            "height": 477.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 716
+          },
+          {
+            "alt": "A Chiang Mai community space for tech professionals and founders · Concept image",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/valley-community-20261007-960.webp",
+            "height": 477.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 716
+          }
+        ]
+      },
+      {
+        "cards": [],
+        "height": 2287.296875,
+        "id": "stay-services",
+        "images": [
+          {
+            "alt": "",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/living-dinner-1536.webp",
+            "height": 2664.6806640625,
+            "sizes": "4382px",
+            "width": 884.1150512695312
+          },
+          {
+            "alt": "Concierge Standard · AI lifestyle concept",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/service-ready-20261008-960.webp",
+            "height": 477.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 716
+          },
+          {
+            "alt": "Property Care · AI lifestyle concept",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/service-property-care-20261008-960.webp",
+            "height": 477.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 716
+          },
+          {
+            "alt": "1 + 1 + 1 · AI lifestyle concept",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/service-owner-exchange-20261008-960.webp",
+            "height": 477.328125,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 716
+          }
+        ]
+      }
+    ],
+    "width": 758,
+    "at": "2026-10-09T03:47:53.726Z",
+    "label": "768-en-layout"
+  },
+  {
+    "height": 390,
+    "scrollWidth": 834,
+    "sections": [
+      {
+        "cards": [],
+        "height": 2387.28125,
+        "id": "ownership",
+        "images": [
+          {
+            "alt": "Space to truly unwind. · AI lifestyle concept",
+            "currentSrc": "",
+            "height": 528,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 792
+          },
+          {
+            "alt": "Among like-minded people. · AI lifestyle concept",
+            "currentSrc": "",
+            "height": 528,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 792
+          },
+          {
+            "alt": "Where new plans begin. · AI lifestyle concept",
+            "currentSrc": "",
+            "height": 528,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 792
+          }
+        ]
+      },
+      {
+        "cards": [
+          {
+            "class": "card project card-lift middle-entrance",
+            "height": 620.84375,
+            "width": 794
+          },
+          {
+            "class": "card project card-lift middle-entrance",
+            "height": 620.84375,
+            "width": 794
+          }
+        ],
+        "height": 1589.4375,
+        "id": "projects",
+        "images": [
+          {
+            "alt": "Jumunjin concept: curved coastal villas, a central pool and a club",
+            "currentSrc": "",
+            "height": 496.25,
+            "sizes": "(max-width:800px) 100vw, 50vw",
+            "width": 794
+          },
+          {
+            "alt": "Yangyang concept: terraced forest villas, pools and a community plaza",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/project-yangyang-20261007-960.webp",
+            "height": 496.25,
+            "sizes": "(max-width:800px) 100vw, 50vw",
+            "width": 794
+          }
+        ]
+      },
+      {
+        "cards": [
+          {
+            "class": "path-card",
+            "height": 751.75,
+            "width": 794
+          },
+          {
+            "class": "path-card valley-path",
+            "height": 891.34375,
+            "width": 794
+          }
+        ],
+        "height": 2020.875,
+        "id": "brand-paths",
+        "images": [
+          {
+            "alt": "",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/valley-community-20261007-960.webp",
+            "height": 0,
+            "sizes": "(max-width:800px) 100vw, 70vw",
+            "width": 0
+          },
+          {
+            "alt": "The MyLodge villa atmosphere, with a pool, cabanas and a terrace",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/brand-villa-atmosphere-20261008-960.webp",
+            "height": 528,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 792
+          },
+          {
+            "alt": "A Chiang Mai community space for tech professionals and founders · Concept image",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/valley-community-20261007-960.webp",
+            "height": 528,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 792
+          }
+        ]
+      },
+      {
+        "cards": [],
+        "height": 2439.328125,
+        "id": "stay-services",
+        "images": [
+          {
+            "alt": "",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/living-dinner-1536.webp",
+            "height": 2828.874755859375,
+            "sizes": "4652px",
+            "width": 972.7763061523438
+          },
+          {
+            "alt": "Concierge Standard · AI lifestyle concept",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/service-ready-20261008-960.webp",
+            "height": 528,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 792
+          },
+          {
+            "alt": "Property Care · AI lifestyle concept",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/service-property-care-20261008-960.webp",
+            "height": 528,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 792
+          },
+          {
+            "alt": "1 + 1 + 1 · AI lifestyle concept",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/service-owner-exchange-20261008-960.webp",
+            "height": 528,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 792
+          }
+        ]
+      }
+    ],
+    "width": 834,
+    "at": "2026-10-09T03:48:07.813Z",
+    "label": "844-en-layout"
+  },
+  {
+    "height": 900,
+    "scrollWidth": 1430,
+    "sections": [
+      {
+        "cards": [],
+        "height": 826.140625,
+        "id": "ownership",
+        "images": [
+          {
+            "alt": "Space to truly unwind. · AI lifestyle concept",
+            "currentSrc": "",
+            "height": 330,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 358
+          },
+          {
+            "alt": "Among like-minded people. · AI lifestyle concept",
+            "currentSrc": "",
+            "height": 330,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 358
+          },
+          {
+            "alt": "Where new plans begin. · AI lifestyle concept",
+            "currentSrc": "",
+            "height": 330,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 358
+          }
+        ]
+      },
+      {
+        "cards": [
+          {
+            "class": "card project card-lift middle-entrance",
+            "height": 494.09375,
+            "width": 548
+          },
+          {
+            "class": "card project card-lift middle-entrance",
+            "height": 494.09375,
+            "width": 548
+          }
+        ],
+        "height": 884.625,
+        "id": "projects",
+        "images": [
+          {
+            "alt": "Jumunjin concept: curved coastal villas, a central pool and a club",
+            "currentSrc": "",
+            "height": 342.5,
+            "sizes": "(max-width:800px) 100vw, 50vw",
+            "width": 548
+          },
+          {
+            "alt": "Yangyang concept: terraced forest villas, pools and a community plaza",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/project-yangyang-20261007-960.webp",
+            "height": 342.5,
+            "sizes": "(max-width:800px) 100vw, 50vw",
+            "width": 548
+          }
+        ]
+      },
+      {
+        "cards": [
+          {
+            "class": "path-card",
+            "height": 814.84375,
+            "width": 548
+          },
+          {
+            "class": "path-card valley-path",
+            "height": 814.84375,
+            "width": 548
+          }
+        ],
+        "height": 1223.625,
+        "id": "brand-paths",
+        "images": [
+          {
+            "alt": "",
+            "currentSrc": "",
+            "height": 0,
+            "sizes": "(max-width:800px) 100vw, 70vw",
+            "width": 0
+          },
+          {
+            "alt": "The MyLodge villa atmosphere, with a pool, cabanas and a terrace",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/brand-villa-atmosphere-20261008-960.webp",
+            "height": 364,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 546
+          },
+          {
+            "alt": "A Chiang Mai community space for tech professionals and founders · Concept image",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/valley-community-20261007-960.webp",
+            "height": 364,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 546
+          }
+        ]
+      },
+      {
+        "cards": [],
+        "height": 881.671875,
+        "id": "stay-services",
+        "images": [
+          {
+            "alt": "",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/living-dinner-1536.webp",
+            "height": 1177.39404296875,
+            "sizes": "1887px",
+            "width": 1712.7117919921875
+          },
+          {
+            "alt": "Concierge Standard · AI lifestyle concept",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/service-ready-20261008-960.webp",
+            "height": 330,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 358
+          },
+          {
+            "alt": "Property Care · AI lifestyle concept",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/service-property-care-20261008-960.webp",
+            "height": 330,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 358
+          },
+          {
+            "alt": "1 + 1 + 1 · AI lifestyle concept",
+            "currentSrc": "http://127.0.0.1:4186/site/assets/images/service-owner-exchange-20261008-960.webp",
+            "height": 330,
+            "sizes": "(max-width:800px) calc(100vw - 40px), (max-width:1023px) 45vw, 33vw",
+            "width": 358
+          }
+        ]
+      }
+    ],
+    "width": 1430,
+    "at": "2026-10-09T03:48:08.056Z",
+    "label": "1440-en-layout"
+  }
+]
