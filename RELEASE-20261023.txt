@@ -1,0 +1,6 @@
+MyLodge current concept — 2026-10-23
+Source archive: MyLodge-current-20261023.zip
+Extract then run npm run build or npm start. No package dependencies required.
+Includes 3D introduction, homepage and redesigned domestic/Chiang Mai/owner pages.
+Hojiakbar homepage branch has not been merged.
+Production: https://my-lodge-business.vercel.app
