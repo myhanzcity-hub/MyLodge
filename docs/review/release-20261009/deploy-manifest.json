@@ -1,0 +1,847 @@
+[
+  {
+    "file": "app.js",
+    "bytes": 52704,
+    "sha256": "7d3ee51c022a8d3190d4b4b933fcb7187d509ca76c7409e56fd04c305d63bb8f"
+  },
+  {
+    "file": "branding.css",
+    "bytes": 7880,
+    "sha256": "b9fb9613c391d81adc1daae3645f1d2abb98311fb4e8f8f54fa7a666f54f7b0e"
+  },
+  {
+    "file": "branding.js",
+    "bytes": 10485,
+    "sha256": "c68beab686e31f31421ab66de99082b0878e10929ab8ed17538d84d4d220707b"
+  },
+  {
+    "file": "business-valley.html",
+    "bytes": 10843,
+    "sha256": "165e926b99591453cbbd1b8315e81ed3f7b03456f0e6cddd8329ccfa2805044f"
+  },
+  {
+    "file": "chairman.css",
+    "bytes": 18341,
+    "sha256": "2a49f069c542a44549a90a423032e1c99bd4ab4fda79befdd11a640961bbdbbc"
+  },
+  {
+    "file": "chairman.js",
+    "bytes": 15458,
+    "sha256": "5c8828a9cae71cac6e4b3193705372541c7243b979e7d94dc77024a28689580e"
+  },
+  {
+    "file": "cinematic.css",
+    "bytes": 23226,
+    "sha256": "fc178868489ee6cd8372993584ed92164c00487012e3b6ce2205e525b7abfdeb"
+  },
+  {
+    "file": "cinematic.js",
+    "bytes": 12301,
+    "sha256": "1bdbcafb57af6a8f7da2325b9926d01488f660bf36a6da8ae7ff45d287dfa07f"
+  },
+  {
+    "file": "editorial.css",
+    "bytes": 19361,
+    "sha256": "9b109443ce271aa7c7c9bdb5a57484ab8b9a34ae1ce54cdb984c501d6acdc7c6"
+  },
+  {
+    "file": "editorial.js",
+    "bytes": 19133,
+    "sha256": "73141ca56e51e1d20c7cb4bf2ef45f45995147457a27fa1c08ef66e494943061"
+  },
+  {
+    "file": "index.html",
+    "bytes": 6556,
+    "sha256": "b3231a35dc619d4ffe9f1b8992289588593958af158ce63a2f3c62d770c8358b"
+  },
+  {
+    "file": "intro.css",
+    "bytes": 4072,
+    "sha256": "df411d71bd63c88ac44a8f956b569f3a439987007fb201e0b5fdb5bb16d40908"
+  },
+  {
+    "file": "intro.js",
+    "bytes": 6589,
+    "sha256": "03242977ca5952b12023e27724d099c3e4c30e13a4982c1de6ad7b04ca20d0f9"
+  },
+  {
+    "file": "localization.css",
+    "bytes": 3662,
+    "sha256": "2aff1670e66f17af9aacd8334274c1fcd37e3d2622bb950e589faf54ce0a2444"
+  },
+  {
+    "file": "localization.js",
+    "bytes": 34966,
+    "sha256": "417fca7e1533066d1d4484391c9160212017e6f93ef8627fa413dbe2f754de5c"
+  },
+  {
+    "file": "mobile-layout.css",
+    "bytes": 17362,
+    "sha256": "7224c5d7690a61e8a1ce91924d915dda2f6a9b755c000422e5e627e6d776b167"
+  },
+  {
+    "file": "mobile-layout.js",
+    "bytes": 4027,
+    "sha256": "64e5ce29b261d9b2c2bb35dc045ffbb602015086e515cc577896f394d5b84559"
+  },
+  {
+    "file": "mobile.css",
+    "bytes": 8377,
+    "sha256": "3fa30acb67a3a3a04a5a67143c6814b516e672f113319ef122993e1a1d60b7e4"
+  },
+  {
+    "file": "mobile.js",
+    "bytes": 1021,
+    "sha256": "b4740ee40af25c39d43006dfe00c773639f855fb0499687af25b42fed42b664d"
+  },
+  {
+    "file": "planning.css",
+    "bytes": 14205,
+    "sha256": "1e90c0eaec1d324e2ac9ee90f1da12169b0fbbf17f1ecaca3165e136cd5d319e"
+  },
+  {
+    "file": "scenery.css",
+    "bytes": 7343,
+    "sha256": "e2caba6560ed235166acd4be8e9ce0a3378ec051fb9219d66b23e6656fbebf48"
+  },
+  {
+    "file": "scenery.js",
+    "bytes": 3460,
+    "sha256": "7fbca9dc9c819f95767f9895cefd76a96e9ab2bb4fd46f05d20b7ef9f236453b"
+  },
+  {
+    "file": "styles.css",
+    "bytes": 87204,
+    "sha256": "be6f0e3d29017a41c508e4ee85985c160f02f068a106620031096d47c57e4011"
+  },
+  {
+    "file": "valley.js",
+    "bytes": 2070,
+    "sha256": "ddd32b633aefec0b3857d8a3fead9fbfe0cf6303992eaf178e3676fe9ba9310e"
+  },
+  {
+    "file": "assets/brand/mylodge-character.webp",
+    "bytes": 58896,
+    "sha256": "5baf43a5d411e80be9e90856f420983e3cf63c693994a80ca539e158d9c4473d"
+  },
+  {
+    "file": "assets/brand/mylodge-logo-transparent-20261007.webp",
+    "bytes": 241596,
+    "sha256": "0a3f734b0b09df25dc7fbe1935ab5b6d83ef745d2ca940249dd3036e3c461d3e"
+  },
+  {
+    "file": "assets/brand/mylodge-logo.webp",
+    "bytes": 42012,
+    "sha256": "b50b395b1b8ecbf015fbb9641f76016f3c4f94c1825358aa69af39f9e4fe30be"
+  },
+  {
+    "file": "assets/brand/mylodge-neon-icons-20261007.png",
+    "bytes": 1363088,
+    "sha256": "dfccfc6c3b5c507666bccc6274314cc104bcc764043d5d7715029117d3f8c9c0"
+  },
+  {
+    "file": "assets/images/brand-villa-atmosphere-20261008-1680.webp",
+    "bytes": 341238,
+    "sha256": "dc80c80c5146bc06b101c4d75320a9e0010d823b9b5fad870cdfb65ef1b2a2e1"
+  },
+  {
+    "file": "assets/images/brand-villa-atmosphere-20261008-480.webp",
+    "bytes": 42988,
+    "sha256": "05867d74209783603285ca3e1755c951c89627e94e80dc76ab255a4702f158ea"
+  },
+  {
+    "file": "assets/images/brand-villa-atmosphere-20261008-960.webp",
+    "bytes": 147686,
+    "sha256": "5e77a66e1165c759f240b0f0fb46e0ae1ea2c78b87fb19c11a2b2f7648a9ba57"
+  },
+  {
+    "file": "assets/images/concierge-arrival-20261007-1680.webp",
+    "bytes": 166824,
+    "sha256": "a6a6ec35edffe41956b5077c5a5b6c20bb7107d61cfbe46ee0ded58b0ff42103"
+  },
+  {
+    "file": "assets/images/concierge-arrival-20261007-480.webp",
+    "bytes": 28746,
+    "sha256": "c95b78ff90756466e22a1cad279dda4582188dfb3dc227ddf1769ea1dc7a0df6"
+  },
+  {
+    "file": "assets/images/concierge-arrival-20261007-960.webp",
+    "bytes": 79272,
+    "sha256": "d81d93c5b48ac79f8baee64d8e19afe2c3c989dc5fba431922a6dfd169bbd0e8"
+  },
+  {
+    "file": "assets/images/concierge-care-20261007-1680.webp",
+    "bytes": 208056,
+    "sha256": "8d176d80401d9f38fe027894d7e937f7567a53079714609ac56b981e08b8fb98"
+  },
+  {
+    "file": "assets/images/concierge-care-20261007-480.webp",
+    "bytes": 33624,
+    "sha256": "c1d417fe5884a6288d9b7d453bbb3cad6f6105038b46170432fde9a292283a83"
+  },
+  {
+    "file": "assets/images/concierge-care-20261007-960.webp",
+    "bytes": 97218,
+    "sha256": "1849232829b07ec5d7326524ccc21ce4c3de7852dff2e4fad7afe7ea5473e1f6"
+  },
+  {
+    "file": "assets/images/concierge-escape-20261007-1680.webp",
+    "bytes": 507456,
+    "sha256": "1bdb06816e018d5055cc3db65441a169f1c102689b301222e2dde62b122466a8"
+  },
+  {
+    "file": "assets/images/concierge-escape-20261007-480.webp",
+    "bytes": 58858,
+    "sha256": "cfc4fb8ba0d8309e8eff654b67d37e65dcf8029319eb5d638f6d0d7e4f941b6c"
+  },
+  {
+    "file": "assets/images/concierge-escape-20261007-960.webp",
+    "bytes": 206678,
+    "sha256": "cdb88f54ceb8ea5f63abc9beb1bd361c3ac628ac67b51aa5d361c13dcacee922"
+  },
+  {
+    "file": "assets/images/facility-beach-20261007-1680.webp",
+    "bytes": 381564,
+    "sha256": "2ef74998a8c87d9b2fcd36ecc715c4729d79af60f392d4ed6fb1abf4fe113614"
+  },
+  {
+    "file": "assets/images/facility-beach-20261007-480.webp",
+    "bytes": 48026,
+    "sha256": "4b22c221fd39680da6a5a02b99fbff6745a47163f9575bd4f548ace7541bf106"
+  },
+  {
+    "file": "assets/images/facility-beach-20261007-960.webp",
+    "bytes": 160674,
+    "sha256": "e2d9758ee6a715456590b840d46af68b507ab14bd9c4f216c47a0e92b9603a62"
+  },
+  {
+    "file": "assets/images/facility-club-20261007-1680.webp",
+    "bytes": 273468,
+    "sha256": "74a04cd0a2a521c974a8fdf000a79fb15830eb320763171cc609c4be332e1926"
+  },
+  {
+    "file": "assets/images/facility-club-20261007-480.webp",
+    "bytes": 41776,
+    "sha256": "79761ff920c07ea9bbdb97e85685b0df5d2f1b8fddafba8a4c9928dc215f7803"
+  },
+  {
+    "file": "assets/images/facility-club-20261007-960.webp",
+    "bytes": 126462,
+    "sha256": "326e17d8b0358d6be62a04c92c7a86bb4e08047b488c477f9ba3b8eebfa788ef"
+  },
+  {
+    "file": "assets/images/facility-concierge-20261008-1680.webp",
+    "bytes": 220112,
+    "sha256": "cd6e772759c2f779f4747a93cc45423584bd6799006c09061ec4fa416f78c1ba"
+  },
+  {
+    "file": "assets/images/facility-concierge-20261008-480.webp",
+    "bytes": 40082,
+    "sha256": "414503818ee118b683e05769bfb2171c8910e1040b964ec48d0e61ba6a65560a"
+  },
+  {
+    "file": "assets/images/facility-concierge-20261008-960.webp",
+    "bytes": 107510,
+    "sha256": "afd764a99750ff61f66afc2f358074cec46508de20202dfc252994c2c7289cc2"
+  },
+  {
+    "file": "assets/images/facility-hotel-pool-20261008-1680.webp",
+    "bytes": 364434,
+    "sha256": "ac7137331eb417cfc81bdb78280796987d96957ef8b1280194fd3209850685a8"
+  },
+  {
+    "file": "assets/images/facility-hotel-pool-20261008-480.webp",
+    "bytes": 47690,
+    "sha256": "ff6af312573e30d33f130891850749d5d1177771a5cf5ef0c20c2c5ebe74ffb8"
+  },
+  {
+    "file": "assets/images/facility-hotel-pool-20261008-960.webp",
+    "bytes": 157092,
+    "sha256": "49d4bc3b41e2de0ed994de1d2ebcc776412e5d65ffe4dd7b9e9917fd52696a17"
+  },
+  {
+    "file": "assets/images/facility-market-v2-20261008-1680.webp",
+    "bytes": 336998,
+    "sha256": "5c59b549528a494f42057eed369c6306435bf40f60157210e4123f5833588d53"
+  },
+  {
+    "file": "assets/images/facility-market-v2-20261008-480.webp",
+    "bytes": 48832,
+    "sha256": "a2f9027760c519b6ff071df73a8598ac3debd5cf5c7b9935f0fc0e4ef444bf3c"
+  },
+  {
+    "file": "assets/images/facility-market-v2-20261008-960.webp",
+    "bytes": 151506,
+    "sha256": "dc5d2cfebe8e8c9d7034d502d38a3b943c731c420c1cd76860bb4e6288a76462"
+  },
+  {
+    "file": "assets/images/facility-pool-cabana-20261008-1680.webp",
+    "bytes": 373908,
+    "sha256": "d811971b2865cff4d1cf26e711046af6ee27521941cda655770c3d2855da1ed8"
+  },
+  {
+    "file": "assets/images/facility-pool-cabana-20261008-480.webp",
+    "bytes": 52582,
+    "sha256": "4eaf6e2c4cec7911efd1cd4e8075f2be44cdb278244a519bf021a8915996784d"
+  },
+  {
+    "file": "assets/images/facility-pool-cabana-20261008-960.webp",
+    "bytes": 167900,
+    "sha256": "3f0fb87e1e2d0ecd55a3008e676c23afa2468d6fa0f41a43615b65a0077b8748"
+  },
+  {
+    "file": "assets/images/facility-terrace-20261007-1680.webp",
+    "bytes": 249836,
+    "sha256": "db9211f25510deca96d434b5fd0c7870ae237a378c576265997997dfa84469f6"
+  },
+  {
+    "file": "assets/images/facility-terrace-20261007-480.webp",
+    "bytes": 36968,
+    "sha256": "9eef81c00dd987db71c1e4c37a973d068a16a6c8a7188549664259419d72c78f"
+  },
+  {
+    "file": "assets/images/facility-terrace-20261007-960.webp",
+    "bytes": 113870,
+    "sha256": "a4a7f559906a23416a528e0ded3364b20da9653de8e27aebb3246b416533984d"
+  },
+  {
+    "file": "assets/images/facility-villa-20261007-1680.webp",
+    "bytes": 340076,
+    "sha256": "fe9893dcc5893ec93a4e0025fef83201bba5268aef61a3a1c068805b628f195e"
+  },
+  {
+    "file": "assets/images/facility-villa-20261007-480.webp",
+    "bytes": 45466,
+    "sha256": "19d300cdaf625a862ba2ee1b4fa70624b9438fd8c5ddee2b99eacd454c8459e8"
+  },
+  {
+    "file": "assets/images/facility-villa-20261007-960.webp",
+    "bytes": 150124,
+    "sha256": "02d946e4e3a9a614e685449cf38bea9abd43d13cabe1450c972d9b317838a4f3"
+  },
+  {
+    "file": "assets/images/gallery-night-20261007-1680.webp",
+    "bytes": 258668,
+    "sha256": "d068a9aca7df5321052c30b831275d94c40b6732c3c471ac8979d91edaf1470f"
+  },
+  {
+    "file": "assets/images/gallery-night-20261007-480.webp",
+    "bytes": 41144,
+    "sha256": "2e3595302eeac619c35d80877ed6b14aed7de2d03408b97720b9b236e92733e8"
+  },
+  {
+    "file": "assets/images/gallery-night-20261007-960.webp",
+    "bytes": 125374,
+    "sha256": "2c62fef886ca89d5c586dda07ae4dff6bf7c0b1a899ad14a27d587a766e19699"
+  },
+  {
+    "file": "assets/images/gallery-pool-20261007-1680.webp",
+    "bytes": 263852,
+    "sha256": "ab639ddee55124fc215bc4c11f2e7d2aaba140f143d5abab5627303842450f83"
+  },
+  {
+    "file": "assets/images/gallery-pool-20261007-480.webp",
+    "bytes": 40250,
+    "sha256": "bc85c747dcb083db9158cbe133926558c26fe5f0ddd4bc4217ec01bca99e2cbf"
+  },
+  {
+    "file": "assets/images/gallery-pool-20261007-960.webp",
+    "bytes": 120200,
+    "sha256": "a325856b007edf03b44e13b772894b900e329eaa47b13d3867244790f3037d3c"
+  },
+  {
+    "file": "assets/images/gallery-terrace-20261007-1680.webp",
+    "bytes": 235356,
+    "sha256": "eaf336a8afd60cd367c217d3be9511997de41f6490bf2ad0e9c897c9743720ca"
+  },
+  {
+    "file": "assets/images/gallery-terrace-20261007-480.webp",
+    "bytes": 40508,
+    "sha256": "07eb4a9ec2008fd7d51733748f15906fb434895d4fc0985d050fc0348aaed3db"
+  },
+  {
+    "file": "assets/images/gallery-terrace-20261007-960.webp",
+    "bytes": 117416,
+    "sha256": "3568c4ee9d56ff4938ecb858e255d597c073888b06652717947766a32716640d"
+  },
+  {
+    "file": "assets/images/living-dinner-1536.webp",
+    "bytes": 220602,
+    "sha256": "f021a95822cf4d247ec41b50cc1b5a606d8dd8c4ae8ad3ac1f8615d2f6cb391e"
+  },
+  {
+    "file": "assets/images/living-dinner-480.webp",
+    "bytes": 43610,
+    "sha256": "e5c1c5792fc0dea1fa2de3f182fe04a96a288f98690569fa662d80c737c9ec3b"
+  },
+  {
+    "file": "assets/images/living-dinner-960.webp",
+    "bytes": 118024,
+    "sha256": "a7116691c1a51e17a4bb85fec60ffb821754c9e4d391dfa7a81723ebaafd149b"
+  },
+  {
+    "file": "assets/images/living-morning-1536.webp",
+    "bytes": 214790,
+    "sha256": "cb5b0f9e84763508725615cbde8d3182db0b1b586ccbeb826de762ff5d571de5"
+  },
+  {
+    "file": "assets/images/living-morning-480.webp",
+    "bytes": 39900,
+    "sha256": "d4e52c8682660c17675a595410156b69533855513aef5a0c1339b7738558f848"
+  },
+  {
+    "file": "assets/images/living-morning-960.webp",
+    "bytes": 109482,
+    "sha256": "e65919cbb10e11868260269c9a0a6389598a1e24da5d680801166f42fc2f5372"
+  },
+  {
+    "file": "assets/images/living-terrace-1536.webp",
+    "bytes": 283256,
+    "sha256": "518992ba20f331fcbb39edade4887bceefbcce57be006fe625685a09539376c7"
+  },
+  {
+    "file": "assets/images/living-terrace-480.webp",
+    "bytes": 48846,
+    "sha256": "830b9ea101f256d6760d150a8aac44595f1b125457bf4f5fef731495d467c025"
+  },
+  {
+    "file": "assets/images/living-terrace-960.webp",
+    "bytes": 144042,
+    "sha256": "7b8074a2092dab6ace0206cbaa94d416d7f571d40243f333d9d020e117c673f1"
+  },
+  {
+    "file": "assets/images/lodge-coastal-1440.webp",
+    "bytes": 386554,
+    "sha256": "a3b81180efccca013db9bc92d1781453e6baa27c2c05b11ee974321aa74ef7c6"
+  },
+  {
+    "file": "assets/images/lodge-coastal-480.webp",
+    "bytes": 55890,
+    "sha256": "7f50ccf5fe6b2243548da4d623745430e496468e93f5dd28635c0d89a4051ba1"
+  },
+  {
+    "file": "assets/images/lodge-coastal-960.webp",
+    "bytes": 201276,
+    "sha256": "137f3c763b4c7c0c67cbb837a38f6ba3bfe8cee12bc02696c854f3b76956332f"
+  },
+  {
+    "file": "assets/images/lodge-dreamscape-1536.webp",
+    "bytes": 561504,
+    "sha256": "5d31ac6932bf5217c4ffb7bd14e2f5812942a60b062eec15931884697565b587"
+  },
+  {
+    "file": "assets/images/lodge-dreamscape-480.webp",
+    "bytes": 66112,
+    "sha256": "c05e680f482a30fc7f1ab48340e30706d2f0606738fc1fde0da8ff20de20f5db"
+  },
+  {
+    "file": "assets/images/lodge-dreamscape-960.webp",
+    "bytes": 238204,
+    "sha256": "861f0bbfdbd08088d9757808a82205b83b4464f0f619cdaf556c02e8984975aa"
+  },
+  {
+    "file": "assets/images/lodge-forest-1440.webp",
+    "bytes": 402632,
+    "sha256": "58f0bcb08174d4edf9270c1708b6e5d45d794c818d4887372bec1fa4439932d2"
+  },
+  {
+    "file": "assets/images/lodge-forest-480.webp",
+    "bytes": 63534,
+    "sha256": "448d17934cb5707cdda85692361c81db72a1c861a2a32ea039bcb341e0d80960"
+  },
+  {
+    "file": "assets/images/lodge-forest-960.webp",
+    "bytes": 218276,
+    "sha256": "c2ef510adfd54b7dc7fd4e8766e41adb5a7df01b0aebf857de71cc18e7f9627d"
+  },
+  {
+    "file": "assets/images/lodge-hero-1122.webp",
+    "bytes": 337508,
+    "sha256": "49cc0fbe465efdba66760523c32a7a081736ad72f7ac02c087ad1e863bb9d81b"
+  },
+  {
+    "file": "assets/images/lodge-hero-480.webp",
+    "bytes": 76718,
+    "sha256": "6c35803ea7b779bbf62d0f35f67febd9e52e545b7d23ccebb2baa231e7537585"
+  },
+  {
+    "file": "assets/images/lodge-hero-960.webp",
+    "bytes": 264314,
+    "sha256": "382b7d6d27d9da3c07c5f8ea75b171f79f399e9c440ecf183738fa98ae23552d"
+  },
+  {
+    "file": "assets/images/lodge-interior-1440.webp",
+    "bytes": 261234,
+    "sha256": "d8debbe4441b3778786bb4dd408b61b981a4976d6d13e1c163f1de24a73ffc91"
+  },
+  {
+    "file": "assets/images/lodge-interior-480.webp",
+    "bytes": 43052,
+    "sha256": "a85df89e750cb4b6735e0203a98bc63b1d78e1724a724aab377886b47fd84f21"
+  },
+  {
+    "file": "assets/images/lodge-interior-960.webp",
+    "bytes": 146780,
+    "sha256": "564470f2ae054c8049c4a9d325b8a7ea8471a5a6440a90a3134baca54a83f251"
+  },
+  {
+    "file": "assets/images/lodge-share.jpg",
+    "bytes": 155952,
+    "sha256": "6996f85257d53284ba8daa2323438bde4e82fbe5ef65eb0fecc75e141d7c4150"
+  },
+  {
+    "file": "assets/images/lodge-terrace-1145.webp",
+    "bytes": 241504,
+    "sha256": "2910fa8696237ceaa19fe481b3b8595cde03200cba5b0048ee5b8939dcaaeadd"
+  },
+  {
+    "file": "assets/images/lodge-terrace-480.webp",
+    "bytes": 72674,
+    "sha256": "ba93f3833d09f5aa506c3e4db9f2ee9e214be7e59e93cd15e3adbb40d29790c8"
+  },
+  {
+    "file": "assets/images/lodge-terrace-960.webp",
+    "bytes": 195400,
+    "sha256": "c2da8da7cb459fb7a8ff599f8840f355cef043f10cd35411e506b287966a79ec"
+  },
+  {
+    "file": "assets/images/owner-connect-20261007-1680.webp",
+    "bytes": 182290,
+    "sha256": "4f9d75a3def5c76fc0f0ad34772c1755985abf4f42f88b13cf67aae7d201bd82"
+  },
+  {
+    "file": "assets/images/owner-connect-20261007-480.webp",
+    "bytes": 34774,
+    "sha256": "4b85a76c6af2dfb678d452642232e89922b769895edeadcbaad42bd1fcdcc8e4"
+  },
+  {
+    "file": "assets/images/owner-connect-20261007-960.webp",
+    "bytes": 92704,
+    "sha256": "7c80e1a86665f9c0765a9977a946030d8901a91d860a4dbfcc70966c179222ce"
+  },
+  {
+    "file": "assets/images/owner-ideas-20261007-1680.webp",
+    "bytes": 186554,
+    "sha256": "d70cd5680e898b14e6c74664b0a211708a93b1ab817f2977601595aae1da61de"
+  },
+  {
+    "file": "assets/images/owner-ideas-20261007-480.webp",
+    "bytes": 34396,
+    "sha256": "3f1db868c9a59c823623e96a094412f9a8f7cdf24d702ef148c844cdc27a846b"
+  },
+  {
+    "file": "assets/images/owner-ideas-20261007-960.webp",
+    "bytes": 91664,
+    "sha256": "979bd5f703f1c484b5097b6b187d3bd4fe9331436fa803f5f461df96d1d2c6d0"
+  },
+  {
+    "file": "assets/images/owner-unwind-20261007-1680.webp",
+    "bytes": 194418,
+    "sha256": "9243a28bb08031035fc04c239dab6b02a3b904650f3d970d373540176ebbbc3e"
+  },
+  {
+    "file": "assets/images/owner-unwind-20261007-480.webp",
+    "bytes": 33792,
+    "sha256": "42d3268b84c7a8b22046adf2bfa955babe1dcac735f336ba718df986afc0fc02"
+  },
+  {
+    "file": "assets/images/owner-unwind-20261007-960.webp",
+    "bytes": 96026,
+    "sha256": "6d7feac9722974053b737392cd75fe7d0deb37dccc38d018fff7bae10731498e"
+  },
+  {
+    "file": "assets/images/plan-p13-1440.webp",
+    "bytes": 159238,
+    "sha256": "938e6bdecb74efcde3b6182ad39d00aea0eb821fb967e4090731edf6b6968480"
+  },
+  {
+    "file": "assets/images/plan-p13-480.webp",
+    "bytes": 26994,
+    "sha256": "3e3ae1b586d886f7769baaf28c0fd0737fa7503f0d857d59393a035c973794b4"
+  },
+  {
+    "file": "assets/images/plan-p13-960.webp",
+    "bytes": 83738,
+    "sha256": "19a2b95b1a314f308552b69b6276e9aee7bd7193b9dff6e0b8c05bac367dfd45"
+  },
+  {
+    "file": "assets/images/plan-p16-1440.webp",
+    "bytes": 186324,
+    "sha256": "e6f34efaf1c234963d609e008876dce6a01ebbc5de2965f27bff9f4cd2a3630f"
+  },
+  {
+    "file": "assets/images/plan-p16-480.webp",
+    "bytes": 34854,
+    "sha256": "add4e57fbfb20c2b2291541ed1cbe84374abda4cde456d636f3b780add0005d8"
+  },
+  {
+    "file": "assets/images/plan-p16-960.webp",
+    "bytes": 102530,
+    "sha256": "267930751b24a58c08777861e46b4aad5244d9ce871688e01a3d5736b5eaa3a4"
+  },
+  {
+    "file": "assets/images/plan-p8-1440.webp",
+    "bytes": 327326,
+    "sha256": "e2560d85b0f6b454c5da0966beed78b2b69c5ea3aa029a917609b5f2f047575f"
+  },
+  {
+    "file": "assets/images/plan-p8-480.webp",
+    "bytes": 47856,
+    "sha256": "b685737dd9aa0531bab72594f42e44a2851f40c34fd03e6f3683f3b1d3799ea8"
+  },
+  {
+    "file": "assets/images/plan-p8-960.webp",
+    "bytes": 169102,
+    "sha256": "7162c9dadc1a72446dfa959fdf8dba2200eb6d76c8dda1eac506dd6b36fde789"
+  },
+  {
+    "file": "assets/images/project-jumunjin-20261007-1680.webp",
+    "bytes": 476454,
+    "sha256": "319a79d8f33745aaa221d49ab5114b382fbe7534019814f4df2271ceb8ff1fc8"
+  },
+  {
+    "file": "assets/images/project-jumunjin-20261007-480.webp",
+    "bytes": 53590,
+    "sha256": "e9a4c627b0ed5d745a087582e33cb7265476777f9ce73ae68c1e3eeddadd4d78"
+  },
+  {
+    "file": "assets/images/project-jumunjin-20261007-960.webp",
+    "bytes": 194860,
+    "sha256": "07442324d320f7165ba95a71945af9df62ba25384d18b4a444bcd62452148877"
+  },
+  {
+    "file": "assets/images/project-yangyang-20261007-1680.webp",
+    "bytes": 514894,
+    "sha256": "0998ec59d019511355d586bdf0a1e6759b0263d39d6a8db27c290ee63b22ee2d"
+  },
+  {
+    "file": "assets/images/project-yangyang-20261007-480.webp",
+    "bytes": 58548,
+    "sha256": "8dd307db0e06ed7afb110f0726670fa3ef7ed1282f203c9dc246dbff5df285b0"
+  },
+  {
+    "file": "assets/images/project-yangyang-20261007-960.webp",
+    "bytes": 212120,
+    "sha256": "47d9b98c0ed6e608cbb0ac693cd39270a4d3be9020dc199cd83eb5b351637c95"
+  },
+  {
+    "file": "assets/images/resort-overview-20261006-1680.webp",
+    "bytes": 411880,
+    "sha256": "2173593c9fd7ea4654bc0caa7c581dbfa749dc50bc355325d480098a5e9eb53e"
+  },
+  {
+    "file": "assets/images/resort-overview-20261006-480.webp",
+    "bytes": 46630,
+    "sha256": "043bd953c33dad6133f0fbea8d52b963d332f1758353f9de0e32ffa478a15952"
+  },
+  {
+    "file": "assets/images/resort-overview-20261006-960.webp",
+    "bytes": 168088,
+    "sha256": "2d355718da53c34ab32354a1bf0736908af338c91683b6b61d370bce1383f991"
+  },
+  {
+    "file": "assets/images/scenery-arrival-1680.webp",
+    "bytes": 207782,
+    "sha256": "f9d1561fa0d26a181963d103468dc5d41de1375509409d66c03eb318b05566b3"
+  },
+  {
+    "file": "assets/images/scenery-arrival-480.webp",
+    "bytes": 25886,
+    "sha256": "bdc0a4d7cc9d6cd503e32310e4e6a2f32bb6c3d1332a35eb9310aab7615238bc"
+  },
+  {
+    "file": "assets/images/scenery-arrival-960.webp",
+    "bytes": 88052,
+    "sha256": "542cffaa5dd8a1906995f21bb2a72d24ba96c37ae770466e156e59ef426efa0f"
+  },
+  {
+    "file": "assets/images/scenery-cafe-1680.webp",
+    "bytes": 251554,
+    "sha256": "ad5507e30f2650ab4936c83a2e0f1767a964b2fcc738a0084b5fad9ddb8c2c55"
+  },
+  {
+    "file": "assets/images/scenery-cafe-480.webp",
+    "bytes": 36634,
+    "sha256": "addf1aaa2194489d44c980813082e23ee508cc9e51b444f2440fcb135fa5cb40"
+  },
+  {
+    "file": "assets/images/scenery-cafe-960.webp",
+    "bytes": 112830,
+    "sha256": "f21187b217451cc4169b19369beb7add3fac6051c1e46a370a3a60dd2b189e6a"
+  },
+  {
+    "file": "assets/images/scenery-coast-1680.webp",
+    "bytes": 338614,
+    "sha256": "c81973d9a6a98c5ef11acbea33d5e011f5b73bd4f251b857806f580027699f9c"
+  },
+  {
+    "file": "assets/images/scenery-coast-480.webp",
+    "bytes": 43768,
+    "sha256": "2006294d2df1e0a600ff34426f039ec284c446e3b64b61498ca9c4669dcc78e7"
+  },
+  {
+    "file": "assets/images/scenery-coast-960.webp",
+    "bytes": 141024,
+    "sha256": "84a9d1601966cd68ec96841e279fcdc91f25e65fa8f12debc72ba21cec062615"
+  },
+  {
+    "file": "assets/images/service-owner-exchange-20261008-1680.webp",
+    "bytes": 217236,
+    "sha256": "b5f235b46fdc9e76a0cc9c1a5303b891b80314ea3bdf4739acda21dacebc4842"
+  },
+  {
+    "file": "assets/images/service-owner-exchange-20261008-480.webp",
+    "bytes": 38080,
+    "sha256": "c869c8e8994e8664682c673eb9f4c8febeab4083f62194bb796fb1105d424363"
+  },
+  {
+    "file": "assets/images/service-owner-exchange-20261008-960.webp",
+    "bytes": 106788,
+    "sha256": "9914d0abd1a3b9e6b2462457cc6e9c45116f0144e44b002ea38b89df0464a78c"
+  },
+  {
+    "file": "assets/images/service-property-care-20261008-1680.webp",
+    "bytes": 181684,
+    "sha256": "7fc0654b3dffe94e322abf8a558a958c5c5019a6457424320201a0d83bca008a"
+  },
+  {
+    "file": "assets/images/service-property-care-20261008-480.webp",
+    "bytes": 34370,
+    "sha256": "5eb004c86dd50ef2c873d692b486dd471b2df2e4b851d389de54f03d5da1770e"
+  },
+  {
+    "file": "assets/images/service-property-care-20261008-960.webp",
+    "bytes": 90566,
+    "sha256": "b7c9cdb75ab751c12465d8c7f9767768841f36093e67cf3c71591fdf105498cd"
+  },
+  {
+    "file": "assets/images/service-ready-20261008-1680.webp",
+    "bytes": 214414,
+    "sha256": "037f20f8aa61f97ea17d75499ab594bbcdfb06c67bf8c56d51a7f8239bf37c38"
+  },
+  {
+    "file": "assets/images/service-ready-20261008-480.webp",
+    "bytes": 36744,
+    "sha256": "79739a2cfa38d3535e7556cef5cea4c1a4f5dca53e6070a58bd70db7497beb9d"
+  },
+  {
+    "file": "assets/images/service-ready-20261008-960.webp",
+    "bytes": 101874,
+    "sha256": "59852b34cc21427507a3f8854fd464165a9f2d18e34bf3243763220d7ad04e88"
+  },
+  {
+    "file": "assets/images/story-destination-20261007-1680.webp",
+    "bytes": 392902,
+    "sha256": "0e59af5583fd1f5041d9a71376119c7825f89169b009f9fef11fabf13335a03c"
+  },
+  {
+    "file": "assets/images/story-destination-20261007-480.webp",
+    "bytes": 49142,
+    "sha256": "7a293db7d85ec86adb70d7f8857a8a5ebc1eb5922130a133f0a133b8c684be86"
+  },
+  {
+    "file": "assets/images/story-destination-20261007-960.webp",
+    "bytes": 164062,
+    "sha256": "d497fa0e7455c05434768747d7b01c29b14adabf804757c8008e347416a13a3e"
+  },
+  {
+    "file": "assets/images/vacation-arrival-1680.webp",
+    "bytes": 355284,
+    "sha256": "b652ced3ad6713a7579406aa88d21de09987ba3e0f2d02f046b72b585e9edd86"
+  },
+  {
+    "file": "assets/images/vacation-arrival-480.webp",
+    "bytes": 42272,
+    "sha256": "e93f2d1716e1b6b3b19e31e26d4d38cb742423356942134e31b824a893e1dca4"
+  },
+  {
+    "file": "assets/images/vacation-arrival-960.webp",
+    "bytes": 146592,
+    "sha256": "5233c035f839adab72979a04b15a006374553633cc71a6b817133071e92c06cb"
+  },
+  {
+    "file": "assets/images/valley-community-20261007-1680.webp",
+    "bytes": 384964,
+    "sha256": "0aa6996cdee1305bbc4ac76868615f8b9a00791c180de993669b70f02d0ca339"
+  },
+  {
+    "file": "assets/images/valley-community-20261007-480.webp",
+    "bytes": 52824,
+    "sha256": "e6bbf1849409cd40f567f539777895d76b8f255e669e202d0da3867238891e0a"
+  },
+  {
+    "file": "assets/images/valley-community-20261007-960.webp",
+    "bytes": 172830,
+    "sha256": "f53f297f4a05ab3ef04a396c5367213f436183e5dc78e9a892fe8270124c0f71"
+  },
+  {
+    "file": "assets/images/valley-resources-20261007-1680.webp",
+    "bytes": 321396,
+    "sha256": "bd9f5547c5014e7a82de94f01ca43b3ed30b16fbd9887364197a90d2a88ad7e7"
+  },
+  {
+    "file": "assets/images/valley-resources-20261007-480.webp",
+    "bytes": 52820,
+    "sha256": "fa1015fe424b5b8e06b011a6ceb0adcd478632441b67f350d82e6f883ff7c73b"
+  },
+  {
+    "file": "assets/images/valley-resources-20261007-960.webp",
+    "bytes": 155052,
+    "sha256": "82826aa49362bb0c4453006ef2112ad8aa209ccb0cb0c5d994b77f0855e54abd"
+  },
+  {
+    "file": "assets/images/vision-masterplan-20261007-1680.webp",
+    "bytes": 475064,
+    "sha256": "23c321d0aa6742c0246957a0dc256cdd521aa68048e3a7ed8d65d00a344872b3"
+  },
+  {
+    "file": "assets/images/vision-masterplan-20261007-480.webp",
+    "bytes": 54872,
+    "sha256": "cb2194274b24e48a4f1fea0a6a11f50a0b69817b9d4a667e9a5563d52ef337e3"
+  },
+  {
+    "file": "assets/images/vision-masterplan-20261007-960.webp",
+    "bytes": 198694,
+    "sha256": "7f9f315b0c61a1179f9ff4dbcf6a5b111fc087d128181bebc6b5d5717882cdb1"
+  },
+  {
+    "file": "assets/video/mylodge-intro-en-30s-mobile.mp4",
+    "bytes": 2353535,
+    "sha256": "f884621081ad59a1df40dddf840d1cc04b8cdc92384de7f83486f26d981b3606"
+  },
+  {
+    "file": "assets/video/mylodge-intro-en-30s.mp4",
+    "bytes": 4546792,
+    "sha256": "449546e8c5ca92f7f8bb80566c305c54bcbf75f01afb014e330c4aca5de4cc5b"
+  },
+  {
+    "file": "assets/video/mylodge-intro-en-poster-mobile.webp",
+    "bytes": 100430,
+    "sha256": "054e4e4ffd8f0620cf9443c57dbb066493af560770f8d438545debea280ae853"
+  },
+  {
+    "file": "assets/video/mylodge-intro-en-poster.webp",
+    "bytes": 158430,
+    "sha256": "3d15873193aa82ddc5539f297a391551c9cfb88b518b8762c4f11765a87f6ef0"
+  },
+  {
+    "file": "assets/video/mylodge-intro-scenes-20261006-30s-mobile.mp4",
+    "bytes": 2364138,
+    "sha256": "f2c8b6b6a375e681c1076a5c90edcfc96fb5420e917b4aeff67e34849c642746"
+  },
+  {
+    "file": "assets/video/mylodge-intro-scenes-20261006-30s.mp4",
+    "bytes": 4259288,
+    "sha256": "2d1ad098fbc3281f884355b97782cc4c82e5758ca9b497c6855851c33e7d0cd3"
+  },
+  {
+    "file": "assets/video/mylodge-intro-scenes-20261006-poster-mobile.webp",
+    "bytes": 99606,
+    "sha256": "d178c2e5877d84bd12dae97a9c19a1d7e58cc5d25e524e552a5dc5a3391c9979"
+  },
+  {
+    "file": "assets/video/mylodge-intro-scenes-20261006-poster.webp",
+    "bytes": 185778,
+    "sha256": "145fa94ad8edcbcebd4b1e5c3744844f7a5bf6efed879c506c3c6cfc993a3e3e"
+  }
+]

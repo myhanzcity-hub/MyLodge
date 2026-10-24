@@ -1,0 +1,479 @@
+[
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "headingTop": 638.1875,
+    "height": 844,
+    "pause": "false",
+    "sceneHeights": [
+      476.28125,
+      476.28125,
+      476.28125
+    ],
+    "scrollWidth": 380,
+    "stage": 551.078125,
+    "width": 380,
+    "at": "2026-10-09T03:15:18.911Z",
+    "label": "390-ko-start"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "03 / 03",
+    "headingTop": 638.1875,
+    "height": 844,
+    "pause": "false",
+    "sceneHeights": [
+      476.28125,
+      476.28125,
+      476.28125
+    ],
+    "scrollWidth": 380,
+    "stage": 551.078125,
+    "width": 380,
+    "at": "2026-10-09T03:17:03.190Z",
+    "label": "390-ko-loop-observation"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "headingTop": 638.1875,
+    "height": 844,
+    "pause": "false",
+    "sceneHeights": [
+      476.28125,
+      476.28125,
+      476.28125
+    ],
+    "scrollWidth": 380,
+    "stage": 551.078125,
+    "width": 380,
+    "at": "2026-10-09T03:19:18.533Z",
+    "label": "390-ko-repeat-height-check"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "headingTop": -3389.8125,
+    "height": 844,
+    "pause": "false",
+    "sceneHeights": [
+      476.28125,
+      476.28125,
+      476.28125
+    ],
+    "scrollWidth": 380,
+    "stage": 551.078125,
+    "width": 380,
+    "at": "2026-10-09T03:21:03.807Z",
+    "label": "390-ko-keyboard-observation"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "03 / 03",
+    "headingTop": 638.1875,
+    "height": 844,
+    "pause": "false",
+    "sceneHeights": [
+      476.28125,
+      476.28125,
+      476.28125
+    ],
+    "scrollWidth": 380,
+    "stage": 551.078125,
+    "width": 380,
+    "at": "2026-10-09T03:22:17.553Z",
+    "label": "390-ko-focus-in-carousel"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "headingTop": 622.125,
+    "height": 568,
+    "pause": "false",
+    "sceneHeights": [
+      460.53125,
+      460.53125,
+      460.53125
+    ],
+    "scrollWidth": 310,
+    "stage": 535.328125,
+    "width": 310,
+    "at": "2026-10-09T03:24:02.008Z",
+    "label": "320-ko-baseline"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "headingTop": 622.125,
+    "height": 568,
+    "pause": "false",
+    "sceneHeights": [
+      460.53125,
+      460.53125,
+      460.53125
+    ],
+    "scrollWidth": 310,
+    "stage": 535.328125,
+    "width": 310,
+    "at": "2026-10-09T03:24:57.056Z",
+    "label": "320-ko-repeat-1"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "pause": "false",
+    "scrollWidth": 310,
+    "stage": 535.328125,
+    "width": 310,
+    "at": "2026-10-09T03:25:36.176Z",
+    "label": "320-ko-repeat-2"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "pause": "false",
+    "scrollWidth": 310,
+    "stage": 535.328125,
+    "width": 310,
+    "at": "2026-10-09T03:25:55.204Z",
+    "label": "320-ko-repeat-2"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "03 / 03",
+    "pause": "false",
+    "scrollWidth": 310,
+    "stage": 535.328125,
+    "width": 310,
+    "at": "2026-10-09T03:26:14.238Z",
+    "label": "320-ko-repeat-2"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "pause": "true",
+    "scrollWidth": 310,
+    "stage": 535.328125,
+    "width": 310,
+    "at": "2026-10-09T03:26:52.173Z",
+    "label": "320-ko-paused"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "pause": "true",
+    "scrollWidth": 310,
+    "stage": 535.328125,
+    "width": 310,
+    "at": "2026-10-09T03:27:11.205Z",
+    "label": "320-ko-paused"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "pause": "true",
+    "scrollWidth": 310,
+    "stage": 535.328125,
+    "width": 310,
+    "at": "2026-10-09T03:27:30.232Z",
+    "label": "320-ko-paused"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "pause": "true",
+    "scrollWidth": 834,
+    "stage": 836.421875,
+    "width": 834,
+    "at": "2026-10-09T03:29:11.687Z",
+    "label": "844-ko-pause-after-rotation"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "pause": "true",
+    "scrollWidth": 834,
+    "stage": 836.421875,
+    "width": 834,
+    "at": "2026-10-09T03:29:30.724Z",
+    "label": "844-ko-pause-after-rotation"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "pause": "true",
+    "scrollWidth": 834,
+    "stage": 836.421875,
+    "width": 834,
+    "at": "2026-10-09T03:29:49.769Z",
+    "label": "844-ko-pause-after-rotation"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "pause": "false",
+    "scrollWidth": 380,
+    "stage": 659.390625,
+    "width": 380,
+    "at": "2026-10-09T03:31:05.259Z",
+    "label": "390-en-125-percent"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "pause": "false",
+    "scrollWidth": 380,
+    "stage": 659.390625,
+    "width": 380,
+    "at": "2026-10-09T03:31:24.298Z",
+    "label": "390-en-125-percent"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "03 / 03",
+    "pause": "false",
+    "scrollWidth": 380,
+    "stage": 659.390625,
+    "width": 380,
+    "at": "2026-10-09T03:31:43.330Z",
+    "label": "390-en-125-percent"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "headingTop": 1063.921875,
+    "height": 844,
+    "pause": "false",
+    "sceneHeights": [
+      902.265625,
+      902.265625,
+      902.265625
+    ],
+    "scrollWidth": 380,
+    "stage": 977.0625,
+    "width": 380,
+    "at": "2026-10-09T03:35:38.090Z",
+    "label": "390-en-200-start"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "03 / 03",
+    "pause": "false",
+    "scrollWidth": 380,
+    "stage": 977.0625,
+    "width": 380,
+    "at": "2026-10-09T03:36:12.228Z",
+    "label": "390-en-200-loop"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "pause": "false",
+    "scrollWidth": 380,
+    "stage": 977.0625,
+    "width": 380,
+    "at": "2026-10-09T03:36:31.259Z",
+    "label": "390-en-200-loop"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "pause": "false",
+    "scrollWidth": 380,
+    "stage": 977.0625,
+    "width": 380,
+    "at": "2026-10-09T03:36:50.307Z",
+    "label": "390-en-200-loop"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "headingTop": 911.375,
+    "height": 900,
+    "pause": "false",
+    "sceneHeights": [
+      810,
+      810,
+      810
+    ],
+    "scrollWidth": 1430,
+    "stage": 810,
+    "width": 1430,
+    "at": "2026-10-09T03:49:03.459Z",
+    "label": "1440-en-life-start"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "pause": "false",
+    "scrollWidth": 1430,
+    "stage": 810,
+    "width": 1430,
+    "at": "2026-10-09T03:49:20.498Z",
+    "label": "1440-en-life-loop"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "pause": "false",
+    "scrollWidth": 1430,
+    "stage": 810,
+    "width": 1430,
+    "at": "2026-10-09T03:49:39.533Z",
+    "label": "1440-en-life-loop"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "03 / 03",
+    "pause": "false",
+    "scrollWidth": 1430,
+    "stage": 810,
+    "width": 1430,
+    "at": "2026-10-09T03:49:58.573Z",
+    "label": "1440-en-life-loop"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "pause": "false",
+    "scrollWidth": 380,
+    "stage": 551.078125,
+    "width": 380,
+    "at": "2026-10-09T03:50:44.582Z",
+    "label": "initial-menu-attempt-not-open",
+    "menuActuallyOpen": false
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "pause": "false",
+    "scrollWidth": 380,
+    "stage": 551.078125,
+    "width": 380,
+    "at": "2026-10-09T03:51:03.617Z",
+    "label": "initial-menu-attempt-not-open",
+    "menuActuallyOpen": false
+  },
+  {
+    "activeSlides": 1,
+    "counter": "03 / 03",
+    "pause": "false",
+    "scrollWidth": 380,
+    "stage": 551.078125,
+    "width": 380,
+    "at": "2026-10-09T03:51:22.655Z",
+    "label": "initial-menu-attempt-not-open",
+    "menuActuallyOpen": false
+  },
+  {
+    "activeSlides": 1,
+    "counter": "03 / 03",
+    "pause": "false",
+    "scrollWidth": 380,
+    "stage": 551.078125,
+    "width": 380,
+    "at": "2026-10-09T03:52:47.668Z",
+    "label": "390-ko-life-menu-open-confirmed",
+    "menuActuallyOpen": true
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "pause": "false",
+    "scrollWidth": 380,
+    "stage": 551.078125,
+    "width": 380,
+    "at": "2026-10-09T03:53:06.702Z",
+    "label": "390-ko-life-menu-open-confirmed",
+    "menuActuallyOpen": true
+  },
+  {
+    "activeSlides": 1,
+    "counter": "03 / 03",
+    "pause": "false",
+    "scrollWidth": 380,
+    "stage": 551.078125,
+    "width": 380,
+    "at": "2026-10-09T03:53:25.736Z",
+    "label": "390-ko-life-menu-open-confirmed",
+    "menuActuallyOpen": true
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "headingTop": 3387.671875,
+    "height": 568,
+    "pause": "false",
+    "sceneHeights": [
+      499.71875,
+      499.71875,
+      499.71875
+    ],
+    "scrollWidth": 310,
+    "stage": 574.515625,
+    "width": 310,
+    "at": "2026-10-09T03:59:24.698Z",
+    "label": "320-en-200-life-start",
+    "settingsSettled": false
+  },
+  {
+    "activeSlides": 1,
+    "counter": "02 / 03",
+    "pause": "false",
+    "scrollWidth": 310,
+    "stage": 1067.703125,
+    "width": 310,
+    "at": "2026-10-09T03:59:41.744Z",
+    "label": "320-en-200-life-loop"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "pause": "false",
+    "scrollWidth": 310,
+    "stage": 1067.703125,
+    "width": 310,
+    "at": "2026-10-09T04:00:00.780Z",
+    "label": "320-en-200-life-loop"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "03 / 03",
+    "pause": "false",
+    "scrollWidth": 310,
+    "stage": 1067.703125,
+    "width": 310,
+    "at": "2026-10-09T04:00:19.812Z",
+    "label": "320-en-200-life-loop"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "pause": "true",
+    "scrollWidth": 310,
+    "stage": 1067.703125,
+    "width": 310,
+    "at": "2026-10-09T04:02:47.066Z",
+    "label": "320-en-200-life-user-paused"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "pause": "true",
+    "scrollWidth": 310,
+    "stage": 1067.703125,
+    "width": 310,
+    "at": "2026-10-09T04:03:06.097Z",
+    "label": "320-en-200-life-user-paused"
+  },
+  {
+    "activeSlides": 1,
+    "counter": "01 / 03",
+    "pause": "true",
+    "scrollWidth": 310,
+    "stage": 1067.703125,
+    "width": 310,
+    "at": "2026-10-09T04:03:25.128Z",
+    "label": "320-en-200-life-user-paused"
+  }
+]

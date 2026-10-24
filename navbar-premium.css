@@ -1,0 +1,56 @@
+/* Reversible premium navbar treatment. Remove this import from luxury-system.css to revert. */
+@media(min-width:1024px){
+ body.vacation-design header,body.destination-page header{
+  inset:14px 24px auto;width:calc(100% - 48px);max-width:1360px;
+  border:1px solid rgb(var(--ui-taupe-rgb) / .42)!important;border-radius:18px;
+  background:rgb(var(--ui-ivory-rgb) / .94)!important;
+  box-shadow:0 8px 28px -12px rgb(var(--ui-charcoal-rgb) / .18);
+  backdrop-filter:blur(18px) saturate(1.15);-webkit-backdrop-filter:blur(18px) saturate(1.15);
+ }
+ body.vacation-design .header-inner,body.destination-page .header-inner{
+  height:64px;min-height:64px;padding-inline:28px;gap:clamp(18px,2vw,30px)
+ }
+ body.vacation-design .header-inner>nav,body.destination-page .header-inner>nav{gap:clamp(18px,2vw,30px)}
+ body.vacation-design .header-inner>nav>a,body.destination-page .header-inner>nav>a{
+  position:relative;min-height:42px;display:inline-flex;align-items:center;
+  color:var(--ui-gray);font-size:12px;font-weight:500;letter-spacing:.025em;
+  transition:color .2s ease
+ }
+ body.vacation-design .header-inner>nav>a::after,body.destination-page .header-inner>nav>a::after{
+  position:absolute;right:0;bottom:5px;left:0;height:1px;content:"";
+  background:var(--ui-charcoal);transform:scaleX(0);transform-origin:left;transition:transform .24s ease
+ }
+ body.vacation-design .header-inner>nav>a:hover::after,
+ body.vacation-design .header-inner>nav>a[aria-current]::after,
+ body.destination-page .header-inner>nav>a:hover::after,
+ body.destination-page .header-inner>nav>a[aria-current]::after{transform:scaleX(1)}
+ body.vacation-design .header-inner>.header-cta,body.destination-page .header-inner>.header-cta{
+  min-height:40px;padding-inline:18px;border:1px solid var(--ui-charcoal)!important;
+  border-radius:999px;background:var(--ui-charcoal)!important;color:var(--ui-ivory)!important;
+  font-size:12px;font-weight:600;letter-spacing:.015em;
+  transition:background-color .2s ease,color .2s ease,transform .2s ease
+ }
+ body.vacation-design .header-inner>.header-cta:hover,
+ body.vacation-design .header-inner>.header-cta:focus-visible,
+ body.destination-page .header-inner>.header-cta:hover,
+ body.destination-page .header-inner>.header-cta:focus-visible{
+  background:transparent!important;color:var(--ui-charcoal)!important;transform:translateY(-1px)
+ }
+}
+@media(max-width:1023px){
+ body.vacation-design header,body.destination-page header{
+  background:rgb(var(--ui-ivory-rgb) / .95)!important;
+  border:1px solid rgb(var(--ui-taupe-rgb) / .4)!important;
+  border-radius:16px;box-shadow:0 6px 22px -12px rgb(var(--ui-charcoal-rgb) / .2);
+  backdrop-filter:blur(16px) saturate(1.1);-webkit-backdrop-filter:blur(16px) saturate(1.1)
+ }
+ body.vacation-design .header-inner,body.destination-page .header-inner{min-height:60px}
+}
+@media(prefers-reduced-motion:reduce){
+ body.vacation-design .header-inner>nav>a,
+ body.vacation-design .header-inner>nav>a::after,
+ body.vacation-design .header-inner>.header-cta,
+ body.destination-page .header-inner>nav>a,
+ body.destination-page .header-inner>nav>a::after,
+ body.destination-page .header-inner>.header-cta{transition:none}
+}

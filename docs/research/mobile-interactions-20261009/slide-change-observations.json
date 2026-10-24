@@ -1,0 +1,257 @@
+{
+  "sampling": "1 second plus tool latency; records caption changes only; not exact timer measurements",
+  "samples": [
+    {
+      "buttonHeight": 44,
+      "buttonY": 445.828125,
+      "caption": "02 / 03 · A terrace for meeting fellow entrepreneurs",
+      "captionHeight": 46.1875,
+      "lineHeight": "23.1px",
+      "label": "390-en-gallery-transition-times",
+      "at": "2026-10-09T10:54:20.457Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 445.828125,
+      "caption": "03 / 03 · A club for music and conversation",
+      "captionHeight": 46.1875,
+      "lineHeight": "23.1px",
+      "label": "390-en-gallery-transition-times",
+      "at": "2026-10-09T10:54:32.779Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 445.828125,
+      "caption": "01 / 03 · A pool beside the sea",
+      "captionHeight": 46.1875,
+      "lineHeight": "23.1px",
+      "label": "390-en-gallery-transition-times",
+      "at": "2026-10-09T10:54:45.119Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 445.828125,
+      "caption": "02 / 03 · A terrace for meeting fellow entrepreneurs",
+      "captionHeight": 46.1875,
+      "lineHeight": "23.1px",
+      "label": "390-en-gallery-transition-times",
+      "at": "2026-10-09T10:54:56.411Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 445.828125,
+      "caption": "03 / 03 · A club for music and conversation",
+      "captionHeight": 46.1875,
+      "lineHeight": "23.1px",
+      "label": "390-en-gallery-transition-times",
+      "at": "2026-10-09T10:55:08.740Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 410.796875,
+      "caption": "01 / 03 · A pool beside the sea",
+      "captionHeight": 46.1875,
+      "lineHeight": "23.1px",
+      "label": "320-en-gallery-transition-times",
+      "at": "2026-10-09T10:55:30.335Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 422.34375,
+      "caption": "02 / 03 · A terrace for meeting fellow entrepreneurs",
+      "captionHeight": 69.28125,
+      "lineHeight": "23.1px",
+      "label": "320-en-gallery-transition-times",
+      "at": "2026-10-09T10:55:32.397Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 422.34375,
+      "caption": "03 / 03 · A club for music and conversation",
+      "captionHeight": 69.28125,
+      "lineHeight": "23.1px",
+      "label": "320-en-gallery-transition-times",
+      "at": "2026-10-09T10:55:46.782Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 410.796875,
+      "caption": "01 / 03 · A pool beside the sea",
+      "captionHeight": 46.1875,
+      "lineHeight": "23.1px",
+      "label": "320-en-gallery-transition-times",
+      "at": "2026-10-09T10:56:01.183Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 422.34375,
+      "caption": "02 / 03 · A terrace for meeting fellow entrepreneurs",
+      "captionHeight": 69.28125,
+      "lineHeight": "23.1px",
+      "label": "320-en-gallery-transition-times",
+      "at": "2026-10-09T10:56:12.498Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 2679.796875,
+      "caption": "01 / 03 · A pool beside the sea",
+      "captionHeight": 23.09375,
+      "lineHeight": "23.1px",
+      "label": "768-en-gallery-transition-times",
+      "at": "2026-10-09T10:57:25.353Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 1729.796875,
+      "caption": "01 / 03 · A pool beside the sea",
+      "captionHeight": 23.09375,
+      "lineHeight": "23.1px",
+      "label": "768-en-gallery-focus-transition-times",
+      "at": "2026-10-09T10:58:35.113Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 533.796875,
+      "caption": "02 / 03 · A terrace for meeting fellow entrepreneurs",
+      "captionHeight": 23.09375,
+      "lineHeight": "23.1px",
+      "label": "768-en-gallery-focus-transition-times",
+      "at": "2026-10-09T10:58:45.459Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 533.796875,
+      "caption": "03 / 03 · A club for music and conversation",
+      "captionHeight": 23.09375,
+      "lineHeight": "23.1px",
+      "label": "768-en-gallery-focus-transition-times",
+      "at": "2026-10-09T10:58:55.746Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 533.796875,
+      "caption": "01 / 03 · A pool beside the sea",
+      "captionHeight": 23.09375,
+      "lineHeight": "23.1px",
+      "label": "768-en-gallery-focus-transition-times",
+      "at": "2026-10-09T10:59:06.079Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 533.796875,
+      "caption": "02 / 03 · A terrace for meeting fellow entrepreneurs",
+      "captionHeight": 23.09375,
+      "lineHeight": "23.1px",
+      "label": "768-en-gallery-focus-transition-times",
+      "at": "2026-10-09T10:59:15.365Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 533.796875,
+      "caption": "03 / 03 · A club for music and conversation",
+      "captionHeight": 23.09375,
+      "lineHeight": "23.1px",
+      "label": "768-en-gallery-focus-transition-times",
+      "at": "2026-10-09T10:59:25.623Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": -763.953125,
+      "caption": "02 / 03 · A terrace for meeting fellow entrepreneurs",
+      "captionHeight": 20.796875,
+      "lineHeight": "20.8px",
+      "label": "1023-en-gallery-focused-transition-times",
+      "at": "2026-10-09T11:00:14.370Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 405.046875,
+      "caption": "03 / 03 · A club for music and conversation",
+      "captionHeight": 20.796875,
+      "lineHeight": "20.8px",
+      "label": "1023-en-gallery-focused-transition-times",
+      "at": "2026-10-09T11:00:24.662Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 405.046875,
+      "caption": "01 / 03 · A pool beside the sea",
+      "captionHeight": 20.796875,
+      "lineHeight": "20.8px",
+      "label": "1023-en-gallery-focused-transition-times",
+      "at": "2026-10-09T11:00:34.924Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 405.046875,
+      "caption": "02 / 03 · A terrace for meeting fellow entrepreneurs",
+      "captionHeight": 20.796875,
+      "lineHeight": "20.8px",
+      "label": "1023-en-gallery-focused-transition-times",
+      "at": "2026-10-09T11:00:45.204Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 405.046875,
+      "caption": "03 / 03 · A club for music and conversation",
+      "captionHeight": 20.796875,
+      "lineHeight": "20.8px",
+      "label": "1023-en-gallery-focused-transition-times",
+      "at": "2026-10-09T11:00:55.495Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 405.046875,
+      "caption": "01 / 03 · A pool beside the sea",
+      "captionHeight": 20.796875,
+      "lineHeight": "20.8px",
+      "label": "1023-en-gallery-focused-transition-times",
+      "at": "2026-10-09T11:01:04.747Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 307.25,
+      "caption": "01 / 03 · 바다와 함께 즐기는 풀장",
+      "captionHeight": 23.09375,
+      "lineHeight": "23.1px",
+      "label": "ko-return-after-language-reset",
+      "at": "2026-10-09T11:07:32.288Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 444.34375,
+      "caption": "02 / 03 · 사업가들이 만나는 테라스",
+      "captionHeight": 46.1875,
+      "lineHeight": "23.1px",
+      "label": "ko-return-after-language-reset",
+      "at": "2026-10-09T11:07:42.549Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 443.25,
+      "caption": "03 / 03 · 음악과 대화가 있는 클럽",
+      "captionHeight": 23.09375,
+      "lineHeight": "23.1px",
+      "label": "ko-return-after-language-reset",
+      "at": "2026-10-09T11:07:54.877Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 443.25,
+      "caption": "01 / 03 · 바다와 함께 즐기는 풀장",
+      "captionHeight": 23.09375,
+      "lineHeight": "23.1px",
+      "label": "ko-return-after-language-reset",
+      "at": "2026-10-09T11:08:05.168Z"
+    },
+    {
+      "buttonHeight": 44,
+      "buttonY": 444.34375,
+      "caption": "02 / 03 · 사업가들이 만나는 테라스",
+      "captionHeight": 46.1875,
+      "lineHeight": "23.1px",
+      "label": "ko-return-after-language-reset",
+      "at": "2026-10-09T11:08:14.410Z"
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+/* Owner Benefits, following assets/brand/stitch.html while using MyLodge content and imagery. */
+.photo-led.promotion-home #ownership.owner-benefits {
+  --owner-ink: #0e0f0f; --owner-paper: #faf9f6; --owner-muted: #444748; --owner-gold: #6b5d3b; --owner-gold-light: #d8c49b; --owner-line: #c4c7c7;
+  position: relative; overflow: clip; isolation: isolate; padding: 144px 0 112px; background: var(--owner-paper) !important; color: var(--owner-ink);
+}
+.owner-benefits-atmosphere,.owner-benefits-guides,.owner-benefits-glow{position:absolute;pointer-events:none}.owner-benefits-atmosphere{inset:0;z-index:-1;opacity:.4}.owner-benefits-glow{top:25%;left:50%;width:900px;height:550px;border-radius:50%;background:rgb(216 196 155 / .2);filter:blur(140px);transform:translate(-50%,-50%)}.owner-benefits-guides{inset-block:0;left:50%;width:min(100%,1280px);border-inline:1px solid rgb(196 199 199 / .2);transform:translateX(-50%)}
+.photo-led.promotion-home #ownership.owner-benefits>.container{position:relative;z-index:1;max-width:1280px;padding-inline:80px}.photo-led.promotion-home #ownership.owner-benefits .intro{max-width:none;margin:0 0 56px}.owner-benefits-label{display:flex;align-items:center;gap:8px;margin:0 0 12px;color:var(--owner-muted)!important;font-size:11px!important;font-weight:600;line-height:16px;letter-spacing:.24em!important}.owner-benefits-label::before{width:8px;height:8px;content:"";flex:none;border-radius:50%;background:var(--owner-gold)}.owner-benefits-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px}.photo-led.promotion-home #ownership.owner-benefits .intro h2{margin:0;color:var(--owner-ink)!important;font-family:var(--font-heading);font-size:clamp(38px,4.4vw,56px)!important;font-weight:800;line-height:1.22;letter-spacing:-.055em!important}.owner-benefits-quote{margin:0;color:var(--owner-gold);font-family:var(--font-display);font-size:clamp(28px,3.4vw,44px);font-style:italic;font-weight:400;line-height:1.23;letter-spacing:-.02em;opacity:.85;text-align:right}
+.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel{position:relative;display:block;height:640px;margin:0;overflow:visible;isolation:isolate;perspective:1800px;touch-action:pan-y}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article{position:absolute;top:24px;left:50%;width:min(29.1%,320px);height:540px;min-height:0;margin:0;padding:0;overflow:hidden;cursor:pointer;border:1px solid rgb(196 199 199 / .5);border-radius:4px;background:#e9e8e5;color:var(--owner-paper);box-shadow:0 30px 60px -12px rgb(28 29 31 / .18),0 10px 24px -6px rgb(28 29 31 / .08);transform-origin:center;transform-style:preserve-3d;transition:width 700ms cubic-bezier(.22,1,.36,1),height 700ms cubic-bezier(.22,1,.36,1),top 700ms cubic-bezier(.22,1,.36,1),transform 700ms cubic-bezier(.22,1,.36,1),opacity 500ms ease,filter 700ms cubic-bezier(.22,1,.36,1),border-color 500ms ease,box-shadow 700ms cubic-bezier(.22,1,.36,1)}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active{top:0;z-index:3;width:min(34.6%,380px);height:640px;border-color:rgb(216 196 155 / .3);background:var(--owner-ink);box-shadow:0 40px 80px -16px rgb(20 21 22 / .28),0 16px 32px -8px rgb(20 21 22 / .12),0 0 0 1px rgb(255 255 255 / .1);filter:brightness(1);opacity:1;transform:translateX(-50%) translateY(-16px) scale(1)}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-left,.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-right{z-index:1;filter:brightness(.96) saturate(.94);opacity:.96}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-left{transform:translateX(-143%) translateY(24px) scale(1)}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-right{transform:translateX(43%) translateY(24px) scale(1)}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article:hover{filter:brightness(1)}
+.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel figure{position:absolute;inset:0;height:auto;margin:0}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel figure::after{position:absolute;inset:0;content:"";pointer-events:none;background:linear-gradient(to top,rgb(14 15 15 / .95),rgb(14 15 15 / .45) 50%,transparent)}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active figure::after{background:linear-gradient(to top,#0e0f0f,rgb(14 15 15 / .4) 50%,transparent)}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel figure img{width:100%;height:100%;object-fit:cover;transform:scale(1.1);filter:brightness(.96);transition:transform 1000ms cubic-bezier(.22,1,.36,1),filter 500ms ease}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active figure img{filter:brightness(.98)}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article:hover figure img{transform:scale(1.15)}
+.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel .editorial-card-copy{position:absolute;inset:auto 0 0;z-index:2;min-height:0;padding:32px;border:0;border-radius:0;background:transparent;backdrop-filter:none}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active .editorial-card-copy{padding:36px}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel .editorial-card-copy .eyebrow{display:inline-flex;margin:0 0 8px;padding:5px 10px;border:1px solid rgb(255 255 255 / .2);border-radius:2px;background:rgb(255 255 255 / .1);color:var(--owner-paper)!important;font-size:10px;font-weight:600;letter-spacing:.2em}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active .editorial-card-copy .eyebrow{border-color:rgb(216 196 155 / .4);background:rgb(14 15 15 / .6);color:#f5e0b6!important;letter-spacing:.25em}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel h3{margin:0 0 8px;color:var(--owner-paper)!important;font-size:24px;font-weight:600;line-height:1.33;letter-spacing:-.02em}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active h3{font-size:32px;font-weight:700;line-height:1.31;letter-spacing:-.03em}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel p{margin:0;color:rgb(255 255 255 / .85)!important;font-size:13px;font-weight:300;line-height:1.54}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active p{color:rgb(255 255 255 / .9)!important;font-size:15px;line-height:1.6}.photo-led.promotion-home #ownership.owner-benefits .editorial-card-copy::after{display:block;width:32px;height:1px;margin-top:16px;content:"";background:var(--owner-gold-light);transition:width 300ms ease}.photo-led.promotion-home #ownership.owner-benefits article:hover .editorial-card-copy::after{width:64px}
+.owner-carousel-controls{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:56px}.owner-carousel-controls button{display:grid;width:48px;height:48px;place-items:center;border:1px solid rgb(196 199 199 / .7);border-radius:50%;background:rgb(250 249 246 / .8);color:var(--owner-ink);font:inherit;font-size:20px;cursor:pointer;transition:transform 300ms ease,border-color 300ms ease,background-color 300ms ease}.owner-carousel-controls button:hover{border-color:var(--owner-ink);transform:scale(1.05)}.owner-carousel-counter{padding:0 12px;color:var(--owner-muted);font-size:11px;font-weight:600;letter-spacing:.16em}.owner-carousel-counter strong{color:var(--owner-ink)}.owner-benefits-footnote{display:flex;justify-content:space-between;gap:16px;margin-top:64px;padding-top:24px;border-top:1px solid rgb(196 199 199 / .3);color:var(--owner-muted);font-size:12px;line-height:1.7}.owner-benefits-places{flex:none;font-size:10px;letter-spacing:.15em}.owner-carousel-controls button:focus-visible,.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article:focus-visible{outline:2px solid var(--owner-ink);outline-offset:4px}
+@media(min-width:768px) and (prefers-reduced-motion:no-preference){.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-left,.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-right{animation:owner-side-float 8s ease-in-out infinite}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active{animation:owner-center-float 9s ease-in-out infinite}@keyframes owner-side-float{50%{translate:0 -8px}}@keyframes owner-center-float{50%{translate:0 -12px}}}
+@media(max-width:1100px){.photo-led.promotion-home #ownership.owner-benefits>.container{padding-inline:40px}.owner-benefits-quote{display:none}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel{height:590px}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article{width:min(31%,290px);height:500px}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active{width:min(37%,340px);height:590px}}
+@media(max-width:767px){.photo-led.promotion-home #ownership.owner-benefits{padding:88px 0 80px}.photo-led.promotion-home #ownership.owner-benefits>.container{padding-inline:20px}.photo-led.promotion-home #ownership.owner-benefits .intro{margin-bottom:40px}.photo-led.promotion-home #ownership.owner-benefits .intro h2{font-size:38px!important;line-height:1.26}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel{height:500px}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article,.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active{top:0;width:min(76vw,330px);height:500px}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active{transform:translateX(-50%) scale(1)}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-left{transform:translateX(-122%) scale(.78);opacity:.62}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-right{transform:translateX(22%) scale(.78);opacity:.62}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel .editorial-card-copy,.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active .editorial-card-copy{padding:24px}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel h3,.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active h3{font-size:25px;line-height:1.35}.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article:not(.is-active) .editorial-card-copy{opacity:0}.owner-carousel-controls{margin-top:40px}.owner-benefits-footnote{flex-direction:column;margin-top:48px}}
+@media(prefers-reduced-motion:reduce){.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article,.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel figure img,.photo-led.promotion-home #ownership.owner-benefits .editorial-card-copy::after,.owner-carousel-controls button{animation:none!important;transition:none!important}}
+
+/* Impeccable pass: keep the manual deck calm, tactile, and brand-tinted. */
+.photo-led.promotion-home #ownership.owner-benefits{
+  --owner-ink:oklch(19% .009 80);
+  --owner-paper:oklch(98% .008 82);
+  --owner-muted:oklch(43% .012 78);
+  --owner-gold:oklch(49% .048 78);
+  --owner-gold-light:oklch(78% .052 78);
+  --owner-line:oklch(80% .012 78);
+}
+.owner-benefits-quote{
+  max-width:19ch;
+  color:var(--owner-muted);
+  font-family:var(--font-heading);
+  font-size:clamp(16px,1.6vw,21px);
+  font-style:normal;
+  font-weight:500;
+  line-height:1.45;
+  letter-spacing:-.02em;
+}
+.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article{
+  background:oklch(93% .008 82);
+}
+.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active{
+  background:var(--owner-ink);
+  box-shadow:0 34px 72px -24px oklch(19% .009 80 / .42);
+}
+.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel figure::after{
+  background:linear-gradient(to top,oklch(19% .009 80 / .96),oklch(19% .009 80 / .42) 52%,transparent);
+}
+.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article.is-active figure::after{
+  background:linear-gradient(to top,oklch(19% .009 80),oklch(19% .009 80 / .4) 52%,transparent);
+}
+.photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel :is(p,.editorial-card-copy .eyebrow){
+  color:oklch(95% .007 82)!important;
+}
+.owner-carousel-controls button{
+  min-width:48px;
+  min-height:48px;
+  background:oklch(98% .008 82 / .92);
+}
+@media(min-width:768px) and (prefers-reduced-motion:no-preference){
+  .photo-led.promotion-home #ownership.owner-benefits .owner-depth-carousel article{
+    animation:none!important;
+  }
+}
+
+/* LIFE AT MY LODGE: image-first editorial triptych, inspired by the supplied reference. */
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial{
+  --owner-paper: #f5f2ed;
+  --owner-ink: #282722;
+  --owner-muted: #77736d;
+  overflow: visible;
+  padding: clamp(68px, 8vw, 112px) 0 clamp(72px, 8vw, 108px);
+  background: var(--owner-paper) !important;
+  color: var(--owner-ink);
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial > .container{
+  width: min(100% - 72px, 1500px);
+  max-width: 1500px;
+  padding-inline: 0;
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .intro{
+  margin: 0 0 clamp(28px, 3.2vw, 46px);
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-benefits-label{
+  margin-bottom: 14px;
+  color: var(--owner-muted) !important;
+  font-size: 10px !important;
+  letter-spacing: .22em !important;
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-benefits-label::before{display:none}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-benefits-heading{
+  align-items: end;
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .intro h2{
+  color: var(--owner-ink) !important;
+  font-size: clamp(28px, 3.1vw, 43px) !important;
+  font-weight: 500;
+  letter-spacing: -.055em !important;
+  line-height: 1.3;
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-benefits-quote{
+  max-width: none;
+  color: var(--owner-muted);
+  font-family: var(--font-body, inherit);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .02em;
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.6vw, 40px);
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  perspective: none;
+  touch-action: auto;
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid > article{
+  position: relative;
+  inset: auto;
+  display: flex;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--owner-ink);
+  cursor: default;
+  filter: none;
+  opacity: 1;
+  transform: none;
+  animation: none;
+  transition: none;
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid figure{
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 0.76;
+  margin: 0 0 18px;
+  overflow: hidden;
+  background: #e6e1d9;
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid figure::after{display:none}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid figure img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: none;
+  transform: none;
+  transition: transform 900ms cubic-bezier(.2,.7,.2,1);
+}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid article:hover figure img{transform:scale(1.025)}
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .editorial-card-copy{
+  position: static;
+  display: block;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .editorial-card-copy .eyebrow{
+  display: none;
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid h3{
+  margin: 0 0 8px;
+  color: var(--owner-ink) !important;
+  font-family: var(--font-heading);
+  font-size: clamp(19px, 1.65vw, 24px);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -.025em;
+}
+.photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid p{
+  max-width: 42ch;
+  margin: 0;
+  color: #65615b !important;
+  font-size: clamp(13px, 1.1vw, 15px);
+  font-weight: 400;
+  line-height: 1.75;
+}
+@media(max-width:767px){
+  .photo-led.promotion-home #ownership.owner-benefits.owner-editorial{padding:68px 0 76px}
+  .photo-led.promotion-home #ownership.owner-benefits.owner-editorial > .container{width:calc(100% - 40px)}
+  .photo-led.promotion-home #ownership.owner-benefits.owner-editorial .intro{margin-bottom:26px}
+  .photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-benefits-heading{align-items:start;flex-direction:column;gap:8px}
+  .photo-led.promotion-home #ownership.owner-benefits.owner-editorial .intro h2{font-size:30px!important}
+  .photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid{grid-template-columns:1fr;gap:32px}
+  .photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid figure{aspect-ratio:1.18;margin-bottom:13px}
+  .photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid h3{font-size:21px}
+  .photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid p{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .photo-led.promotion-home #ownership.owner-benefits.owner-editorial .owner-editorial-grid figure img{transition:none}
+}
+
+/* Concierge follows the owner's-day portrait cards while retaining its service disclaimer. */
+.photo-led.promotion-home #stay-services{padding:clamp(88px,10vw,144px) 0 clamp(80px,9vw,120px);background:var(--owner-paper,#faf9f6)!important;color:var(--owner-ink,#0e0f0f)}
+.photo-led.promotion-home #stay-services>.scenic-backdrop,.photo-led.promotion-home #stay-services>.scenic-note{display:none}
+.photo-led.promotion-home #stay-services>.container{max-width:1280px;padding-inline:clamp(20px,5vw,80px)}
+.photo-led.promotion-home #stay-services .intro{max-width:none;margin:0 0 clamp(34px,5vw,58px)}
+.photo-led.promotion-home #stay-services .intro .eyebrow{margin-bottom:12px;color:var(--owner-muted,#444748)!important;font-size:11px;letter-spacing:.2em}
+.photo-led.promotion-home #stay-services .intro h2{margin:0;color:var(--owner-ink,#0e0f0f)!important;font-size:clamp(38px,4.4vw,56px);font-weight:700;line-height:1.22;letter-spacing:-.055em}
+.photo-led.promotion-home #stay-services .intro>p:last-child{max-width:65ch;margin:18px 0 0;color:var(--owner-muted,#444748)!important;font-size:15px;line-height:1.9}
+.photo-led.promotion-home #stay-services .promotion-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.6vw,40px);margin:0}
+.photo-led.promotion-home #stay-services .promotion-cards>article{display:flex;min-width:0;padding:0;flex-direction:column;overflow:visible;border:0;border-radius:0;background:transparent;color:var(--owner-ink,#0e0f0f);box-shadow:none}
+.photo-led.promotion-home #stay-services .promotion-cards figure{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:1;margin:0 0 22px;overflow:hidden;background:#e6e1d9}
+.photo-led.promotion-home #stay-services .promotion-cards figure::after{display:none}
+.photo-led.promotion-home #stay-services .promotion-cards figure img{display:block;width:100%;height:100%;object-fit:cover;transition:none}
+.photo-led.promotion-home #stay-services .editorial-card-copy{min-height:0;padding:0;background:transparent;color:var(--owner-ink,#0e0f0f)}
+.photo-led.promotion-home #stay-services .editorial-card-copy .eyebrow{margin:0;color:var(--owner-muted,#444748);font-size:11px;letter-spacing:.22em}
+.photo-led.promotion-home #stay-services .editorial-card-copy h3{margin:12px 0 10px;color:var(--owner-ink,#0e0f0f);font-family:var(--font-display,Georgia,serif);font-size:clamp(26px,2.6vw,34px);font-weight:400;line-height:1.32;letter-spacing:-.035em}
+.photo-led.promotion-home #stay-services .editorial-card-copy p{margin:0;color:var(--owner-muted,#444748);font-size:14px;line-height:1.85}
+.photo-led.promotion-home #stay-services .promotion-service-note{margin:clamp(30px,4vw,52px) 0 0;padding-top:16px;border-top:1px solid var(--owner-line,#c4c7c7);color:var(--owner-muted,#444748);font-size:12px;line-height:1.8}
+@media(max-width:767px){
+ .photo-led.promotion-home #stay-services{padding:78px 0 72px}
+ .photo-led.promotion-home #stay-services>.container{padding-inline:20px}
+ .photo-led.promotion-home #stay-services .intro{margin-bottom:34px}
+ .photo-led.promotion-home #stay-services .intro h2{font-size:36px;line-height:1.28}
+ .photo-led.promotion-home #stay-services .intro>p:last-child{font-size:14px}
+ .photo-led.promotion-home #stay-services .promotion-cards{grid-template-columns:1fr;gap:34px}
+ .photo-led.promotion-home #stay-services .promotion-cards figure{aspect-ratio:1;margin-bottom:18px}
+ .photo-led.promotion-home #stay-services .editorial-card-copy h3{font-size:28px}
+}
+@media(prefers-reduced-motion:reduce){.photo-led.promotion-home #stay-services .promotion-cards figure img{transition:none}}
+
+/* Quiet, link-led homepage footer inspired by the supplied reference. */
+body.promotion-home.photo-led footer{padding:clamp(44px,6vw,84px) 0 28px;background:#f3f3f1;color:#4a4a48}
+body.promotion-home.photo-led footer>.container{width:auto;max-width:1800px;margin-inline:auto;padding-inline:clamp(24px,5vw,100px)}
+body.promotion-home.photo-led footer .footer-top{display:grid;grid-template-columns:minmax(240px,1.1fr) minmax(0,2fr);gap:clamp(40px,8vw,140px);align-items:start;padding-bottom:clamp(44px,6vw,80px);border-bottom:1px solid #d9d9d6}
+body.promotion-home.photo-led footer .footer-top>div:first-child{min-width:0}
+body.promotion-home.photo-led footer .footer-brand-art{width:clamp(190px,18vw,270px);height:auto;margin:0;background:transparent!important;background-image:none!important;border-radius:0;padding:0;mix-blend-mode:multiply}
+body.promotion-home.photo-led footer .footer-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,4vw,64px)}
+body.promotion-home.photo-led footer .footer-nav>div{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+body.promotion-home.photo-led footer .footer-nav h4{margin:0 0 4px;color:#292927;font-size:14px;font-weight:600}
+body.promotion-home.photo-led footer .footer-nav a{color:#666663;font-size:14px;line-height:1.6;text-decoration:none;transition:color .18s ease}
+body.promotion-home.photo-led footer .footer-nav a:hover,body.promotion-home.photo-led footer .footer-nav a:focus-visible{color:#171716;text-decoration:underline;text-underline-offset:4px}
+body.promotion-home.photo-led footer .footer-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;padding-top:22px}
+body.promotion-home.photo-led footer .footer-disclaimer{max-width:760px;margin:0;color:#777774;font-size:11px;line-height:1.75}
+body.promotion-home.photo-led footer .copyright{flex:none;margin:0;color:#777774;font-size:12px;text-align:right;white-space:nowrap}
+@media(max-width:850px){
+ body.promotion-home.photo-led footer .footer-top{grid-template-columns:1fr;gap:38px}
+ body.promotion-home.photo-led footer .footer-nav{max-width:760px}
+}
+@media(max-width:560px){
+ body.promotion-home.photo-led footer{padding:48px 0 24px}
+ body.promotion-home.photo-led footer .footer-top{gap:32px;padding-bottom:36px}
+ body.promotion-home.photo-led footer .footer-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}
+ body.promotion-home.photo-led footer .footer-nav a{font-size:13px}
+ body.promotion-home.photo-led footer .footer-bottom{align-items:flex-start;flex-direction:column;gap:12px}
+ body.promotion-home.photo-led footer .copyright{text-align:left}
+}
+@media(prefers-reduced-motion:reduce){body.promotion-home.photo-led footer .footer-nav a{transition:none}}

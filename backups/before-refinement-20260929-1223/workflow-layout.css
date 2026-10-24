@@ -1,0 +1,12 @@
+/* Isolate workspace layout from the public landing page's element rules. */
+.workflow-page section{padding:0;scroll-margin-top:20px}
+.workflow-page .wf-form{display:block}
+.workflow-page .wf-form-actions>.primary{width:auto;margin-top:0}
+.workflow-page .wf-header{inset:auto;transform:none;border-radius:0;max-width:none;width:100%;margin:0}
+.workflow-page .wf-selection-note{margin:16px 20px 0;padding:12px 14px;border-radius:10px;background:#fff0d7;color:#785529;font-size:12px;line-height:1.8}
+.workflow-page .wf-case-list{scrollbar-width:thin;scrollbar-color:#afc3ac #f3f6ef}
+.workflow-page .wf-case-list::-webkit-scrollbar{display:block;width:6px;height:6px}
+.workflow-page .wf-case-list::-webkit-scrollbar-thumb{background:#afc3ac;border-radius:6px}
+.workflow-page .wf-form-actions{scroll-margin-bottom:20px}
+.cf-shell button:focus-visible,.cf-review-dialog button:focus-visible{outline:3px solid #658c81;outline-offset:3px}
+@media(max-width:480px){.workflow-page .wf-form-actions>.primary{width:100%;flex-basis:100%}}

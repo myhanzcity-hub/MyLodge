@@ -1,0 +1,29 @@
+/* Loaded after the shared form styles on both public and operator pages. */
+.cf-example{display:inline-flex;align-items:center;gap:12px;font-size:13px;color:#19594d;border:1px solid #c9ddcd;border-radius:10px;padding:10px 12px;min-height:44px;margin-top:14px;background:#f1f7ef}
+.cf-example:hover{background:#e2f0df}.cf-fill-note{font-size:12px;color:#42624e;margin-top:10px;line-height:1.8}.cf-fill-note:empty{display:none}
+.cf-date-navigation{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:8px;margin-bottom:12px}
+.cf-date-navigation button{width:44px;height:44px;display:grid;place-items:center;border:1px solid #d3e1d3;background:white;border-radius:12px;font-size:24px;color:#215740;line-height:1}
+.cf-date-navigation button:disabled{opacity:.35;cursor:not-allowed}.cf-date-navigation p{text-align:center;font-size:13px;font-weight:600;color:#355a43;font-variant-numeric:tabular-nums}
+.cf-date-tools{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.cf-date-tools:has(button:not([hidden])){margin-top:8px}
+.cf-dates [aria-current=date]:not([aria-pressed=true]){border-color:#679a74;background:#f1f7ef}
+.cf-extras>summary>span:first-child{min-width:0}.cf-extras>summary small{overflow-wrap:anywhere;font-size:12px;line-height:1.8}.cf-extra-count{font-size:12px}
+.cf-extras>summary small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.cf-extras-body>.cf-schedule{padding-bottom:24px;border-bottom:1px solid #dce6da}
+.cf-clear{min-height:40px}.cf-review-values>div{grid-template-columns:95px minmax(0,1fr) 44px}.cf-review-values button{min-height:36px;font-size:12px}
+#consultation-form-root{scroll-margin-top:110px;outline-offset:8px}
+@media(max-width:600px){.cf-shell input[type=text],.cf-shell input[type=tel],.cf-shell textarea,.cf-calendar-row input{font-size:16px}.cf-choice span{font-size:13px;min-height:44px}.cf-extras>summary small{font-size:11px}.cf-review-values>div{grid-template-columns:65px minmax(0,1fr) 44px}.cf-extra-count{font-size:11px}.cf-date-navigation p{font-size:12px}}
+.cf-date-hint{font-size:12px;color:#526953;margin-top:8px;line-height:1.7}.cf-dates [aria-disabled=true]{opacity:.45;cursor:not-allowed}
+.cf-policy-note,.cf-bottom-note{font-size:12px;color:#4e6253;line-height:1.8}
+.cf-consent-copy{font-size:12px}.cf-complete h3{word-break:keep-all;text-wrap:balance;font-size:clamp(20px,5vw,24px)}
+.cf-dates{display:flex;gap:8px;overflow-x:auto;padding:3px 2px 9px;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#97b49e #eaf1e7}
+.cf-dates::-webkit-scrollbar{display:block;height:5px}.cf-dates::-webkit-scrollbar-thumb{background:#97b49e;border-radius:8px}
+.cf-dates button{flex:1 0 52px;min-width:52px;scroll-snap-align:start;min-height:88px;border-radius:12px}
+.cf-dates span,.cf-dates small{font-size:11px;color:#536b57}.cf-dates strong{font-size:20px}
+.cf-periods small,.cf-schedule-help{font-size:12px;color:#526953}
+.cf-review-dialog[open]{display:flex;flex-direction:column;overflow:hidden;max-height:calc(100dvh - 24px)}
+.cf-dialog-head,.cf-review-dialog>p,.cf-dialog-actions,.cf-review-feedback{flex-shrink:0}
+.cf-review-values{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#89a58d #edf2e9;margin:14px 0;padding-right:5px}
+.cf-review-values::-webkit-scrollbar{display:block;width:6px}.cf-review-values::-webkit-scrollbar-thumb{background:#89a58d;border-radius:9px}
+.cf-dialog-actions{border-top:1px solid #d5e2d2;padding-top:14px;background:#f9fbf6}
+.cf-review-feedback{max-height:22dvh;overflow:auto;font-size:12px;padding:10px;margin:8px 0;scrollbar-width:thin}
+@media(max-height:520px){.cf-review-dialog{padding:16px}.cf-dialog-head{margin-bottom:6px}.cf-dialog-head .eyebrow{display:none}.cf-dialog-head h2{font-size:18px}.cf-dialog-head h2 br{display:none}.cf-dialog-actions{display:flex;flex-wrap:nowrap;gap:8px}.cf-dialog-actions button{flex:1;padding:10px 8px!important;font-size:12px!important}.cf-review-values{margin:8px 0}.cf-review-values>div{padding:9px 8px}}

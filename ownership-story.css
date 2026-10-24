@@ -1,0 +1,68 @@
+/* Homepage only. Existing destination pages keep their own composition. */
+body.ownership-first{--ownership-navy:#081524;--ownership-ivory:#F5F1E8;--ownership-gold:#C7A878}
+.ownership-first main>section{scroll-margin-top:110px}
+.ownership-first #our-villa .invitation-grid>div>p.ownership-disclosure{font-size:12px!important;line-height:1.8!important;border:0!important;padding:0!important;margin:20px 0 0!important;color:#716E68!important}
+.ownership-first #our-villa .invitation-grid .text-link{display:inline-flex;min-height:44px;align-items:center}
+.ownership-first #shared-ownership{position:relative;padding:clamp(72px,9vw,136px) 0;background:var(--ownership-ivory);color:var(--ownership-navy)}
+.ownership-first #shared-ownership .intro{text-align:left;max-width:850px;margin-bottom:48px}
+.ownership-first #shared-ownership .intro h2{font-size:clamp(32px,4vw,56px);font-weight:400;line-height:1.3;letter-spacing:-.035em}
+.ownership-first #shared-ownership .intro>p{max-width:60ch}
+.ownership-first #shared-ownership .ownership-story{margin-top:40px}
+.ownership-first #shared-ownership .ownership-chapters>.text-link{display:inline-flex;align-items:center;min-height:48px;margin-top:24px}
+.ownership-first #ownership .owner-benefits-quote{max-width:40ch;font-size:13px!important;line-height:1.7!important}
+.ownership-first #ownership .editorial-card-copy a{display:inline-flex;align-items:center;min-height:44px;margin-top:14px;font-size:12px}
+.ownership-first #ownership .editorial-card-copy>p{max-width:35ch;line-height:1.8}
+.ownership-first #pricing,.ownership-first #progress,.ownership-first #participation{position:relative;background:var(--ownership-ivory);color:var(--ownership-navy);padding:clamp(64px,7vw,110px) 0}
+.ownership-first #pricing .intro,.ownership-first #progress .intro,.ownership-first #participation .intro{max-width:850px;text-align:left;margin-bottom:40px}
+.ownership-first :is(#pricing,#progress,#participation) h2{font-size:clamp(30px,3.8vw,54px);font-weight:400;line-height:1.35}
+.ownership-first :is(#pricing,#progress,#participation) p{line-height:1.85;max-width:75ch}
+.ownership-first #pricing .rights-table{width:100%;border-collapse:collapse;table-layout:fixed;background:transparent}
+.ownership-first #pricing .rights-table th,.ownership-first #pricing .rights-table td{padding:20px 18px;text-align:left;vertical-align:top;border-bottom:1px solid #d8d2c9;overflow-wrap:anywhere}
+.ownership-first #pricing .rights-table th:first-child{width:23%}
+.ownership-first #pricing .rights-table th:last-child{width:20%}
+body.ownership-first #pricing :is(.cost-scope,.rights-definition article,.pricing-note){background:transparent;border:1px solid #d8d2c9;border-radius:0;box-shadow:none;color:var(--ownership-navy)}
+body.ownership-first #pricing :is(.cost-scope,.rights-definition) :is(h3,p,.eyebrow,span){color:var(--ownership-navy)}
+body.ownership-first #pricing .cost-scope-grid>div{border-color:#d8d2c9;background:transparent;border-radius:0}
+body.ownership-first #pricing .rights-table thead{display:table-header-group}
+body.ownership-first #pricing .rights-table tbody{display:table-row-group}
+body.ownership-first.vacation-design #pricing .rights-table .rights-row{display:table-row;position:static;clip-path:none;white-space:normal;width:auto;height:auto;padding:0}
+body.ownership-first #pricing .rights-table thead th{background:var(--ownership-ivory);color:var(--ownership-navy)}
+.ownership-first #pricing .decision-guide{background:transparent;border-radius:0;border:1px solid #d8d2c9;box-shadow:none}
+body.ownership-first #pricing :is(.rights-description,.rights-state,.rights-heading p,.pricing-row .small){color:#555B61}
+.ownership-first .ownership-next-links{display:flex;flex-wrap:wrap;justify-content:center;gap:20px 40px;margin:28px 0}
+.ownership-first .ownership-next-links a{min-height:44px;display:inline-flex;align-items:center}
+.ownership-first .vacation-finale .ownership-next-links a{color:var(--ownership-ivory);border-bottom:1px solid var(--ownership-gold)}
+.ownership-first .vacation-finale small{display:block;max-width:70ch;margin:26px auto 0;font-size:12px;line-height:1.8}
+.ownership-first .vacation-finale p{max-width:60ch;margin:24px auto 0;line-height:1.8}
+.ownership-first a:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+body.ownership-first #home.lodge-hero h1{font-family:var(--font-heading);font-weight:400;line-height:1.15;letter-spacing:-.055em;font-size:clamp(60px,7.1vw,112px)}
+body.ownership-first.english-page #home.lodge-hero h1{font-family:var(--font-display);letter-spacing:-.03em;font-size:clamp(66px,7.4vw,118px);line-height:1.06}
+.ownership-first .lodge-heading{bottom:292px}
+.ownership-first .lodge-invitation{width:min(540px,88vw)}
+.ownership-first .lodge-window::after{background:linear-gradient(180deg,rgb(8 21 36 / .1) 15%,rgb(8 21 36 / .3) 45%,rgb(8 21 36 / .9) 100%)!important}
+.ownership-first .lodge-kicker{color:var(--ownership-gold)!important}
+@media(max-width:700px){
+ .ownership-first main>section{scroll-margin-top:90px}
+ .ownership-first .lodge-heading{bottom:310px;right:24px}
+ body.ownership-first #home.lodge-hero h1{font-size:clamp(48px,13vw,72px)}
+ body.ownership-first.english-page #home.lodge-hero h1{font-size:clamp(46px,12vw,68px)}
+ .ownership-first #home.lodge-hero .lodge-kicker{font-size:8px;letter-spacing:.12em;max-width:32ch;line-height:1.8}
+ .ownership-first #home.lodge-hero .lodge-description{font-size:12px;line-height:1.85;max-width:36ch}
+ .photo-led.promotion-home.ownership-first #ownership.owner-editorial .owner-editorial-grid{display:block}
+ .photo-led.promotion-home.ownership-first #ownership.owner-editorial .owner-editorial-grid>article{min-height:calc(100svh - 90px);padding:16px 0 44px;display:flex;flex-direction:column;justify-content:center;gap:18px;margin:0;max-width:none;width:100%}
+ .photo-led.promotion-home.ownership-first #ownership.owner-editorial .owner-editorial-grid figure{height:clamp(240px,47svh,460px);aspect-ratio:auto;margin:0;flex:none}
+ .photo-led.promotion-home.ownership-first #ownership.owner-editorial .editorial-card-copy{padding:0}
+ .photo-led.promotion-home.ownership-first #ownership.owner-editorial .owner-editorial-grid h3{font-size:clamp(24px,6.2vw,32px);line-height:1.4}
+ .photo-led.promotion-home.ownership-first #ownership.owner-editorial .owner-editorial-grid p{font-size:14px;max-width:34ch}
+ .ownership-first #pricing .rights-table th,.ownership-first #pricing .rights-table td{padding:14px 8px;font-size:12px;line-height:1.7}
+ .ownership-first #pricing .rights-table th:first-child{width:25%}
+ .ownership-first #pricing .rights-table th:last-child{width:24%}
+ .ownership-first #shared-ownership .intro{margin-bottom:24px}
+ .ownership-first .ownership-next-links{flex-direction:column;align-items:center;gap:12px}
+}
+@media(max-height:650px){
+ body.ownership-first #home.lodge-hero{min-height:650px;height:100svh;position:relative}
+ .ownership-first .lodge-heading{bottom:290px}
+ body.ownership-first #home.lodge-hero h1{font-size:clamp(45px,7vw,70px)}
+ body.ownership-first.english-page #home.lodge-hero h1{font-size:clamp(45px,7vw,70px)}
+}

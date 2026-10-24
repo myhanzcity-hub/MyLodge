@@ -1,0 +1,268 @@
+@import url("tokens.css");
+
+/* Scoped to MY LODGE / OUR STORY only. */
+#our-villa.scenic-deep{
+  --story-paper:oklch(97.8% .009 82);
+  --story-ink:oklch(20% .008 78);
+  --story-muted:oklch(43% .012 78);
+  --story-line:oklch(78% .018 78);
+  --story-surface:oklch(99.2% .004 82);
+  min-height:0;
+  padding-block:112px 96px;
+  background:var(--story-paper);
+  color:var(--story-ink);
+}
+
+#our-villa.scenic-deep .scenic-backdrop,
+#our-villa.scenic-deep .scenic-note{display:none}
+
+#our-villa.scenic-deep .invitation-grid{
+  display:grid;
+  grid-template-columns:minmax(0,5fr) minmax(0,7fr);
+  align-items:center;
+  gap:clamp(48px,6vw,88px);
+  max-width:1240px;
+  margin-inline:auto;
+}
+
+#our-villa.scenic-deep .invitation-grid>div{max-width:510px}
+
+#our-villa.scenic-deep .eyebrow{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:28px;
+  color:var(--story-muted);
+  font-family:var(--font-heading);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.22em;
+}
+
+#our-villa.scenic-deep .eyebrow::before{
+  content:"";
+  width:36px;
+  height:1px;
+  background:var(--story-ink);
+}
+
+#our-villa.scenic-deep .invitation-grid h2{
+  max-width:13ch;
+  color:var(--story-ink);
+  font-family:var(--font-display);
+  font-size:clamp(40px,4.2vw,58px);
+  font-weight:500;
+  line-height:1.12;
+  letter-spacing:-.035em;
+}
+
+#our-villa.scenic-deep .invitation-grid h2 em{color:inherit;font-style:normal}
+
+#our-villa.scenic-deep .invitation-grid>div>p:not(.access-label){
+  max-width:30ch;
+  margin:30px 0;
+  padding-top:20px;
+  border-top:1px solid color-mix(in oklch,var(--story-line) 72%,transparent);
+  color:var(--story-muted);
+  font-size:17px;
+  line-height:1.7;
+}
+
+#our-villa.scenic-deep .text-link{
+  display:inline-flex;
+  align-items:center;
+  min-height:40px;
+  color:var(--story-ink);
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.01em;
+}
+
+#our-villa.scenic-deep .promotion-intro-photo{
+  position:relative;
+  padding:9px;
+  overflow:hidden;
+  border:1px solid color-mix(in oklch,var(--story-line) 52%,transparent);
+  border-radius:8px;
+  background:color-mix(in oklch,var(--story-surface) 92%,transparent);
+  box-shadow:0 28px 64px -28px color-mix(in oklch,var(--story-ink) 22%,transparent);
+}
+
+#our-villa.scenic-deep .promotion-intro-photo::after{
+  content:"01 // MY LODGE";
+  position:absolute;
+  right:30px;
+  bottom:30px;
+  padding:8px 11px;
+  border:1px solid oklch(96% .006 82 / .36);
+  border-radius:3px;
+  background:oklch(20% .008 78 / .72);
+  color:oklch(96% .006 82);
+  font-family:var(--font-heading);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.14em;
+}
+
+#our-villa.scenic-deep .promotion-intro-photo img{
+  aspect-ratio:16 / 10;
+  border-radius:4px;
+  object-fit:cover;
+}
+
+@media (max-width:700px){
+  #our-villa.scenic-deep{padding-block:72px}
+  #our-villa.scenic-deep .invitation-grid{display:flex;flex-direction:column-reverse;gap:34px}
+  #our-villa.scenic-deep .eyebrow{margin-bottom:20px;font-size:10px}
+  #our-villa.scenic-deep .invitation-grid h2{font-size:clamp(36px,10vw,46px)}
+  #our-villa.scenic-deep .invitation-grid>div>p:not(.access-label){margin:24px 0;padding-top:16px;font-size:15px}
+  #our-villa.scenic-deep .promotion-intro-photo{padding:6px;border-radius:6px}
+  #our-villa.scenic-deep .promotion-intro-photo img{border-radius:3px}
+  #our-villa.scenic-deep .promotion-intro-photo::after{right:20px;bottom:20px;font-size:9px}
+}
+
+/* MyLodge guide: asymmetric, image-led editorial entry inspired by the supplied reference. */
+#our-villa.scenic-deep .lodge-guide.guide-editorial{
+  position:relative;
+  left:50%;
+  display:block;
+  box-sizing:border-box;
+  width:min(calc(100vw - 68px),1680px);
+  margin:0 0 clamp(76px,9vw,124px);
+  padding:0;
+  transform:translateX(-50%);
+  border:0;
+  border-radius:0;
+  background:transparent;
+  color:var(--story-ink);
+}
+#our-villa.scenic-deep .guide-editorial-heading{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:28px;
+  margin:0 0 clamp(24px,3vw,42px);
+}
+#our-villa.scenic-deep .guide-editorial-heading>div{max-width:720px}
+#our-villa.scenic-deep .guide-editorial .guide-kicker,
+#our-villa.scenic-deep .guide-story-label{
+  color:var(--story-muted);
+  font-family:var(--font-heading);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.2em;
+}
+#our-villa.scenic-deep .guide-editorial-heading h3{
+  margin:12px 0 8px;
+  color:var(--story-ink);
+  font-family:var(--font-display);
+  font-size:clamp(28px,3.3vw,44px);
+  font-weight:500;
+  line-height:1.24;
+  letter-spacing:-.04em;
+}
+#our-villa.scenic-deep .guide-editorial-heading p{
+  margin:0;
+  color:var(--story-muted);
+  font-size:15px;
+  line-height:1.75;
+}
+#our-villa.scenic-deep .guide-service-link{
+  display:inline-flex;
+  flex:none;
+  align-items:center;
+  gap:14px;
+  min-height:44px;
+  color:var(--story-ink);
+  font-size:13px;
+  text-decoration:none;
+}
+#our-villa.scenic-deep .guide-editorial-grid{
+  display:grid;
+  grid-template-columns:minmax(0,2.1fr) minmax(0,1fr);
+  gap:clamp(22px,2.8vw,42px);
+  align-items:start;
+}
+#our-villa.scenic-deep .guide-story-card{
+  display:block;
+  min-width:0;
+  color:var(--story-ink);
+  text-decoration:none;
+}
+#our-villa.scenic-deep .guide-story-card figure{
+  position:relative;
+  height:clamp(340px,39vw,560px);
+  margin:0 0 17px;
+  overflow:hidden;
+  background:#e8e3dc;
+}
+#our-villa.scenic-deep .guide-story-card img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 900ms cubic-bezier(.2,.7,.2,1);
+}
+#our-villa.scenic-deep .guide-place-card img{object-position:center 56%}
+#our-villa.scenic-deep .guide-life-card img{object-position:58% center}
+#our-villa.scenic-deep .guide-story-card figcaption{
+  position:absolute;
+  right:12px;
+  bottom:12px;
+  left:12px;
+  color:#fff;
+  font-size:10px;
+  line-height:1.5;
+  text-shadow:0 1px 8px rgb(0 0 0 / .75);
+}
+#our-villa.scenic-deep .guide-story-copy{padding:0 1px}
+#our-villa.scenic-deep .guide-story-label{font-size:9px;letter-spacing:.16em}
+#our-villa.scenic-deep .guide-story-copy h4{
+  margin:8px 0 7px;
+  color:var(--story-ink);
+  font-family:var(--font-display);
+  font-size:clamp(20px,2vw,27px);
+  font-weight:500;
+  line-height:1.4;
+  letter-spacing:-.025em;
+}
+#our-villa.scenic-deep .guide-story-copy p{
+  max-width:48ch;
+  margin:0;
+  color:var(--story-muted);
+  font-size:14px;
+  line-height:1.75;
+}
+#our-villa.scenic-deep .guide-story-action{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  margin-top:12px;
+  color:var(--story-ink);
+  font-size:12px;
+  font-weight:600;
+}
+#our-villa.scenic-deep .guide-story-action b{font-size:16px;font-weight:400;transition:transform 250ms ease}
+#our-villa.scenic-deep .guide-service-link:focus-visible,
+#our-villa.scenic-deep .guide-story-card:focus-visible{outline:3px solid var(--story-ink);outline-offset:5px}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  #our-villa.scenic-deep .guide-story-card:hover img{transform:scale(1.025)}
+  #our-villa.scenic-deep .guide-story-card:hover .guide-story-action b{transform:translateX(4px)}
+}
+@media(max-width:700px){
+  #our-villa.scenic-deep .lodge-guide.guide-editorial{
+    width:calc(100vw - 36px);
+    margin-bottom:72px;
+  }
+  #our-villa.scenic-deep .guide-editorial-heading{align-items:start;flex-direction:column;gap:14px;margin-bottom:24px}
+  #our-villa.scenic-deep .guide-editorial-heading h3{font-size:30px}
+  #our-villa.scenic-deep .guide-editorial-heading p{font-size:14px}
+  #our-villa.scenic-deep .guide-editorial-grid{grid-template-columns:1fr;gap:32px}
+  #our-villa.scenic-deep .guide-story-card figure{height:auto;aspect-ratio:1.35;margin-bottom:13px}
+  #our-villa.scenic-deep .guide-life-card figure{aspect-ratio:1.05}
+  #our-villa.scenic-deep .guide-story-copy h4{font-size:22px}
+}
+@media(prefers-reduced-motion:reduce){
+  #our-villa.scenic-deep .guide-story-card img,
+  #our-villa.scenic-deep .guide-story-action b{transition:none}
+}

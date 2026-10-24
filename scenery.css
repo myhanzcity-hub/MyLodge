@@ -1,0 +1,71 @@
+@import url("tokens.css");
+/* Full-width scenery carries the vacation atmosphere beyond the opening hero. */
+.vacation-design .scenic-section{position:relative;isolation:isolate;background:var(--ui-ivory);overflow:clip;padding-bottom:100px}
+.scenic-backdrop{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.scenic-camera{position:absolute;inset:-90px -4%;transform:translate3d(0,var(--scenic-y,0px),0) scale(var(--scenic-scale,1.08));transform-origin:60% 50%}
+.scenic-camera img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:65% 50%;filter:saturate(.85)}
+.scenic-visible .scenic-camera{will-change:transform}
+.scenic-shade,.scenic-light{position:absolute;inset:0;pointer-events:none}
+.scenic-shade{background:linear-gradient(90deg,rgb(var(--ui-ivory-rgb) / 0.949) 0%,rgb(var(--ui-ivory-rgb) / 0.863) 46%,rgb(var(--ui-ivory-rgb) / 0.431) 100%),linear-gradient(0deg,rgb(var(--ui-ivory-rgb) / 0.788),transparent 45%)}
+.scenic-light{background:linear-gradient(112deg,transparent 30%,rgb(var(--ui-ivory-rgb) / 0.11) 46%,transparent 63%);transform:translateX(-12%);animation:scenic-sunlight 22s ease-in-out infinite alternate;animation-play-state:paused;mix-blend-mode:screen}
+.scenic-visible .scenic-light{animation-play-state:running}
+@keyframes scenic-sunlight{to{transform:translateX(12%);opacity:.4}}
+.scenic-note{position:absolute;left:max(26px,calc((100% - 1120px)/2));right:max(26px,calc((100% - 1120px)/2));bottom:26px;display:flex;justify-content:space-between;align-items:center;gap:15px;color:var(--ui-gray);border-top:1px solid rgb(var(--ui-charcoal-rgb) / 0.239);padding-top:13px;font-size:9px;letter-spacing:.14em}
+.scenic-note small{font-size:10px;letter-spacing:0;line-height:1.7;text-align:right}
+.vacation-design .scenic-deep,.vacation-design .scenic-final{color:var(--ui-ivory);background:var(--ui-charcoal)}
+.scenic-deep .scenic-shade{background:linear-gradient(90deg,rgb(var(--ui-charcoal-rgb) / 0.91),rgb(var(--ui-charcoal-rgb) / 0.722) 48%,rgb(var(--ui-charcoal-rgb) / 0.408)),linear-gradient(0deg,rgb(var(--ui-charcoal-rgb) / 0.867),transparent 45%)}
+.scenic-final .scenic-shade{background:linear-gradient(90deg,rgb(var(--ui-charcoal-rgb) / 0.902),rgb(var(--ui-charcoal-rgb) / 0.62) 53%,rgb(var(--ui-charcoal-rgb) / 0.22)),linear-gradient(0deg,rgb(var(--ui-charcoal-rgb) / 0.929),transparent 60%)}
+.scenic-deep .scenic-note,.scenic-final .scenic-note{color:var(--ui-ivory);border-color:rgb(var(--ui-ivory-rgb) / 0.22)}
+.vacation-design .scenic-deep :is(.intro h2,.intro>p,.rights-heading h3,.rights-heading p){color:var(--ui-ivory)}
+.vacation-design .scenic-deep .intro>p{color:var(--ui-ivory)}
+.vacation-design #our-villa.scenic-deep{padding-top:120px;padding-bottom:100px;min-height:620px}
+#our-villa.scenic-deep .invitation-grid{gap:70px}
+#our-villa.scenic-deep :is(.eyebrow,.access-label,.invitation-grid>div>p,.small,.price-tile p,.price-tile small,.invitation-footnote){color:var(--ui-ivory)}
+#our-villa.scenic-deep em{color:var(--ui-ivory)}
+#our-villa.scenic-deep .text-link{color:var(--ui-ivory)}
+.vacation-design #our-villa.scenic-deep .price-tile strong{color:var(--ui-ivory)!important}
+#our-villa.scenic-deep .access-facts{border-color:rgb(var(--ui-ivory-rgb) / 0.314);background:rgb(var(--ui-charcoal-rgb) / 0.384);border-radius:16px;padding:28px 32px;backdrop-filter:blur(8px)}
+#our-villa.scenic-deep .invitation-footnote{border-color:rgb(var(--ui-ivory-rgb) / 0.314)}
+.vacation-design #ownership.scenic-reading .scenic-shade{background:linear-gradient(90deg,rgb(var(--ui-ivory-rgb) / 0.851),rgb(var(--ui-ivory-rgb) / 0.729)),linear-gradient(0deg,rgb(var(--ui-ivory-rgb) / 0.871),transparent 50%)}
+#ownership.scenic-reading .ownership-chapters{background:rgb(var(--ui-ivory-rgb) / 0.937);border-radius:20px;padding:0 25px;border:1px solid var(--ui-ivory);box-shadow:0 15px 45px rgb(var(--ui-charcoal-rgb) / 0.063)}
+#ownership.scenic-reading .ownership-visual{background:rgb(var(--ui-ivory-rgb) / 0.929);box-shadow:0 15px 45px rgb(var(--ui-charcoal-rgb) / 0.11)}
+#ownership.scenic-reading .decision-guide{background:rgb(var(--ui-ivory-rgb) / 0.929)}
+.vacation-design #pricing.scenic-deep .pricing-table{background:rgb(var(--ui-ivory-rgb) / 0.961);border-radius:18px;padding:10px 30px;color:var(--ui-charcoal);box-shadow:0 24px 70px rgb(var(--ui-charcoal-rgb) / 0.22)}
+#pricing.scenic-deep .pricing-note{background:rgb(var(--ui-charcoal-rgb) / 0.878);padding:22px 28px;border-radius:12px;margin-top:20px;color:var(--ui-ivory);border:1px solid rgb(var(--ui-ivory-rgb) / 0.251)}
+#pricing.scenic-deep .pricing-note .small{color:var(--ui-taupe)}
+#pricing.scenic-deep .rights-heading{margin-top:50px}
+#pricing.scenic-deep .rights-table{background:rgb(var(--ui-ivory-rgb) / 0.961);color:var(--ui-charcoal);border-radius:14px;overflow:hidden}
+#pricing.scenic-deep .pricing-cta .primary{background:var(--ui-ivory);color:var(--ui-charcoal)}
+.vacation-design #brand-paths.scenic-deep{padding-top:100px}
+#brand-paths.scenic-deep>.container>.eyebrow{color:var(--ui-ivory)}
+#brand-paths.scenic-deep .path-card{background:rgb(var(--ui-ivory-rgb) / 0.929);border-color:rgb(var(--ui-ivory-rgb) / 0.4);color:var(--ui-charcoal);box-shadow:0 20px 50px rgb(var(--ui-charcoal-rgb) / 0.149)}
+#brand-paths.scenic-deep .valley-path{background:rgb(var(--ui-charcoal-rgb) / 0.863);color:var(--ui-ivory);border-color:rgb(var(--ui-ivory-rgb) / 0.4)}
+#brand-paths.scenic-deep .valley-path :is(p,span,small,b){color:var(--ui-ivory)}
+.vacation-design #stay-services.scenic-deep .service-overview-card{background:rgb(var(--ui-ivory-rgb) / 0.949);color:var(--ui-charcoal);box-shadow:0 16px 55px rgb(var(--ui-charcoal-rgb) / 0.125);border:1px solid var(--ui-ivory)}
+#stay-services.scenic-deep .service-overview-card :is(h3,p,.service-features,.small){color:var(--ui-gray)}
+#stay-services.scenic-deep .service-overview-card .preparing{color:var(--ui-gray);background:var(--ui-ivory);border-color:var(--ui-taupe)}
+#stay-services.scenic-deep .service-overview-card .number{color:var(--ui-gray)}
+#stay-services.scenic-deep .service-expand summary{color:var(--ui-gray)}
+#stay-services.scenic-deep .service-category-nav a{background:rgb(var(--ui-ivory-rgb) / 0.922);color:var(--ui-charcoal);border-color:var(--ui-ivory)}
+.vacation-design #progress.scenic-reading .scenic-shade{background:linear-gradient(90deg,rgb(var(--ui-ivory-rgb) / 0.89),rgb(var(--ui-ivory-rgb) / 0.769) 60%,rgb(var(--ui-ivory-rgb) / 0.302))}
+.vacation-design #progress.scenic-reading .progress-card{background:rgb(var(--ui-ivory-rgb) / 0.941);border:1px solid var(--ui-ivory);border-radius:18px;padding:32px;max-width:780px;box-shadow:0 20px 55px rgb(var(--ui-charcoal-rgb) / 0.071)}
+.vacation-design .vacation-finale.scenic-final{text-align:left;min-height:650px;padding-top:125px;padding-bottom:110px}
+.vacation-finale.scenic-final .container>div{justify-content:flex-start}
+.vacation-finale.scenic-final em{color:var(--ui-ivory)}.vacation-finale.scenic-final .outline{background:rgb(var(--ui-charcoal-rgb) / 0.502);color:var(--ui-ivory)}
+.scenic-soft .space-panel,.scenic-soft .space-copy{background:rgb(var(--ui-ivory-rgb) / 0.929)}
+.scenic-soft .vacation-intro>p:last-child{color:var(--ui-gray)}
+@media(max-width:1023px){.scenic-note{left:40px;right:40px}.vacation-design #our-villa.scenic-deep .invitation-grid{gap:30px}.vacation-design #our-villa.scenic-deep .access-facts{padding:24px}}
+@media(max-width:700px){
+ .vacation-design .scenic-section{padding-bottom:95px}.scenic-camera{inset:-45px -6%}.scenic-camera img{object-position:68% 50%}
+ .scenic-soft .scenic-shade{background:linear-gradient(90deg,rgb(var(--ui-ivory-rgb) / 0.902),rgb(var(--ui-ivory-rgb) / 0.745))}
+ .scenic-note{left:20px;right:20px;bottom:22px;align-items:flex-start;flex-direction:column;gap:7px;font-size:8px;padding-top:11px}.scenic-note small{text-align:left;font-size:9px}
+ .vacation-design #our-villa.scenic-deep{padding-top:70px;min-height:0}.vacation-design #our-villa.scenic-deep .access-facts{padding:24px;border-left:1px solid rgb(var(--ui-ivory-rgb) / 0.314)}
+ #ownership.scenic-reading .ownership-chapters{padding:0 18px;border-radius:14px}
+ .vacation-design #pricing.scenic-deep .pricing-table{padding:5px 18px}#pricing.scenic-deep .pricing-note{padding:20px}
+ .vacation-design #brand-paths.scenic-deep{padding-top:70px}
+ .vacation-design #progress.scenic-reading .progress-card{padding:23px}
+ .vacation-design .vacation-finale.scenic-final{min-height:610px;padding-top:90px;padding-bottom:140px}
+ .scenic-light{display:none}
+}
+@media(prefers-reduced-motion:reduce){.scenic-camera{transform:none!important;will-change:auto!important}.scenic-light{animation:none;transform:none}}
+@media print{.scenic-backdrop,.scenic-note{display:none}.vacation-design .scenic-section{background:var(--ui-white)!important;color:var(--ui-charcoal)!important;padding-bottom:30px}}
