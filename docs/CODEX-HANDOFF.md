@@ -1,3 +1,8 @@
+## 2026-10-24 Restore visible primary desktop navigation
+
+- User requested the visible top Home/Korea/Abroad/Owner navigation from their reference. The prior 1024px breakpoint collapsed this into MENU at 943px. Updated shared park theme to retain primary navigation at 800px and wider, with compact 800-1100px sizing; smaller phones retain the existing menu.
+- Chapter navigation and removed mobile destination dock are unchanged. Applies consistently to domestic, Chiang Mai and owner pages.
+
 ## 2026-10-24 Domestic chapter layout refinement
 
 - Preserved first-screen hero and existing copy/images. Chapter 2 now begins with overview heading/cards, followed by park introductions and a compact expandable image/planning notice. Duplicate in-page directory is visually removed in deck mode; bottom contents and header navigation remain.

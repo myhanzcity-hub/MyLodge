@@ -48,3 +48,15 @@ a,button{touch-action:manipulation}.scene-frame img,.local-photo img{transition:
 .requirements-table thead th{color:var(--text)}
 .footer-content .guide-links a{background:transparent;color:#e0e3d8;border-color:#505748}
 .footer-content .guide-links a:hover{background:var(--accent);color:#111213;border-color:var(--accent)}
+/* Keep the primary navigation visible on desktop and tablet-sized windows. */
+@media(min-width:800px){
+ .header-inner>.park-navigation,.english-page .header-inner>.park-navigation{display:flex}
+ .menu-button,.english-page .menu-button{display:none}
+ .language-slot,.english-page .language-slot{margin-left:0}
+}
+@media(min-width:800px) and (max-width:1100px){
+ .header-inner{padding-inline:24px;gap:18px}
+ .header-inner>.park-navigation,.english-page .header-inner>.park-navigation{gap:18px;font-size:11px}
+ .header-inner .brand-name{font-size:25px}
+ .header-inner .brand-tagline{font-size:6px;letter-spacing:1.5px}
+}
