@@ -154,6 +154,11 @@ export function buildLuxuryScene(T, hooks) {
   const coinAlpha=smooth(.78,.97,p);for(const m of coinMats){m.transparent=true;m.opacity=coinAlpha;m.depthWrite=coinAlpha>.95}labelMaterial.opacity=smooth(.88,.99,p);
   roomLight.intensity=8*scale*scale*(1-smooth(.13,.43,p));roomLight.distance=5*scale;poolLight.intensity=.9*scale*scale*(1-smooth(.13,.43,p));poolLight.distance=3.7*scale;for(const light of practicals){light.intensity=4*scale*scale*(1-smooth(.13,.43,p));light.distance=4*scale;}key.castShadow=p<.36;
   if(p<.44){world.updateMatrixWorld(true);const projectedBounds=[];for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z]){const v=new T.Vector3(x,y,z).applyMatrix4(world.matrixWorld).project(camera);projectedBounds.push([(v.x+1)*width/2,(1-v.y)*height/2])}document.querySelector('#entry-intro').dataset.modelBounds=JSON.stringify({left:Math.min(...projectedBounds.map(v=>v[0])),right:Math.max(...projectedBounds.map(v=>v[0])),top:Math.min(...projectedBounds.map(v=>v[1])),bottom:Math.max(...projectedBounds.map(v=>v[1]))})}
+  // Position the touch hint beside the actual projected object, never the viewport corner.
+  const touch=document.querySelector('#intro-enter');let hintX,hintY;
+  if(p>.78){world.updateMatrixWorld(true);const center=world.position.clone().project(camera),edge=rightAxis.clone().multiplyScalar(2.13*scale).add(world.position).project(camera);const radius=Math.abs(edge.x-center.x)*width/2;hintX=(center.x+1)*width/2+radius*.70;hintY=(1-center.y)*height/2-radius*.72}
+  else{const b=JSON.parse(document.querySelector('#entry-intro').dataset.modelBounds||'null');hintX=b?b.right-35:width*.74;hintY=b?b.top+16:height*.48}
+  touch.style.left=Math.max(8,Math.min(width-76,hintX))+'px';touch.style.top=Math.max(82,Math.min(height-156,hintY))+'px';
   finalMat.uniforms.uBloom.value=mix(.16,.28,Math.sin(p*Math.PI));post();lastTarget=p;
  }
  resize();return {resize,draw,pointerMoving:()=>Math.abs(pointer.x-pointer.currentX)+Math.abs(pointer.y-pointer.currentY)>.0005,stats:()=>({particles:count,meshes:surfaces.length,drawCalls:renderer.info.render.calls})};
