@@ -1,3 +1,10 @@
+## 2026-10-24 Correct deployment target: IMTGroup my-lodge-business
+
+- Found the requested project in Chrome profile donationschool.com, signed in as imt-group-account. The City profile showed 404. Always use the matching profile for this project.
+- Target Vercel project is https://vercel.com/imtg-roup/my-lodge-business, production domain my-lodge-business.vercel.app, connected repository IMT-Group-Account/MyLodge_Business, production branch main.
+- Corrected origin to that repository; retained former myhanzcity-hub repository as previous-origin. Scoped Git credentials to the already authenticated IMT-Group-Account via gh and repository author to its verified noreply identity. VS Code push/sync now uses the intended origin.
+- Merged original origin/main README-only changes without discarding content or rewriting history. The existing local product changes, including 13 chapters and preserved first-page design, are included. Verify target deployment and production page after push.
+
 ## 2026-10-24 Repository-specific Git identity and deployment diagnosis
 
 - Browser confirms the signed-in user owns myhanzcity-hub/MyLodegePlatform and Vercel myhanzcity-hub/my-lodege-platform. Requested imtg-roup/my-lodge-business remains inaccessible in this session; it is not the currently connected project.
