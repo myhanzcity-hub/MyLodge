@@ -1,3 +1,7 @@
+## 2026-10-24 Touch hint proximity refinement
+
+- Moved villa hint inward using 38% of projected model width, matching user marked reference. Coin hint moved inward and slightly upward. Check mobile bubble/finger bounds at both idle and ready stages.
+
 ## 2026-10-24 Object-attached Touch hint
 
 - Removed viewport-corner button chrome; finger and Touch! bubble now follow the projected villa/coin upper-right edge. Hidden during transformation. Coin and accessible hint both enter the unchanged homepage.
