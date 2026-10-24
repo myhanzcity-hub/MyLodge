@@ -6,7 +6,7 @@
  const domestic=document.body.classList.contains('side-domestic');
  const chapters=(domestic?[
   ['국내 파크 소개','Parks in Korea','.side-hero'],
-  ['국내 파크 한눈에 보기','Parks at a glance','.page-directory','#visual-first','#side-parks'],
+  ['국내 파크 한눈에 보기','Parks at a glance','#visual-first','#side-parks','.page-directory'],
   ['주문진 파크','Jumunjin Park','#project-jumunjin'],
   ['양양 파크','Yangyang Park','#project-yangyang'],
   ['별장 공간','Villa spaces','#villa-types'],
@@ -14,7 +14,7 @@
   ['풀장과 프로그램','Pool & programmes','#pool-programme'],
   ['공용 시설','Shared facilities','#domestic-facilities'],
   ['생활 서비스','Everyday services','#park-services'],
-  ['참여 방식','Participation guide','.planning-jump','#park-product-guide'],
+  ['참여 방식','Participation guide','#park-product-guide','.planning-jump'],
   ['파크 구성 안내','Park sections','#park-sections'],
   ['금액 미리보기','Amount preview','#park-share-preview','#multiple-share-guide'],
   ['오너 이용 안내','Owner guide','#park-owner-guide']
@@ -34,6 +34,22 @@
   ['글로벌 비즈니스 커뮤니티','Global business community','#chiangmai-community']
  ]).map(([ko,english,...selectors])=>({title:en?english:ko,nodes:selectors.map(s=>main.querySelector(s))}));
  if(chapters.some(c=>c.nodes.some(n=>!n)))return;
+ // Each chapter follows its reading order, rather than the former long-page order.
+ if(domestic){
+  chapters.forEach(chapter=>chapter.nodes.forEach(node=>main.append(node)));
+  const related=main.querySelector('#park-product-guide .guide-links');
+  if(related){
+   main.querySelectorAll('.planning-jump a').forEach(link=>{
+    if(![...related.querySelectorAll('a')].some(existing=>existing.hash===link.hash))related.append(link);
+   });
+  }
+  const notice=main.querySelector('.park-concept-notice');
+  if(notice){
+   const details=document.createElement('details');details.className='deck-planning-notice';
+   const summary=document.createElement('summary');summary.textContent=en?'Images & planning information':'이미지·계획 안내';
+   notice.before(details);details.append(summary,notice);
+  }
+ }
  const nav=document.createElement('nav');nav.className='chiangmai-deck-nav';nav.setAttribute('aria-label',en?'Chapter navigation':domestic?'국내 파크 장 이동':'치앙마이 장 이동');
  nav.innerHTML=`<button type="button" class="deck-prev" aria-label="${en?'Previous chapter':'이전 장'}">← <span class="deck-arrow-label">${en?'Previous':'이전'}</span></button><p class="chiangmai-deck-position" role="status" aria-live="polite" aria-atomic="true"></p><button type="button" class="deck-menu" aria-expanded="false" aria-controls="chiangmai-deck-toc">${en?'Contents':'목차'} ☰</button><button type="button" class="deck-next" aria-label="${en?'Next chapter':'다음 장'}"><span class="deck-arrow-label">${en?'Next':'다음'}</span> →</button>`;
  const toc=document.createElement('nav');toc.id='chiangmai-deck-toc';toc.className='chiangmai-deck-toc';toc.hidden=true;toc.setAttribute('aria-label',en?'Thirteen chapters':'13장 전체 목차');

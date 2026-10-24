@@ -1,3 +1,10 @@
+## 2026-10-24 Domestic chapter layout refinement
+
+- Preserved first-screen hero and existing copy/images. Chapter 2 now begins with overview heading/cards, followed by park introductions and a compact expandable image/planning notice. Duplicate in-page directory is visually removed in deck mode; bottom contents and header navigation remain.
+- Chapter 10 now begins with its heading and two balanced park cards. Related links are consolidated after the content, with duplicate destinations removed. Former top jump strip is hidden after its unique links are moved into the related links.
+- Scoped domestic chapter spacing, card padding, heading rhythm and mobile single-column reading; Chiang Mai styling unchanged.
+- Verified 1440x900 chapter 10 screenshot and 390x844 chapters 2/10 screenshots, title-first order, no horizontal overflow and five unique related destinations. First-screen HTML unchanged. Physical-device swipe not tested. Target remains imtg-roup/my-lodge-business.
+
 ## 2026-10-24 Domestic thirteen-chapter deck and mobile dock removal
 
 - Reused the Chiang Mai deck for domestic-villas.html with thirteen chapters. Original HTML content, first-screen hero, images, copy and calculator preserved; only opt-in and asset references added. Directory/overview/park selector share chapter 2; amount preview/multiple shares share chapter 12.
