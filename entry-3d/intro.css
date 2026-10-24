@@ -37,3 +37,15 @@ html.intro-pending {background:#090b0e;scroll-behavior:auto}
 
 .intro-copy h1{word-break:keep-all;overflow-wrap:normal}
 @media(max-width:360px){.intro-copy h1{font-size:30px}}
+
+/* Tap-only entry: one viewport, no scrolling or scroll controls. */
+html.intro-pending,html.intro-pending body{height:100%;overflow:hidden;overscroll-behavior:none}
+#entry-intro,.intro-stage{height:100svh;min-height:0}
+.intro-stage{position:relative}#intro-canvas{touch-action:manipulation;cursor:pointer}
+#intro-enter{left:auto;top:24px;right:4vw;transform:none;width:60px;height:60px;border:1px solid #bca374;border-radius:50%;background:#11161ce0;opacity:1;pointer-events:auto;display:grid;place-items:center;color:#e3cb96}
+#intro-enter svg{width:34px;height:34px}#intro-enter:disabled{opacity:.35;cursor:wait}
+.intro-skip{position:fixed;bottom:25px;left:4vw;z-index:5;font-size:10px!important}
+.intro-bottom{display:block;left:auto;right:4vw;bottom:40px;font-size:12px;color:#d4bf97}
+.intro-note{bottom:76px}.intro-top{pointer-events:none}.intro-brand{pointer-events:auto}
+@media(max-width:760px){#intro-enter{top:18px;right:22px;width:52px;height:52px}.intro-skip{left:22px;bottom:24px}.intro-bottom{right:22px;bottom:40px;font-size:10px}.intro-note{bottom:80px}.intro-stage{min-height:0}}
+@media(max-height:500px){.intro-copy{top:23%;width:42%}.intro-copy h1{font-size:26px}.intro-copy .intro-description{font-size:11px}.intro-note{bottom:65px}}

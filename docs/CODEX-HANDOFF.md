@@ -1,3 +1,8 @@
+## 2026-10-24 Tap-only intro update
+
+- Replaced scrolling with villa tap → automatic particle/coin animation. A second coin or upper-right finger icon tap enters the preserved homepage.
+- Removed ENTER label and scroll controls; one viewport, no audio; reduced motion and WebGL fallback supported.
+
 ## 2026-10-24 Replace entry intro only
 
 - User requested their villa/pool → particles → coin 3D intro before Hojiakbar homepage.
