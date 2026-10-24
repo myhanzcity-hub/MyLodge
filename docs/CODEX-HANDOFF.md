@@ -1,3 +1,15 @@
+## 2026-10-24 Separate community ending as chapter 13
+
+- User requested the pictured existing global business community ending as a separate page. Deck now has 13 chapters: chapter 12 owner guide, chapter 13 unchanged community ending, image, copy and link. Original page HTML/CSS unchanged in this update.
+- Navigation count, contents and last-page boundary updated. Verified deck syntax, public build and browser chapter 12/13 separation. No commit, push or deployment.
+
+## 2026-10-24 Chiang Mai twelve-chapter navigation
+
+- Added a scoped 12-chapter deck to parks/business-valley.html. Original HTML content, hero, copy and images are preserved; only stylesheet/script references and an opt-in body attribute were added.
+- Original sections are reused, with directory/overview together on chapter 2 and owner/community together on chapter 12. Fixed previous/next, chapter count, contents, keyboard arrows and touch swipe; native vertical reading remains.
+- Existing anchor links and URL hashes open the appropriate chapter; Korean/English labels and reduced-motion supported. Chiang Mai bypasses the former mobile section reordering/dock to prevent navigation collisions; other park pages unchanged.
+- Verified original HTML preservation, deck syntax, npm run check, workflow 9/9, public build (430 files), live browser next through chapter 12 and contents return to chapter 1. Physical touch-device swipe not verified. No commit, push or deployment.
+
 ## 2026-10-24 Touch hint proximity refinement
 
 - Moved villa hint inward using 38% of projected model width, matching user marked reference. Coin hint moved inward and slightly upward. Check mobile bubble/finger bounds at both idle and ready stages.

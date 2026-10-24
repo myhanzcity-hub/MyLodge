@@ -1,6 +1,6 @@
 // Rearrange the reading order on phones and restore the original desktop order.
 (()=>{
- const main=document.querySelector('main');if(!main)return;
+ const main=document.querySelector('main');if(!main||document.body.hasAttribute('data-chiangmai-deck'))return;
  const english=document.documentElement.lang==='en',media=matchMedia('(max-width:600px)');
  const original=[...main.children],directory=main.querySelector(':scope > .page-directory');
  const orders={

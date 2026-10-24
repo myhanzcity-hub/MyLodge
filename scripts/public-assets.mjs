@@ -66,3 +66,5 @@ for (const file of JSON.parse(readFileSync(new URL('./sidepage-public-files.json
 
 // Standalone procedural intro; homepage runtime stays independent.
 publicAssets.push('entry-3d/intro.css','entry-3d/intro.js','entry-3d/intro-scene.js','entry-3d/villa-reference-model.js','entry-3d/vendor/three.module.js','entry-3d/vendor/three.core.js','entry-3d/vendor/THREE-LICENSE.txt');
+
+publicAssets.push('parks/chiangmai-deck.css','parks/chiangmai-deck.js');
