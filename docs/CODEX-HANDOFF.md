@@ -1,3 +1,10 @@
+## 2026-10-24 Domestic thirteen-chapter deck and mobile dock removal
+
+- Reused the Chiang Mai deck for domestic-villas.html with thirteen chapters. Original HTML content, first-screen hero, images, copy and calculator preserved; only opt-in and asset references added. Directory/overview/park selector share chapter 2; amount preview/multiple shares share chapter 12.
+- Removed the mobile fixed Korea/Abroad/Owner guide dock from the shared mobile layout, including owner pages; removed its reserved bottom padding. Existing header menus remain.
+- Verified original domestic HTML preservation; all 13 next transitions, contents, Korean/English and existing calculator display; 390x844 no horizontal overflow and no dock; owners bottom padding 0 and no dock; Chiang Mai chapter 13 unchanged. Syntax/check, workflow 9/9 and public build passed. Physical-device swipe not tested.
+- Deployment target remains IMTGroup/my-lodge-business through origin IMT-Group-Account/MyLodge_Business main. Previous deployment 63008ad was Ready and target production JS/CSS/HTML matched local with line endings normalized.
+
 ## 2026-10-24 Correct deployment target: IMTGroup my-lodge-business
 
 - Found the requested project in Chrome profile donationschool.com, signed in as imt-group-account. The City profile showed 404. Always use the matching profile for this project.

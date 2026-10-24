@@ -1,5 +1,5 @@
 @media(max-width:600px){
- body.phone-layout{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+ body.phone-layout{padding-bottom:0}
  .phone-layout main>.story-section{padding-block:44px}.phone-layout .story-heading{margin-bottom:26px}.phone-layout .story-heading h2{font-size:29px;line-height:1.45;letter-spacing:-1px}
  .phone-layout .story-heading .eyebrow{margin-bottom:14px}.phone-layout .story-lead{line-height:1.85}
  .phone-layout main>.guide-hero{padding:20px 0 36px}.phone-layout .guide-hero>.container.guide-pair{display:flex;flex-direction:column;gap:22px;margin:0 auto}
