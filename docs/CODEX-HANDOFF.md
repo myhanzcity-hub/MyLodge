@@ -1,3 +1,9 @@
+## 2026-10-24 Repository-specific Git identity and deployment diagnosis
+
+- Browser confirms the signed-in user owns myhanzcity-hub/MyLodegePlatform and Vercel myhanzcity-hub/my-lodege-platform. Requested imtg-roup/my-lodge-business remains inaccessible in this session; it is not the currently connected project.
+- Latest Git deployment was blocked because PC-wide Git author kenitoa is not the Hobby project owner. Set this repository only to the signed-in owner myhanzcity-hub, using verified public GitHub ID 346131387 and its noreply email. Global configuration and historical commits are unchanged.
+- main push already triggers Production deployments on my-lodege-platform. Verify the new deployment status and live 13-chapter page before claiming release completion.
+
 ## 2026-10-24 Requested Vercel deployment target
 
 - User explicitly requests future commit-and-push / sync to deploy to https://vercel.com/imtg-roup/my-lodge-business. Local main tracks origin/main at myhanzcity-hub/MyLodegePlatform. Existing VS Code git.postCommitCommand is push; main deployment is now explicitly enabled in vercel.json; handoff branch remains disabled.
