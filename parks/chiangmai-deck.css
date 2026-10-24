@@ -51,3 +51,5 @@ body[data-chiangmai-deck] main>[hidden],body[data-chiangmai-deck]>footer[hidden]
  .side-domestic[data-chiangmai-deck] .park-destination-links{width:auto}
 }
 .side-domestic[data-chiangmai-deck] .planning-jump{display:none!important}
+/* Keep the sideways entrance within the page without changing vertical scrolling. */
+body[data-chiangmai-deck] main{overflow-x:clip}
