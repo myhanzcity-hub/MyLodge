@@ -2,7 +2,7 @@
 
 - Browser confirms the signed-in user owns myhanzcity-hub/MyLodegePlatform and Vercel myhanzcity-hub/my-lodege-platform. Requested imtg-roup/my-lodge-business remains inaccessible in this session; it is not the currently connected project.
 - Latest Git deployment was blocked because PC-wide Git author kenitoa is not the Hobby project owner. Set this repository only to the signed-in owner myhanzcity-hub, using verified public GitHub ID 346131387 and its noreply email. Global configuration and historical commits are unchanged.
-- main push already triggers Production deployments on my-lodege-platform. Verify the new deployment status and live 13-chapter page before claiming release completion.
+- main push triggered Production deployment 9Uop7NiyB9KBnQcn2uC7mruiAu2c from c279dff; browser confirmed Ready. Live my-lodege-platform.vercel.app renders chapter 13/13. Deployed deck JS/CSS and HTML match local content after line-ending normalization; root, index, domestic and owner routes return 200. Requested imtg-roup project remains unverified.
 
 ## 2026-10-24 Requested Vercel deployment target
 
