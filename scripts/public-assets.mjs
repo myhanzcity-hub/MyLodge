@@ -1,5 +1,5 @@
 // The only files included in the public export.
-export const publicAssets = ['index.html', 'styles.css', 'app.js', 'tokens.css', 'luxury-system.css', 'navbar-refinement.css', 'navbar-premium.css', 'our-story-refinement.css', 'owner-cards-refinement.css'];
+export const publicAssets = ['index.html', 'styles.css', 'app.js', 'hero-content.js', 'homepage.js', 'ownership-pricing.css', 'tokens.css', 'luxury-system.css', 'navbar-refinement.css', 'navbar-premium.css', 'our-story-refinement.css', 'owner-cards-refinement.css'];
 publicAssets.push('intro.html','arrival-intro.css','arrival-intro.js');
 publicAssets.push('mobile-layout.css','mobile-layout.js');
 publicAssets.push('view-mode.css','view-mode.js','view.html');
@@ -59,3 +59,5 @@ publicAssets.push('hero-editorial.css', 'hero-editorial.js', 'gsap.min.js', 'Scr
 publicAssets.push('vision-square-reveal.js');
 publicAssets.push('ownership-story.css');
 publicAssets.push('assets/video/Beach2.mp4');
+// Publish the existing interactive ownership-to-villa study linked from Ownership & Pricing.
+publicAssets.push('experiments/ownership-villa-diagram/index.html');

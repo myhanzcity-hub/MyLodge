@@ -1,0 +1,543 @@
+{
+  "errors": [],
+  "reports": [
+    {
+      "name": "ko-1440x900",
+      "topSections": [
+        "home",
+        "our-villa",
+        "ownership-pricing",
+        "owner-life",
+        "facilities",
+        "stay-services"
+      ],
+      "nav": [
+        {
+          "text": "홈",
+          "href": "#home"
+        },
+        {
+          "text": "마이롯지 소개",
+          "href": "#our-villa"
+        },
+        {
+          "text": "소유·가격 안내",
+          "href": "#ownership-pricing"
+        },
+        {
+          "text": "오너의 생활",
+          "href": "#owner-life"
+        },
+        {
+          "text": "시설 둘러보기",
+          "href": "#facilities"
+        },
+        {
+          "text": "컨시어지",
+          "href": "#stay-services"
+        },
+        {
+          "text": "홈",
+          "href": "#home"
+        },
+        {
+          "text": "마이롯지 소개",
+          "href": "#our-villa"
+        },
+        {
+          "text": "소유·가격 안내",
+          "href": "#ownership-pricing"
+        },
+        {
+          "text": "오너의 생활",
+          "href": "#owner-life"
+        },
+        {
+          "text": "시설 둘러보기",
+          "href": "#facilities"
+        },
+        {
+          "text": "컨시어지",
+          "href": "#stay-services"
+        },
+        {
+          "text": "모바일 화면",
+          "href": ""
+        },
+        {
+          "text": "데스크톱 화면",
+          "href": ""
+        },
+        {
+          "text": "자동",
+          "href": ""
+        }
+      ],
+      "why": {
+        "features": [],
+        "oldPrice": false
+      },
+      "pricing": {
+        "title": "별장 한 채의 꿈, 함께라면 더 가까워집니다.",
+        "description": "공동 소유를 통해 럭셔리 별장 소유의 꿈을 더 가까이에서 만나보세요. 별장 이용의 가능성과 최종 조건은 추후 확정될 예정입니다.",
+        "label": "제안 분양가",
+        "amount": "$3,999",
+        "currency": "USD",
+        "support": "최종 소유 구조, 결제 조건 및 이용 조건은 확정 전입니다.",
+        "benefits": [
+          "공동 소유",
+          "별장 이용",
+          "숙박 그 이상의 경험"
+        ],
+        "cta": "분양 정보 문의하기 ↗"
+      },
+      "owner": {
+        "categories": [],
+        "cards": [
+          "나만의 속도로 쉬는 시간.",
+          "좋은 사람들과, 더 좋은 순간.",
+          "나만의 별장이 있는 일상."
+        ]
+      },
+      "facilities": {
+        "description": "바다 곁의 첨단 별장, 고즈넉한 테라스와 커피 한 잔. 마이롯지가 그리는 공간을 하나씩 만나보세요.",
+        "categories": [],
+        "notes": [
+          "마이롯지 공간 콘셉트"
+        ]
+      },
+      "concierge": {
+        "description": "방문 준비부터 공간 관리까지, 편안한 머무름을 돕는 서비스를 구상합니다.",
+        "categories": [
+          "머무름의 준비",
+          "공간을 돌보는 손길",
+          "다음 여행으로"
+        ]
+      },
+      "oldSections": false,
+      "overflow": false,
+      "brokenNav": [],
+      "outdoorLife": {
+        "title": "바비큐와 캠핑까지, 별장 밖의 즐거움",
+        "copy": "풀사이드 모임과 야외 다이닝, 캠핑을 곁들인 경험도 구상합니다. 구체적인 프로그램과 제공 여부는 확정되지 않았습니다."
+      },
+      "outdoorFacilities": [
+        "야외 다이닝 및 바비큐 공간",
+        "캠핑 및 야외 레저 공간"
+      ],
+      "facilityStatus": "계획 구상 · 실제 시설의 준공 및 운영 여부는 확인되지 않았습니다.",
+      "bbqService": {
+        "title": "바비큐 준비 서비스",
+        "copy": "야외 모임을 더욱 편리하게 즐길 수 있도록 바비큐 준비를 돕는 서비스 구상입니다. 제공 여부와 이용 조건은 확정 전입니다.",
+        "status": "서비스 구상 · 준비 중"
+      },
+      "priorOffer": false,
+      "heroImage": "assets/images/brand-villa-atmosphere-20261008-1680.webp",
+      "heroVideo": "assets/video/Beach2.mp4",
+      "heroCta": "#ownership-pricing"
+    },
+    {
+      "name": "ko-390x844",
+      "topSections": [
+        "home",
+        "our-villa",
+        "ownership-pricing",
+        "owner-life",
+        "facilities",
+        "stay-services"
+      ],
+      "nav": [
+        {
+          "text": "홈",
+          "href": "#home"
+        },
+        {
+          "text": "마이롯지 소개",
+          "href": "#our-villa"
+        },
+        {
+          "text": "소유·가격 안내",
+          "href": "#ownership-pricing"
+        },
+        {
+          "text": "오너의 생활",
+          "href": "#owner-life"
+        },
+        {
+          "text": "시설 둘러보기",
+          "href": "#facilities"
+        },
+        {
+          "text": "컨시어지",
+          "href": "#stay-services"
+        },
+        {
+          "text": "홈",
+          "href": "#home"
+        },
+        {
+          "text": "마이롯지 소개",
+          "href": "#our-villa"
+        },
+        {
+          "text": "소유·가격 안내",
+          "href": "#ownership-pricing"
+        },
+        {
+          "text": "오너의 생활",
+          "href": "#owner-life"
+        },
+        {
+          "text": "시설 둘러보기",
+          "href": "#facilities"
+        },
+        {
+          "text": "컨시어지",
+          "href": "#stay-services"
+        },
+        {
+          "text": "모바일 화면",
+          "href": ""
+        },
+        {
+          "text": "데스크톱 화면",
+          "href": ""
+        },
+        {
+          "text": "자동",
+          "href": ""
+        }
+      ],
+      "why": {
+        "features": [],
+        "oldPrice": false
+      },
+      "pricing": {
+        "title": "별장 한 채의 꿈, 함께라면 더 가까워집니다.",
+        "description": "공동 소유를 통해 럭셔리 별장 소유의 꿈을 더 가까이에서 만나보세요. 별장 이용의 가능성과 최종 조건은 추후 확정될 예정입니다.",
+        "label": "제안 분양가",
+        "amount": "$3,999",
+        "currency": "USD",
+        "support": "최종 소유 구조, 결제 조건 및 이용 조건은 확정 전입니다.",
+        "benefits": [
+          "공동 소유",
+          "별장 이용",
+          "숙박 그 이상의 경험"
+        ],
+        "cta": "분양 정보 문의하기 ↗"
+      },
+      "owner": {
+        "categories": [],
+        "cards": [
+          "나만의 속도로 쉬는 시간.",
+          "좋은 사람들과, 더 좋은 순간.",
+          "나만의 별장이 있는 일상."
+        ]
+      },
+      "facilities": {
+        "description": "바다 곁의 첨단 별장, 고즈넉한 테라스와 커피 한 잔. 마이롯지가 그리는 공간을 하나씩 만나보세요.",
+        "categories": [],
+        "notes": [
+          "마이롯지 공간 콘셉트"
+        ]
+      },
+      "concierge": {
+        "description": "방문 준비부터 공간 관리까지, 편안한 머무름을 돕는 서비스를 구상합니다.",
+        "categories": [
+          "머무름의 준비",
+          "공간을 돌보는 손길",
+          "다음 여행으로"
+        ]
+      },
+      "oldSections": false,
+      "overflow": false,
+      "brokenNav": [],
+      "outdoorLife": {
+        "title": "바비큐와 캠핑까지, 별장 밖의 즐거움",
+        "copy": "풀사이드 모임과 야외 다이닝, 캠핑을 곁들인 경험도 구상합니다. 구체적인 프로그램과 제공 여부는 확정되지 않았습니다."
+      },
+      "outdoorFacilities": [
+        "야외 다이닝 및 바비큐 공간",
+        "캠핑 및 야외 레저 공간"
+      ],
+      "facilityStatus": "계획 구상 · 실제 시설의 준공 및 운영 여부는 확인되지 않았습니다.",
+      "bbqService": {
+        "title": "바비큐 준비 서비스",
+        "copy": "야외 모임을 더욱 편리하게 즐길 수 있도록 바비큐 준비를 돕는 서비스 구상입니다. 제공 여부와 이용 조건은 확정 전입니다.",
+        "status": "서비스 구상 · 준비 중"
+      },
+      "priorOffer": false,
+      "heroImage": "assets/images/brand-villa-atmosphere-20261008-1680.webp",
+      "heroVideo": "assets/video/Beach2.mp4",
+      "heroCta": "#ownership-pricing"
+    },
+    {
+      "name": "en-1440x900",
+      "topSections": [
+        "home",
+        "our-villa",
+        "ownership-pricing",
+        "owner-life",
+        "facilities",
+        "stay-services"
+      ],
+      "nav": [
+        {
+          "text": "Home",
+          "href": "#home"
+        },
+        {
+          "text": "Why MyLodge",
+          "href": "#our-villa"
+        },
+        {
+          "text": "Ownership & Pricing",
+          "href": "#ownership-pricing"
+        },
+        {
+          "text": "Owner Life",
+          "href": "#owner-life"
+        },
+        {
+          "text": "Facilities",
+          "href": "#facilities"
+        },
+        {
+          "text": "Concierge",
+          "href": "#stay-services"
+        },
+        {
+          "text": "Home",
+          "href": "#home"
+        },
+        {
+          "text": "Why MyLodge",
+          "href": "#our-villa"
+        },
+        {
+          "text": "Ownership & Pricing",
+          "href": "#ownership-pricing"
+        },
+        {
+          "text": "Owner Life",
+          "href": "#owner-life"
+        },
+        {
+          "text": "Facilities",
+          "href": "#facilities"
+        },
+        {
+          "text": "Concierge",
+          "href": "#stay-services"
+        },
+        {
+          "text": "Mobile view",
+          "href": ""
+        },
+        {
+          "text": "Desktop view",
+          "href": ""
+        },
+        {
+          "text": "Automatic",
+          "href": ""
+        }
+      ],
+      "why": {
+        "features": [],
+        "oldPrice": false
+      },
+      "pricing": {
+        "title": "The Villa You've Dreamed Of. A New Way to Make It Yours.",
+        "description": "Shared ownership can make the dream of a luxury villa more accessible. Explore the possibilities of sharing a villa and its use; final ownership, payment, and usage terms are subject to confirmation.",
+        "label": "Proposed Offering Price",
+        "amount": "$3,999",
+        "currency": "USD",
+        "support": "Final ownership structure, payment conditions, and usage terms are subject to confirmation.",
+        "benefits": [
+          "Shared Ownership",
+          "Vacation Usage",
+          "More Than a Stay"
+        ],
+        "cta": "Request Ownership Information ↗"
+      },
+      "owner": {
+        "categories": [],
+        "cards": [
+          "Time to call your own.",
+          "Good company. Better moments.",
+          "Imagine a home to return to."
+        ]
+      },
+      "facilities": {
+        "description": "바다 곁의 첨단 별장, 고즈넉한 테라스와 커피 한 잔. 마이롯지가 그리는 공간을 하나씩 만나보세요.",
+        "categories": [],
+        "notes": [
+          "MyLodge space concept"
+        ]
+      },
+      "concierge": {
+        "description": "We’re planning services to make your stay easier, from arrival preparations to caring for your villa.",
+        "categories": [
+          "Before Your Stay",
+          "Care for Your Space",
+          "Your Next Escape"
+        ]
+      },
+      "oldSections": false,
+      "overflow": false,
+      "brokenNav": [],
+      "outdoorLife": {
+        "title": "BBQ Gatherings & Camping",
+        "copy": "Extend the day with outdoor dining, BBQ gatherings, and camping-inspired escapes. These are lifestyle concepts; specific programs and availability are unconfirmed."
+      },
+      "outdoorFacilities": [
+        "Outdoor Dining & BBQ",
+        "Camping & Outdoor Recreation"
+      ],
+      "facilityStatus": "Planned concepts · completion and operation are not confirmed.",
+      "bbqService": {
+        "title": "BBQ Arrangements",
+        "copy": "A proposed service to make outdoor BBQ gatherings easier to arrange. Availability and service terms are not yet confirmed.",
+        "status": "PROPOSED SERVICE"
+      },
+      "priorOffer": false,
+      "heroImage": "assets/images/brand-villa-atmosphere-20261008-1680.webp",
+      "heroCta": "#ownership-pricing"
+    },
+    {
+      "name": "en-390x844",
+      "topSections": [
+        "home",
+        "our-villa",
+        "ownership-pricing",
+        "owner-life",
+        "facilities",
+        "stay-services"
+      ],
+      "nav": [
+        {
+          "text": "Home",
+          "href": "#home"
+        },
+        {
+          "text": "Why MyLodge",
+          "href": "#our-villa"
+        },
+        {
+          "text": "Ownership & Pricing",
+          "href": "#ownership-pricing"
+        },
+        {
+          "text": "Owner Life",
+          "href": "#owner-life"
+        },
+        {
+          "text": "Facilities",
+          "href": "#facilities"
+        },
+        {
+          "text": "Concierge",
+          "href": "#stay-services"
+        },
+        {
+          "text": "Home",
+          "href": "#home"
+        },
+        {
+          "text": "Why MyLodge",
+          "href": "#our-villa"
+        },
+        {
+          "text": "Ownership & Pricing",
+          "href": "#ownership-pricing"
+        },
+        {
+          "text": "Owner Life",
+          "href": "#owner-life"
+        },
+        {
+          "text": "Facilities",
+          "href": "#facilities"
+        },
+        {
+          "text": "Concierge",
+          "href": "#stay-services"
+        },
+        {
+          "text": "Mobile view",
+          "href": ""
+        },
+        {
+          "text": "Desktop view",
+          "href": ""
+        },
+        {
+          "text": "Automatic",
+          "href": ""
+        }
+      ],
+      "why": {
+        "features": [],
+        "oldPrice": false
+      },
+      "pricing": {
+        "title": "The Villa You've Dreamed Of. A New Way to Make It Yours.",
+        "description": "Shared ownership can make the dream of a luxury villa more accessible. Explore the possibilities of sharing a villa and its use; final ownership, payment, and usage terms are subject to confirmation.",
+        "label": "Proposed Offering Price",
+        "amount": "$3,999",
+        "currency": "USD",
+        "support": "Final ownership structure, payment conditions, and usage terms are subject to confirmation.",
+        "benefits": [
+          "Shared Ownership",
+          "Vacation Usage",
+          "More Than a Stay"
+        ],
+        "cta": "Request Ownership Information ↗"
+      },
+      "owner": {
+        "categories": [],
+        "cards": [
+          "Time to call your own.",
+          "Good company. Better moments.",
+          "Imagine a home to return to."
+        ]
+      },
+      "facilities": {
+        "description": "바다 곁의 첨단 별장, 고즈넉한 테라스와 커피 한 잔. 마이롯지가 그리는 공간을 하나씩 만나보세요.",
+        "categories": [],
+        "notes": [
+          "MyLodge space concept"
+        ]
+      },
+      "concierge": {
+        "description": "We’re planning services to make your stay easier, from arrival preparations to caring for your villa.",
+        "categories": [
+          "Before Your Stay",
+          "Care for Your Space",
+          "Your Next Escape"
+        ]
+      },
+      "oldSections": false,
+      "overflow": false,
+      "brokenNav": [],
+      "outdoorLife": {
+        "title": "BBQ Gatherings & Camping",
+        "copy": "Extend the day with outdoor dining, BBQ gatherings, and camping-inspired escapes. These are lifestyle concepts; specific programs and availability are unconfirmed."
+      },
+      "outdoorFacilities": [
+        "Outdoor Dining & BBQ",
+        "Camping & Outdoor Recreation"
+      ],
+      "facilityStatus": "Planned concepts · completion and operation are not confirmed.",
+      "bbqService": {
+        "title": "BBQ Arrangements",
+        "copy": "A proposed service to make outdoor BBQ gatherings easier to arrange. Availability and service terms are not yet confirmed.",
+        "status": "PROPOSED SERVICE"
+      },
+      "priorOffer": false,
+      "heroImage": "assets/images/brand-villa-atmosphere-20261008-1680.webp",
+      "heroCta": "#ownership-pricing"
+    }
+  ]
+}

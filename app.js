@@ -83,7 +83,7 @@ const checklistMarkup='<details id="checklist" class="participation-checklist"><
  ].map(c=>'<article class="card check-card"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="var(--ui-charcoal)" stroke-width="1.5" aria-hidden="true"><rect x="1" y="1" width="20" height="20" rx="5"/>'+c[2]+'</svg><div><h3>'+c[0]+'</h3><p>'+c[1]+'</p></div></article>').join('')+'</div></details>';
 
 document.querySelector('main').innerHTML =
- '<section id="home" class="hero"><div class="container hero-grid"><div><div class="eyebrow">MY LODGE · 공유별장 프로젝트</div><h1>별장 하나,<br>내 생활에 들이는 법.</h1><p class="hero-sub">함께 준비하는 별장, 나다운 쉼의 시작.</p><p class="hero-description">한 채를 함께 준비하는 공유별장 구상입니다.</p><div class="price-pair"><div class="price-tile"><p>1구좌 기준 예상 금액</p><strong>'+priceText.amount+'</strong></div><div class="price-tile"><p>최초 납입 기준 '+priceText.rate+'</p><strong>'+priceText.deposit+'</strong><small>잔여 금액·별도 비용은 확인 필요</small></div></div><p class="small">금액은 검토 중이며, 납입·이용 조건은 정식 안내 전입니다.</p><div class="hero-actions">'+cta+'<a class="outline" href="#ownership">공유 방식 알아보기 ↗</a></div><p class="small hero-reassurance">사전 안내 중 · 모집·계약·예약은 진행하지 않습니다.</p></div><figure class="photo hero-photo">'+image(0,'별장 공간 콘셉트')+'<figcaption>AI 생성 콘셉트 · 실제 현장·확정 설계가 아닙니다</figcaption></figure></div></section>'+
+ window.MyLodgeHero.render()+
 section('ownership','ivory-surface',ownershipMarkup+decisionGuide)+
  section('vision','vision-section','<div class="vision-heading"><span class="eyebrow">MY LODGE · SPACE VISION</span><h2>함께 꿈꾸는 공간,<br>한눈에 펼쳐보다.</h2><p>사업계획서에 담긴 공간 조성 콘셉트입니다.</p></div><figure class="photo vision-photo">'+planImage(8,'마이롯지 공간 조성 구상')+'<figcaption>사업계획서 조감도 콘셉트 · 실제 현장·확정 설계가 아닙니다</figcaption></figure>')+
  section('pricing','mist',intro('얼마부터 시작하는지,<br>먼저 살펴보세요.','검토 중인 1구좌 금액과 납입 구상.')+'<div class="card pricing-table">'+[
@@ -112,6 +112,10 @@ const ownershipGuide=document.createElement('nav');ownershipGuide.className='own
 ownershipGuide.innerHTML=['한 채','120구좌','소유·이용'].map((label,i)=>'<a href="#ownership-step-'+i+'"><span>0'+(i+1)+'</span>'+label+'</a>').join('');
 storyVisual.querySelector('.story-kicker').after(ownershipGuide);storyVisual.querySelector('.story-dots').remove();
 const ownershipLinks=[...ownershipGuide.querySelectorAll('a')];
+// Temporary price nodes are moved to the existing invitation by chairman.js.
+const heroPriceSeed=document.createElement('div');heroPriceSeed.className='hero-price-seed';heroPriceSeed.hidden=true;
+heroPriceSeed.innerHTML='<div class="price-pair"><div class="price-tile"><p>1구좌 기준 예상 금액</p><strong>'+priceText.amount+'</strong></div><div class="price-tile"><p>최초 납입 기준 '+priceText.rate+'</p><strong>'+priceText.deposit+'</strong><small>잔여 금액·별도 비용은 확인 필요</small></div></div><p class="small">금액은 검토 중이며, 납입·이용 조건은 정식 안내 전입니다.</p>';
+document.querySelector('#home').append(heroPriceSeed);
 const ownershipInline=ownershipChapters.map((chapter,i)=>{chapter.tabIndex=-1;const box=document.createElement('div');box.className='ownership-inline-visual';box.setAttribute('aria-hidden','true');chapter.querySelector('p').before(box);box.insertAdjacentHTML('beforeend','<p class="ownership-inline-note">'+['계획서 공간 콘셉트 · 실제 현장·확정 설계가 아닙니다','참여 단위 설명 · 실제 모집 현황이 아닙니다','권리·이용 기준은 정식 계약 전 확인합니다'][i]+'</p>');return box;});
 let ownershipFrame=0,ownershipLayout='',ownershipCurrent=-1;
 function paintOwnership(){
@@ -153,7 +157,6 @@ document.querySelector('.mobile-cta b').textContent=priceText.amount;
 document.querySelector('.mobile-cta small').textContent='그중 최초 '+priceText.rate+' · '+priceText.deposit;
 document.querySelector('.copyright').textContent='© 2026 MY LODGE. 사전 안내 페이지 · '+pageRevision.label+' 화면 업데이트';
 
-document.querySelector('.hero .eyebrow').insertAdjacentHTML('afterend','<p class="hero-stage">사전 안내 단계 <span>·</span> 공간과 서비스 구상</p>');
 const menu=document.querySelector('.menu-button'),mobileMenu=document.querySelector('#mobile-menu');
 function setMenu(open,returnFocus=false){mobileMenu.hidden=!open;menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');if(returnFocus)menu.focus();}
 menu.addEventListener('click',()=>setMenu(mobileMenu.hidden));
@@ -187,13 +190,6 @@ document.querySelectorAll('[data-info]').forEach(button=>button.addEventListener
 document.querySelector('.info-close').addEventListener('click',()=>infoDialog.close());
 
 // React Bits-inspired treatments, adapted to this dependency-free static site.
-const aurora = document.createElement('div');
-aurora.className = 'aurora-scene';
-aurora.setAttribute('aria-hidden','true');
-aurora.innerHTML = '<i></i><i></i><i></i><div class="aurora-grid"></div>';
-document.querySelector('.hero').prepend(aurora);
-const heroTitle = document.querySelector('.hero h1');
-heroTitle.innerHTML = '<span class="title-line">별장 하나,</span><span class="title-line">내 생활에 들이는 법.</span>';
 const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
 const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
 document.querySelectorAll('.service-overview-card').forEach(card=>{
@@ -218,11 +214,6 @@ projectPhotos.forEach(photo=>{
 });
 motionPreference.addEventListener('change',()=>projectPhotos.forEach(resetPhoto));
 finePointer.addEventListener('change',()=>projectPhotos.forEach(resetPhoto));
-const heroVisibility=new IntersectionObserver(entries=>{
- entries.forEach(entry=>aurora.classList.toggle('paused',!entry.isIntersecting));
-});
-heroVisibility.observe(document.querySelector('.hero'));
-
 // Count once when the price enters the viewport; expose only the final value to AT.
 const priceCounters = [...document.querySelectorAll('.hero .price-tile strong')];
 const priceSpecs=[{target:offer.amount,format:value=>money(Math.floor(value/10000)*10000)},{target:Math.round(offer.amount*offer.depositRate),format:value=>money(Math.floor(value/1000)*1000)}];
@@ -266,8 +257,7 @@ priceVisibility.observe(document.querySelector('.hero .price-pair'));
 
 // Native scrolling stays intact. Only decorative layers move, within small limits.
 const parallaxTargets=[
- ...[...document.querySelectorAll('.hero-photo img,.project-photo img,.lifestyle-grid img,.vision-photo img,.nature-visual img')].map(node=>({node,anchor:node.closest('.photo,.nature-visual'),range:node.closest('.hero')?32:24})),
- {node:aurora,anchor:document.querySelector('.hero'),range:48},
+ ...[...document.querySelectorAll('.project-photo img,.lifestyle-grid img,.vision-photo img,.nature-visual img')].map(node=>({node,anchor:node.closest('.photo,.nature-visual'),range:24})),
  {node:document.querySelector('.phone'),anchor:document.querySelector('.phone-wrap'),range:28}
 ].filter(item=>item.node&&item.anchor);
 const activeParallax=new Set();
@@ -449,31 +439,6 @@ document.addEventListener('focusin',event=>{
 motionPreference.addEventListener('change',()=>{
  if(!motionPreference.matches)return;
  middleObserver.disconnect();middleEntrances.forEach(node=>node.classList.add('middle-arrived'));
-});
-
-// Directional entrances use the figure, leaving its image parallax independent.
-// Observe each item so stacked mobile photos wait until they reach the viewport.
-const sideEntrances=[
- ...[...document.querySelectorAll('.hero-photo')].map(node=>({node,direction:1,delay:100}))
-];
-const sideObserver=new IntersectionObserver(entries=>{
- entries.forEach(entry=>{
-  if(!entry.isIntersecting)return;
-  entry.target.classList.add('side-arrived');
-  sideObserver.unobserve(entry.target);
- });
-},{threshold:0,rootMargin:'0px 0px -36px 0px'});
-sideEntrances.forEach(({node,direction,delay})=>{
- node.style.setProperty('--entry-direction',direction);
- node.style.setProperty('--entry-delay',`${delay}ms`);
- node.classList.add('side-entrance');
- if(motionPreference.matches)node.classList.add('side-arrived');
- else sideObserver.observe(node);
-});
-motionPreference.addEventListener('change',()=>{
- if(!motionPreference.matches)return;
- sideObserver.disconnect();
- sideEntrances.forEach(({node})=>node.classList.add('side-arrived'));
 });
 
 // Reveal script-dependent controls only after the page has been initialized.

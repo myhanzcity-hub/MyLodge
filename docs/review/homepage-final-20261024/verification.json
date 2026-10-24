@@ -1,0 +1,653 @@
+{
+  "errors": [],
+  "reports": [
+    {
+      "name": "ko-1440x900",
+      "scrollY": 0,
+      "facilityTop": 10747.65625,
+      "facilityTransform": "none",
+      "facilityPosition": "static",
+      "facilityIntro": {
+        "top": 10747.65625,
+        "pos": "static",
+        "transform": "none"
+      },
+      "ownerIntro": {
+        "top": 5050.1875,
+        "pos": "static",
+        "transform": "none"
+      },
+      "friendBox": {
+        "top": 5353.515625,
+        "pos": "static",
+        "transform": "none"
+      },
+      "point": "home",
+      "heroTop": 0,
+      "title": "나, 별장 있다.",
+      "heroDescription": "혼자 갖기엔 멀었던 바닷가 독채 별장. 함께 소유하는 방식으로, 이제 나의 첫 별장이 됩니다.",
+      "heroPrice": "1구좌 USD 3,999 · 1차 USD 100부터 빌라 1/120 지분 기준 · 럭셔리형 구좌당 USD 150 추가",
+      "heroButtons": [
+        [
+          "분양상품 보기\n↗",
+          "#ownership-pricing"
+        ],
+        [
+          "파크 둘러보기",
+          "/domestic-villas.html#project-jumunjin"
+        ]
+      ],
+      "sections": [
+        "home",
+        "our-villa",
+        "ownership-pricing",
+        "owner-life",
+        "facilities",
+        "stay-services"
+      ],
+      "nav": [
+        [
+          "홈",
+          "#home"
+        ],
+        [
+          "Why MyLodge",
+          "#our-villa"
+        ],
+        [
+          "소유·가격 안내",
+          "#ownership-pricing"
+        ],
+        [
+          "오너 라이프",
+          "#owner-life"
+        ],
+        [
+          "시설",
+          "#facilities"
+        ],
+        [
+          "컨시어지",
+          "#stay-services"
+        ],
+        [
+          "홈",
+          "#home"
+        ],
+        [
+          "Why MyLodge",
+          "#our-villa"
+        ],
+        [
+          "소유·가격 안내",
+          "#ownership-pricing"
+        ],
+        [
+          "오너 라이프",
+          "#owner-life"
+        ],
+        [
+          "시설",
+          "#facilities"
+        ],
+        [
+          "컨시어지",
+          "#stay-services"
+        ],
+        [
+          "모바일 화면",
+          "http://127.0.0.1:4173/view.html?view=mobile"
+        ],
+        [
+          "데스크톱 화면",
+          "http://127.0.0.1:4173/view.html?view=desktop"
+        ],
+        [
+          "자동",
+          "http://127.0.0.1:4173/index.html"
+        ]
+      ],
+      "whyTitle": "한 채를 함께, 휴가는 온전히 나답게.",
+      "facts": [
+        "1구좌 1/120 지분",
+        "구좌당 연 3박",
+        "선택 가능 여러 구좌 · 여러 지역"
+      ],
+      "pricingTitle": "별장 소유, USD 3,999부터.",
+      "prices": [
+        "구좌당 USD 3,999",
+        "구좌당 USD 4,149"
+      ],
+      "schedule": [
+        "1차 USD 100 LC계좌 입금",
+        "2차 USD 1,000 LC계좌 입금",
+        "3차 USD 1,000 현금 납입",
+        "4차 USD 1,000 현금 납입",
+        "5차 USD 899 현금 납입 럭셔리형: 5차 납입 시 USD 150 추가"
+      ],
+      "parkCards": [
+        "주문진 판매 상태: 확인 중 · 분양 선택지: 기본형·럭셔리형 · 파크별 빌라 타입 제공 여부: 확인 중 파크 정보 보기 ↗",
+        "양양 판매 상태: 확인 중 · 분양 선택지: 기본형·럭셔리형 · 파크별 빌라 타입 제공 여부: 확인 중 파크 정보 보기 ↗",
+        "치앙마이 판매 상태: 확인 중 · 분양 선택지: 기본형·럭셔리형 · 파크별 빌라 타입 제공 여부: 확인 중 파크 정보 보기 ↗"
+      ],
+      "ownerTitle": "이번 주말, 우리 별장 갈래?",
+      "friendLines": [
+        "친구 1 이번 주말 뭐 해?",
+        "친구 2 우리 별장 갈래? 풀장 가고 저녁엔 바비큐 하자."
+      ],
+      "communityStatus": "준비 중",
+      "myPageStatus": "마이페이지 기능 준비 중",
+      "facilityTitle": "문을 열면, 우리만의 별장.",
+      "facilityCategories": [
+        "외관",
+        "실내",
+        "테라스",
+        "평면도·공간 배치 콘셉트",
+        "수영장",
+        "바비큐 공간 · 계획",
+        "소셜·엔터테인먼트 공간 · 계획"
+      ],
+      "conciergeTitle": "몸만 오세요. 나머지는 준비되어 있습니다.",
+      "services": [
+        "객실 청소",
+        "새 침구",
+        "장보기",
+        "다이닝",
+        "카트 이동"
+      ],
+      "oldSections": false,
+      "brokenAnchors": [],
+      "overflow": false,
+      "media": [
+        "http://127.0.0.1:4173/assets/images/brand-villa-atmosphere-20261008-1680.webp",
+        "http://127.0.0.1:4173/assets/video/Beach2.mp4"
+      ],
+      "sectionCount": 6
+    },
+    {
+      "name": "ko-390x844",
+      "scrollY": 0,
+      "facilityTop": 13057.1875,
+      "facilityTransform": "none",
+      "facilityPosition": "static",
+      "facilityIntro": {
+        "top": 13057.1875,
+        "pos": "static",
+        "transform": "none"
+      },
+      "ownerIntro": {
+        "top": 6088.4375,
+        "pos": "static",
+        "transform": "none"
+      },
+      "friendBox": {
+        "top": 6383.8125,
+        "pos": "static",
+        "transform": "none"
+      },
+      "heroTop": 0,
+      "title": "나, 별장 있다.",
+      "heroDescription": "혼자 갖기엔 멀었던 바닷가 독채 별장. 함께 소유하는 방식으로, 이제 나의 첫 별장이 됩니다.",
+      "heroPrice": "1구좌 USD 3,999 · 1차 USD 100부터 빌라 1/120 지분 기준 · 럭셔리형 구좌당 USD 150 추가",
+      "heroButtons": [
+        [
+          "분양상품 보기\n↗",
+          "#ownership-pricing"
+        ],
+        [
+          "파크 둘러보기",
+          "/domestic-villas.html#project-jumunjin"
+        ]
+      ],
+      "sections": [
+        "home",
+        "our-villa",
+        "ownership-pricing",
+        "owner-life",
+        "facilities",
+        "stay-services"
+      ],
+      "nav": [
+        [
+          "홈",
+          "#home"
+        ],
+        [
+          "Why MyLodge",
+          "#our-villa"
+        ],
+        [
+          "소유·가격 안내",
+          "#ownership-pricing"
+        ],
+        [
+          "오너 라이프",
+          "#owner-life"
+        ],
+        [
+          "시설",
+          "#facilities"
+        ],
+        [
+          "컨시어지",
+          "#stay-services"
+        ],
+        [
+          "홈",
+          "#home"
+        ],
+        [
+          "Why MyLodge",
+          "#our-villa"
+        ],
+        [
+          "소유·가격 안내",
+          "#ownership-pricing"
+        ],
+        [
+          "오너 라이프",
+          "#owner-life"
+        ],
+        [
+          "시설",
+          "#facilities"
+        ],
+        [
+          "컨시어지",
+          "#stay-services"
+        ],
+        [
+          "모바일 화면",
+          "http://127.0.0.1:4173/view.html?view=mobile"
+        ],
+        [
+          "데스크톱 화면",
+          "http://127.0.0.1:4173/view.html?view=desktop"
+        ],
+        [
+          "자동",
+          "http://127.0.0.1:4173/index.html"
+        ]
+      ],
+      "whyTitle": "한 채를 함께, 휴가는 온전히 나답게.",
+      "facts": [
+        "1구좌 1/120 지분",
+        "구좌당 연 3박",
+        "선택 가능 여러 구좌 · 여러 지역"
+      ],
+      "pricingTitle": "별장 소유, USD 3,999부터.",
+      "prices": [
+        "구좌당 USD 3,999",
+        "구좌당 USD 4,149"
+      ],
+      "schedule": [
+        "1차 USD 100 LC계좌 입금",
+        "2차 USD 1,000 LC계좌 입금",
+        "3차 USD 1,000 현금 납입",
+        "4차 USD 1,000 현금 납입",
+        "5차 USD 899 현금 납입 럭셔리형: 5차 납입 시 USD 150 추가"
+      ],
+      "parkCards": [
+        "주문진 판매 상태: 확인 중 · 분양 선택지: 기본형·럭셔리형 · 파크별 빌라 타입 제공 여부: 확인 중 파크 정보 보기 ↗",
+        "양양 판매 상태: 확인 중 · 분양 선택지: 기본형·럭셔리형 · 파크별 빌라 타입 제공 여부: 확인 중 파크 정보 보기 ↗",
+        "치앙마이 판매 상태: 확인 중 · 분양 선택지: 기본형·럭셔리형 · 파크별 빌라 타입 제공 여부: 확인 중 파크 정보 보기 ↗"
+      ],
+      "ownerTitle": "이번 주말, 우리 별장 갈래?",
+      "friendLines": [
+        "친구 1 이번 주말 뭐 해?",
+        "친구 2 우리 별장 갈래? 풀장 가고 저녁엔 바비큐 하자."
+      ],
+      "communityStatus": "준비 중",
+      "myPageStatus": "마이페이지 기능 준비 중",
+      "facilityTitle": "문을 열면, 우리만의 별장.",
+      "facilityCategories": [
+        "외관",
+        "실내",
+        "테라스",
+        "평면도·공간 배치 콘셉트",
+        "수영장",
+        "바비큐 공간 · 계획",
+        "소셜·엔터테인먼트 공간 · 계획"
+      ],
+      "conciergeTitle": "몸만 오세요. 나머지는 준비되어 있습니다.",
+      "services": [
+        "객실 청소",
+        "새 침구",
+        "장보기",
+        "다이닝",
+        "카트 이동"
+      ],
+      "oldSections": false,
+      "brokenAnchors": [],
+      "overflow": false,
+      "media": [
+        "http://127.0.0.1:4173/assets/images/brand-villa-atmosphere-20261008-1680.webp",
+        "http://127.0.0.1:4173/assets/video/Beach2.mp4"
+      ],
+      "sectionCount": 6
+    },
+    {
+      "name": "en-1440x900",
+      "scrollY": 0,
+      "facilityTop": 10995.328125,
+      "facilityTransform": "none",
+      "facilityPosition": "static",
+      "facilityIntro": {
+        "top": 10995.328125,
+        "pos": "static",
+        "transform": "none"
+      },
+      "ownerIntro": {
+        "top": 5114.5,
+        "pos": "static",
+        "transform": "none"
+      },
+      "friendBox": {
+        "top": 5522.78125,
+        "pos": "static",
+        "transform": "none"
+      },
+      "point": "home",
+      "heroTop": 0,
+      "title": "I Have a Villa of My Own.",
+      "heroDescription": "A private seaside villa once felt out of reach. Shared ownership brings the dream of having your first villa closer.",
+      "heroPrice": "USD 3,999 per share · First installment USD 100 1/120 ownership interest per villa · Luxury option +USD 150 per share",
+      "heroButtons": [
+        [
+          "Explore Villas\n↗",
+          "#ownership-pricing"
+        ],
+        [
+          "Explore Parks",
+          "/domestic-villas.html?lang=en#project-jumunjin"
+        ]
+      ],
+      "sections": [
+        "home",
+        "our-villa",
+        "ownership-pricing",
+        "owner-life",
+        "facilities",
+        "stay-services"
+      ],
+      "nav": [
+        [
+          "Home",
+          "#home"
+        ],
+        [
+          "Why MyLodge",
+          "#our-villa"
+        ],
+        [
+          "Ownership & Pricing",
+          "#ownership-pricing"
+        ],
+        [
+          "Owner Life",
+          "#owner-life"
+        ],
+        [
+          "Facilities",
+          "#facilities"
+        ],
+        [
+          "Concierge",
+          "#stay-services"
+        ],
+        [
+          "Home",
+          "#home"
+        ],
+        [
+          "Why MyLodge",
+          "#our-villa"
+        ],
+        [
+          "Ownership & Pricing",
+          "#ownership-pricing"
+        ],
+        [
+          "Owner Life",
+          "#owner-life"
+        ],
+        [
+          "Facilities",
+          "#facilities"
+        ],
+        [
+          "Concierge",
+          "#stay-services"
+        ],
+        [
+          "Mobile view",
+          "http://127.0.0.1:4173/view.html?lang=en&view=mobile"
+        ],
+        [
+          "Desktop view",
+          "http://127.0.0.1:4173/view.html?lang=en&view=desktop"
+        ],
+        [
+          "Automatic",
+          "http://127.0.0.1:4173/index.html?lang=en"
+        ]
+      ],
+      "whyTitle": "One Villa, Shared. Your Vacation, Your Way.",
+      "facts": [
+        "1 share 1/120 interest",
+        "Per share 3 nights annually",
+        "Flexible choice More shares · more locations"
+      ],
+      "pricingTitle": "Villa Ownership Shares from USD 3,999.",
+      "prices": [
+        "USD 3,999 per share",
+        "USD 4,149 per share"
+      ],
+      "schedule": [
+        "Installment 1 USD 100 Deposit to LC account",
+        "Installment 2 USD 1,000 Deposit to LC account",
+        "Installment 3 USD 1,000 Cash payment",
+        "Installment 4 USD 1,000 Cash payment",
+        "Installment 5 USD 899 Cash payment Luxury: add USD 150 with installment 5"
+      ],
+      "parkCards": [
+        "Jumunjin Sales status: unconfirmed · Share options: Standard / Luxury · Park-specific villa types: unconfirmed View park information ↗",
+        "Yangyang Sales status: unconfirmed · Share options: Standard / Luxury · Park-specific villa types: unconfirmed View park information ↗",
+        "Chiang Mai Sales status: unconfirmed · Share options: Standard / Luxury · Park-specific villa types: unconfirmed View park information ↗"
+      ],
+      "ownerTitle": "Want to Come to My Villa This Weekend?",
+      "friendLines": [
+        "Friend 1 What are you doing this weekend?",
+        "Friend 2 Want to come to my villa? Pool time, then BBQ for dinner."
+      ],
+      "communityStatus": "Coming Soon",
+      "myPageStatus": "My Page feature coming soon",
+      "facilityTitle": "Open the Door to Your Own Villa.",
+      "facilityCategories": [
+        "Exterior",
+        "Interior",
+        "Terrace",
+        "Floor & Site Plan Concepts",
+        "Swimming Pools",
+        "BBQ Spaces · Planned",
+        "Social & Entertainment Areas · Planned"
+      ],
+      "conciergeTitle": "Just Bring Yourself. We’ll Take Care of the Rest.",
+      "services": [
+        "Room cleaning",
+        "Fresh bedding",
+        "Shopping",
+        "Dining",
+        "Cart transportation"
+      ],
+      "oldSections": false,
+      "brokenAnchors": [],
+      "overflow": false,
+      "media": [
+        "http://127.0.0.1:4173/assets/images/brand-villa-atmosphere-20261008-1680.webp"
+      ],
+      "sectionCount": 6
+    },
+    {
+      "name": "en-390x844",
+      "scrollY": 0,
+      "facilityTop": 13791.3125,
+      "facilityTransform": "none",
+      "facilityPosition": "static",
+      "facilityIntro": {
+        "top": 13791.3125,
+        "pos": "static",
+        "transform": "none"
+      },
+      "ownerIntro": {
+        "top": 6478.21875,
+        "pos": "static",
+        "transform": "none"
+      },
+      "friendBox": {
+        "top": 6802.390625,
+        "pos": "static",
+        "transform": "none"
+      },
+      "heroTop": 0,
+      "title": "I Have a Villa of My Own.",
+      "heroDescription": "A private seaside villa once felt out of reach. Shared ownership brings the dream of having your first villa closer.",
+      "heroPrice": "USD 3,999 per share · First installment USD 100 1/120 ownership interest per villa · Luxury option +USD 150 per share",
+      "heroButtons": [
+        [
+          "Explore Villas\n↗",
+          "#ownership-pricing"
+        ],
+        [
+          "Explore Parks",
+          "/domestic-villas.html?lang=en#project-jumunjin"
+        ]
+      ],
+      "sections": [
+        "home",
+        "our-villa",
+        "ownership-pricing",
+        "owner-life",
+        "facilities",
+        "stay-services"
+      ],
+      "nav": [
+        [
+          "Home",
+          "#home"
+        ],
+        [
+          "Why MyLodge",
+          "#our-villa"
+        ],
+        [
+          "Ownership & Pricing",
+          "#ownership-pricing"
+        ],
+        [
+          "Owner Life",
+          "#owner-life"
+        ],
+        [
+          "Facilities",
+          "#facilities"
+        ],
+        [
+          "Concierge",
+          "#stay-services"
+        ],
+        [
+          "Home",
+          "#home"
+        ],
+        [
+          "Why MyLodge",
+          "#our-villa"
+        ],
+        [
+          "Ownership & Pricing",
+          "#ownership-pricing"
+        ],
+        [
+          "Owner Life",
+          "#owner-life"
+        ],
+        [
+          "Facilities",
+          "#facilities"
+        ],
+        [
+          "Concierge",
+          "#stay-services"
+        ],
+        [
+          "Mobile view",
+          "http://127.0.0.1:4173/view.html?lang=en&view=mobile"
+        ],
+        [
+          "Desktop view",
+          "http://127.0.0.1:4173/view.html?lang=en&view=desktop"
+        ],
+        [
+          "Automatic",
+          "http://127.0.0.1:4173/index.html?lang=en"
+        ]
+      ],
+      "whyTitle": "One Villa, Shared. Your Vacation, Your Way.",
+      "facts": [
+        "1 share 1/120 interest",
+        "Per share 3 nights annually",
+        "Flexible choice More shares · more locations"
+      ],
+      "pricingTitle": "Villa Ownership Shares from USD 3,999.",
+      "prices": [
+        "USD 3,999 per share",
+        "USD 4,149 per share"
+      ],
+      "schedule": [
+        "Installment 1 USD 100 Deposit to LC account",
+        "Installment 2 USD 1,000 Deposit to LC account",
+        "Installment 3 USD 1,000 Cash payment",
+        "Installment 4 USD 1,000 Cash payment",
+        "Installment 5 USD 899 Cash payment Luxury: add USD 150 with installment 5"
+      ],
+      "parkCards": [
+        "Jumunjin Sales status: unconfirmed · Share options: Standard / Luxury · Park-specific villa types: unconfirmed View park information ↗",
+        "Yangyang Sales status: unconfirmed · Share options: Standard / Luxury · Park-specific villa types: unconfirmed View park information ↗",
+        "Chiang Mai Sales status: unconfirmed · Share options: Standard / Luxury · Park-specific villa types: unconfirmed View park information ↗"
+      ],
+      "ownerTitle": "Want to Come to My Villa This Weekend?",
+      "friendLines": [
+        "Friend 1 What are you doing this weekend?",
+        "Friend 2 Want to come to my villa? Pool time, then BBQ for dinner."
+      ],
+      "communityStatus": "Coming Soon",
+      "myPageStatus": "My Page feature coming soon",
+      "facilityTitle": "Open the Door to Your Own Villa.",
+      "facilityCategories": [
+        "Exterior",
+        "Interior",
+        "Terrace",
+        "Floor & Site Plan Concepts",
+        "Swimming Pools",
+        "BBQ Spaces · Planned",
+        "Social & Entertainment Areas · Planned"
+      ],
+      "conciergeTitle": "Just Bring Yourself. We’ll Take Care of the Rest.",
+      "services": [
+        "Room cleaning",
+        "Fresh bedding",
+        "Shopping",
+        "Dining",
+        "Cart transportation"
+      ],
+      "oldSections": false,
+      "brokenAnchors": [],
+      "overflow": false,
+      "media": [
+        "http://127.0.0.1:4173/assets/images/brand-villa-atmosphere-20261008-1680.webp"
+      ],
+      "sectionCount": 6
+    }
+  ]
+}

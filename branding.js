@@ -112,8 +112,7 @@
  const footerBottom=document.createElement('div');footerBottom.className='footer-bottom';
  const footerDisclaimer=$('.footer-disclaimer'),copyright=$('.copyright');
  footerDisclaimer.before(footerBottom);footerBottom.append(footerDisclaimer,copyright);
- $('.hero-reassurance').textContent='일상을 휴가처럼 · MY LODGE';
- for(const link of document.querySelectorAll('a[href="#pricing"]')){link.href='#ownership';link.textContent='오너 혜택 ↗';}
+ for(const link of document.querySelectorAll('a[href="#pricing"]')){if(link.closest('#home'))continue;link.href='#ownership';link.textContent='오너 혜택 ↗';}
  const description='일상을 휴가처럼. 자연 속 여유, 새로운 만남, 모듈형 별장 공간을 소개하는 마이롯지 브랜드 사이트.';
  for(const node of document.querySelectorAll('meta[name="description"],meta[property="og:description"]'))node.content=description;
 })();

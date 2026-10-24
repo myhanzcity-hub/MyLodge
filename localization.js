@@ -167,8 +167,8 @@
  Object.entries(imageText).forEach(([ko,en])=>translations.set(ko,en));
  const filmDescription=document.querySelector('#film-description');if(filmDescription)filmDescription.textContent='A 30-second AI concept film in nine scenes: a villa, serenity, a pool, community, entrepreneurs meeting, business partners, a club, a festival and a celebration. Captions: A villa to call my own. Breathe out. Settle in. Every day feels like a holiday. Find your people. Good company. All year round. Good conversations. Great partnerships. Let the music move you. Make it a night to remember. Feel the MyLodge. Animated captions and graphic transitions accompany the images. Turn on sound to hear ocean waves.';
  function translateNode(root){
-  if(root.nodeType===3){if(root.parentElement?.closest('.language-slot,script,style'))return;const value=root.textContent.trim();const next=translate(value);if(next!==value)root.textContent=root.textContent.replace(value,next);return;}
-  if(root.nodeType!==1||root.matches('script,style,.language-slot'))return;
+  if(root.nodeType===3){if(root.parentElement?.closest('#home[data-hero-language],.language-slot,script,style'))return;const value=root.textContent.trim();const next=translate(value);if(next!==value)root.textContent=root.textContent.replace(value,next);return;}
+  if(root.nodeType!==1||root.matches('#home[data-hero-language],script,style,.language-slot'))return;
   for(const attribute of ['alt','aria-label','title']){const value=root.getAttribute(attribute);if(value){const next=translate(value);if(next!==value)root.setAttribute(attribute,next);}}
   [...root.childNodes].forEach(translateNode);
  }

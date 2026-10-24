@@ -4,7 +4,7 @@
  // Navigation lives in the category menus and the character guide.
  const removePromotionalLinks=()=>{
   document.querySelectorAll('a').forEach(link=>{
-   if(link.closest('header nav, #mobile-menu, .lodge-guide, .service-category-nav, footer')||link.matches('.brand,.skip-link'))return;
+   if(link.closest('#home.lodge-hero, header nav, #mobile-menu, .lodge-guide, .service-category-nav, footer')||link.matches('.brand,.skip-link'))return;
    if(link.classList.contains('path-card')){
     const card=document.createElement('article');card.className=link.className;
     while(link.firstChild)card.append(link.firstChild);

@@ -1,0 +1,145 @@
+{
+  "pageErrors": [],
+  "reports": [
+    {
+      "name": "ko-1440x900",
+      "sections": [
+        "home",
+        "our-villa",
+        "ownership-pricing",
+        "owner-life",
+        "facilities",
+        "stay-services"
+      ],
+      "price": "$3,999",
+      "currency": "USD",
+      "title": "나만의 별장,\n새로운 소유의 방식.",
+      "description": "더 많은 사람이 누릴 수 있는 럭셔리 별장 라이프. 마이롯지는 공동 소유의 새로운 가능성과 특별한 휴식, 다양한 경험을 제안합니다.",
+      "label": "예정 분양가",
+      "benefits": [
+        "함께 소유하는 별장",
+        "나만의 특별한 시간",
+        "공간을 넘어 라이프스타일로"
+      ],
+      "primary": "#ownership-pricing",
+      "overflow": false,
+      "removed": false,
+      "links": [
+        "#home",
+        "#our-villa",
+        "#ownership-pricing",
+        "#owner-life",
+        "#facilities",
+        "#stay-services"
+      ],
+      "broken": [],
+      "navClicks": 6,
+      "ctaOpens": true
+    },
+    {
+      "name": "ko-390x844",
+      "sections": [
+        "home",
+        "our-villa",
+        "ownership-pricing",
+        "owner-life",
+        "facilities",
+        "stay-services"
+      ],
+      "price": "$3,999",
+      "currency": "USD",
+      "title": "나만의 별장,\n새로운 소유의 방식.",
+      "description": "더 많은 사람이 누릴 수 있는 럭셔리 별장 라이프. 마이롯지는 공동 소유의 새로운 가능성과 특별한 휴식, 다양한 경험을 제안합니다.",
+      "label": "예정 분양가",
+      "benefits": [
+        "함께 소유하는 별장",
+        "나만의 특별한 시간",
+        "공간을 넘어 라이프스타일로"
+      ],
+      "primary": "#ownership-pricing",
+      "overflow": false,
+      "removed": false,
+      "links": [
+        "#home",
+        "#our-villa",
+        "#ownership-pricing",
+        "#owner-life",
+        "#facilities",
+        "#stay-services"
+      ],
+      "broken": [],
+      "navClicks": 6,
+      "ctaOpens": true
+    },
+    {
+      "name": "en-1440x900",
+      "sections": [
+        "home",
+        "our-villa",
+        "ownership-pricing",
+        "owner-life",
+        "facilities",
+        "stay-services"
+      ],
+      "price": "$3,999",
+      "currency": "USD",
+      "title": "Your Place in Paradise.\nA New Way to Own.",
+      "description": "Discover a more accessible approach to luxury vacation-property ownership. MyLodge brings together exceptional destinations, shared ownership, and unforgettable experiences.",
+      "label": "Proposed Ownership Price",
+      "benefits": [
+        "Shared Ownership",
+        "Your Time Away",
+        "More Than a Property"
+      ],
+      "primary": "#ownership-pricing",
+      "overflow": false,
+      "removed": false,
+      "links": [
+        "#home",
+        "#our-villa",
+        "#ownership-pricing",
+        "#owner-life",
+        "#facilities",
+        "#stay-services"
+      ],
+      "broken": [],
+      "navClicks": 6,
+      "ctaOpens": true
+    },
+    {
+      "name": "en-390x844",
+      "sections": [
+        "home",
+        "our-villa",
+        "ownership-pricing",
+        "owner-life",
+        "facilities",
+        "stay-services"
+      ],
+      "price": "$3,999",
+      "currency": "USD",
+      "title": "Your Place in Paradise.\nA New Way to Own.",
+      "description": "Discover a more accessible approach to luxury vacation-property ownership. MyLodge brings together exceptional destinations, shared ownership, and unforgettable experiences.",
+      "label": "Proposed Ownership Price",
+      "benefits": [
+        "Shared Ownership",
+        "Your Time Away",
+        "More Than a Property"
+      ],
+      "primary": "#ownership-pricing",
+      "overflow": false,
+      "removed": false,
+      "links": [
+        "#home",
+        "#our-villa",
+        "#ownership-pricing",
+        "#owner-life",
+        "#facilities",
+        "#stay-services"
+      ],
+      "broken": [],
+      "navClicks": 6,
+      "ctaOpens": true
+    }
+  ]
+}

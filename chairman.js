@@ -4,22 +4,8 @@
  const hero=document.querySelector('.hero');if(!hero)return;
  document.body.classList.add('vacation-design');
  const photo=(name,largest,alt,eager=false)=>`<img src="assets/images/${name}-960.webp" srcset="assets/images/${name}-480.webp 480w, assets/images/${name}-960.webp 960w, assets/images/${name}-${largest}.webp ${largest}w" sizes="(max-width:700px) 100vw, 90vw" width="${largest}" height="${name==='vacation-arrival'?Math.round(largest*941/1672):Math.round(largest*2/3)}" alt="${alt}" decoding="async" ${eager?'fetchpriority="high"':'loading="lazy"'}>`;
- const heroCopy=hero.querySelector('.hero-grid>div');
- hero.querySelector('.eyebrow').textContent='MY LODGE / YOUR OWN VACATION';
- hero.querySelector('.hero-stage').textContent='함께 준비하는 공유별장';
- hero.querySelector('h1').innerHTML='<span class="title-line">나 별장있다.</span>';
- hero.querySelector('.hero-sub').textContent='친구야, 나 별장있어.';
- hero.querySelector('.hero-description').innerHTML='함께 준비하는 별장,<br><strong>우리의 생활 가까이.</strong>';
  const pair=hero.querySelector('.price-pair');
  const priceNote=pair.nextElementSibling;
- hero.querySelector('.hero-photo').innerHTML=photo('vacation-arrival',1680,'바다와 소나무 사이의 첨단 모듈 별장 앞에 SUV가 도착한 휴가 장면 · AI 콘셉트',true)+'<figcaption>AI 공간 콘셉트 · 실제 부지·설계·주차 조건은 미확정</figcaption>';
- const heroLinks=hero.querySelectorAll('.hero-actions a');
- heroLinks[0].href='#villa-spaces';heroLinks[0].textContent='내 별장 상상해보기 ↗';
- heroLinks[1].href='#ownership';heroLinks[1].textContent='함께 갖는 방식 ↓';
- hero.querySelector('.hero-reassurance').textContent='공유별장 구상 · 정식 모집 전 사전 안내';
- hero.querySelector('.scroll-cue').href='#villa-spaces';
- hero.querySelector('.scroll-cue span').textContent='별장 속으로';
- hero.insertAdjacentHTML('beforeend','<div class="arrival-coordinate" aria-hidden="true"><span>BEACH · PINE · MY LODGE</span><b>도착하는 순간,<br>휴가가 시작됩니다.</b><i>01 / THE ARRIVAL</i></div>');
  const ribbon=document.querySelector('.living-ribbon');
 
  const spaces=[
@@ -44,7 +30,7 @@
 
  const invitation=document.createElement('section');invitation.className='vacation-invitation';invitation.id='our-villa';
  invitation.innerHTML='<div class="container"><p class="eyebrow">A VILLA, TOGETHER</p><div class="invitation-grid"><div><h2>누군가의 별장에서,<br><em>우리의 별장으로.</em></h2><p>한 채를 함께 준비하는 공유별장.<br>별장 생활을 더 가까운 선택으로 만드는 구상입니다.</p><a class="text-link" href="#ownership">120구좌의 공유 방식 알아보기 ↗</a></div><div class="access-facts"><p class="access-label">참여 비용 · 검토 중인 1구좌 기준</p></div></div><p class="invitation-footnote">공동 소유의 법적 구조와 이용 권리는 정식 계약 전 안내합니다.</p></div>';
- ribbon.after(invitation);invitation.after(explorer);invitation.querySelector('.access-facts').append(pair,priceNote);
+ ribbon.after(invitation);invitation.after(explorer);invitation.querySelector('.access-facts').append(pair,priceNote);hero.querySelector('.hero-price-seed').remove();
  invitation.querySelector('.eyebrow').textContent='MY LODGE SHARE / 사전 안내';
  invitation.querySelector('.invitation-grid>div>p').innerHTML='여러 참여자가 별장 한 채를 함께 준비하는 구상입니다.<br>한 구좌는 참여 단위이며, 소유할 권리와 머무는 조건은 별도로 확인합니다.';
  invitation.querySelector('.access-label').textContent='전체 참여 기준부터 살펴보세요 · 1구좌 검토 금액';
@@ -90,5 +76,4 @@
  const final=document.createElement('section');final.className='vacation-finale';
  final.innerHTML='<div class="container"><p class="eyebrow">YOUR NEXT VACATION</p><h2>인생의 휴식처.<br><em>마이롯지.</em></h2><p>마음에 드는 공간에서 시작해,<br>비용·소유·이용 조건까지 충분히 살펴보세요.</p><div><a class="primary" href="#projects">별장 둘러보기 ↗</a><a class="outline" href="#pricing">비용·권리 확인하기</a></div><small>현재는 사전 안내 단계입니다. 이용 시작 시점은 아직 확정되지 않았습니다.</small></div>';
  document.querySelector('#progress').after(final);
- heroCopy.classList.add('vacation-hero-copy');
 })();
