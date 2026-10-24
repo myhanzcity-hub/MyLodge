@@ -1,3 +1,10 @@
+## 2026-10-24 Replace entry intro only
+
+- User requested their villa/pool → particles → coin 3D intro before Hojiakbar homepage.
+- intro.html now loads namespaced entry-3d/ code; index.html and all homepage runtime are preserved.
+- Skip/coin navigation goes to index.html and preserves query/hash. No audio. WebGL failure retains simple entry controls; reduced-motion uses direct progress.
+- Public manifest includes locally vendored Three.js with MIT license.
+
 ## 2026-10-24 Sidepage integration; preserve Hojiakbar homepage
 
 - User explicitly chose to preserve Hojiakbar's homepage from feature/hojiakbar-homepage (b8a4ddd).
