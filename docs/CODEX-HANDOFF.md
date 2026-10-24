@@ -1,3 +1,8 @@
+## 2026-10-24 Requested Vercel deployment target
+
+- User explicitly requests future commit-and-push / sync to deploy to https://vercel.com/imtg-roup/my-lodge-business. Local main tracks origin/main at myhanzcity-hub/MyLodegePlatform. Existing VS Code git.postCommitCommand is push; main deployment is now explicitly enabled in vercel.json; handoff branch remains disabled.
+- Vercel currently shows 404 for the requested project under the logged-in account. Project Git repository and production branch cannot be verified until an account with access opens the project. Repository configuration alone cannot establish that server-side project connection. Do not report production deployment as verified.
+
 ## 2026-10-24 Separate community ending as chapter 13
 
 - User requested the pictured existing global business community ending as a separate page. Deck now has 13 chapters: chapter 12 owner guide, chapter 13 unchanged community ending, image, copy and link. Original page HTML/CSS unchanged in this update.

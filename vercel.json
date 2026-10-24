@@ -11,6 +11,7 @@
   ],
   "git": {
     "deploymentEnabled": {
+      "main": true,
       "codex/main-pc-handoff-20260930": false
     }
   },
