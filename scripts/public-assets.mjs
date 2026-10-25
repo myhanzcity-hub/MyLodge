@@ -80,3 +80,5 @@ publicAssets.push('experiments/ownership-villa-diagram/index.html');
 
 // Local reviewed sidepage integration; retain every current homepage asset.
 for (const file of JSON.parse(readFileSync(new URL('./side-review-public-files.json', import.meta.url), 'utf8'))) if (!publicAssets.includes(file)) publicAssets.push(file);
+
+publicAssets.push("parks/main-aligned.css");

@@ -1,0 +1,80 @@
+@import url('../tokens.css');
+/* Shared sidepage finish: the homepage's ivory, charcoal and quiet editorial rhythm.
+   Only presentation changes; original chapter nodes, copy and navigation remain intact. */
+body.side-page{--bg:var(--ui-ivory);--paper:var(--ui-ivory);--accent:var(--ui-charcoal);--muted:#69645e;--line:#d8d2c9;--copy:#57524d;--header:88px;color-scheme:light;background:var(--ui-ivory);color:var(--ui-charcoal);font-family:var(--font-body)}
+body.side-page :is(h1,h2,h3,h4){font-family:var(--font-heading);font-weight:400;letter-spacing:-.045em}
+body.side-page h2{font-size:clamp(30px,3.8vw,56px);line-height:1.25}
+body.side-page h3{font-size:clamp(21px,2vw,28px);line-height:1.45}
+body.side-page :is(main>section,main.requirements-content>section){--surface:var(--ui-ivory);--text:var(--ui-charcoal);--copy:#57524d;--kicker:#69645e;--rule:#d8d2c9;--panel:#eeebe5;--focus:var(--ui-charcoal);color:var(--text);background:var(--surface)}
+body.side-page .container{width:min(1280px,calc(100% - 112px))}
+body.side-page :is(.eyebrow,.park-number,.park-stage-number,.local-kicker){color:var(--kicker,#69645e);font-weight:500;letter-spacing:.14em}
+body.side-page header{margin:14px 20px 0;top:14px;border:1px solid #d8d2c9;border-radius:16px;background:rgb(247 245 240 / .97);color:var(--ui-charcoal);box-shadow:0 6px 24px #17171708}
+body.side-page .header-inner{height:74px;padding-inline:24px;max-width:1440px}
+body.side-page .brand :is(.brand-name,strong){color:var(--ui-charcoal)}
+body.side-page :is(.language-slot summary,.park-nav-submenu,.language-panel){border-color:#d8d2c9;border-radius:10px;background:var(--ui-ivory);color:var(--ui-charcoal)}
+body.side-page :is(.park-nav-submenu,.language-panel){box-shadow:0 16px 40px #17171712}
+body.side-page :is(.park-nav-submenu a:hover,.language-panel a:hover,.language-current){background:#e9e4dc;color:var(--ui-charcoal)}
+body.side-page :is(.park-navigation>a:hover,.park-nav-group>summary:hover,.park-nav-group[open]>summary){color:var(--ui-charcoal);text-decoration:underline;text-underline-offset:7px}
+body.side-page #mobile-menu{background:var(--ui-ivory);color:var(--ui-charcoal);border-color:#d8d2c9;border-radius:0 0 16px 16px}
+body.side-page :is(.park-mobile-label,.menu-button span){color:var(--ui-charcoal)}
+body.side-page :is(.park-mobile-group,.park-mobile-group ul){border-color:#d8d2c9}
+body.side-page :is(.side-hero,.community-ending){--surface:#171717;--text:var(--ui-ivory);--copy:#eee9e1;--kicker:var(--ui-ivory);--accent:var(--ui-ivory);background:#171717;color:var(--ui-ivory)}
+body.side-page main>.side-hero{margin-top:14px;min-height:calc(100svh - 102px);padding-block:80px}
+body.side-page .side-hero-copy h1{font-size:clamp(40px,4.8vw,72px);line-height:1.18}
+body.side-page :is(.side-hero-copy,.community-ending-copy) :is(.eyebrow,h1,h2){color:var(--ui-ivory)}
+body.side-page :is(.side-hero-copy,.community-ending-copy) p{color:#eee9e1}
+body.side-page .side-hero::before{background:linear-gradient(90deg,#171717c9,#17171759 64%,#17171724),linear-gradient(0deg,#17171766,transparent 70%)}
+body.side-page .detail-status{color:var(--ui-ivory);border-color:#f7f5f080;background:#17171750;letter-spacing:.08em}
+body.side-page :is(.page-directory,.visual-first){background:var(--ui-ivory);border-color:#d8d2c9}
+body.side-page :is(.park-concept-notice p,.page-directory .status-note p,.visual-guide-note,.local-image-note,.local-sources){color:#69645e}
+body.side-page :is(.section-directory a,.park-other-destinations,.mobile-page-outline){border-color:#d8d2c9;color:var(--ui-charcoal)}
+body.side-page .park-other-destinations>p{color:#69645e}
+body.side-page :is(a.visual-guide-tile,.content-card,.planning-pain){background:#fffdf9;color:var(--ui-charcoal);border:1px solid #d8d2c9;border-radius:12px;padding:26px;box-shadow:none}
+body.side-page a.visual-guide-tile:hover{background:#eee9e1;border-color:#b7ada0;transform:translateY(-3px)}
+body.side-page .visual-guide-tile :is(h3,p),body.side-page .visual-guide-arrow{color:var(--ui-charcoal)}
+body.side-page :is(.content-card,.planning-pain) :is(p,li){color:#57524d}
+body.side-page .visual-guide-tile h3{font-size:21px;font-weight:500}
+body.side-page .content-grid{gap:24px}
+body.side-page .unified-content-icon{filter:grayscale(1)!important}
+body.side-page :is(.visual-card-details summary,.visual-card-details>p,.owner-guide-detail summary){color:var(--ui-charcoal);border-color:#d8d2c9}
+body.side-page :is(.owner-guide-detail,.planning-faq details,.planning-example,.share-preview,.share-result dl>div){border-color:#d8d2c9}
+body.side-page :is(.planning-tag,.planning-steps li:before,.pain-mark,.share-result dt){color:#69645e!important}
+body.side-page .share-error{color:#943f36!important}
+body.side-page :is(.guide-statement,#chiangmai-experiences .chiangmai-scene-nature-walk){--text:var(--ui-charcoal);--copy:#57524d;--kicker:#69645e;--focus:var(--ui-charcoal);background:#eae5dc;color:var(--ui-charcoal);border-radius:12px}
+body.side-page .guide-statement :is(h2,h3,p){color:var(--ui-charcoal)}
+body.side-page :is(.guide-links a,.park-panorama-link,.park-destination-links a,.hanz-link){background:var(--ui-charcoal);color:var(--ui-ivory);border:1px solid var(--ui-charcoal);min-height:48px;padding:13px 20px;font-size:13px;font-weight:500;line-height:1.5;border-radius:0}
+body.side-page :is(.guide-links a,.park-panorama-link,.park-destination-links a,.hanz-link):hover{background:#b7ada0;color:var(--ui-charcoal);border-color:#b7ada0}
+body.side-page :is(.side-hero,.community-ending) :is(.park-panorama-link,.hanz-link){background:var(--ui-ivory);color:var(--ui-charcoal);border-color:var(--ui-ivory)}
+body.side-page :is(.domestic-card-link,.domestic-next-park a){color:var(--ui-charcoal);border-color:#b7ada0;background:transparent}
+body.side-page .benefit-number{background:var(--ui-ivory);color:var(--ui-charcoal)}
+body.side-page .guide-hero h1{font-size:clamp(38px,4.5vw,68px);line-height:1.2}
+body.side-page .guide-hero :is(.detail-back,.eyebrow){color:#69645e}
+body.side-page .guide-hero img{border-radius:12px}
+body.side-page .guide-hero .guide-links a+a{background:transparent;color:var(--ui-charcoal);border-color:#b7ada0}
+body.side-page :is(.status-note,.planning-jump .guide-links){border-color:#b7ada0}
+body.side-page .status-note{color:#69645e}
+body.side-page :is(.requirements-table th,.requirements-table td){border-color:#d8d2c9}
+body.side-page .requirements-table thead th{background:#eee9e1;color:var(--ui-charcoal)}
+body.side-page footer{background:var(--ui-ivory);color:var(--ui-charcoal);border-color:#d8d2c9}
+body.side-page footer :is(p,a,.footer-disclaimer){color:#57524d;border-color:#d8d2c9}
+body.side-page :is(.owners-deck-nav,.chiangmai-deck-nav){background:rgb(247 245 240 / .98);color:var(--ui-charcoal);border-color:#d8d2c9;backdrop-filter:blur(16px)}
+body.side-page :is(.owners-deck-nav,.chiangmai-deck-nav) button{background:transparent;border-color:#b7ada0;color:var(--ui-charcoal);border-radius:0}
+body.side-page :is(.owners-deck-position,.chiangmai-deck-position) span{color:#69645e}
+body.side-page :is(.owners-deck-toc,.chiangmai-deck-toc){background:var(--ui-ivory);border-color:#d8d2c9;box-shadow:0 12px 40px #17171720}
+body.side-page :is(.owners-deck-toc,.chiangmai-deck-toc) button{color:var(--ui-charcoal)}
+body.side-page :is(.owners-deck-toc,.chiangmai-deck-toc) button[aria-current]{background:var(--ui-charcoal);color:var(--ui-ivory)}
+body.side-page :is(button,a,summary):focus-visible{outline:2px solid currentColor;outline-offset:4px}
+@media(max-width:800px){body.side-page{--header:86px}body.side-page .container{width:calc(100% - 48px)}body.side-page header{top:10px;margin:10px 12px 0}body.side-page .header-inner{height:66px;padding-inline:16px;gap:12px}body.side-page .brand-name{font-size:23px}body.side-page .brand-tagline{font-size:6px}body.side-page main>.side-hero{margin-top:10px;min-height:calc(100svh - 86px);padding:48px 0 64px}body.side-page .side-hero-copy h1{font-size:clamp(34px,6.3vw,48px)}body.side-page .language-panel{right:-60px}body.side-page h2{font-size:clamp(29px,5vw,40px)}}
+@media(max-width:600px){body.side-page .container{width:calc(100% - 40px)}body.side-page :is(main>.story-section,main>.visual-first){padding-block:36px 44px}body.side-page .story-section .container{padding-block:0}body.side-page .content-grid{gap:16px}body.side-page :is(.content-card,.planning-pain){padding:20px;border-radius:10px}body.side-page a.visual-guide-tile{border-radius:12px}body.side-page .visual-guide-tile h3{font-size:18px}body.side-page .guide-hero h1{font-size:36px}body.side-page .guide-hero img{aspect-ratio:16/9!important}body.side-page .side-hero-copy h1{font-size:34px}body.side-page :is(.owners-deck-position,.chiangmai-deck-position){font-size:11px}body.side-page .mobile-card-table tbody tr{background:#fffdf9;border-color:#d8d2c9;border-radius:10px}body.side-page .mobile-card-table tbody th{background:#eee9e1;color:var(--ui-charcoal);border-color:#d8d2c9}body.side-page .mobile-card-table tbody td{color:#57524d;border-color:#d8d2c9}body.side-page .mobile-card-table tbody td::before{color:#69645e}body.side-page #mobile-menu{max-height:calc(100dvh - 96px)}}
+@media(max-width:360px){body.side-page .header-inner{padding-inline:12px;gap:8px}body.side-page .brand-name{font-size:21px}body.side-page .container{width:calc(100% - 36px)}body.side-page .guide-hero h1{font-size:32px}body.side-page .visual-guide-tile h3{font-size:16px}}
+@media(prefers-reduced-motion:reduce){body.side-page a.visual-guide-tile:hover{transform:none}}
+/* Reuse the homepage's supplied symbol and wordmark, with the same artwork crop. */
+body.side-page .artwork-brand{flex-direction:row;align-items:center;gap:10px;min-height:44px;flex-shrink:0}
+body.side-page .artwork-brand :is(.logo-symbol,.logo-wordmark){display:block;position:relative;overflow:hidden;flex-shrink:0}
+body.side-page .logo-symbol{width:62px;height:34px}body.side-page .logo-wordmark{width:114px;height:34px}
+body.side-page .artwork-brand img{position:absolute;max-width:none;height:auto;object-fit:initial}
+body.side-page .logo-symbol img{width:110px;left:-26px;top:-10px;clip-path:inset(0 0 42% 0)}
+body.side-page .logo-wordmark img{width:166px;left:-28px;top:-64px}
+@media(max-width:360px){body.side-page .artwork-brand{gap:5px}body.side-page .logo-symbol{width:49px;height:30px}body.side-page .logo-wordmark{width:96px;height:30px}body.side-page .logo-symbol img{width:90px;left:-21px;top:-8px}body.side-page .logo-wordmark img{width:140px;left:-23px;top:-54px}}
+/* Photograph-backed sections keep a dark fallback while their images load. */
+body.side-page main>section.side-hero,body.side-page main>section.community-ending{--surface:#171717;--text:#f7f5f0;--copy:#eee9e1;--kicker:#f7f5f0;background:#171717}

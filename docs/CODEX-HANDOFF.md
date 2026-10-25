@@ -1,3 +1,16 @@
+## 2026-10-25 Approved sidepage design release
+
+- User approved GitHub and Vercel publication of the reviewed4205 design. Remote main ea6923a checked immediately before release; no newer colleague changes.
+- Publish only sidepage visual alignment, official logo reuse, three stylesheet references and public asset registration. Homepage, intro, screen-view picker, Vercel configuration, manuscript and chapter engines verified unchanged.
+- Previous12-layout148-state navigation review passed; release syntax and500-file build pass. Production verification follows in the external report.
+
+## 2026-10-25 Local sidepage design alignment
+
+- User requested matching all sidepage designs to the current homepage. Local review only, no commit/push/deploy yet.
+- Add parks/main-aligned.css after existing styles on domestic/ChiangMai/owners; reuse root tokens and supplied brand artwork via parks/branding.js. Ivory/charcoal/taupe, editorial typography, light cards/tables/navigation, monochrome existing icons, photo-backed dark heroes.
+- Manuscript, prices, images and chapter JS remain unchanged; homepage/intro preserved. Build500 public files; checked12 layouts148 chapter states,3 legacy destinations,4 calculator cases, screenshots.
+- Review server http://127.0.0.1:4205/parks/owners.html. Report outside checkout: reports/20261025_사이드_메인스타일/결과.txt.
+
 ## 2026-10-25 Screen view becomes page shortcuts
 
 - User requested replacing mobile/desktop/auto with Intro, Main, Domestic, Overseas, Owner benefits in the existing screen-view picker.

@@ -6,9 +6,10 @@
  const brand=header?.querySelector('.brand');
 
  if(brand){
-  brand.classList.add('text-brand');
+  brand.classList.add('artwork-brand');
   brand.setAttribute('aria-label','마이롯지 홈');
-  brand.innerHTML='<span class="brand-name">MY LODGE</span><span class="brand-tagline">PRIVATE LIFE. GLOBAL CONNECTIONS.</span>';
+  const logo='../assets/brand/mylodge-logo-transparent-20261007.webp';
+  brand.innerHTML=`<span class="logo-symbol" aria-hidden="true"><img src="${logo}" alt="" width="1536" height="1024"></span><span class="logo-wordmark" aria-hidden="true"><img src="${logo}" alt="" width="1536" height="1024"></span>`;
  }
  if(menuButton)menuButton.innerHTML='MENU <span aria-hidden="true">＋</span>';
 
