@@ -1,3 +1,23 @@
+## 2026-10-25 Reviewed sidepages release to MyLodge
+
+- User authorized publishing the reviewed 4203 sidepage integration to MyLodge and its connected Vercel project.
+- Checked remote main56edaa8 immediately before preparing a separate release checkout; no subsequent colleague commits found at preparation time.
+- Restore unified icons39 /107 references, owner13 chapters, domestic11/ChiangMai13 and manuscript v2. Preserve colleague homepage/intro and deployment config byte-for-byte.
+- Preserve all453 current public assets, add46 side assets: build499. Homepage owner-info-hub script is not attached; main content is unchanged.
+- Verified local148 navigation states,36 rendered requirement checks,38 details interactions,4 price cases,3 legacy redirects. Prior mobile edit candidates7 remain follow-up.
+- Known inherited issues: main1/120 copy needs alignment; intro external stairs remain; English/physical-device QA and source product data remain pending.
+- Publish status and live deployment verification are recorded outside source in reports/20261025_MyLodge_사이드반영배포. No project connection/domain change is part of this commit.
+
+## 2026-10-25 Local sidepage-only integration review
+
+- Base MyLodge main56edaa8. Separate archive copy, no Git metadata. No push/deploy/settings changes.
+- Current colleague homepage and villa intro retained byte-for-byte. No owner-info-hub script attached to homepage.
+- Side manuscript v2, owner13 chapters, unified39 icons/107 references, conditions in owner guide, domestic11/ChiangMai13 integrated.
+- Existing shared navigation/dock removal retained; chapter engine adapted to domestic11 and dynamic contents label.
+- Keep all23 colleague-only public assets plus46 side assets. Public manifest addition is packaging, not deployment configuration.
+- Korean reviewed manuscript. English translation still pending. Earlier mobile edit candidates7 are not implemented here.
+- QA results are recorded separately in reports/20261025_MyLodge_사이드통합검토 outside this copy.
+
 ## 2026-10-25 Production root routing correction
 
 - First production deployment f5489de reached Ready at 8YHJ6J6tEjYTy3r85zgjTsjxA5Dt. Domain served all new assets, but root still resolved index.html despite rewrite. Replaced root rewrite with a temporary redirect to intro.html so first visits reliably open the requested black villa intro. Explicit index.html remains homepage entry.

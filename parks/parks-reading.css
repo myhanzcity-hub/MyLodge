@@ -1,0 +1,30 @@
+/* Local regional pages: small visual signposts, concise reading cards. */
+.park-reading-section-icon{display:block;width:64px;height:64px;object-fit:contain;margin:0 0 16px}
+.park-reading-card-icon{display:block;width:48px;height:48px;object-fit:contain;margin:0 0 14px}
+@media(max-width:600px){
+body[data-chiangmai-deck] .story-heading h2{font-size:clamp(25px,6.8vw,31px);line-height:1.45;word-break:keep-all;overflow-wrap:anywhere}
+body[data-chiangmai-deck] .story-heading .story-lead{line-height:1.85;font-size:15px;word-break:keep-all;overflow-wrap:anywhere}
+body[data-chiangmai-deck] .content-grid{gap:14px;grid-template-columns:minmax(0,1fr)}
+body[data-chiangmai-deck] .content-card{min-width:0;padding:20px}
+body[data-chiangmai-deck] .content-card h3{font-size:19px;line-height:1.5;margin:8px 0 10px}
+body[data-chiangmai-deck] .content-card .visual-guide-icon{width:52px;height:52px;object-fit:contain;margin-bottom:14px}
+body[data-chiangmai-deck] .content-card p{margin:8px 0;word-break:keep-all;overflow-wrap:anywhere}
+body[data-chiangmai-deck] .park-reading-section-icon{width:56px;height:56px}
+body[data-chiangmai-deck] .park-reading-card-icon{width:44px;height:44px}
+body[data-chiangmai-deck] .visual-card-details{margin-top:12px;border-top:1px solid #8b9c8a55;padding-top:6px}
+body[data-chiangmai-deck] .visual-card-details summary{min-height:44px;align-content:center}
+body[data-chiangmai-deck] .guide-links{gap:10px;display:flex;flex-direction:column}
+body[data-chiangmai-deck] .guide-links a{min-height:44px;padding:12px 14px;box-sizing:border-box}
+body[data-chiangmai-deck] .visual-guide-tile p{display:block;font-size:13px;line-height:1.65;margin:6px 0 0}
+body[data-chiangmai-deck] .visual-guide-tile{height:auto!important;min-height:170px}
+body[data-chiangmai-deck] .domestic-community-grid>article{display:flex;flex-direction:column;gap:0}
+body[data-chiangmai-deck] .domestic-community-grid>article>div{display:block;padding:18px 0 8px}
+body[data-chiangmai-deck] .domestic-community-grid>article>figure{margin:0}
+body[data-chiangmai-deck] .domestic-community-grid img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+body[data-chiangmai-deck] .park-interior>div,body[data-chiangmai-deck] .park-opening-copy{display:block}
+}
+@media(max-width:600px){
+body[data-chiangmai-deck] #park-services .visual-explainer,body[data-chiangmai-deck] #chiangmai-services .visual-explainer{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;row-gap:5px;padding:18px 0}
+body[data-chiangmai-deck] #park-services .visual-explainer>img,body[data-chiangmai-deck] #chiangmai-services .visual-explainer>img{grid-column:1;grid-row:1/4;width:44px;height:44px;margin:0}
+body[data-chiangmai-deck] #park-services .visual-explainer>p,body[data-chiangmai-deck] #park-services .visual-explainer>h3,body[data-chiangmai-deck] #chiangmai-services .visual-explainer>p,body[data-chiangmai-deck] #chiangmai-services .visual-explainer>h3{grid-column:2;margin:0}
+}

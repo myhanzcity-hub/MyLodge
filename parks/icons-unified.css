@@ -1,0 +1,7 @@
+/* One visual language across all three local side pages. */
+body .unified-content-icon{object-fit:contain!important;aspect-ratio:1;filter:none!important;border:0!important;border-radius:14px!important;box-shadow:none!important;background:transparent!important}
+body .visual-guide-tile .unified-content-icon{width:64px!important;height:64px!important}
+body .content-card>.unified-content-icon,body .owner-card-icon,body .owner-step-icon{width:48px!important;height:48px!important}
+body .story-heading>.unified-content-icon{width:64px!important;height:64px!important}
+body .unified-pain-icon{display:block;width:44px!important;height:44px!important;margin:0 0 14px}
+@media(max-width:600px){body .visual-guide-tile .unified-content-icon,body .story-heading>.unified-content-icon{width:56px!important;height:56px!important}body .content-card>.unified-content-icon,body .owner-step-icon{width:44px!important;height:44px!important}body .owner-guide-detail summary>.unified-content-icon{width:34px!important;height:34px!important}}

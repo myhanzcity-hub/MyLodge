@@ -1,4 +1,4 @@
-// Thirteen chapters using the original nodes, copy, images and existing interactions.
+// Regional chapters using the original nodes, copy, images and existing interactions.
 (()=>{
  'use strict';
  const main=document.querySelector('main');if(!main)return;
@@ -14,9 +14,7 @@
   ['풀장과 프로그램','Pool & programmes','#pool-programme'],
   ['공용 시설','Shared facilities','#domestic-facilities'],
   ['생활 서비스','Everyday services','#park-services'],
-  ['참여 방식','Participation guide','#park-product-guide','.planning-jump'],
   ['파크 구성 안내','Park sections','#park-sections'],
-  ['금액 미리보기','Amount preview','#park-share-preview','#multiple-share-guide'],
   ['오너 이용 안내','Owner guide','#park-owner-guide']
  ]:[
   ['치앙마이 소개','Chiang Mai','.side-hero'],
@@ -52,7 +50,7 @@
  }
  const nav=document.createElement('nav');nav.className='chiangmai-deck-nav';nav.setAttribute('aria-label',en?'Chapter navigation':domestic?'국내 파크 장 이동':'치앙마이 장 이동');
  nav.innerHTML=`<button type="button" class="deck-prev" aria-label="${en?'Previous chapter':'이전 장'}">← <span class="deck-arrow-label">${en?'Previous':'이전'}</span></button><p class="chiangmai-deck-position" role="status" aria-live="polite" aria-atomic="true"></p><button type="button" class="deck-menu" aria-expanded="false" aria-controls="chiangmai-deck-toc">${en?'Contents':'목차'} ☰</button><button type="button" class="deck-next" aria-label="${en?'Next chapter':'다음 장'}"><span class="deck-arrow-label">${en?'Next':'다음'}</span> →</button>`;
- const toc=document.createElement('nav');toc.id='chiangmai-deck-toc';toc.className='chiangmai-deck-toc';toc.hidden=true;toc.setAttribute('aria-label',en?'Thirteen chapters':'13장 전체 목차');
+ const toc=document.createElement('nav');toc.id='chiangmai-deck-toc';toc.className='chiangmai-deck-toc';toc.hidden=true;toc.setAttribute('aria-label',en?`${chapters.length} chapters`:`${chapters.length}장 전체 목차`);
  const prev=nav.querySelector('.deck-prev'),next=nav.querySelector('.deck-next'),menu=nav.querySelector('.deck-menu'),position=nav.querySelector('.chiangmai-deck-position');
  document.body.append(nav,toc);
  let current=0;

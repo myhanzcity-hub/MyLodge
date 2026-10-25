@@ -77,3 +77,6 @@ publicAssets.push('parks/chiangmai-deck.css','parks/chiangmai-deck.js');
 publicAssets.push('assets/video/MainCity.mp4');
 // Publish the existing interactive ownership-to-villa study linked from Ownership & Pricing.
 publicAssets.push('experiments/ownership-villa-diagram/index.html');
+
+// Local reviewed sidepage integration; retain every current homepage asset.
+for (const file of JSON.parse(readFileSync(new URL('./side-review-public-files.json', import.meta.url), 'utf8'))) if (!publicAssets.includes(file)) publicAssets.push(file);

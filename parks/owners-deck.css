@@ -1,0 +1,17 @@
+/* Additive navigation only: existing chapter content and hero styles stay intact. */
+body[data-owners-deck]{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+body[data-owners-deck] main>[hidden],body[data-owners-deck]>footer[hidden]{display:none!important}
+.owners-deck-nav{position:fixed;inset:auto 0 0;z-index:70;display:flex;align-items:center;gap:16px;min-height:74px;padding:10px 28px calc(10px + env(safe-area-inset-bottom,0px));background:#111213;border-top:1px solid #ffffff30;color:#f7f5ed;box-sizing:border-box}
+.owners-deck-nav button{font:inherit;color:inherit;background:transparent;border:1px solid #ffffff30;border-radius:6px;min-height:44px;padding:8px 16px;cursor:pointer}
+.owners-deck-nav button:disabled{opacity:.3;cursor:default}
+.owners-deck-nav button:focus-visible{outline:2px solid #c0e65b;outline-offset:3px}
+.owners-deck-position{flex:1;text-align:center;font-size:13px;margin:0;line-height:1.6}
+.owners-deck-position span{color:#c0e65b;margin-right:12px;font-variant-numeric:tabular-nums}
+.owners-deck-toc{position:fixed;inset:auto 24px calc(86px + env(safe-area-inset-bottom,0px)) auto;z-index:71;background:#171b18;border:1px solid #ffffff30;border-radius:12px;padding:16px;width:min(360px,calc(100vw - 48px));max-height:65dvh;overflow:auto;box-shadow:0 16px 60px #0008}
+.owners-deck-toc[hidden]{display:none}
+.owners-deck-toc button{display:block;width:100%;text-align:left;color:#f7f5ed;background:none;border:0;padding:12px;font:inherit;cursor:pointer;border-radius:5px}
+.owners-deck-toc button[aria-current]{background:#c0e65b;color:#111213}
+@media(prefers-reduced-motion:no-preference){.owners-deck-arrive{animation:owners-page-in .3s ease-out}@keyframes owners-page-in{from{opacity:.5;transform:translateX(var(--deck-direction,35px))}to{opacity:1;transform:translateX(0)}}}
+@media(max-width:600px){.owners-deck-nav{gap:7px;padding-left:10px;padding-right:10px}.owners-deck-nav button{padding:8px 12px;font-size:12px}.owners-deck-position{font-size:11px}.owners-deck-position span{display:block;margin:0}.owners-deck-nav .deck-arrow-label{display:none}}
+
+body[data-owners-deck] main{overflow-x:clip}
