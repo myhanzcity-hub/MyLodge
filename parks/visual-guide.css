@@ -1,0 +1,21 @@
+/* Original MyLodge vector illustrations; reference principle: visual first, details on demand. */
+.visual-first{padding-block:80px;background:radial-gradient(ellipse at 80% 0,#25333670,transparent 60%),#131717}
+.visual-first .story-heading{max-width:760px}.visual-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:38px}
+.side-domestic .visual-guide-grid,.side-owners .visual-guide-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+a.visual-guide-tile{position:relative;display:flex;align-items:center;gap:16px;min-width:0;padding:24px 20px;background:#1e2424;border:1px solid #3d4945;border-radius:24px;text-decoration:none;color:#f0f2e8;transition:transform .25s,border-color .25s,background .25s}
+a.visual-guide-tile:hover{transform:translateY(-5px);background:#28322d;border-color:#b7ca9e}
+a.visual-guide-tile:focus-visible,.visual-card-details summary:focus-visible{outline:3px solid #d4f099;outline-offset:5px}
+img.visual-guide-icon{display:block;flex-shrink:0;width:112px;height:112px;min-height:0;max-width:100%;object-fit:contain;aspect-ratio:1;border:0;border-radius:0;background:none;margin:0;box-shadow:none}
+.visual-guide-tile>div{min-width:0}.visual-guide-tile h3{font-size:20px;line-height:1.5;letter-spacing:-.6px;margin:0 0 9px;color:#f0f2e8}
+.visual-guide-tile p{font-size:13px;line-height:1.75;color:#c3cec7;margin:0;word-break:keep-all;overflow-wrap:anywhere}
+.visual-guide-arrow{display:block;font-size:20px;color:#d5efa8;margin-top:14px;line-height:1}
+.side-domestic a.visual-guide-tile,.side-owners a.visual-guide-tile{flex-direction:column;align-items:flex-start;padding:24px}.side-domestic .visual-guide-icon,.side-owners .visual-guide-icon{width:120px;height:120px}
+.visual-guide-note{font-size:12px;color:#adbdb3;margin:24px 0 0;line-height:1.8}
+.content-card.visual-explainer{padding-top:22px}.visual-explainer>img.visual-guide-icon{width:108px;height:108px;margin-bottom:20px}
+.visual-explainer .visual-card-summary{font-size:15px;line-height:1.8;max-width:38ch}.visual-card-details{margin-top:18px}
+.visual-card-details summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:44px;font-size:12px;font-weight:600;color:#d5efa8;border-top:1px solid #47524c;padding:10px 0}
+.visual-card-details summary::-webkit-details-marker{display:none}.visual-card-details summary::after{content:'+';font-size:21px;font-weight:400}.visual-card-details[open] summary::after{content:'−'}
+.visual-card-details>p{font-size:13px!important;color:#d4dbd5;line-height:1.9!important;margin-top:8px}
+@media(max-width:1100px){.visual-guide-tile{flex-direction:column;align-items:flex-start!important}.visual-guide-grid{gap:14px}.side-domestic .visual-guide-grid,.side-owners .visual-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.visual-first{padding-block:48px}.visual-first .story-heading h2{font-size:30px;letter-spacing:-1.2px}.visual-first .story-lead{font-size:14px}.visual-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:26px}a.visual-guide-tile,.side-domestic a.visual-guide-tile,.side-owners a.visual-guide-tile{padding:16px 14px;border-radius:19px;gap:10px;align-items:flex-start;flex-direction:column}img.visual-guide-icon,.side-domestic .visual-guide-icon,.side-owners .visual-guide-icon{width:90px;height:90px}.visual-guide-tile h3{font-size:17px;margin-bottom:8px;letter-spacing:-.6px}.visual-guide-tile p{font-size:12px;line-height:1.7}.visual-guide-arrow{margin-top:12px;font-size:18px}.visual-guide-note{font-size:11px}.content-card.visual-explainer{display:grid;grid-template-columns:74px minmax(0,1fr);gap:0 16px;padding-block:24px}.visual-explainer>img.visual-guide-icon{grid-column:1;grid-row:1/5;width:74px;height:74px;margin:0}.visual-explainer>:not(img){grid-column:2}.visual-explainer h3{font-size:21px}.visual-explainer .eyebrow{margin-bottom:10px}.visual-explainer .visual-card-summary{font-size:13px;margin-bottom:0}.visual-card-details{margin-top:12px}.visual-card-details>p{font-size:12px!important}.visual-explainer .visual-card-details summary{font-size:12px}}
+@media(prefers-reduced-motion:reduce){a.visual-guide-tile{transition:none}a.visual-guide-tile:hover{transform:none}}

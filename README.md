@@ -1,3 +1,20 @@
+# MyLodegePlatform — integrated release, 2026-10-24
+
+## Current implementation / 현재 구현
+
+- User-approved integration: preserve Hojiakbar's homepage and intro from `feature/hojiakbar-homepage` (b8a4ddd), add 연서흠's reviewed domestic/Chiang Mai/owner subpages.
+- Homepage: `/` uses `intro.html`; `/index.html` serves Hojiakbar's unchanged homepage. Sidepages: `/parks/domestic-villas.html`, `/parks/business-valley.html`, `/parks/owners.html`.
+- Old root sidepage URLs continue to redirect, preserving query and hash in local wrappers.
+- Run `npm run build`; publish `dist/` only. Build excludes documents, backups, recordings, original image files and demo administration.
+- Sidepages include director v1.1 / Oct 22 meeting content, USD prices and five payments, service costs, informational share calculator, bilingual content, updated photos/icons and mobile-first layout.
+- Member authentication, actual applications, contracts, cash/LC reconciliation, ownership verification, booking and SWAP are not connected.
+- The prior `MyLodge-current-20261023.zip` and `RELEASE-20261023.txt` remain preserved in main as historical materials; neither is publicly deployed.
+- Production target: https://my-lodge-business.vercel.app/
+
+## Historical homepage README / 아래는 이전 버전의 원문 안내
+
+The following original README is retained for context. Its old branch/release descriptions are historical; the integration notes above take precedence.
+
 # MyLodge · 마이롯지
 
 별장과 파크에서의 휴식, 만남, 새로운 일상을 소개하는 마이롯지 브랜드 사이트입니다. 별도 진입 인트로에서 메인 페이지로 이어지고, 국내 파크와 치앙마이 상세 페이지를 살펴볼 수 있습니다.

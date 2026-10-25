@@ -1,0 +1,5 @@
+2026-10-24 integrated source
+Preserve Hojiakbar homepage/intro b8a4ddd byte-for-byte.
+Add reviewed park and owner subpages, images, icons, content and mobile layout.
+Build with npm run build; deploy dist only. Internal materials excluded.
+Actual membership, application, payment, registration verification, booking and SWAP remain unconnected.

@@ -1,3 +1,4 @@
+import {readFileSync} from 'node:fs';
 // The only files included in the public export.
 export const publicAssets = ['index.html', 'styles.css', 'app.js', 'tokens.css', 'luxury-system.css', 'navbar-refinement.css', 'navbar-premium.css', 'our-story-refinement.css', 'owner-cards-refinement.css'];
 publicAssets.push('intro.html','arrival-intro.css','arrival-intro.js');
@@ -59,3 +60,11 @@ publicAssets.push('hero-editorial.css', 'hero-editorial.js', 'gsap.min.js', 'Scr
 publicAssets.push('vision-square-reveal.js');
 publicAssets.push('ownership-story.css');
 publicAssets.push('assets/video/Beach2.mp4');
+
+// Reviewed sidepages; public assets only. John's homepage files remain unchanged.
+for (const file of JSON.parse(readFileSync(new URL('./sidepage-public-files.json', import.meta.url), 'utf8'))) if (!publicAssets.includes(file)) publicAssets.push(file);
+
+// Standalone procedural intro; homepage runtime stays independent.
+publicAssets.push('entry-3d/intro.css','entry-3d/intro.js','entry-3d/intro-scene.js','entry-3d/villa-reference-model.js','entry-3d/vendor/three.module.js','entry-3d/vendor/three.core.js','entry-3d/vendor/THREE-LICENSE.txt');
+
+publicAssets.push('parks/chiangmai-deck.css','parks/chiangmai-deck.js');

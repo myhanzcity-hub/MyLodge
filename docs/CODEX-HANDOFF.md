@@ -1,3 +1,90 @@
+## 2026-10-25 Integrate MyLodge_Business into MyLodge
+
+- Target: myhanzcity-hub/MyLodge main at b70c86bf7f10b24d6229fccb29d24bc19f763f81. Source: IMT-Group-Account/MyLodge_Business main at c2479b3b1f1695d54d583f18ccb526e3b0d0f5cd.
+- Prepared a conflict-free history-preserving merge on codex/integrate-mylodge-20261025 in a separate worktree. Source working directory and both remote main branches are unchanged.
+- Source site files are preserved; target index.html, app.js and styles.css match exactly. Root opens the black villa/pool 3D intro, then enters index.html. Domestic, Chiang Mai and owner pages remain included.
+- Disabled automatic deployment for this integration branch. Production main merge/deployment remains pending separate instruction.
+- Validation: syntax check passed, workflow 9/9 passed, public build 430 files passed. Browser visibly rendered the requested villa/pool intro and touch began transformation. Full coin-to-home transition and mobile browser QA remain pending.
+- Upload blocked at preparation time: Git authenticates as IMT-Group-Account without write permission to target. User offered permission; requested target repository invitation. No credentials stored in project.
+
+## 2026-10-24 Restore visible primary desktop navigation
+
+- User requested the visible top Home/Korea/Abroad/Owner navigation from their reference. The prior 1024px breakpoint collapsed this into MENU at 943px. Updated shared park theme to retain primary navigation at 800px and wider, with compact 800-1100px sizing; smaller phones retain the existing menu.
+- Chapter navigation and removed mobile destination dock are unchanged. Applies consistently to domestic, Chiang Mai and owner pages.
+
+## 2026-10-24 Domestic chapter layout refinement
+
+- Preserved first-screen hero and existing copy/images. Chapter 2 now begins with overview heading/cards, followed by park introductions and a compact expandable image/planning notice. Duplicate in-page directory is visually removed in deck mode; bottom contents and header navigation remain.
+- Chapter 10 now begins with its heading and two balanced park cards. Related links are consolidated after the content, with duplicate destinations removed. Former top jump strip is hidden after its unique links are moved into the related links.
+- Scoped domestic chapter spacing, card padding, heading rhythm and mobile single-column reading; Chiang Mai styling unchanged.
+- Verified 1440x900 chapter 10 screenshot and 390x844 chapters 2/10 screenshots, title-first order, no horizontal overflow and five unique related destinations. First-screen HTML unchanged. Physical-device swipe not tested. Target remains imtg-roup/my-lodge-business.
+
+## 2026-10-24 Domestic thirteen-chapter deck and mobile dock removal
+
+- Reused the Chiang Mai deck for domestic-villas.html with thirteen chapters. Original HTML content, first-screen hero, images, copy and calculator preserved; only opt-in and asset references added. Directory/overview/park selector share chapter 2; amount preview/multiple shares share chapter 12.
+- Removed the mobile fixed Korea/Abroad/Owner guide dock from the shared mobile layout, including owner pages; removed its reserved bottom padding. Existing header menus remain.
+- Verified original domestic HTML preservation; all 13 next transitions, contents, Korean/English and existing calculator display; 390x844 no horizontal overflow and no dock; owners bottom padding 0 and no dock; Chiang Mai chapter 13 unchanged. Syntax/check, workflow 9/9 and public build passed. Physical-device swipe not tested.
+- Deployment target remains IMTGroup/my-lodge-business through origin IMT-Group-Account/MyLodge_Business main. Previous deployment 63008ad was Ready and target production JS/CSS/HTML matched local with line endings normalized.
+
+## 2026-10-24 Correct deployment target: IMTGroup my-lodge-business
+
+- Found the requested project in Chrome profile donationschool.com, signed in as imt-group-account. The City profile showed 404. Always use the matching profile for this project.
+- Target Vercel project is https://vercel.com/imtg-roup/my-lodge-business, production domain my-lodge-business.vercel.app, connected repository IMT-Group-Account/MyLodge_Business, production branch main.
+- Corrected origin to that repository; retained former myhanzcity-hub repository as previous-origin. Scoped Git credentials to the already authenticated IMT-Group-Account via gh and repository author to its verified noreply identity. VS Code push/sync now uses the intended origin.
+- Merged original origin/main README-only changes without discarding content or rewriting history. The existing local product changes, including 13 chapters and preserved first-page design, are included. Verify target deployment and production page after push.
+
+## 2026-10-24 Repository-specific Git identity and deployment diagnosis
+
+- Browser confirms the signed-in user owns myhanzcity-hub/MyLodegePlatform and Vercel myhanzcity-hub/my-lodege-platform. Requested imtg-roup/my-lodge-business remains inaccessible in this session; it is not the currently connected project.
+- Latest Git deployment was blocked because PC-wide Git author kenitoa is not the Hobby project owner. Set this repository only to the signed-in owner myhanzcity-hub, using verified public GitHub ID 346131387 and its noreply email. Global configuration and historical commits are unchanged.
+- main push triggered Production deployment 9Uop7NiyB9KBnQcn2uC7mruiAu2c from c279dff; browser confirmed Ready. Live my-lodege-platform.vercel.app renders chapter 13/13. Deployed deck JS/CSS and HTML match local content after line-ending normalization; root, index, domestic and owner routes return 200. Requested imtg-roup project remains unverified.
+
+## 2026-10-24 Requested Vercel deployment target
+
+- User explicitly requests future commit-and-push / sync to deploy to https://vercel.com/imtg-roup/my-lodge-business. Local main tracks origin/main at myhanzcity-hub/MyLodegePlatform. Existing VS Code git.postCommitCommand is push; main deployment is now explicitly enabled in vercel.json; handoff branch remains disabled.
+- Vercel currently shows 404 for the requested project under the logged-in account. Project Git repository and production branch cannot be verified until an account with access opens the project. Repository configuration alone cannot establish that server-side project connection. Do not report production deployment as verified.
+
+## 2026-10-24 Separate community ending as chapter 13
+
+- User requested the pictured existing global business community ending as a separate page. Deck now has 13 chapters: chapter 12 owner guide, chapter 13 unchanged community ending, image, copy and link. Original page HTML/CSS unchanged in this update.
+- Navigation count, contents and last-page boundary updated. Verified deck syntax, public build and browser chapter 12/13 separation. No commit, push or deployment.
+
+## 2026-10-24 Chiang Mai twelve-chapter navigation
+
+- Added a scoped 12-chapter deck to parks/business-valley.html. Original HTML content, hero, copy and images are preserved; only stylesheet/script references and an opt-in body attribute were added.
+- Original sections are reused, with directory/overview together on chapter 2 and owner/community together on chapter 12. Fixed previous/next, chapter count, contents, keyboard arrows and touch swipe; native vertical reading remains.
+- Existing anchor links and URL hashes open the appropriate chapter; Korean/English labels and reduced-motion supported. Chiang Mai bypasses the former mobile section reordering/dock to prevent navigation collisions; other park pages unchanged.
+- Verified original HTML preservation, deck syntax, npm run check, workflow 9/9, public build (430 files), live browser next through chapter 12 and contents return to chapter 1. Physical touch-device swipe not verified. No commit, push or deployment.
+
+## 2026-10-24 Touch hint proximity refinement
+
+- Moved villa hint inward using 38% of projected model width, matching user marked reference. Coin hint moved inward and slightly upward. Check mobile bubble/finger bounds at both idle and ready stages.
+
+## 2026-10-24 Object-attached Touch hint
+
+- Removed viewport-corner button chrome; finger and Touch! bubble now follow the projected villa/coin upper-right edge. Hidden during transformation. Coin and accessible hint both enter the unchanged homepage.
+
+## 2026-10-24 Tap-only intro update
+
+- Replaced scrolling with villa tap → automatic particle/coin animation. A second coin or upper-right finger icon tap enters the preserved homepage.
+- Removed ENTER label and scroll controls; one viewport, no audio; reduced motion and WebGL fallback supported.
+
+## 2026-10-24 Replace entry intro only
+
+- User requested their villa/pool → particles → coin 3D intro before Hojiakbar homepage.
+- intro.html now loads namespaced entry-3d/ code; index.html and all homepage runtime are preserved.
+- Skip/coin navigation goes to index.html and preserves query/hash. No audio. WebGL failure retains simple entry controls; reduced-motion uses direct progress.
+- Public manifest includes locally vendored Three.js with MIT license.
+
+## 2026-10-24 Sidepage integration; preserve Hojiakbar homepage
+
+- User explicitly chose to preserve Hojiakbar's homepage from feature/hojiakbar-homepage (b8a4ddd).
+- Added reviewed domestic, Chiang Mai and owner pages under parks/, with their scoped styles, icons, responsive layouts and public WebP assets.
+- Existing root domestic/business/owner URLs redirect to parks/ and preserve query/hash in local wrappers. Main links continue to work.
+- Homepage, intro and root runtime files are unchanged. Public build manifest includes sidepages; internal reports, recordings, originals and credentials are excluded.
+- Based on director v1.1 and Oct 22 meeting records. Actual membership, contracts, receipts, booking and SWAP remain unconnected. Mobile/table/calculator QA is recorded in the local Oct 24 audit package.
+- GitHub update and production deployment requested. Verify final deployment status before reporting completion.
+
 ## 2026-10-22 Hero 스크롤 영상 효과 취소
 
 - 사용자 요청으로 작업 중이던 ScrollTrigger 영상 스크러빙·pin 변경을 취소하고 `backups/before-hero-video-scrub-20261022/`의 `hero-editorial.js/css`로 복원했다. 기존 영상 재생·일시정지와 Hero 동작을 유지한다.
