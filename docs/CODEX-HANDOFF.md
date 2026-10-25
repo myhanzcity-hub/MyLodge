@@ -1,3 +1,9 @@
+## 2026-10-25 Screen view becomes page shortcuts
+
+- User requested replacing mobile/desktop/auto with Intro, Main, Domestic, Overseas, Owner benefits in the existing screen-view picker.
+- Root-aware URLs derive from script location; old frame/view parameters are omitted; EN menu labels follow the document language. Existing side manuscript continues forcing Korean as before.
+- Main/intro content and side designs unchanged. Verified8 language/viewport combinations320/390/768/1440 and10 real navigation clicks390/1440; build499 and syntax passed.
+
 ## 2026-10-25 Intro skip hit target fix
 
 - Live skip inherited pointer-events:none from intro-top; pointer hits reached intro-canvas instead of skip.

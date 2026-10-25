@@ -1,33 +1,28 @@
-// Screen layout selection belongs to the category navigation.
+// Page shortcuts share the existing screen-view navigation UI.
 (() => {
  'use strict';
- const embedded=new URLSearchParams(location.search).get('screen-frame');
- const mode=embedded||'auto';
+ const base=new URL('.',document.currentScript.src);
+ const pages=[
+  ['intro','intro.html','인트로','Intro'],
+  ['main','index.html#home','메인','Main'],
+  ['domestic','parks/domestic-villas.html','국내','Domestic'],
+  ['overseas','parks/business-valley.html','해외','Overseas'],
+  ['owners','parks/owners.html','오너 혜택','Owner benefits']
+ ];
  function destination(value){
-  const url=new URL(location.href);
-  const page=url.pathname.split('/').pop();
-  url.searchParams.delete('screen-frame');
-  if(value==='auto'){
-   url.pathname=url.pathname.replace(/[^/]*$/,['domestic-villas.html','business-valley.html'].includes(page)?page:'index.html');
-   url.searchParams.delete('view');
-   url.searchParams.delete('page');
-  }else{
-   url.pathname=url.pathname.replace(/[^/]*$/,'view.html');
-   url.searchParams.set('view',value);
-   if(['domestic-villas.html','business-valley.html'].includes(page))url.searchParams.set('page',page);
-   else url.searchParams.delete('page');
-  }
+  const url=new URL(pages.find(page=>page[0]===value)[1],base);
+  if(document.documentElement.lang==='en')url.searchParams.set('lang','en');
   return url.href;
  }
  function update(){
   const en=document.documentElement.lang==='en';
   document.querySelectorAll('.screen-view-picker').forEach(picker=>{
    picker.querySelector('.screen-view-label').textContent=en?'Screen view':'화면 보기';
-   const names=en?['Mobile view','Desktop view','Automatic']:['모바일 화면','데스크톱 화면','자동'];
    picker.querySelectorAll('a').forEach((link,i)=>{
-    link.textContent=names[i];
+    link.textContent=pages[i][en?3:2];
     link.href=destination(link.dataset.screenView);
-    link.setAttribute('aria-current',link.dataset.screenView===mode?'true':'false');
+    if(new URL(link.href).pathname===location.pathname)link.setAttribute('aria-current','page');
+    else link.removeAttribute('aria-current');
    });
   });
  }
@@ -40,7 +35,7 @@
   summary.innerHTML='<svg class="screen-view-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="screen-view-label"></span><svg class="screen-view-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>';
   picker.append(summary);
   const choices=document.createElement('div');choices.className='screen-view-options';
-  for(const value of ['mobile','desktop','auto']){
+  for(const [value] of pages){
    const link=document.createElement('a');link.dataset.screenView=value;link.target='_top';
    link.addEventListener('click',()=>{link.href=destination(value);});choices.append(link);
   }
@@ -49,6 +44,7 @@
   else host.append(picker);
   picker.addEventListener('toggle',()=>{
    if(picker.open){
+    update();
     document.querySelectorAll('.screen-view-picker').forEach(other=>{if(other!==picker)other.open=false;});
     const language=document.querySelector('.language-slot');if(language)language.open=false;
    }
