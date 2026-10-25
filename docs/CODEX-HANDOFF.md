@@ -1,3 +1,9 @@
+## 2026-10-25 Homepage deck production release
+
+- User approved Vercel publication of the locally reviewed eight-page homepage. Integrated latest remote main a57ca99 sidepage/quick-link changes; runtime files do not conflict. Preserved both handoff records.
+- Publish homepage-deck.js/css, index references and public manifest. Root black intro, original pricing/gallery runtime and latest sidepages remain preserved. Production target myhanzcity-hub/myhanzcity-hub; canonical and legacy redirect domains.
+- Prior local QA: 64 responsive page states, bilingual navigation, Suite and facility controls, build 502. Release checks and live verification follow.
+
 ## 2026-10-25 Local eight-page homepage preview
 
 - User authorized local implementation only. Separate worktree MyLodge-local-deck-20261025 based on latest canonical MyLodge main dc2cf5c; original checkout preserved. No commit, push or deployment.
@@ -5,6 +11,20 @@
 - Fixed bottom previous/count/contents/next, header anchors, history, keyboard arrows, reduced-motion and guarded touch navigation. Native vertical reading retained; existing gallery and pricing controls preserved.
 - Syntax/check and workflow 9/9 pass; build 502 public files. Browser 64 language/width/page states at 320/390/768/1440 show no horizontal overflow; tested header navigation, back, keyboard, contents, Suite selection and facility tab. Final owner-heading check <=2 lines across all widths/languages. Long contractual/planning disclosures and existing option help retained without clipping; physical touch swipe not tested.
 - Local server http://127.0.0.1:4173/ retains black villa intro; /index.html opens deck. Evidence docs/review/homepage-deck-20261025/.
+## 2026-10-25 Approved reading refinements release
+
+- User approved GitHub/Vercel publication of local reading improvements1-3 and Quick links label.
+- Remote main dc2cf5c checked; no newer colleague commits. Side annual-use/concierge copy, larger links and progressive price guidance only; financial conditions/tables/calculator and chairman wording preserved.
+- view-mode.js differs only in Korean/English picker label (Quick links). Homepage files and procedural intro are unchanged; deployment configuration unchanged.
+- Prior local36 requirement checks,111 mobile chapter/icon states,40 disclosures,4 calculator cases passed. Release syntax/build500 passed.
+
+## 2026-10-25 Local reading refinements after mobile audit
+
+- User authorized follow-ups1-3 locally only. No commit/push/deploy.
+- Plain Korean annual-use label and concierge copy on sidepages. Price chapter shows1-share scope then calculator; existing extra-cost/payment/regional conditions moved intact to a labeled disclosure. Tables, prices, calculator and chairman mandated copy retained.
+- Side links13-14px with44-48px targets. Main, intro and Vercel configuration unchanged.
+- Validation:36 rendered requirement checks,111 mobile chapter/icon states,40 disclosure interactions,4 calculator cases pass. Parallel local loading initially failed; standalone reruns pass. Report: reports/20261025_가독성보완_로컬검토.
+- Review http://127.0.0.1:4205/parks/owners.html#price-guide.
 
 ## 2026-10-25 Approved sidepage design release
 
