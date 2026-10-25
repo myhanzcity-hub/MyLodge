@@ -1,3 +1,9 @@
+## 2026-10-25 Intro skip hit target fix
+
+- Live skip inherited pointer-events:none from intro-top; pointer hits reached intro-canvas instead of skip.
+- Restore pointer-events:auto only on intro-skip. Preserve all homepage, scene, sidepage and deployment configuration files.
+- Verified real pointer clicks at320/390/430/1440; mobile taps during transformation, ready and fallback; keyboard Enter; normal coin entry. Query/hash preserved. Syntax/build499 and workflow9/9 passed.
+
 ## 2026-10-25 Reviewed sidepages release to MyLodge
 
 - User authorized publishing the reviewed 4203 sidepage integration to MyLodge and its connected Vercel project.
