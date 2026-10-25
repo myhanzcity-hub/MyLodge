@@ -1,0 +1,45 @@
+/* Reviewed photograph cards: generous spacing and aligned actions, sidepages only. */
+body.side-page #side-parks .park-grid{gap:40px;align-items:stretch}
+body.side-page #side-parks .park-card{display:flex;flex-direction:column;min-width:0}
+body.side-page #side-parks .park-card>figure{margin:0;aspect-ratio:16/10}
+body.side-page #side-parks .park-card>figure img{display:block;width:100%;height:100%;object-fit:cover}
+body.side-page #side-parks .park-copy{display:flex;flex:1;flex-direction:column;align-items:flex-start;gap:16px;padding:28px 0 0}
+body.side-page #side-parks .park-copy :is(h3,p){margin:0}
+body.side-page #side-parks .park-number{margin:0}
+body.side-page #side-parks .park-copy h3{line-height:1.45}
+body.side-page #side-parks .park-copy p{line-height:1.85;min-height:3.7em}
+body.side-page #side-parks .domestic-card-link{margin:8px 0 0;min-height:48px;padding:12px 20px;border:1px solid #b7ada0;box-sizing:border-box}
+body.side-page #side-parks .park-copy>.domestic-card-link{margin-top:auto}
+body.side-page :is(#park-services,#park-sections,#park-owner-guide) .content-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-block:32px;align-items:stretch}
+body.side-page article.content-card.feedback-photo-card{display:flex;flex-direction:column;min-width:0;padding:0!important;overflow:hidden;background:#fffdf9;border:1px solid #d8d2c9;border-radius:12px}
+body.side-page .feedback-photo-card .feedback-card-media{position:relative;flex:none;width:100%;height:auto;min-width:0;aspect-ratio:16/10;margin:0;overflow:hidden}
+body.side-page .feedback-photo-card img.feedback-card-photo{display:block;width:100%;height:100%;max-width:100%;min-height:0;object-fit:cover;aspect-ratio:auto;border:0;border-radius:0;margin:0}
+body.side-page .feedback-photo-card .feedback-card-body{display:flex;flex:1;flex-direction:column;align-items:flex-start;min-width:0;padding:28px;gap:14px}
+body.side-page .feedback-card-body>img.unified-content-icon{width:40px!important;height:40px!important;flex:none;margin:0!important}
+body.side-page .feedback-card-body .eyebrow{font-size:10px;line-height:1.6;letter-spacing:1.3px;margin:0}
+body.side-page .feedback-card-body h3{font-size:22px;line-height:1.5;min-height:3em;margin:0;word-break:keep-all;overflow-wrap:anywhere}
+body.side-page .feedback-card-body>p:not(.eyebrow){font-size:14px;line-height:1.85;margin:0;word-break:keep-all;overflow-wrap:anywhere}
+body.side-page #park-sections .feedback-card-body h3{min-height:0}
+body.side-page .feedback-card-body>.visual-card-details{align-self:stretch;width:100%;margin-top:auto;padding-top:18px;border-top:1px solid #d8d2c9;box-sizing:border-box}
+body.side-page .feedback-card-body>.visual-card-details summary{min-height:44px;font-size:13px}
+body.side-page .feedback-card-action{margin-top:auto;padding-top:16px;width:100%}
+body.side-page .feedback-card-action a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:12px 0;color:#171717;border-top:1px solid #b7ada0;font-size:14px;font-weight:500;line-height:1.6;text-decoration:none;box-sizing:border-box}
+body.side-page .feedback-card-action a:hover{text-decoration:underline;text-underline-offset:5px}
+body.side-page :is(#park-services,#park-sections,#park-owner-guide) .story-heading{margin-bottom:0}
+body.side-page #park-services>.container>.guide-links{margin-top:32px}
+@media(max-width:1000px){
+ body.side-page :is(#park-services,#park-sections,#park-owner-guide) .content-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+ body.side-page .feedback-photo-card .feedback-card-body{padding:24px}
+ body.side-page .feedback-card-body h3{font-size:21px}
+}
+@media(max-width:600px){
+ body.side-page #side-parks .park-grid{gap:36px}
+ body.side-page #side-parks .park-copy{padding-top:22px;gap:14px}
+ body.side-page #side-parks .park-copy p{min-height:0}
+ body.side-page #side-parks .park-copy>.domestic-card-link{margin-top:6px}
+ body.side-page :is(#park-services,#park-sections,#park-owner-guide) .content-grid{grid-template-columns:minmax(0,1fr);gap:24px;margin-block:26px}
+ body.side-page .feedback-photo-card .feedback-card-body{padding:24px;gap:14px}
+ body.side-page .feedback-card-body h3{font-size:22px;min-height:0}
+ body.side-page .feedback-card-body>p:not(.eyebrow){font-size:15px;line-height:1.8}
+ body.side-page .feedback-card-action{padding-top:12px}
+}

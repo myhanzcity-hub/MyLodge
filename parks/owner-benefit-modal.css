@@ -1,0 +1,55 @@
+body.side-page dialog.owner-benefit-modal{position:fixed;inset:0;width:min(820px,calc(100vw - 48px));max-width:none;max-height:calc(100dvh - 48px);padding:0;margin:auto;border:1px solid #d8d2c9;border-radius:18px;background:#f7f5f0;color:#171717;box-shadow:0 24px 100px #0005;overflow:hidden;box-sizing:border-box}
+body.side-page dialog.owner-benefit-modal[open]{display:flex;flex-direction:column}
+.owner-benefit-modal::backdrop{background:#101515a6;backdrop-filter:blur(5px)}
+body.side-page .owner-benefit-header{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 28px 0;flex:none}
+body.side-page .owner-benefit-header .eyebrow{font-size:10px;letter-spacing:1.7px;line-height:1.6;margin:0;color:#69645e}
+body.side-page .owner-benefit-modal button{font:inherit;cursor:pointer}
+body.side-page .owner-benefit-close{display:flex;align-items:center;gap:10px;min-height:44px;background:transparent;border:0;color:#171717;font-size:13px!important;padding:6px}
+body.side-page .owner-benefit-close span{font-size:24px;line-height:1}
+body.side-page .owner-benefit-scroll{padding:12px 32px 20px;overflow-y:auto;overscroll-behavior:contain;min-height:0}
+body.side-page .owner-benefit-scroll h2{font-size:30px;line-height:1.35;letter-spacing:-1px;margin:0 0 14px;word-break:keep-all}
+body.side-page .owner-benefit-lead{font-size:15px;line-height:1.8;margin:0 0 24px;color:#57524d}
+body.side-page .owner-benefit-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0}
+body.side-page .owner-benefit-steps li{padding-top:16px;border-top:1px solid #b7ada0;min-width:0}
+body.side-page .owner-benefit-steps li>span{display:block;font-size:12px;color:#80766a;margin-bottom:12px}
+body.side-page .owner-benefit-steps h3{font-size:18px;line-height:1.5;margin:0 0 10px;letter-spacing:-.5px}
+body.side-page .owner-benefit-steps p{font-size:14px;line-height:1.75;margin:0;color:#57524d;word-break:keep-all}
+body.side-page .owner-benefit-note{font-size:13px;line-height:1.8;background:#eee9e1;padding:14px 16px;margin:24px 0 0;border-radius:8px;color:#57524d}
+body.side-page .owner-benefit-details{margin-top:12px;border-bottom:1px solid #d8d2c9}
+body.side-page .owner-benefit-details summary{font-size:13px;min-height:44px;align-content:center;cursor:pointer}
+body.side-page .owner-benefit-details p{font-size:13px;line-height:1.85;margin:0 0 16px;color:#57524d}
+body.side-page .owner-benefit-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 0 20px}
+body.side-page .owner-benefit-facts>div{border-top:1px solid #b7ada0;padding-top:12px}
+body.side-page .owner-benefit-facts dt{font-size:12px;color:#69645e;margin:0 0 8px}
+body.side-page .owner-benefit-facts dd{font-size:18px;line-height:1.5;margin:0;word-break:keep-all}
+body.side-page .owner-benefit-prices{border-collapse:collapse;width:100%;font-size:14px;table-layout:fixed}
+body.side-page .owner-benefit-prices caption{text-align:left;font-size:12px;color:#69645e;margin-bottom:8px}
+body.side-page .owner-benefit-prices :is(th,td){padding:10px 8px;border-bottom:1px solid #d8d2c9;line-height:1.5;color:#171717;background:transparent;white-space:normal}
+body.side-page .owner-benefit-prices th{text-align:left;font-weight:500}
+body.side-page .owner-benefit-prices td{text-align:right;font-variant-numeric:tabular-nums}
+body.side-page .owner-benefit-prices thead th:not(:first-child){text-align:right}
+body.side-page dialog.owner-benefit-modal .owner-benefit-footer{display:flex;align-items:center;justify-content:space-between;flex:none;gap:16px;padding:16px 32px;background:#f7f5f0;border-top:1px solid #d8d2c9;margin:0}
+body.side-page dialog.owner-benefit-modal .owner-benefit-more{color:#171717;font-size:13px;line-height:1.6;text-decoration:underline;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
+body.side-page .owner-benefit-done{background:#171717;color:#f7f5f0;border:1px solid #171717;min-height:44px;padding:10px 24px;font-size:14px}
+@media(max-width:600px){
+ body.side-page dialog.owner-benefit-modal{width:calc(100vw - 24px);max-height:calc(100dvh - 24px);border-radius:14px}
+ body.side-page .owner-benefit-header{padding:12px 18px 0;gap:10px}
+ body.side-page .owner-benefit-header .eyebrow{font-size:9px;letter-spacing:1px}
+ body.side-page .owner-benefit-scroll{padding:8px 20px 16px}
+ body.side-page .owner-benefit-scroll h2{font-size:24px;margin-bottom:12px}
+ body.side-page .owner-benefit-lead{font-size:14px;line-height:1.75;margin-bottom:16px}
+ body.side-page .owner-benefit-steps{grid-template-columns:1fr;gap:12px}
+ body.side-page .owner-benefit-steps li{display:flex;gap:16px;padding-top:12px}
+ body.side-page .owner-benefit-steps li>span{margin:3px 0 0;flex:0 0 22px}
+ body.side-page .owner-benefit-steps h3{font-size:16px;margin-bottom:4px}
+ body.side-page .owner-benefit-steps p{font-size:13px;line-height:1.65}
+ body.side-page .owner-benefit-note{font-size:12px;padding:12px;margin-top:16px}
+ body.side-page .owner-benefit-facts{gap:10px;margin-bottom:16px}
+ body.side-page .owner-benefit-facts dt{font-size:11px}
+ body.side-page .owner-benefit-facts dd{font-size:14px}
+ body.side-page .owner-benefit-prices{font-size:13px}
+ body.side-page .owner-benefit-prices :is(th,td){padding:8px 4px}
+ body.side-page dialog.owner-benefit-modal .owner-benefit-footer{padding:12px 20px;gap:12px}
+ body.side-page dialog.owner-benefit-modal .owner-benefit-more{font-size:12px}
+ body.side-page .owner-benefit-done{padding-inline:20px}
+}

@@ -86,3 +86,9 @@ publicAssets.push("parks/main-aligned.css");
 publicAssets.push('homepage-deck.css','homepage-deck.js');
 
 publicAssets.push("parks/owner-main-content.css","parks/owner-main-content.js","parks/owner-editorial.css","parks/owner-editorial.js");
+
+// Local photograph-card feedback review.
+publicAssets.push("parks/feedback-photo-cards.css");
+publicAssets.push("parks/assets/images/feedback-barbecue-20261025-480.webp","parks/assets/images/feedback-barbecue-20261025-960.webp","parks/assets/images/feedback-campfire-20261025-480.webp","parks/assets/images/feedback-campfire-20261025-960.webp","parks/assets/images/feedback-cart-20261025-480.webp","parks/assets/images/feedback-cart-20261025-960.webp","parks/assets/images/feedback-concierge-20261025-480.webp","parks/assets/images/feedback-concierge-20261025-960.webp","parks/assets/images/feedback-couple-20261025-480.webp","parks/assets/images/feedback-couple-20261025-960.webp","parks/assets/images/feedback-delivery-20261025-480.webp","parks/assets/images/feedback-delivery-20261025-960.webp","parks/assets/images/feedback-family-20261025-480.webp","parks/assets/images/feedback-family-20261025-960.webp","parks/assets/images/feedback-gift-20261025-480.webp","parks/assets/images/feedback-gift-20261025-960.webp");
+
+publicAssets.push("parks/owner-benefit-modal.css","parks/owner-benefit-modal.js");

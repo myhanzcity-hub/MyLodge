@@ -1,3 +1,18 @@
+## 2026-10-25 Photograph cards and benefit dialogs release
+
+- User approved publishing local4210 photo cards and3 owner benefit dialogs. Base origin/main095412d unchanged at release check. Preserve all colleague main/intro content and Vercel configuration.
+- Generated8 photographs; responsive image variants included. Native gift/SWAP/ownership summaries retain latest prices/conditions; keyboard/scroll restoration and cached guidance-script conflict addressed.30 layout combinations and36 modal combinations passed.
+
+## 2026-10-25 Owner benefit summary dialogs (local)
+
+- Three owner guide actions on domestic/Chiang Mai now open native accessible dialogs: gift, SWAP, ownership/prices. Based on director plan v1.1 O02/O03/M02, retaining later approved USD price/options and annual stay terms. Collapsed terms, detailed owner-page link, close/Escape/backdrop, focus return, body scroll lock.
+- Owner info scrubber excludes dialog subtree so numeric/conditional text remains intact. No main/intro/GitHub/deployment changes.
+
+## 2026-10-25 Photograph-card feedback review (local only)
+
+- Widen and align park summaries and card spacing. Add8 generated concept photographs and6 existing image uses across domestic services/sections/owner guide; apply owner guide card style to Chiang Mai equivalent. Preserve text, conditions, icons, destinations and deck engines. Move3 owner-guide actions into corresponding cards.
+- Local review only; no Git operations or deployment. Main/intro untouched. Image prompts and originals: reports/20261025_사진카드_피드백.
+
 ## 2026-10-25 Sidepage production integration
 
 - Based on colleague main2535702. Preserve index.html, homepage-deck assets, all main/intro source and Vercel configuration exactly. Integrate locally reviewed owner content/layout, shared side styling, icon/pagination/navigation fixes only. Append4 side assets without removing homepage entries. Original4206 review remains intact.
