@@ -1,3 +1,276 @@
+## 2026-10-25 Requested myhanzcity-hub production deployment
+
+- User authorized deployment to https://myhanzcity-hub.vercel.app/. Verified Vercel project myhanzcity-hub/myhanzcity-hub connects to myhanzcity-hub/MyLodge. It previously tracked feature/hojiakbar-homepage at 4cb4e40, newer than main.
+- Merged this latest homepage history into the integration branch. Kept both public asset lists and SVG/MJS server MIME support; combined handoff records. Latest homepage files match 4cb4e40; intro and parks match c2479b3. Syntax and build pass, 453 public files. No homepage copy/layout authored in this merge.
+- Set Vercel production tracking to main. Production deployment verification pending below.
+
+## 2026-10-25 Integrate MyLodge_Business into MyLodge
+
+- Target: myhanzcity-hub/MyLodge main at b70c86bf7f10b24d6229fccb29d24bc19f763f81. Source: IMT-Group-Account/MyLodge_Business main at c2479b3b1f1695d54d583f18ccb526e3b0d0f5cd.
+- Prepared a conflict-free history-preserving merge on codex/integrate-mylodge-20261025 in a separate worktree. Source working directory and both remote main branches are unchanged.
+- Source site files are preserved; target index.html, app.js and styles.css match exactly. Root opens the black villa/pool 3D intro, then enters index.html. Domestic, Chiang Mai and owner pages remain included.
+- Disabled automatic deployment for this integration branch. Production main merge/deployment remains pending separate instruction.
+- Validation: syntax check passed, workflow 9/9 passed, public build 430 files passed. Browser visibly rendered the requested villa/pool intro and touch began transformation. Full coin-to-home transition and mobile browser QA remain pending.
+- User invited IMT-Group-Account with write permission; invitation accepted and integration branch uploaded to myhanzcity-hub/MyLodge. Remote merge commit 7d61440 matched local. Target main remains b70c86b. No credentials stored in project.
+
+## 2026-10-24 Restore visible primary desktop navigation
+
+- User requested the visible top Home/Korea/Abroad/Owner navigation from their reference. The prior 1024px breakpoint collapsed this into MENU at 943px. Updated shared park theme to retain primary navigation at 800px and wider, with compact 800-1100px sizing; smaller phones retain the existing menu.
+- Chapter navigation and removed mobile destination dock are unchanged. Applies consistently to domestic, Chiang Mai and owner pages.
+
+## 2026-10-24 Domestic chapter layout refinement
+
+- Preserved first-screen hero and existing copy/images. Chapter 2 now begins with overview heading/cards, followed by park introductions and a compact expandable image/planning notice. Duplicate in-page directory is visually removed in deck mode; bottom contents and header navigation remain.
+- Chapter 10 now begins with its heading and two balanced park cards. Related links are consolidated after the content, with duplicate destinations removed. Former top jump strip is hidden after its unique links are moved into the related links.
+- Scoped domestic chapter spacing, card padding, heading rhythm and mobile single-column reading; Chiang Mai styling unchanged.
+- Verified 1440x900 chapter 10 screenshot and 390x844 chapters 2/10 screenshots, title-first order, no horizontal overflow and five unique related destinations. First-screen HTML unchanged. Physical-device swipe not tested. Target remains imtg-roup/my-lodge-business.
+
+## 2026-10-24 Domestic thirteen-chapter deck and mobile dock removal
+
+- Reused the Chiang Mai deck for domestic-villas.html with thirteen chapters. Original HTML content, first-screen hero, images, copy and calculator preserved; only opt-in and asset references added. Directory/overview/park selector share chapter 2; amount preview/multiple shares share chapter 12.
+- Removed the mobile fixed Korea/Abroad/Owner guide dock from the shared mobile layout, including owner pages; removed its reserved bottom padding. Existing header menus remain.
+- Verified original domestic HTML preservation; all 13 next transitions, contents, Korean/English and existing calculator display; 390x844 no horizontal overflow and no dock; owners bottom padding 0 and no dock; Chiang Mai chapter 13 unchanged. Syntax/check, workflow 9/9 and public build passed. Physical-device swipe not tested.
+- Deployment target remains IMTGroup/my-lodge-business through origin IMT-Group-Account/MyLodge_Business main. Previous deployment 63008ad was Ready and target production JS/CSS/HTML matched local with line endings normalized.
+
+## 2026-10-24 Correct deployment target: IMTGroup my-lodge-business
+
+- Found the requested project in Chrome profile donationschool.com, signed in as imt-group-account. The City profile showed 404. Always use the matching profile for this project.
+- Target Vercel project is https://vercel.com/imtg-roup/my-lodge-business, production domain my-lodge-business.vercel.app, connected repository IMT-Group-Account/MyLodge_Business, production branch main.
+- Corrected origin to that repository; retained former myhanzcity-hub repository as previous-origin. Scoped Git credentials to the already authenticated IMT-Group-Account via gh and repository author to its verified noreply identity. VS Code push/sync now uses the intended origin.
+- Merged original origin/main README-only changes without discarding content or rewriting history. The existing local product changes, including 13 chapters and preserved first-page design, are included. Verify target deployment and production page after push.
+
+## 2026-10-24 Repository-specific Git identity and deployment diagnosis
+
+- Browser confirms the signed-in user owns myhanzcity-hub/MyLodegePlatform and Vercel myhanzcity-hub/my-lodege-platform. Requested imtg-roup/my-lodge-business remains inaccessible in this session; it is not the currently connected project.
+- Latest Git deployment was blocked because PC-wide Git author kenitoa is not the Hobby project owner. Set this repository only to the signed-in owner myhanzcity-hub, using verified public GitHub ID 346131387 and its noreply email. Global configuration and historical commits are unchanged.
+- main push triggered Production deployment 9Uop7NiyB9KBnQcn2uC7mruiAu2c from c279dff; browser confirmed Ready. Live my-lodege-platform.vercel.app renders chapter 13/13. Deployed deck JS/CSS and HTML match local content after line-ending normalization; root, index, domestic and owner routes return 200. Requested imtg-roup project remains unverified.
+
+## 2026-10-24 Requested Vercel deployment target
+
+- User explicitly requests future commit-and-push / sync to deploy to https://vercel.com/imtg-roup/my-lodge-business. Local main tracks origin/main at myhanzcity-hub/MyLodegePlatform. Existing VS Code git.postCommitCommand is push; main deployment is now explicitly enabled in vercel.json; handoff branch remains disabled.
+- Vercel currently shows 404 for the requested project under the logged-in account. Project Git repository and production branch cannot be verified until an account with access opens the project. Repository configuration alone cannot establish that server-side project connection. Do not report production deployment as verified.
+
+## 2026-10-24 Separate community ending as chapter 13
+
+- User requested the pictured existing global business community ending as a separate page. Deck now has 13 chapters: chapter 12 owner guide, chapter 13 unchanged community ending, image, copy and link. Original page HTML/CSS unchanged in this update.
+- Navigation count, contents and last-page boundary updated. Verified deck syntax, public build and browser chapter 12/13 separation. No commit, push or deployment.
+
+## 2026-10-24 Chiang Mai twelve-chapter navigation
+
+- Added a scoped 12-chapter deck to parks/business-valley.html. Original HTML content, hero, copy and images are preserved; only stylesheet/script references and an opt-in body attribute were added.
+- Original sections are reused, with directory/overview together on chapter 2 and owner/community together on chapter 12. Fixed previous/next, chapter count, contents, keyboard arrows and touch swipe; native vertical reading remains.
+- Existing anchor links and URL hashes open the appropriate chapter; Korean/English labels and reduced-motion supported. Chiang Mai bypasses the former mobile section reordering/dock to prevent navigation collisions; other park pages unchanged.
+- Verified original HTML preservation, deck syntax, npm run check, workflow 9/9, public build (430 files), live browser next through chapter 12 and contents return to chapter 1. Physical touch-device swipe not verified. No commit, push or deployment.
+
+## 2026-10-24 Touch hint proximity refinement
+
+- Moved villa hint inward using 38% of projected model width, matching user marked reference. Coin hint moved inward and slightly upward. Check mobile bubble/finger bounds at both idle and ready stages.
+
+## 2026-10-24 Object-attached Touch hint
+
+- Removed viewport-corner button chrome; finger and Touch! bubble now follow the projected villa/coin upper-right edge. Hidden during transformation. Coin and accessible hint both enter the unchanged homepage.
+
+## 2026-10-24 Tap-only intro update
+
+- Replaced scrolling with villa tap → automatic particle/coin animation. A second coin or upper-right finger icon tap enters the preserved homepage.
+- Removed ENTER label and scroll controls; one viewport, no audio; reduced motion and WebGL fallback supported.
+
+## 2026-10-24 Replace entry intro only
+
+- User requested their villa/pool → particles → coin 3D intro before Hojiakbar homepage.
+- intro.html now loads namespaced entry-3d/ code; index.html and all homepage runtime are preserved.
+- Skip/coin navigation goes to index.html and preserves query/hash. No audio. WebGL failure retains simple entry controls; reduced-motion uses direct progress.
+- Public manifest includes locally vendored Three.js with MIT license.
+
+## 2026-10-24 Sidepage integration; preserve Hojiakbar homepage
+
+- User explicitly chose to preserve Hojiakbar's homepage from feature/hojiakbar-homepage (b8a4ddd).
+- Added reviewed domestic, Chiang Mai and owner pages under parks/, with their scoped styles, icons, responsive layouts and public WebP assets.
+- Existing root domestic/business/owner URLs redirect to parks/ and preserve query/hash in local wrappers. Main links continue to work.
+- Homepage, intro and root runtime files are unchanged. Public build manifest includes sidepages; internal reports, recordings, originals and credentials are excluded.
+- Based on director v1.1 and Oct 22 meeting records. Actual membership, contracts, receipts, booking and SWAP remain unconnected. Mobile/table/calculator QA is recorded in the local Oct 24 audit package.
+- GitHub update and production deployment requested. Verify final deployment status before reporting completion.
+## 2026-10-25 Homepage copy rules, localization, and service media
+
+- Added the supplied `MYLODGE_CONTENT_RULES.md` to the repository root (already present) and referenced it from root `AGENTS.md` as a standing homepage instruction.
+- Restored Concierge Services to the existing `.promotion-cards` editorial layout and original three-column desktop image proportions. Kept its four concise bilingual service descriptions, planned-services note, latest relevant images, and restrained reveal. Reused `assets/images/cart.png` for Electric Cart Service and added it with `assets/images/pool.png` to the public build manifest.
+- Changed Owner Life’s “Afternoons by the Pool / 풀사이드의 오후” story to use `pool.png` and shifted the crop left so the lounging guest’s face remains in frame. Removed the fireplace Explode control and handler; assembly and fire controls remain.
+- Shortened and explicitly localized both destination cards, including Chiang Mai: “Chiang Mai: Work, Stay & Connect” / “치앙마이에서 일하고, 머물고, 교류하세요”. Also condensed long Owner Life, Facilities, Concierge, and destination copy for the two-line rule.
+- Verification: current build/check passed; browser screenshot review remains pending because the headless-browser permission request was interrupted. No commit, push, or deployment.
+
+## 2026-10-25 Facilities BBQ category
+
+- Added the supplied `assets/brand/barbeque.png` illustration to the existing Facilities selector as “BBQ & Outdoor Dining / 바비큐 & 야외 다이닝,” with its BBQ dining image and planned-amenity disclosure in the existing detail panel.
+- Expanded the selector and bilingual detail data from six to seven categories, updated the category count, retained tab/arrow selection behavior, and kept the grill illustration contained in the thumbnail frame.
+- Added the illustration to the public asset manifest. Verification: JavaScript syntax checks, `git diff --check`, and `npm run build` (282 public files) passed. Browser interaction not yet verified.
+
+## 2026-10-25 Removed full-screen Owner Life presentations
+
+- Removed the full-screen “The Moment You Arrive” / three-scene `#life-story` slideshow and the `#nature` “A New Everyday” resort panel from the homepage.
+- Kept their image assets and added the existing `assets/brand/gaji.png` resort aerial as a bilingual “Resort Overview / 리조트 전경” item in the Facilities gallery. The slideshow’s villa, terrace, and social-space images remain in the corresponding Facilities items.
+- Kept the Owner Life editorial timeline and photo, lifestyle gallery, and other existing homepage content. No image files were deleted.
+- Verification: `node --check homepage.js` and `git diff --check` passed. No commit, push, or deployment.
+
+## 2026-10-25 Ownership model order
+
+- Moved the existing “ONE VILLA · 120 OWNERSHIP SHARES” animation and its three explanatory points out of Ownership & Pricing so it appears immediately before that section. The content, iframe animation, and six-section navigation remain intact.
+- Added responsive styles for the model in its new location; desktop retains the side-by-side diagram and points, while mobile stacks them.
+- Verification: `node --check homepage.js` and `git diff --check` passed. No commit, push, or deployment.
+
+## 2026-10-25 Owner Life cinematic photo and timeline
+
+- Added the existing `assets/images/bbqplace.png` as a large, responsive photo beneath Owner Life's editorial copy and timeline. It shows a villa-side pool BBQ gathering at golden hour; no new or unrelated image asset was introduced. The image's fixed aspect ratio avoids layout shift, and its bilingual alt text describes it as a concept image.
+- Tightened the Owner Life heading/timeline spacing. The timeline remains on the right on desktop and uses a shorter vertical track on mobile. GSAP draws the line and reveals the markers sequentially when the timeline enters view; the photo uses a one-time upward fade/scale reveal. Reduced-motion users see the static content immediately.
+- Chrome checks at 1440×900 and 390×844 in Korean and English: image loaded at 1536px source width, correct translations and timeline labels, no horizontal overflow, and no console errors. Screenshots: `docs/review/owner-life-feature-20261025/`.
+- Verification: `node --check homepage.js`, `npm run check`, `npm run build` (281 public files), and `git diff --check` passed. No commit, push, or deployment.
+
+## 2026-10-25 Homepage section restoration and ownership spacing
+
+- Fixed the Facilities gallery setup in `homepage.js`: it referenced `spacesIntro` before defining it, which threw a `ReferenceError` and stopped final homepage composition. The Ownership & Pricing, Owner Life, and Facilities sections now render again after the intro is skipped. Preserved the existing `02 / EXPLORE YOUR VILLA` introduction and restored bilingual editorial copy above the Facilities gallery.
+- Removed excess height and tightened margins/padding around Ownership Rights, Annual Usage, and the proposed-price disclosure in `ownership-pricing.css`. Kept the existing copy, five ownership labels, annual allocation figures, and legal qualification.
+- Captured and visually inspected Korean Ownership layouts at 1440px, 1024px, and 390px in `docs/review/ownership-usage-layout-20261025/`. DOM checks confirmed the six homepage sections, five ownership labels, restored Facilities intro, no horizontal overflow, and no browser console errors at all three widths.
+- Verification: `node --check homepage.js`, `npm run check`, `npm run build` (281 public files), and `git diff --check` passed. No commit, push, or deployment.
+
+## 2026-10-25 Owner-requested restoration and fireplace integration
+
+- Replaced the WHY MYLODGE `01 / THE PLACE` photograph with the supplied `assets/brand/Dronepicture.png` and added it to the public build manifest. Kept the dinner/share image in the neighboring card.
+- Reworked WHY MYLODGE’s content order: the new villa-ownership headline and private-retreat description lead, followed by the prominent “Share the Gift of Your Villa” message with the existing two photographs. Ownership mechanics now sit below in a labeled HOW OWNERSHIP WORKS block with 120 shares, 1/120 interest, annual use, and qualified multi-share/multi-location language.
+- Restored the `02 / EXPLORE YOUR VILLA` introduction above the existing Facilities gallery. `homepage.js` had saved the headline copy but removed its `.vacation-intro` node with `replaceChildren()` before applying it; the original node is now retained and reattached. The requested English heading is `Explore the Spaces Inside and Around Your Villa.` The gallery and its images remain in place.
+- Rebuilt the optional Luxury Fireplace preview as solid Anatomy-kit geometry with a WebGL flame layer and assembly/explode/ignite controls. Added the Anatomy runtime modules to the public build list. The local preview server now serves `.mjs` modules with the JavaScript MIME type required by dynamic imports. Browser inspection caught GLSL's reserved word `cast`; renamed it to `wallGlow`. Full visual state screenshots remain unverified.
+- WHY MyLodge rendered-DOM checks passed in Korean and English with the exact new headline, sharing message, technical subsection order, and no console errors. `node --check` on homepage and Anatomy modules, `npm run check`, `npm run build` (277 public files), and `git diff --check` also passed.
+
+## 2026-10-25 WHY MYLODGE lifestyle copy and guide cards
+
+- Replaced the active WHY MYLODGE heading, description, and three-column facts in `homepage.js` with the requested bilingual villa-lifestyle message. The facts now describe a personal retreat, shared moments, and more accessible shared ownership; the 1/120 interest and annual-use figures remain in Ownership & Pricing.
+- Moved the legal qualification from the WHY composition into the Ownership Rights introduction, where registration, rights scope, and annual-use terms are explained. Kept the existing resort image and both navigation destinations.
+- Updated the two-image guide copy in `branding.js` and the final bilingual pass in `homepage.js`; the right card now uses the supplied invitation headline, description, and `Explore Villa Life →` / `별장 라이프 알아보기 →`. Its headline is larger with more separation from the description. Added responsive spacing and typography in `our-story-refinement.css` without changing the card layout or images.
+- Verification: homepage/branding/localization JS syntax checks, `npm run check`, `npm run build` (272 files), and `git diff --check` passed. A fresh desktop/mobile browser capture was not completed because local preview access could not be established: port 4173 could not be used from the sandbox, and the escalated localhost check was interrupted.
+
+## 2026-10-25 Homepage typography and spacing pass
+
+- The prior Ownership screenshots showed content beginning too far below the floating navbar, inconsistent left edges, excess section spacing, and a 1,020px mobile ownership-animation frame. In `ownership-pricing.css`, aligned Ownership, Owner Life, Facilities, and their galleries to the existing 1,200px content grid; tightened vertical spacing; improved muted-copy contrast; removed a fixed minimum from facility descriptions; and kept Korean phrases together. The Facilities gallery had inherited the global 96px section padding and nested a second `.container`; both sources of excess spacing are removed. The root already reserves 96px for the floating navbar, so homepage targets now add only 16px instead of another 112px, avoiding a doubled anchor gap. Reduced the mobile animation frame to 860px while preserving the stacked diagram/model composition.
+- Fixed the Why MyLodge ownership CTA target in `homepage.js` to point to the actual `#ownership-structure-diagram` element, which now receives the same safe scroll offset.
+- Replaced the villa specification's inline middle dot with a dedicated flex separator, including when the Deluxe/Suite selector updates the figures.
+- GSAP/ScrollTrigger review found no pinning and no animated layout dimensions in the active homepage: the hero scroll effect translates elements, while the Ownership diagram and Owner Life timeline use one-time reveals. Existing `refresh()` calls run after DOM wrapping and final homepage composition. Hero and cinematic Owner Life viewports remain intentional animation stages.
+- Verification: `node --check homepage.js`, `npm run check`, `npm run check:workflow` (9/9), `npm run build` (272 public files), and `git diff --check` passed. A fresh Chrome render was not captured because another process already owns port 4173; existing review screenshots were used for layout diagnosis.
+
+## 2026-10-25 Homepage copy and accuracy audit
+
+- Replaced the static homepage fallback and footer copy in `index.html` so a no-JavaScript load no longer shows the old shared-villa planning text or empty company/contact fields. Updated the fallback SEO title/description to match the current Korean hero copy.
+- Reworded the English hero note and added its Korean counterpart: this is a concept presentation, and reservations/product applications are unavailable. The copy no longer calls the site a “vision in progress.”
+- In `homepage.js`, changed vague Concierge/community status labels to explicit unconfirmed states, stated that installment amounts and dates are not set, and retained the legal/contract qualifications for ownership, annual use, and facility concepts. Translated the nested diagram labels for the Korean page.
+- Audited the active homepage strings: the villa selector contains only Deluxe and Suite; the Luxury Package is presented as optional; `$4,149` is absent. Existing legal qualifications remain because the ownership and use terms are not confirmed.
+- Still unconfirmed and therefore not described as established: title/registration and the inheritance, transfer, and rental scope; installment amounts and dates; community operation and participation; actual facility completion/specifications by park; Concierge inclusion, fees, applicable parks, and availability. The HanzCity authentication URL remains unavailable, so Sign Up stays disabled.
+- Verification for this entry is recorded after the copy audit checks; no commit, push, or deployment was performed.
+
+## 2026-10-25 Concierge service icons
+
+- Replaced the Concierge cards' repeated/cloned photos with consistent inline SVG service icons in `homepage.js`: cleaning, fresh bedding, grocery shopping, BBQ-style dining, and resort buggy transport. The five service labels and availability copy remain unchanged; the cart is distinct from the grocery basket.
+- The current five-item Concierge data has a Dining card but no separate BBQ service card. The grill SVG is assigned to Dining as the nearest existing service; no new service was added. Icons use a shared 32×32 viewBox, stroke treatment, and 64px layout slot.
+- `node --check homepage.js`, `npm run check`, `npm run build` (272 public files), and `git diff --check` passed. Browser-level screenshot verification was not available in this turn.
+
+## 2026-10-25 Owner Life card and lifestyle copy
+
+- Updated the Owner Life headline, the owner-connect card, and the three villa-story card captions in `homepage.js` with concise Korean/English lifestyle copy. Reused all five approved category images and aligned each caption with the scene shown.
+- Kept Family, Couples, Social, Business, and Wellness as five independently selectable panels. Category selection continues to activate its matching image/copy panel in place; it does not navigate to another homepage section. No service entitlements or event guarantees were added.
+- Confirmed the four requested internal phrases are absent from active source. `node --check homepage.js`, `npm run check`, and `npm run build` passed. A focused interaction harness verified every category activates only its matching panel in both languages.
+
+## 2026-10-25 Original SVG information cards restored
+
+- The previous commit's three inline SVG review cards were generated under the legacy `#participation` block, which the six-section homepage removes. `homepage.js` now moves that original checklist into Ownership & Pricing before legacy-section cleanup; its icon paths and Korean copy remain from `app.js`, with an English translation applied when the English page is selected.
+- The checklist is expanded by default so the SVG icons are visible. Its three columns collapse into a stacked mobile layout, and the homepage remains at six main sections.
+- No new illustration assets or ownership promises were added. Verification for this restoration is pending.
+
+## 2026-10-25 Owner Life copy and category storytelling
+
+- Replaced the Owner Life lead headline with `내 별장에서 누리는 사치스러운 행복` and the English equivalent. Updated the owner-connect image card to `지인에게 별장을 선사하세요` with the requested Korean description and matching English copy.
+- Rewrote the Family, Couples, Social, Business, and Wellness descriptions to match their existing approved photos. Category clicks, focus, hover, and mobile swiping continue to change only the active gallery panel; no section navigation or service entitlement was added.
+- Confirmed the four listed internal phrases are absent from active source. `node --check homepage.js`, `npm run check`, `npm run build` (272 files), and `git diff --check` passed. A focused handler harness exercised all five categories in Korean and English.
+
+## 2026-10-25 Villa comparison and optional package selector
+
+- Replaced the active Standard/Luxury price display with exactly two villa records in `homepage.js`: Deluxe ($3,999 base, +$199 optional Luxury Package) and Suite ($5,999 base, +$390 optional package). Tabs update bilingual villa names/type/area; the checkbox updates base, package, and total rows. No package contents are claimed.
+- Updated the hero price strip to match the two base prices and optional package amounts. Removed the old $4,149 amount and old $150 upgrade wording from active homepage source. The previous installment breakdown was removed from the selector area; installment terms are labeled pending confirmation.
+- Verification: JS syntax check, project `npm run check`, and `npm run build` passed. Exercised Deluxe/Suite × package off/on in a focused handler harness; totals were $3,999, $4,198, $5,999, and $6,389. Browser interaction screenshots were not captured because the local preview port 4173 is occupied by an existing process and the sandbox cannot connect to it.
+
+## 2026-10-25 Ownership Rights / Annual Use editorial diagram
+
+- Reworked only the Ownership Rights / Annual Use block in `homepage.js` and `ownership-pricing.css` into a three-column editorial composition: section intro, nested villa/shared-ownership/share diagram, then the existing five rights entries and annual-use details. Existing rights descriptions and pending-confirmation labels remain unchanged; no ownership percentages or legal promises were added.
+- Added a one-time GSAP reveal for the nested outlines and annual-use divider/label, triggered when the diagram enters the viewport. The diagram remains visible without animation when GSAP is unavailable or reduced motion is enabled. Responsive CSS stacks intro → diagram → rights information on mobile.
+- Browser verification and screenshots are still pending. No pricing, navigation, or other homepage sections were changed for this task.
+
+## 2026-10-24 Owner Life 및 Facilities 사진 갤러리
+
+- Owner Life의 다섯 개 플레이스홀더를 승인된 기존 사진을 쓰는 Family / Couples / Social / Business / Wellness 갤러리로 바꿨다. 데스크톱은 GSAP 0.55초 확장 전환, 모바일은 스와이프·이전/다음 조작을 사용한다. 별장 하루 타임라인은 유지했다.
+- Member Community를 왼쪽 카피·Coming Soon 상태, 오른쪽 `assets/images/bbqplace.png` 사진의 편집형 소개로 정리했다. 사진은 콘셉트 이미지라고 표시하며 프로그램이 운영 중이라고 표현하지 않는다.
+- Owner Contract & Payment Progress / My Page 플레이스홀더와 해당 링크를 홈에서 제거했다.
+- Facilities의 기존 작은 카테고리 표현을 외관·실내·테라스·평면도·수영장·바비큐·소셜 공간 사진 선택기로 교체했다. 데스크톱 세로 탐색과 모바일 선택·스와이프를 제공하며, 콘셉트 이미지 및 계획 시설 상태를 함께 표시한다. 이미지와 평면도는 기존 프로젝트 자산만 사용했다.
+- 확인: 영문·국문 1440×900 및 390×844 Chrome. Owner Life 호버(선택 패널 flex-grow 3, GSAP), 모바일 다음 패널, Facilities 카테고리 선택·모바일 스와이프, 이미지 로드, Coming Soon 문구, 진행 안내 미노출, 번역 및 가로 넘침 없음 확인. 콘솔 오류 없음. `npm run check`, `npm run check:workflow` (9/9), `npm run build` (270개 공개 파일), JS 구문 및 `git diff --check` 통과.
+- 화면 기록: `docs/review/homepage-owner-facilities-20261024/`. 커밋·푸시·배포는 하지 않았다.
+
+## 2026-10-24 Ownership & Pricing reference composition and live animation
+
+- Corrected the generated `#ownership-pricing` section to match the supplied editorial reference: split title/pricing row, then an open, full-width ownership diagram with a large share grid and the villa assembly beside three numbered ownership facts. Kept the Standard/Luxury prices, USD 100 first-installment label, three information accordions, and final-terms note. Korean and English copy are managed in `homepage.js`; styling remains section-scoped in `ownership-pricing.css`.
+- Embedded the existing Anatomy experiment directly in that diagram. The 10 × 12 ownership grid, highlighted share, annual-night statement, connector, and GSAP villa/pool assembly are visible in-page. Assembly restarts whenever the section enters view; Replay remains available, Korean labels/status are localized, and reduced motion completes without playing. A direct `#ownership-pricing` URL now scrolls to the dynamically created section below the floating nav. The standalone experiment source remains unchanged.
+- Found why the earlier view appeared unchanged: the existing process on port 4173 serves an older allowlist and returns 404 for `/experiments/ownership-villa-diagram/index.html`. It could not be restarted because that process still owns the port. Built the current project and served the updated `dist/` preview on port 4174; use `http://127.0.0.1:4174/index.html#ownership-pricing` for the corrected local view.
+- Browser verification on rebuilt preview: opening the direct anchor lands on the generated section, the iframe loads and status progresses from ownership drawing into `Villa assembly · 6.4 / 12.0 s`; Replay remains available. Korean 390px mobile shows localized copy and status. Both tested sizes have the share grid, villa SVG, three numbered points, no horizontal overflow, and clean console. Screenshot evidence: `docs/review/ownership-pricing-editorial-20261024/reference-match-*.png`. `npm run check`, `npm run check:workflow` (9/9), `npm run build` (266 files), `node --check homepage.js`, and `git diff --check` passed.
+- No production deployment was performed.
+
+## 2026-10-24 standalone ownership-to-villa animation
+
+- Added `experiments/ownership-villa-diagram/` with a 10 × 12 ownership grid, gold selection, “1 Share = 3 Allocated Nights / Year” statement, connector marker, and the existing Anatomy villa/pool assembly on one GSAP timeline. The generated HTML embeds the existing villa SVG and local GSAP bundle; no homepage files were changed.
+- Verification: build script syntax/build passed. Anatomy Chrome captures at 1440px desktop and 390px mobile show no horizontal overflow or console errors. Normal playback completes, Replay Experience restarts at the ownership sequence, and reduced motion opens fully assembled. Previews and build notes are in the experiment directory.
+- Remaining: this ownership diagram and the villa illustration are concept visuals; nothing is integrated into the homepage.
+
+## 2026-10-24 standalone isometric villa assembly study
+
+- `experiments/mylodge-isometric-villa/` now contains an isolated Anatomy SVG model and self-contained GSAP 3.12.5 assembly demo. A 12-second sequence moves the foundation, pool basin, floor structure, walls, glazing, balcony, layered roof, pool coping and water into place; Replay Animation restarts it. No homepage files were changed for this experiment.
+- Verification: `node --check` and standalone build passed. Chrome captures at desktop and 390px mobile show a clean console and no horizontal overflow. Replay completes; reduced-motion opens on the completed still. Desktop, mobile, and mid-assembly screenshots are in the experiment directory.
+- Remaining: this is a concept model and has not been integrated into Why MyLodge.
+
+## 2026-10-24 CEO 요구사항에 따른 홈페이지 전체 정리
+
+- 홈페이지 주요 구간을 Hero → Why MyLodge → Ownership & Pricing → Owner Life → Facilities → Concierge의 여섯 구간으로 구성했다. 제거 대상으로 지정한 Destinations, How It Works, FAQ, Final CTA는 독립 구간으로 표시되지 않으며, 내비게이션은 여섯 구간으로 연결한다.
+- `hero-content.js`에 최신 한영 Hero 문구·CTA·가격 스트립을 적용하고, `homepage.js`에서 최종 Hero CTA 연결과 나머지 최종 카피를 관리한다. 기존 Hero 사진·한국어 영상 자산 및 기존 GSAP/시설 선택 동작은 유지했다. 이미지와 영상 파일은 수정하지 않았다.
+- Why MyLodge에 공유 모델, 120구좌·1/120 지분 기준, 1구좌 연 3박, 여러 구좌·지역 선택 사실을 표시했다. 소유권·등기·이용의 법적 조건은 계약·공식 안내로 확인하도록 함께 명시했다.
+- Ownership & Pricing은 `homepage.js`의 `offer` 설정을 단일 가격 원천으로 사용한다: Standard USD $3,999, Luxury USD $4,149(USD $150 업그레이드), 각각 1/120 기준·연 3박. 5회 제안 납입표(USD 100 + 1,000 + 1,000 + 1,000 + 899)를 표시하고 $100은 총 가격이 아닌 첫 납입액이라고 구분했다. 최종 계약·권리·일정 확정 전 안내를 포함한다.
+- 주문진·양양·치앙마이는 기존 파크 정보 페이지로 연결한다. 판매 상태 및 파크별 빌라 타입 제공 여부는 확인 중으로 표시하고 실시간 재고·상품 신청은 구현하지 않았다. 상품 선택 경로는 Region → Lifestyle Section → Villa Type → Number of Shares로 안내하지만 제출 흐름은 만들지 않았다.
+- Owner Life에 친구 대화, 별장 경험, 다섯 라이프스타일 카테고리, 멤버 커뮤니티 준비 중 안내, 계약·납입·공사 진행을 마이페이지에서 보여줄 계획 카피를 추가했다. 마이페이지 조회 기능은 아직 없다고 표시했다.
+- Facilities의 기존 선택 갤러리와 이미지를 보존하고, 외관·실내·테라스·평면도/배치 콘셉트와 수영장·바비큐·소셜 공간 안내를 더했다. 개별 빌라 평면도는 미공개, 파크 배치도는 콘셉트, 시설 준공·운영은 확인 전으로 명시했다.
+- Concierge에 청소·침구·장보기·다이닝·카트 이동 다섯 서비스를 표시했다. 각 항목의 포함/유료 여부, 적용 파크, 제공 상태를 미확정/준비 중으로 표시했다.
+- 최종 실제 Chrome 확인: 한·영 1440×900 및 390×844 모두 통과. 6개 구간의 순서, 정확한 섹션 제목, 두 가격 및 5회 납입액, CTA 연결, 시설 탭 선택, 앵커 오류 없음, 가로 넘침 없음, JS 콘솔 오류 없음 확인. 네 화면과 DOM 검증 JSON은 `docs/review/homepage-final-20261024/`에 저장했다.
+- 프로젝트 검사 `npm run check`, `npm run check:workflow`(9/9), `npm run build`(265개 공개 파일), `node --check homepage.js`, `node --check hero-content.js`, `git diff --check` 통과. 사용자 로컬 변경을 보존했으며 커밋·업로드·운영 배포는 하지 않았다.
+- 남은 시스템 작업: 실시간 상품 재고·신청, 마이페이지 인증과 계약/납입/공사 진행 조회, 실제 서비스의 요금·파크별 운영 정보는 백엔드/사업 조건 확정이 필요하다. 실제 빌라 평면도 및 시설 확정 정보는 아직 제공되지 않았다.
+
+## 2026-10-23 회의 후속 1단계: 홈페이지 구조 및 Ownership & Pricing 재정리
+
+- 최신 사용자 지시가 앞선 전체 섹션 카피 구현보다 우선한다. Hero 구성·문구·미디어와 Why MyLodge, Owner Life, Facilities, Concierge의 기존 본문·이미지·영상은 유지한다. 단, 후속 피드백에 따라 Owner Life에 바비큐·캠핑 라이프스타일 구상, Facilities에 계획 중인 야외 다이닝·바비큐와 캠핑 공간, Concierge에 미확정 바비큐 준비 서비스를 추가했다. 다른 카피 변경은 검토 후 진행한다.
+- 홈 주요 구간은 Hero → Why MyLodge → Ownership & Pricing → Owner Life → Facilities → Concierge 순서다. Destinations, How It Works, FAQ, Final CTA는 독립 홈 구간에서 제외되고 내비게이션은 6개 구간을 가리킨다.
+- 신규 소유 섹션 가격은 `homepage.js`의 `proposedPrice` 설정에서 USD $3,999로 관리한다. 제안 금액이며 최종 조건 미정, 전체 매입가·계약금·회차별 납입액으로 확정하지 않는다. 소유 구조·결제·이용 조건은 확정 전으로 안내한다. 상담 CTA는 기존과 같이 문의 접수 안내를 펼치며 실제 연락처 수집·전송은 하지 않는다.
+- 과거 KRW 검토 금액 블록은 현재 제안 가격과 혼동하지 않도록 Why MyLodge의 금액 영역에서 제거했다. 모바일 고정 CTA는 기존 `branding.js`가 제거하므로 새로 추가하지 않았다.
+- 한영 실제 Chrome DOM 및 1440×900, 390×844에서 섹션 순서·가격·바비큐/캠핑 계획 문구·내비게이션 앵커·CTA·가로 넘침을 확인한다. 검토 화면은 `docs/review/homepage-business-meeting-20261023/`에 둔다. 그 외 비가격 섹션 카피 업데이트는 검토 승인 후 진행한다.
+- 커밋·업로드·운영 배포 없음.
+
+## 2026-10-23 홈페이지 6개 주요 섹션 및 Ownership & Pricing 추가
+
+- 최신 사용자 지시: Hero 추가 수정 중단. 현재 Hero 디자인·문구·영상·사진을 유지하고, 홈을 Hero → Why MyLodge → Ownership & Pricing → Owner Life → Facilities → Concierge의 6개 주요 섹션으로 구성했다.
+- 신규 homepage.js가 최종 구성과 내비게이션을 담당한다. 기존 Hero/Why MyLodge의 시네마틱 래퍼는 유지한다. #owner-life, #facilities는 여백 없는 그룹이며 기존 #ownership 및 생활 장면, #villa-spaces와 #vision의 기존 콘텐츠·이미지를 보존한다. Destinations(#brand-paths), How It Works(#participation), FAQ(#faq), Final CTA(.vacation-finale)는 독립 홈 구간에서 제외했다. 국내 별장/Business Valley 기존 페이지 경로는 유지한다.
+- 신규 #ownership-pricing을 Why MyLodge와 Owner Life 사이에 삽입했다. 사용자 지정 한영 문구·세 가지 혜택·USD $3,999를 표시한다. 금액은 homepage.js의 proposedPrice 객체(amount:3999, currency:'USD')에서 수정한다. 과거 396만 원 기록은 이 신규 섹션의 최신 가격 기준이 아니다.
+- $3,999는 제안 금액이며 포함 범위·가격 구조가 미정임을 가까이 표시했다. 총 매입가·계약금·할부/회차 납입액으로 확정하지 않았고, 납입 일정·수익 보장·일일 환산 금액은 추가하지 않았다.
+- Hero 주 CTA와 소유·가격 메뉴는 #ownership-pricing으로 연결된다. 가격 섹션 CTA는 소유 안내/문의 준비 상태를 인라인으로 펼친다. 실제 소유 상담 접수 경로·공식 문의처는 없으며, 연락처 입력·저장·전송·성공 안내는 만들지 않았다.
+- 기존 생활·시설 딥 링크를 보존하고 #pricing/#shared-ownership 등의 과거 가격 앵커는 새 구간으로 연결한다. 제거된 #brand-paths 링크/북마크는 기존 국내 별장 페이지로 이어진다. 내비게이션의 화면 보기 선택기 및 모바일 메뉴 동작을 보존했다.
+- 검증: 실제 Chrome에서 한영 1440×900, 390×844의 4개 조합에 대해 6개 주요 섹션 순서, 정확한 가격/제목/설명/혜택명, 24회 실제 내비게이션 클릭, Hero CTA, 가격 CTA 펼침, 가로 넘침 및 JS 오류 없음 확인. npm run check, check:workflow 9/9, 공개 빌드 265개, git diff --check 통과. 화면·검증 JSON은 docs/review/ownership-pricing-20261023/에 있다.
+- 한계: 실기기/Safari 점검 없음. 실제 서버·인증·상담·예약·결제·발송 보류 유지. 커밋·업로드·운영 배포 없음. 앞선 Hero 소스 통합 작업은 중단 시점 상태로 보존했으며 이번 단계에서 Hero 디자인을 추가 변경하지 않았다.
+
+## 2026-10-23 홈 Hero 소유·라이프스타일 문구 및 반응형 개선
+
+- 사용자 지정 한국어·영어 eyebrow, 제목, 설명, 소유/라이프스타일 CTA를 기존 Hero에 적용했다. 기존 사진·한국어 Beach2.mp4 영상·플로팅 내비게이션·GSAP 이미지/제목 스크롤 효과·동작 줄이기·영상 제어는 유지한다. 다른 섹션의 마크업·스타일·문구는 수정하지 않았다.
+- 현재 branding.js가 #pricing을 제거하므로 소유 CTA는 기존 #ownership으로 대체한다. Owner Life 역시 #ownership이다. Hero는 #pricing → #shared-ownership → #ownership 순서로 존재하는 대상만 선택하며, 이번 작업에서 비용/권리 섹션을 복원하지 않았다.
+- Hero 내부 흐름 기반 간격·배경 그라데이션·모바일 CTA 배치를 정리했다. 짧은 가로 화면은 두 열로 배치하며, 320px 영문 제목/AI 고지 겹침을 해소했다. 영상 버튼은 재생 상태에 따라 너비가 변하지 않게 공간을 확보한다.
+- app.js·cinematic.js·chairman.js에서는 최종 Hero 전에 폐기되는 Hero 이미지 요청만 제거했다. 브라우저의 초기 resource 기록에서 이전 lodge-hero/vacation-arrival 요청이 없어짐을 확인했다. 다른 섹션의 이미지와 미디어 파일은 그대로다.
+- 검증: 한영 1440×1000, 1280×720, 768×1024, 390×844, 320×568, 844×390, 667×375, 568×320의 16개 조합에서 제목/주 CTA 초기 화면 노출 및 가로 넘침 없음 확인. 스크린샷 시각 점검, 두 CTA 실제 스크롤, GSAP 진행률/제목 이동, 영상 정지·재생, 동작 줄이기 정지/비고정 상태 확인. JS 오류 없음. JS 구문·npm run check·check:workflow 9/9·공개 빌드 262개 통과.
+- 한계: 기존 페이지 초기 스타일/다단계 JS 구성 과정의 레이아웃 이동은 이전 커밋과 동일하게 관측된다. 사이트 전역 초기화·내비게이션 변경은 범위 밖이므로 건드리지 않았다. 실제 휴대전화·Safari 검증은 하지 않았다. 커밋·업로드·운영 배포 없음.
+
 ## 2026-10-22 Hero 스크롤 영상 효과 취소
 
 - 사용자 요청으로 작업 중이던 ScrollTrigger 영상 스크러빙·pin 변경을 취소하고 `backups/before-hero-video-scrub-20261022/`의 `hero-editorial.js/css`로 복원했다. 기존 영상 재생·일시정지와 Hero 동작을 유지한다.

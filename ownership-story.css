@@ -35,19 +35,8 @@ body.ownership-first #pricing :is(.rights-description,.rights-state,.rights-head
 .ownership-first .vacation-finale small{display:block;max-width:70ch;margin:26px auto 0;font-size:12px;line-height:1.8}
 .ownership-first .vacation-finale p{max-width:60ch;margin:24px auto 0;line-height:1.8}
 .ownership-first a:focus-visible{outline:2px solid currentColor;outline-offset:5px}
-body.ownership-first #home.lodge-hero h1{font-family:var(--font-heading);font-weight:400;line-height:1.15;letter-spacing:-.055em;font-size:clamp(60px,7.1vw,112px)}
-body.ownership-first.english-page #home.lodge-hero h1{font-family:var(--font-display);letter-spacing:-.03em;font-size:clamp(66px,7.4vw,118px);line-height:1.06}
-.ownership-first .lodge-heading{bottom:292px}
-.ownership-first .lodge-invitation{width:min(540px,88vw)}
-.ownership-first .lodge-window::after{background:linear-gradient(180deg,rgb(8 21 36 / .1) 15%,rgb(8 21 36 / .3) 45%,rgb(8 21 36 / .9) 100%)!important}
-.ownership-first .lodge-kicker{color:var(--ownership-gold)!important}
 @media(max-width:700px){
  .ownership-first main>section{scroll-margin-top:90px}
- .ownership-first .lodge-heading{bottom:310px;right:24px}
- body.ownership-first #home.lodge-hero h1{font-size:clamp(48px,13vw,72px)}
- body.ownership-first.english-page #home.lodge-hero h1{font-size:clamp(46px,12vw,68px)}
- .ownership-first #home.lodge-hero .lodge-kicker{font-size:8px;letter-spacing:.12em;max-width:32ch;line-height:1.8}
- .ownership-first #home.lodge-hero .lodge-description{font-size:12px;line-height:1.85;max-width:36ch}
  .photo-led.promotion-home.ownership-first #ownership.owner-editorial .owner-editorial-grid{display:block}
  .photo-led.promotion-home.ownership-first #ownership.owner-editorial .owner-editorial-grid>article{min-height:calc(100svh - 90px);padding:16px 0 44px;display:flex;flex-direction:column;justify-content:center;gap:18px;margin:0;max-width:none;width:100%}
  .photo-led.promotion-home.ownership-first #ownership.owner-editorial .owner-editorial-grid figure{height:clamp(240px,47svh,460px);aspect-ratio:auto;margin:0;flex:none}
@@ -59,10 +48,4 @@ body.ownership-first.english-page #home.lodge-hero h1{font-family:var(--font-dis
  .ownership-first #pricing .rights-table th:last-child{width:24%}
  .ownership-first #shared-ownership .intro{margin-bottom:24px}
  .ownership-first .ownership-next-links{flex-direction:column;align-items:center;gap:12px}
-}
-@media(max-height:650px){
- body.ownership-first #home.lodge-hero{min-height:650px;height:100svh;position:relative}
- .ownership-first .lodge-heading{bottom:290px}
- body.ownership-first #home.lodge-hero h1{font-size:clamp(45px,7vw,70px)}
- body.ownership-first.english-page #home.lodge-hero h1{font-size:clamp(45px,7vw,70px)}
 }

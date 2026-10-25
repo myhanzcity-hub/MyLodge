@@ -1,0 +1,23 @@
+/* Mobile is the primary reading and touch environment. */
+@media(max-width:600px){
+ main p:not(.eyebrow):not(.status-note):not(.visual-guide-note){font-size:14px}
+ .content-card p,.content-card li,.visual-explainer .visual-card-summary,.visual-card-details>p,.planning-steps p,.planning-pain p,.benefit-copy p,.domestic-facility p,.local-copy p,.park-opening-copy>p:last-child{font-size:14px!important;line-height:1.85!important}
+ .visual-guide-tile p{font-size:14px;line-height:1.75}.visual-guide-tile h3{font-size:18px}.visual-guide-tile{padding:18px 14px!important}
+ .visual-card-details summary,.guide-links a,.section-directory a,.planning-faq summary{min-height:44px;box-sizing:border-box}.section-directory a,.guide-links a{display:flex;align-items:center;font-size:13px!important;line-height:1.6}
+ header .menu-button,header .language-switcher>summary,header details>summary{min-height:44px;min-width:44px;box-sizing:border-box;align-items:center}
+ .status-note,.status-note p,.status-note li,.visual-guide-note,.park-concept-notice p{font-size:12px!important;line-height:1.85!important}
+ .table-scroll.has-mobile-cards{overflow:visible}.table-scroll.has-mobile-cards::before{display:none!important}
+ .table-scroll .mobile-card-table{display:block;width:100%;min-width:0!important;border:0;table-layout:auto}
+ .mobile-card-table caption{display:block;text-align:left;font-size:14px;line-height:1.7;padding:0 0 18px}
+ .mobile-card-table thead{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .mobile-card-table tbody{display:grid;gap:14px}
+ .mobile-card-table tbody tr{display:block;border:1px solid #465048;border-radius:16px;overflow:hidden;background:#191e1c}
+ .mobile-card-table tbody th{display:block;width:auto!important;border:0;border-bottom:1px solid #465048;padding:16px 18px;font-size:16px;background:#29312c;color:#f1f3e9}
+ .mobile-card-table tbody td{display:grid;grid-template-columns:minmax(70px,.7fr) minmax(0,1.3fr);gap:16px;padding:14px 18px;border:0;border-top:1px solid #354039;font-size:14px;line-height:1.8;color:#e4e8de;white-space:normal;overflow-wrap:anywhere}
+ .mobile-card-table tbody td:first-of-type{border-top:0}
+ .mobile-card-table tbody td{word-break:keep-all}
+ .mobile-card-table tbody td::before{content:attr(data-label);font-size:12px;color:#b9c9ba;line-height:1.8}
+ .requirements-content .planning-steps{grid-template-columns:1fr;gap:26px}.planning-steps li{padding-top:18px}.planning-steps h3{font-size:22px;margin-block:12px}
+ .share-controls label{font-size:14px}.share-result dt{font-size:13px}
+ .story-section{scroll-margin-top:96px}.visual-card-details{scroll-margin-top:100px}
+}

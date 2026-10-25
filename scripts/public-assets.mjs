@@ -1,10 +1,14 @@
+import {readFileSync} from 'node:fs';
 // The only files included in the public export.
-export const publicAssets = ['index.html', 'styles.css', 'app.js', 'tokens.css', 'luxury-system.css', 'navbar-refinement.css', 'navbar-premium.css', 'our-story-refinement.css', 'owner-cards-refinement.css'];
+export const publicAssets = ['index.html', 'styles.css', 'app.js', 'hero-content.js', 'homepage.js', 'luxury-package-anatomy.js', 'luxury-fireplace-anatomy.js', 'anatomy/iso-kit.mjs', 'anatomy/lathe.mjs', 'anatomy/gl.mjs', 'ownership-pricing.css', 'tokens.css', 'luxury-system.css', 'navbar-refinement.css', 'navbar-premium.css', 'our-story-refinement.css', 'owner-cards-refinement.css'];
 publicAssets.push('intro.html','arrival-intro.css','arrival-intro.js');
 publicAssets.push('mobile-layout.css','mobile-layout.js');
 publicAssets.push('view-mode.css','view-mode.js','view.html');
 for (const name of ['service-ready','service-property-care','service-owner-exchange']) for (const width of [480,960,1680]) publicAssets.push(`assets/images/${name}-20261008-${width}.webp`);
 publicAssets.push('branding.css','branding.js','assets/brand/mylodge-logo.webp','assets/brand/mylodge-character.webp');
+publicAssets.push('assets/brand/Dronepicture.png');
+publicAssets.push('assets/brand/Nature.png');
+publicAssets.push('assets/brand/single-storey.png','assets/brand/two-storey.png');
 publicAssets.push('assets/brand/gaji.png');
 publicAssets.push('assets/brand/SocialLife.png');
 publicAssets.push('assets/brand/imageBeach.png');
@@ -14,6 +18,8 @@ for (const [name, largest] of [['hero',1122],['interior',1440],['terrace',1145],
   for (const width of [480,960,largest]) publicAssets.push(`assets/images/lodge-${name}-${width}.webp`);
 }
 publicAssets.push('assets/images/lodge-share.jpg');
+publicAssets.push('assets/images/bbqplace.png','assets/images/MainCity.png','assets/images/Plan.png','assets/images/pool.png','assets/images/cart.png');
+for (const width of [480,960,1680]) publicAssets.push(`assets/images/intro-interior-${width}.webp`);
 
 for (const page of [8,13]) for (const width of [480,960,1440]) publicAssets.push(`assets/images/plan-p${page}-${width}.webp`);
 for (const width of [480,960,1536]) publicAssets.push(`assets/images/lodge-dreamscape-${width}.webp`);
@@ -46,6 +52,7 @@ for (const name of ['facility-villa','facility-beach','facility-terrace','facili
 
 publicAssets.push('assets/brand/mylodge-logo-transparent-20261007.webp');
 for (const name of ['villa','beachside','pool-cabanas','cafe-club','market','concierge']) publicAssets.push(`assets/brand/${name}.webp`);
+publicAssets.push('assets/brand/barbeque.png');
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/brand-villa-atmosphere-20261008-${width}.webp`);
 
 for (const width of [480,960,1680]) publicAssets.push(`assets/images/facility-hotel-pool-20261008-${width}.webp`);
@@ -59,3 +66,14 @@ publicAssets.push('hero-editorial.css', 'hero-editorial.js', 'gsap.min.js', 'Scr
 publicAssets.push('vision-square-reveal.js');
 publicAssets.push('ownership-story.css');
 publicAssets.push('assets/video/Beach2.mp4');
+
+// Reviewed sidepages; public assets only. John's homepage files remain unchanged.
+for (const file of JSON.parse(readFileSync(new URL('./sidepage-public-files.json', import.meta.url), 'utf8'))) if (!publicAssets.includes(file)) publicAssets.push(file);
+
+// Standalone procedural intro; homepage runtime stays independent.
+publicAssets.push('entry-3d/intro.css','entry-3d/intro.js','entry-3d/intro-scene.js','entry-3d/villa-reference-model.js','entry-3d/vendor/three.module.js','entry-3d/vendor/three.core.js','entry-3d/vendor/THREE-LICENSE.txt');
+
+publicAssets.push('parks/chiangmai-deck.css','parks/chiangmai-deck.js');
+publicAssets.push('assets/video/MainCity.mp4');
+// Publish the existing interactive ownership-to-villa study linked from Ownership & Pricing.
+publicAssets.push('experiments/ownership-villa-diagram/index.html');

@@ -30,14 +30,9 @@
  });
 
  $('.vacation-finale')?.remove();
- const order=['home','our-villa','ownership','life-story','lifestyle','nature','villa-spaces','vision','stay-services','brand-paths'];
- order.forEach(id=>{const section=$('#'+id);if(section)main.append(section);});
- const ribbon=$('.living-ribbon');if(ribbon)$('#home').after(ribbon);
- document.querySelectorAll('header nav').forEach(nav=>{
-  nav.innerHTML=[['#our-villa',t('마이롯지 소개','Why MyLodge')],['#ownership',t('오너의 생활','Owner Life')],['#villa-spaces',t('시설 둘러보기','Facilities')],['#stay-services',t('컨시어지','Concierge')],['#brand-paths',t('목적지','Destinations')]].map(([href,label])=>`<a href="${href}">${label}</a>`).join('');
- });
- document.querySelectorAll('meta[name="description"],meta[property="og:description"]').forEach(meta=>meta.content=t('나도, 별장이 있다. 나만의 쉼과 새로운 만남, 마이롯지가 그리는 별장 생활을 만나보세요.','A holiday home of my own. Discover the relaxation, connections and holiday-home life imagined by MyLodge.'));
- document.title=t('마이롯지 · 나도, 별장이 있다.','MyLodge · A Holiday Home of My Own.');
+ // Final homepage order and navigation are owned by homepage.js.
+ document.querySelectorAll('meta[name="description"],meta[property="og:description"]').forEach(meta=>meta.content=t('꿈같은 별장, 마이롯지와 함께 현실이 되다.','A holiday home of my own. Discover the relaxation, connections and holiday-home life imagined by MyLodge.'));
+ document.title=t('마이롯지 · 나도 별장오너.','MyLodge · A Holiday Home of My Own.');
 })();
 
 /* Homepage art direction. All animation is owned by a reversible GSAP context. */
@@ -46,57 +41,89 @@
   const hero = document.querySelector('#home.hero');
   if (!hero) return;
   const en = new URLSearchParams(location.search).get('lang') === 'en';
-  hero.classList.add('lodge-hero');
-  hero.setAttribute('aria-label', en ? 'MyLodge · A holiday home of my own' : '마이롯지 · 나도, 별장이 있다');
-  hero.innerHTML = `
-    <figure class="lodge-window">
-      <div class="lodge-image-depth"><img src="assets/images/brand-villa-atmosphere-20261008-1680.webp" srcset="assets/images/brand-villa-atmosphere-20261008-480.webp 480w, assets/images/brand-villa-atmosphere-20261008-960.webp 960w, assets/images/brand-villa-atmosphere-20261008-1680.webp 1680w" sizes="max(100vw, 180svh)" width="1680" height="1120" fetchpriority="high" alt="${en ? 'A sculptural coastal villa and pool at dusk. AI architectural concept.' : '해 질 무렵, 바다를 향해 열린 곡선형 별장과 수영장. AI 건축 콘셉트.'}"></div>
-      <figcaption>${en ? 'ARCHITECTURAL IMAGINATION / AI CONCEPT' : 'AI 공간 콘셉트 · 실제 현장·확정 설계가 아닙니다'}</figcaption>
-    </figure>
-    <div class="lodge-heading"><p class="lodge-kicker">MY LODGE / A HOLIDAY HOME OF MY OWN</p><h1>${en ? 'A Holiday Home<br>of My Own.' : '나도,<br>별장이 있다.'}</h1></div>
-    <div class="lodge-invitation">
-      <p class="lodge-korean">${en ? 'A personal dream. A shared approach.' : '나만의 꿈, 함께 준비하는 별장.'}</p>
-      <p class="lodge-description">${en ? 'Imagine a holiday home prepared together.<br>Discover a new everyday, with time to call your own.' : '한 채를 함께 준비하는 별장 구상.<br>그 안에서 꿈꾸는 새로운 일상을 만나보세요.'}</p>
-      <a class="lodge-explore" href="#our-villa"><span>${en ? 'Why MyLodge?' : '마이롯지 알아보기'}</span><span aria-hidden="true">↗</span></a>
-    </div>
-    <div class="lodge-footer"><a class="lodge-scroll" href="#our-villa"><span aria-hidden="true">↓</span> ${en ? 'Discover MyLodge' : '마이롯지의 이야기'}</a><p>${en ? 'A vision in progress. Reservations are not yet available.' : '사전 안내 단계 · 실제 모집·계약·예약은 진행되지 않습니다.'}</p><span class="lodge-edition" aria-hidden="true">THE ART OF STAYING</span></div>`;
-
+  const t=(ko,english)=>en?english:ko;
+  // Copy and markup are rendered once by hero-content.js through app.js.
+  const ownershipTarget = document.querySelector('#pricing') || document.querySelector('#shared-ownership') || document.querySelector('#ownership');
+  hero.querySelector('.lodge-explore').hash = ownershipTarget.id;
   if (!en) {
-    hero.classList.add('lodge-video-hero');
-    hero.querySelector('.lodge-kicker').remove();
-    hero.querySelector('.lodge-description').remove();
-    const footer=hero.querySelector('.lodge-footer');
-    const disclosure=footer.querySelector('p');
+    // Preserve the existing concept notice in the following introduction.
+    const disclosure=document.createElement('p');
     disclosure.className='hero-context-note';
-    disclosure.textContent='AI 공간 콘셉트 · 실제 현장·확정 설계가 아닙니다. '+disclosure.textContent;
+    disclosure.textContent='AI 공간 콘셉트 · 실제 현장·확정 설계가 아닙니다. 사전 안내 단계 · 실제 모집·계약·예약은 진행되지 않습니다.';
     document.querySelector('#our-villa .invitation-grid>div').append(disclosure);
-    footer.remove();
-    hero.querySelector('.lodge-window figcaption').textContent='AI 공간 콘셉트';
-    const depth=hero.querySelector('.lodge-image-depth');
-    depth.insertAdjacentHTML('beforeend','<video class="lodge-hero-video" muted loop playsinline preload="metadata" poster="assets/images/brand-villa-atmosphere-20261008-1680.webp" aria-hidden="true"><source src="assets/video/Beach2.mp4" type="video/mp4"></video>');
-    hero.insertAdjacentHTML('beforeend','<button class="lodge-video-toggle" type="button" aria-label="히어로 영상 재생">영상 재생 ▶</button>');
-    const video=depth.querySelector('video'),toggle=hero.querySelector('.lodge-video-toggle');
+  }
+  const depth=hero.querySelector('.lodge-image-depth');
+  const video=depth?.querySelector('video.lodge-hero-video');
+  const playToggle=hero.querySelector('[data-video-toggle]');
+  const musicToggle=hero.querySelector('[data-music-toggle]');
+  if (video && playToggle && musicToggle) {
     const motion=matchMedia('(prefers-reduced-motion: reduce)');
-    let userPaused=motion.matches,visible=true;
+    let userPaused=motion.matches,visible=true,musicEnabled=false,volumeFrame=0;
+    if(motion.matches)video.removeAttribute('autoplay');
     video.muted=true;
-    const update=()=>{
-      toggle.textContent=video.paused?'영상 재생 ▶':'영상 일시정지 Ⅱ';
-      toggle.setAttribute('aria-label',video.paused?'히어로 영상 재생':'히어로 영상 일시정지');
+    video.volume=1;
+    const updateVideoControl=()=>{
+      const isPlaying=!video.paused;
+      playToggle.setAttribute('aria-label',t(isPlaying?'히어로 영상 일시정지':'히어로 영상 재생',isPlaying?'Pause hero video':'Play hero video'));
+      playToggle.querySelector('[data-icon-play]').hidden=isPlaying;
+      playToggle.querySelector('[data-icon-pause]').hidden=!isPlaying;
+    };
+    const updateMusicControl=()=>{
+      musicToggle.setAttribute('aria-pressed',String(musicEnabled));
+      musicToggle.setAttribute('aria-label',t(musicEnabled?'음악 끄기':'음악 켜기',musicEnabled?'Turn music off':'Turn music on'));
+      musicToggle.querySelector('[data-icon-volume]').hidden=!musicEnabled;
+      musicToggle.querySelector('[data-icon-muted]').hidden=musicEnabled;
     };
     const syncVideo=()=>{
       if(userPaused||!visible||document.hidden)video.pause();
-      else video.play().catch(update);
+      else video.play().catch(updateVideoControl);
     };
-    video.addEventListener('playing',()=>{video.classList.add('is-ready');update();});
-    video.addEventListener('pause',update);
-    video.addEventListener('error',()=>{video.classList.remove('is-ready');toggle.hidden=true;});
-    video.querySelector('source').addEventListener('error',()=>{video.classList.remove('is-ready');toggle.hidden=true;});
-    toggle.addEventListener('click',()=>{userPaused=!video.paused;syncVideo();});
-    motion.addEventListener('change',event=>{if(event.matches){userPaused=true;video.classList.remove('is-ready');}syncVideo();});
+    const fadeVolume=(target,muteOnComplete=false)=>{
+      if(volumeFrame){cancelAnimationFrame(volumeFrame);volumeFrame=0;}
+      if(target>0)video.muted=false;
+      const duration=motion.matches?0:(target>0?.9:.24);
+      if(window.gsap){
+        window.gsap.killTweensOf(video,'volume');
+        window.gsap.to(video,{volume:target,duration,ease:'power1.out',overwrite:true,onComplete:()=>{if(muteOnComplete&&!musicEnabled)video.muted=true;}});
+      }else if(!duration){
+        video.volume=target;
+        if(muteOnComplete&&!musicEnabled)video.muted=true;
+      }else{
+        const start=video.volume,started=performance.now();
+        const step=now=>{
+          const progress=Math.min(1,(now-started)/(duration*1000));
+          video.volume=start+(target-start)*progress;
+          if(progress<1)volumeFrame=requestAnimationFrame(step);
+          else{volumeFrame=0;if(muteOnComplete&&!musicEnabled)video.muted=true;}
+        };
+        volumeFrame=requestAnimationFrame(step);
+      }
+    };
+    video.addEventListener('playing',()=>{
+      if(motion.matches&&userPaused){video.pause();updateVideoControl();return;}
+      video.classList.add('is-ready');
+      if(musicEnabled)video.muted=false;
+      updateVideoControl();
+    });
+    video.addEventListener('pause',updateVideoControl);
+    video.addEventListener('error',()=>{video.classList.remove('is-ready');updateVideoControl();});
+    video.querySelector('source')?.addEventListener('error',()=>{video.classList.remove('is-ready');updateVideoControl();});
+    playToggle.addEventListener('click',()=>{userPaused=!video.paused;syncVideo();updateVideoControl();});
+    musicToggle.addEventListener('click',()=>{
+      musicEnabled=!musicEnabled;
+      if(musicEnabled){video.volume=0;video.muted=false;fadeVolume(1);}
+      else fadeVolume(0,true);
+      updateMusicControl();
+    });
+    motion.addEventListener('change',event=>{
+      if(event.matches){userPaused=true;video.classList.remove('is-ready');syncVideo();}
+    });
     new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;syncVideo();},{threshold:0}).observe(hero);
     document.addEventListener('visibilitychange',syncVideo);
     addEventListener('pagehide',()=>video.pause());
     addEventListener('pageshow',syncVideo);
+    updateVideoControl();
+    updateMusicControl();
     syncVideo();
   }
 
