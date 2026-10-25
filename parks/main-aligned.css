@@ -78,3 +78,14 @@ body.side-page .logo-wordmark img{width:166px;left:-28px;top:-64px}
 @media(max-width:360px){body.side-page .artwork-brand{gap:5px}body.side-page .logo-symbol{width:49px;height:30px}body.side-page .logo-wordmark{width:96px;height:30px}body.side-page .logo-symbol img{width:90px;left:-21px;top:-8px}body.side-page .logo-wordmark img{width:140px;left:-23px;top:-54px}}
 /* Photograph-backed sections keep a dark fallback while their images load. */
 body.side-page main>section.side-hero,body.side-page main>section.community-ending{--surface:#171717;--text:#f7f5f0;--copy:#eee9e1;--kicker:#f7f5f0;background:#171717}
+/* Reading refinements: plain labels, comfortable links, staged price guidance. */
+body.side-page :is(.detail-back,.domestic-card-link,.domestic-next-park a,.hanz-hero-access .hanz-link,.section-directory a,.footer-content a){font-size:13px;line-height:1.6;min-height:44px;display:inline-flex;align-items:center}
+body.side-page :is(.guide-links a,.park-destination-links a,.park-panorama-link){font-size:14px!important;min-height:48px}
+body.side-page .domestic-next-park a{padding:10px 12px}
+body.side-page .price-lead{max-width:44ch;margin:0 0 14px}
+body.side-page .price-scope{font-size:14px;line-height:1.8;border-left:2px solid #b7ada0;padding:10px 0 10px 16px;margin:0 0 24px;max-width:52ch}
+body.side-page #price-guide>.container>.content-card{margin-top:24px}
+body.side-page #price-guide .owner-guide-detail{margin-block:16px}
+body.side-page #price-guide .owner-guide-detail summary{min-height:56px;font-weight:500}
+body.side-page #price-guide .price-terms p{font-size:14px;line-height:1.85}
+@media(max-width:600px){body.side-page :is(.detail-back,.domestic-card-link,.domestic-next-park a,.hanz-hero-access .hanz-link,.section-directory a){font-size:13px!important}body.side-page .domestic-next-park{gap:10px}body.side-page .domestic-next-park a{border:1px solid #b7ada0}body.side-page #price-guide .story-heading{margin-bottom:20px}body.side-page #price-guide .price-lead{margin-bottom:12px}body.side-page #price-guide .price-scope{margin-bottom:20px}}

@@ -17,7 +17,7 @@
  function update(){
   const en=document.documentElement.lang==='en';
   document.querySelectorAll('.screen-view-picker').forEach(picker=>{
-   picker.querySelector('.screen-view-label').textContent=en?'Screen view':'화면 보기';
+   picker.querySelector('.screen-view-label').textContent=en?'Quick links':'바로 가기';
    picker.querySelectorAll('a').forEach((link,i)=>{
     link.textContent=pages[i][en?3:2];
     link.href=destination(link.dataset.screenView);

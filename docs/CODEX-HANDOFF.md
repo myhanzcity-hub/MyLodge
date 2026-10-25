@@ -1,3 +1,18 @@
+## 2026-10-25 Approved reading refinements release
+
+- User approved GitHub/Vercel publication of local reading improvements1-3 and Quick links label.
+- Remote main dc2cf5c checked; no newer colleague commits. Side annual-use/concierge copy, larger links and progressive price guidance only; financial conditions/tables/calculator and chairman wording preserved.
+- view-mode.js differs only in Korean/English picker label (Quick links). Homepage files and procedural intro are unchanged; deployment configuration unchanged.
+- Prior local36 requirement checks,111 mobile chapter/icon states,40 disclosures,4 calculator cases passed. Release syntax/build500 passed.
+
+## 2026-10-25 Local reading refinements after mobile audit
+
+- User authorized follow-ups1-3 locally only. No commit/push/deploy.
+- Plain Korean annual-use label and concierge copy on sidepages. Price chapter shows1-share scope then calculator; existing extra-cost/payment/regional conditions moved intact to a labeled disclosure. Tables, prices, calculator and chairman mandated copy retained.
+- Side links13-14px with44-48px targets. Main, intro and Vercel configuration unchanged.
+- Validation:36 rendered requirement checks,111 mobile chapter/icon states,40 disclosure interactions,4 calculator cases pass. Parallel local loading initially failed; standalone reruns pass. Report: reports/20261025_가독성보완_로컬검토.
+- Review http://127.0.0.1:4205/parks/owners.html#price-guide.
+
 ## 2026-10-25 Approved sidepage design release
 
 - User approved GitHub and Vercel publication of the reviewed4205 design. Remote main ea6923a checked immediately before release; no newer colleague changes.
