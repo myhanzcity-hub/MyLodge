@@ -5,7 +5,7 @@
 - Source site files are preserved; target index.html, app.js and styles.css match exactly. Root opens the black villa/pool 3D intro, then enters index.html. Domestic, Chiang Mai and owner pages remain included.
 - Disabled automatic deployment for this integration branch. Production main merge/deployment remains pending separate instruction.
 - Validation: syntax check passed, workflow 9/9 passed, public build 430 files passed. Browser visibly rendered the requested villa/pool intro and touch began transformation. Full coin-to-home transition and mobile browser QA remain pending.
-- Upload blocked at preparation time: Git authenticates as IMT-Group-Account without write permission to target. User offered permission; requested target repository invitation. No credentials stored in project.
+- User invited IMT-Group-Account with write permission; invitation accepted and integration branch uploaded to myhanzcity-hub/MyLodge. Remote merge commit 7d61440 matched local. Target main remains b70c86b. No credentials stored in project.
 
 ## 2026-10-24 Restore visible primary desktop navigation
 
