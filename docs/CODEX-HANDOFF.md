@@ -1,3 +1,11 @@
+## 2026-10-25 Local eight-page homepage preview
+
+- User authorized local implementation only. Separate worktree MyLodge-local-deck-20261025 based on latest canonical MyLodge main dc2cf5c; original checkout preserved. No commit, push or deployment.
+- Added homepage-deck.js/css and registered assets in index/public manifest. Reuses existing chapter navigation pattern and original content nodes: hero, Why, shared ownership, pricing, owner life, facilities, concierge, destinations. Intro and homepage content scripts unchanged.
+- Fixed bottom previous/count/contents/next, header anchors, history, keyboard arrows, reduced-motion and guarded touch navigation. Native vertical reading retained; existing gallery and pricing controls preserved.
+- Syntax/check and workflow 9/9 pass; build 502 public files. Browser 64 language/width/page states at 320/390/768/1440 show no horizontal overflow; tested header navigation, back, keyboard, contents, Suite selection and facility tab. Final owner-heading check <=2 lines across all widths/languages. Long contractual/planning disclosures and existing option help retained without clipping; physical touch swipe not tested.
+- Local server http://127.0.0.1:4173/ retains black villa intro; /index.html opens deck. Evidence docs/review/homepage-deck-20261025/.
+
 ## 2026-10-25 Approved sidepage design release
 
 - User approved GitHub and Vercel publication of the reviewed4205 design. Remote main ea6923a checked immediately before release; no newer colleague changes.

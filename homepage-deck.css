@@ -1,0 +1,39 @@
+/* Opt-in homepage chapters; native vertical reading and original widgets remain. */
+body[data-homepage-deck]{--home-deck-bar:74px;padding-bottom:calc(var(--home-deck-bar) + env(safe-area-inset-bottom,0px));background:var(--ui-ivory,#f7f5f0)}
+body[data-homepage-deck] [hidden]{display:none!important}
+body[data-homepage-deck] #main{overflow-x:clip;min-height:calc(100svh - var(--home-deck-bar))}
+body[data-homepage-deck] .hero-transition-stage{display:contents}
+body[data-homepage-deck] #main #home{position:relative;top:auto;min-height:calc(100svh - var(--home-deck-bar));height:calc(100svh - var(--home-deck-bar));margin:0;display:flex;align-items:center;padding-top:110px;padding-bottom:50px}
+body[data-homepage-deck] #home .lodge-heading{transform:none!important}
+body[data-homepage-deck] #main #our-villa{position:relative;margin:0;min-height:calc(100svh - var(--home-deck-bar));padding-top:130px!important}
+body[data-homepage-deck] #our-villa #why-title{font-size:clamp(30px,3.3vw,46px);line-height:1.18;max-width:24ch}
+body[data-homepage-deck] #owner-life #owner-life-title{max-width:none;width:100%;font-size:clamp(30px,4vw,58px);line-height:1.18}
+body[data-homepage-deck] #main>:not(.hero-transition-stage){min-height:calc(100svh - var(--home-deck-bar));margin-top:0;padding-top:130px;padding-bottom:48px}
+body[data-homepage-deck] #ownership-model-before-pricing{width:min(1240px,calc(100% - 48px));margin-inline:auto}
+body[data-homepage-deck] #main .homepage-group>section:first-of-type{margin-top:0}
+.homepage-deck-nav{position:fixed;inset:auto 0 0;z-index:140;display:flex;align-items:center;gap:16px;min-height:74px;padding:12px 24px calc(12px + env(safe-area-inset-bottom,0px));box-sizing:border-box;background:#f7f5f0f5;color:#282722;border-top:1px solid #d8d1c6;backdrop-filter:blur(16px)}
+.homepage-deck-nav button,.homepage-deck-toc button{font:inherit;color:inherit;background:transparent;border:1px solid #c2b8aa;border-radius:0;min-height:44px;padding:8px 16px;cursor:pointer}
+.homepage-deck-nav button:disabled{opacity:.3;cursor:default}
+.homepage-deck-nav button:hover:not(:disabled),.homepage-deck-toc button:hover{background:#eae5dc}
+.homepage-deck-nav button:focus-visible,.homepage-deck-toc button:focus-visible{outline:2px solid #385f56;outline-offset:3px}
+.homepage-deck-position{flex:1;display:flex;justify-content:center;gap:14px;align-items:center;margin:0;font-size:13px;line-height:1.4}
+.homepage-deck-position span{color:#776f65;font-variant-numeric:tabular-nums}
+.homepage-deck-toc{position:fixed;right:24px;bottom:calc(86px + env(safe-area-inset-bottom,0px));z-index:145;width:min(390px,calc(100% - 32px));max-height:65svh;overflow:auto;display:grid;gap:6px;padding:16px;background:#f7f5f0;border:1px solid #d8d1c6;box-shadow:0 12px 40px #0002;color:#282722}
+.homepage-deck-toc button{text-align:left;border-color:transparent}
+.homepage-deck-toc button[aria-current=page]{background:#eae5dc;border-color:#c2b8aa}
+body[data-homepage-deck] header a[aria-current=page]{text-decoration:underline;text-underline-offset:8px}
+.homepage-deck-arrive{animation:homepage-deck-enter .3s ease-out both}
+@keyframes homepage-deck-enter{from{opacity:.4;translate:var(--deck-direction,35px) 0}to{opacity:1;translate:0 0}}
+@media(max-width:800px){
+ .homepage-deck-nav{gap:8px;padding-inline:12px}
+ .homepage-deck-nav button{padding-inline:12px;font-size:13px}
+ .homepage-deck-position{font-size:12px;gap:3px;flex-direction:column}
+ body[data-homepage-deck] #main>:not(.hero-transition-stage),body[data-homepage-deck] #main #our-villa{padding-top:104px!important}
+ body[data-homepage-deck] #ownership-model-before-pricing{width:calc(100% - 32px)}
+ body[data-homepage-deck] #main #home{padding-top:100px;padding-bottom:36px}
+ .homepage-deck-toc{right:16px}
+}
+@media(max-width:360px){.homepage-deck-nav{gap:5px;padding-inline:8px}.homepage-deck-nav button{padding-inline:9px}.homepage-deck-nav .deck-arrow-label{display:none}.homepage-deck-position{font-size:11px}}
+@media(max-width:400px){body[data-homepage-deck] #stay-services #concierge-title{font-size:28px;line-height:1.2;max-width:none}}
+@media(max-width:600px){body[data-homepage-deck] #our-villa .ownership-facts{grid-template-columns:1fr}body[data-homepage-deck] #facilities .facility-status-note{max-width:none;width:calc(100% - 40px)}body[data-homepage-deck] #facilities .facility-status-note a{display:block;margin:12px 0 0}}
+@media(prefers-reduced-motion:reduce){.homepage-deck-arrive{animation:none}}

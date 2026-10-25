@@ -82,3 +82,5 @@ publicAssets.push('experiments/ownership-villa-diagram/index.html');
 for (const file of JSON.parse(readFileSync(new URL('./side-review-public-files.json', import.meta.url), 'utf8'))) if (!publicAssets.includes(file)) publicAssets.push(file);
 
 publicAssets.push("parks/main-aligned.css");
+
+publicAssets.push('homepage-deck.css','homepage-deck.js');
