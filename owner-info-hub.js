@@ -14,6 +14,7 @@
    if(el.closest('section')?.id==='park-owner-guide'&&/오너로서 갖는 권리의 범위/.test(text))continue;
    const id=financial.test(text)?(/수수료|서비스|참가|행사/.test(text)?'service-costs':'price-guide'):/이미지|AI|설계|현장/.test(text)?'stay-with-confidence':'service-costs';
    const a=document.createElement('a');a.href=guide(id);a.dataset.ownerHubLink='';a.className='text-link';a.textContent=id==='price-guide'?'가격·이용 안내 →':id==='stay-with-confidence'?'시설·이미지 안내 →':'서비스 이용 안내 →';
+   if(el.id)a.id=el.id;
    if(el.tagName==='FIGCAPTION'){el.textContent='AI 공간 콘셉트'}
    else if(el.closest('footer')||el.tagName==='SMALL'||el.closest('dialog')){el.replaceWith(a)}
    else if(el.closest('section')?.id==='chiangmai-business-programmes'&&text.startsWith('개발자')){el.textContent='개발자·창업가·크리에이터가 만나 함께 도모하는 시간.'}

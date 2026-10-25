@@ -18,7 +18,7 @@
   ['오너 이용 안내','Owner guide','#park-owner-guide']
  ]:[
   ['치앙마이 소개','Chiang Mai','.side-hero'],
-  ['한눈에 둘러보기','At a glance','.page-directory','#visual-first'],
+  ['한눈에 둘러보기','At a glance','#visual-first','.page-directory'],
   ['풀파티와 클럽','Pool parties & clubs','#chiangmai-introduction'],
   ['시설 구성','Facilities','#chiangmai-spaces'],
   ['인테리어 콘셉트','Interior concepts','#global-interiors'],
@@ -30,8 +30,8 @@
   ['컨시어지·생활 편의','Everyday services','#chiangmai-services'],
   ['오너 이용 안내','Owner guide','#park-owner-guide'],
   ['글로벌 비즈니스 커뮤니티','Global business community','#chiangmai-community']
- ]).map(([ko,english,...selectors])=>({title:en?english:ko,nodes:selectors.map(s=>main.querySelector(s))}));
- if(chapters.some(c=>c.nodes.some(n=>!n)))return;
+ ]).map(([ko,english,...selectors])=>({title:en?english:ko,nodes:selectors.map(s=>main.querySelector(s)).filter(Boolean)})).filter(chapter=>chapter.nodes.length);
+ if(!chapters.length)return;
  // Each chapter follows its reading order, rather than the former long-page order.
  if(domestic){
   chapters.forEach(chapter=>chapter.nodes.forEach(node=>main.append(node)));

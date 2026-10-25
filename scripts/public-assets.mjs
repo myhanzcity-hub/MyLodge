@@ -84,3 +84,5 @@ for (const file of JSON.parse(readFileSync(new URL('./side-review-public-files.j
 publicAssets.push("parks/main-aligned.css");
 
 publicAssets.push('homepage-deck.css','homepage-deck.js');
+
+publicAssets.push("parks/owner-main-content.css","parks/owner-main-content.js","parks/owner-editorial.css","parks/owner-editorial.js");

@@ -1,3 +1,79 @@
+## 2026-10-25 Sidepage production integration
+
+- Based on colleague main2535702. Preserve index.html, homepage-deck assets, all main/intro source and Vercel configuration exactly. Integrate locally reviewed owner content/layout, shared side styling, icon/pagination/navigation fixes only. Append4 side assets without removing homepage entries. Original4206 review remains intact.
+
+## 2026-10-25 Final local sidepage QA
+
+- Checked36 chapters at6 viewport widths (216 states): no detected overflow, clipped text, grid/flex overlap, page JS errors.84 image URLs and44 link targets pass.34 requirement checks adapted to explicit copy changes/FAQ removal pass.16 pricing combinations and6 panorama/history flows plus3 absent-chapter fallbacks pass. Syntax/build504/workflow9/diff whitespace pass.
+- Fix found during final reading: service rate note referring to amounts now follows the amount tiles rather than preceding them. Rechecked at320/390/768/1440.
+- Report: reports/20261025_전체최종점검/점검결과.txt (workspace parent). Local4206 only, no push/deploy; main and intro preserved. Real device and backend service integrations not claimed.
+
+## 2026-10-25 Chiang Mai overview composition (local)
+
+- Move overview heading/cards before related destination links. Hide duplicate inline directory in deck mode; full chapter menu remains available. Establish consistent card grid, padding and compact icon/text rows on phones. Fix four scene-link targets to relevant existing sections. Preserve all chapters, content and source directory fallback. No main/intro or deployment changes.
+
+## 2026-10-25 Footer button contrast (local)
+
+- Footer text-color selector overrode filled guide-link foreground, causing dark text on charcoal buttons. Scope explicit ivory foreground and matching hover to footer guide links across three sidepages; version shared stylesheet. Preserve other footer text. No main/intro changes or deployment.
+
+## 2026-10-25 Remove customer-facing gusang terminology (local)
+
+- Rename destination cards to park exploration links; remove gusang wording across all three sidepages, including metadata, SWAP links, directory labels and service descriptions. Preserve preparation/planning status and all destinations/URLs. Local only; main/intro and deployment untouched.
+
+## 2026-10-25 Owner differentiation copy (local)
+
+- Reframe stay-with-confidence as MyLodge differences, not pre-arrival customer checks. Preserve six subheadings/icons; replace bodies with service commitments on search effort, transparent fees, cleaning, responsive concierge, accurate facility information, and prompt environmental maintenance. Preserve preparation-state and image disclosures, prices and terms. Chapter title updated accordingly.
+- Local review only; no main/intro edits, push or deploy.
+
+## 2026-10-25 Customer-facing copy correction (local)
+
+- Remove director-plan/source-date wording from service pricing; retain exact amounts, units and unconfirmed status. Replace editorial comparison instructions with customer guidance. Use stable service-rate-title ID in editorial adapter instead of matching heading text.
+- Customer-facing preparation/image notices simplified without changing availability. Three sidepages scanned for internal source references. No main/intro changes, commit, push or deployment.
+
+## 2026-10-25 Local photo-over-copy grid fix
+
+- User screenshot reproduced at768/844/919/1024: aspect-ratio figure stretched to the text column height, which transferred an oversized width across the grid gap. Page-level horizontal overflow checks did not catch sibling overlap.
+- Owner how-photo now width/max-width100%, self-sized aspect ratio, align-start; image fills its own bounded frame. Reset legacy grid-row/column placements on fact children.
+- Rechecked216 chapter/width combinations across domestic11/ChiangMai13/owners12 at320/390/768/919/1024/1440: no sibling grid/flex overlap.919 loaded photo394px remains within its column instead of474px. Image decode/actual screenshot verified.
+- Local4206 only. No commit/push/deploy. Main/intro untouched. Report reports/20261025_사진설명_겹침수정 (actual folder uses Korean 사진설명).
+
+## 2026-10-25 Local panorama-to-owner pagination regression fix
+
+- User reported panorama popup image-information link revealing the whole owner page. Fresh load worked; reproduced identical failure by serving pre-FAQ-removal13-chapter owners-deck against current12-chapter document (no nav, all12 sections visible).
+- Both owner and regional chapter engines now filter missing nodes/empty chapters instead of returning and disabling the whole deck. Owners removes a retired FAQ left in cached HTML. Version the deck script URLs on all3 sidepages to prevent stale manifest reuse.
+- Preserve IDs when owner-info-hub replaces a note with a guide link; fixes missing panorama aria-describedby target. Version that guide script in domestic/overseas pages.
+- Pass6 panorama flows at390/1024 across Jumunjin/Yangyang/ChiangMai with close/Escape/owner10-of12/next/back/forward;3 absent-chapter cases retain pagination; modal description references pass. Syntax/build504 pass.
+- Local only4206; no commit/push/deploy. Report reports/20261025_페이지네이션_전경이동수정.
+
+## 2026-10-25 Remove owner FAQ chapter locally
+
+- User explicitly requested deleting the pictured owner-faq section. Remove full section and chapter entry; owner guide now12 chapters. Old FAQ hash opens price guide. No push/deploy.
+
+## 2026-10-25 Local animation containment and resize correction
+
+- User reported broken/out-of-bounds reused media. Whole-page horizontal checks alone missed nested diagram gutters and stale bridge geometry.
+- Remove doubled standalone/owner gutters:390 viewport embedded page grows231px to327px. Use full outer row through1200px; avoid nested split/stack in tablet widths. Guard iframe height against hidden chapters and remeasure on return/resize.
+- Re-anchor completed iframe bridge after layout/resize; restore visible stroke. Keep source shared experiment/main unchanged. Add owner-only containment for image transitions/3D stage and legible skip-link focus colors.
+- Verified six viewport transitions320/390/768/1024/1440 and chapter return with no inner/outer overflow;16 price cases,52 chapter states/normal-motion replay/keyboard tabs/package previews pass. Actual viewport screenshots distinguish fixed-header/fullpage-capture artifacts.
+- All changes local4206 only; no commit/push/deploy. Report reports/20261025_오너_애니메이션배치검수.
+
+## 2026-10-25 Extend editorial style across owner guide locally
+
+- User requested similar treatment for remaining owner chapters after main component reuse.
+- Add owner-editorial.js/css scoped to owners only: gifts/SWAP/rental photographic spreads with numbered rules; service planning rates enlarged with original dated/unconfirmed notice; confidence/FAQ/steps use editorial rules; destination links gain existing photos and candidate-state disclosure. Overview uses fine-rule index.
+- Existing manuscript nodes moved rather than rewritten. Original rates2500/8000/5000 and conditional note retained. Main, intro, domestic/overseas, chapter engine and deployment config unchanged.
+- Checks:35 text/condition checks,52 chapter states with image decoding, keyboard/normal-motion diagram replay; existing16 price interaction checks remain. One missing destination-photo path corrected. Syntax/public504 build pass.
+- Local preview4206/parks/owners.html#owner-experiences. No commit/push/deploy. Report reports/20261025_오너_전체에디토리얼.
+
+## 2026-10-25 Local owner chapters reuse homepage components
+
+- User requested replacing overlapping owner share/pricing/rights content with the exact homepage examples. Local review only.
+- Owner chapter3 now uses homepage ownership-how photo/facts and120-share-to-villa iframe; chapter5 uses five rights and annual1-night2-day x3 visual; chapter7 uses actual Deluxe/Suite photos/tabs/package toggle/price breakdown and TV/fireplace previews.
+- Removed prior summary cards, dropdown calculator and repeated price table. Unique contract/extra-cost/payment/regional/specification/certification details preserved in labeled disclosures. User instruction now explicitly adopts homepage120-share presentation in owner guide.
+- Homepage/intro and domestic/overseas files unchanged. New owner-main-content.css/js are isolated copies/adapters; existing chapter navigation13 preserved.
+- Checked35 text requirements,16 price combinations across320/390/768/1440,52 chapter states, keyboard tabs, normal-motion iframe replay and package previews. Old4205 Python server lacks MJS MIME; use new502-public-file preview at http://127.0.0.1:4206/parks/owners.html#price-guide.
+- Report/source mapping: reports/20261025_오너_메인콘텐츠이식. No commit/push/deploy.
+
 ## 2026-10-25 Homepage deck production release
 
 - User approved Vercel publication of the locally reviewed eight-page homepage. Integrated latest remote main a57ca99 sidepage/quick-link changes; runtime files do not conflict. Preserved both handoff records.

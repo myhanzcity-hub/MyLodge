@@ -57,6 +57,9 @@ body.side-page :is(.requirements-table th,.requirements-table td){border-color:#
 body.side-page .requirements-table thead th{background:#eee9e1;color:var(--ui-charcoal)}
 body.side-page footer{background:var(--ui-ivory);color:var(--ui-charcoal);border-color:#d8d2c9}
 body.side-page footer :is(p,a,.footer-disclaimer){color:#57524d;border-color:#d8d2c9}
+/* Footer navigation uses the same readable filled buttons as content links. */
+body.side-page footer .guide-links a{background:var(--ui-charcoal);color:var(--ui-ivory);border-color:var(--ui-charcoal)}
+body.side-page footer .guide-links a:hover{background:#b7ada0;color:var(--ui-charcoal);border-color:#b7ada0}
 body.side-page :is(.owners-deck-nav,.chiangmai-deck-nav){background:rgb(247 245 240 / .98);color:var(--ui-charcoal);border-color:#d8d2c9;backdrop-filter:blur(16px)}
 body.side-page :is(.owners-deck-nav,.chiangmai-deck-nav) button{background:transparent;border-color:#b7ada0;color:var(--ui-charcoal);border-radius:0}
 body.side-page :is(.owners-deck-position,.chiangmai-deck-position) span{color:#69645e}
@@ -89,3 +92,35 @@ body.side-page #price-guide .owner-guide-detail{margin-block:16px}
 body.side-page #price-guide .owner-guide-detail summary{min-height:56px;font-weight:500}
 body.side-page #price-guide .price-terms p{font-size:14px;line-height:1.85}
 @media(max-width:600px){body.side-page :is(.detail-back,.domestic-card-link,.domestic-next-park a,.hanz-hero-access .hanz-link,.section-directory a){font-size:13px!important}body.side-page .domestic-next-park{gap:10px}body.side-page .domestic-next-park a{border:1px solid #b7ada0}body.side-page #price-guide .story-heading{margin-bottom:20px}body.side-page #price-guide .price-lead{margin-bottom:12px}body.side-page #price-guide .price-scope{margin-bottom:20px}}
+
+/* Chiang Mai overview: one introduction, scene cards, then related destinations. */
+body.side-chiangmai[data-chiangmai-deck] #visual-first{padding-block:48px 32px;border-bottom:0;background:var(--ui-ivory)}
+body.side-chiangmai[data-chiangmai-deck] #visual-first .story-heading{margin-bottom:0;max-width:760px}
+body.side-chiangmai[data-chiangmai-deck] #visual-first .story-heading h2{margin:12px 0 18px;line-height:1.35}
+body.side-chiangmai[data-chiangmai-deck] #visual-first .story-lead{margin:0;line-height:1.8}
+body.side-chiangmai[data-chiangmai-deck] #visual-first .visual-guide-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+body.side-chiangmai[data-chiangmai-deck] #visual-first a.visual-guide-tile{display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding:24px;min-height:210px;box-sizing:border-box;height:auto}
+body.side-chiangmai[data-chiangmai-deck] #visual-first .visual-guide-tile>div{width:100%;padding:0}
+body.side-chiangmai[data-chiangmai-deck] #visual-first .visual-guide-tile h3{margin:0 0 8px;font-size:20px;line-height:1.5}
+body.side-chiangmai[data-chiangmai-deck] #visual-first .visual-guide-tile p{display:block;margin:0;font-size:14px;line-height:1.7}
+body.side-chiangmai[data-chiangmai-deck] #visual-first .visual-guide-arrow{position:absolute;inset:22px 22px auto auto;margin:0;font-size:20px}
+body.side-chiangmai[data-chiangmai-deck] .page-directory{padding:0 0 40px;border:0;background:var(--ui-ivory)}
+body.side-chiangmai[data-chiangmai-deck] .page-directory>.container{display:flex;align-items:center;flex-wrap:wrap;gap:20px;padding-top:24px;border-top:1px solid #d8d2c9}
+body.side-chiangmai[data-chiangmai-deck] .page-directory .section-directory{display:none}
+body.side-chiangmai[data-chiangmai-deck] .page-directory .park-other-destinations{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:0;padding:0;border:0}
+body.side-chiangmai[data-chiangmai-deck] .page-directory .park-other-destinations p{margin:0;font-size:13px}
+body.side-chiangmai[data-chiangmai-deck] .page-directory .park-destination-links{display:flex;flex-wrap:wrap;gap:10px}
+body.side-chiangmai[data-chiangmai-deck] .page-directory>.container>.text-link{margin-left:auto;min-height:44px;display:inline-flex;align-items:center;font-size:13px}
+@media(max-width:1000px){body.side-chiangmai[data-chiangmai-deck] #visual-first .visual-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){
+ body.side-chiangmai[data-chiangmai-deck] #visual-first{padding-block:32px 24px}
+ body.side-chiangmai[data-chiangmai-deck] #visual-first .visual-guide-grid{grid-template-columns:minmax(0,1fr);gap:12px;margin-top:24px}
+ body.side-chiangmai[data-chiangmai-deck] #visual-first a.visual-guide-tile{flex-direction:row;align-items:center;min-height:120px;padding:20px 38px 20px 18px;gap:16px}
+ body.side-chiangmai[data-chiangmai-deck] #visual-first .visual-guide-tile h3{font-size:18px;margin-bottom:6px}
+ body.side-chiangmai[data-chiangmai-deck] #visual-first .visual-guide-tile p{font-size:13px}
+ body.side-chiangmai[data-chiangmai-deck] #visual-first .visual-guide-arrow{inset:18px 14px auto auto;font-size:18px}
+ body.side-chiangmai[data-chiangmai-deck] .page-directory>.container{gap:16px;padding-top:20px}
+ body.side-chiangmai[data-chiangmai-deck] .page-directory>.container>.text-link{margin-left:0;width:100%}
+}
+
+body.side-chiangmai[data-chiangmai-deck] .page-directory .park-destination-links a{white-space:nowrap;flex:0 0 auto;width:auto;padding-inline:18px}

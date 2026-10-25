@@ -1,0 +1,65 @@
+/* Remaining owner chapters: photographic spreads, numbered facts and quiet rules. */
+body.side-owners .owner-editorial-chapter .story-heading{max-width:1040px;margin-bottom:40px}
+body.side-owners .owner-editorial-chapter .story-heading>img{width:40px!important;height:40px!important;margin-bottom:22px}
+body.side-owners .owner-editorial-chapter .story-heading h2{font-size:clamp(32px,4.2vw,62px);line-height:1.2;max-width:22ch;margin-bottom:22px;letter-spacing:-.045em}
+body.side-owners .owner-editorial-chapter .story-heading .story-lead{max-width:58ch;font-size:15px;line-height:1.85}
+.owner-editorial-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,5vw,76px);align-items:start}
+.owner-editorial-photo{margin:0;position:sticky;top:120px;min-width:0}
+.owner-editorial-photo img{width:100%;height:auto;aspect-ratio:1.1;object-fit:cover;border-radius:0}
+.owner-editorial-photo figcaption{font-size:11px;color:#69645e;line-height:1.6;padding-top:12px}
+.owner-editorial-copy{min-width:0}
+body.side-owners .owner-editorial-copy .content-grid{display:block;margin:0}
+body.side-owners .owner-editorial-copy .content-card{padding:24px 0;border:0;border-top:1px solid #b7ada0;border-radius:0;background:none;margin:0}
+.owner-editorial-number{display:block;font:400 13px/1.6 var(--font-display);color:#69645e;margin-bottom:20px}
+body.side-owners .owner-editorial-copy .content-card>img{width:34px!important;height:34px!important;float:right;margin:0 0 12px 20px}
+body.side-owners .owner-editorial-copy .content-card h3{font-size:clamp(23px,2.4vw,32px);font-weight:400;margin-bottom:18px;line-height:1.35}
+body.side-owners .owner-editorial-copy .content-card p{font-size:14px;line-height:1.9}
+body.side-owners .owner-editorial-copy .status-note{margin-block:24px}
+body.side-owners .owner-editorial-copy .guide-links a{background:transparent;color:#171717;border:0;border-bottom:1px solid #b7ada0;padding:12px 0;min-height:48px;justify-content:flex-start}
+body.side-owners #owner-swap .step-list{display:block;margin:0;counter-reset:guide-step}
+body.side-owners #owner-swap .step-list li{padding:24px 0;border-top:1px solid #b7ada0;position:relative}
+body.side-owners #owner-swap .step-list li>img{float:right;width:36px!important;height:36px!important;margin:0 0 12px 20px}
+body.side-owners #owner-swap .step-list li::before{font:400 13px/1.6 var(--font-display);color:#69645e;margin-bottom:18px}
+body.side-owners #owner-swap .step-list h3{font-size:26px}
+body.side-owners #owner-swap .step-list p{font-size:14px}
+body.side-owners #service-costs .owner-guide-detail{border:0;border-top:1px solid #b7ada0;border-radius:0;margin:0;padding:4px 0}
+body.side-owners #service-costs .owner-guide-detail summary{min-height:64px;font-size:17px;font-weight:400}
+body.side-owners #service-costs .owner-editorial-copy .owner-guide-detail:last-of-type{border-bottom:1px solid #b7ada0}
+.owner-service-rates{margin:0 0 52px;padding:28px 0;border-block:1px solid #b7ada0}
+.owner-service-rates h3{font:400 20px/1.5 var(--font-heading);margin-bottom:14px}
+body.side-owners .owner-service-rates>p{max-width:88ch;font-size:12px;line-height:1.85;color:#69645e;margin-bottom:28px}
+.owner-rate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.owner-rate-grid>div{padding-right:24px;border-right:1px solid #d8d2c9;min-width:0}
+.owner-rate-grid>div:last-child{border-right:0}
+.owner-rate-grid p{font-size:13px;margin:0 0 14px}
+.owner-rate-grid strong{font:400 clamp(36px,4.5vw,64px)/1.1 var(--font-display);letter-spacing:-.045em;white-space:nowrap}
+.owner-rate-grid small{font:400 13px/1.5 var(--font-body);letter-spacing:0;margin-left:6px}
+body.side-owners #stay-with-confidence .planning-pains{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;margin:40px 0}
+body.side-owners #stay-with-confidence .planning-pain{border:0;border-top:1px solid #b7ada0;border-radius:0;background:none;padding:28px 0}
+body.side-owners #stay-with-confidence .planning-pain>img{width:38px!important;height:38px!important;float:right}
+body.side-owners #stay-with-confidence .planning-pain h3{font-size:23px;font-weight:400;margin-top:32px}
+body.side-owners #stay-with-confidence>.container>.content-card{background:none;border:0;border-top:1px solid #b7ada0;border-radius:0;padding:26px 0}
+body.side-owners #owner-faq>.container>details,body.side-owners #owner-faq .planning-faq details{border:0;border-top:1px solid #b7ada0;padding:24px 0}
+body.side-owners #owner-faq summary{font:400 clamp(18px,2vw,24px)/1.5 var(--font-heading);min-height:48px;cursor:pointer}
+body.side-owners #owner-faq details p{max-width:74ch;padding-top:18px;font-size:14px;line-height:1.9}
+body.side-owners #owner-journey .planning-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;margin-top:44px}
+body.side-owners #owner-journey .planning-steps li{position:relative;min-width:0;padding:26px 0 36px;border-top:1px solid #b7ada0}
+body.side-owners #owner-journey .planning-steps li::before{display:block;font:400 40px/1.2 var(--font-display);color:#b7ada0!important;margin-bottom:26px}
+body.side-owners #owner-journey .planning-steps li>img{position:absolute;top:30px;right:0;width:36px!important;height:36px!important}
+body.side-owners #owner-journey .planning-steps h3{font-size:24px;font-weight:400}
+body.side-owners .owner-destination-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:38px 0}
+body.side-owners .owner-destination-cards>a{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;background:none;color:#171717;border:0;min-width:0;font-size:20px!important}
+.owner-destination-cards img{aspect-ratio:4/3;width:100%;object-fit:cover}
+.owner-destination-cards span{display:block;border-bottom:1px solid #b7ada0;padding:18px 0;font-weight:400}
+body.side-owners .owner-destination-candidates{border:0;border-top:1px solid #b7ada0;border-bottom:1px solid #b7ada0;border-radius:0;padding:8px 0;margin-top:42px}
+body.side-owners #destinations .guide-statement{background:none;border-radius:0;border-top:1px solid #b7ada0;padding:48px 0 24px;margin-top:60px}
+body.side-owners #destinations .guide-statement h2{font:400 clamp(30px,4vw,54px)/1.3 var(--font-display)}
+body.side-owners .guide-hero>.container{gap:6%}
+@media(max-width:800px){.owner-editorial-layout{grid-template-columns:1fr;gap:28px}.owner-editorial-photo{position:static}.owner-editorial-photo img{aspect-ratio:16/10}.owner-rate-grid{gap:18px}.owner-rate-grid>div{padding-right:12px}.owner-rate-grid strong{font-size:38px}body.side-owners #stay-with-confidence .planning-pains,body.side-owners #owner-journey .planning-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}body.side-owners .owner-destination-cards{gap:16px}}
+@media(max-width:600px){body.side-owners .owner-editorial-chapter .story-heading{margin-bottom:28px}body.side-owners .owner-editorial-chapter .story-heading h2{font-size:32px}body.side-owners .owner-editorial-chapter .story-heading>img{width:36px!important;height:36px!important;margin-bottom:18px}body.side-owners .owner-editorial-chapter .story-lead{font-size:14px}.owner-editorial-photo img{aspect-ratio:16/10}.owner-editorial-layout{gap:28px}body.side-owners .owner-editorial-copy .content-card h3{font-size:24px}.owner-service-rates{padding:24px 0;margin-bottom:32px}.owner-rate-grid{grid-template-columns:1fr;gap:0}.owner-rate-grid>div{display:flex;align-items:center;justify-content:space-between;gap:18px;border:0;border-top:1px solid #d8d2c9;padding:20px 0}.owner-rate-grid p{margin:0;font-size:14px}.owner-rate-grid strong{font-size:42px}body.side-owners .owner-service-rates>p{font-size:12px!important}body.side-owners #stay-with-confidence .planning-pains,body.side-owners #owner-journey .planning-steps{grid-template-columns:1fr;gap:0}body.side-owners #stay-with-confidence .planning-pain{padding:24px 0}body.side-owners #stay-with-confidence .planning-pain h3{margin-top:12px}.owner-editorial-number{margin-bottom:16px}body.side-owners #owner-journey .planning-steps li{padding:24px 0}body.side-owners #owner-journey .planning-steps li::before{font-size:44px;margin-bottom:20px}body.side-owners #owner-faq summary{font-size:19px}body.side-owners .owner-destination-cards{grid-template-columns:1fr;gap:28px;margin:28px 0}.owner-destination-cards img{aspect-ratio:16/10}body.side-owners #destinations .guide-statement{padding-top:32px;margin-top:36px}}
+/* Overview remains a quick index, with the same fine rules as the main facts. */
+body.side-owners #visual-first .visual-guide-grid{gap:0 28px;border-top:1px solid #b7ada0}
+body.side-owners #visual-first a.visual-guide-tile{border:0;border-bottom:1px solid #b7ada0;border-radius:0;background:none;padding:26px 0!important}
+body.side-owners #visual-first .visual-guide-tile img{width:44px!important;height:44px!important}
+body.side-owners #visual-first .visual-guide-tile:hover{transform:none;background:#eee9e1}
+@media(max-width:600px){body.side-owners #visual-first .visual-guide-grid{gap:0 20px}body.side-owners #visual-first a.visual-guide-tile{padding:22px 0!important}.owner-destination-cards span{font-size:20px}}
