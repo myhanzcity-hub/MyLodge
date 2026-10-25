@@ -11,7 +11,7 @@
  const spaces=[
   {label:'별장 외관',tag:'01 / THE VILLA',title:'첨단의 형태.<br>고즈넉한 풍경.',copy:'부드러운 모듈 형태와 넓은 창. 자연을 가까이 두는 별장 공간을 그립니다.',photo:'facility-villa-20261007',illustration:'villa',alt:'마이롯지 별장 외관 공간 콘셉트',note:'마이롯지 공간 콘셉트'},
   {label:'비치사이드',tag:'02 / BEACHSIDE',title:'바다 곁에,<br>내 주말을 세우다.',copy:'별장 앞에 차를 세우고, 바다와 소나무가 보이는 풍경으로 들어서는 휴가를 상상합니다.',photo:'beachParty.png',width:1579,height:996,illustration:'beachside',alt:'바다 곁 마이롯지 공간 콘셉트',note:'마이롯지 공간 콘셉트'},
-  {label:'풀파티 · 카바나',tag:'03 / POOL PARTY & CABANAS',title:'풀파티와 카바나.',copy:'풀장과 프라이빗 카바나에서 즐기는 휴가.',photo:'facility-pool-cabana-20261008',illustration:'pool-cabanas',alt:'풀과 카바나 공간 콘셉트',note:'마이롯지 공간 콘셉트'},
+  {label:'풀파티 · 카바나',tag:'03 / POOL PARTY & CABANAS',title:'풀파티와 카바나.',copy:'화학 처리수 대신 깨끗한 바닷물로 즐기는 사계절 풀파티 구상입니다.',photo:'facility-pool-cabana-20261008',illustration:'pool-cabanas',alt:'풀과 카바나 공간 콘셉트',note:'마이롯지 공간 콘셉트'},
   {label:'바비큐 & 야외 다이닝',tag:'04 / BBQ & OUTDOOR DINING',title:'바비큐와 야외 다이닝.',copy:'야외에서 식사와 대화를 나누는 공간 콘셉트입니다.',photo:'bbqplace.png',width:1536,height:1024,illustration:'barbeque.png',alt:'바비큐 그릴과 야외 다이닝 공간 콘셉트',note:'계획 시설 콘셉트 · 실제 제공 여부는 미확정'},
   {label:'카페 & 클럽',tag:'05 / CAFÉ & CLUB',title:'커피 한 잔,<br>이야기가 이어지는 곳.',copy:'별장에서 머무는 사람들을 위한 커피와 가벼운 식사, 편안한 대화의 공간을 구상합니다.',photo:'facility-club-20261007',illustration:'cafe-club',alt:'카페와 클럽 공간 콘셉트',note:'마이롯지 공간 콘셉트'},
   {label:'마켓',tag:'06 / MARKET',title:'휴가에 필요한 즐거움.',copy:'머무는 동안 가까이에서 만나는 마켓.',photo:'facility-market-v2-20261008',illustration:'market',alt:'마켓 공간 콘셉트',note:'마이롯지 공간 콘셉트'},

@@ -844,7 +844,7 @@
     if (eyebrow) eyebrow.textContent = '02 / EXPLORE YOUR VILLA';
     if (heading) {
       heading.id = 'explore-villa-title';
-      heading.textContent = t('별장 안팎을 둘러보세요.', 'Explore Your Villa & Resort.');
+      heading.textContent = t('별장 안팎을 둘러보세요.', 'Explore the Villa & Resort.');
     }
     if (description) description.textContent = t('바다 곁의 별장과 테라스, 함께 머무는 공간을 만나보세요.', 'Explore villas, terraces, and shared spaces imagined by MyLodge.');
     spaces.setAttribute('aria-labelledby', 'explore-villa-title');
@@ -899,23 +899,26 @@
       if (english && image) image.alt = index === 0 ? 'Concept illustration of a villa, pool, and landscape' : 'Friends sharing dinner at a villa, lifestyle concept';
     });
   }
-  const gallery = main.querySelector('#villa-spaces');
+  // Facilities is still detached from main until final section composition.
+  const gallery = spaces;
   if (gallery && english) {
     const spacesEnglish = [
-      ['The Villa', 'THE VILLA', 'A Place of Your Own.', 'A modular villa concept with generous windows and an open terrace.', 'MyLodge space concept'],
-      ['Beachside', 'BEACHSIDE', 'A Weekend by the Sea.', 'Coastal pines, open sky, and time beside the water.', 'MyLodge space concept'],
-      ['Pool Party & Cabanas', 'POOL PARTY & CABANAS', 'Gather by the Water.', 'A concept for poolside gatherings and cabana time.', 'Concept image · planned amenity'],
-      ['BBQ & Outdoor Dining', 'BBQ & OUTDOOR DINING', 'Dine in the Open Air.', 'A concept for outdoor dining and shared BBQ evenings.', 'Concept image · planned amenity'],
-      ['Café & Club', 'CAFÉ & CLUB', 'A Place to Unwind.', 'A lounge concept for coffee, light dining, and conversation.', 'Concept image · planned amenity'],
-      ['Market', 'MARKET', 'Everyday Essentials.', 'A market concept for useful items and holiday treats.', 'Concept image · planned amenity'],
-      ['Concierge', 'CONCIERGE', 'A Warm Welcome.', 'A service concept for arrival guidance and guest support.', 'Concept image · service details unconfirmed']
+      ['The Villa', 'THE VILLA', 'A Modern Form. A Serene Setting.', 'Soft modular forms and wide windows bring nature close.', 'MyLodge space concept'],
+      ['Beachside', 'BEACHSIDE', 'Make Your Weekend by the Sea.', 'Imagine parking at the villa and stepping into a view of the sea and pines.', 'MyLodge space concept'],
+      ['Pool Party & Cabanas', 'POOL PARTY & CABANAS', 'Pool Parties & Cabanas.', 'Pool parties all year in clean seawater, without chemical treatment.', 'MyLodge space concept'],
+      ['BBQ & Outdoor Dining', 'BBQ & OUTDOOR DINING', 'BBQ & Outdoor Dining.', 'A concept for outdoor meals and conversation.', 'Planned amenity concept · availability unconfirmed'],
+      ['Café & Club', 'CAFÉ & CLUB', 'Coffee, Conversation & More.', 'A welcoming space for coffee, light meals, and conversation during your stay.', 'MyLodge space concept'],
+      ['Market', 'MARKET', 'Holiday Finds Close at Hand.', 'A nearby market for the things you need during your stay.', 'MyLodge space concept'],
+      ['Concierge', 'CONCIERGE', 'A Relaxed Start to Your Stay.', 'A welcoming space for guidance from arrival through your stay.', 'MyLodge space concept']
     ];
     const tabs = [...gallery.querySelectorAll('.facility-selector .facility-tab')];
     const photos = [...gallery.querySelectorAll('.facility-photo')];
     const applyEnglish = index => {
-      const [label, tag, title, description, note] = spacesEnglish[index] || spacesEnglish[0];
-      const selectedTab = tabs[index];
-      if (selectedTab) selectedTab.querySelector('.facility-tab-meta b').textContent = label;
+      const [, tag, title, description, note] = spacesEnglish[index] || spacesEnglish[0];
+      tabs.forEach((tab, tabIndex) => {
+        const tabLabel = tab.querySelector('.facility-tab-meta b');
+        if (tabLabel) tabLabel.textContent = spacesEnglish[tabIndex]?.[0] || '';
+      });
       gallery.querySelector('.facility-tag').textContent = `0${index + 1} / ${tag}`;
       gallery.querySelector('.facility-count').innerHTML = `0${index + 1} <i>/</i> 0${tabs.length}`;
       gallery.querySelector('.facility-gallery-copy h3').textContent = title;
@@ -1068,7 +1071,7 @@
   main.querySelector('.living-ribbon')?.remove();
 
   const navItems = [
-    ['home', t('홈', 'Home')], ['our-villa', t('Why MyLodge', 'Why MyLodge')],
+    ['home', t('홈', 'Home')], ['our-villa', t('왜 마이롯지인가요?', 'Why MyLodge')],
     ['ownership-pricing', t('소유·가격 안내', 'Ownership & Pricing')], ['owner-life', t('오너 라이프', 'Owner Life')],
     ['facilities', t('시설', 'Facilities')], ['stay-services', t('컨시어지', 'Concierge')]
   ];

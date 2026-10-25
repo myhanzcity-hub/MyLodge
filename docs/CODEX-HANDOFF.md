@@ -1,3 +1,13 @@
+## 2026-10-26 Gallery and navigation localization
+
+- Updated the Pool Party & Cabanas concept copy in Korean and English to describe clean seawater instead of a chemically treated pool and pool parties year-round.
+- Increased the photo-to-copy spacing on the Two Ways to Stay destination panels with a wider desktop grid gap and an inset on the copy column. The mobile stacked layout keeps its existing spacing.
+- Fixed the Korean desktop/mobile navigation label: the Korean branch had also contained `Why MyLodge`; it now displays `왜 마이롯지인가요?`, while English retains `Why MyLodge`.
+- Reproduced the gallery failure on `index.html?lang=en`: English mode was active, but card titles/descriptions stayed Korean with no JavaScript exception. The gallery was detached from `main` during composition, so the later lookup inside `main` returned null and skipped English updates. Reused the existing `spaces` reference. Browser verification of the fix was interrupted; responsive line counts remain pending. The intro JavaScript already preserves language query parameters, correcting the earlier diagnosis.
+
+- Updated the English copy for all seven `02 / EXPLORE YOUR VILLA` gallery cards to reflect the Korean titles, descriptions, and concept-status note. English labels are applied to every category tab when the English page loads; the selected card's title, description, and note follow the selected category.
+- Verification: `node --check homepage.js` and `git diff --check` passed. Rendered English/Korean line counts at desktop, tablet, and mobile remain unverified.
+
 ## 2026-10-25 Homepage copy rules, localization, and service media
 
 - Added the supplied `MYLODGE_CONTENT_RULES.md` to the repository root (already present) and referenced it from root `AGENTS.md` as a standing homepage instruction.
