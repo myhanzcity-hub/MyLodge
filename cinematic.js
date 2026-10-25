@@ -6,14 +6,6 @@
  const mobile=matchMedia('(max-width:700px)');
  const landscapeStory=matchMedia('(max-width:1023px) and (max-height:500px)');
  const lifestyleImage=(name,alt,priority=false)=>`<img src="assets/images/living-${name}-960.webp" srcset="assets/images/living-${name}-480.webp 480w, assets/images/living-${name}-960.webp 960w, assets/images/living-${name}-1536.webp 1536w" sizes="100vw" width="1536" height="1024" alt="${alt} · AI 생활 콘셉트" decoding="async" ${priority?'fetchpriority="high"':'loading="lazy"'}>`;
- const heroPhoto=hero.querySelector('.hero-photo');
- heroPhoto.innerHTML='<img src="assets/images/vacation-arrival-960.webp" srcset="assets/images/vacation-arrival-480.webp 480w, assets/images/vacation-arrival-960.webp 960w, assets/images/vacation-arrival-1680.webp 1680w" sizes="100vw" width="1680" height="946" alt="바닷가 모듈 별장 앞에 SUV가 도착한 휴가 장면 · AI 콘셉트" decoding="async" fetchpriority="high"><figcaption>AI 공간 콘셉트 · 실제 현장·확정 설계가 아닙니다</figcaption>';
- heroPhoto.classList.add('cinematic-background');
- hero.querySelector('.hero-sub').textContent='공간을 넘어, 함께하는 시간으로.';
- const storyLink=hero.querySelector('.hero-actions .outline');storyLink.href='#life-story';storyLink.textContent='별장 속 하루 보기 ↗';
- const scrollCue=document.createElement('a');scrollCue.className='scroll-cue';scrollCue.href='#ownership';scrollCue.innerHTML='<span>다음 이야기</span><i aria-hidden="true">↓</i>';
- hero.append(scrollCue);
-
  const ribbon=document.createElement('div');ribbon.className='living-ribbon';ribbon.setAttribute('aria-hidden','true');
  const symbol='<span class="ribbon-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/><circle cx="12" cy="12" r="2.5"/></svg></span>';
  const ribbonUnit=`<span class="ribbon-en">MY OWN VACATION</span>${symbol}<span class="ribbon-kr">마이롯지</span>${symbol}`;
@@ -50,11 +42,6 @@
   frame=0;
   if(reduced.matches||document.hidden)return;
   const viewport=innerHeight;
-  if(visible.has(hero)){
-   const rect=hero.getBoundingClientRect(),progress=clamp(-rect.top/rect.height);
-   hero.style.setProperty('--hero-drift',(progress*75).toFixed(2)+'px');
-   hero.style.setProperty('--hero-zoom',(1.04+progress*.12).toFixed(3));
-  }
   if(visible.has(vision)){
    const rect=vision.getBoundingClientRect();const progress=clamp((viewport*.65-rect.top)/(viewport*.85));
    vision.style.setProperty('--vision-zoom',(.9+progress*.1).toFixed(3));
@@ -77,11 +64,11 @@
  }
  function queue(){if(!frame&&!reduced.matches&&!document.hidden)frame=requestAnimationFrame(paint);}
  const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)visible.add(entry.target);else visible.delete(entry.target);});ribbon.classList.toggle('is-running',visible.has(ribbon));document.body.classList.toggle('life-in-view',visible.has(story));queue();});
- [hero,vision,story,ribbon].forEach(node=>observer.observe(node));
+ [vision,story,ribbon].forEach(node=>observer.observe(node));
  function updateMotion(){
   if(story.classList.contains('life-autoplay'))return;
   lastScene=-1;
-  if(reduced.matches||landscapeStory.matches||mobile.matches){cancelAnimationFrame(frame);frame=0;lifeScenes.forEach(node=>node.removeAttribute('aria-hidden'));hero.style.removeProperty('--hero-drift');hero.style.removeProperty('--hero-zoom');}
+  if(reduced.matches||landscapeStory.matches||mobile.matches){cancelAnimationFrame(frame);frame=0;lifeScenes.forEach(node=>node.removeAttribute('aria-hidden'));}
   else {lifeScenes.forEach(node=>node.setAttribute('aria-hidden',String(!node.classList.contains('is-active'))));queue();}
  }
  reduced.addEventListener('change',updateMotion);
