@@ -3,12 +3,6 @@
   "framework": null,
   "buildCommand": "node scripts/build.mjs",
   "outputDirectory": "dist",
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/intro.html"
-    }
-  ],
   "git": {
     "deploymentEnabled": {
       "main": true,
@@ -17,6 +11,11 @@
     }
   },
   "redirects": [
+    {
+      "source": "/",
+      "destination": "/intro.html",
+      "permanent": false
+    },
     {
       "source": "/domestic-villas.html",
       "destination": "/parks/domestic-villas.html",

@@ -1,3 +1,7 @@
+## 2026-10-25 Production root routing correction
+
+- First production deployment f5489de reached Ready at 8YHJ6J6tEjYTy3r85zgjTsjxA5Dt. Domain served all new assets, but root still resolved index.html despite rewrite. Replaced root rewrite with a temporary redirect to intro.html so first visits reliably open the requested black villa intro. Explicit index.html remains homepage entry.
+
 ## 2026-10-25 Requested myhanzcity-hub production deployment
 
 - User authorized deployment to https://myhanzcity-hub.vercel.app/. Verified Vercel project myhanzcity-hub/myhanzcity-hub connects to myhanzcity-hub/MyLodge. It previously tracked feature/hojiakbar-homepage at 4cb4e40, newer than main.
