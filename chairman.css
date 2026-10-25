@@ -50,11 +50,12 @@
 .vacation-design .villa-explorer{background:#FAF9F6;padding:clamp(72px,8vw,118px) 0;color:#141414;overflow:hidden}
 .villa-explorer .vacation-intro{margin-bottom:clamp(38px,5vw,64px)}
 .villa-explorer .vacation-intro>.eyebrow,.villa-explorer .vacation-intro>p:last-child{color:#716E68}
-.villa-explorer .facility-selector{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:end;border-top:1px solid #E2DED6;border-bottom:1px solid #E2DED6;margin:0 0 clamp(24px,2.2vw,32px);min-width:0}
+.villa-explorer .facility-selector{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));align-items:end;border-top:1px solid #E2DED6;border-bottom:1px solid #E2DED6;margin:0 0 clamp(24px,2.2vw,32px);min-width:0}
 .villa-explorer .facility-tab{position:relative;display:grid;grid-template-rows:clamp(96px,10vw,142px) auto;align-items:end;gap:12px;min-width:0;padding:14px 10px 16px;background:transparent;border:0;border-right:1px solid #E2DED6;border-radius:0;color:#716E68;text-align:left;cursor:pointer;transition:color 260ms ease,background-color 260ms ease}
 .villa-explorer .facility-tab:last-child{border-right:0}
 .villa-explorer .facility-tab::after{content:"";position:absolute;right:12px;bottom:-1px;left:12px;height:2px;background:#141414;transform:scaleX(0);transform-origin:center;transition:transform 280ms cubic-bezier(.22,1,.36,1)}
 .villa-explorer .facility-tab img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;filter:none;transform:translateY(0);transition:transform 320ms cubic-bezier(.22,1,.36,1)}
+.villa-explorer #facility-tab-3 img{mix-blend-mode:multiply}
 .villa-explorer .facility-tab-meta{display:flex;align-items:baseline;gap:8px;min-width:0}
 .villa-explorer .facility-tab small{font-size:10px;letter-spacing:.12em;color:#8E857B;flex:0 0 auto}
 .villa-explorer .facility-tab b{overflow:hidden;color:inherit;font-size:12px;font-weight:600;letter-spacing:-.02em;text-overflow:ellipsis;white-space:nowrap}
@@ -80,7 +81,7 @@
 @media(max-width:700px){
  .vacation-design .villa-explorer{padding:68px 0}.villa-explorer .vacation-intro{margin-bottom:34px}
  .villa-explorer .facility-selector{display:flex;overflow-x:auto;overscroll-behavior-inline:contain;margin-right:-20px;margin-bottom:24px;padding-right:20px;scroll-snap-type:x proximity;scrollbar-width:none}.villa-explorer .facility-selector::-webkit-scrollbar{display:none}
- .villa-explorer .facility-tab{grid-template-rows:88px auto;flex:0 0 118px;padding:10px 8px 14px;scroll-snap-align:start}.villa-explorer .facility-tab b{font-size:11px}.villa-explorer .facility-tab::after{right:8px;left:8px}
+ .villa-explorer .facility-tab{grid-template-rows:88px auto;flex:0 0 132px;padding:10px 8px 14px;scroll-snap-align:start}.villa-explorer .facility-tab b{font-size:11px;white-space:normal;line-height:1.3}.villa-explorer .facility-tab-meta{align-items:start}.villa-explorer .facility-tab::after{right:8px;left:8px}
  .villa-explorer .facility-gallery{grid-template-columns:1fr;min-height:0}.villa-explorer .facility-photos{aspect-ratio:16/11}.villa-explorer .facility-gallery-copy{min-height:270px;padding:24px 24px 70px;border-top:1px solid #E2DED6;border-left:0}.villa-explorer .facility-gallery-copy h3{margin:22px 0 14px;font-size:32px}.villa-explorer .facility-description{font-size:13px}.villa-explorer .facility-controls{right:24px;bottom:22px}
 }
 @media(prefers-reduced-motion:reduce){.villa-explorer .facility-tab,.villa-explorer .facility-tab img,.villa-explorer .facility-tab::after,.villa-explorer .facility-photo,.villa-explorer .facility-control{transition:none}.villa-explorer .facility-tab:hover img,.villa-explorer .facility-control:hover{transform:none}}

@@ -72,7 +72,7 @@ const lowerSlab = part('ground-floor-slab', S(lower,5,2.5,'floor-slab',.65), 'da
 const groundColumnSpots = [[-52,25],[52,25],[57,-44],[57,20]];
 const groundColumns = groundColumnSpots.map(([x,y],i)=>part(`ground-column-${i+1}`,S({x:x-2.1,y:y-2.1,w:4.2,d:4.2,r:.7},7.5,18,'structural-column',.35),'data-build="ground-columns"')).join('');
 const groundWalls = [
-  part('ground-front-wall',`${poly([[-56,24,7.5],[56,24,7.5],[56,24,27],[-56,24,27]],'wall-front')}${planLine([[-55,24],[55,24]],27,'facade-band')}`,'data-build="ground-front-wall"'),
+  part('ground-front-wall',`${poly([[-56,24,7.5],[6,24,7.5],[6,24,27],[-56,24,27]],'wall-front')}${poly([[32,24,7.5],[56,24,7.5],[56,24,27],[32,24,27]],'wall-front')}${planLine([[-55,24],[6,24]],27,'facade-band')}${planLine([[32,24],[55,24]],27,'facade-band')}${L(line3([[6,24,7.5],[6,24,27],[32,24,27],[32,24,7.5]]),'gold','cutaway-edge')}`,'data-build="ground-front-wall"'),
   part('ground-side-wall',`${poly([[56,-48,7.5],[56,24,7.5],[56,24,27],[56,-48,27]],'wall-side')}${planLine([[56,-47],[56,23]],27,'facade-band')}`,'data-build="ground-side-wall"'),
 ].join('');
 const groundWindows = part('ground-floor-glazing', [
@@ -81,11 +81,49 @@ const groundWindows = part('ground-floor-glazing', [
 ].join(''), 'data-sequence="ground-glass"');
 const entry = part('entry-panel', `${poly([[56,-1,7.5],[56,10,7.5],[56,10,26],[56,-1,26]],'entry-door')}<path class="door-hardware" d="${line3([[56.3,8,15],[56.3,8,20]])}"/>`, 'data-build="ground-glass"');
 
-const secondSlab = part('second-floor-slab', S(upper,27,3,'upper-slab',.75), 'data-build="second-slab"');
+// A real 20 × 20 plan opening leaves the provisional stairwell clear through the slab.
+const stairwell = { x: 8, y: -8, w: 24, d: 24, r: 0 };
+const secondSlab = part('second-floor-slab', [
+  S({x:upper.x,y:upper.y,w:upper.w,d:35,r:1},27,3,'upper-slab',.75),
+  S({x:upper.x,y:16,w:upper.w,d:4,r:1},27,3,'upper-slab',.75),
+  S({x:upper.x,y:-8,w:51,d:24,r:1},27,3,'upper-slab',.75),
+  S({x:32,y:-8,w:11,d:24,r:1},27,3,'upper-slab',.75),
+  `<path class="stairwell-trim" d="${K.planOutline(stairwell,30.12,P)}"/>`,
+].join(''), 'data-build="second-slab"');
+
+// Provisional interior stair location and dimensions; final architecture needs director approval.
+const stairCenter = [20,4];
+const stairBottom = 8.05;
+const stairTop = 29.45;
+const stairCount = 19;
+const stairRadius = 10.6;
+const stairInnerRadius = 1.45;
+const stairTreads = Array.from({length:stairCount},(_,index)=>{
+  const start = -Math.PI/2 + index * (Math.PI*2/stairCount);
+  const end = start + Math.PI*2/stairCount*.78;
+  const ring = [];
+  for(let point=0;point<=5;point++){const angle=start+(end-start)*point/5;ring.push([stairCenter[0]+Math.cos(angle)*stairRadius,stairCenter[1]+Math.sin(angle)*stairRadius]);}
+  for(let point=5;point>=0;point--){const angle=start+(end-start)*point/5;ring.push([stairCenter[0]+Math.cos(angle)*stairInnerRadius,stairCenter[1]+Math.sin(angle)*stairInnerRadius]);}
+  const z = stairBottom + index*(stairTop-stairBottom)/stairCount;
+  const solid = K.solidSvg(K.extrude(ring,z,.78,P,{convex:false,bevel:.18}),{tone:'lo',crease:'faint',className:'stair-tread-solid'});
+  const outer = line3([[ring[0][0],ring[0][1],z+.79],[ring[5][0],ring[5][1],z+.79]]);
+  return `<g class="spiral-tread motion-part" data-build="stair-treads" data-step="${index}">${solid}<path class="stair-tread-nosing" d="${outer}"/></g>`;
+}).join('');
+const stairCore = part('spiral-stair-core',K.solidSvg(K.cylinder(stairCenter[0],stairCenter[1],1.35,stairBottom,.48,P,24,.12),{tone:'lo',crease:'faint',className:'stair-core-base'})+
+  K.solidSvg(K.cylinder(stairCenter[0],stairCenter[1],.72,stairBottom+.45,stairTop-stairBottom-.2,P,20,.08),{tone:'lo',crease:'faint',className:'stair-core-pole'}), 'data-build="stair-core"');
+const railPoints = Array.from({length:96},(_,index)=>{
+  const progress=index/95, angle=-Math.PI/2+progress*Math.PI*2;
+  return [stairCenter[0]+Math.cos(angle)*(stairRadius-.35),stairCenter[1]+Math.sin(angle)*(stairRadius-.35),stairBottom+progress*(stairTop-stairBottom)+1.35];
+});
+const stairRail = part('spiral-stair-rail',`${L(line3(railPoints),'gold','stair-helix-rail')}${Array.from({length:19},(_,index)=>{
+  const progress=index/18,angle=-Math.PI/2+progress*Math.PI*2,x=stairCenter[0]+Math.cos(angle)*(stairRadius-.35),y=stairCenter[1]+Math.sin(angle)*(stairRadius-.35),z=stairBottom+progress*(stairTop-stairBottom)+.72;
+  return L(line3([[x,y,z],[x,y,z+.85]]),'gold','stair-baluster');
+}).join('')}`, 'data-build="stair-rail"');
+const staircase = part('internal-spiral-staircase',`${stairTreads}${stairCore}${stairRail}`, 'data-staircase="internal"');
 const upperColumnSpots = [[-40,21],[40,21],[44,-40],[44,17]];
 const upperColumns = upperColumnSpots.map(([x,y],i)=>part(`upper-column-${i+1}`,S({x:x-2,y:y-2,w:4,d:4,r:.7},30,19,'upper-column',.3),'data-build="upper-columns"')).join('');
 const upperWalls = [
-  part('upper-front-wall',`${poly([[-43,20,30],[43,20,30],[43,20,50],[-43,20,50]],'upper-wall-front')}${planLine([[-42,20],[42,20]],50,'upper-facade-band')}`,'data-build="upper-front-wall"'),
+  part('upper-front-wall',`${poly([[-43,20,30],[6,20,30],[6,20,50],[-43,20,50]],'upper-wall-front')}${poly([[32,20,30],[43,20,30],[43,20,50],[32,20,50]],'upper-wall-front')}${planLine([[-42,20],[6,20]],50,'upper-facade-band')}${planLine([[32,20],[42,20]],50,'upper-facade-band')}${L(line3([[6,20,30],[6,20,50],[32,20,50],[32,20,30]]),'gold','cutaway-edge')}`,'data-build="upper-front-wall"'),
   part('upper-side-wall',`${poly([[43,-43,30],[43,20,30],[43,20,50],[43,-43,50]],'upper-wall-side')}${planLine([[43,-42],[43,19]],50,'upper-facade-band')}`,'data-build="upper-side-wall"'),
 ].join('');
 const upperWindows = part('upper-floor-glazing', [
@@ -140,6 +178,8 @@ const svg = K.figureSvg({
     upperWalls,
     upperColumns,
     upperWindows,
+    // This front cutaway layer keeps the interior stair legible in the assembled model.
+    staircase,
     balcony,
     roofLower,
     roofUpper,
@@ -152,7 +192,7 @@ const svg = K.figureSvg({
 const styles = `
 :root{--paper:#f8f5ed;--ink:#504b43;--gold:#ad8b57;--line:#827867;--anatomy-page:#eee9dd;--anatomy-card:#f8f5ed;--anatomy-text:#6e675d;--anatomy-strong:#38352f;--anatomy-muted:#978e80;--anatomy-paper:#ded3c0;--anatomy-face:#f0e7d8;--anatomy-top:#fbf5e9;--anatomy-shade-0:#b5a892;--anatomy-shade-1:#c8baa4;--anatomy-shade-2:#d8ccb9;--anatomy-shade-3:#e7dccb;--anatomy-lit-top:#fff8e9;--anatomy-lit-shade:#e8d9bd;--anatomy-hi:#665c50;--anatomy-mid:#928574;--anatomy-lo:#a79a87;--anatomy-faint:#cfc4b2;--anatomy-lit:#aa8752;--anatomy-halo:#7b705d;--anatomy-halo-opacity:.18;--anatomy-dot:#726653;--anatomy-weight:.42px;--anatomy-ease:cubic-bezier(.2,.7,.18,1)}
 *{box-sizing:border-box}body{background:radial-gradient(ellipse at 52% 28%,#fbf9f2 0%,#f2eee5 54%,#eae4d8 100%);color:var(--ink);font-family:Georgia,'Times New Roman',serif}.iso-page{width:min(1100px,100% - 36px);margin:clamp(22px,4vw,52px) auto 44px}.editorial-head{max-width:730px;margin:0 auto 18px;text-align:center}.eyebrow{margin:0 0 8px;color:var(--gold);font:500 10px/1.5 ui-sans-serif,system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase}.editorial-head h1{margin:0;color:#3f3b34;font:400 clamp(28px,4.7vw,46px)/1.12 Georgia,'Times New Roman',serif;letter-spacing:-.035em}.editorial-head p:last-child{max-width:600px;margin:10px auto 0;color:#777064;font:400 13px/1.65 ui-sans-serif,system-ui,sans-serif}.scene-card{position:relative;margin:0;padding:12px 16px 8px;border:1px solid #d4cbbb;border-radius:3px;background:rgba(251,249,243,.88);box-shadow:0 18px 42px rgba(85,74,58,.08),inset 0 0 0 5px rgba(255,255,255,.34);overflow:hidden}.scene-card:before{position:absolute;inset:9px;content:"";pointer-events:none;border:1px solid rgba(185,168,140,.27)}.scene-overline,.scene-caption{position:relative;z-index:1;display:flex;justify-content:space-between;gap:12px;color:#8c8272;font:500 9px/1.5 ui-sans-serif,system-ui,sans-serif;letter-spacing:.13em;text-transform:uppercase}.scene-caption{padding:0 7px 4px;letter-spacing:.04em;text-transform:none;font-size:10px}.villa-art{position:relative;z-index:1;width:100%;height:auto;overflow:visible}.iso-svg path,.iso-svg circle,.iso-svg ellipse{vector-effect:non-scaling-stroke}.iso-line{stroke:var(--line)}.iso-line[data-tone="lo"]{stroke:#948775}.iso-line[data-tone="faint"]{stroke:#c5b9a5}.iso-line[data-tone="hi"]{stroke:#5f564a}
-.site-stone{--anatomy-paper:#c9bdab;--anatomy-top:#f4eddf;--anatomy-shade-0:#8d8577;--anatomy-shade-1:#aaa08f;--anatomy-shade-2:#c5b9a7;--anatomy-shade-3:#e3dacb}.foundation-stone{--anatomy-paper:#bcae98;--anatomy-top:#ece1cf;--anatomy-shade-0:#897d69;--anatomy-shade-1:#a0927b;--anatomy-shade-2:#c0b198;--anatomy-shade-3:#ddd0ba}.foundation-pier,.structural-column,.upper-column{--anatomy-paper:#ad9e87;--anatomy-top:#eee3d1;--anatomy-shade-0:#857862;--anatomy-shade-1:#9b8d75;--anatomy-shade-2:#b9aa91;--anatomy-shade-3:#d9cbb5}.floor-slab,.upper-slab{--anatomy-paper:#cbbda7;--anatomy-top:#f6eddd;--anatomy-shade-0:#988a75;--anatomy-shade-1:#b1a28a;--anatomy-shade-2:#d1c2aa;--anatomy-shade-3:#e8dcc8}.wall-front,.upper-wall-front{fill:#eee4d3;stroke:#968975;stroke-width:.55}.wall-side{fill:#c9bba4;stroke:#837966;stroke-width:.55}.upper-wall-side{fill:#d4c5ad;stroke:#8d806c;stroke-width:.55}.entry-door{fill:#927a5d;stroke:#79684f;stroke-width:.5}.door-hardware{fill:none;stroke:#c4a269;stroke-width:1;stroke-linecap:round}.glass-frame{fill:#e0d3bd;stroke:#867a66;stroke-width:.55}.glass-pane{fill:#88a49d;stroke:#607b74;stroke-width:.42}.interior-glow{fill:url(#warm-glass);opacity:0}.glass-mullion,.glass-transom{fill:none;stroke:#ede3d0;stroke-width:.7}.window-sill{fill:none;stroke:#b8945c;stroke-width:.6}.facade-band,.upper-facade-band{fill:none;stroke:#c0af94;stroke-width:.55}.stone-joint{fill:none;stroke:#d0c3ae;stroke-width:.42}.balcony-stone{--anatomy-paper:#b9aa91;--anatomy-top:#f5ecdd;--anatomy-shade-0:#8e816c;--anatomy-shade-1:#a69880;--anatomy-shade-2:#c4b49a;--anatomy-shade-3:#e2d4bd}.balcony-glass{fill:#aec2b7;fill-opacity:.33;stroke:#839b92;stroke-width:.4}.balcony-rail{fill:none;stroke:#ae8b57;stroke-width:1.25;stroke-linecap:round}.balcony-track{fill:none;stroke:#b9aa91;stroke-width:.6}.roof-stone{--anatomy-paper:#cfc0a8;--anatomy-top:#fbf3e5;--anatomy-shade-0:#9e9079;--anatomy-shade-1:#b2a38a;--anatomy-shade-2:#d1c2a9;--anatomy-shade-3:#e9dcc6}.roof-cap{--anatomy-paper:#dfd0b7;--anatomy-top:#fff8e9;--anatomy-shade-0:#aa9a80;--anatomy-shade-1:#c1b094;--anatomy-shade-2:#dfcfb5;--anatomy-shade-3:#f2e6d2}.roof-edge{fill:none;stroke:#aa9a81;stroke-width:.78}.roof-edge-gold{stroke:#b49462;stroke-width:.8}.roof-rib{fill:none;stroke:#c9b99e;stroke-width:.4}.assembly-shadow{fill:#776b58;opacity:.14;filter:url(#soft-shadow)}
+.site-stone{--anatomy-paper:#c9bdab;--anatomy-top:#f4eddf;--anatomy-shade-0:#8d8577;--anatomy-shade-1:#aaa08f;--anatomy-shade-2:#c5b9a7;--anatomy-shade-3:#e3dacb}.foundation-stone{--anatomy-paper:#bcae98;--anatomy-top:#ece1cf;--anatomy-shade-0:#897d69;--anatomy-shade-1:#a0927b;--anatomy-shade-2:#c0b198;--anatomy-shade-3:#ddd0ba}.foundation-pier,.structural-column,.upper-column{--anatomy-paper:#ad9e87;--anatomy-top:#eee3d1;--anatomy-shade-0:#857862;--anatomy-shade-1:#9b8d75;--anatomy-shade-2:#b9aa91;--anatomy-shade-3:#d9cbb5}.floor-slab,.upper-slab{--anatomy-paper:#cbbda7;--anatomy-top:#f6eddd;--anatomy-shade-0:#988a75;--anatomy-shade-1:#b1a28a;--anatomy-shade-2:#d1c2aa;--anatomy-shade-3:#e8dcc8}.wall-front,.upper-wall-front{fill:#eee4d3;stroke:#968975;stroke-width:.55}.wall-side{fill:#c9bba4;stroke:#837966;stroke-width:.55}.upper-wall-side{fill:#d4c5ad;stroke:#8d806c;stroke-width:.55}.entry-door{fill:#927a5d;stroke:#79684f;stroke-width:.5}.door-hardware{fill:none;stroke:#c4a269;stroke-width:1;stroke-linecap:round}.glass-frame{fill:#e0d3bd;stroke:#867a66;stroke-width:.55}.glass-pane{fill:#88a49d;stroke:#607b74;stroke-width:.42}.glass-panel[data-index="2"] .glass-pane,.glass-panel[data-index="6"] .glass-pane{fill-opacity:.1}.glass-panel[data-index="4"] .glass-pane,.glass-panel[data-index="8"] .glass-pane{fill-opacity:.3}.interior-glow{fill:url(#warm-glass);opacity:0}.stair-tread-solid{--anatomy-paper:#8f795a;--anatomy-top:#c7a775;--anatomy-shade-0:#5d4b36;--anatomy-shade-1:#786044;--anatomy-shade-2:#9b7b51;--anatomy-shade-3:#b28f60}.stair-tread-nosing{fill:none;stroke:#7c5e34;stroke-width:1.05;stroke-linecap:round}.stair-helix-rail{fill:none;stroke:#a7834c;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round}.stair-baluster{fill:none;stroke:#9b8055;stroke-width:.65;stroke-linecap:round}.stairwell-trim{fill:none;stroke:#ad8b57;stroke-width:.9}.glass-mullion,.glass-transom{fill:none;stroke:#ede3d0;stroke-width:.7}.window-sill{fill:none;stroke:#b8945c;stroke-width:.6}.facade-band,.upper-facade-band{fill:none;stroke:#c0af94;stroke-width:.55}.stone-joint{fill:none;stroke:#d0c3ae;stroke-width:.42}.balcony-stone{--anatomy-paper:#b9aa91;--anatomy-top:#f5ecdd;--anatomy-shade-0:#8e816c;--anatomy-shade-1:#a69880;--anatomy-shade-2:#c4b49a;--anatomy-shade-3:#e2d4bd}.balcony-glass{fill:#aec2b7;fill-opacity:.33;stroke:#839b92;stroke-width:.4}.balcony-rail{fill:none;stroke:#ae8b57;stroke-width:1.25;stroke-linecap:round}.balcony-track{fill:none;stroke:#b9aa91;stroke-width:.6}.roof-stone{--anatomy-paper:#cfc0a8;--anatomy-top:#fbf3e5;--anatomy-shade-0:#9e9079;--anatomy-shade-1:#b2a38a;--anatomy-shade-2:#d1c2a9;--anatomy-shade-3:#e9dcc6}.roof-cap{--anatomy-paper:#dfd0b7;--anatomy-top:#fff8e9;--anatomy-shade-0:#aa9a80;--anatomy-shade-1:#c1b094;--anatomy-shade-2:#dfcfb5;--anatomy-shade-3:#f2e6d2}.roof-edge{fill:none;stroke:#aa9a81;stroke-width:.78}.roof-edge-gold{stroke:#b49462;stroke-width:.8}.roof-rib{fill:none;stroke:#c9b99e;stroke-width:.4}.assembly-shadow{fill:#776b58;opacity:.14;filter:url(#soft-shadow)}
 .pool-shell{--anatomy-paper:#a9aaa0;--anatomy-top:#d9dbd1;--anatomy-shade-0:#7f8982;--anatomy-shade-1:#969c92;--anatomy-shade-2:#b4b8ab;--anatomy-shade-3:#cbd0c2}.pool-coping{--anatomy-paper:#b7b6a9;--anatomy-top:#f0eee3;--anatomy-shade-0:#8a8d84;--anatomy-shade-1:#a3a398;--anatomy-shade-2:#c5c3b5;--anatomy-shade-3:#dfddce}.pool-basin-course,.pool-tile-course{fill:none;stroke:#c6c9bd;stroke-width:.5}.pool-tile-joint,.pool-entry-steps{fill:none;stroke:#9fa69d;stroke-width:.42}.pool-water{fill:url(#water);stroke:#73938c;stroke-width:.45}.pool-infinity-edge{fill:none;stroke:#fff8e9;stroke-width:1.1;opacity:.8}.water-ripple{fill:none;stroke:#f9f7eb;stroke-width:.68;stroke-linecap:round;stroke-dasharray:8 13;opacity:.48}.ripple-1{stroke:#d1e0d8;stroke-dasharray:11 15;opacity:.52}.ripple-2{stroke:#e8e8d9;stroke-dasharray:5 16;opacity:.38}.construction-outline{fill:none;stroke:#b5a58a;stroke-width:.8;stroke-linejoin:round}.motion-part{transform-box:fill-box;transform-origin:center}.construction-outline,.roof-edge,#balcony-rail{stroke-dasharray:var(--line-length);stroke-dashoffset:var(--line-length)}#pool-water-fill{transform-box:fill-box;transform-origin:50% 100%}.motion-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin:14px auto 0}.motion-controls button{min-height:44px;padding:10px 20px;border:1px solid #bdb19e;background:#f8f5ed;color:#514a40;font:500 12px/1.4 ui-sans-serif,system-ui,sans-serif;cursor:pointer}.motion-controls button:focus-visible{outline:2px solid #9e7c48;outline-offset:3px}.motion-status{min-width:105px;color:#81786b;font:11px/1.4 ui-sans-serif,system-ui,sans-serif}.note{max-width:680px;margin:11px auto 0;text-align:center;color:#81786b;font:400 10px/1.6 ui-sans-serif,system-ui,sans-serif}.scene-info{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 23px;margin:17px 0 0;color:#81786b;font:400 10px/1.6 ui-sans-serif,system-ui,sans-serif}.scene-info span:before{content:"•";margin-right:8px;color:#ad8b57}@media(max-width:650px){.iso-page{width:min(100% - 20px,600px);margin:20px auto 34px}.editorial-head{margin-bottom:14px}.editorial-head h1{font-size:31px}.editorial-head p:last-child{font-size:12px;max-width:520px}.scene-card{padding:10px 6px 6px}.scene-card:before{inset:5px}.scene-overline{font-size:8px;padding:0 3px}.scene-caption{font-size:8px;padding-inline:3px}.motion-controls{margin-top:11px}.scene-info{margin-top:13px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 `;
 
@@ -163,87 +203,86 @@ const button=document.querySelector('#replay-assembly');
 const status=document.querySelector('#assembly-status');
 const svg=document.querySelector('.villa-art');
 const all=(q)=>[...svg.querySelectorAll(q)];
-const tl=gsap.timeline({paused:true,defaults:{ease:'power2.inOut'},onUpdate:()=>{status.textContent='Assembly · '+tl.time().toFixed(1)+' / 12.0 s'},onComplete:()=>{status.textContent='Villa complete';if(!reduced.matches)ambient.play(0)}});
+const duration=10;
+const tl=gsap.timeline({paused:true,defaults:{ease:'power2.inOut'},onUpdate:()=>{if(status)status.textContent='Assembly · '+tl.time().toFixed(1)+' / '+duration.toFixed(1)+' s'},onComplete:()=>{if(status)status.textContent='Villa complete';if(!reduced.matches)ambient.play(0)}});
 const ambient=gsap.timeline({paused:true,repeat:-1,yoyo:true});
-const shift=(selector,from,to,start,duration,ease='power2.inOut',vars={})=>{
-  const nodes=typeof selector==='string'?all(selector):[selector];
-  nodes.forEach((node,index)=>{gsap.set(node,from);tl.to(node,{...to,...vars,duration,ease},start+index*.055)});
+const shift=(selector,from,to,start,duration,ease='power2.inOut')=>{
+  all(selector).forEach((node,index)=>{gsap.set(node,from);tl.to(node,{...to,duration,ease},start+index*.045)});
 };
 const draw=(selector,start,duration)=>{
   all(selector).forEach((node,index)=>{
     const length=node.getTotalLength();
-    node.style.setProperty('--line-length',length);
     gsap.set(node,{strokeDasharray:length,strokeDashoffset:length});
     tl.to(node,{strokeDashoffset:0,duration,ease:'power1.inOut'},start+index*.025);
   });
 };
 
-// The assembly is positional: parts begin below, beside, or above their true mounts.
-shift('#ground-platform',{y:54},{y:0},.12,1.5,'power3.out');
-draw('#ground-outline',0,1.85);
-shift('[data-build="foundation"]',{y:52},{y:0},.48,1.25,'power3.out');
-shift('[data-build="pool-basin"]',{x:-72,y:19},{x:0,y:0},1.05,.9,'power3.out');
-
-// 2–4 s: supports rise, facade panels slide home, and the glazed wall inserts seat.
-shift('[data-build="ground-slab"]',{y:27},{y:0},2, .62,'power3.out');
-shift('[data-build="ground-columns"]',{y:32},{y:0},2.08,.7,'power3.out');
-shift('[data-build="ground-front-wall"]',{x:-52},{x:0},2.42,.92,'power2.out');
-shift('[data-build="ground-side-wall"]',{x:52},{x:0},2.48,.9,'power2.out');
-shift('[data-build="ground-glass"]',{x:66},{x:0},3.18,.7,'power3.out');
-
-// 4–6 s: upper floor, separate upper structure/glazing, then the balcony enclosure.
-shift('[data-build="second-slab"]',{y:-72},{y:0},4,.78,'power3.out');
-shift('[data-build="upper-columns"]',{y:34},{y:0},4.42,.68,'power3.out');
-shift('[data-build="upper-front-wall"]',{x:-46},{x:0},4.62,.86,'power2.out');
-shift('[data-build="upper-side-wall"]',{x:46},{x:0},4.68,.82,'power2.out');
-shift('[data-build="upper-glass"]',{x:58},{x:0},5.22,.62,'power3.out');
-shift('[data-build="balcony-slab"]',{x:45,y:14},{x:0,y:0},5.3,.55,'power3.out');
-shift('[data-build="balcony-panels"]',{x:38},{x:0},5.56,.38,'power2.out');
-draw('#balcony-rail',5.68,.3);
-
-// 6–8 s: roof slabs descend onto their bearings; edge lines draw to their joints.
-shift('[data-build="roof-base"]',{y:-92},{y:0},6,.82,'power3.out');
-shift('[data-build="roof-cap"]',{y:-62},{y:0},6.7,.62,'power3.out');
-draw('.roof-edge',7.22,.55);
-shift('[data-build="roof-details"]',{y:-10},{y:0},7.34,.48,'power2.out');
-
-// 8–10 s: the coping and tile course finish the pool; water rises from the basin floor.
-shift('[data-build="pool-coping"]',{y:24,scale:.92},{y:0,scale:1},8,.86,'power3.out');
-gsap.set('#pool-water-fill',{scaleY:0});
-tl.to('#pool-water-fill',{scaleY:1,duration:1.05,ease:'power1.out'},8.96);
-draw('.pool-tile-course,.pool-tile-joint',8.45,.82);
-
-// 10–12 s: warm glazing and architectural light come on; soft contact shadows settle.
+// Foundation and first-floor module.
+gsap.set('#villa-shadow,#pool-shadow',{opacity:0,scale:.82});
 all('.interior-glow').forEach(node=>gsap.set(node,{opacity:0}));
-tl.to('.interior-glow',{opacity:.76,duration:1.12,stagger:.12,ease:'sine.inOut'},10.05);
-tl.fromTo('#villa-shadow',{opacity:.025,scale:.84,y:-8},{opacity:.17,scale:1,y:0,duration:1.6,ease:'power2.out'},10.1);
-tl.fromTo('#pool-shadow',{opacity:.02,scale:.78},{opacity:.12,scale:1,duration:1.35,ease:'power2.out'},10.25);
-tl.to({}, {duration:.15},11.85);
+gsap.set('#pool-water-fill',{scaleY:0});
+shift('#ground-platform',{y:48},{y:0},0,.85,'power3.out');
+draw('#ground-outline',0,.9);
+shift('[data-build="foundation"]',{y:42},{y:0},.28,.78,'power3.out');
+shift('[data-build="pool-basin"]',{x:-60,y:17},{x:0,y:0},.46,.72,'power3.out');
+shift('[data-build="ground-slab"]',{y:32},{y:0},1.05,.62,'power3.out');
+shift('[data-build="ground-columns"]',{y:34},{y:0},1.22,.72,'power3.out');
+shift('[data-build="ground-front-wall"]',{x:-42},{x:0},1.48,.76,'power2.out');
+shift('[data-build="ground-side-wall"]',{x:42},{x:0},1.56,.76,'power2.out');
+shift('[data-build="ground-glass"]',{x:54},{x:0},2.12,.68,'power3.out');
 
+// Internal stair parts rise from the ground floor, one tread at a time.
+shift('[data-build="stair-core"]',{y:34},{y:0},2.72,.82,'power3.out');
+all('[data-build="stair-treads"]').forEach((node,index)=>{
+  gsap.set(node,{y:76+index*1.7,scale:.78});
+  tl.to(node,{y:0,scale:1,duration:.33,ease:'back.out(1.45)'},2.9+index*.07);
+});
+draw('[data-build="stair-rail"] .stair-helix-rail',3.62,.9);
+all('[data-build="stair-rail"] .stair-baluster').forEach((node,index)=>{
+  const length=node.getTotalLength();gsap.set(node,{strokeDasharray:length,strokeDashoffset:length});
+  tl.to(node,{strokeDashoffset:0,duration:.2,ease:'power1.out'},3.72+index*.035);
+});
+
+// The upper module descends only after the stair is assembled; its slab is built around the opening.
+shift('[data-build="second-slab"]',{y:-68},{y:0},4.48,.78,'power3.out');
+shift('[data-build="upper-columns"]',{y:32},{y:0},4.82,.62,'power3.out');
+shift('[data-build="upper-front-wall"]',{x:-38},{x:0},5.02,.72,'power2.out');
+shift('[data-build="upper-side-wall"]',{x:38},{x:0},5.08,.72,'power2.out');
+shift('[data-build="upper-glass"]',{x:48},{x:0},5.55,.62,'power3.out');
+shift('[data-build="balcony-slab"]',{x:34,y:12},{x:0,y:0},5.58,.52,'power3.out');
+shift('[data-build="balcony-panels"]',{x:28},{x:0},5.9,.38,'power2.out');
+draw('#balcony-rail,.stairwell-trim,.cutaway-edge',6.08,.42);
+
+// Roof, pool finish, and warm architectural light complete the model.
+shift('[data-build="roof-base"]',{y:-72},{y:0},6.42,.72,'power3.out');
+shift('[data-build="roof-cap"]',{y:-50},{y:0},6.94,.58,'power3.out');
+draw('.roof-edge',7.42,.52);
+shift('[data-build="roof-details"]',{y:-10},{y:0},7.48,.42,'power2.out');
+shift('[data-build="pool-coping"]',{y:21,scale:.94},{y:0,scale:1},7.46,.7,'power3.out');
+draw('.pool-tile-course,.pool-tile-joint',7.66,.62);
+tl.to('#pool-water-fill',{scaleY:1,duration:.78,ease:'power1.out'},8.02);
+tl.to('.interior-glow',{opacity:.76,duration:.72,stagger:.07,ease:'sine.inOut'},8.03);
+tl.fromTo('#villa-shadow',{opacity:.02,scale:.82},{opacity:.17,scale:1,duration:.82,ease:'power2.out'},8.02);
+tl.fromTo('#pool-shadow',{opacity:.02,scale:.8},{opacity:.12,scale:1,duration:.72,ease:'power2.out'},8.1);
+tl.to({}, {duration:1.08},8.92);
 ambient.to('.water-ripple',{strokeDashoffset:-30,duration:2.8,ease:'none'},0);
 ambient.to('.interior-glow',{opacity:.56,duration:2.1,stagger:.09,ease:'sine.inOut'},0);
-ambient.pause(0);
-
 function replay(){
   ambient.pause(0);
-  if(reduced.matches){tl.progress(1).pause();status.textContent='Villa complete · reduced motion';return}
-  status.textContent='Assembly · 0.0 / 12.0 s';
+  if(reduced.matches){tl.progress(1).pause();if(status)status.textContent='Villa complete · reduced motion';return}
+  if(status)status.textContent='Assembly · 0.0 / '+duration.toFixed(1)+' s';
   tl.restart();
 }
 button.addEventListener('click',replay);
-reduced.addEventListener('change',()=>{
-  if(reduced.matches){ambient.pause(0);tl.progress(1).pause();status.textContent='Villa complete · reduced motion'}
-  else replay();
-});
-if(reduced.matches){tl.progress(1).pause();status.textContent='Villa complete · reduced motion'}
-else tl.play(0);
+reduced.addEventListener('change',()=>{if(reduced.matches){ambient.pause(0);tl.progress(1).pause();if(status)status.textContent='Villa complete · reduced motion'}else replay()});
+if(reduced.matches){tl.progress(1).pause();if(status)status.textContent='Villa complete · reduced motion'}else tl.play(0);
 `;
 
 const body = `<header class="editorial-head"><p class="eyebrow">MYLODGE · ARCHITECTURAL STUDY</p><h1>A villa, assembled.</h1><p>Watch a contemporary seaside villa take shape, one architectural element at a time.</p></header>
 <main><figure class="scene-card"><div class="scene-overline"><span>01 / STRUCTURE IN MOTION</span><span>VILLA · ISOMETRIC STUDY</span></div>${svg}<figcaption class="scene-caption"><span>Architectural watercolor study</span><span>Concept model · not a confirmed property plan</span></figcaption></figure>
-<div class="motion-controls"><button id="replay-assembly" type="button">Replay Animation</button><span id="assembly-status" class="motion-status" role="status" aria-live="polite">Assembly · 0.0 / 12.0 s</span></div>
-<p class="note">The villa and pool are illustrative architectural concepts, not confirmed plans or availability statements.</p>
-<div class="scene-info" aria-label="Assembly sequence"><span>Foundation</span><span>Ground &amp; upper floors</span><span>Roof</span><span>Pool finish</span><span>Architectural light</span></div></main>`;
+<div class="motion-controls"><button id="replay-assembly" type="button">Replay Animation</button><span id="assembly-status" class="motion-status" role="status" aria-live="polite">Assembly · 0.0 / 10.0 s</span></div>
+<p class="note">Provisional front cutaway and stair placement; arrangement and dimensions are not an approved design. · 계단 확인을 위한 검토용 전면 컷어웨이이며, 배치와 치수는 확정 설계가 아닙니다.</p>
+<div class="scene-info" aria-label="Assembly sequence"><span>Foundation</span><span>Ground floor</span><span>Internal spiral stair</span><span>Upper floor &amp; roof</span><span>Pool finish</span></div></main>`;
 
 const gsapSource = readFileSync(`${HERE}/gsap.min.js`, 'utf8');
 const html = K.pageHtml({ title: 'MyLodge · Villa Assembly Study', theme: 'light', width: 1100, body, script: motion });

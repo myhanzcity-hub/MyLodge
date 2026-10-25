@@ -10,6 +10,8 @@
 
 ## 프로젝트
 
+- For all MyLodge homepage edits, read and follow `MYLODGE_CONTENT_RULES.md`. Verify English and Korean line counts at desktop, tablet, and mobile before finishing.
+
 - 프레임워크 없는 HTML/CSS/JavaScript. Node.js 20 이상, 외부 npm 패키지 설치 불필요.
 - `npm start` → `http://127.0.0.1:4173/`. `START-LOCAL.cmd`도 사용 가능.
 - `npm run build` → `dist/` 공개 파일 22개. 생성물 직접 편집 금지.

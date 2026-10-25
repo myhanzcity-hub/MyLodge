@@ -4,10 +4,10 @@ import {createReadStream} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {publicAssets} from './scripts/public-assets.mjs';
 const allowed=new Map([['/',['intro.html','text/html; charset=utf-8']],['/index.html',['index.html','text/html; charset=utf-8']],['/styles.css',['styles.css','text/css; charset=utf-8']],['/app.js',['app.js','text/javascript; charset=utf-8']]]);
-const mime={html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',webp:'image/webp',jpg:'image/jpeg',png:'image/png',mp4:'video/mp4'};
+const mime={html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',mjs:'text/javascript; charset=utf-8',webp:'image/webp',jpg:'image/jpeg',png:'image/png',mp4:'video/mp4'};
 for(const file of publicAssets){
  const ext=file.split('.').at(-1);
- allowed.set('/'+file,[file,({html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',webp:'image/webp',jpg:'image/jpeg',png:'image/png',mp4:'video/mp4'})[ext]]);
+ allowed.set('/'+file,[file,mime[ext]]);
 }
 for(const name of ['hero','interior','terrace','coastal','forest']){
  const file=`assets/images/lodge-${name}.png`;

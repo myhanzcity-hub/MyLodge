@@ -3,44 +3,39 @@
   'use strict';
   const language = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'ko';
   const copy = Object.freeze(language === 'en' ? {
-    eyebrow: 'MYLODGE · A NEW WAY TO LIVE',
     headline: ['I Have a Villa', 'of My Own.'],
-    description: 'A private seaside villa once felt out of reach. Shared ownership brings the dream of having your first villa closer.',
-    primary: 'Explore Villas', secondary: 'Explore Parks',
-    pricing: 'USD 3,999 per share · First installment USD 100',
-    pricingNote: '1/120 ownership interest per villa · Luxury option +USD 150 per share',
+    description: 'Shared ownership brings the dream of a private seaside villa within reach.',
+    primary: 'Explore Villas',
+    disclosure: 'Concept imagery. Availability, reservations, and product applications are not currently available.',
     alt: 'A sculptural coastal villa and pool at dusk. AI architectural concept.',
-    caption: 'ARCHITECTURAL IMAGINATION / AI CONCEPT'
   } : {
-    eyebrow: 'MYLODGE · 새로운 별장 라이프',
-    headline: ['나,', '별장 있다.'],
-    description: '혼자 갖기엔 멀었던 바닷가 독채 별장. 함께 소유하는 방식으로, 이제 나의 첫 별장이 됩니다.',
-    primary: '분양상품 보기', secondary: '파크 둘러보기',
-    pricing: '1구좌 USD 3,999 · 1차 USD 100부터',
-    pricingNote: '빌라 1/120 지분 기준 · 럭셔리형 구좌당 USD 150 추가',
-    alt: '해 질 무렵, 바다를 향해 열린 곡선형 별장과 수영장. AI 건축 콘셉트.',
-    caption: 'AI 공간 콘셉트'
+    headline: ['나도 별장오너.'],
+    description: '꿈같은 별장, 마이롯지와 함께 현실이 되다.',
+    primary: '별장 둘러보기',
+    disclosure: 'AI 공간 콘셉트입니다. 현재 예약 및 상품 신청은 제공되지 않습니다.',
+    alt: '바닷가 모듈형 빌라 리조트의 시네마틱 드론 전경.',
   });
-  const render = () => `<section id="home" class="hero lodge-hero${language === 'ko' ? ' lodge-video-hero' : ''}" data-hero-language="${language}" aria-label="${copy.headline.join(' ')}">
+  const render = () => `<section id="home" class="hero lodge-hero lodge-video-hero" data-hero-language="${language}" aria-label="${copy.headline.join(' ')}">
     <figure class="lodge-window">
       <div class="lodge-image-depth">
-        <img src="assets/images/brand-villa-atmosphere-20261008-1680.webp" srcset="assets/images/brand-villa-atmosphere-20261008-480.webp 480w, assets/images/brand-villa-atmosphere-20261008-960.webp 960w, assets/images/brand-villa-atmosphere-20261008-1680.webp 1680w" sizes="max(100vw, 180svh)" width="1680" height="1120" fetchpriority="high" alt="${copy.alt}">
-        ${language === 'ko' ? '<video class="lodge-hero-video" muted loop playsinline preload="metadata" poster="assets/images/brand-villa-atmosphere-20261008-1680.webp" aria-hidden="true"><source src="assets/video/Beach2.mp4" type="video/mp4"></video>' : ''}
+        <img src="/assets/images/MainCity.png" width="1672" height="941" fetchpriority="high" alt="${copy.alt}">
+        <video class="lodge-hero-video" autoplay muted loop playsinline preload="metadata" poster="/assets/images/MainCity.png" aria-hidden="true"><source src="/assets/video/MainCity.mp4" type="video/mp4"></video>
       </div>
-      <figcaption>${copy.caption}</figcaption>
     </figure>
     <div class="lodge-content">
-      <div class="lodge-heading"><p class="lodge-kicker">${copy.eyebrow}</p><h1>${copy.headline.join(' <br>')}</h1></div>
+      <div class="lodge-heading"><h1>${copy.headline.join(' <br>')}</h1></div>
       <div class="lodge-invitation">
         <p class="lodge-description">${copy.description}</p>
         <div class="lodge-actions">
           <a class="lodge-explore" href="#ownership-pricing"><span>${copy.primary}</span> <span aria-hidden="true">↗</span></a>
-          <a class="lodge-lifestyle" href="domestic-villas.html">${copy.secondary}</a>
         </div>
-        <div class="lodge-pricing-strip" aria-label="${copy.pricing}"><strong>${copy.pricing}</strong><small>${copy.pricingNote}</small></div>
+        <p class="lodge-disclosure">${copy.disclosure}</p>
       </div>
     </div>
-    ${language === 'ko' ? '<button class="lodge-video-toggle" type="button" aria-label="히어로 영상 재생">영상 재생 ▶</button>' : '<div class="lodge-footer"><a class="lodge-scroll" href="#our-villa"><span aria-hidden="true">↓</span> Discover MyLodge</a><p>A vision in progress. Reservations are not yet available.</p><span class="lodge-edition" aria-hidden="true">THE ART OF STAYING</span></div>'}
+    <div class="lodge-media-controls" role="group" aria-label="${language === 'ko' ? '히어로 미디어 제어' : 'Hero media controls'}">
+      <button class="lodge-media-control" data-video-toggle type="button" aria-label="${language === 'ko' ? '히어로 영상 재생' : 'Play hero video'}"><svg data-icon-play viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z"/></svg><svg data-icon-pause viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></button>
+      <button class="lodge-media-control" data-music-toggle type="button" aria-label="${language === 'ko' ? '음악 켜기' : 'Turn music on'}" aria-pressed="false"><svg data-icon-volume viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9.5a4 4 0 0 1 0 5"/><path d="M18.5 7a7.5 7.5 0 0 1 0 10"/></svg><svg data-icon-muted viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M4 9v6h4l5 4V5L8 9z"/><path d="m17 9 5 6m0-6-5 6"/></svg></button>
+    </div>
   </section>`;
   window.MyLodgeHero = Object.freeze({ render });
 })();

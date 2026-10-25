@@ -12,7 +12,7 @@
  '한즈시티 치앙마이 사이트 살펴보기':'Explore HanzCity Chiang Mai',
  '오너 혜택':'Owner Benefits',
  '마이롯지 해안 별장과 치앙마이의 수영장 별장을 그린 수채화 건축 일러스트 · AI 콘셉트':'A watercolor architectural illustration of MyLodge coastal and Chiang Mai villas · AI concept',
- '마이롯지 소개':'About MyLodge','두 가지 머무름':'Two Ways to Stay','둘러보기':'Explore','오너의 하루':'A Day at MyLodge','목적지':'Destinations','국내 별장':'Villas in Korea',
+ '마이롯지 소개':'About MyLodge','두 가지 머무름':'Two Ways to Stay','둘러보기':'Explore','오너의 하루':'A Day at MyLodge','목적지':'Destinations','국내 별장':'Villas in Korea','푸터 메뉴':'Footer navigation','안내 정보':'Information',
  '자연을 향해 열린':'Open to nature,','별장과 풀장.':'a villa and pool.','넓은 창의 별장과 물가의 휴식, 풍경과 만남을 잇는 테라스. 마이롯지가 그리는 공간 구상입니다.':'A villa with wide windows, time by the water and a terrace that brings the view and people together. A space imagined by MyLodge.',
  '모듈형 별장 공간 콘셉트':'Modular villa concept','풀장과 카바나 공간 구상':'Pool and cabana concept',
  '풀장 · 카바나':'Pool & Cabanas','물가에서 만나는 저녁.':'An evening by the water.','느긋한 카바나.':'Time to unwind in a cabana.','음악과 만남이 있는 풀장, 카바나에서의 느긋한 휴식을 그립니다.':'Picture a pool with music and good company, followed by unhurried time in a cabana.','음악과 함께하는 풀장 공간':'A pool setting with music','카바나에서 보내는 휴식':'Time to unwind in a cabana',
@@ -48,7 +48,7 @@
  '완벽한 휴가의 시작.':'The start of a perfect getaway.',
  '자동 재생 멈추기':'Pause slideshow','자동 재생 시작하기':'Resume slideshow',
  '이전 장면':'Previous scene','다음 장면':'Next scene',
- '어디부터 둘러볼까요?':'Where would you like to start?',
+ '내 별장에서 누리는 사치스러운 행복':'The Luxury of Having a Villa of Your Own',
  '나만의 시간, 함께하는 경험.':'Time for yourself. Moments to share.',
  '커피와 책 한 권, 나의 속도로 쉬는 시간.':'A coffee, a book and time to unwind at your own pace.',
  '같은 관심사를 가진 사람들과 이야기를 나누는 자리.':'A place to share stories with people who share your interests.',
@@ -100,12 +100,12 @@
  '휴가에서 시작해,':'From a holiday','새로운 가능성으로.':'to new possibilities.','우리의 별장,':'Our villa,','함께 준비하다.':'imagined together.','자연과 여유, 사람들과의 만남.':'Nature, relaxation and connections.','마이롯지가 그리는 별장 생활을 만나보세요.':'Discover villa life imagined by MyLodge.',
  '챕터 1. 치앙마이.':'Chapter 1. Chiang Mai.','전 세계 IT맨들이 집결하는 성지.':'A destination for the global tech community.','전 세계 IT맨들이':'The global tech community','집결하는 성지.':'coming together.',
  '함께 자유롭게 만나고.':'Come together.','소통하고 협력하고.':'Connect and collaborate.','도모하고. 스타트 업!':'Share ideas. Build something new!','치앙마이 살펴보기':'Explore Chiang Mai',
- '휴식에 집중할 수 있도록.':'More time to unwind.','방문 준비부터 공간 관리까지, 편안한 머무름을 돕는 서비스를 구상합니다.':'We’re planning services to make your stay easier, from arrival preparations to caring for your villa.',
+ '휴식에 집중할 수 있도록.':'More time to unwind.','방문 준비부터 공간 관리까지, 편안한 머무름을 돕는 서비스를 구상합니다.':'Explore services for arrival preparations and villa care.',
  '머무름의 준비':'Before Your Stay','방문 전 필요한 준비와 안내를 한곳에서 살펴보는 경험.':'Everything to help you prepare for your visit, in one place.','공간을 돌보는 손길':'Care for Your Space','청소와 침구 등 편안한 별장 생활을 위한 관리 서비스.':'A vision for housekeeping, linen care and the comforts of villa life.','다음 여행으로':'Your Next Escape','다른 지역에서의 머무름과 새로운 휴가를 이어가는 경험.':'Discover a new destination for your next escape.',
- '컨시어지는 서비스 구상이며, 현재 예약·신청은 제공하지 않습니다.':'Concierge services are being planned. Bookings and service requests are not currently available.',
+ '컨시어지는 서비스 구상이며, 현재 예약·신청은 제공하지 않습니다.':'Concierge service details are not confirmed. Bookings and service requests are not currently available.',
  '인생의 휴식처.':'Your haven in life.','마이롯지.':'MyLodge.','당신이 꿈꾸던 별장 생활.':'The villa life you’ve dreamed of.','마이롯지의 공간과 이야기를 만나보세요.':'Discover MyLodge’s spaces and stories.','여유와 만남이 있는 별장 생활, 마이롯지.':'Villa life with time to relax and people to meet. MyLodge.',
- '마이롯지 브랜드·공간 소개 사이트입니다. 이미지는 AI 및 기획 콘셉트로 실제 시설을 나타내지 않습니다. 별장과 서비스의 세부 안내는 확정 후 공개합니다.':'Discover the MyLodge brand and our vision for future villas. AI concept images do not show actual facilities. Villa and service details will be shared once confirmed.',
- 'MyLodge 마이롯지':'MyLodge','안내 창 닫기':'Close information','닫기 ×':'Close ×','준비 중':'Coming soon',
+ '마이롯지 브랜드와 공간 콘셉트를 소개합니다. 이미지는 AI 공간·생활 콘셉트이며, 실제 시설을 나타내지 않습니다. 소유·이용 및 서비스 조건은 공식 상품 안내와 계약에서 확인해 주세요.':'Discover MyLodge and its spatial concepts. AI-generated images illustrate concepts and do not represent confirmed facilities. Refer to official offer information and the final agreement for ownership, usage, and service terms.',
+ 'MyLodge 마이롯지':'MyLodge','안내 창 닫기':'Close information','닫기 ×':'Close ×','준비 중':'In preparation',
  '공간·체류·운영 구상':'A vision for spaces, stays and services','치앙마이 체류·업무·커뮤니티 사업 구상':'A vision for living, working and connecting in Chiang Mai','AI 공간·커뮤니티 콘셉트':'AI space & community concept','AI 교류 콘셉트':'AI community concept','체류 상품 가격 · 예약 공급 준비 중':'Pricing and booking details are not yet available',
  '참여 목적':'Your Purpose','공간 구성':'The Spaces','체류 구상':'Ways to Stay','준비 상태':'What’s Next','공유별장 보기':'Explore Shared Villas','국내 공유별장':'Shared Villas in Korea',
  '나의 체류 목적 살펴보기':'Find Your Purpose','국내 공유별장 SHARE 알아보기':'Explore Shared Villas in Korea','어떤 시간을':'How would you like','보내고 싶나요?':'to spend your time?','체류에서 시작해 업무와 교류까지.':'From a place to stay to a place to work and connect.','필요한 경험을 중심으로 살펴보세요.':'Explore the experience that matters to you.',
@@ -138,12 +138,12 @@
  if(language){
   language.querySelector('summary').setAttribute('aria-label',english?'Select language · English':'언어 선택 · 현재 한국어');
   language.querySelector('.language-full').textContent=english?'English':'한국어';language.querySelector('.language-short').textContent=english?'EN':'KO';
-  language.querySelector('ul').innerHTML=`<li>${english?`<a lang="ko" href="${languageURL('ko')}">한국어</a>`:'<span lang="ko" class="language-current" aria-current="true">한국어 <span>✓</span></span>'}</li><li>${english?'<span lang="en" class="language-current" aria-current="true">English <span>✓</span></span>':`<a lang="en" href="${languageURL('en')}">English</a>`}</li><li><button type="button" lang="zh" disabled>中文 <small>${english?'Coming soon':'준비 중'}</small></button></li><li><button type="button" lang="ja" disabled>日本語 <small>${english?'Coming soon':'준비 중'}</small></button></li>`;
+  language.querySelector('ul').innerHTML=`<li>${english?`<a lang="ko" href="${languageURL('ko')}">한국어</a>`:'<span lang="ko" class="language-current" aria-current="true">한국어 <span>✓</span></span>'}</li><li>${english?'<span lang="en" class="language-current" aria-current="true">English <span>✓</span></span>':`<a lang="en" href="${languageURL('en')}">English</a>`}</li>`;
   language.querySelector('.language-note').textContent=english?'Korean and English are available.':'한국어와 영어로 둘러볼 수 있습니다.';
   language.addEventListener('toggle',()=>{if(language.open)language.querySelectorAll('a[lang]').forEach(a=>a.href=languageURL(a.lang));});
  }
  if(!english)return;
- document.documentElement.lang='en';document.body.classList.add('english-page');
+ document.documentElement.lang='en';document.documentElement.setAttribute('translate','no');document.body.classList.add('english-page');
  document.title=document.body.classList.contains('valley-page')?'Business Valley · MyLodge':'MyLodge · I have a villa.';
  const description='Every day, a holiday. Discover MyLodge’s vision for villas, relaxation and new connections.';
  document.querySelectorAll('meta[name="description"],meta[property="og:description"]').forEach(e=>e.content=description);
@@ -174,9 +174,9 @@
  }
  translateNode(document.body);
  const visionTitle=document.querySelector('#vision h2');
- if(visionTitle)visionTitle.innerHTML='The MyLodge destination<br>at a glance.';
+ if(visionTitle)visionTitle.textContent='MyLodge at a Glance.';
  const chiangMaiTitle=document.querySelector('#brand-paths .valley-path h3');
- if(chiangMaiTitle)chiangMaiTitle.innerHTML='Chapter 1. Chiang Mai.<br>Where the global <strong class="it-highlight">tech community</strong> and<br><strong class="it-highlight">digital nomads</strong><br>come together.';
+ if(chiangMaiTitle)chiangMaiTitle.textContent='Chiang Mai: Work, Stay & Connect';
  const filmHeading=document.querySelector('.film-introduction h1');if(filmHeading)filmHeading.textContent='A villa to call my own.';
  // Media and menu handlers update labels later; translate only their changed nodes.
  new MutationObserver(records=>records.forEach(record=>{if(record.type==='childList')record.addedNodes.forEach(translateNode);else translateNode(record.target);})).observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['aria-label','alt','title']});

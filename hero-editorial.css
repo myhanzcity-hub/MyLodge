@@ -6,12 +6,12 @@ body #home.lodge-hero {
   display: flex; flex-direction: column; justify-content: flex-end;
   box-sizing: border-box; height: auto; min-height: 100vh; min-height: 100svh;
   max-height: none; margin: 0;
-  padding: 132px 5.5% max(100px, env(safe-area-inset-bottom));
-  overflow: clip; background: #081524; color: var(--lodge-paper);
+  padding: 124px 5.5% max(78px, env(safe-area-inset-bottom));
+  overflow: clip; background: var(--ui-ivory, #F7F5F0); color: var(--lodge-paper);
 }
 #home.lodge-hero::before, #home.lodge-hero::after { content: none; }
 .hero-transition-stage { position: relative; isolation: isolate; }
-#home.lodge-hero .lodge-window { position: absolute; inset: 0; margin: 0; overflow: hidden; border-radius: 0; background: #081524; }
+#home.lodge-hero .lodge-window { position: absolute; inset: 0; margin: 0; overflow: hidden; border-radius: 0; background: var(--ui-ivory, #F7F5F0); }
 #home.lodge-hero .lodge-image-depth { position: absolute; inset: -10% 0; width: 100%; height: 120%; transform-origin: center; }
 #home.lodge-video-hero .lodge-image-depth { inset: 0; height: 100%; }
 #home.lodge-hero .lodge-window img,
@@ -19,75 +19,67 @@ body #home.lodge-hero {
 #home.lodge-hero .lodge-window img { filter: brightness(.9); }
 #home.lodge-hero .lodge-hero-video { position: absolute; inset: 0; object-position: center; opacity: 0; pointer-events: none; }
 #home.lodge-hero .lodge-hero-video.is-ready { opacity: 1; }
-#home.lodge-hero .lodge-window::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgb(8 21 36 / .12) 15%, rgb(8 21 36 / .42) 45%, rgb(8 21 36 / .86) 100%); }
-#home.lodge-hero .lodge-content { position: relative; z-index: 2; display: grid; gap: 28px; width: 100%; min-width: 0; }
+#home.lodge-hero .lodge-hero-video { transition: opacity .55s ease; }
+#home.lodge-hero .lodge-window::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgb(8 21 36 / .54) 0%, rgb(8 21 36 / .38) 31%, rgb(8 21 36 / .08) 63%, transparent 78%), linear-gradient(0deg, rgb(8 21 36 / .26), transparent 38%); }
+#home.lodge-hero .lodge-content { position: relative; z-index: 2; display: grid; gap: 0; width: min(100%, 700px); min-width: 0; }
 #home.lodge-hero .lodge-heading,
 #home.lodge-hero .lodge-invitation { position: relative; min-width: 0; margin: 0; padding: 0; background: none; }
-#home.lodge-hero .lodge-kicker { margin: 0 0 20px; color: var(--lodge-paper); font: 500 12px/1.6 var(--font-body); letter-spacing: .14em; }
-body #home.lodge-hero h1 { margin: 0; max-width: none; font-family: var(--font-heading); font-size: clamp(54px, 5.8vw, 84px); font-weight: 400; line-height: 1.12; letter-spacing: -.055em; color: var(--lodge-paper); text-shadow: 0 2px 20px rgb(8 21 36 / .2); white-space: normal; }
-body #home.lodge-hero[data-hero-language=en] h1 { font-family: var(--font-display); font-size: clamp(58px, 7vw, 104px); line-height: 1.04; letter-spacing: -.03em; }
-#home.lodge-hero .lodge-description { max-width: 680px; margin: 0 0 28px; color: var(--lodge-paper); font: 400 clamp(16px, 1.25vw, 18px)/1.75 var(--font-body); word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; }
+#home.lodge-hero .lodge-kicker { display: none; }
+body #home.lodge-hero h1 { margin: 0; max-width: 640px; font-family: var(--font-heading); font-size: clamp(54px, 5.6vw, 82px); font-weight: 400; line-height: 1.08; letter-spacing: -.055em; color: var(--lodge-paper); text-shadow: 0 2px 20px rgb(8 21 36 / .2); white-space: normal; }
+body #home.lodge-hero[data-hero-language=en] h1 { max-width: 650px; font-family: var(--font-display); font-size: clamp(54px, 6.1vw, 88px); line-height: 1.02; letter-spacing: -.035em; }
+#home.lodge-hero .lodge-invitation { margin-top: 22px; max-width: 610px; }
+#home.lodge-hero .lodge-description { max-width: 590px; margin: 0 0 22px; color: var(--lodge-paper); font: 400 clamp(16px, 1.2vw, 18px)/1.65 var(--font-body); word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; }
 #home.lodge-hero .lodge-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 32px; }
-#home.lodge-hero .lodge-explore { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; box-sizing: border-box; width: 248px; min-height: 52px; padding: 8px 18px; border: 1px solid var(--lodge-paper); background: var(--lodge-paper); color: #081524; font: 500 15px/1.5 var(--font-body); }
+#home.lodge-hero .lodge-explore { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; box-sizing: border-box; width: 220px; min-height: 50px; padding: 8px 18px; border: 1px solid var(--lodge-paper); background: var(--lodge-paper); color: #081524; font: 500 15px/1.5 var(--font-body); }
 #home.lodge-hero .lodge-explore > span:last-child { font-size: 24px; transition: transform .3s; }
 #home.lodge-hero .lodge-explore:hover > span:last-child { transform: translate(3px,-3px); }
-#home.lodge-hero .lodge-lifestyle { display: inline-flex; align-items: center; min-height: 48px; color: var(--lodge-paper); font: 400 15px/1.5 var(--font-body); text-decoration: underline; text-underline-offset: 6px; text-decoration-color: rgb(245 241 232 / .5); }
-#home.lodge-hero .lodge-lifestyle:hover { text-decoration-color: currentColor; }
-#home.lodge-hero .lodge-window figcaption { position: absolute; z-index: 1; right: 5.5%; top: 120px; padding: 7px 10px; background: rgb(8 21 36 / .85); color: var(--lodge-paper); font: 10px/1.6 var(--font-body); letter-spacing: .02em; }
-#home.lodge-video-hero .lodge-window figcaption { top: auto; bottom: 32px; left: 5.5%; right: auto; padding: 0; background: transparent; font-size: 9px; }
-#home.lodge-hero .lodge-video-toggle { position: absolute; z-index: 3; right: 5.5%; bottom: max(32px, env(safe-area-inset-bottom)); min-width: 104px; min-height: 44px; padding: 10px 14px; border: 1px solid rgb(245 241 232 / .5); background: rgb(8 21 36 / .75); color: var(--lodge-paper); font: 11px/1.5 var(--font-body); cursor: pointer; }
-#home.lodge-hero .lodge-video-toggle[hidden] { display: none; }
+#home.lodge-hero .lodge-disclosure { margin: 16px 0 0; max-width: 540px; color: rgb(245 241 232 / .8); font: 400 11px/1.6 var(--font-body); }
+#home.lodge-hero .lodge-media-controls { position: absolute; z-index: 4; right: 5.5%; bottom: max(24px, env(safe-area-inset-bottom)); display: flex; align-items: center; gap: 8px; }
+#home.lodge-hero .lodge-media-control { display: grid; width: 40px; height: 40px; place-items: center; padding: 0; border: 1px solid rgb(245 241 232 / .62); border-radius: 50%; background: rgb(8 21 36 / .32); color: var(--lodge-paper); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); cursor: pointer; transition: background-color .2s ease, border-color .2s ease, transform .2s ease; }
+#home.lodge-hero .lodge-media-control:hover { transform: translateY(-2px); border-color: var(--lodge-paper); background: rgb(8 21 36 / .72); }
+#home.lodge-hero .lodge-media-control svg { display: block; width: 17px; height: 17px; }
+#home.lodge-hero .lodge-media-control [hidden] { display: none; }
+#home.lodge-hero .lodge-media-control [data-icon-play],#home.lodge-hero .lodge-media-control [data-icon-pause] { fill: currentColor; }
+#home.lodge-hero .lodge-media-control [data-icon-volume] path:first-child,#home.lodge-hero .lodge-media-control [data-icon-muted] path:first-child { fill: currentColor; }
+#home.lodge-hero .lodge-media-control [data-icon-volume] path:not(:first-child),#home.lodge-hero .lodge-media-control [data-icon-muted] path:last-child { fill: none; stroke: currentColor; stroke-width: 1.55; stroke-linecap: round; stroke-linejoin: round; }
 #home.lodge-hero :is(a,button):focus-visible { outline: 2px solid var(--lodge-paper); outline-offset: 5px; }
-#home.lodge-hero .lodge-footer { position: absolute; left: 5.5%; right: 32px; bottom: 27px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-#home.lodge-hero .lodge-scroll { min-height: 44px; display: inline-flex; align-items: center; gap: 16px; color: var(--lodge-paper); font-size: 11px; }
-#home.lodge-hero .lodge-scroll > span { font-size: 24px; }
-#home.lodge-hero .lodge-footer p { margin: 0; color: #cec9bf; font-size: 10px; line-height: 1.7; }
-#home.lodge-hero .lodge-edition { font-size: 9px; letter-spacing: .16em; }
-@media (max-width: 1000px) { #home.lodge-hero .lodge-edition { display: none; } }
 @media (max-width: 700px) {
-  body #home.lodge-hero { padding: 112px 24px max(88px, calc(24px + env(safe-area-inset-bottom))); }
+  body #home.lodge-hero { padding: 112px 24px max(92px, calc(24px + env(safe-area-inset-bottom))); }
+  #home.lodge-hero .lodge-window::after { background: linear-gradient(90deg, rgb(8 21 36 / .48), rgb(8 21 36 / .22) 72%, rgb(8 21 36 / .12)), linear-gradient(0deg, rgb(8 21 36 / .24), transparent 42%); }
   #home.lodge-hero .lodge-window img { object-position: 44% center; }
-  #home.lodge-hero .lodge-content { gap: 24px; }
-  #home.lodge-hero .lodge-kicker { margin-bottom: 16px; font-size: 11px; letter-spacing: .07em; }
-  body #home.lodge-hero h1 { font-size: clamp(38px, 11vw, 58px); }
-  body #home.lodge-hero[data-hero-language=en] h1 { font-size: clamp(38px, 11.5vw, 62px); }
-  #home.lodge-hero .lodge-description { font-size: 16px; line-height: 1.65; margin-bottom: 20px; }
-  #home.lodge-hero .lodge-actions { gap: 8px 24px; }
-  #home.lodge-hero .lodge-explore { width: 100%; }
-  #home.lodge-hero .lodge-lifestyle { min-height: 44px; }
-  #home.lodge-hero .lodge-window figcaption { top: 88px; right: 24px; font-size: 8px; }
-  #home.lodge-video-hero .lodge-window figcaption { top: auto; left: 24px; bottom: 28px; right: auto; }
-  #home.lodge-hero .lodge-video-toggle { right: 24px; bottom: max(16px, env(safe-area-inset-bottom)); }
-  #home.lodge-hero .lodge-footer { left: 24px; right: 24px; bottom: 13px; gap: 12px; }
-  #home.lodge-hero .lodge-scroll { font-size: 10px; gap: 9px; flex-shrink: 0; }
-  #home.lodge-hero .lodge-footer p { max-width: 180px; text-align: right; font-size: 9px; }
+  #home.lodge-hero .lodge-content { width: 100%; }
+  body #home.lodge-hero h1 { max-width: 560px; font-size: clamp(40px, 10vw, 58px); line-height: 1.06; }
+  body #home.lodge-hero[data-hero-language=en] h1 { max-width: 530px; font-size: clamp(40px, 10vw, 60px); }
+  #home.lodge-hero .lodge-invitation { margin-top: 18px; }
+  #home.lodge-hero .lodge-description { max-width: 520px; font-size: 15px; line-height: 1.65; margin-bottom: 18px; }
+  #home.lodge-hero .lodge-actions { gap: 8px; }
+  #home.lodge-hero .lodge-explore { width: min(100%, 260px); min-height: 48px; }
+  #home.lodge-hero .lodge-disclosure { max-width: 270px; margin-top: 12px; font-size: 10px; }
+  #home.lodge-hero .lodge-media-controls { right: 20px; bottom: max(22px, env(safe-area-inset-bottom)); gap: 7px; }
+  #home.lodge-hero .lodge-media-control { width: 38px; height: 38px; }
 }
 @media (max-width: 360px) {
-  body #home.lodge-hero[data-hero-language=en] h1 { font-size: 10.5vw; }
-  #home.lodge-hero .lodge-content { gap: 20px; }
+  body #home.lodge-hero[data-hero-language=en] h1 { font-size: 10vw; }
   #home.lodge-hero .lodge-description { font-size: 14px; }
 }
 @media (max-height: 650px) and (min-width: 500px) {
-  body #home.lodge-hero { position: relative; padding: 100px 5.5% max(72px, calc(16px + env(safe-area-inset-bottom))); }
-  #home.lodge-hero .lodge-content { grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: start; gap: 32px; }
-  body #home.lodge-hero h1, body #home.lodge-hero[data-hero-language=en] h1 { font-size: clamp(36px, 5.1vw, 64px); }
-  #home.lodge-hero .lodge-kicker { margin-bottom: 12px; font-size: 10px; }
-  #home.lodge-hero .lodge-description { font-size: 13px; line-height: 1.65; margin-bottom: 12px; }
-  #home.lodge-hero .lodge-actions { gap: 0 20px; }
-  #home.lodge-hero .lodge-explore { width: 100%; }
-  #home.lodge-hero .lodge-lifestyle { min-height: 44px; }
+  body #home.lodge-hero { position: relative; padding: 96px 5.5% 70px; }
+  #home.lodge-hero .lodge-content { grid-template-columns: minmax(0,1.1fr) minmax(260px,.9fr); align-items: end; gap: 32px; width: 100%; }
+  body #home.lodge-hero h1, body #home.lodge-hero[data-hero-language=en] h1 { font-size: clamp(36px, 5vw, 62px); }
+  #home.lodge-hero .lodge-invitation { margin-top: 0; }
+  #home.lodge-hero .lodge-description { font-size: 13px; line-height: 1.55; margin-bottom: 12px; }
+  #home.lodge-hero .lodge-explore { width: min(100%, 240px); }
+  #home.lodge-hero .lodge-disclosure { margin-top: 10px; font-size: 9px; }
 }
 @media (max-height: 400px) and (min-width: 500px) {
-  body #home.lodge-hero { padding-top: 112px; }
-  #home.lodge-hero .lodge-content { gap: 24px; }
-  body #home.lodge-hero h1, body #home.lodge-hero[data-hero-language=en] h1 { font-size: clamp(30px, 4.7vw, 42px); }
-  #home.lodge-hero .lodge-description { font-size: 12.5px; line-height: 1.6; }
-  #home.lodge-hero .lodge-window figcaption { top: 82px; }
-  #home.lodge-video-hero .lodge-window figcaption { top: auto; }
+  body #home.lodge-hero { padding-top: 84px; }
+  body #home.lodge-hero h1, body #home.lodge-hero[data-hero-language=en] h1 { font-size: clamp(30px, 4.3vw, 42px); }
+  #home.lodge-hero .lodge-description { font-size: 12px; line-height: 1.5; }
 }
 @media (prefers-reduced-motion: reduce) {
   body #home.lodge-hero { position: relative; }
   #home.lodge-hero .lodge-explore > span:last-child { transition: none; }
+  #home.lodge-hero .lodge-hero-video,.lodge-media-control { transition: none !important; }
 }
 
 /* Existing adjacent-section styling, preserved verbatim. */

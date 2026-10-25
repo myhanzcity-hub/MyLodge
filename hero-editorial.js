@@ -31,8 +31,8 @@
 
  $('.vacation-finale')?.remove();
  // Final homepage order and navigation are owned by homepage.js.
- document.querySelectorAll('meta[name="description"],meta[property="og:description"]').forEach(meta=>meta.content=t('나도, 별장이 있다. 나만의 쉼과 새로운 만남, 마이롯지가 그리는 별장 생활을 만나보세요.','A holiday home of my own. Discover the relaxation, connections and holiday-home life imagined by MyLodge.'));
- document.title=t('마이롯지 · 나도, 별장이 있다.','MyLodge · A Holiday Home of My Own.');
+ document.querySelectorAll('meta[name="description"],meta[property="og:description"]').forEach(meta=>meta.content=t('꿈같은 별장, 마이롯지와 함께 현실이 되다.','A holiday home of my own. Discover the relaxation, connections and holiday-home life imagined by MyLodge.'));
+ document.title=t('마이롯지 · 나도 별장오너.','MyLodge · A Holiday Home of My Own.');
 })();
 
 /* Homepage art direction. All animation is owned by a reversible GSAP context. */
@@ -41,6 +41,7 @@
   const hero = document.querySelector('#home.hero');
   if (!hero) return;
   const en = new URLSearchParams(location.search).get('lang') === 'en';
+  const t=(ko,english)=>en?english:ko;
   // Copy and markup are rendered once by hero-content.js through app.js.
   const ownershipTarget = document.querySelector('#pricing') || document.querySelector('#shared-ownership') || document.querySelector('#ownership');
   hero.querySelector('.lodge-explore').hash = ownershipTarget.id;
@@ -50,29 +51,79 @@
     disclosure.className='hero-context-note';
     disclosure.textContent='AI 공간 콘셉트 · 실제 현장·확정 설계가 아닙니다. 사전 안내 단계 · 실제 모집·계약·예약은 진행되지 않습니다.';
     document.querySelector('#our-villa .invitation-grid>div').append(disclosure);
-    const depth=hero.querySelector('.lodge-image-depth');
-    const video=depth.querySelector('video'),toggle=hero.querySelector('.lodge-video-toggle');
+  }
+  const depth=hero.querySelector('.lodge-image-depth');
+  const video=depth?.querySelector('video.lodge-hero-video');
+  const playToggle=hero.querySelector('[data-video-toggle]');
+  const musicToggle=hero.querySelector('[data-music-toggle]');
+  if (video && playToggle && musicToggle) {
     const motion=matchMedia('(prefers-reduced-motion: reduce)');
-    let userPaused=motion.matches,visible=true;
+    let userPaused=motion.matches,visible=true,musicEnabled=false,volumeFrame=0;
+    if(motion.matches)video.removeAttribute('autoplay');
     video.muted=true;
-    const update=()=>{
-      toggle.textContent=video.paused?'영상 재생 ▶':'영상 일시정지 Ⅱ';
-      toggle.setAttribute('aria-label',video.paused?'히어로 영상 재생':'히어로 영상 일시정지');
+    video.volume=1;
+    const updateVideoControl=()=>{
+      const isPlaying=!video.paused;
+      playToggle.setAttribute('aria-label',t(isPlaying?'히어로 영상 일시정지':'히어로 영상 재생',isPlaying?'Pause hero video':'Play hero video'));
+      playToggle.querySelector('[data-icon-play]').hidden=isPlaying;
+      playToggle.querySelector('[data-icon-pause]').hidden=!isPlaying;
+    };
+    const updateMusicControl=()=>{
+      musicToggle.setAttribute('aria-pressed',String(musicEnabled));
+      musicToggle.setAttribute('aria-label',t(musicEnabled?'음악 끄기':'음악 켜기',musicEnabled?'Turn music off':'Turn music on'));
+      musicToggle.querySelector('[data-icon-volume]').hidden=!musicEnabled;
+      musicToggle.querySelector('[data-icon-muted]').hidden=musicEnabled;
     };
     const syncVideo=()=>{
       if(userPaused||!visible||document.hidden)video.pause();
-      else video.play().catch(update);
+      else video.play().catch(updateVideoControl);
     };
-    video.addEventListener('playing',()=>{video.classList.add('is-ready');update();});
-    video.addEventListener('pause',update);
-    video.addEventListener('error',()=>{video.classList.remove('is-ready');toggle.hidden=true;});
-    video.querySelector('source').addEventListener('error',()=>{video.classList.remove('is-ready');toggle.hidden=true;});
-    toggle.addEventListener('click',()=>{userPaused=!video.paused;syncVideo();});
-    motion.addEventListener('change',event=>{if(event.matches){userPaused=true;video.classList.remove('is-ready');}syncVideo();});
+    const fadeVolume=(target,muteOnComplete=false)=>{
+      if(volumeFrame){cancelAnimationFrame(volumeFrame);volumeFrame=0;}
+      if(target>0)video.muted=false;
+      const duration=motion.matches?0:(target>0?.9:.24);
+      if(window.gsap){
+        window.gsap.killTweensOf(video,'volume');
+        window.gsap.to(video,{volume:target,duration,ease:'power1.out',overwrite:true,onComplete:()=>{if(muteOnComplete&&!musicEnabled)video.muted=true;}});
+      }else if(!duration){
+        video.volume=target;
+        if(muteOnComplete&&!musicEnabled)video.muted=true;
+      }else{
+        const start=video.volume,started=performance.now();
+        const step=now=>{
+          const progress=Math.min(1,(now-started)/(duration*1000));
+          video.volume=start+(target-start)*progress;
+          if(progress<1)volumeFrame=requestAnimationFrame(step);
+          else{volumeFrame=0;if(muteOnComplete&&!musicEnabled)video.muted=true;}
+        };
+        volumeFrame=requestAnimationFrame(step);
+      }
+    };
+    video.addEventListener('playing',()=>{
+      if(motion.matches&&userPaused){video.pause();updateVideoControl();return;}
+      video.classList.add('is-ready');
+      if(musicEnabled)video.muted=false;
+      updateVideoControl();
+    });
+    video.addEventListener('pause',updateVideoControl);
+    video.addEventListener('error',()=>{video.classList.remove('is-ready');updateVideoControl();});
+    video.querySelector('source')?.addEventListener('error',()=>{video.classList.remove('is-ready');updateVideoControl();});
+    playToggle.addEventListener('click',()=>{userPaused=!video.paused;syncVideo();updateVideoControl();});
+    musicToggle.addEventListener('click',()=>{
+      musicEnabled=!musicEnabled;
+      if(musicEnabled){video.volume=0;video.muted=false;fadeVolume(1);}
+      else fadeVolume(0,true);
+      updateMusicControl();
+    });
+    motion.addEventListener('change',event=>{
+      if(event.matches){userPaused=true;video.classList.remove('is-ready');syncVideo();}
+    });
     new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;syncVideo();},{threshold:0}).observe(hero);
     document.addEventListener('visibilitychange',syncVideo);
     addEventListener('pagehide',()=>video.pause());
     addEventListener('pageshow',syncVideo);
+    updateVideoControl();
+    updateMusicControl();
     syncVideo();
   }
 
