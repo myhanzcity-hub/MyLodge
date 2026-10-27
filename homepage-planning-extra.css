@@ -1,0 +1,77 @@
+/* M08 and M09, scoped to the added local review panels. */
+.planning-extra-section{background:var(--ui-ivory,#f7f5f0);color:var(--ui-charcoal,#171717);padding:clamp(72px,8vw,120px) 0 100px;scroll-margin-top:110px}
+.planning-extra-section .planning-extra-inner{max-width:1240px}
+.planning-extra-section .eyebrow{font:500 11px/1.6 var(--font-body);letter-spacing:.14em;margin:0 0 20px;color:#716e68}
+.planning-extra-heading{max-width:1100px}
+.planning-extra-heading h2{font:400 clamp(30px,4.2vw,56px)/1.22 var(--font-heading);letter-spacing:-.045em;word-break:keep-all;margin:0 0 26px;text-wrap:balance}
+.english-page .planning-extra-heading h2{font-family:var(--font-display);letter-spacing:-.025em}
+.planning-extra-lead{max-width:960px}
+.planning-extra-lead p{font:400 16px/1.8 var(--font-body);word-break:keep-all;margin:4px 0}
+.planning-progress-list{list-style:none;padding:0;margin:44px 0 30px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px}
+.planning-progress-list li{border-top:1px solid var(--ui-taupe,#b7ada0);padding:22px 0 30px;min-width:0}
+.planning-step-number{display:block;font:400 12px/1.6 var(--font-body);color:#716e68;margin-bottom:20px}
+.planning-progress-list h3{font:400 22px/1.4 var(--font-heading);letter-spacing:-.025em;margin:0 0 12px;word-break:keep-all}
+.planning-progress-list p{font:400 14px/1.75 var(--font-body);margin:0;word-break:keep-all}
+.planning-payment-flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;padding:22px 0;border-block:1px solid var(--ui-taupe,#b7ada0);font:500 15px/1.7 var(--font-body)}
+.planning-extra-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;margin-top:28px}
+.planning-extra-button{display:inline-flex;align-items:center;justify-content:space-between;gap:22px;box-sizing:border-box;min-height:50px;max-width:100%;padding:12px 20px;background:#171717;color:#faf9f6!important;border:1px solid #171717;font:500 14px/1.6 var(--font-body);text-decoration:none;cursor:pointer}
+.planning-extra-button:hover{background:#383838}
+.planning-extra-button:focus-visible,.planning-extra-dialog a:focus-visible,.planning-selection-preview summary:focus-visible{outline:3px solid #a48a56;outline-offset:4px}
+.planning-extra-outline{background:transparent;color:#171717!important}
+.planning-extra-outline:hover{background:#e7e2d9}
+.planning-service-state{font:400 13px/1.7 var(--font-body);color:#716e68}
+.planning-start-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:48px}
+.planning-start-layout .planning-extra-heading h2{font-size:clamp(30px,3.8vw,52px)}
+.planning-start-photo{min-width:0;margin:0}
+.planning-start-photo img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1.12;object-fit:cover}
+.planning-start-photo figcaption{font:400 11px/1.6 var(--font-body);margin-top:10px;color:#716e68}
+.planning-start-price{display:flex;flex-direction:column;gap:6px;margin-top:28px;padding:22px 0;border-block:1px solid var(--ui-taupe,#b7ada0);font:400 13px/1.7 var(--font-body)}
+.planning-start-price strong{font:400 40px/1.2 var(--font-display)}
+.planning-selection-preview{margin-top:48px;border-block:1px solid var(--ui-taupe,#b7ada0)}
+.planning-selection-preview summary{font:500 16px/1.6 var(--font-body);padding:22px 0;cursor:pointer}
+.planning-preview-body{padding:0 0 28px}
+.planning-preview-body>p{font:400 14px/1.8 var(--font-body);margin:0 0 20px;word-break:keep-all}
+.planning-preview-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:24px 0}
+.planning-preview-fields label{display:flex;flex-direction:column;gap:8px;font:500 13px/1.6 var(--font-body);min-width:0}
+.planning-preview-fields select,.planning-preview-fields input{box-sizing:border-box;width:100%;min-width:0;min-height:48px;padding:10px 12px;font:400 15px/1.6 var(--font-body);border:1px solid #b7ada0;background:#faf9f6;color:#171717;border-radius:0}
+.planning-preview-fields :is(select,input):focus-visible{outline:2px solid #a48a56;outline-offset:3px}
+.planning-preview-body p.planning-selection-total{font-weight:500;margin-bottom:12px}
+.planning-preview-body p.planning-preview-note{font-size:12px;color:#716e68;margin:14px 0}
+.planning-extra-notes{margin-top:28px;color:#716e68;font:400 13px/1.8 var(--font-body)}
+.planning-extra-notes p{margin:4px 0}
+.planning-mobile-action{display:none}
+.planning-extra-dialog{box-sizing:border-box;width:min(800px,calc(100% - 32px));max-height:calc(100svh - 40px);padding:0;border:1px solid #b7ada0;color:#171717;background:#faf9f6;overflow:auto}
+.planning-extra-dialog::backdrop{background:rgb(10 14 13 / .68)}
+.planning-dialog-heading{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;padding:28px 28px 20px;border-bottom:1px solid #b7ada0}
+.planning-dialog-heading h2{font:400 26px/1.35 var(--font-heading);margin:0;letter-spacing:-.025em}
+.planning-dialog-close{flex-shrink:0;background:transparent;border:0;padding:5px;min-height:36px;font:400 14px/1.6 var(--font-body);cursor:pointer;color:#171717}
+.planning-dialog-content{padding:26px 28px;font:400 15px/1.8 var(--font-body)}
+.planning-dialog-content p{margin:0 0 18px;word-break:keep-all}
+.planning-dialog-status{color:#716e68;font-size:13px}
+.planning-contract-steps{margin:24px 0;padding-left:22px}
+.planning-contract-steps li{padding-left:8px;margin:0 0 24px}
+.planning-contract-steps h3{margin:0 0 8px;font:500 17px/1.5 var(--font-body);word-break:keep-all}
+.planning-contract-steps p{font-size:14px}
+.planning-dialog-footer{padding:18px 28px 24px;border-top:1px solid #b7ada0}
+.planning-dialog-link{display:inline-flex;min-height:44px;align-items:center;color:#171717;text-decoration:underline;text-underline-offset:4px}
+.planning-selection-summary{margin:0 0 26px}
+.planning-selection-summary>div{display:grid;grid-template-columns:minmax(100px,.7fr) minmax(0,1.3fr);gap:18px;padding:13px 0;border-bottom:1px solid #d9d3c9}
+.planning-selection-summary dt{color:#716e68}
+.planning-selection-summary dd{margin:0;word-break:keep-all}
+@media(max-width:1100px){.planning-start-layout{grid-template-columns:minmax(0,1fr);gap:32px}.planning-start-layout .planning-extra-heading{max-width:none}.planning-start-photo img{aspect-ratio:1.7}.planning-progress-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.planning-extra-section{padding:92px 0 100px}.planning-extra-section .planning-extra-inner{width:auto;margin:0 24px}.planning-extra-heading h2,.planning-start-layout .planning-extra-heading h2{font-size:30px;line-height:1.27;letter-spacing:-.045em}.planning-extra-lead p{font-size:15px;line-height:1.75}.planning-progress-list{grid-template-columns:minmax(0,1fr);margin-top:32px}.planning-progress-list li{padding:20px 0 24px}.planning-step-number{margin-bottom:12px}.planning-progress-list h3{font-size:21px}.planning-payment-flow{gap:6px 10px;font-size:14px}.planning-extra-actions{gap:10px}.planning-extra-actions .planning-extra-button{width:100%}.planning-start-photo img{aspect-ratio:1.35}.planning-preview-fields{grid-template-columns:minmax(0,1fr);gap:16px}.planning-extra-notes{font-size:12px}.planning-start-section{padding-bottom:164px}.planning-mobile-action{position:fixed;left:0;right:0;bottom:74px;z-index:91;padding:10px 16px;background:#faf9f6;border-top:1px solid #b7ada0}.planning-mobile-action button{width:100%;display:flex;justify-content:space-between;align-items:center;min-height:46px;padding:10px 18px;border:1px solid #171717;background:#171717;color:#faf9f6;font:500 14px/1.6 var(--font-body)}body[data-homepage-section="start-ownership"] .planning-mobile-action{display:block}.planning-dialog-heading{padding:22px 20px 18px;gap:12px}.planning-dialog-heading h2{font-size:23px}.planning-dialog-content{padding:22px 20px}.planning-dialog-footer{padding:18px 20px}.planning-extra-dialog{max-height:calc(100svh - 24px)}}
+@media(max-width:360px){.planning-extra-section .planning-extra-inner{margin-inline:20px}.planning-extra-heading h2,.planning-start-layout .planning-extra-heading h2{font-size:26px}.planning-extra-lead p{font-size:14px}.planning-extra-button{font-size:13px;padding-inline:16px}}
+
+/* Complete selection preferences and option totals in the same local flow. */
+.planning-preview-fields{grid-template-columns:repeat(4,minmax(0,1fr))}
+.planning-preview-option{display:flex;align-items:center;gap:12px;min-height:44px;margin:0 0 22px;font:500 14px/1.6 var(--font-body)}
+.planning-preview-option input{width:20px;height:20px;min-height:20px;accent-color:#385f56}
+.planning-selection-prices{border-block:1px solid #d9d3c9;padding:18px 0;margin:18px 0}
+.planning-selection-prices p{margin:6px 0;font:400 14px/1.7 var(--font-body)}
+.planning-selection-prices .planning-selection-total{font-weight:600}
+.planning-preview-pricing-link{display:inline-flex;align-items:center;min-height:44px;margin-left:20px;color:#171717;text-underline-offset:4px;font:400 14px/1.6 var(--font-body)}
+.planning-selection-preview{scroll-margin-top:110px}
+@media(max-width:1100px){.planning-preview-fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.planning-preview-fields{grid-template-columns:minmax(0,1fr)}.planning-preview-pricing-link{display:flex;margin:14px 0 0}}
+/* The mobile action bar also occupies space after the shared footer. */
+@media(max-width:700px){body[data-homepage-deck][data-homepage-section="start-ownership"]{padding-bottom:calc(var(--home-deck-bar,74px) + 68px + env(safe-area-inset-bottom,0px))}}

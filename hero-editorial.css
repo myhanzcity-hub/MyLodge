@@ -92,3 +92,34 @@ body #home.lodge-hero[data-hero-language=en] h1 { max-width: 650px; font-family:
 #our-villa.scenic-deep .invitation-footnote { border-color: #E2DED6; }
 
 .ownership-first #our-villa .invitation-grid>div>p.hero-context-note{font-size:11px!important;line-height:1.8!important;color:#716E68!important;border:0!important;padding:0!important;margin:22px 0 0!important}
+
+/* M01: ownership-led invitation with two distinct destinations. */
+#home.lodge-hero .lodge-description-group{margin-bottom:22px;max-width:610px}
+#home.lodge-hero .lodge-description-group .lodge-description{margin:0;max-width:none}
+#home.lodge-hero .lodge-description-group .lodge-description+.lodge-description{margin-top:5px}
+#home.lodge-hero .lodge-actions{gap:10px 12px}
+#home.lodge-hero .lodge-park-link{display:inline-flex;align-items:center;justify-content:space-between;gap:22px;box-sizing:border-box;min-width:190px;min-height:50px;padding:8px 18px;border:1px solid var(--lodge-paper);color:var(--lodge-paper);background:rgb(8 21 36 / .16);font:500 15px/1.5 var(--font-body)}
+#home.lodge-hero .lodge-park-link:hover{background:rgb(8 21 36 / .4)}
+@media(max-width:700px){#home.lodge-hero .lodge-description-group{margin-bottom:18px}#home.lodge-hero .lodge-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}#home.lodge-hero .lodge-explore,#home.lodge-hero .lodge-park-link{width:100%;min-width:0;min-height:48px;padding:8px 12px;gap:8px;font-size:13px}#home.lodge-hero .lodge-description-group .lodge-description{font-size:15px;line-height:1.6}}
+@media(max-width:360px){#home.lodge-hero .lodge-description-group .lodge-description{font-size:14px}#home.lodge-hero .lodge-explore,#home.lodge-hero .lodge-park-link{font-size:12px;padding-inline:9px}}
+
+@media(max-height:650px){body[data-homepage-deck] #main #home{height:auto;min-height:calc(100svh - var(--home-deck-bar));padding-bottom:90px}}
+
+/* M02: shared ownership summary and visible structure button. */
+#our-villa .ownership-how-intro{margin-top:18px;max-width:900px}
+#our-villa .ownership-how-intro p{margin:4px 0;font-size:16px;line-height:1.7;color:#716e68}
+#our-villa .ownership-how-content .ownership-structure-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;background:#171717;color:#faf9f6!important;border:1px solid #171717;text-decoration:none;font-size:15px;line-height:1.5;max-width:100%;box-sizing:border-box}
+#our-villa .ownership-structure-button:hover{background:#383838}
+#our-villa .ownership-structure-button:focus-visible{outline:3px solid #a48a56;outline-offset:4px}
+@media(max-width:700px){#our-villa .ownership-how-intro p{font-size:15px}#our-villa .ownership-how-content .ownership-structure-button{width:100%}}
+#our-villa .ownership-how-content .ownership-facts li:last-child{grid-column:1 / -1}
+body.ownership-first #our-villa .ownership-how-photo{min-width:0;max-width:100%}
+body.ownership-first #our-villa .ownership-how-photo img{width:100%;max-width:100%;object-fit:cover}
+body.ownership-first #our-villa .ownership-how-content{min-width:0;position:relative;z-index:1}
+@media(max-width:1100px){body.ownership-first #our-villa .ownership-how-layout{grid-template-columns:minmax(0,1fr)}body.ownership-first #our-villa .ownership-how-photo{aspect-ratio:1.55;min-height:0}body.ownership-first #our-villa .ownership-how-photo img{min-height:0}body.ownership-first #our-villa .ownership-how-content .ownership-facts li>*{grid-column:1;grid-row:auto}}
+
+body.ownership-first #our-villa .ownership-how-content .ownership-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+body.ownership-first #our-villa .ownership-how-content .ownership-facts li:last-child{grid-column:1 / -1}
+
+body.ownership-first #our-villa .ownership-how-heading{margin-top:0}
+body.ownership-first #our-villa .ownership-how-layout{margin-bottom:56px}

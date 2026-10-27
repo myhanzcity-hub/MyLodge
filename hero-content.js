@@ -3,15 +3,17 @@
   'use strict';
   const language = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'ko';
   const copy = Object.freeze(language === 'en' ? {
-    headline: ['I Have a Villa', 'of My Own.'],
-    description: 'Shared ownership brings the dream of a private seaside villa within reach.',
-    primary: 'Explore Villas',
+    headline: ['I have a villa.'],
+    description: ['A private seaside villa, once out of reach.', 'Shared ownership makes it your first villa.'],
+    primary: 'View villa packages',
+    secondary: 'Explore parks',
     disclosure: 'Concept imagery. Availability, reservations, and product applications are not currently available.',
     alt: 'A sculptural coastal villa and pool at dusk. AI architectural concept.',
   } : {
-    headline: ['나도 별장오너.'],
-    description: '꿈같은 별장, 마이롯지와 함께 현실이 되다.',
-    primary: '별장 둘러보기',
+    headline: ['나, 별장 있다.'],
+    description: ['혼자 갖기엔 멀었던 바닷가 독채 별장.', '함께 소유하는 방식으로, 이제 나의 첫 별장이 됩니다.'],
+    primary: '분양상품 보기',
+    secondary: '파크 둘러보기',
     disclosure: 'AI 공간 콘셉트입니다. 현재 예약 및 상품 신청은 제공되지 않습니다.',
     alt: '바닷가 모듈형 빌라 리조트의 시네마틱 드론 전경.',
   });
@@ -25,9 +27,10 @@
     <div class="lodge-content">
       <div class="lodge-heading"><h1>${copy.headline.join(' <br>')}</h1></div>
       <div class="lodge-invitation">
-        <p class="lodge-description">${copy.description}</p>
+        <div class="lodge-description-group">${copy.description.map(sentence => `<p class="lodge-description">${sentence}</p>`).join('')}</div>
         <div class="lodge-actions">
           <a class="lodge-explore" href="#ownership-pricing"><span>${copy.primary}</span> <span aria-hidden="true">↗</span></a>
+          <a class="lodge-park-link" href="#brand-paths"><span>${copy.secondary}</span> <span aria-hidden="true">↗</span></a>
         </div>
         <p class="lodge-disclosure">${copy.disclosure}</p>
       </div>

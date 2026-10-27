@@ -14,15 +14,15 @@
       name: 'Deluxe',
       nameKo: '디럭스',
       floors: 1,
-      areaPyeong: 10,
+      indoorAreaM2: 33,
       basePrice: 3999,
       luxuryPackagePrice: 199,
     },
     suite: {
-      name: 'Suite',
-      nameKo: '스위트',
+      name: 'Prestige',
+      nameKo: '프레스티지',
       floors: 2,
-      areaPyeong: 17,
+      indoorAreaM2: 66,
       basePrice: 5999,
       luxuryPackagePrice: 390,
     },
@@ -85,7 +85,7 @@
       `;
       const how = document.createElement('div');
       how.className = 'ownership-how-heading';
-      how.innerHTML = `<p class="eyebrow">${t('공동 소유 안내', 'HOW OWNERSHIP WORKS')}</p><h3>${t('나의 별장, 함께 소유하는 새로운 방법.', 'Your Villa. A Smarter Way to Own.')}</h3>`;
+      how.innerHTML = `<p class="eyebrow">${t('공동 소유 안내', 'HOW OWNERSHIP WORKS')}</p><h3>${t('한 채를 함께, 휴가는 온전히 나답게.', 'Share a villa. Make every holiday yours.')}</h3><div class="ownership-how-intro"><p>${t('별장 한 채를 120구좌로 나눠 함께 소유합니다.', 'A villa is divided into 120 shares for shared ownership.')}</p><p>${t('구좌만큼 지분과 연간 이용일이 배정되고,', 'Ownership and annual stays are allocated by share.')}</p><p>${t('원하면 구좌를 더하거나 다른 지역을 추가할 수 있습니다.', 'You can add shares or another destination.')}</p></div>`;
       const layout = document.createElement('div');
       layout.className = 'ownership-how-layout';
       layout.lang = english ? 'en' : 'ko';
@@ -96,13 +96,15 @@
       const content = layout.querySelector('.ownership-how-content');
       content.append(facts);
       const cta = document.createElement('a');
-      cta.className = 'text-link why-cta'; cta.href = '#ownership-structure-diagram';
-      cta.textContent = t('공동 소유 방식 알아보기 ↗', 'Explore Shared Ownership ↗');
+      cta.className = 'ownership-structure-button why-cta'; cta.href = '#ownership-structure-diagram';
+      cta.textContent = t('공동 소유 구조 보기', 'View ownership structure');
       content.append(cta);
       if (guide) {
         grid.after(guide);
         guide.after(how, layout);
       } else grid.after(how, layout);
+      // Start chapter 2 with the shared-ownership explanation.
+      (label || grid).before(how, layout);
 
       const ownershipSection = layout;
       if (motionAllowed && window.gsap && window.ScrollTrigger) {
@@ -174,18 +176,18 @@
           <img class="ownership-villa-image is-active" data-villa-image="deluxe" src="assets/brand/single-storey.png" width="1536" height="1024" alt="${t('단층 스튜디오 디럭스 빌라 공간 콘셉트', 'Concept image of the single-storey Deluxe studio villa')}" fetchpriority="low" decoding="async">
           <img class="ownership-villa-image" data-villa-image="suite" src="assets/brand/two-storey.png" width="1536" height="1024" alt="" loading="lazy" decoding="async" aria-hidden="true">
         </div>
-        <figcaption><span data-villa-caption>${t('디럭스 · 단층 스튜디오', 'Deluxe · Single-storey studio')}</span><small>${t('공간 콘셉트 이미지', 'Concept image')}</small></figcaption>
+        <figcaption><span data-villa-caption>${t('디럭스 · 실내 33㎡ + 가든 + 테라스', 'Deluxe · Indoor 33 m² + garden + terrace')}</span><small>${t('공간 콘셉트 이미지', 'Concept image')}</small></figcaption>
       </figure>
       <div class="ownership-pricing-summary">
         <div class="ownership-villa-selector" id="ownership-options" aria-label="${t('빌라 타입과 선택 옵션', 'Villa type and optional package')}">
           <div class="ownership-villa-tabs" role="tablist" aria-label="${t('빌라 선택 · 가격은 1구좌 기준', 'Choose a villa · prices per share')}">
             <button id="villa-tab-deluxe" type="button" role="tab" aria-selected="true" aria-controls="villa-panel" tabindex="0" data-villa-tab="deluxe">
               <img src="assets/brand/single-storey.png" width="1536" height="1024" alt="" aria-hidden="true" loading="lazy" decoding="async">
-              <span class="ownership-villa-option-copy"><strong>${t('디럭스', 'Deluxe')}</strong><span>${t('단층 스튜디오 · 약 10평', 'Single-storey studio · approx. 10 pyeong')}</span><b>${money(villaTypes.deluxe.basePrice)} <small>/ ${t('구좌', 'share')}</small></b></span>
+              <span class="ownership-villa-option-copy"><strong>${t('디럭스', 'Deluxe')}</strong><span>${t('실내 33㎡ + 가든 + 테라스', 'Indoor 33 m² + garden + terrace')}</span><b>${money(villaTypes.deluxe.basePrice).slice(1)} USD <small>/ ${t('구좌', 'share')}</small></b></span>
             </button>
             <button id="villa-tab-suite" type="button" role="tab" aria-selected="false" aria-controls="villa-panel" tabindex="-1" data-villa-tab="suite">
               <img src="assets/brand/two-storey.png" width="1536" height="1024" alt="" aria-hidden="true" loading="lazy" decoding="async">
-              <span class="ownership-villa-option-copy"><strong>Suite</strong><span>${t('복층 트윈하우스 · 약 17평', 'Two-storey twin house · approx. 17 pyeong')}</span><b>${money(villaTypes.suite.basePrice)} <small>/ ${t('구좌', 'share')}</small></b></span>
+              <span class="ownership-villa-option-copy"><strong>${t('프레스티지', 'Prestige')}</strong><span>${t('실내 66㎡ + 가든 + 테라스', 'Indoor 66 m² + garden + terrace')}</span><b>${money(villaTypes.suite.basePrice).slice(1)} USD <small>/ ${t('구좌', 'share')}</small></b></span>
             </button>
           </div>
           <div class="ownership-config-controls" id="villa-panel" role="tabpanel" aria-labelledby="villa-tab-deluxe">
@@ -324,8 +326,8 @@
         : 0);
     const villaTitle = english ? selectedVilla.name : selectedVilla.nameKo;
     const villaDescription = selectedVillaKey === 'deluxe'
-      ? t('단층 스튜디오', 'Single-storey studio')
-      : t('복층 트윈하우스', 'Two-storey twin house');
+      ? t('실내 33㎡ + 가든 + 테라스', 'Indoor 33 m² + garden + terrace')
+      : t('실내 66㎡ + 가든 + 테라스', 'Indoor 66 m² + garden + terrace');
     const caption = pricing.querySelector('[data-villa-caption]');
     const imageNodes = [...pricing.querySelectorAll('[data-villa-image]')];
     const outgoingImage = imageNodes.find(image => image.dataset.villaImage === lastVillaImageKey);
@@ -740,8 +742,9 @@
     facilitiesGallery.dataset.parkOverview = String(activeFacility === 0);
     facilityImage.classList.toggle('is-masterplan', activeFacility === 0);
     const nextImage = new Image();
+    const requestedFacility = activeFacility;
     nextImage.onload = () => {
-      if (index !== activeFacility) return;
+      if (requestedFacility !== activeFacility) return;
       if (window.gsap && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
         window.gsap.to(facilityImage, { opacity: 0, x: -8, duration: 0.22, ease: 'power1.out', onComplete: () => {
           facilityImage.src = nextImage.src;
@@ -852,7 +855,7 @@
     if (selector) selector.setAttribute('aria-label', t('별장과 파크 공간 선택', 'Select villa and park spaces'));
   }
   const facilityStatus = document.createElement('p'); facilityStatus.className = 'facility-status-note container';
-  facilityStatus.innerHTML = `${t('시설 사진은 콘셉트 이미지입니다. 준공 여부, 운영 상태, 파크별 제공 시설은 계약 전 확인해 주세요.', 'Facility photos are conceptual. Confirm completion, operating status, and park-specific amenities before contracting.')} <a href="#ownership-options">${t('디럭스·스위트 비교', 'Compare Deluxe and Suite')} ↗</a>`;
+  facilityStatus.innerHTML = `${t('시설 사진은 콘셉트 이미지입니다. 준공 여부, 운영 상태, 파크별 제공 시설은 계약 전 확인해 주세요.', 'Facility photos are conceptual. Confirm completion, operating status, and park-specific amenities before contracting.')} <a href="#ownership-options">${t('디럭스·프레스티지 비교', 'Compare Deluxe and Prestige')} ↗</a>`;
   facilities.append(facilityStatus);
 
   // Older guide and gallery scripts create copy after localization.js has run.
@@ -1096,7 +1099,9 @@
   });
   const hero = main.querySelector('#home');
   const heroPrimary = hero?.querySelector('.lodge-explore');
-  if (heroPrimary) heroPrimary.href = '#villa-spaces';
+  if (heroPrimary) heroPrimary.href = '#ownership-pricing';
+  const heroParkLink = hero?.querySelector('.lodge-park-link');
+  if (heroParkLink) heroParkLink.href = '#brand-paths';
 
   // Redirect old in-page references to the closest surviving section or existing information route.
   const legacyTargets = { pricing: 'ownership-pricing', ownership: 'owner-life', participation: 'ownership-pricing', faq: 'ownership-pricing', projects: 'ownership-pricing' };
