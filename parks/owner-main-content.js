@@ -5,15 +5,15 @@
       name: 'Deluxe',
       nameKo: '디럭스',
       floors: 1,
-      areaPyeong: 10,
+      indoorAreaM2: 33,
       basePrice: 3999,
       luxuryPackagePrice: 199,
     },
     suite: {
-      name: 'Suite',
-      nameKo: '스위트',
+      name: 'Prestige',
+      nameKo: '프레스티지',
       floors: 2,
-      areaPyeong: 17,
+      indoorAreaM2: 66,
       basePrice: 5999,
       luxuryPackagePrice: 390,
     },
@@ -68,8 +68,8 @@
         : 0);
     const villaTitle = english ? selectedVilla.name : selectedVilla.nameKo;
     const villaDescription = selectedVillaKey === 'deluxe'
-      ? t('단층 스튜디오', 'Single-storey studio')
-      : t('복층 트윈하우스', 'Two-storey twin house');
+      ? t('실내 33㎡ + 가든 + 테라스', 'Indoor 33 m² + garden + terrace')
+      : t('실내 66㎡ + 가든 + 테라스', 'Indoor 66 m² + garden + terrace');
     const caption = pricing.querySelector('[data-villa-caption]');
     const imageNodes = [...pricing.querySelectorAll('[data-villa-image]')];
     const outgoingImage = imageNodes.find(image => image.dataset.villaImage === lastVillaImageKey);
