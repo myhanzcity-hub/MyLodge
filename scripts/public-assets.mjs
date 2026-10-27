@@ -92,3 +92,26 @@ publicAssets.push("parks/feedback-photo-cards.css");
 publicAssets.push("parks/assets/images/feedback-barbecue-20261025-480.webp","parks/assets/images/feedback-barbecue-20261025-960.webp","parks/assets/images/feedback-campfire-20261025-480.webp","parks/assets/images/feedback-campfire-20261025-960.webp","parks/assets/images/feedback-cart-20261025-480.webp","parks/assets/images/feedback-cart-20261025-960.webp","parks/assets/images/feedback-concierge-20261025-480.webp","parks/assets/images/feedback-concierge-20261025-960.webp","parks/assets/images/feedback-couple-20261025-480.webp","parks/assets/images/feedback-couple-20261025-960.webp","parks/assets/images/feedback-delivery-20261025-480.webp","parks/assets/images/feedback-delivery-20261025-960.webp","parks/assets/images/feedback-family-20261025-480.webp","parks/assets/images/feedback-family-20261025-960.webp","parks/assets/images/feedback-gift-20261025-480.webp","parks/assets/images/feedback-gift-20261025-960.webp");
 
 publicAssets.push("parks/owner-benefit-modal.css","parks/owner-benefit-modal.js");
+
+// Domestic interior concept gallery.
+publicAssets.push('parks/side-review-20261027.css');
+publicAssets.push('parks/assets/images/review-20261027/interior-01-living.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-01-loft.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-02-living.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-02-loft.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-03-living.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-03-loft.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-04-living.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-04-loft.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-05-living.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-05-loft.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-06-living.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-06-loft.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-07-living.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-07-loft.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-08-living.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-08-loft.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-09-living.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-09-loft.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-10-living.webp');
+publicAssets.push('parks/assets/images/review-20261027/interior-10-loft.webp');

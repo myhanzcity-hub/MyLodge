@@ -1,3 +1,7 @@
+## 2026-10-27 Domestic interior concepts
+
+User approved publishing only the reviewed ten interior concepts (20 existing planning-reference photographs) in the expandable domestic villa section. All original domestic content and conditions, owners, Chiang Mai, main, intro and deployment configuration are preserved. Colleague homepage branch remains separate and is not merged. Gallery imagery is illustrative rather than a selectable product specification.
+
 ## 2026-10-25 Photograph cards and benefit dialogs release
 
 - User approved publishing local4210 photo cards and3 owner benefit dialogs. Base origin/main095412d unchanged at release check. Preserve all colleague main/intro content and Vercel configuration.
