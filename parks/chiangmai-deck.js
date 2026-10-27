@@ -15,7 +15,8 @@
   ['공용 시설','Shared facilities','#domestic-facilities'],
   ['생활 서비스','Everyday services','#park-services'],
   ['파크 구성 안내','Park sections','#park-sections'],
-  ['오너 이용 안내','Owner guide','#park-owner-guide']
+  ['오너 이용 안내','Owner guide','#park-owner-guide'],
+  ['별장 내부 살펴보기','Explore the interior','#villa-interior-tour']
  ]:[
   ['치앙마이 소개','Chiang Mai','.side-hero'],
   ['한눈에 둘러보기','At a glance','#visual-first','.page-directory'],

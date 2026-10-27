@@ -1,0 +1,52 @@
+[
+  {
+    "id": "modern_arm_chair_01",
+    "source": "https://polyhaven.com/a/modern_arm_chair_01",
+    "license": "CC0-1.0",
+    "resolution": "2K"
+  },
+  {
+    "id": "dining_chair_02",
+    "source": "https://polyhaven.com/a/dining_chair_02",
+    "license": "CC0-1.0",
+    "resolution": "2K"
+  },
+  {
+    "id": "GlamVelvetSofa",
+    "author": "Eric Chadwick / Wayfair LLC (2021)",
+    "source": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/GlamVelvetSofa",
+    "license": "CC-BY-4.0",
+    "modifications": "scene transform, fabric color and lighting adaptation; original geometry and texture maps retained"
+  },
+  {
+    "id": "wood_floor",
+    "source": "https://polyhaven.com/a/wood_floor",
+    "license": "CC0-1.0",
+    "resolution": "2k"
+  },
+  {
+    "id": "denim_fabric",
+    "source": "https://polyhaven.com/a/denim_fabric",
+    "license": "CC0-1.0",
+    "resolution": "1k"
+  },
+  {
+    "id": "white_plaster_02",
+    "source": "https://polyhaven.com/a/white_plaster_02",
+    "license": "CC0-1.0",
+    "resolution": "1k"
+  },
+  {
+    "id": "spruit_sunrise",
+    "source": "https://polyhaven.com/a/spruit_sunrise",
+    "license": "CC0-1.0",
+    "resolution": "1K HDR"
+  },
+  {
+    "id": "coffee_table_round_01",
+    "source": "https://polyhaven.com/a/coffee_table_round_01",
+    "author": "Ulan Cabanilla",
+    "license": "CC0-1.0",
+    "resolution": "2K desktop / 1K mobile; WebP texture conversion"
+  }
+]

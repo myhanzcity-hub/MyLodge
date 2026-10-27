@@ -1,3 +1,9 @@
+## 2026-10-27 Reviewed domestic interior experience release
+
+User approved publishing the reviewed domestic chapter12. Add an isolated Three.js suite viewer with detailed licensed furniture, photographic materials, object-focused color selection, synchronized time-of-day background/reflections, functioning entry door and two fully separated floors connected only by the spiral stairwell. The latest user correction supersedes the earlier open-mezzanine layout. Viewpoint changes are instant; walking and stair traversal animations are removed. Source model attribution and licenses are included in the viewer.
+
+Base main and colleague homepage/intro, domestic chapters1–11, interior10 gallery, owners, overseas, prices/conditions and Vercel configuration are preserved. Public manifest adds only the viewer, host and licensed runtime resources. Raw downloads, private planning/review documents and local testing scripts are excluded. Local validation includes 320/390/768/1440px, door controls, quick transitions, color selection/return, iframe navigation and floor-separation geometry.
+
 ## 2026-10-27 Domestic interior concepts
 
 User approved publishing only the reviewed ten interior concepts (20 existing planning-reference photographs) in the expandable domestic villa section. All original domestic content and conditions, owners, Chiang Mai, main, intro and deployment configuration are preserved. Colleague homepage branch remains separate and is not merged. Gallery imagery is illustrative rather than a selectable product specification.
