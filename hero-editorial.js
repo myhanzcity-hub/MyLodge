@@ -31,8 +31,8 @@
 
  $('.vacation-finale')?.remove();
  // Final homepage order and navigation are owned by homepage.js.
- document.querySelectorAll('meta[name="description"],meta[property="og:description"]').forEach(meta=>meta.content=t('꿈같은 별장, 마이롯지와 함께 현실이 되다.','A holiday home of my own. Discover the relaxation, connections and holiday-home life imagined by MyLodge.'));
- document.title=t('마이롯지 · 나도 별장오너.','MyLodge · A Holiday Home of My Own.');
+ document.querySelectorAll('meta[name="description"],meta[property="og:description"]').forEach(meta=>meta.content=t('혼자 갖기엔 멀었던 바닷가 독채 별장. 함께 소유하는 방식으로, 이제 나의 첫 별장이 됩니다.','A private seaside villa, once out of reach. Shared ownership makes it your first villa.'));
+ document.title=t('마이롯지 · 나, 별장 있다.','MyLodge · I have a villa.');
 })();
 
 /* Homepage art direction. All animation is owned by a reversible GSAP context. */
@@ -43,7 +43,7 @@
   const en = new URLSearchParams(location.search).get('lang') === 'en';
   const t=(ko,english)=>en?english:ko;
   // Copy and markup are rendered once by hero-content.js through app.js.
-  const ownershipTarget = document.querySelector('#pricing') || document.querySelector('#shared-ownership') || document.querySelector('#ownership');
+  const ownershipTarget = document.querySelector('#ownership-pricing') || document.querySelector('#pricing') || document.querySelector('#shared-ownership') || document.querySelector('#ownership');
   hero.querySelector('.lodge-explore').hash = ownershipTarget.id;
   if (!en) {
     // Preserve the existing concept notice in the following introduction.

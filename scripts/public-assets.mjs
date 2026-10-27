@@ -193,3 +193,5 @@ publicAssets.push('parks/interior-tour/vendor/addons/shaders/SSAOShader.js');
 publicAssets.push('parks/interior-tour/object-experience.js','parks/interior-tour/time-atmosphere.js');
 
 publicAssets.push('parks/interior-tour/suite-loft.js','parks/interior-tour/suite-navigation.js');
+
+publicAssets.push('homepage-planning.js','homepage-planning.css','homepage-planning-extra.js','homepage-planning-extra.css');
