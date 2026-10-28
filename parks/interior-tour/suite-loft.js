@@ -100,6 +100,33 @@ export function createSuiteArchitecture({world,materials,floorMat,invalidate=()=
   box(.035,.28,.035,brass,doorWidth-.18,1.16,-.078,door);box(.10,.025,.055,brass,doorWidth-.215,1.275,-.061,door);box(.10,.025,.055,brass,doorWidth-.215,1.045,-.061,door);
   const lock=cylinder(.022,.013,brass,doorWidth-.18,.965,-.041,door);lock.rotation.x=Math.PI/2;
   let targetAngle=0,isOpen=false,sharedOakMap=oak.map;
+  // Reference-inspired modular frontage, outside the existing room envelope.
+  // This is a visual concept, not a measured reproduction or construction plan.
+  const facade=new THREE.Group();facade.name='suite-rounded-exterior';root.add(facade);
+  const shell=new THREE.MeshPhysicalMaterial({color:'#eeeae0',roughness:.62,clearcoat:.18});
+  const graphite=new THREE.MeshPhysicalMaterial({color:'#242d2b',roughness:.36,metalness:.48});
+  function roundedPath(w,h,r){const s=new THREE.Shape(),x=-w/2,y=-h/2;s.moveTo(x+r,y);s.lineTo(x+w-r,y);s.quadraticCurveTo(x+w,y,x+w,y+r);s.lineTo(x+w,y+h-r);s.quadraticCurveTo(x+w,y+h,x+w-r,y+h);s.lineTo(x+r,y+h);s.quadraticCurveTo(x,y+h,x,y+h-r);s.lineTo(x,y+r);s.quadraticCurveTo(x,y,x+r,y);s.closePath();return s;}
+  function frame(w,h,r,border,depth,material,y,x){
+    const s=roundedPath(w,h,r),hole=roundedPath(w-border*2,h-border*2,Math.max(.05,r-border));
+    s.holes.push(new THREE.Path(hole.getPoints(64)));
+    const g=new THREE.ExtrudeGeometry(s,{depth,bevelEnabled:true,bevelSize:.025,bevelThickness:.025,bevelSegments:3,steps:1,curveSegments:24});
+    const m=new THREE.Mesh(g,material);m.rotation.y=Math.PI/2;m.position.set(x,y,0);m.castShadow=m.receiveShadow=true;facade.add(m);return m;
+  }
+  for(const y of [1.53,4.79]){
+    frame(10.55,3.26,.76,.23,.18,shell,y,4.03);
+    frame(10.10,2.81,.54,.085,.07,graphite,y,4.005);
+  }
+  // Upper private terrace; no external staircase or internal overlook.
+  const terrace=box(2.25,.18,4.1,oak,5.35,floorY-.09,2.5,facade);terrace.name='suite-upper-terrace';
+  for(const z of [.45,2.5,4.55])box(.045,1.04,.045,graphite,6.46,floorY+.52,z,facade);
+  for(const x of [4.2,5.35])for(const z of [.45,4.55])box(.045,1.04,.045,graphite,x,floorY+.52,z,facade);
+  for(const z of [.45,4.55])box(2.3,.045,.045,graphite,5.34,floorY+1.04,z,facade);
+  box(.045,.045,4.16,graphite,6.46,floorY+1.04,2.5,facade);
+  for(const z of [.45,4.55]){const p=box(2.22,.9,.025,railGlass,5.34,floorY+.5,z,facade);p.castShadow=false;}
+  const terracePane=box(.025,.9,4.06,railGlass,6.46,floorY+.5,2.5,facade);terracePane.castShadow=false;
+  // Small terrace table and low seats stay within the perimeter railing.
+  cylinder(.32,.07,oak,5.35,floorY+.55,2.5,facade);cylinder(.055,.52,graphite,5.35,floorY+.26,2.5,facade);
+  for(const z of [1.45,3.55]){box(.66,.16,.62,oak,5.35,floorY+.38,z,facade);box(.66,.48,.09,oak,5.35,floorY+.65,z+(z<2?-.27:.27),facade);for(const x of [5.1,5.6])box(.045,.32,.045,graphite,x,floorY+.16,z,facade);}
   function setOpen(value){isOpen=!!value;targetAngle=isOpen?-Math.PI*.48:0;door.userData.open=isOpen;if(reduced)door.rotation.y=targetAngle;invalidate();return isOpen;}
   const choices=[{label:'내추럴 오크',color:'#bba27c'},{label:'웜 월넛',color:'#79543d'},{label:'딥 그린',color:'#53665a'}];
   const doorObject={id:'door',label:'현관문',roots:[doorRoot],pinAt:[1.3,1.34,4.84],target:[1.3,1.1,4.9],p:[1.3,1.5,2.9],mobileP:[1.3,1.5,2.9],fov:48,mobileFov:82,options:choices,apply:i=>{doorMat.color.set(choices[i].color);invalidate();},actions:[{id:'door-toggle',label:()=>isOpen?'문 닫기':'문 열기',run:()=>{setOpen(!isOpen);return isOpen?'문 닫기':'문 열기';}}]};

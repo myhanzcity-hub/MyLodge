@@ -24,10 +24,15 @@ export function buildReferenceVilla(T,c){
  const cx=-1.64,zc=-.7,front=1.19;
  shell(5.34,2.28,3.76,cx,.17,zc,.37);
  shell(5.42,2.42,3.84,cx,2.48,zc-.02,.53);
- box(5.48,.10,4.0,cx,1.34,zc,pearl,true);
- box(5.18,.045,3.52,cx,-.82,zc,wood,true);box(5.22,.045,3.5,cx,1.42,zc-.02,wood,true);
+ for(const x of [cx-2.68,cx+2.68])box(.12,.10,4,x,1.34,zc,pearl,true);
+ for(const z of [zc-1.94,zc+1.94])box(5.48,.10,.12,cx,1.34,z,pearl,true);
+ box(5.18,.045,3.52,cx,-.82,zc,wood,true);
+ // Interior stair opening, rather than an outside flight to the upper room.
+ const stairX=.30,stairZ=-.90,stairRadius=.49;
+ function upperSlab(y,material){const s=new T.Shape();s.moveTo(cx-2.61,zc-1.75);s.lineTo(cx+2.61,zc-1.75);s.lineTo(cx+2.61,zc+1.75);s.lineTo(cx-2.61,zc+1.75);s.closePath();const hole=new T.Path();hole.absarc(stairX,stairZ,stairRadius+.04,0,Math.PI*2,true);s.holes.push(hole);const g=new T.ExtrudeGeometry(s,{depth:.045,bevelEnabled:false,curveSegments:36});g.rotateX(Math.PI/2);const m=new T.Mesh(g,material);m.position.y=y;return register(m);}
+ upperSlab(1.42,wood);
  // Ceiling inserts, manufacturing seams and service hatch on the left side.
- box(4.75,.035,3.25,cx,1.17,zc,linen,true);box(4.72,.035,3.24,cx,3.48,zc,linen,true);
+ upperSlab(1.39,linen);box(4.72,.035,3.24,cx,3.48,zc,linen,true);
  const sideX=cx-2.72;
  for(const z of [-2.0,-.65,.65])box(.008,1.55,.008,sideX,2.46,z,seam,false,false);
  box(.018,.57,.72,sideX-.005,2.52,-1.53,reveal,true);box(.025,.018,.22,sideX-.02,2.33,-1.5,trim,true,false);
@@ -48,13 +53,11 @@ export function buildReferenceVilla(T,c){
  glassPanel(5.12,.64,.012,cx,1.87,1.55);rail(cx-2.57,1.55,cx+2.57,1.55,2.205,bronze,.012);
  for(const x of [cx-2.56,cx-1.29,cx,cx+1.29,cx+2.56])box(.014,.72,.014,x,1.84,1.56,bronze);
  chair(-.64,1.62,1.10,.0);chair(.04,1.62,1.10,.0);cylinder(.15,.035,-.28,1.83,1.28,trim);cylinder(.018,.34,-.28,1.64,1.28,bronze);
- // Left exterior flight. Every tread has an actual riser, stringer and warm nosing.
- const stairX=-4.88,stairWidth=.74,startZ=2.17,endZ=-1.7,stairBase=-.95,stairTop=1.44,n=17;
- for(let i=0;i<n;i++){const t=(i+.5)/n,y=stairBase+(stairTop-stairBase)*t,z=startZ+(endZ-startZ)*t;box(stairWidth,.055,.255,stairX,y,z,pearl,false);led(stairWidth-.09,stairX,y-.022,z+.105,warm,.016);if(i%3===0)for(const x of [stairX-stairWidth/2,stairX+stairWidth/2])rod(new T.Vector3(x,y,z),new T.Vector3(x,y+.63,z),.009,bronze)}
- for(const x of [stairX-.30,stairX+.30])rod(new T.Vector3(x,stairBase-.07,startZ),new T.Vector3(x,stairTop-.07,endZ),.045,pearl);
- for(const x of [stairX-stairWidth/2,stairX+stairWidth/2])rod(new T.Vector3(x,stairBase+.63,startZ),new T.Vector3(x,stairTop+.63,endZ),.013,bronze);
- box(.95,.10,1.05,-4.69,stairTop,-2.07,pearl,true);rail(-5.14,-2.57,-5.14,-1.58,2.10,bronze);
- box(.02,1.4,.64,sideX-.02,2.2,-2.0,bronze,true);glassPanel(.024,1.26,.53,sideX-.04,2.2,-2.0);
+ // Fully internal spiral: wedge treads, central support and continuous handrail.
+ const stairBase=-.82,stairTop=1.42,n=17,start=Math.PI/2,turn=Math.PI*2.5;
+ const core=cylinder(.045,stairTop-stairBase+.72,stairX,(stairBase+stairTop)/2+.36,stairZ,bronze);core.name='internal-spiral-core';
+ for(let i=0;i<n;i++){const a=start+turn*i/n,b=start+turn*(i+.97)/n,s=new T.Shape();s.moveTo(Math.cos(a)*.06,-Math.sin(a)*.06);s.lineTo(Math.cos(a)*stairRadius,-Math.sin(a)*stairRadius);s.absarc(0,0,stairRadius,-a,-b,true);s.lineTo(Math.cos(b)*.06,-Math.sin(b)*.06);s.absarc(0,0,.06,-b,-a,false);s.closePath();const g=new T.ExtrudeGeometry(s,{depth:.035,bevelEnabled:false,curveSegments:8});g.rotateX(-Math.PI/2);const m=new T.Mesh(g,wood);const y=stairBase+(stairTop-stairBase)*(i+1)/n;m.position.set(stairX,y-.035,stairZ);m.name='internal-spiral-step-'+i;register(m);if(i%2===0)rod(new T.Vector3(stairX+Math.cos(a)*stairRadius,y,stairZ+Math.sin(a)*stairRadius),new T.Vector3(stairX+Math.cos(a)*stairRadius,y+.65,stairZ+Math.sin(a)*stairRadius),.008,bronze);}
+ const helix=[];for(let i=0;i<=90;i++){const p=i/90,a=start+turn*p;helix.push(new T.Vector3(stairX+Math.cos(a)*stairRadius,stairBase+(stairTop-stairBase)*p+.65,stairZ+Math.sin(a)*stairRadius));}const handrail=register(new T.Mesh(new T.TubeGeometry(new T.CatmullRomCurve3(helix),100,.014,6,false),bronze));handrail.name='internal-spiral-handrail';
  // Fabric curtains with curved folds, rather than a row of flat stripes.
  for(const xBase of [cx-2.34,cx+1.96])for(let i=0;i<7;i++){const x=xBase+i*.055;const m=new T.Mesh(new T.CylinderGeometry(.037,.043,1.86,8,1,true),linen);m.position.set(x,2.47,.67);m.scale.z=.72;register(m,villa,false)}
  // Upstairs bedroom, two pillows, reading lamps and large art panels.

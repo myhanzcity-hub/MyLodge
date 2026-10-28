@@ -195,3 +195,5 @@ publicAssets.push('parks/interior-tour/object-experience.js','parks/interior-tou
 publicAssets.push('parks/interior-tour/suite-loft.js','parks/interior-tour/suite-navigation.js');
 
 publicAssets.push('homepage-planning.js','homepage-planning.css','homepage-planning-extra.js','homepage-planning-extra.css');
+
+publicAssets.push('assets/brand/prestige-rounded-20261028.webp');
