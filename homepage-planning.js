@@ -44,7 +44,7 @@
     if (lead) {
       const group = document.createElement('div'); lead.replaceWith(group);
       paragraphs(group, [
-        ['독립형 복층 빌라, 햇살 드는 테라스.', 'A private two-storey villa and a sunlit terrace.'],
+        ['실내 원형 계단으로 이어지는 두 층.', 'Two storeys linked by an internal spiral staircase.'],
         ['밤까지 이어지는 바비큐.', 'BBQ evenings that last into the night.'],
         ['사진과 평면도로 머물 공간을 먼저 둘러보세요.', 'Explore your space in photos and floor plans.']
       ]);

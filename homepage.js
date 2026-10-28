@@ -90,9 +90,9 @@
       layout.className = 'ownership-how-layout';
       layout.lang = english ? 'en' : 'ko';
       if (english) layout.setAttribute('translate', 'no');
-      layout.innerHTML = `<figure class="ownership-how-photo"><img src="assets/brand/Nature.png" width="1672" height="941" loading="lazy" decoding="async" alt="${t('바다를 바라보는 빌라와 수영장, 조경이 담긴 공간 콘셉트 이미지', 'Concept image of a villa overlooking the sea, with a pool and landscaped grounds')}"></figure><div class="ownership-how-content"></div>`;
+      layout.innerHTML = `<figure class="ownership-how-photo"><img src="assets/brand/prestige-rounded-20261028.webp" width="1672" height="941" loading="lazy" decoding="async" alt="${t('실내 원형 계단과 두 층을 갖춘 라운드형 별장 외관 콘셉트', 'Rounded two-storey villa with an internal spiral staircase, garden and terrace')}"></figure><div class="ownership-how-content"></div>`;
       const photoElement = layout.querySelector('.ownership-how-photo');
-      photoElement.setAttribute('aria-label', t('바다를 바라보는 빌라와 수영장 공간 콘셉트', 'Seaside villa and pool concept image'));
+      photoElement.setAttribute('aria-label', t('라운드형 별장과 가든 공간 콘셉트', 'Rounded villa and garden concept image'));
       const content = layout.querySelector('.ownership-how-content');
       content.append(facts);
       const cta = document.createElement('a');
@@ -174,7 +174,7 @@
       <figure class="ownership-villa-showcase" aria-label="${t('선택한 빌라의 공간 콘셉트 이미지', 'Selected villa concept image')}">
         <div class="ownership-villa-image-stack" aria-live="polite">
           <img class="ownership-villa-image is-active" data-villa-image="deluxe" src="assets/brand/single-storey.png" width="1536" height="1024" alt="${t('단층 스튜디오 디럭스 빌라 공간 콘셉트', 'Concept image of the single-storey Deluxe studio villa')}" fetchpriority="low" decoding="async">
-          <img class="ownership-villa-image" data-villa-image="suite" src="assets/brand/two-storey.png" width="1536" height="1024" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="ownership-villa-image" data-villa-image="suite" src="assets/brand/prestige-rounded-20261028.webp" width="1536" height="1024" alt="" loading="lazy" decoding="async" aria-hidden="true">
         </div>
         <figcaption><span data-villa-caption>${t('디럭스 · 실내 33㎡ + 가든 + 테라스', 'Deluxe · Indoor 33 m² + garden + terrace')}</span><small>${t('공간 콘셉트 이미지', 'Concept image')}</small></figcaption>
       </figure>
@@ -186,7 +186,7 @@
               <span class="ownership-villa-option-copy"><strong>${t('디럭스', 'Deluxe')}</strong><span>${t('실내 33㎡ + 가든 + 테라스', 'Indoor 33 m² + garden + terrace')}</span><b>${money(villaTypes.deluxe.basePrice).slice(1)} USD <small>/ ${t('구좌', 'share')}</small></b></span>
             </button>
             <button id="villa-tab-suite" type="button" role="tab" aria-selected="false" aria-controls="villa-panel" tabindex="-1" data-villa-tab="suite">
-              <img src="assets/brand/two-storey.png" width="1536" height="1024" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <img src="assets/brand/prestige-rounded-20261028.webp" width="1536" height="1024" alt="" aria-hidden="true" loading="lazy" decoding="async">
               <span class="ownership-villa-option-copy"><strong>${t('프레스티지', 'Prestige')}</strong><span>${t('실내 66㎡ + 가든 + 테라스', 'Indoor 66 m² + garden + terrace')}</span><b>${money(villaTypes.suite.basePrice).slice(1)} USD <small>/ ${t('구좌', 'share')}</small></b></span>
             </button>
           </div>
